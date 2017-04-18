@@ -1,0 +1,94 @@
+:doctype: book
+:stylesheet: ../cctc.css
+image::https://git.cybbh.space/global-objects/images/raw/master/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+
+= Cyber Common Technical Core (CCTC) Linux Operating Systems Advance Sheet
+
+== Section 1: Core Features
+* SKILL 1: Identify common shells
+** 1.1 Describe common shells and their differences
+** 1.2 Define common shell modes, features and functions
+* SKILL 2: Employ commands using common shells
+** 2.1 Demonstrate basic familiarity with the command line interface
+** 2.2 Describe environment initialization and implications
+** 2.3 Demonstrate appropriate use of pipes and redirection
+** 2.4 Explain the fundamentals of Boolean logic
+** 2.5 Identify methods of gaining more information about commands and switches
+* SKILL 3: Analyze the Linux file system
+** 3.1 Describe file system hierarchy
+** 3.2 Describe file system ownership properties
+** 3.3 Discuss file system permissions
+** 3.4 Discuss file system timestamps
+** 3.5 Discuss file system attributes
+** 3.6 Employ commands to search the file system
+** 3.7 Describe regular expressions
+** 3.8 Create regular expressions to find data within in the file system
+** 3.9 Identify the information that a regular expression will return 
+
+== Section 2: Boot Processes
+* SKILL 4: Describe the Linux boot process
+** 4.1 Identify components of the boot process
+** 4.2 Explain the post kernel boot process
+** 4.3 Describe boot process differences across Linux variants
+** 4.4 Describe partitions
+* SKILL 5: Assess boot configuration files
+** 5.1 Identify components of the boot configuration file
+** 5.2 Identify system changes after modification of the boot configuration file
+
+== Section 3: Scripts & Processes
+* SKILL 6: Identify Linux processes
+** 6.1 Identify common processes for Linux startup
+** 6.2 Identify common processes for Linux machine
+** 6.3 Employ commands to enumerate processes
+** 6.4 Explain the functionality of daemons
+** 6.5 Discuss orphaned and defunct processes
+** 6.6 Identify the purpose of apt/aptitude
+** 6.7 Evaluate the validity of Linux processes
+* SKILL 7: Develop shell scripts
+** 7.1 Demonstrate basic familiarity with shell scripting
+** 7.2 Explain variables and variable manipulation
+** 7.3 Employ commands for string manipulation
+** 7.4 Identify hashing and file hashes
+** 7.5 Create a bash script to perform basic enumeration on a Linux machine
+* SKILL 8: Identify Linux networking features
+** 8.1 Describe the local name resolution process on a Linux host
+** 8.2 Describe the difference between regular and raw sockets
+** 8.3 Identify basic network services for Linux
+** 8.4 Employ commands to gather network information
+** 8.5 Enumerate active connections on a Linux machine
+** 8.6 Describe the advantages and disadvantages of Samba
+** 8.7 Explain the functionality of telnet
+** 8.8 Perform a file transfer using telnet
+** 8.9 Analyze network connections using Linux command line tools
+
+== Section 4: Auditing & Logging
+* SKILL 9: Identify auditing activities
+** 9.1 Explain system logging
+** 9.2 Identify application logging
+** 9.3 Explain authentication and authorization logs
+* SKILL 10: Identify actions that contribute to log files
+** 10.1 Describe the actions that contribute to entries in log files
+** 10.2 Analyze log files for anomalous activity
+
+== Section 5: Linux Exploitation
+* SKILL 11: Discuss the reasons to establish permanent presence
+** 11.1 Define permanent presence
+** 11.2 Describe the clean-up process associated with your activity
+** 11.3 Identify indicators and symptoms of compromise
+** 11.4 Develop a methodology for the enumeration of a compromised system
+* SKILL 12: Analyze different types of rootkits and backdoors
+** 12.1 Discuss and define the main types of backdoors
+** 12.2 Discuss and define the main types of rootkits
+** 12.3 Identify different backdoor persistence techniques
+** 12.4 Describe backdoor communication methods
+** 12.5 Describe methods to detect and mitigate rootkits
+** 12.6 Demonstrate how rootkits can be used to provide false information to a user
+* SKILL 13: Explore Linux Exploitation tools
+** 13.1 Discuss shell code
+** 13.2 Identify remote shell code execution
+** 13.3 Define credentials
+** 13.4 Perform credential cracking
+** 13.5 Identify purposes for Metasploit
+** 13.6 Define rainbow tables
+** 13.7 Identify the purposes for custom malware
+** 13.8 Identify zero configuration networking

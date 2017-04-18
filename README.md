@@ -1,0 +1,1 @@
+This repo is for the publicly-available materials generated in/for CCTC.  Everyone is welcome to do merge requests or file issues regardless of status; you are judged by the quality of your work, not your rank.

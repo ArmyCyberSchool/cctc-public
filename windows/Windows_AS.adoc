@@ -1,0 +1,152 @@
+:doctype: book
+:stylesheet: ../cctc.css
+
+image::https://git.cybbh.space/global-objects/images/raw/master/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+
+= Cyber Common Technical Core (CCTC) Windows Operating Systems Advance Sheet
+
+== Section 1: Command Line Tools
+* SKILL 1: Employ commands using command line interface
+** 1.1 Use command line commands to gain situational awareness of the current workstation 
+** 1.2 Use System Internals tools to gain situational awareness of the current workstation 
+* SKILL 2: Employ commands using Windows Management Instrumentation Command-line 
+** 2.1 Use WMIC commands to gain situational awareness of the current workstation 
+* SKILL 3: Employ commands using Powershell 
+** 3.1 Identify the purpose of using Powershell in operations
+** 3.2 Demonstrate basic functionality of Powershell
+** 3.3 Describe the main components of Powershell
+* SKILL 4: Develop scripts.
+** 4.1 Discuss the purpose of creating a script 
+** 4.2 Create a batch script that will perform basic enumeration of a workstation
+** 4.3 Create Powershell script that will perform basic enumeration of a workstation 
+ 
+== Section 2: Processes
+* SKILL 5: Define the Windows pre-boot process
+* SKILL 6: Define the Windows boot process
+* SKILL 7: Identify the Windows logon process
+* SKILL 8: Identify Windows processes
+** 8.1 Explain how to find the current status of a Windows process
+** 8.2 Explain the process states and identify why they are important
+** 8.3 Explain process threads and handles
+** 8.4 Describe the thread states
+** 8.5 Discuss the differences between processes, threads and handles 
+** 8.6 Describe system processes
+* SKILL 9: Analyze the validity of Windows processes
+** 9.1 Identify the importance of the output of command line tools 
+** 9.2 Determine the abnormal activities that are taking place on a system based on a process list
+* SKILL 10: Identify different types of malware 
+** 10.1 Distinguish between types of malware 
+** 10.2 Discuss the purpose and methodology of bots and botnets 
+* SKILL 11: Identify aspects of virtualization
+** 11.1 Discuss the importance of virtual machines
+* SKILL 12: Identify the importance of situational awareness
+** 12.1 Explain the situational awareness process
+** 12.2 List ways to gain situational awareness on a remote system 
+** 12.3 Explain potential reasons for heightened situational awareness
+ 
+== Section 3: Registry
+* SKILL 13: Explain the purpose of Windows Registry
+** 13.1 Explain the purpose and role of Windows Registry and its major functions
+** 13.2 Describe Registry hierarchy organization and primary components
+* SKILL 14: Employ Windows Registry tools
+** 14.1 Identify parts of the Registry using GUI-based tools
+** 14.2 Use command line syntax to query, view, analyze, modify and create Registry values
+** 14.3 Explain when and how changes to the Registry are expected to take effect
+* SKILL 15: Analyze Windows Registry for suspicious activity
+** 15.1 Identify Registry locations that contain forensically relevant information
+** 15.2 Identify Registry locations that can be utilized for persistence
+** 15.3 Perform basic analysis on a Windows system with a compromised Registry
+ 
+== Section 4: System Hardening, Auditing and Logs
+* SKILL 16: Identify basic Windows firewall concepts 
+16.1 Enable Windows firewall settings with the graphical user interface and command line tools
+** 16.2 Describe the different components of Windows firewall
+* SKILL 17: Identify components of New Technology File System (NTFS)
+** 17.1 Describe basic file and folder permissions
+** 17.2 Modify permissions in Windows
+** 17.3 Apply permissions based on users and groups
+* SKILL 18: Define Windows Resource Protection
+** 18.1 Describe Windows Resource Protection
+** 18.2 Identify files that are protected by Windows Resource Protection
+** 18.3 Discuss the security implications of Windows Resource Protection on a compromised system
+* SKILL 19: Define user account control 
+** 19.1 Identify the purpose of user account control 
+** 19.2 Employ user interface privilege isolation
+* SKILL 20: Analyze Windows system security posture
+** 20.1 Discuss information assurance and information security policies 
+* SKILL 21: Identify security products
+** 21.1 Identify host-based security products
+** 21.2 Identify network security products
+** 21.3 Discuss signature based detection
+** 21.4 Discuss heuristic based detection
+* SKILL 22: Define Windows auditing
+** 22.1 Explain why audit policies are important
+** 22.2 Explain the functionality of the main logs
+** 22.3 Discuss audit policy settings
+** 22.4 Identify the events that get audited
+* SKILL 23: Configure the audit policy for anomalous activity
+** 23.1 Use GUI tools to view policy settings
+** 23.2 Use command line tools to view policy settings
+* SKILL 24: Analyze event logs for anomalous activity
+** 24.1 Identify the locations of logs on the Windows system
+** 24.2 Identify events that would be audited and why
+** 24.3 Employ command line tools to view event logs
+ 
+== Section 5: Windows Networking
+* SKILL 25: Identify Windows networking features
+** 25.1 Describe Server Message Block (SMB)
+** 25.2 Explain the purpose of mailslots
+** 25.3 Describe NetBIOS
+** 25.4 Distinguish hostnames from NetBIOS names
+** 25.5 Explain Windows network naming schemes
+** 25.6 Define host name resolution
+** 25.7 Define remote procedure call (RPC)
+** 25.8 Describe Group Policy Objects
+** 25.9 Perform Group Policy Object queries through the command line
+** 25.10 Modify Group Policy Objects through the command line
+* SKILL 26: Perform basic network analysis on a Windows machine
+** 26.1 Perform basic network analysis using built-in tools
+** 26.2 Describe sockets
+** 26.3 Identify services associated with listening ports
+** 26.4 Assess security implications of listening ports and established connections
+* SKILL 27: Analyze security identifiers
+** 27.1 Identify the purpose of security system components
+** 27.2 Explain how access tokens are important for security
+** 27.3 Explain security identifiers and how they are generated
+** 27.4 Locate a SID in the Windows Registry and associate it with a user profile
+** 27.5 Identify built-in Windows user accounts
+** 27.6 Identify the differences between local and domain accounts
+** 27.7 Describe common user rights and the rights assigned to built-in groups
+* SKILL 28: Identify Active Directory basics
+** 28.1 Identify the Active Directory Schema and Global Catalog
+** 28.2 Describe the features of Active Directory
+** 28.3 Explain the logical and physical structure of Active Directory
+** 28.4 Describe functions of the resources associated with Active Directory
+** 28.5 Employ command line tools to gain information about a system or network
+ 
+== Section 6: Windows Tactical Survey
+* SKILL 29: Describe the phases of Incident Response
+** 29.1 Identify what occurs in the Preparation phase of Incident Response
+** 29.2 Identify what occurs in the Identification phase of Incident Response
+** 29.3 Identify what occurs in the Containment phase of Incident Response
+** 29.4 Identify what occurs in the Investigation phase of Incident Response
+** 29.5 Identify what occurs in the Eradication phase of Incident Response
+** 29.6 Identify what occurs in the Recovery phase of Incident Response
+* SKILL 30: Describe order of volatility
+** 30.1 Discuss the factors involved when considering order of volatility
+** 30.2 Assess the order of volatility during an incident 
+* SKILL 31: Analyze the enumeration process
+** 31.1 Identify baseline knowledge on a machine
+** 31.2 Gather baseline knowledge on a machine
+** 31.3 Discuss the differences between malicious and normal activity
+** 31.4 Characterize system features through enumeration
+** 31.5 Identify scheduled tasks that may affect the purpose or activity on a machine
+** 31.6 Explain what should be assessed during enumeration of the environment
+** 31.7 Describe how to detect and enumerate malware
+* SKILL 32: Discuss the documentation involved in a tactical survey
+** 32.1 Identify the importance of operations notes (Op Notes)
+** 32.2 Discuss the components of a report
+* SKILL 33: Use enumeration information to analyze courses of action
+** 33.1 Discuss the primary factors for recommending a course of action based on enumeration
+** 33.2 Identify the common vulnerabilities that could change the course of a mission
+** 33.3 Discuss the development of courses of action
