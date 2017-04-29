@@ -2,7 +2,7 @@ genpdf:
   script:
     - wget -q https://git.cybbh.space/global-objects/binaries/raw/master/wkhtmltopdf -O ./wkhtmltopdf
     - chmod +x ./wkhtmltopdf
-    - wget -q https://git.cybbh.space/global-objects/css/raw/master/cctc0000.css -O ./cctc.css
+    - wget -q https://git.cybbh.space/global-objects/resources/raw/master/css/cctc0000.css -O ./cctc.css
     - chmod +x ./cctc.css
     - find . -name \*adoc | while read adoc;do asciidoctor --verbose $adoc;done
     - find . -name \*html | while read html;do file=$(echo $html | sed 's/\.[^.]*$//') && ./wkhtmltopdf $html $file.pdf; done
