@@ -1,0 +1,159 @@
+:doctype: book
+:stylesheet: ../cctc.css
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+
+= Cyber Common Technical Core (CCTC) Networking Advance Sheet
+
+== Section 001: Network Discovery
+* SKILL 001: Identify core networking features
+** 001.001 Describe data link protocol
+** 001.002 Describe Layer 2 switching concepts
+** 001.003 Explain how virtual LANs work
+** 001.004 Describe how internetworking is performed
+** 001.005 Discuss LAN and internetwork traffic and how they interact
+** 001.006 Describe classless versus classful networking
+** 001.007 Explain the differences between IPv4 and IPv6
+** 001.008 Describe address scope
+** 001.009 Describe methods for assigning IP addresses
+** 001.010 Explain how a router works
+** 001.011 Explain the routing process
+** 001.012 Describe features of the Dynamic Host Configuration Protocol (DHCP)
+** 001.013 Describe the differences between DHCPv4 and DHCPv6
+** 001.014 Describe the address resolution protocol (ARP)
+** 001.015 Describe ICMP
+** 001.016 Describe transport protocols 
+** 001.017 Describe UDP and when it should be used
+** 001.018 Describe TCP and when it should be used
+** 001.019 Explain why helper protocols are used
+** 001.020 Identify well-known ports
+** 001.021 Describe ephemeral ports
+** 001.022 Explain Domain Name Service (DNS)
+** 001.023 Explain IP routing tables
+** 001.024 Explain the difference between regular and raw sockets
+* SKILL 002: Identify fundamentals of network discovery
+** 002.001 Describe active methods used for network discovery
+** 002.002 Explain the potential mitigation techniques for network discovery
+** 002.003 Explain the network discovery process from an offensive position
+** 002.004 Explain the network discovery process from a defensive position
+** 002.005 Discuss best practices for network analysis
+** 002.006 Identify the items of interest when performing internal reconnaissance
+* SKILL 003: Perform network discovery
+** 003.001 Analyze a router configuration and create a network map
+ 
+== Section 002: Analyze Network Traffic
+* SKILL 004: Identify the == Sections of common packet headers
+** 004.001 Identify the various packet headers
+** 004.002 Explain address auto-configuration
+** 004.003 Describe IPv4 packet structures
+** 004.004 Describe IPv6 packet structures
+** 004.005 Describe common ICMP message types
+* SKILL 005: Identify packet sniffing tools
+** 005.001 Explain Berkley Packet Filters (BPF)
+** 005.002 Use BPFs to view multiple protocol types
+** 005.003 Demonstrate packet decoding features 
+** 005.004 Describe network sniffing
+** 005.005 Identify common networking sniffing tools
+** 005.006 Explain why network sniffers are common for remote exploitation and detection
+** 005.007 Identify how sniffing and filtering relate to the DNS protocol
+** 005.008 Discuss passive approaches to network analysis
+** 005.009 Explain how host analysis can be used to gather network information
+** 005.010 Explain server identification
+** 005.011 Perform server identification
+** 005.0012 Explain how server identification can be used to gather network information
+** 005.0013 Explain how packet captures can be used to gather network information
+** 005.0014 Describe the principles of p0f
+** 005.0015 Discuss the purpose of p0f databases
+** 005.0016 Describe the process of sniffing for an operating system
+** 005.0017 Assess TTL/hop counts
+* SKILL 006: Identify implications of network traffic captures
+** 006.001 Discuss security implications of major protocol traffic
+** 006.002 Explain why network monitoring tools are deployed
+** 006.003 Explain the impact of network monitoring tools in exploitation operations
+ 
+== Section 003: Filtering Devices
+* SKILL 007: Define methodologies of filtering
+** 007.001 Explain the function of different network devices and their recommended position on a network
+** 007.002 Explain how network devices can be used to filter packets 
+** 007.003 Describe stateful fitlering
+** 007.004 Explain how layer 4 stateful filters work
+** 007.005 Describe the limitations of packet filters in terms of directionality
+** 007.006 Discuss firewall types
+** 007.007 Interpret a data flow diagram given a set of firewall rules
+** 007.008 Describe the purpose of iptables
+** 007.009 Explain how iptables are structured
+** 007.010 Describe iptables rules
+** 007.011 Explain the effect of iptable rules on traffic flows
+** 007.012 Contrast iptable chains and ACLs
+** 007.013 Construct iptable rules
+** 007.014 Explain network address translation (NAT)
+** 007.015 Explain the functionality of NAT within iptables
+* SKILL 008: Identify filtering devices
+* SKILL 009: Configure filtering devices
+ 
+== Section 004: Network Traffic Manipulation
+* SKILL 010: Perform file transfers
+** 010.001 Describe common methods for transferring files
+** 010.002 Describe covert methods for transferring files
+** 010.003 Explain the forward file transfer process with netcat
+** 010.004 Explain the reverse file transfer process with netcat
+** 010.005 Demonstrate the process for transferring files via terminal
+* SKILL 011: Perform network traffic redirection
+** 011.001 Explain how SSH tunneling
+** 011.002 Explain the process of IPv4 tunneling
+** 011.003 Explain the process of IPv6 tunneling
+** 011.004 Contrast redirection with tunneling
+* SKILL 012: Define the principles of tunneling network traffic
+** 012.001 Explain establishment redirectors
+** 012.002 Explain deployable redirectors
+** 012.003 Contrast establishment and deployment redirectors
+** 012.004 Explain the challenges of discovering covert channels
+** 012.005 Use FPIP to perform redirection
+** 012.006 Describe protocol swapping
+* SKILL 013: Identify fundamentals of secure shell protocol
+** 013.001 Discuss SSH tunnels
+** 013.002 Discuss SSH reverse tunnels
+** 013.003 Interpret tunnel diagrams
+** 013.004 Describe the process for using SSH to connect to a remote machine
+** 013.005 Explain the purpose of multi-hop tunneling
+** 013.006 Explain the process for multi-hop tunneling
+** 013.007 Describe the appropriate use of of reverse tunnels
+** 013.008 Describe basic port forwarding
+** 013.009 Set up an initial SSH tunnel and add another tunnel using another tool 
+ 
+== Section 005: Industrial Control Systems (ICS)
+* SKILL 014: Define Industrial Control System (ICS) fundamentals
+** 014.001 Describe ICS hardware
+** 014.002 Describe ICS software
+** 014.003 Discuss industries where ICS is most utilized
+** 014.004 Describe industry processes
+** 014.005 Describe basic operations of ICS
+** 014.006 Identify ICS components
+* SKILL 015: Identify ICS security incidents
+** 015.001 Identify types of attackers to an ICS
+** 015.002 Discuss ICS vulnerabilities
+* SKILL 016: Identify ICS zones
+** 016.001 Explain how defensive measures are used in ICS zones
+** 016.002 Describe the role of zones in defense-in-depth
+* SKILL 017: Identify ICS protocols
+ 
+== Section 006: Network Exploitation
+* SKILL 018: Communicate cyberspace operations methodologies
+** 018.001 Describe the mindset of cyber actors
+** 018.002 Describe standard internal exploitation methodologies
+** 018.003 Describe standard external exploitation methodologies
+** 018.004 Discuss the importance of testing tools in a controlled environment
+* SKILL 019: Define common frameworks for conducting cyberspace operations
+** 019.001 Describe exfiltration strategies
+** 019.002 Describe the benefits of acquiring critical systems
+** 019.003 Explain the benefits of acquiring domain credentials
+* SKILL 020: Discuss methods to gain access
+** 020.001 Define shellcode
+** 020.002 Define the process for ensuring shellcode executes
+** 020.003 Discuss code injection
+** 020.004 Explain the process of code injection
+** 020.005 Explain methods of detecting code injection
+** 020.006 Describe the processes to escalate privileges 
+* SKILL 021: Describe network attacks
+** 021.001 Define network attacks
+** 021.002 Compare network attack strategies
+** 021.003 Discuss collateral effects of cyberspace attacks
