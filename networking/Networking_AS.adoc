@@ -5,7 +5,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 = Cyber Common Technical Core (CCTC) Networking Advance Sheet
 
 == Section 1: Network Discovery
-* SKILL 1: Identify core networking features
+* SKILL 001: Identify core networking features
 ** 1.1 Describe data link protocol
 ** 1.2 Describe Layer 2 switching concepts
 ** 1.3 Explain how virtual LANs work
@@ -30,24 +30,24 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** 1.22 Explain Domain Name Service (DNS)
 ** 1.23 Explain IP routing tables
 ** 1.24 Explain the difference between regular and raw sockets
-* SKILL 2: Identify fundamentals of network discovery
+* SKILL 002: Identify fundamentals of network discovery
 ** 2.1 Describe active methods used for network discovery
 ** 2.2 Explain the potential mitigation techniques for network discovery
 ** 2.3 Explain the network discovery process from an offensive position
 ** 2.4 Explain the network discovery process from a defensive position
 ** 2.5 Discuss best practices for network analysis
 ** 2.6 Identify the items of interest when performing internal reconnaissance
-* SKILL 3: Perform network discovery
+* SKILL 003: Perform network discovery
 ** 3.1 Analyze a router configuration and create a network map
  
 == Section 2: Analyze Network Traffic
-* SKILL 4: Identify the == Sections of common packet headers
+* SKILL 004: Identify the == Sections of common packet headers
 ** 4.1 Identify the various packet headers
 ** 4.2 Explain address auto-configuration
 ** 4.3 Describe IPv4 packet structures
 ** 4.4 Describe IPv6 packet structures
 ** 4.5 Describe common ICMP message types
-* SKILL 5: Identify packet sniffing tools
+* SKILL 005: Identify packet sniffing tools
 ** 5.1 Explain Berkley Packet Filters (BPF)
 ** 5.2 Use BPFs to view multiple protocol types
 ** 5.3 Demonstrate packet decoding features 
@@ -65,13 +65,13 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** 5.15 Discuss the purpose of p0f databases
 ** 5.16 Describe the process of sniffing for an operating system
 ** 5.17 Assess TTL/hop counts
-* SKILL 6: Identify implications of network traffic captures
+* SKILL 006: Identify implications of network traffic captures
 ** 6.1 Discuss security implications of major protocol traffic
 ** 6.2 Explain why network monitoring tools are deployed
 ** 6.3 Explain the impact of network monitoring tools in exploitation operations
  
 == Section 3: Filtering Devices
-* SKILL 7: Define methodologies of filtering
+* SKILL 007: Define methodologies of filtering
 ** 7.1 Explain the function of different network devices and their recommended position on a network
 ** 7.2 Explain how network devices can be used to filter packets 
 ** 7.3 Describe stateful fitlering
@@ -87,29 +87,29 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** 7.13 Construct iptable rules
 ** 7.14 Explain network address translation (NAT)
 ** 7.15 Explain the functionality of NAT within iptables
-* SKILL 8: Identify filtering devices
-* SKILL 9: Configure filtering devices
+* SKILL 008: Identify filtering devices
+* SKILL 009: Configure filtering devices
  
 == Section 4: Network Traffic Manipulation
-* SKILL 10: Perform file transfers
+* SKILL 010: Perform file transfers
 ** 10.1 Describe common methods for transferring files
 ** 10.2 Describe covert methods for transferring files
 ** 10.3 Explain the forward file transfer process with netcat
 ** 10.4 Explain the reverse file transfer process with netcat
 ** 10.5 Demonstrate the process for transferring files via terminal
-* SKILL 11: Perform network traffic redirection
+* SKILL 011: Perform network traffic redirection
 ** 11.1 Explain how SSH tunneling
 ** 11.2 Explain the process of IPv4 tunneling
 ** 11.3 Explain the process of IPv6 tunneling
 ** 11.4 Contrast redirection with tunneling
-* SKILL 12: Define the principles of tunneling network traffic
+* SKILL 012: Define the principles of tunneling network traffic
 ** 12.1 Explain establishment redirectors
 ** 12.2 Explain deployable redirectors
 ** 12.3 Contrast establishment and deployment redirectors
 ** 12.4 Explain the challenges of discovering covert channels
 ** 12.5 Use FPIP to perform redirection
 ** 12.6 Describe protocol swapping
-* SKILL 13: Identify fundamentals of secure shell protocol
+* SKILL 013: Identify fundamentals of secure shell protocol
 ** 13.1 Discuss SSH tunnels
 ** 13.2 Discuss SSH reverse tunnels
 ** 13.3 Interpret tunnel diagrams
@@ -121,39 +121,39 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** 13.9 Set up an initial SSH tunnel and add another tunnel using another tool 
  
 == Section 5: Industrial Control Systems (ICS)
-* SKILL 14: Define Industrial Control System (ICS) fundamentals
+* SKILL 014: Define Industrial Control System (ICS) fundamentals
 ** 14.1 Describe ICS hardware
 ** 14.2 Describe ICS software
 ** 14.3 Discuss industries where ICS is most utilized
 ** 14.4 Describe industry processes
 ** 14.5 Describe basic operations of ICS
 ** 14.6 Identify ICS components
-* SKILL 15: Identify ICS security incidents
+* SKILL 015: Identify ICS security incidents
 ** 15.1 Identify types of attackers to an ICS
 ** 15.2 Discuss ICS vulnerabilities
-* SKILL 16: Identify ICS zones
+* SKILL 016: Identify ICS zones
 ** 16.1 Explain how defensive measures are used in ICS zones
 ** 16.2 Describe the role of zones in defense-in-depth
-* SKILL 17: Identify ICS protocols
+* SKILL 017: Identify ICS protocols
  
 == Section 6: Network Exploitation
-* SKILL 18: Communicate cyberspace operations methodologies
+* SKILL 018: Communicate cyberspace operations methodologies
 ** 18.1 Describe the mindset of cyber actors
 ** 18.2 Describe standard internal exploitation methodologies
 ** 18.3 Describe standard external exploitation methodologies
 ** 18.4 Discuss the importance of testing tools in a controlled environment
-* SKILL 19: Define common frameworks for conducting cyberspace operations
+* SKILL 019: Define common frameworks for conducting cyberspace operations
 ** 19.1 Describe exfiltration strategies
 ** 19.2 Describe the benefits of acquiring critical systems
 ** 19.3 Explain the benefits of acquiring domain credentials
-* SKILL 20: Discuss methods to gain access
+* SKILL 020: Discuss methods to gain access
 ** 20.1 Define shellcode
 ** 20.2 Define the process for ensuring shellcode executes
 ** 20.3 Discuss code injection
 ** 20.4 Explain the process of code injection
 ** 20.5 Explain methods of detecting code injection
 ** 20.6 Describe the processes to escalate privileges 
-* SKILL 21: Describe network attacks
+* SKILL 021: Describe network attacks
 ** 21.1 Define network attacks
 ** 21.2 Compare network attack strategies
 ** 21.3 Discuss collateral effects of cyberspace attacks
