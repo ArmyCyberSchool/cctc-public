@@ -4,156 +4,176 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 = Cyber Common Technical Core (CCTC) Networking Advance Sheet
 
-== Section 001: Network Discovery
-* SKILL 001: Identify core networking features
-** 001.001 Describe data link protocol
-** 001.002 Describe Layer 2 switching concepts
-** 001.003 Explain how virtual LANs work
-** 001.004 Describe how internetworking is performed
-** 001.005 Discuss LAN and internetwork traffic and how they interact
-** 001.006 Describe classless versus classful networking
-** 001.007 Explain the differences between IPv4 and IPv6
-** 001.008 Describe address scope
-** 001.009 Describe methods for assigning IP addresses
-** 001.010 Explain how a router works
-** 001.011 Explain the routing process
-** 001.012 Describe features of the Dynamic Host Configuration Protocol (DHCP)
-** 001.013 Describe the differences between DHCPv4 and DHCPv6
-** 001.014 Describe the address resolution protocol (ARP)
-** 001.015 Describe ICMP
-** 001.016 Describe transport protocols 
-** 001.017 Describe UDP and when it should be used
-** 001.018 Describe TCP and when it should be used
-** 001.019 Explain why helper protocols are used
-** 001.020 Identify well-known ports
-** 001.021 Describe ephemeral ports
-** 001.022 Explain Domain Name Service (DNS)
-** 001.023 Explain IP routing tables
-** 001.024 Explain the difference between regular and raw sockets
-* SKILL 002: Identify fundamentals of network discovery
-** 002.001 Describe active methods used for network discovery
-** 002.002 Explain the potential mitigation techniques for network discovery
-** 002.003 Explain the network discovery process from an offensive position
-** 002.004 Explain the network discovery process from a defensive position
-** 002.005 Discuss best practices for network analysis
-** 002.006 Identify the items of interest when performing internal reconnaissance
-* SKILL 003: Perform network discovery
-** 003.001 Analyze a router configuration and create a network map
+== Section 1: Network Discovery
+
+* SKILL CCNE001: Identify core networking features
+** CCNE001.001 Describe data link protocol
+** CCNE001.002 Describe Layer 2 switching concepts
+** CCNE001.003 Explain how virtual LANs work
+** CCNE001.004 Describe how internetworking is performed
+** CCNE001.005 Discuss LAN and internetwork traffic and how they interact
+** CCNE001.006 Describe classless versus classful networking
+** CCNE001.007 Explain the differences between IPv4 and IPv6
+** CCNE001.008 Describe address scope
+** CCNE001.009 Describe methods for assigning IP addresses
+** CCNE001.010 Explain how a router works
+** CCNE001.011 Explain the routing process
+** CCNE001.012 Describe features of the Dynamic Host Configuration Protocol (DHCP)
+** CCNE001.013 Describe the differences between DHCPv4 and DHCPv6
+** CCNE001.014 Describe the address resolution protocol (ARP)
+** CCNE001.015 Describe ICMP
+** CCNE001.016 Describe transport protocols 
+** CCNE001.017 Describe UDP and when it should be used
+** CCNE001.018 Describe TCP and when it should be used
+** CCNE001.019 Explain why helper protocols are used
+** CCNE001.020 Identify well-known ports
+** CCNE001.021 Describe ephemeral ports
+** CCNE001.022 Explain Domain Name Service (DNS)
+** CCNE001.023 Explain IP routing tables
+** CCNE001.024 Explain the difference between regular and raw sockets
+
+* SKILL CCNE002: Identify fundamentals of network discovery
+** CCNE002.001 Describe active methods used for network discovery
+** CCNE002.002 Explain the potential mitigation techniques for network discovery
+** CCNE002.003 Explain the network discovery process from an offensive position
+** CCNE002.004 Explain the network discovery process from a defensive position
+** CCNE002.005 Discuss best practices for network analysis
+** CCNE002.006 Identify the items of interest when performing internal reconnaissance
+
+* SKILL CCNE003: Perform network discovery
+** CCNE003.001 Analyze a router configuration and create a network map
  
-== Section 002: Analyze Network Traffic
-* SKILL 004: Identify the == Sections of common packet headers
-** 004.001 Identify the various packet headers
-** 004.002 Explain address auto-configuration
-** 004.003 Describe IPv4 packet structures
-** 004.004 Describe IPv6 packet structures
-** 004.005 Describe common ICMP message types
-* SKILL 005: Identify packet sniffing tools
-** 005.001 Explain Berkley Packet Filters (BPF)
-** 005.002 Use BPFs to view multiple protocol types
-** 005.003 Demonstrate packet decoding features 
-** 005.004 Describe network sniffing
-** 005.005 Identify common networking sniffing tools
-** 005.006 Explain why network sniffers are common for remote exploitation and detection
-** 005.007 Identify how sniffing and filtering relate to the DNS protocol
-** 005.008 Discuss passive approaches to network analysis
-** 005.009 Explain how host analysis can be used to gather network information
-** 005.010 Explain server identification
-** 005.011 Perform server identification
-** 005.0012 Explain how server identification can be used to gather network information
-** 005.0013 Explain how packet captures can be used to gather network information
-** 005.0014 Describe the principles of p0f
-** 005.0015 Discuss the purpose of p0f databases
-** 005.0016 Describe the process of sniffing for an operating system
-** 005.0017 Assess TTL/hop counts
-* SKILL 006: Identify implications of network traffic captures
-** 006.001 Discuss security implications of major protocol traffic
-** 006.002 Explain why network monitoring tools are deployed
-** 006.003 Explain the impact of network monitoring tools in exploitation operations
+== Section 2: Analyze Network Traffic
+
+* SKILL CCNE004: Identify the == Sections of common packet headers
+** CCNE004.001 Identify the various packet headers
+** CCNE004.002 Explain address auto-configuration
+** CCNE004.003 Describe IPv4 packet structures
+** CCNE004.004 Describe IPv6 packet structures
+** CCNE004.005 Describe common ICMP message types
+
+* SKILL CCNE005: Identify packet sniffing tools
+** CCNE005.001 Explain Berkley Packet Filters (BPF)
+** CCNE005.002 Use BPFs to view multiple protocol types
+** CCNE005.003 Demonstrate packet decoding features 
+** CCNE005.004 Describe network sniffing
+** CCNE005.005 Identify common networking sniffing tools
+** CCNE005.006 Explain why network sniffers are common for remote exploitation and detection
+** CCNE005.007 Identify how sniffing and filtering relate to the DNS protocol
+** CCNE005.008 Discuss passive approaches to network analysis
+** CCNE005.009 Explain how host analysis can be used to gather network information
+** CCNE005.010 Explain server identification
+** CCNE005.011 Perform server identification
+** CCNE005.012 Explain how server identification can be used to gather network information
+** CCNE005.013 Explain how packet captures can be used to gather network information
+** CCNE005.014 Describe the principles of p0f
+** CCNE005.015 Discuss the purpose of p0f databases
+** CCNE005.016 Describe the process of sniffing for an operating system
+** CCNE005.017 Assess TTL/hop counts
+
+* SKILL CCNE006: Identify implications of network traffic captures
+** CCNE006.001 Discuss security implications of major protocol traffic
+** CCNE006.002 Explain why network monitoring tools are deployed
+** CCNE006.003 Explain the impact of network monitoring tools in exploitation operations
  
-== Section 003: Filtering Devices
-* SKILL 007: Define methodologies of filtering
-** 007.001 Explain the function of different network devices and their recommended position on a network
-** 007.002 Explain how network devices can be used to filter packets 
-** 007.003 Describe stateful fitlering
-** 007.004 Explain how layer 4 stateful filters work
-** 007.005 Describe the limitations of packet filters in terms of directionality
-** 007.006 Discuss firewall types
-** 007.007 Interpret a data flow diagram given a set of firewall rules
-** 007.008 Describe the purpose of iptables
-** 007.009 Explain how iptables are structured
-** 007.010 Describe iptables rules
-** 007.011 Explain the effect of iptable rules on traffic flows
-** 007.012 Contrast iptable chains and ACLs
-** 007.013 Construct iptable rules
-** 007.014 Explain network address translation (NAT)
-** 007.015 Explain the functionality of NAT within iptables
-* SKILL 008: Identify filtering devices
-* SKILL 009: Configure filtering devices
+== Section 3: Filtering Devices
+
+* SKILL CCNE007: Define methodologies of filtering
+** CCNE007.001 Explain the function of different network devices and their recommended position on a network
+** CCNE007.002 Explain how network devices can be used to filter packets 
+** CCNE007.003 Describe stateful fitlering
+** CCNE007.004 Explain how layer 4 stateful filters work
+** CCNE007.005 Describe the limitations of packet filters in terms of directionality
+** CCNE007.006 Discuss firewall types
+** CCNE007.007 Interpret a data flow diagram given a set of firewall rules
+** CCNE007.008 Describe the purpose of iptables
+** CCNE007.009 Explain how iptables are structured
+** CCNE007.010 Describe iptables rules
+** CCNE007.011 Explain the effect of iptable rules on traffic flows
+** CCNE007.012 Contrast iptable chains and ACLs
+** CCNE007.013 Construct iptable rules
+** CCNE007.014 Explain network address translation (NAT)
+** CCNE007.015 Explain the functionality of NAT within iptables
+
+* SKILL CCNE008: Identify filtering devices
+
+* SKILL CCNE009: Configure filtering devices
  
-== Section 004: Network Traffic Manipulation
-* SKILL 010: Perform file transfers
-** 010.001 Describe common methods for transferring files
-** 010.002 Describe covert methods for transferring files
-** 010.003 Explain the forward file transfer process with netcat
-** 010.004 Explain the reverse file transfer process with netcat
-** 010.005 Demonstrate the process for transferring files via terminal
-* SKILL 011: Perform network traffic redirection
-** 011.001 Explain how SSH tunneling
-** 011.002 Explain the process of IPv4 tunneling
-** 011.003 Explain the process of IPv6 tunneling
-** 011.004 Contrast redirection with tunneling
-* SKILL 012: Define the principles of tunneling network traffic
-** 012.001 Explain establishment redirectors
-** 012.002 Explain deployable redirectors
-** 012.003 Contrast establishment and deployment redirectors
-** 012.004 Explain the challenges of discovering covert channels
-** 012.005 Use FPIP to perform redirection
-** 012.006 Describe protocol swapping
-* SKILL 013: Identify fundamentals of secure shell protocol
-** 013.001 Discuss SSH tunnels
-** 013.002 Discuss SSH reverse tunnels
-** 013.003 Interpret tunnel diagrams
-** 013.004 Describe the process for using SSH to connect to a remote machine
-** 013.005 Explain the purpose of multi-hop tunneling
-** 013.006 Explain the process for multi-hop tunneling
-** 013.007 Describe the appropriate use of of reverse tunnels
-** 013.008 Describe basic port forwarding
-** 013.009 Set up an initial SSH tunnel and add another tunnel using another tool 
+== Section 4: Network Traffic Manipulation
+
+* SKILL CCNE010: Perform file transfers
+** CCNE010.001 Describe common methods for transferring files
+** CCNE010.002 Describe covert methods for transferring files
+** CCNE010.003 Explain the forward file transfer process with netcat
+** CCNE010.004 Explain the reverse file transfer process with netcat
+** CCNE010.005 Demonstrate the process for transferring files via terminal
+
+* SKILL CCNE011: Perform network traffic redirection
+** CCNE011.001 Explain how SSH tunneling
+** CCNE011.002 Explain the process of IPv4 tunneling
+** CCNE011.003 Explain the process of IPv6 tunneling
+** CCNE011.004 Contrast redirection with tunneling
+
+* SKILL CCNE012: Define the principles of tunneling network traffic
+** CCNE012.001 Explain establishment redirectors
+** CCNE012.002 Explain deployable redirectors
+** CCNE012.003 Contrast establishment and deployment redirectors
+** CCNE012.004 Explain the challenges of discovering covert channels
+** CCNE012.005 Use FPIP to perform redirection
+** CCNE012.006 Describe protocol swapping
+
+* SKILL CCNE013: Identify fundamentals of secure shell protocol
+** CCNE013.001 Discuss SSH tunnels
+** CCNE013.002 Discuss SSH reverse tunnels
+** CCNE013.003 Interpret tunnel diagrams
+** CCNE013.004 Describe the process for using SSH to connect to a remote machine
+** CCNE013.005 Explain the purpose of multi-hop tunneling
+** CCNE013.006 Explain the process for multi-hop tunneling
+** CCNE013.007 Describe the appropriate use of of reverse tunnels
+** CCNE013.008 Describe basic port forwarding
+** CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool 
  
-== Section 005: Industrial Control Systems (ICS)
-* SKILL 014: Define Industrial Control System (ICS) fundamentals
-** 014.001 Describe ICS hardware
-** 014.002 Describe ICS software
-** 014.003 Discuss industries where ICS is most utilized
-** 014.004 Describe industry processes
-** 014.005 Describe basic operations of ICS
-** 014.006 Identify ICS components
-* SKILL 015: Identify ICS security incidents
-** 015.001 Identify types of attackers to an ICS
-** 015.002 Discuss ICS vulnerabilities
-* SKILL 016: Identify ICS zones
-** 016.001 Explain how defensive measures are used in ICS zones
-** 016.002 Describe the role of zones in defense-in-depth
-* SKILL 017: Identify ICS protocols
+== Section 5: Industrial Control Systems (ICS)
+
+* SKILL CCNE014: Define Industrial Control System (ICS) fundamentals
+** CCNE014.001 Describe ICS hardware
+** CCNE014.002 Describe ICS software
+** CCNE014.003 Discuss industries where ICS is most utilized
+** CCNE014.004 Describe industry processes
+** CCNE014.005 Describe basic operations of ICS
+** CCNE014.006 Identify ICS components
+
+* SKILL CCNE015: Identify ICS security incidents
+** CCNE015.001 Identify types of attackers to an ICS
+** CCNE015.002 Discuss ICS vulnerabilities
+
+* SKILL CCNE016: Identify ICS zones
+** CCNE016.001 Explain how defensive measures are used in ICS zones
+** CCNE016.002 Describe the role of zones in defense-in-depth
+* SKILL CCNE017: Identify ICS protocols
  
-== Section 006: Network Exploitation
-* SKILL 018: Communicate cyberspace operations methodologies
-** 018.001 Describe the mindset of cyber actors
-** 018.002 Describe standard internal exploitation methodologies
-** 018.003 Describe standard external exploitation methodologies
-** 018.004 Discuss the importance of testing tools in a controlled environment
-* SKILL 019: Define common frameworks for conducting cyberspace operations
-** 019.001 Describe exfiltration strategies
-** 019.002 Describe the benefits of acquiring critical systems
-** 019.003 Explain the benefits of acquiring domain credentials
-* SKILL 020: Discuss methods to gain access
-** 020.001 Define shellcode
-** 020.002 Define the process for ensuring shellcode executes
-** 020.003 Discuss code injection
-** 020.004 Explain the process of code injection
-** 020.005 Explain methods of detecting code injection
-** 020.006 Describe the processes to escalate privileges 
-* SKILL 021: Describe network attacks
-** 021.001 Define network attacks
-** 021.002 Compare network attack strategies
-** 021.003 Discuss collateral effects of cyberspace attacks
+== Section 6: Network Exploitation
+
+* SKILL CCNE018: Communicate cyberspace operations methodologies
+** CCNE018.001 Describe the mindset of cyber actors
+** CCNE018.002 Describe standard internal exploitation methodologies
+** CCNE018.003 Describe standard external exploitation methodologies
+** CCNE018.004 Discuss the importance of testing tools in a controlled environment
+
+* SKILL CCNE019: Define common frameworks for conducting cyberspace operations
+** CCNE019.001 Describe exfiltration strategies
+** CCNE019.002 Describe the benefits of acquiring critical systems
+** CCNE019.003 Explain the benefits of acquiring domain credentials
+
+* SKILL CCNE020: Discuss methods to gain access
+** CCNE020.001 Define shellcode
+** CCNE020.002 Define the process for ensuring shellcode executes
+** CCNE020.003 Discuss code injection
+** CCNE020.004 Explain the process of code injection
+** CCNE020.005 Explain methods of detecting code injection
+** CCNE020.006 Describe the processes to escalate privileges 
+
+* SKILL CCNE021: Describe network attacks
+** CCNE021.001 Define network attacks
+** CCNE021.002 Compare network attack strategies
+** CCNE021.003 Discuss collateral effects of cyberspace attacks
