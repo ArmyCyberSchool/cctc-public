@@ -1,0 +1,34 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Process Tree
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Overview
+
+This Activity presents a PowerShell and scripting challenge, as well as a problem solving and research challenge. There are a few concepts required to complete this exercise that have not officially been covered in class. Use your problem solving and research skills to find a solution. Use appropriate resources such as Safari Books Online, msdn.microsoft.com, or TechNet.
+
+== Activity
+
+Write a PowerShell script that outputs a well-formatted process tree with child processes nested under parent processes. The script should provide an output similar to the tree command, except with processes instead of file and directory information.
+
+Your process tree will have multiple roots. The following conditions indicate a root for the process tree:
+
+* The process’ parent process ID is equal to its own process ID
+* The process’ parent process ID does not correspond to a process ID of any process in the process list (i.e. the process’ parent process ID is a random number)
+
+== Deliverables
+
+* Your PowerShell script
+* The output of your PowerShell script
+
+== Learning Objectives / Outcomes
+
+* Confidence writing PowerShell scripts to achieve a specific task
+* Familiarity iterating over data to extract pertinent information
+* Familiarity with PowerShell functions, recursion, flow control, and code blocks
+* Familiarity with PowerShell comparison operators and conditional statements
