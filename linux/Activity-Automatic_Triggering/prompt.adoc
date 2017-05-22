@@ -1,0 +1,36 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Automatic Triggering
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+Your SSH monitoring process needs to be deployed on multiple systems and needs to survive reboots. Additionally, system admins are inadvertently killing incorrect processes while trying to remediate the attack, including your monitoring process. You need to ensure your script can easily be deployed on multiple systems and can survive reboots and being killed.
+
+== Activity
+
+Write a persistence script that checks if your monitoring script is running. If the monitoring script is running, the persistence script should do nothing. If the monitoring script is not running, the persistence script should launch the monitoring script.
+
+Write a deployment script that applies Linux functionality to ensure the persistence script is executed when the system is launched and at least once every 15 minutes.
+
+Test your script on your system to ensure that the monitoring script can properly recover from reboots and being killed.
+
+== Deliverables
+
+[square]
+* Your persistence script
+* Your deployment script
+* Proof that your persistence script properly recovers the monitoring script from reboots and being killed
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with Linux scheduled tasks (cron)
+* Familiarity interacting with services and Linux applications from scripts
+* Familiarity with Bash conditional operations
+* Confidence writing Bash scripts to achieve specific objectives

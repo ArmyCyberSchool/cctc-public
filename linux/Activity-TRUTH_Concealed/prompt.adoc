@@ -1,0 +1,22 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - TRUTH Concealed
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+[square]
+* Identify concealed processes and connections not being displayed by netstat, top, and ps
+* Once identified, design a script that tracks down these PIDs, and displays the information being concealed.
+* Hint: `/proc/net/{tcp,udp}, tree, inodes`
+
+== Learning Objectives / Outcomes
+
+[square]
+* Ability to discern truth from fiction, as it pertains to rootkit activity
+* Building a kitable tool for future Incident Response use

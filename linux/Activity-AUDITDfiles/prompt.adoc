@@ -1,0 +1,25 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - AuditDFiles
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Create a script that audits the /etc/passwd and /etc/group files, and triggers on any read, write, execute, or attribute changes; additionally, have your script output the new audit rules your script sets.  Keep in mind that the audit process you establish will be tested by whether or not it captures the traffic you input as you manipulate files on your VM.  Have your script add a new group named cctc_audit, create a new user called cctc_auser, add the user to the group, and set a password for cctc_auser.
+
+Once you have completed this task, you will need to regain access to the audits you set up earlier in the exercise and review what traffic they captured, manually using color-grep , and using ausearch/automated.
+
+hint: do you need to login as a different user to generate the audit logs?
+
+hint: $ sudo apt-get install -y auditd multitail
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with auditd tool set, and it's usefullness in auditing key events on a linux OS
+* Ability to script the auditing process

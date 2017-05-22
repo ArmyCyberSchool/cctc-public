@@ -1,0 +1,66 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - SHADOWken
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+You are on an OCO mission; through your movement behind enemy lines, you gained access to a system whose authentication security was fairly weak. You have limited privileges on the system, and wish to escalate your privileges. 
+
+== Activity
+
+_Part 1_
+
+[square]
+* Copy your `/etc/passwd`, `/etc/shadow` and `/etc/group` files to a backup directory.
+* As a user in the sudoers group, add a user 'ken' to the system
+* Using a text editor, edit user ken in `/etc/passwd` for the following:
+** GID (Group ID) '0'
+** 'bash' shell
+** home directory of `/home/ken`
+** password attribute to 'not required'
+** full name of 'Maintenance Account'
+** account set to expire on 1 Jan 2020
+** next password change for 30 days from now
+** password change warning of 10 days
+* Check to ensure that these changes have taken effect from via the command line
+
+_Part 2_
+
+[square]
+* Switch to the new user 'ken'
+* Type `id`
+* Are you in the root GID?
+* Still as user 'ken', type `cat /etc/shadow`
+* Why are you not able to view the shadow file?
+* Hint: `ls -al /ect/shadow`
+* Identify which groups user 'ken' belongs to; is user 'ken' in more than one group?
+* How many groups is user 'dachosen1' in?
+
+_Part 3_
+
+[square]
+* Type `exit` to switch back to your sudoer user account
+* Using a text editor, add user 'ken' to the group with write access to the `/etc/shadow` file
+* switch back to user 'ken'
+* Type `cat /etc/shadow`
+* Were you able to open the file this time?
+
+== Deliverables
+
+[square]
+* Verification of ken’s ability to read `/etc/shadow`
+* Correct contents of `/etc/shadow`
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with key Linux files: `/etc/passwd`, `/etc/shadow`, `/etc/group`
+* Familiarity with Linux command line text editors
+* Understanding of group membership and its effects on file access
+* Confidence querying and editing password attributes for groups and users

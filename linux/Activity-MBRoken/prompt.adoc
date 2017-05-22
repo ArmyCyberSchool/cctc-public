@@ -1,0 +1,49 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - MBRoken
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+The hard drive in your Commander's laptop, containing critical files, stopped responding after a network-wide malware attack. You're fairly certain the problem has something to do with the HD's MBR (file: "mbroken").
+
+== Activity
+
+Assuming this is a generic MBR, fix the MBR so your career doesn't go down the drain along with those files. "mbroken" location: *10.200.10.10/downloads/linux-files/mbroken.zip*
+
+Verify Your Files (unzip 1st) - MD5SUM: b73f30cf162511fe8429ff907a5a9f53
+
+Both Ubuntu and Debian are permitted for this exercise.
+
+Find the MD5 hash of the bootstrap code.
+
+Find the MD5 hash of the second partition entry.
+
+Figure out what's still wrong with the MBR; Find the hex characters; ALL CAPS, no spaces.
+
+Hint: dd, hexdump
+
+Hint: Read up on the specs for a properly forumated MBR; Your endian may be off.
+
+
+== Check Your Work:
+
+$ CMD... | md5sum
+
+d59a68c7b6d62ecaa1376dfb73a3b7be
+
+41a8cbc4d7314c23c7e7f6b0a799d76b
+
+d7c07574567e1af6856be94a590ec2dc
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with the parts of a correctly formatted Linux MBR
+* Ability to analyze an MBR using CLI binaries and identify misconfigurations.
+* Operational Context: http://www.pcworld.com/article/3046626/security/petya-ransomware-overwrites-mbrs-locking-users-out-of-their-computers.html

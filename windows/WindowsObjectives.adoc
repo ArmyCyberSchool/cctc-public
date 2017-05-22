@@ -1,7 +1,6 @@
 :doctype: book
 :stylesheet: ../cctc.css
-
-image::https://git.cybbh.space/global-objects/images/raw/master/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
 
 = Cyber Common Technical Core (CCTC) Windows Operating Systems Advance Sheet
 

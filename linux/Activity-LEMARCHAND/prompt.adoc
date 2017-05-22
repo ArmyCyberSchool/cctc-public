@@ -1,0 +1,17 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - LEMARCHAND
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+[square]
+* Write a script that iteratively un-compresses the file type, until you reach the final file, the FLAG within.
+* The compressed file can be found here: /usr/share/cctc/MYSTERIOUS_FILE
+* Hint: while, for, if, elif, file,
+* Tip: The resulting file will need to be cat'd to get the flag.

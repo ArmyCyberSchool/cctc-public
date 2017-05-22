@@ -1,0 +1,36 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - FORplunk
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Sort these files in a directory structure that consists of 1 parent directory called "SORTED", and 5 child directories, named: ALPHA, NUM, PDF, PNG, TXT.
+
+"./SORTED/"
+
+|---ALPHA
+
+|---NUM
+
+|---PDF
+
+|---PNG
+
+|---TXT
+
+Then, sort the 6 files from the 10.200.10.10/downloads/linux-files/sorted.zip file according to the following criteria:
+Files that start with a letter go in the ALPHA Folder; files that start with a number go in the NUM folder, and .pdf extension files in the PDF folder, .png extension files in the PNG folder and .txt extension files in the TXT folder.
+
+Tip:  run the following CMD to check the output of your script:
+
+$ tree -L 2 ./SORTED
+
+5 directories, 12 files
+
+Hint: grep, for loop

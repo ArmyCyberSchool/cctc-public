@@ -1,0 +1,22 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - SIMLOG
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+[square]
+* Write a script that automatically and continuously backs up the following logs in the  /var/log directory: messages, syslog, and auth.log   The script should take user input on the command line (two parameters). The first parameter is the number of seconds between backups (60). The second parameter is the number of backups to keep (4).
+* The script should read the last 10 lines of each log file and append them to one logfile, then repeat the sequence three more times at 1 minute intervals, under a different file names.  During the 4 minute delay, you'll need to logon as a different user, and trigger various log file entries. Events using keywords like “FAIL", "password", "CRASH", "login”, and “root”; all trigger logfile entries. After the logfile entries have been triggered, and the 4 minutes has elapsed, logon as root and diff the two files, color-grepping the output for the keywords mentioned above.  
+* Hint: Do you need root?
+* Tip: $ ls --full-time ./<logfilename*>
+
+== Learning Objectives / Outcomes
+
+[square]
+* Ability to script a log rotation, and verify it's functionality

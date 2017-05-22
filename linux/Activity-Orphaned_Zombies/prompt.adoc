@@ -1,0 +1,34 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Orphaned Zombies
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+You need to create some abnormal behavior on a target system to consume resources and to alert admins of "suspicious" activity.
+
+== Activity
+
+[square]
+* Write a script that creates three zombie / defunct processes that are orphaned.
+* Your orphaned zombies should only exist temporarily for 30 seconds and should automatically resove themselves after that time period.
+* Run your script to create your orphaned zombies. Ensure the defunct process are orphaned and adopted by init.
+* Identify the orphaned zombies in a process list output.
+
+== Deliverables
+
+[]square
+* Your script that creates the orphanded zombies.
+* Screenshoot of your process list output identifying the orphaned zombies nested under init.
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with linux processes and process management
+* Familiarity with ps binary
+* Confidence spawning and manipulating processes

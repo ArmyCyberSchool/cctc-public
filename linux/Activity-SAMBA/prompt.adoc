@@ -1,0 +1,29 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - SAMBA
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+You're serving on an OCO team, whose mission is to exfil the SYSTEMINFO of the target Windows system using only SAMBA protocol.
+
+== Activity
+
+[square]
+* Write a bash script that achieves the following objectives:
+* creates a shared directory named /cctcsmb  with read, write, and execute permissions for Owner, Group and Others;
+* add a new Samba user named samcctc;
+* create a group called smbusers;
+* add samcctc to this new group;
+* give samcctc ownership of the /cctcsmb directory;
+* configure smb.conf  file so that it allows guest access, is not read only, and can also be browsed; have your script output the settings of ONLY the permissions settings for the files and/or groups, directories you altered. 
+* Hint: $ /etc/init.d/samba restart
+
+*non-scripted:*
+
+Connect to the SAMBA Server you setup via a Windows system using user samcctc; exfiltrate the SYSTEMINFO, via SAMBA, from the Windows target.

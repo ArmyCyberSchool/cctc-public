@@ -1,0 +1,17 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Password Cracking
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+[square]
+* Run a dictionary attack, using the windows hashes you captured from the previous activity, and a wordlist of your choice, from /usr/share/seclists/Passwords/ unshadow the passwords of the provided 3TC_PA55W0RD, and 3TC_5HAD0W files, in PassCrack.zip and reveal the passwords using JTR, and a wordlist from seclists; visit the website associated with the target System: http://127.0.0.1/warriors/  and determine some key facts about the author of the website; using those facts, devise a new wordlist using tools: Cewl and/or cupp.py   and/or   crunch  and target the hash for the website author, and using the newly generated worldist, and JTR, reveal the author's password.
+* Company Policy concerning Website Passwords:
+* All Passwords must be ALPHANUMERIC, uppercase, contain no special chars, and be a minimum of 10 chars, and max of 20 chars in length.
+* Hint: unshadow; Intel Profile on DAN: DAN's a very boisterous individual, who likes his accomplishments in lights (ALL CAPS).

@@ -1,0 +1,24 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - SimpleShell
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+[square]
+* Create a bash script using netcat that hosts a bash shell on a listener.
+* From that listener, print out the host's machine-id:
+* `$ cat /etc/machine-id  ||  cat /var/lib/dbus/machine-id`
+* Do not install any binaries; use only the netcat version already installed on the box
+* `e0238601dd1320b9e0c29a0c33ef91aa /bin/nc`
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with the netcat binary functionality
+* Greater understanding of backpipes, and what takes place with one

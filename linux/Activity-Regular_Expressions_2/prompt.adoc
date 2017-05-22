@@ -1,0 +1,31 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Regular Expressions 2
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Setup
+
+Access the Interactive Challenge known as REGEX Crossword at: https://regexcrossword.com/
+
+== Activity
+
+[square]
+* Complete all 5 beginner challenges
+* Complete all 5 intermediate challenges
+* If time permits: work on the experienced challenges
+
+== Deliverables
+
+[square]
+* Screenshot of each completed crossword
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with regular expressions, their syntax and their application
+* Confidence generating simple regular expressions to match specific patterns

@@ -1,0 +1,34 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Triggered
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+A new zero day is being used against an exposed server you need to protect. The zero day is a denial of service remote attack that can only remotely disable the SSH server. However, you need the SSH service exposed to the public while you remediate the zero day and get network defenses in place to protect the server.
+
+== Activity
+
+[square]
+* Write a script that will monitor your system every minute to ensure that the SSH service is running. If the SSH service is disabled, the script should automatically re-enable the service. The SSH service should never be down for more than one minute. If the service is enabled, the script should do nothing.
+* For additional functionality, orphan the monitoring process so that, once launched, the script continues to run if you close the terminal.
+* Test your script on your system to ensure it is properly running. Launch the monitoring script, disable the SSH service, and verify that the script automatically re-enables the service.
+
+== Deliverables
+
+[square]
+* The script that monitors for the SSH service and relaunches the service as necessary.
+* Proof that the script properly detects when SSH is disabled and re-enables the service.
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with Linux services and their implementation
+* Familiarity querying, starting and stopping services
+* Familiarity with common Linux services
+* Confidence writing Bash scripts to achieve specific objectives

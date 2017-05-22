@@ -1,0 +1,27 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - PROCMONix
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Without using the 'top' command, Write a script that monitors processes, and also monitors for malicious activity.
+
+Your script should take snapshots of the process list at 30 second intervals, compare the differences, and output to  proc.lst  as well as to the screen.
+
+== Deliverables
+
+[square]
+* Your script
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity of the 'ps' command, and it's various capabilities/swicthes
+* Understanding which processes to look for to detect signs of malicious activity
+* Ability to formulate a flow of sequencial commands to achieve a stated objective

@@ -1,0 +1,45 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Generating Pin Codes
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+You need to generate a number of pin codes to run through a brute force password attack. PIN codes are of the form: CapitalLetter- SpecialCharacter-SingleDigit-LowercaseLetter.
+
+Special characters are limited to: !@#$%^&*()
+
+Example PIN codes:
+
+A-!-1-a
+
+S-^-7-z
+
+== Activity
+
+Generate all the PIN codes that match the specified pattern and save them to a file.
+
+Check your work:
+
+cat PINCodes.txt | wc -l = 67600
+
+cat PINCodes.txt | sort | md5sum = 2c098662f2f2ab307cc02810d189cd7d
+
+== Deliverables
+
+[square]
+* Your script used to generate the PIN codes
+* Your PIN code file
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with iterating over data sets in Bash (for loops)
+* Familiarity with Bash sequences and sequence expansion
+* Familiarity with parameter expansion, filename expansion, escaping and shell options
+* Confidence writing Bash scripts to achieve specific objectives
