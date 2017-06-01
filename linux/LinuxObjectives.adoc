@@ -2,7 +2,9 @@
 :stylesheet: ../cctc.css
 image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
 
-= Cyber Common Technical Core (CCTC) Linux Operating Systems Advance Sheet
+Cyber Common Technical Core (CCTC) 
+
+= Linux Operating Systems Advance Sheet
 
 == Section 1: Core Features
 * *LINUX OBJECTIVE 1*: Identify common shells
