@@ -182,3 +182,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** 13.6 Define rainbow tables
 ** 13.7 Identify the purposes for custom malware
 ** 13.8 Identify zero configuration networking
+
+'''
+
+[small]#Access at https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf#
