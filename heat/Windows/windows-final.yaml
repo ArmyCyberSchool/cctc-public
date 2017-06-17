@@ -1,0 +1,53 @@
+heat_template_version: 2016-10-14
+
+description: Heat Template Template Windows Module of CCTC - Provides Windows 7 and Windows 10 systems
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default: 
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+resources:
+
+  server_5_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: 
+        str_replace:
+          template: lastName_network_0
+          params:
+            lastName: { get_param: last_name }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.5
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_5:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.mega
+      image: Windows Final
+      name:
+        str_replace:
+          template: lastname-Windows-Final
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_5_subnet_0_port }
