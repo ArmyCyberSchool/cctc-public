@@ -1,0 +1,247 @@
+heat_template_version: 2016-10-14
+
+description: Heat Template for Linux module of CCTC - Provides base resources and Debian LXDE system
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default:
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+  password:
+    type: string
+    label: Password
+    description: Set root/admin password for instances
+    hidden: true
+    default: password
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+      -  allowed_pattern: "[a-zA-Z0-9]*"
+         description: Password may not contain special characters
+
+resources:
+
+  stu-network:
+    type: OS::Neutron::Net
+    properties:
+      name:
+        str_replace:
+          template: lastName_Network
+          params:
+            lastName: { get_param: last_name }
+
+  stu-subnet:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.200
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }
+      network: { get_resource: stu-network }
+      dns_nameservers: [10.50.255.254]
+      name:
+        str_replace:
+          template: lastname_subnet
+          params:
+            lastname: { get_param: last_name }
+
+  stu-router:
+    type: OS::Neutron::Router    
+    properties:
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }
+      external_gateway_info: {"network": public}
+
+  stu-router-interface:
+    type:  OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: stu-router }       
+      subnet_id: { get_resource: stu-subnet }
+
+  host1-port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+        - subnet_id: { get_resource: stu-subnet }
+          ip_address:
+            str_replace:
+              template: 10.studentID.0.1
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  host1:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace:
+          template: lastname-Debian-GUI
+          params:
+            lastname: { get_param: last_name }
+      image: Debian LXDE
+      flavor: cy.medium
+      networks: 
+        - port: { get_resource: host1-port }
+      user_data: 
+        str_replace:
+          template: |
+            #!/bin/bash            
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate dnsutils lsof aptitude ftp auditd telnet samba
+            apt-get -y install locate dnsutils lsof aptitude ftp auditd telnet samba
+            updatedb
+            mandb
+            apt-get -y install figlet hexedit tree
+            apt-get -y install figlet hexedit tree
+            wget 10.50.20.28/downloads/linux/banner.sh -O /usr/share/misc/banner.sh
+            chmod +x /usr/share/misc/banner.sh
+            wget 10.50.20.28/downloads/linux/check.pyc -O /usr/share/misc/check.pyc
+            chmod +x /usr/share/misc/check.pyc
+            cat > /usr/share/misc/check_script.sh << "__EOF__"
+            #!/bin/bash
+            /usr/bin/env python /usr/share/misc/check.pyc
+            __EOF__
+            chmod +x /usr/share/misc/check_script.sh
+            echo 'alias check="/usr/share/misc/check_script.sh"' >> /etc/bash.bashrc
+            mkdir /usr/share/cctc
+            wget 10.50.20.28/downloads/linux/runme -O /usr/share/cctc/runme
+            wget 10.50.20.28/downloads/linux/page.html -O /usr/share/cctc/page.html
+            apt-get install -y qemu
+            apt-get install -y qemu
+            wget 10.50.20.28/downloads/linux/fun.vdi -O /usr/share/cctc/fun.vdi
+            wget 10.50.20.28/downloads/linux/mbroken.zip -O /usr/share/cctc/mbroken.zip
+            wget 10.50.20.28/downloads/linux/NMAP_all_hosts.txt -O /usr/share/cctc/NMAP_all_hosts.txt
+            wget 10.50.20.28/downloads/linux/LEMARCHAND.zip -O /usr/share/cctc/LEMARCHAND.zip
+            wget 10.50.20.28/downloads/linux/MYSTERIOUS_FILE -O /usr/share/cctc/MYSTERIOUS_FILE
+            wget 10.50.20.28/downloads/linux/sorted.zip -O /usr/share/cctc/sorted.zip
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+            reboot
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  host2-port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+        - subnet_id: { get_resource: stu-subnet }
+          ip_address:
+            str_replace:
+              template: 10.studentID.0.2
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  host2:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace:
+          template: lastname-Windows-10-SAMBA
+          params:
+            lastname: { get_param: last_name }
+      image: Windows 10
+      flavor: cy.medium
+      networks: 
+        - port: { get_resource: host2-port }
+      user_data: 
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
+            net user /add $user $password /y
+            net localgroup administrators /add $user
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  host3-port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+        - subnet_id: { get_resource: stu-subnet }
+          ip_address:
+            str_replace:
+              template: 10.studentID.0.3
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  host3:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace:
+          template: lastname-Debian-Backdoor-Target
+          params:
+            lastname: { get_param: last_name }
+      image: Debian Jessie
+      flavor: cy.small
+      networks: 
+        - port: { get_resource: host3-port }
+      user_data: 
+        str_replace:
+          template: |
+            #!/bin/bash            
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            export DEBIAN_FRONTEND=noninteractive
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+            reboot
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
