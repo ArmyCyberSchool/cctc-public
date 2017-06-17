@@ -1,0 +1,638 @@
+heat_template_version: 2016-10-14
+
+description: Heat Template for Networking Final Part 2
+
+resources:
+
+  net-sec-group:
+    properties:
+      description: Disable security groups
+      name: Disable All
+      rules:
+      - {port_range_max: 65535, port_range_min: 1, protocol: TCP}
+      - {port_range_max: 65535, port_range_min: 1, protocol: UDP}
+      - {protocol: ICMP}
+    type: OS::Neutron::SecurityGroup
+
+  external_router:
+    type: OS::Neutron::Router
+    properties: 
+      name: external_router
+      external_gateway_info: 
+        network: public
+
+  network_10:
+    properties:
+      admin_state_up: true
+      name: Net0
+      shared: false
+    type: OS::Neutron::Net
+
+  subnet_10:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+      - end: 10.10.0.250
+        start: 10.10.0.200
+      cidr: 10.10.0.0/24
+      dns_nameservers:
+      - 10.50.255.254
+      enable_dhcp: true
+      gateway_ip: 10.10.0.254
+      host_routes: []
+      ip_version: 4
+      name: subnet10
+      network_id:
+        get_resource: network_10
+
+  external_router_interface_10:
+    type: OS::Neutron::RouterInterface
+    properties: 
+      router_id: { get_resource: external_router }
+      subnet_id: { get_resource: subnet_10 }
+
+# ----- Define Hosts -----
+
+  server_9_subnet_10_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_10 }
+      fixed_ips:
+        - ip_address: 10.10.0.9
+      port_security_enabled: false
+
+  server_9:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie # Debian-new
+      name: Net-Final-9
+      networks:
+        - port: { get_resource: server_9_subnet_10_port }
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+            #Install packages
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            #apt-get dist-upgrade
+            apt-get -y install iptables-persistent
+
+            #Configure iptables rules
+            iptables -P INPUT DROP
+            iptables -P FORWARD DROP
+            iptables -P OUTPUT DROP
+            iptables -A INPUT -s localhost -j ACCEPT
+            iptables -A INPUT -s 10.10.0.1 -j ACCEPT
+            iptables -A OUTPUT -d localhost -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.1 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.10 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.10 -p icmp -j ACCEPT
+            iptables -A INPUT -s 10.10.0.11 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.11 -p icmp -j ACCEPT
+            iptables -A INPUT -s 10.10.0.12 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.12 -p icmp -j ACCEPT
+            iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+            iptables -A INPUT -s 10.10.0.10 -p tcp --dport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.10 -p tcp --sport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.11 -p tcp --dport 22 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.11 -p tcp --sport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.11 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.11 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.12 -p tcp --dport 22 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.12 -p tcp --sport 22 -j ACCEPT
+            iptables -A INPUT -s 10.50.0.0/16 -p tcp --dport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.50.0.0/16 -p tcp --sport 22 -j ACCEPT
+            iptables-save > /etc/iptables/rules.v4
+
+            #Enable lots of sessions
+            echo "MaxSessions 240" >> /etc/ssh/sshd_config
+            service ssh restart
+
+            #Clean / Secure
+            chmod o-r,o-w,o-x /var/lib/cloud
+            crontab -l > /tmp/crontemp
+            echo '@reboot chmod o-w /var/tmp' >> /tmp/crontemp
+            echo '* * * * * for item in $(find /tmp | grep -v -e '"'"'^/tmp$'"'"'); do chmod -7 $item; done' >> /tmp/crontemp
+            crontab /tmp/crontemp
+
+            #Add Student Users
+            for i in {1..40}; do
+              useradd student$i -m -U -s /usr/sbin/nologin
+              chmod 700 /home/student$i
+            done
+
+            #Edit Student User Passwords
+            echo "student1:pGCmQJ" | chpasswd
+            echo "student2:vUBWy6" | chpasswd
+            echo "student3:faY96H" | chpasswd
+            echo "student4:skyc9e" | chpasswd
+            echo "student5:bm3zqn" | chpasswd
+            echo "student6:A5sJGc" | chpasswd
+            echo "student7:m2FQ5x" | chpasswd
+            echo "student8:PP5Fg6" | chpasswd
+            echo "student9:dWdbAe" | chpasswd
+            echo "student10:aeTqa8" | chpasswd
+            echo "student11:DRKVEf" | chpasswd
+            echo "student12:QBzxcw" | chpasswd
+            echo "student13:KqPydT" | chpasswd
+            echo "student14:V524Jy" | chpasswd
+            echo "student15:QzBDL5" | chpasswd
+            echo "student16:UAnRjQ" | chpasswd
+            echo "student17:y2W6eT" | chpasswd
+            echo "student18:JZsZpG" | chpasswd
+            echo "student19:kJyseF" | chpasswd
+            echo "student20:6vFGJB" | chpasswd
+            echo "student21:WLDu8R" | chpasswd
+            echo "student22:WnyfQJ" | chpasswd
+            echo "student23:pDuwXq" | chpasswd
+            echo "student24:zYMHNz" | chpasswd
+            echo "student25:QEFdRe" | chpasswd
+            echo "student26:j4rthY" | chpasswd
+            echo "student27:QggunQ" | chpasswd
+            echo "student28:pzW9Uk" | chpasswd
+            echo "student29:kqYRmK" | chpasswd
+            echo "student30:dkVZE2" | chpasswd
+            echo "student31:NgVBuy" | chpasswd
+            echo "student32:qwZWBT" | chpasswd
+            echo "student33:L67Sjk" | chpasswd
+            echo "student34:jLFzLH" | chpasswd
+            echo "student35:cTfYka" | chpasswd
+            echo "student36:RTQrkW" | chpasswd
+            echo "student37:GPaJgW" | chpasswd
+            echo "student38:VbJ79D" | chpasswd
+            echo "student39:UCJHvA" | chpasswd
+            echo "student40:dFgBcu" | chpasswd
+
+            useradd tunnel -m -U -s /usr/sbin/nologin
+            echo "tunnel:password" | chpasswd
+
+            #Debugging add test user
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            chmod 700 /home/$user
+            echo "$user:$password" | chpasswd
+
+            reboot
+          params:
+            $user: admin
+            $password: AdminPasswordFinalCCTC2016
+            $studentID: 0
+      user_data_format: RAW
+
+  server_10_subnet_10_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_10 }
+      fixed_ips:
+        - ip_address: 10.10.0.10
+      port_security_enabled: false
+
+  server_10:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie # Debian-new
+      name: Net-Final-10
+      networks:
+        - port: { get_resource: server_10_subnet_10_port }
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+            #Install packages
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            #apt-get dist-upgrade
+            apt-get -y install telnetd iptables-persistent nginx imagemagick
+
+            #Create flag file
+            cat > /var/www/html/index.html << "__EOF__"
+            <html>
+            <a href="./flag.png">flag.png</a>
+            </html>
+            __EOF__
+
+            cat > /tmp/ascii.txt << "__EOF__"
+            text 1,15 "One Step forward, two steps back
+            "
+            __EOF__
+
+            convert -size 500x100 xc:white -font "FreeMono" -pointsize 24 -fill black -draw @/tmp/ascii.txt /var/www/html/flag.png
+
+            for file in $(find /var/www/html); do
+              chown www-data:www-data $file
+              chmod o-r,o-w,o-x $file
+            done
+
+            #Configure iptables rules
+            iptables -P INPUT DROP
+            iptables -P FORWARD DROP
+            iptables -P OUTPUT DROP
+            iptables -A INPUT -s localhost -j ACCEPT
+            iptables -A INPUT -s 10.10.0.10 -j ACCEPT
+            iptables -A OUTPUT -d localhost -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.10 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -p tcp --dport 22 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -p tcp --sport 22 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -j DROP
+            iptables -A INPUT -d 10.10.0.10 -p tcp --dport 23 -j ACCEPT
+            iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+            iptables -A INPUT -s 10.50.0.0/16 -p tcp --dport 23 -j ACCEPT
+            iptables -A OUTPUT -d 10.50.0.0/16 -p tcp --sport 23 -j ACCEPT
+            iptables-save > /etc/iptables/rules.v4
+
+            #Enable lots of sessions
+            echo "MaxSessions 240" >> /etc/ssh/sshd_config
+            service ssh restart
+            echo "instances = unlimited" /etc/inetd.conf
+            service inetd restart
+
+            #Clean / Secure
+            chmod o-r,o-w,o-x /var/lib/cloud
+            crontab -l > /tmp/crontemp
+            echo '@reboot chmod o-w /var/tmp' >> /tmp/crontemp
+            echo '* * * * * for item in $(find /tmp | grep -v -e '"'"'^/tmp$'"'"'); do chmod -7 $item; done' >> /tmp/crontemp
+            crontab /tmp/crontemp
+
+            #Add Student Users
+            for i in {1..40}; do
+              useradd student$i -m -U -s /bin/bash
+              chmod 700 /home/student$
+            done
+
+            #Edit Student User Passwords
+            echo "student1:pGCmQJ" | chpasswd
+            echo "student2:vUBWy6" | chpasswd
+            echo "student3:faY96H" | chpasswd
+            echo "student4:skyc9e" | chpasswd
+            echo "student5:bm3zqn" | chpasswd
+            echo "student6:A5sJGc" | chpasswd
+            echo "student7:m2FQ5x" | chpasswd
+            echo "student8:PP5Fg6" | chpasswd
+            echo "student9:dWdbAe" | chpasswd
+            echo "student10:aeTqa8" | chpasswd
+            echo "student11:DRKVEf" | chpasswd
+            echo "student12:QBzxcw" | chpasswd
+            echo "student13:KqPydT" | chpasswd
+            echo "student14:V524Jy" | chpasswd
+            echo "student15:QzBDL5" | chpasswd
+            echo "student16:UAnRjQ" | chpasswd
+            echo "student17:y2W6eT" | chpasswd
+            echo "student18:JZsZpG" | chpasswd
+            echo "student19:kJyseF" | chpasswd
+            echo "student20:6vFGJB" | chpasswd
+            echo "student21:WLDu8R" | chpasswd
+            echo "student22:WnyfQJ" | chpasswd
+            echo "student23:pDuwXq" | chpasswd
+            echo "student24:zYMHNz" | chpasswd
+            echo "student25:QEFdRe" | chpasswd
+            echo "student26:j4rthY" | chpasswd
+            echo "student27:QggunQ" | chpasswd
+            echo "student28:pzW9Uk" | chpasswd
+            echo "student29:kqYRmK" | chpasswd
+            echo "student30:dkVZE2" | chpasswd
+            echo "student31:NgVBuy" | chpasswd
+            echo "student32:qwZWBT" | chpasswd
+            echo "student33:L67Sjk" | chpasswd
+            echo "student34:jLFzLH" | chpasswd
+            echo "student35:cTfYka" | chpasswd
+            echo "student36:RTQrkW" | chpasswd
+            echo "student37:GPaJgW" | chpasswd
+            echo "student38:VbJ79D" | chpasswd
+            echo "student39:UCJHvA" | chpasswd
+            echo "student40:dFgBcu" | chpasswd
+
+            #Debugging add test user
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            chmod 700 /home/$user
+            echo "$user:$password" | chpasswd
+
+            reboot
+          params:
+            $user: admin
+            $password: AdminPasswordFinalCCTC2016
+            $studentID: 0
+      user_data_format: RAW
+
+  server_11_subnet_10_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_10 }
+      fixed_ips:
+        - ip_address: 10.10.0.11
+      port_security_enabled: false
+
+  server_11:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie # Debian-new
+      name: Net-Final-11
+      networks:
+        - port: { get_resource: server_11_subnet_10_port }
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+            #Install packages
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            #apt-get dist-upgrade
+            apt-get -y install proftpd iptables-persistent
+
+            #Create flag file
+            cat > /etc/proftpd/conf.d/anonymous.conf <<"__EOF__"
+            <Anonymous ~ftp>
+              User				ftp
+              Group				nogroup
+              # We want clients to be able to login with "anonymous" as well as "ftp"
+              UserAlias			anonymous ftp
+              # Cosmetic changes, all files belongs to ftp user
+              DirFakeUser	on ftp
+              DirFakeGroup on ftp
+
+              RequireValidShell		off
+
+              # Limit the maximum number of anonymous logins
+              MaxClients			10
+
+              # We want 'welcome.msg' displayed at login, and '.message' displayed
+              # in each newly chdired directory.
+              DisplayLogin			welcome.msg
+              DisplayChdir		.message
+
+              # Limit WRITE everywhere in the anonymous chroot
+              <Directory *>
+                <Limit WRITE>
+                  DenyAll
+                </Limit>
+              </Directory>
+
+              # Uncomment this if you're brave.
+              # <Directory incoming>
+              #   # Umask 022 is a good standard umask to prevent new files and dirs
+              #   # (second parm) from being group and world writable.
+              #   Umask				022  022
+              #            <Limit READ WRITE>
+              #            DenyAll
+              #            </Limit>
+              #            <Limit STOR>
+              #            AllowAll
+              #            </Limit>
+              # </Directory>
+
+            </Anonymous>
+            __EOF__
+            service proftpd restart
+            cat > /srv/ftp/ftp.txt << "__EOF__"
+            Flag = FTP FTW!
+            __EOF__
+
+            #Configure iptables rules
+            iptables -P INPUT DROP
+            iptables -P FORWARD DROP
+            iptables -P OUTPUT DROP
+            iptables -A INPUT -s localhost -j ACCEPT
+            iptables -A INPUT -s 10.10.0.11 -j ACCEPT
+            iptables -A OUTPUT -d localhost -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.11 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -j ACCEPT
+            iptables-save > /etc/iptables/rules.v4
+
+            #Clean / Secure
+            chmod o-r,o-w,o-x /var/lib/cloud
+            crontab -l > /tmp/crontemp
+            echo '@reboot chmod o-w /var/tmp' >> /tmp/crontemp
+            echo '* * * * * for item in $(find /tmp | grep -v -e '"'"'^/tmp$'"'"'); do chmod -7 $item; done' >> /tmp/crontemp
+            crontab /tmp/crontemp
+
+            #Debugging add test user
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            chmod 700 /home/$user
+            echo "$user:$password" | chpasswd
+
+            reboot
+          params:
+            $user: admin
+            $password: AdminPasswordFinalCCTC2016
+            $studentID: 0
+      user_data_format: RAW
+
+  server_12_subnet_10_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_10 }
+      fixed_ips:
+        - ip_address: 10.10.0.12
+      port_security_enabled: false
+
+  server_12:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie # Debian-new
+      name: Net-Final-12
+      networks:
+        - port: { get_resource: server_12_subnet_10_port }
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+            #Install packages
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            #apt-get dist-upgrade
+            apt-get -y install iptables-persistent
+
+            #Configure iptables rules
+            iptables -P INPUT DROP
+            iptables -P FORWARD DROP
+            iptables -P OUTPUT DROP
+            iptables -A INPUT -s localhost -j ACCEPT
+            iptables -A INPUT -s 10.10.0.12 -j ACCEPT
+            iptables -A OUTPUT -d localhost -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.12 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -p icmp -j ACCEPT
+            iptables -A INPUT -s 10.10.0.13 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.13 -p icmp -j ACCEPT
+            iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+            iptables -A INPUT -s 10.10.0.9 -p tcp --dport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.9 -p tcp --sport 22 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.13 -p tcp --dport 80 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.13 -p tcp --sport 80 -j ACCEPT
+            iptables-save > /etc/iptables/rules.v4
+
+            #Enable lots of sessions
+            echo "MaxSessions 240" >> /etc/ssh/sshd_config
+            service ssh restart
+
+            #Clean / Secure
+            chmod o-r,o-w,o-x /var/lib/cloud
+            crontab -l > /tmp/crontemp
+            echo '@reboot chmod o-w /var/tmp' >> /tmp/crontemp
+            echo '* * * * * for item in $(find /tmp | grep -v -e '"'"'^/tmp$'"'"'); do chmod -7 $item; done' >> /tmp/crontemp
+            crontab /tmp/crontemp
+
+            #Add Student Users
+            for i in {1..40}; do
+              useradd student$i -m -U -s /usr/sbin/nologin
+              chmod 700 /home/student$i
+            done
+
+            #Edit Student User Passwords
+            echo "student1:pGCmQJ" | chpasswd
+            echo "student2:vUBWy6" | chpasswd
+            echo "student3:faY96H" | chpasswd
+            echo "student4:skyc9e" | chpasswd
+            echo "student5:bm3zqn" | chpasswd
+            echo "student6:A5sJGc" | chpasswd
+            echo "student7:m2FQ5x" | chpasswd
+            echo "student8:PP5Fg6" | chpasswd
+            echo "student9:dWdbAe" | chpasswd
+            echo "student10:aeTqa8" | chpasswd
+            echo "student11:DRKVEf" | chpasswd
+            echo "student12:QBzxcw" | chpasswd
+            echo "student13:KqPydT" | chpasswd
+            echo "student14:V524Jy" | chpasswd
+            echo "student15:QzBDL5" | chpasswd
+            echo "student16:UAnRjQ" | chpasswd
+            echo "student17:y2W6eT" | chpasswd
+            echo "student18:JZsZpG" | chpasswd
+            echo "student19:kJyseF" | chpasswd
+            echo "student20:6vFGJB" | chpasswd
+            echo "student21:WLDu8R" | chpasswd
+            echo "student22:WnyfQJ" | chpasswd
+            echo "student23:pDuwXq" | chpasswd
+            echo "student24:zYMHNz" | chpasswd
+            echo "student25:QEFdRe" | chpasswd
+            echo "student26:j4rthY" | chpasswd
+            echo "student27:QggunQ" | chpasswd
+            echo "student28:pzW9Uk" | chpasswd
+            echo "student29:kqYRmK" | chpasswd
+            echo "student30:dkVZE2" | chpasswd
+            echo "student31:NgVBuy" | chpasswd
+            echo "student32:qwZWBT" | chpasswd
+            echo "student33:L67Sjk" | chpasswd
+            echo "student34:jLFzLH" | chpasswd
+            echo "student35:cTfYka" | chpasswd
+            echo "student36:RTQrkW" | chpasswd
+            echo "student37:GPaJgW" | chpasswd
+            echo "student38:VbJ79D" | chpasswd
+            echo "student39:UCJHvA" | chpasswd
+            echo "student40:dFgBcu" | chpasswd
+
+            useradd tunnel -m -U -s /usr/sbin/nologin
+            echo "tunnel:password" | chpasswd
+
+            #Debugging add test user
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            chmod 700 /home/$user
+            echo "$user:$password" | chpasswd
+
+            reboot
+          params:
+            $user: admin
+            $password: AdminPasswordFinalCCTC2016
+            $studentID: 0
+      user_data_format: RAW
+
+  server_13_subnet_10_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_10 }
+      fixed_ips:
+        - ip_address: 10.10.0.13
+      port_security_enabled: false
+
+  server_13:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie # Debian-new
+      name: Net-Final-13
+      networks:
+        - port: { get_resource: server_13_subnet_10_port }
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+            #Install packages
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            #apt-get dist-upgrade
+            apt-get -y install iptables-persistent nginx
+
+            #Create flag file
+            cat > /var/www/html/index.html <<"__EOF__"
+            <html>
+            Flag = Quantum foam makes me roam.
+            <html>
+            __EOF__
+
+            #Configure iptables rules
+            iptables -P INPUT DROP
+            iptables -P FORWARD DROP
+            iptables -P OUTPUT DROP
+            iptables -A INPUT -s localhost -j ACCEPT
+            iptables -A INPUT -s 10.10.0.13 -j ACCEPT
+            iptables -A OUTPUT -d localhost -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.13 -j ACCEPT
+            iptables -A INPUT -s 10.10.0.12 -p icmp -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.12 -p icmp -j ACCEPT
+            iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+            iptables -A INPUT -s 10.10.0.12 -p tcp --dport 80 -j ACCEPT
+            iptables -A OUTPUT -d 10.10.0.12 -p tcp --sport 80 -j ACCEPT
+            iptables-save > /etc/iptables/rules.v4
+
+            #Clean / Secure
+            chmod o-r,o-w,o-x /var/lib/cloud
+            crontab -l > /tmp/crontemp
+            echo '@reboot chmod o-w /var/tmp' >> /tmp/crontemp
+            echo '* * * * * for item in $(find /tmp | grep -v -e '"'"'^/tmp$'"'"'); do chmod -7 $item; done' >> /tmp/crontemp
+            crontab /tmp/crontemp
+
+            #Debugging add test user
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            chmod 700 /home/$user
+            echo "$user:$password" | chpasswd
+
+            reboot
+          params:
+            $user: admin
+            $password: AdminPasswordFinalCCTC2016
+            $studentID: 0
+      user_data_format: RAW
