@@ -1,0 +1,161 @@
+heat_template_version: 2016-10-14
+
+description: Heat Template for Linux Final - Provides New Debian LXDE and Linux Final
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+    default: 0
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default:
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+  password:
+    type: string
+    label: Password
+    description: Set root/admin password for instances
+    hidden: true
+    default: password
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+      -  allowed_pattern: "[a-zA-Z0-9]*"
+         description: Password may not contain special characters
+
+resources:
+
+  stu-network:
+    type: OS::Neutron::Net
+    properties:
+      name:
+        str_replace:
+          template: lastName_Network
+          params:
+            lastName: { get_param: last_name }
+
+  stu-subnet:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.200
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }
+      network: { get_resource: stu-network }
+      dns_nameservers: [10.50.255.254]
+      name:
+        str_replace:
+          template: lastname_subnet
+          params:
+            lastname: { get_param: last_name }
+
+  stu-router:
+    type: OS::Neutron::Router    
+    properties:
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }
+      external_gateway_info: {"network": public}
+
+  stu-router-interface:
+    type:  OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: stu-router }       
+      subnet_id: { get_resource: stu-subnet }
+
+  host1-port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+        - subnet_id: { get_resource: stu-subnet }
+          ip_address:
+            str_replace:
+              template: 10.studentID.0.1
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  host1:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace:
+          template: lastname-Debian-GUI
+          params:
+            lastname: { get_param: last_name }
+      image: Debian LXDE
+      flavor: cy.medium
+      networks: 
+        - port: { get_resource: host1-port }
+      user_data: 
+        str_replace:
+          template: |
+            #!/bin/bash            
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+            reboot
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  host2-port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+        - subnet_id: { get_resource: stu-subnet }
+          ip_address:
+            str_replace:
+              template: 10.studentID.0.5
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  host2:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace:
+          template: lastname-Final
+          params:
+            lastname: { get_param: last_name }
+      image: Linux Final
+      flavor: cy.medium
+      networks: 
+        - port: { get_resource: host2-port }
