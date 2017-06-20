@@ -1,0 +1,219 @@
+heat_template_version: 2016-10-14
+
+description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 and UTW test.
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default: 
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+  password:
+    type: string
+    label: Password
+    description: Set root/admin password for instances
+    hidden: true
+    default: password
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+      -  allowed_pattern: "[a-zA-Z0-9]*"
+         description: Password may not contain special characters
+
+resources:
+
+  network_0:
+    type: OS::Neutron::Net
+    properties:
+      name:
+        str_replace:
+          template: lastName_network_0
+          params:
+            lastName: { get_param: last_name }
+      admin_state_up: true
+      shared: false
+
+  subnet_0:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.200
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      host_routes: []
+      ip_version: 4
+      name:
+        str_replace:
+          template: lastname_subnet_0
+          params:
+            lastname: { get_param: last_name }
+      network_id:
+        get_resource: network_0
+
+  external_router:
+    type: OS::Neutron::Router
+    properties: 
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }
+      external_gateway_info: 
+        network: public
+
+  external_router_interface_0:
+    type: OS::Neutron::RouterInterface
+    properties: 
+      router_id: { get_resource: external_router }
+      subnet_id: { get_resource: subnet_0 }
+
+  server_1_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.1
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_1:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.large
+      image: Windows 10
+      name:
+        str_replace:
+          template: lastname-Windows-10
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_1_subnet_0_port }
+      user_data:
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
+            (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-48.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
+            & c:\firefox.exe -ms
+            (new-object System.Net.WebClient).DownloadFile('https://notepad-plus-plus.org/repository/6.x/6.9.2/npp.6.9.2.Installer.exe','C:\npp.exe')
+            & c:\npp.exe /S
+            (new-object System.Net.WebClient).DownloadFile('https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi','C:\putty.msi')
+            & msiexec /i c:\putty.msi /quiet /passive
+            net user /add $user $password /y
+            net localgroup administrators /add $user
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  server_2_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.2
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_2:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Windows 7
+      name:
+        str_replace:
+          template: lastname-Windows-7
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_2_subnet_0_port }
+      user_data:
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
+            (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-48.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
+            & c:\firefox.exe -ms
+            (new-object System.Net.WebClient).DownloadFile('https://notepad-plus-plus.org/repository/6.x/6.9.2/npp.6.9.2.Installer.exe','C:\npp.exe')
+            & c:\npp.exe /S
+            (new-object System.Net.WebClient).DownloadFile('https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi','C:\putty.msi')
+            & msiexec /i c:\putty.msi /quiet /passive
+            net user /add $user $password /y
+            net localgroup administrators /add $user
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  server_3_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.3
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_3:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Under the Wire
+      name:
+        str_replace:
+          template: lastname-Under-the-Wire
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_3_subnet_0_port }
