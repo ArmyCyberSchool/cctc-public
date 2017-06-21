@@ -285,7 +285,7 @@ resources:
            touch /file2.txt
            chmod 777 /file2.txt
            echo "Honey Badger says try again" > /file2.txt
-           wget -O /etc/init.d/autostart https://git.cybbh.space/CCTC/heat-templates/raw/master/scripts_for_networking/autostart    
+           wget -O /etc/init.d/autostart https://git.cybbh.space/CCTC/public/raw/master/heat/Networking/Packages_and_Scripts/autostart  
            chmod u+x /etc/init.d/autostart
            update-rc.d autostart defaults
            echo "CREATE USER"
@@ -356,8 +356,8 @@ resources:
             echo "root:$password" | chpasswd
             echo "$user:$password" | chpasswd
             cd /
-            wget https://git.cybbh.space/CCTC/heat-templates/raw/master/scripts_for_networking/daq_2.0.6-1_amd64.deb
-            wget https://git.cybbh.space/CCTC/heat-templates/raw/master/scripts_for_networking/snort_2.9.9.0-1_amd64.deb
+            wget https://git.cybbh.space/CCTC/public/raw/master/heat/Networking/Packages_and_Scripts/daq_2.0.6-1_amd64.deb
+            wget https://git.cybbh.space/CCTC/public/raw/master/heat/Networking/Packages_and_Scripts/snort_2.9.9.0-1_amd64.deb
             gdebi --non-interactive "daq_2.0.6-1_amd64.deb"
             gdebi --non-interactive "snort_2.9.9.0-1_amd64.deb"
             mkdir /etc/snort
