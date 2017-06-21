@@ -1,0 +1,19 @@
+#!/bin/bash
+### BEGIN INIT INFO 
+# Provides: netcat listener
+# Required-Start:
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: -
+# Description:       -
+### END INIT INFO
+case "$1" in
+  start)
+    (while true; do (cat /file1.txt - | nc -l -p 1234 > /dev/null); done) &
+    (while true; do (cat /file2.txt - | nc -l -p 7777 > /dev/null); done) &
+    ;;
+  *)
+    ;;
+esac
+exit 0
