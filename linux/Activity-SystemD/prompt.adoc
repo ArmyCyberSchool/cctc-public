@@ -1,9 +1,0 @@
-:doctype: book
-:stylesheet: ../../cctc.css
-
-= Activity - SystemD
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
