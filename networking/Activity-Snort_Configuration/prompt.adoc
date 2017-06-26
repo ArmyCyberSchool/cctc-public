@@ -1,0 +1,93 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity 2- Snort Configuration
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+
+== Learning Objectives / Outcomes
+[square]
+
+* Skill 9- Configuring filtering devices
+
+** 7.1 Explain the function of different network devices and their recommended position on a network
+
+{empty} +
+
+== Activity
+
+{empty} +
+
+First, students will need to access their “Router”. This is a Linux host with the Quagga router package installed. The router has 3 interfaces, but we will be looking at interfaces eth1 (10.1.0.1) and eth2 (10.2.0.1).
+
+{empty} +
+
+=== Task 1
+
+1) You will need to download the snort.sh bash script and pull it into the router. 
+
+2) Once this is downloaded, the script can be run to install, configure and setup a simple test rule in snort.
+
+3) After the script has completed, you can confirm that snort has installed/configured correctly with "snort --version"
+
+4) Run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+(You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create it’s own process.)
+
+5) Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
+
+6) Now you will practice customizing this icmp rule.
+
+{empty} +
+
+=== Task 2
+
+1) Kill an existing Snort process running. 
+
+2) You will customize the icmp.rules file and change the matching condition. The rule should only alert if an icmp packet with the hex string of "DEADBEEF" is present in the payload.
+
+3) Change the sid to "9000000" and the msg to "COWS".
+
+4) Run Snort as a daemon on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+
+5) Send a ping fro H1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
+
+6) Finally, go back to your host and send a ping without the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
+
+{empty} +
+
+=== Task 3
+
+1) In order to add custom rules of your own, you will need to write the rules, AND add them to be included within the snort.conf file.
+
+2) You will be writing a rule to alert on the vulnerability exploited in the attack-trace.pcap from the traffic analysis section. Be sure you are looking for the VULNERABILITY and not the exploit. This can be accomplished without payload inspection.
+The rule should be written in the /etc/snort/rules directory. For example, you may name your rule “attack.rule”.
+
+_For this rule, you should use variables. Define the variables inside the snort.conf file_
+
+3) Once the rule has been created, add to the snort.conf file. Edit this file to add a line including your new rule. For example, add the line “include /etc/snort/rules/attack.rule” to the file. 
+This will ensure the rule you created in the previous step is used.
+
+4) Transfer the attack-trace.pcap to the snort/router; using the "-r" flag, run the pcap through snort.
+
+5) Check your alert logs to ensure that your alert was triggered by the traffic in the pcap as you intended.
+
+
+{empty} +
+
+=== Task 4
+
+1) Your last task will be to create a custom rule in snort that will alert on a syn-flood. A syn flood can indicate either a DoS, or more commonly, a scanning attempt.
+
+2) In order to do this, you will need to utilize the "flow" and "detection_filter" functions in your rule. 
+
+3) Once you have created the rule and implemented it, test it be attempting an aggressive syn scan from H1 using Nmap, or another tool of your choice.
+
+{empty} +
+
+*References*
+
+** http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node27.html
