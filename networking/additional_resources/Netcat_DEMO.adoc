@@ -1,0 +1,98 @@
+== Netcat Demo
+
+{empty} +
+
+*Learning Objectives / Outcomes*
+
+.SKILL 10: Perform file transfers
+
+** 10.3 Explain the forward file transfer process with netcat
+
+** 10.4 Explain the reverse file transfer process with netcat
+
+
+{empty} +
+
+== Demo Walk-through
+
+{empty} +
+
+_Netcat is a utility that is generally used to read of write information from network connections. These may be either TCP or UDP in nature. There are a number of 
+things that can be done with netcat to include file transfers, proxys, interact with protocols and much more. The utility uses a client/listener setup where one end of a connection
+creates a listening port on the local machine, and the other initiates a connection outbound to reach a target machine and port (which should be listening)._
+
+{empty} +
+
+In this demonstration, H1 (Debian GUI host) will act as the listener, and H3 (Debian CMD Line host) will act as the client. The demonstration will show the file 
+transfer capability of netcat.
+
+*Follow the below steps*
+
+
+{empty} +
+
+=== Forward File Transfer: Listener Setup (H1)
+
+{empty} + 
+
+ 
+1) Log into H1. You can make yourself root, or use sudo as invoke the command.
+
+2) You will establish a listening port on H1 and receive the contents of the file you created on H3 into the socket. Use the command: "nc -l -p 1111 > file1.txt"
+
+4) You can open another tab and check that this listener is up with netstat if you like.
+
+5) Now that your listener is up and running, you can connect to it with your client and push the file over.
+
+{empty} +
+
+=== Forward File Transfer:  Client Setup (H3)
+
+{empty} + 
+
+ 
+1) Log into H1. You can make yourself root, or use sudo as invoke the command.
+
+2) You will create a file on H3 called joke.txt. Echo "knock-knock" into the file and verify that it wrote properly.
+
+3) Now you will connect to H1 with Netcat and push the file over the connection. Use the command: "nc 10.1.0.2 1111 < joke.txt"
+
+5) After a few seconds, the file contents should be transfered. Break the connection and go back to H1. Check to ensure the contents in the file1.txt of H1 were received.
+
+{empty} +
+
+=== Reverse File Transfer: Listener Setup (H1)
+
+{empty} + 
+
+ 
+1) Log into H1. You can make yourself root, or use sudo as invoke the command.
+
+2) You will create a file on H1 called file2.txt. Echo "who's there?" into the file and verify that it wrote properly.
+
+3) Now you will establish a listening port on H1 and push the contents of the file you created into the socket. Use the command: "nc -l -p 1111 < file2.txt"
+
+4) You can open another tab and check that this listener is up with netstat if you like.
+
+5) Now that your listener is up and running, you can connect to it with your client and pull the file over.
+
+{empty} +
+
+=== Reverse File Transfer: Client Setup
+ 
+{empty} +
+ 
+  
+1) Log into H3. You can make yourself root, or use sudo as you bring up the tool.
+
+2) you will connect to the listener on H1 and pull the contents of the file being fed to the process with the command: "nc 10.1.0.1 1111 > answer.txt"
+
+3) This connection will stay active as long as you let it, so you can break it with Ctrl-C. 
+
+4) Check the "answer.txt" on H3. It should say "who's there?"
+
+{empty} +
+ 
+*References:* 
+
+** https://www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf
