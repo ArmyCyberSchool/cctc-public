@@ -4,6 +4,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 = Cyber Common Technical Core (CCTC) Windows Operating Systems Advance Sheet
 
+[line-through]#foo#
+
 == Section 1: Command Line Tools
 * SKILL 1: Employ commands using command line interface
 ** 1.1 Use command line commands to gain situational awareness of the current workstation 
