@@ -4,10 +4,9 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 = Cyber Common Technical Core (CCTC) Windows Operating Systems Advance Sheet
 
-[line-through]#foo#
 
 == Section 1: Command Line Tools
-* SKILL 1: Employ commands using command line interface
+[line-through]#* SKILL 1: Employ commands using command line interface#
 ** 1.1 Use command line commands to gain situational awareness of the current workstation 
 ** 1.2 Use System Internals tools to gain situational awareness of the current workstation 
 * SKILL 2: Employ commands using Windows Management Instrumentation Command-line 
