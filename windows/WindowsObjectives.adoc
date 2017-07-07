@@ -21,16 +21,16 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** [line-through]#4.3 Create Powershell script that will perform basic enumeration of a workstation# JCAC 7.4
  
 == Section 2: Processes
-* SKILL 5: Define the Windows pre-boot process
-* SKILL 6: Define the Windows boot process
-* SKILL 7: Identify the Windows logon process
-* SKILL 8: Identify Windows processes
-** 8.1 Explain how to find the current status of a Windows process
-** 8.2 Explain the process states and identify why they are important
-** 8.3 Explain process threads and handles
-** 8.4 Describe the thread states
-** 8.5 Discuss the differences between processes, threads and handles 
-** 8.6 Describe system processes
+* [line-through]#SKILL 5: Define the Windows pre-boot process# JCAC 7.2
+* [line-through]#SKILL 6: Define the Windows boot process# JCAC 7.2
+* [line-through]#SKILL 7: Identify the Windows logon process# JCAC 7.2
+* [line-through]#SKILL 8: Identify Windows processes# JCAC 7.2
+** [line-through]#8.1 Explain how to find the current status of a Windows process# JCAC 7.8
+** [line-through]#8.2 Explain the process states and identify why they are important# JCAC 7.8
+** [line-through]#8.3 Explain process threads and handles# JCAC 7.8
+** [line-through]#8.4 Describe the thread states# JCAC 7.8
+** [line-through]#8.5 Discuss the differences between processes, threads and handles# JCAC 7.8
+** [line-through]#8.6 Describe system processes# JCAC 7.8
 * SKILL 9: Analyze the validity of Windows processes
 ** 9.1 Identify the importance of the output of command line tools 
 ** 9.2 Determine the abnormal activities that are taking place on a system based on a process list
