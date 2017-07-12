@@ -1,0 +1,41 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Analyze patches
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+You have successfully exploited onto an endpoint device and you have a privilege escalation tool(ROBOTDORITOS) in your arsenal that you intend on using to gain system privilege in order to lay down a rootkit. However, new technical guidance came out that you are required to adhere to.
+
+Techincal Guidance:
+EFFECTIVE IMMEDIATELY!!!!
+Summary:
+A recent software patch for Common Vulnerabilities and Exposures 2016-3251 was released.
+This update renders the following tools ineffective:
+-ROBOTDORITOS
+
+Guidance:
+Verify the installation status for the patch. If the patch is not installed, you may deploy ROBOTDORITOS. If the patch is installed and the operation cannot continue without the use of ROBOTDORITOS, cease operations.
+== Activity
+
+Write a PowerShell script that will determine if the endpoint you are on is vulnerable to ROBOTDORITOS. Additionally, you must provide a technical summary that outlines your recommended course of action.
+
+== Deliverables / Submit
+
+[square]
+* A PowerShell script that verifies whether or not the endpoint is vulnerable to ROBOTDORITOS
+* The output of the PowerShell script
+* A technical summary that outlines your recommended course of action.
+
+== Learning Objectives / Outcomes
+
+[square]
+*SKILL 1.1 Use command line commands to gain situational awareness of the current workstation
+*SKILL 2.1 Use WMIC commands to gain situational awareness of the current workstation
+*SKILL 3.1 Identify the purpose of using Powershell in operations
+*SKILL 4: Develop scripts
+*SKILL 12: Identify the importance of situational awareness
