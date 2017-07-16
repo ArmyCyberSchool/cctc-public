@@ -4,6 +4,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 = Cyber Common Technical Core (CCTC) Windows Operating Systems Advance Sheet
 
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/windows/WindowsObjectives.pdf?job=genpdf
 
 == Section 1: Command Line Tools
 * SKILL 1: Employ commands using command line interface
