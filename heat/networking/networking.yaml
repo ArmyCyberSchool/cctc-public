@@ -185,7 +185,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.small
-      image: Debian Jessie
+      image: Debian Stretch
       name:
         str_replace:
           params:
@@ -255,7 +255,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.small
-      image: Debian Jessie
+      image: Debian Stretch
       name:
         str_replace:
           params:
@@ -326,7 +326,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.small
-      image: Debian Jessie
+      image: Debian Stretch
       name:
         str_replace:
           params:
