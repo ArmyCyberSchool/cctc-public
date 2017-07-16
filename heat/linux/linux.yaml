@@ -224,7 +224,7 @@ resources:
           template: lastname-Debian-Backdoor-Target
           params:
             lastname: { get_param: last_name }
-      image: Debian Jessie
+      image: Debian Stretch
       flavor: cy.small
       networks: 
         - port: { get_resource: host3-port }
