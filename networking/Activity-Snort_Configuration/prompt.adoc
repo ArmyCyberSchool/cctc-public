@@ -12,9 +12,9 @@
 == Learning Objectives / Outcomes
 [square]
 
-* Skill 9- Configuring filtering devices
+* SKILL CCNE009: Configure filtering devices
 
-** 7.1 Explain the function of different network devices and their recommended position on a network
+* CCNE007.001 Explain the function of different network devices and their recommended position on a network
 
 {empty} +
 
@@ -26,7 +26,7 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 {empty} +
 
-=== Task 1
+== Task 1
 
 1) You will need to download the snort.sh bash script and pull it into the router. 
 
@@ -43,7 +43,7 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 {empty} +
 
-=== Task 2
+== Task 2
 
 1) Kill an existing Snort process running. 
 
@@ -59,7 +59,7 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 {empty} +
 
-=== Task 3
+== Task 3
 
 1) In order to add custom rules of your own, you will need to write the rules, AND add them to be included within the snort.conf file.
 
@@ -75,12 +75,16 @@ This will ensure the rule you created in the previous step is used.
 
 5) Check your alert logs to ensure that your alert was triggered by the traffic in the pcap as you intended.
 
-
 {empty} +
 
-=== Task 4
+== Deliverables
 
-1) Your last task will be to create a custom rule in snort that will alert on a syn-flood. A syn flood can indicate either a DoS, or more commonly, a scanning attempt.
+* You should be able to produce alerts with Snort based on the tasks above. Check the alerts as well as the PCAP that Snort captures to verify you can alerting on the proper traffic.
+
+
+== Challenge
+
+1) Your challenge task will be to create a custom rule in snort that will alert on a syn-flood. A syn flood can indicate either a DoS, or more commonly, a scanning attempt.
 
 2) In order to do this, you will need to utilize the "flow" and "detection_filter" functions in your rule. 
 
@@ -88,6 +92,8 @@ This will ensure the rule you created in the previous step is used.
 
 {empty} +
 
-*References*
+== Useful Resources
 
-** http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node27.html
+*  http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node27.html
+
+* https://srcport.com/articles/300/snort-ids-cheat-sheet
