@@ -1,0 +1,57 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - IPTables for Filtering
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+
+* Skill/Objective NUM - List objectives here
+
+{empty} +
+
+== Scenario
+
+If there is a story or scenario, present it here.
+
+{empty} +
+
+== Activity
+
+Overall description of the activity.
+
+=== Task 1)
+
+Add specific tasks for the activity
+
+=== Task N)
+
+Last task for the activity 
+
+{empty} +
+
+== Deliverables
+
+* List any deliverables here
+
+{empty} +
+
+== Hints
+
+* List hints here (if any)
+
+{empty} +
+
+== Challenge
+
+If there is a more advanced version of the activity or a follow on challenge, add it here
+
+{empty} +
+
+== Useful Resources
+
+* List any documents, videos, tutorials, or links that could be helpful with the activity here
