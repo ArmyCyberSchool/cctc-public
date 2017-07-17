@@ -10,19 +10,13 @@
 
 == Learning Objectives / Outcomes
 
-* Skill/Objective NUM - List objectives here
-
-{empty} +
-
-== Scenario
-
-If there is a story or scenario, present it here.
+* CCNE007.013 Construct IPTable rules
 
 {empty} +
 
 == Activity
 
-Overall description of the activity.
+You will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
 
 === Task 1)
 
@@ -48,13 +42,15 @@ Overall description of the activity.
 
 == Deliverables
 
-* List any deliverables here
+* Document the rules, and process you used to construct the IPTables rules.
+
+* Test rules to confirm they meet the intent of the activity.
 
 {empty} +
 
 == Hints
 
-* List hints here (if any)
+* The "-m" flag is an extension that helps to define matches of a list of more specific criteria such as "states" and "multiport".
 
 {empty} +
 
@@ -62,7 +58,7 @@ Overall description of the activity.
 
 1. Change the TTL on H3 from 64 to 128.
 
-2. Apply IPTables to mitigate SYN Floods.
+2. Apply IPTables to mitigate SYN Floods. (Try testing with nmap)
 
 3. Apply logging to the Rule from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages in the /var/logs/messages that should be created by initiating a ping on the H1.
 
@@ -70,4 +66,6 @@ Overall description of the activity.
 
 == Useful Resources
 
-* List any documents, videos, tutorials, or links that could be helpful with the activity here
+* http://ipset.netfilter.org/iptables.man.html
+
+* http://ipset.netfilter.org/iptables-extensions.man.html
