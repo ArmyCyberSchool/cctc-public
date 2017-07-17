@@ -17,7 +17,7 @@
 
 == Scenario
 
-Your Cyber Protection Team has been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance (ROUTER_CONFIG.txt). In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
+You have been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance (ROUTER_CONFIG.txt). In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
 
 {empty} +
 
