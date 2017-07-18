@@ -9,11 +9,11 @@
 //:pdf-page-size: A4
 
 == Learning Objectives / Outcomes
-CCWI 014.002 Use command line syntax to query, view, analyze, modify and create Registry values.
-CCWI 015.001 Identify Registry locations that contain forensically relevant information.
-CCWI 015.002 Identify Registry locations that can be utilized for persistence.
-CCWI 015.003 Perform basic analysis on a Windows system with a compromised Registry.
-CCWI 003.001 Identify the purpose of using Powershell in operations.
+CCWI 014.002 Use command line syntax to query, view, analyze, modify and create Registry values. +
+CCWI 015.001 Identify Registry locations that contain forensically relevant information. +
+CCWI 015.002 Identify Registry locations that can be utilized for persistence. +
+CCWI 015.003 Perform basic analysis on a Windows system with a compromised Registry. +
+CCWI 003.001 Identify the purpose of using Powershell in operations. +
 
 == Scenario
 
