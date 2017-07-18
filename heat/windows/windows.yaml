@@ -1,6 +1,6 @@
-heat_template_version: 2016-10-14
+heat_template_version: 2017-02-24
 
-description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 and UTW test.
+description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 (and UTW test).
 
 parameters:
 
@@ -69,7 +69,8 @@ resources:
           template: 10.studentID.0.254
           params:
             studentID: { get_param: student_id }
-      dns_nameservers: [10.50.255.254]
+      dns_nameservers: 
+        - 10.50.255.254
       enable_dhcp: true
       host_routes: []
       ip_version: 4
@@ -89,8 +90,7 @@ resources:
           template: lastname_router
           params:
             lastname: { get_param: last_name }
-      external_gateway_info: 
-        network: public
+      external_gateway_info: { network: public }
 
   external_router_interface_0:
     type: OS::Neutron::RouterInterface
