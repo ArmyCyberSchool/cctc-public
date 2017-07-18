@@ -98,8 +98,21 @@ resources:
       router_id: { get_resource: external_router }
       subnet_id: { get_resource: subnet_0 }
 
-  server_1_subnet_0_port:
+  secgroup0:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Enable RDP and ICMP
+      name: RDP/ICMP Enable
+      rules: [{"port_range_max":3389,"port_range_min":3389,"protocol":TCP},{"protocol":ICMP}]
+
+  float_ip: 
+    type: OS::Neutron::FloatingIP
+    depends_on: external_router
+    properties: { floating_network: public }
+    
+  float_port:
     type: OS::Neutron::Port
+    depends_on: secgroup0
     properties:
       network_id: { get_resource: network_0 }
       fixed_ips:
@@ -108,7 +121,14 @@ resources:
               template: 10.studentID.0.1
               params:
                 studentID: { get_param: student_id }
-      port_security_enabled: false
+      security_groups:
+      - { get_resource: secgroup0 }
+
+  float_ip_assoc:
+    type: OS::Neutron::FloatingIPAssociation
+    properties:
+      floatingip_id: { get_resource: float_ip }
+      port_id: { get_resource: float_port }
 
   server_1:
     type: OS::Nova::Server
@@ -122,13 +142,14 @@ resources:
           params:
             lastname: { get_param: last_name }
       networks:
-        - port: { get_resource: server_1_subnet_0_port }
+        - port: { get_resource: float_port }
       user_data:
         str_replace:
           template: |
             #ps1_sysnative
             $ErrorActionPreference = 'SilentlyContinue'
             netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -Value 0
             set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
             (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-48.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
             & c:\firefox.exe -ms
@@ -217,3 +238,8 @@ resources:
             # lastname: { get_param: last_name }
       # networks:
         # - port: { get_resource: server_3_subnet_0_port }
+        
+outputs:
+  floating_ip:
+    description: Windows 10 floating IP for RDP access
+    value: { get_attr: [float_ip, floating_ip_address] }
