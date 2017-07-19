@@ -8,13 +8,31 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives
+
+* CCNI003.002 - Describe file system ownership properties
+
+{empty} +
+
+== Outcomes
+
+[square]
+* Familiarity with key Linux files: `/etc/passwd`, `/etc/shadow`, `/etc/group`
+* Familiarity with Linux command line text editors
+* Understanding of group membership and its effects on file access
+* Confidence querying and editing password attributes for groups and users
+
+{empty} +
+
 == Scenario
 
 You are on an OCO mission; through your movement behind enemy lines, you gained access to a system whose authentication security was fairly weak. You have limited privileges on the system, and wish to escalate your privileges. 
 
+{empty} +
+
 == Activity
 
-_Part 1_
+=== Task 1)
 
 [square]
 * Copy your `/etc/passwd`, `/etc/shadow` and `/etc/group` files to a backup directory.
@@ -30,7 +48,7 @@ _Part 1_
 ** password change warning of 10 days
 * Check to ensure that these changes have taken effect from via the command line
 
-_Part 2_
+=== Task 2)
 
 [square]
 * Switch to the new user 'ken'
@@ -42,7 +60,7 @@ _Part 2_
 * Identify which groups user 'ken' belongs to; is user 'ken' in more than one group?
 * How many groups is user 'dachosen1' in?
 
-_Part 3_
+=== Task 3)
 
 [square]
 * Type `exit` to switch back to your sudoer user account
@@ -51,16 +69,28 @@ _Part 3_
 * Type `cat /etc/shadow`
 * Were you able to open the file this time?
 
+{empty} +
+
 == Deliverables
 
 [square]
 * Verification of ken’s ability to read `/etc/shadow`
 * Correct contents of `/etc/shadow`
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with key Linux files: `/etc/passwd`, `/etc/shadow`, `/etc/group`
-* Familiarity with Linux command line text editors
-* Understanding of group membership and its effects on file access
-* Confidence querying and editing password attributes for groups and users
+== Hints
+
+NONE
+
+{empty} +
+
+== Challenge
+
+NONE
+
+{empty} +
+
+== Useful Resources
+
+* https://www.cyberciti.biz/faq/understanding-etcshadow-file/
