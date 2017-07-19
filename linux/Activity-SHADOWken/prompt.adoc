@@ -93,4 +93,4 @@ NONE
 
 == Useful Resources
 
-NONE
+* https://www.cyberciti.biz/faq/understanding-etcshadow-file/
