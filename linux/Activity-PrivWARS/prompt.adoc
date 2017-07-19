@@ -8,15 +8,25 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
+== Learning Objectives
 
 [square]
-* Objective 3.2 - Describe file system ownership properties
-* Objective 3.2.2 - Identify user and group owner.
-* Objective 3.2.3 - Understand how linux user groups work.
-* Objective 3.3 - Discuss file system permissions.
-* Objective 3.3.1 - Identify file permissions from ls output.
-* Objective 3.3.2 - Use chmod to change permissions.
+* CCNI003 - Analyze the Linux file system
+* CCNI003.001 - Describe file system hierarchy
+* CCNI003.002 - Describe file system ownership properties
+* CCNI003.003 - Discuss file system permissions
+* CCNI003.004 - Discuss file system timestamps
+* CCNI003.005 - Discuss file system attributes
+
+{empty} +
+
+== Outcomes
+
+[square]
+* Familiarity with Linux file permissions
+* Familiarity with Linux access control lists (ACLs)
+* Familiarity editing users, groups, and ACLs
+* Familiarity with editing and applying permissions and ACLs
 
 {empty} +
 
