@@ -8,17 +8,35 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives
+
+* CCNI003 - Analyze the Linux file system
+
+{empty} +
+
+== Outcomes
+
+[square]
+* Familiarity with file formats and magic numbers
+* Familiarity with how Linux identifies file types
+* Familiarity editing binary files in Linux
+
+{empty} +
+
 == Scenario
 
 There is a file in `/usr/share/cctc` called `runme` that you need to run to extract critical information. However, it does not seem to be working. Identify the problem, remedy the situation and run the program to extract the information.
+
+{empty} +
 
 == Activity
 
 [square]
 * Identify the file runme in /usr/share/cctc and make a copy to a working directory
 * Identify why the file cannot run.
-* Hint: What type of file is a Linux executable binary, such as ls and ps, similar to .exe files in Windows?
 * Fix the file and run it.
+
+{empty} +
 
 == Deliverables
 
@@ -26,9 +44,20 @@ There is a file in `/usr/share/cctc` called `runme` that you need to run to extr
 * Document detailing your process to analyze, fix, and run the `runme` program
 * Output of the program
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with file formats and magic numbers
-* Familiarity with how Linux identifies file types
-* Familiarity editing binary files in Linux
+== Hints
+
+* What type of file is a Linux executable binary, such as ls and ps, similar to .exe files in Windows?
+
+{empty} +
+
+== Challenge
+
+NONE
+
+{empty} +
+
+== Useful Resources
+
+* https://en.wikipedia.org/wiki/List_of_file_signatures
