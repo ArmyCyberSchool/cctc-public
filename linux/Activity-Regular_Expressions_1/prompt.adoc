@@ -8,11 +8,31 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Setup
+== Learning Objectives / Outcomes
 
-Access RegexOne REGEX interactive tutorial at the following location: https://regexone.com/
+* CCNI003.007 - Describe regular expressions
+* CCNI003.008 - Create regular expressions to find data within in the file system
+* CCNI003.009 - Identify the information that a regular expression will return
+
+{empty} +
+
+== Outcomes
+
+[square]
+* Familiarity with regular expressions, their syntax and their application
+* Confidence generating simple regular expressions to match specific patterns
+
+{empty} +
+
+== Scenario
+
+NONE
+
+{empty} +
 
 == Activity
+
+Access RegexOne REGEX interactive tutorial at the following location: https://regexone.com/
 
 [square]
 * Complete REGEX Lessons 1-15
@@ -22,13 +42,27 @@ Access RegexOne REGEX interactive tutorial at the following location: https://re
 
 image::regexImage1.png[alt="Image1", width="1000", height="200"]
 
+{empty} +
+
 == Deliverables
 
 [square]
 * List of regular expressions used to solve each lesson and problem
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with regular expressions, their syntax and their application
-* Confidence generating simple regular expressions to match specific patterns
+== Hints
+
+NONE
+
+{empty} +
+
+== Challenge
+
+NONE
+
+{empty} +
+
+== Useful Resources
+
+NONE
