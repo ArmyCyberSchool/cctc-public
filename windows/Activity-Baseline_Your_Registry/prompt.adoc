@@ -1,12 +1,19 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity – Baseline Your Registry
+= Activity - Baseline Your Registry
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+CCWI 014.002 Use command line syntax to query, view, analyze, modify and create Registry values. +
+CCWI 015.001 Identify Registry locations that contain forensically relevant information. +
+CCWI 015.002 Identify Registry locations that can be utilized for persistence. +
+CCWI 015.003 Perform basic analysis on a Windows system with a compromised Registry. +
+CCWI 003.001 Identify the purpose of using Powershell in operations. +
 
 == Scenario
 
@@ -16,18 +23,26 @@ You want to enumerate your registry to create a baseline for future forensic ref
 
 Create a PowerShell script that queries the registry and records the values and data from forensically relevant registry keys. Write a second script that compares the output of two baseline runs and identifies differences between run times. This script should input the two datasets as command line arguments. For best results, this script alerts only the specific information that is different.
 
+=== Task 1)
+
+Query registry and record values and data from relevant keys
+
+=== Task 2)
+
+Script that compares two registry baselines +
+script should take the two files as command line arguments
+
 == Deliverables
 
-[square]
 * The script that baselines the registry
 * The output of your baseline registry script
 * The script that compares baseline runs
 * The output of the script that compares two runs
 
-== Learning Objectives / Outcomes
+== Hints
 
-[square]
-* Confidence querying and documenting registry keys and values
-* Familiarity with forensically relevant Windows registry keys
-* Familiarity with feeding input to scripts - command line arguments
-* Capability to compare similar data sets
+if your script is taking too long to run try looking at some CMD commands to baseline the registry.
+
+== Challenge
+
+Script alerts on only specific information that is different
