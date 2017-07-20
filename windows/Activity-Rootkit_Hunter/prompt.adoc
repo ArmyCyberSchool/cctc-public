@@ -19,7 +19,7 @@ Write a PowerShell script that runs external commands and PowerShell cmdlets to 
 == Deliverables / Submit
 
 [square]
-* A PowerShell script that identifies differencies in process enumeration
+* A PowerShell script that identifies differences in process enumeration
 * The output of the PowerShell script
 * An explanation of any discrepancies between internal cmdlet and external command process enumeration
 
