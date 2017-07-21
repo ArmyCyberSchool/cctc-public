@@ -33,7 +33,7 @@ The hard drive in your Commander's laptop, containing critical files, stopped re
 
 == Activity
 
-You have access to a broken generic MBR. Fix the MBR so your career doesn't go down the drain along with those files. The file is located here: *10.200.10.10/downloads/linux-files/mbroken.zip*
+You have access to a broken generic MBR. Fix the MBR so your career doesn't go down the drain along with those files. The file is located here: */usr/share/cctc/mbroken.zip*
 
 Start by verifying that you have the correct boot record file. Unzip the file and check its MD5 hash: b73f30cf162511fe8429ff907a5a9f53
 
@@ -49,7 +49,7 @@ Find the MD5 hash of the second partition entry.
 
 === Task 3)
 
-Figure out what's still wrong with the MBR. Find the hex characters (ALL CAPS, no spaces) that you need to use to fix the issue.
+Figure out what's still wrong with the MBR. Find the hex characters (ALL CAPS, no spaces).
 NOTE: You are looking for a string of hex characters (i.e. "DEADBEEF").
 
 {empty} +
@@ -60,7 +60,7 @@ Check your work using MD5 hashes. Use the `md5sum` command: `$ CMD... | md5sum`
 
 * Bootstrap code: d59a68c7b6d62ecaa1376dfb73a3b7be
 * Second partition: 41a8cbc4d7314c23c7e7f6b0a799d76b
-* Fix: d7c07574567e1af6856be94a590ec2dc
+* Hex string: d7c07574567e1af6856be94a590ec2dc
 
 {empty} +
 
@@ -80,4 +80,4 @@ NONE
 
 == Useful Resources
 
-* https://en.wikipedia.org/wiki/Master_boot_record
+* http://thestarman.pcministry.com/asm/mbr/PartTables.htm
