@@ -1,16 +1,40 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity – PrivWars
+= Activity - File Permissions and ACLS
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
-//:pdf-size: A4
+//:pdf-page-size: A4
+
+== Learning Objectives
+
+[square]
+* CCNI003 - Analyze the Linux file system
+* CCNI003.001 - Describe file system hierarchy
+* CCNI003.002 - Describe file system ownership properties
+* CCNI003.003 - Discuss file system permissions
+* CCNI003.004 - Discuss file system timestamps
+* CCNI003.005 - Discuss file system attributes
+
+{empty} +
+
+== Outcomes
+
+[square]
+* Familiarity with Linux file permissions
+* Familiarity with Linux access control lists (ACLs)
+* Familiarity editing users, groups, and ACLs
+* Familiarity with editing and applying permissions and ACLs
+
+{empty} +
 
 == Scenario
 
 _Welcome to the Galactic Empire Messaging System!_ One of our servers recently failed and we are in the process of rebuilding our message board. We managed to salvage all the messages, which are just a series of plaintext files kept in a flat directory structure. Furthermore, we know who our users were but we need to recreate all of their accounts and reset file permissions identical to the way they were, _lest we incur the Emperor's wrath._
+
+{empty} +
 
 == Activity
 
@@ -51,18 +75,27 @@ Hint: Should 'everyone else' include the group? +
 `rebel_base_location`   is owned by sheev, and the imps, and is fully accessible(rwx) by the imps group. +
 `deathstar_plans`       is owned by Leia, and the rebels, and is fully accessible(rwx) by the rebels group. +
 
-Once you have completed all the required tasks above, run the following command from the working directory to get the flag: `$ check` +
-Tip - from working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
+{empty} +
 
-== Deliverables 
+== Deliverables
 
-[square]
+* Once you have completed all the required tasks above, run the following command from the working directory to get the flag: `$ check` +
 * Verification of check script success
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with Linux file permissions
-* Familiarity with Linux access control lists (ACLs)
-* Familiarity editing users, groups, and ACLs
-* Familiarity with editing and applying permissions and ACLs
+== Hints
+
+* From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
+
+{empty} +
+
+== Challenge
+
+NONE
+
+{empty} +
+
+== Useful Resources
+
+NONE
