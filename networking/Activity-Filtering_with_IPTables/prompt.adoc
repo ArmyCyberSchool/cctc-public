@@ -32,25 +32,25 @@ You will be constructing and placing IPTables rules to meet the intent for filte
 4. Deny ping (ICMP) operations on H1 and H3 hosts. (Remember ping is a two part transaction. You should be thorough and filter both parts)
 
 
-5. Ensure your Policy for the INPUT, OUTPUT and FORWARD tables default policy is ACCEPT.
+5. Ensure your Policy for the INPUT, OUTPUT, and FORWARD tables default policy is ACCEPT.
 
 
-5. Test Condition:  Attempt to SSH between the H1 and H3 Clients (you can use non-standard ports also to verify rules such as 9999 or 7777 to test the DROP rules). Ensure your IPTables rules are enforcing the above requirements.
+5. Test Condition:  Attempt to SSH between the H1 and H3 Clients (you can use non-standard ports such as 9999 or 7777 to test and verify the DROP rules). Ensure your IPTables rules are enforcing the above requirements.
 
 
 {empty} +
 
 == Deliverables
 
-* Document the rules, and process you used to construct the IPTables rules.
+* Document the rules and process you used to construct the IPTables rules.
 
-* Test rules to confirm they meet the intent of the activity.
+* Test the rules to confirm they meet the intent of the activity.
 
 {empty} +
 
 == Hints
 
-* The "-m" flag is an extension that helps to define matches of a list of more specific criteria such as "states" and "multiport".
+* The "-m" flag is an extension that helps to define matches of a list of more specific criteria, such as "states" and "multiport".
 
 {empty} +
 
@@ -60,7 +60,7 @@ You will be constructing and placing IPTables rules to meet the intent for filte
 
 2. Apply IPTables to mitigate SYN Floods. (Try testing with nmap)
 
-3. Apply logging to the Rule from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages in the /var/logs/messages that should be created by initiating a ping on the H1.
+3. Apply logging to the rule created from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages located in "/var/logs/messages"  file that should be created by initiating a ping on the H1 client.
 
 {empty} +
 
