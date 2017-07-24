@@ -45,7 +45,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
  
 == Section 2: Analyze Network Traffic
 
-* SKILL CCNE004: Identify the == Sections of common packet headers
+* SKILL CCNE004: Identify the sections of common packet headers
 ** CCNE004.001 Identify the various packet headers
 ** CCNE004.002 Explain address auto-configuration
 ** CCNE004.003 Describe IPv4 packet structures
