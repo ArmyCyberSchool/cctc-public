@@ -16,45 +16,58 @@
 * Objective 13.6- Explain the process for multi-hop tunneling
 * Objective 13.8- Describe basic port forwarding
 * Objective 13.9- Set up an initial SSH tunnel and add another tunnel using another tool
-
 {empty} +
 
+== Scenario
+You are provided with information about your target network, indicating that there is a specific host in a target network with extremely strict inbound rules; the outbound rules are more flexible however. 
+Since you can’t get any packets IN to it, you must focus on getting packets OUT. You have an insider (his name is Jose) that is willing to set up remote port forwarding on the host so that you can get your hands on sensitive information its webpage is hosting. 
+You will need to play the role of Jose and telnet to the floating IP provided by your instructor (10.50.X.X).
 == Activity
 
-There is a specific host in the target network that you cannot seem to reach. As it turns out, the host based firewall on this client has extremely strict inbound rules; the outbound rules are more flexible however. Since you can't get any packets IN to it, you must focus on getting packets OUT.
-
-You have an insider (her name is Evil-Eve) that is willing to set up remote port forwarding on the host so that you can get your hands on sensitive information its webpage is hosting. (You will need to play the role of Evil-Eve and telnet to 10.50.20.X) Using remote port forwarding, Evil-Eve will establish a tunnel out from the H2-1 Reverse Target and forward its webpage (or anything else you decided to specify) to a port on the H1 client's port. This will allow you to connect from outside the network (using local port forwarding) to the port on H1 and receive H2-1's webpage. After all, this follows the rules on the H2-1 Target, it's OUTBOUND traffic.
+Using remote port forwarding, Jose will establish a tunnel out from the host he has access to and forward its webpage (or anything else you decided to specify) to a port on a host port that you can access from your network. This will allow you to connect from outside the network (using local port forwarding) to the port on the pivot and receive a webpage (or whatever else is available).
 
 {empty} +
 
 === Task 1)
 
-* Acting as the "insider", Evil-Eve, access the H2 -1 Reverse Target via telnet (use your studentXX/passwordXX account). You can set up reverse port forwarding there to forward the webpage it is hosting. The webpage on H2-1 Target needs to be forwarded to port 90XX (XX is your student number) on the H1 pivot host.
+1) Acting as the "insider", Jose, access the H2 -1 Reverse Target via telnet (use your studentXX/passwordXX account). You can set up reverse port forwarding there to forward the webpage it is hosting. 
+2) The webpage on H2-1 Target needs to be forwarded to port 90XX (XX is your student number) on the H1 pivot host.
 
 {empty} +
 
 === Task 2)
 
-* After Evil-Eve established the reverse tunnel, you should return to your home machine. Here you will need to tunnel through the compromised SSH Server, 10.50.20.X, and perform local port forwarding. Your SSH tunnels should connect a local port on your machine to the port on H1 that Evil-Eve is sending the webpage to (90XX). Once complete, you should be able to access H2-1's webpage from the browser on your home client.
-
+1) After Jose establishes the reverse tunnel, you should return to your home machine. Here you will need to tunnel through the compromised SSH Server, 10.50.X.X, and perform local port forwarding. 
+2) Your SSH tunnels should connect a local port on your machine to the port on H1 that Jose is sending the webpage to (90XX). 
+3) Once complete, you should be able to access H2-1's webpage from the browser on your home client.
+4)  Clear your browser cache.
 {empty} +
-
-* Clear your browser cache.
-
-{empty} +
-
 
 === Task 3)
 
-The H2-1 host is also an FTP server. Access the FTP service and retrieve the files.
+1) The H2-1 host has access to an FTP server on the 10.2.0.0/25 network. Find the host with the FTP server.
+2)  Access the FTP service from your H1 GUI in your home environment through remote and dynamic port forwarding and retrieve the files.
 
 {empty} +
 
 == Deliverables
 [square]
 * Screenshots showing your commands and successful access of the target webpage and ftp files on H2-1
-* An explanation of the commands/process you used to reach the target (from both Evil-Eve, and your perspective)
+* An explanation of the commands/process you used to reach the target (from both Jose, and your perspective)
+
+{empty} +
+== Hints
+
+* Not Applicable
 
 {empty} +
 
+== Challenge
 
+* Not Applicable
+
+{empty} +
+
+== Useful Resources
+
+* HAK5 SSH port forwarding: https://www.youtube.com/watch?v=g_Row8zEJZc
