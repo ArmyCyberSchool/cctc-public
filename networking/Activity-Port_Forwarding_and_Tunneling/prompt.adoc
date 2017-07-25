@@ -20,6 +20,7 @@ CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another to
 
 You need to do some reconnaissance and intelligence gathering in a target network. This network can be accessed through a public facing interface on one of its hosts. This public facing IP will be provided by the instructor (10.50.X.X).  Be aware that some of the target network's INSIDE IP's will be the same as the IP's inside your own environment. The inside networks are 10.2.0.0/25, 10.3.0.0/25, 10.4.0.0/30 and 10.5.0.0/25.
 {empty} +
+
 == Activity
 
 You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "home" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers do not not allow login, only SSH tunneling; ensure you use the appropriate flags in your commands. Your credentials for the target network are: username:studentXX, password:passwordXX, where XX is your student number. If you have a single digit student number, just use that digit (i.e. student1/password1)
