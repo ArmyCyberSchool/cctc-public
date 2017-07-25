@@ -11,9 +11,12 @@
 == Learning Objectives / Outcomes
 [square]
 
-CCNE013.006 Explain the process for multi-hop tunneling
-CCNE013.008 Describe basic port forwarding
-CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool
+- CCNE013.006 Explain the process for multi-hop tunneling
+
+- CCNE013.008 Describe basic port forwarding
+
+- CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool
+
 {empty} +
 
 == Scenario
@@ -62,4 +65,20 @@ _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.1.0.1/Dynamic port forw
 * A list of the services that you interacted with
 * An explanation of the commands/process you used to reach the targets and their services
 
+{empty} +
 
+== Hints
+
+* Not Applicable
+
+{empty} +
+
+== Challenge
+
+* Not Applicable
+
+{empty} +
+
+== Useful Resources
+
+* HAK5 SSH port forwarding: https://www.youtube.com/watch?v=g_Row8zEJZc
