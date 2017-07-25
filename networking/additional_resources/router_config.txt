@@ -1,0 +1,179 @@
+GROVETOWN_PD#show run
+Building configuration...
+Current configuration : 5297 bytes
+!
+! Last configuration change at 12:52:44 UTC Fri Oct 21 2016
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname GROVETOWN_PD
+!
+boot-start-marker
+boot-end-marker
+!
+no aaa new-model
+!
+ip domain name GROVETOWN.PD.GOV
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+!
+cts logging verbose
+!
+license udi pid CISCO2901/K9 sn FJC1936A1SQ
+!
+username ADMINISTRATOR privilege 15 password 0 PASSWORD
+!
+redundancy
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip address 10.0.1.2 255.255.254.0
+ no ip redirects
+ no ip proxy-arp
+ standby 10 ip 10.0.1.3
+ ip ospf 100 area 0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 10.0.2.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+router eigrp 100
+ network 10.0.2.0 0.0.0.255
+ redistribute ospf 100 match external 1 external 2 metric 10000000 100 255 255 1500
+!
+router ospf 100
+ router-id 10.0.1.2
+!
+ip forward-protocol nd
+!
+ip http server
+no ip http secure-server
+!
+snmp-server community PUBLIC RO
+snmp-server community PRIVATE RW
+snmp-server location Grovetown Police Dept. 112 South Elm St. Grovetown, GA
+snmp-server contact MR. HOMER SIMPSON
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps transceiver all
+snmp-server enable traps ds1
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps license
+snmp-server enable traps envmon
+snmp-server enable traps flash insertion removal low-space
+snmp-server enable traps auth-framework sec-violation auth-fail
+snmp-server enable traps c3g
+snmp-server enable traps ds3
+snmp-server enable traps adslline
+snmp-server enable traps vdsl2line
+snmp-server enable traps icsudsu
+snmp-server enable traps isdn call-information
+snmp-server enable traps isdn layer2
+snmp-server enable traps isdn chan-not-avail
+snmp-server enable traps isdn ietf
+snmp-server enable traps ds0-busyout
+snmp-server enable traps ds1-loopback
+snmp-server enable traps energywise
+snmp-server enable traps vstack
+snmp-server enable traps mac-notification
+snmp-server enable traps trustsec-sxp conn-srcaddr-err msg-parse-err conn-config-err binding-err conn-up conn-down binding-expn-fail oper-nodeid-change binding-conflict
+snmp-server enable traps bgp cbgp2
+snmp-server enable traps isis
+snmp-server enable traps ospfv3 state-change
+snmp-server enable traps ospfv3 errors
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps cnpd
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps entity-ext
+snmp-server enable traps entity
+snmp-server enable traps fru-ctrl
+snmp-server enable traps resource-policy
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay multilink bundle-mismatch
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif
+snmp-server enable traps hsrp
+snmp-server enable traps ipmulticast
+snmp-server enable traps mempool
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps nhrp nhs
+snmp-server enable traps nhrp nhc
+snmp-server enable traps nhrp nhp
+snmp-server enable traps nhrp quota-exceeded
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps rsvp
+snmp-server enable traps syslog
+snmp-server enable traps l2tun session
+snmp-server enable traps l2tun pseudowire status
+snmp-server enable traps vtp
+snmp-server enable traps waas
+snmp-server enable traps rf
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+snmp-server host 10.0.1.199 version 2c PRIVATE
+snmp-server host 10.0.1.199 version 2c PUBLIC
+!
+control-plane
+!
+banner motd ^CAuthorized access only^C
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login local
+ transport input telnet ssh
+line vty 5 15
+ login local
+ transport input telnet ssh
+!
+scheduler allocate 20000 1000
+ntp server comcast.net
+!
+end
+
