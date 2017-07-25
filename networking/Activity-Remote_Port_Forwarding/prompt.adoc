@@ -10,12 +10,13 @@
 
 == Learning Objectives / Outcomes
 [square]
-* Skill 13: Identify fundamentals of secure shell protocol
-* Objective 13.2- Discuss SSH reverse tunnels
-* Objective 13.7- Describe the appropriate use of reverse tunnels
-* Objective 13.6- Explain the process for multi-hop tunneling
-* Objective 13.8- Describe basic port forwarding
-* Objective 13.9- Set up an initial SSH tunnel and add another tunnel using another tool
+
+* SKILL CCNE013: Identify fundamentals of secure shell protocol
+* CCNE013.002 Discuss SSH reverse tunnels
+* CCNE013.006 Explain the process for multi-hop tunneling
+* CCNE013.007 Describe the appropriate use of of reverse tunnels
+* CCNE013.008 Describe basic port forwarding
+
 {empty} +
 
 == Scenario
@@ -56,6 +57,7 @@ Using remote port forwarding, Jose will establish a tunnel out from the host he 
 * An explanation of the commands/process you used to reach the target (from both Jose, and your perspective)
 
 {empty} +
+
 == Hints
 
 * Not Applicable
