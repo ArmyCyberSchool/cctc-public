@@ -60,7 +60,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
  
 == Section 4: System Hardening, Auditing and Logs
 * SKILL 16: Identify basic Windows firewall concepts 
-16.1 Enable Windows firewall settings with the graphical user interface and command line tools
+** 16.1 Enable Windows firewall settings with the graphical user interface and command line tools
 ** 16.2 Describe the different components of Windows firewall
 * SKILL 17: Identify components of New Technology File System (NTFS)
 ** 17.1 Describe basic file and folder permissions
