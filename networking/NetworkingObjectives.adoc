@@ -2,7 +2,9 @@
 :stylesheet: ../cctc.css
 image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
 
-= Cyber Common Technical Core (CCTC) Networking Advance Sheet
+= Cyber Common Technical Core (CCTC) Networking Objectives
+
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/networking/NetworkingObjectives.pdf?job=genpdf
 
 == Section 1: Network Discovery
 
