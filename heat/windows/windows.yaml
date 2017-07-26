@@ -134,7 +134,7 @@ resources:
     type: OS::Nova::Server
     properties:
       diskConfig: AUTO
-      flavor: cy.medium
+      flavor: cy.large
       image: Windows 10
       name:
         str_replace:
