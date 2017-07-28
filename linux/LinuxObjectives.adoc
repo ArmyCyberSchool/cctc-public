@@ -7,7 +7,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 // Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
 
 == Section 1: Core Features
-* *SKILL CCNI001*: Identify common shells
+
+* SKILL CCNI001: Identify common shells
 ** CCNI001.001 Describe common shells and their differences
 *** CCNI001.001.001: Be familiar with sh.
 *** CCNI001.001.002: Be able to explain bash.
@@ -15,7 +16,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI001.002 Define common shell modes, features and functions
 *** CCNI001.002.001: Contrast interactive and login shells.
 *** CCNI001.002.002: Know the capabilities of a shell.
-* *SKILL CCNI002*: Employ commands using common shells
+
+* SKILL CCNI002: Employ commands using common shells
 ** CCNI002.001 Demonstrate basic familiarity with the command line interface
 *** CCNI002.001.001: Know how to interact with the filesystem.
 *** CCNI002.001.002: Learn about the local environment.
@@ -32,7 +34,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 *** CCNI002.004.002: Use boolean operations in bash.
 ** CCNI002.005 Identify methods of gaining more information about commands and switches
 *** CCNI002.005.001: Use `man` pages.
-* *SKILL CCNI003*: Analyze the Linux file system
+
+* SKILL CCNI003: Analyze the Linux file system
 ** CCNI003.001 Describe file system hierarchy
 *** CCNI003.001.001: Know linux standard folder structure and purpose.
 ** CCNI003.002 Describe file system ownership properties
@@ -60,7 +63,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 *** CCNI003.009.001: Understand regex capture groups.
 
 == Section 2: Boot Processes
-* *SKILL CCNI004*: Describe the Linux boot process
+
+* SKILL CCNI004: Describe the Linux boot process
 ** CCNI004.001 Identify components of the boot process
 *** CCNI004.001.001: Describe the basic boot process. Explain each component.
 ** CCNI004.002 Explain the post kernel boot process
@@ -69,7 +73,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI004.003 Describe boot process differences across Linux variants
 ** CCNI004.004 Describe partitions
 *** CCNI004.004.001: Describe hard disk partitioning.
-* *SKILL CCNI005*: Assess boot configuration files
+
+* SKILL CCNI005: Assess boot configuration files
 ** CCNI005.001 Identify components of the boot configuration file
 *** CCNI005.001.001: Understand how Linux boot is configured.
 *** CCNI005.001.002: Configure `/etc/inittab`.
@@ -78,7 +83,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI005.002 Identify system changes after modification of the boot configuration file
 
 == Section 3: Scripts & Processes
-* *SKILL CCNI006*: Identify Linux processes
+
+* SKILL CCNI006: Identify Linux processes
 ** CCNI006.001 Identify common processes for Linux startup
 ** CCNI006.002 Identify common processes for Linux machine
 ** CCNI006.003 Employ commands to enumerate processes
@@ -86,7 +92,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI006.005 Discuss orphaned and defunct processes
 ** CCNI006.006 Identify the purpose of apt/aptitude
 ** CCNI006.007 Evaluate the validity of Linux processes
-* *SKILL CCNI007*: Develop shell scripts
+
+* SKILL CCNI007: Develop shell scripts
 ** CCNI007.001 Demonstrate basic familiarity with shell scripting
 *** CCNI007.001.001: Know shell script header.
 *** CCNI007.001.002: Be able to explain a script's purpose.
@@ -114,7 +121,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 *** CCNI007.005.007: Check resource usage.
 *** CCNI007.005.008: View network configuration.
 *** CCNI007.005.009: View attached hardware.
-* *SKILL CCNI008*: Identify Linux networking features
+
+* SKILL CCNI008: Identify Linux networking features
 ** CCNI008.001 Describe the local name resolution process on a Linux host
 *** CCNI008.001.001: Know locations to resolve a hostname and order searched.
 ** CCNI008.002 Describe the difference between regular and raw sockets
@@ -136,16 +144,19 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI008.009 Analyze network connections using Linux command line tools
 
 == Section 4: Auditing & Logging
-* *SKILL CCNI009*: Identify auditing activities
+
+* SKILL CCNI009: Identify auditing activities
 ** CCNI009.001 Explain system logging
 ** CCNI009.002 Identify application logging
 ** CCNI009.003 Explain authentication and authorization logs
-* *SKILL CCNI010*: Identify actions that contribute to log files
+
+* SKILL CCNI010: Identify actions that contribute to log files
 ** CCNI010.001 Describe the actions that contribute to entries in log files
 ** CCNI010.002 Analyze log files for anomalous activity
 
 == Section 5: Linux Exploitation
-* *SKILL CCNI011*: Discuss the reasons to establish permanent presence
+
+* SKILL CCNI011: Discuss the reasons to establish permanent presence
 ** CCNI011.001 Define permanent presence
 *** CCNI011.001.001: Understand the characteristics of APTs.
 *** CCNI011.001.002: Know methods for retaining persistence.
@@ -155,7 +166,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 *** CCNI011.003.001: List sources of suspicious activity.
 ** CCNI011.004 Develop a methodology for the enumeration of a compromised system
 *** CCNI011.004.001: Discuss important OS attributes to enumerate or baseline.
-* *SKILL CCNI012*: Analyze different types of rootkits and backdoors
+
+* SKILL CCNI012: Analyze different types of rootkits and backdoors
 ** CCNI012.001 Discuss and define the main types of backdoors
 *** CCNI012.001.001: Define a backdoor.
 ** CCNI012.002 Discuss and define the main types of rootkits
@@ -168,7 +180,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 *** CCNI012.005.002: Identify and explain ways to mitigate rootkit danger.
 ** CCNI012.006 Demonstrate how rootkits can be used to provide false information to a user
 *** CCNI012.006.001: Understand the implications of a rootkit from the user's perspective.
-* *SKILL CCNI013*: Explore Linux Exploitation tools
+
+* SKILL CCNI013: Explore Linux Exploitation tools
 ** CCNI013.001 Discuss shell code
 *** CCNI013.001.001: Describe shellcode.
 ** CCNI013.002 Identify remote shell code execution
