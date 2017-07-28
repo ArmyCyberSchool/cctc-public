@@ -7,24 +7,32 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 // Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/windows/WindowsObjectives.pdf?job=genpdf
 
 == Section 1: Command Line Tools
+
 * SKILL CCWI001: Employ commands using command line interface
 ** CCWI001.001 Use command line commands to gain situational awareness of the current workstation
 ** CCWI001.002 Use System Internals tools to gain situational awareness of the current workstation
+
 * SKILL CCWI002: Employ commands using Windows Management Instrumentation Command-line
 ** CCWI002.001 Use WMIC commands to gain situational awareness of the current workstation
+
 * SKILL 3: Employ commands using Powershell
 ** CCWI003.001 Identify the purpose of using Powershell in operations
 ** CCWI003.002 Demonstrate basic functionality of Powershell
 ** CCWI003.003 Describe the main components of Powershell
+
 * SKILL CCWI004: Develop scripts
 ** CCWI004.001 Discuss the purpose of creating a script
 ** CCWI004.002 Create a batch script that will perform basic enumeration of a workstation
 ** CCWI004.003 Create Powershell script that will perform basic enumeration of a workstation
  
 == Section 2: Processes
+
 * SKILL CCWI005: Define the Windows pre-boot process
+
 * SKILL CCWI006: Define the Windows boot process
+
 * SKILL CCWI007: Identify the Windows logon process
+
 * SKILL CCWI008: Identify Windows processes
 ** CCWI008.001 Explain how to find the current status of a Windows process
 ** CCWI008.002 Explain the process states and identify why they are important
@@ -32,68 +40,85 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI008.004 Describe the thread states
 ** CCWI008.005 Discuss the differences between processes, threads and handles
 ** CCWI008.006 Describe system processes
+
 * SKILL CCWI009: Analyze the validity of Windows processes
 ** CCWI009.001 Identify the importance of the output of command line tools 
 ** CCWI009.002 Determine the abnormal activities that are taking place on a system based on a process list
+
 * SKILL CCWI010: Identify different types of malware 
 ** CCWI010.001 Distinguish between types of malware 
 ** CCWI010.002 Discuss the purpose and methodology of bots and botnets 
+
 * SKILL CCWI011: Identify aspects of virtualization
 ** CCWI011.001 Discuss the importance of virtual machines
+
 * SKILL CCWI012: Identify the importance of situational awareness
 ** CCWI012.001 Explain the situational awareness process
 ** CCWI012.002 List ways to gain situational awareness on a remote system 
 ** CCWI012.003 Explain potential reasons for heightened situational awareness
  
 == Section 3: Registry
+
 * SKILL CCWI013: Explain the purpose of Windows Registry
 ** CCWI013.001 Explain the purpose and role of Windows Registry and its major functions
 ** CCWI013.002 Describe Registry hierarchy organization and primary components
+
 * SKILL CCWI014: Employ Windows Registry tools
 ** CCWI014.001 Identify parts of the Registry using GUI-based tools
 ** CCWI014.002 Use command line syntax to query, view, analyze, modify and create Registry values
 ** CCWI014.003 Explain when and how changes to the Registry are expected to take effect
+
 * SKILL CCWI015: Analyze Windows Registry for suspicious activity
 ** CCWI015.001 Identify Registry locations that contain forensically relevant information
 ** CCWI015.002 Identify Registry locations that can be utilized for persistence
 ** CCWI015.003 Perform basic analysis on a Windows system with a compromised Registry
  
 == Section 4: System Hardening, Auditing and Logs
+
 * SKILL CCWI016: Identify basic Windows firewall concepts 
 ** CCWI016.001 Enable Windows firewall settings with the graphical user interface and command line tools
 ** CCWI016.002 Describe the different components of Windows firewall
+
 * SKILL CCWI017: Identify components of New Technology File System (NTFS)
 ** CCWI017.001 Describe basic file and folder permissions
 ** CCWI017.002 Modify permissions in Windows
 ** CCWI017.003 Apply permissions based on users and groups
+
 * SKILL CCWI018: Define Windows Resource Protection
 ** CCWI018.001 Describe Windows Resource Protection
 ** CCWI018.002 Identify files that are protected by Windows Resource Protection
 ** CCWI018.003 Discuss the security implications of Windows Resource Protection on a compromised system
+
 * SKILL CCWI019: Define user account control 
 ** CCWI019.001 Identify the purpose of user account control 
 ** CCWI019.002 Employ user interface privilege isolation
+
 * SKILL CCWI020: Analyze Windows system security posture
 ** CCWI020.001 Discuss information assurance and information security policies 
+
 * SKILL CCWI021: Identify security products
 ** CCWI021.001 Identify host-based security products
 ** CCWI021.002 Identify network security products
 ** CCWI021.003 Discuss signature based detection
 ** CCWI021.004 Discuss heuristic based detection
+
 * SKILL CCWI022: Define Windows auditing
 ** CCWI022.001 Explain why audit policies are important
 ** CCWI022.002 Explain the functionality of the main logs
 ** CCWI022.003 Discuss audit policy settings
 ** CCWI022.004 Identify the events that get audited
+
 * SKILL CCWI023: Configure the audit policy for anomalous activity
 ** CCWI023.001 Use GUI tools to view policy settings
 ** CCWI023.002 Use command line tools to view policy settings
+
 * SKILL CCWI024: Analyze event logs for anomalous activity
 ** CCWI024.001 Identify the locations of logs on the Windows system
 ** CCWI024.002 Identify events that would be audited and why
 ** CCWI024.003 Employ command line tools to view event logs
  
 == Section 5: Windows Networking
+
 * SKILL CCWI025: Identify Windows networking features
 ** CCWI025.001 Describe Server Message Block (SMB)
 ** CCWI025.002 Explain the purpose of mailslots
@@ -105,11 +130,13 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI025.008 Describe Group Policy Objects
 ** CCWI025.009 Perform Group Policy Object queries through the command line
 ** CCWI025.010 Modify Group Policy Objects through the command line
+
 * SKILL CCWI026: Perform basic network analysis on a Windows machine
 ** CCWI026.001 Perform basic network analysis using built-in tools
 ** CCWI026.002 Describe sockets
 ** CCWI026.003 Identify services associated with listening ports
 ** CCWI026.004 Assess security implications of listening ports and established connections
+
 * SKILL CCWI027: Analyze security identifiers
 ** CCWI027.001 Identify the purpose of security system components
 ** CCWI027.002 Explain how access tokens are important for security
@@ -118,6 +145,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI027.005 Identify built-in Windows user accounts
 ** CCWI027.006 Identify the differences between local and domain accounts
 ** CCWI027.007 Describe common user rights and the rights assigned to built-in groups
+
 * SKILL CCWI028: Identify Active Directory basics
 ** CCWI028.001 Identify the Active Directory Schema and Global Catalog
 ** CCWI028.002 Describe the features of Active Directory
@@ -126,6 +154,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI028.005 Employ command line tools to gain information about a system or network
  
 == Section 6: Windows Tactical Survey
+
 * SKILL CCWI029: Describe the phases of Incident Response
 ** CCWI029.001 Identify what occurs in the Preparation phase of Incident Response
 ** CCWI029.002 Identify what occurs in the Identification phase of Incident Response
@@ -133,9 +162,11 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI029.004 Identify what occurs in the Investigation phase of Incident Response
 ** CCWI029.005 Identify what occurs in the Eradication phase of Incident Response
 ** CCWI029.006 Identify what occurs in the Recovery phase of Incident Response
+
 * SKILL CCWI030: Describe order of volatility
 ** CCWI030.001 Discuss the factors involved when considering order of volatility
 ** CCWI030.002 Assess the order of volatility during an incident 
+
 * SKILL CCWI031: Analyze the enumeration process
 ** CCWI031.001 Identify baseline knowledge on a machine
 ** CCWI031.002 Gather baseline knowledge on a machine
@@ -144,9 +175,11 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCWI031.005 Identify scheduled tasks that may affect the purpose or activity on a machine
 ** CCWI031.006 Explain what should be assessed during enumeration of the environment
 ** CCWI031.007 Describe how to detect and enumerate malware
+
 * SKILL CCWI032: Discuss the documentation involved in a tactical survey
 ** CCWI032.001 Identify the importance of operations notes (Op Notes)
 ** CCWI032.002 Discuss the components of a report
+
 * SKILL CCWI033: Use enumeration information to analyze courses of action
 ** CCWI033.001 Discuss the primary factors for recommending a course of action based on enumeration
 ** CCWI033.002 Identify the common vulnerabilities that could change the course of a mission
