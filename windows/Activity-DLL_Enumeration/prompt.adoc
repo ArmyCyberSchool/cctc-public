@@ -8,25 +8,6 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Activity
-
-Write a PowerShell script that enumerates all Dynamic-link libraries (DLLs) loaded into processes.
-Output a clearly formatted and annotated list by process of every DLL loaded into each process:
-
-[square]
-* Get the list of processes
-* Iterate over the list of processes
-** Output the process name
-** Output the list of DLLs (modules) loaded into each process
-
-Output a unique list of all DLLs loaded into every process. If system32.dll is loaded into 30 processes, it appears only once in this list.
-
-== Deliverables
-
-[square]
-* A script that lists DLLs loaded into each process, and its output
-* A script that lists unique DLLs loaded into every process, and its output
-
 == Learning Objectives / Outcomes
 
 [square]
@@ -34,3 +15,41 @@ Output a unique list of all DLLs loaded into every process. If system32.dll is l
 * Understanding and manipulating arrays
 * Familiarity with the ForEach-Object cmdlet and iterating over arrays
 * Confidence writing scripts to achieve specified objectives
+
+{empty} +
+
+== Scenario
+N/A
+
+{empty} +
+
+== Activity
+
+Write a PowerShell script that enumerates all Dynamic-link libraries (DLLs) loaded into processes.
+Output a clearly formatted and annotated list by process of every DLL loaded into each process:
+
+=== Task 1)
+Get the list of running processes.
+
+=== Task 2)
+Iterate over the list of processes.
+
+For each process:
+* Output the process name
+* Output the list of DLLs (modules) loaded into each process
+
+=== Task 3)
+Output a unique list of all DLLs loaded into every process.  If, for example, system32.dll is loaded into 30 processes, it appears only once in this list.
+
+{empty} +
+
+== Deliverables
+
+[square]
+* A script that lists DLLs loaded into each process, and its output
+* A script that lists unique DLLs loaded into every process, and its output
+
+{empty} +
+
+== Hints
+N/A

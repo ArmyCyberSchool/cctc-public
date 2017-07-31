@@ -8,21 +8,6 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Scenario
-
-You are concerned about rootkits on Windows systems. You want to verify enumeration information through multiple methods to ensure consistency and detect inconsistencies indicative of rootkit infections.
-
-== Activity
-
-Write a PowerShell script that runs external commands and PowerShell cmdlets to identify a list of process names. Manipulate the external and internal outputs to be well readable. Compare the output to identify only the differences that result from the two methods of retrieving the data.
-
-== Deliverables / Submit
-
-[square]
-* A PowerShell script that identifies differences in process enumeration
-* The output of the PowerShell script
-* An explanation of any discrepancies between internal cmdlet and external command process enumeration
-
 == Learning Objectives / Outcomes
 
 [square]
@@ -30,3 +15,34 @@ Write a PowerShell script that runs external commands and PowerShell cmdlets to 
 * Familiarity with parsing data in PowerShell from both strings and objects
 * Familiarity comparing dissimilar outputs in PowerShell
 * Confidence building scripts to achieve specified tasks
+
+{empty} +
+
+== Scenario
+
+You are concerned about rootkits on Windows systems. You want to verify enumeration information through multiple methods to ensure consistency and detect inconsistencies indicative of rootkit infections.
+
+{empty} +
+
+== Activity
+
+=== Task 1)
+Write a PowerShell script that runs external commands and PowerShell cmdlets to identify a list of process names.
+Manipulate the external and internal outputs to be well readable.
+
+=== Task 2)
+Compare the output to identify only the differences that result from the two methods of retrieving the data.
+
+{empty} +
+
+== Deliverables
+
+[square]
+* A PowerShell script that identifies differences in process enumeration
+* The output of the PowerShell script
+* An explanation of any discrepancies between internal cmdlet and external command process enumeration
+
+{empty} +
+
+== Hints
+N/A

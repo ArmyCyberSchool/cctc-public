@@ -15,9 +15,13 @@ CCWI 015.002 Identify Registry locations that can be utilized for persistence. +
 CCWI 015.003 Perform basic analysis on a Windows system with a compromised Registry. +
 CCWI 003.001 Identify the purpose of using Powershell in operations. +
 
+{empty} +
+
 == Scenario
 
 You want to enumerate your registry to create a baseline for future forensic reference and to take registry snapshots at specific points in time. Additionally, you want easily to identify registry changes over time by comparing results from different runs of this baseline script.
+
+{empty} +
 
 == Activity
 
@@ -32,6 +36,8 @@ Query registry and record values and data from relevant keys
 Script that compares two registry baselines +
 script should take the two files as command line arguments
 
+{empty} +
+
 == Deliverables
 
 * The script that baselines the registry
@@ -39,10 +45,14 @@ script should take the two files as command line arguments
 * The script that compares baseline runs
 * The output of the script that compares two runs
 
+{empty} +
+
 == Hints
 
 if your script is taking too long to run try looking at some CMD commands to baseline the registry.
 
+{empty} +
+
 == Challenge
 
-Script alerts on only specific information that is different
+Script alerts on only specific information that is different.

@@ -8,23 +8,6 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Activity
-
-Write a PowerShell Script that runs external net.exe commands to retrieve a list of all users on the system and lists each group in which that user is a member.
-
-[square]
-* Use the `net user` command to get a list of users
-* Use PowerShell string manipulation to extract an array of users
-* Iterate over the array and use net.exe commands to extract the list of groups in which the user is a member
-* Use string manipulation to get an array of groups
-* Cleanly output the user and the groups
-
-== Deliverables
-
-[square]
-* A script that lists each user and the groups in which the user is a member
-* The output of the script
-
 == Learning Objectives / Outcomes
 
 [square]
@@ -32,3 +15,43 @@ Write a PowerShell Script that runs external net.exe commands to retrieve a list
 * Understanding string objects
 * Confidence with PowerShell string manipulation
 * Parsing and outputting data in a clear and organized manner
+
+{empty} +
+
+== Scenario
+N/A
+
+{empty} +
+
+== Activity
+
+Write a PowerShell Script that runs external net.exe commands to retrieve a list of all users on the system and lists each group in which that user is a member.
+
+{empty} +
+
+=== Task 1)
+[square]
+Use the `net user` command to get a list of users
+Use PowerShell string manipulation to extract an array of users
+
+=== Task 2)
+Iterate over the array and use `net.exe` commands to extract the list of groups in which the user is a member.
+Use string manipulation to get an array of groups
+
+=== Task 3)
+Cleanly output the user and the groups in the format `[user]: [group1] [group2] . . . [groupn]`
+
+{empty} +
+
+== Deliverables
+
+[square]
+* A script that lists each user and the groups in which the user is a member
+* The output of the script
+
+{empty} +
+
+== Hints
+N/A
+
+{empty} +
