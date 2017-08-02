@@ -10,58 +10,52 @@
 
 == Learning Objectives / Outcomes
 [square]
-* Skill 13: Identify fundamentals of secure shell protocol
-* Objective 13.8- Describe basic port forwarding
-* Objective 13.6- Explain the process for multi-hop tunneling
-* Objective 13.9- Set up an initial SSH tunnel and add another tunnel using another tool
 
+- CCNE013.006 Explain the process for multi-hop tunneling
+
+- CCNE013.008 Describe basic port forwarding
+
+- CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool
+
+{empty} +
+
+== Scenario
+
+You need to do some reconnaissance and intelligence gathering in a target network. This network can be accessed through a public facing interface on one of its hosts. This public facing IP will be provided by the instructor (10.50.X.X).  Be aware that some of the target network's INSIDE IP's will be the same as the IP's inside your own environment. The inside networks are 10.2.0.0/25, 10.3.0.0/25, 10.4.0.0/30 and 10.5.0.0/25.
 {empty} +
 
 == Activity
 
-You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "home" client and SSH'ing into a target topology. You have an account for an SSH server in an environment that you can reach from your home client, but the account is not setup to allow you to open a terminal to the server. You CAN however use a compromised SSH server to access targets in a network that you do not have direct access to. For this exercise, you will use the "tunnel" account to pivot into the target network (username:tunnel, password:password).  The target network's SSH server that you have access to is 10.50.20.X. (Your instructor will provide the last octet of the IP address for access)
-
-The tunnel account/SSH server does not allow login, only SSH tunneling, so ensure you use the appropriate flags in your commands. Within the network however, some targets can be accessed with a shell. If that is allowed, the username:studentXX, password:passwordXX, where XX is your student number.
-
+You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "home" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers do not not allow login, only SSH tunneling; ensure you use the appropriate flags in your commands. Your credentials for the target network are: username:studentXX, password:passwordXX, where XX is your student number. If you have a single digit student number, just use that digit (i.e. student1/password1)
 {empty} +
 
 === Task 1)
+1) The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. This host has an internet IP of 10.1.0.1.
 
-* You are aware of an HTTP server in the environment (H3-1-Target at 10.3.0.1) and need to gain access to the contents being hosted. The target HTTP server cannot be accessed directly from your network (go ahead and try), but does allow select other hosts in its own network to connect to it. It allows the Pivot client (10.1.0.1) in its environment to access it. You will need to get into the target's network using your SSH tunneling point and pivot through the H1 to access the web page. Use local port forwarding to view the page hosted by H3 (10.3.0.1) on your client's browser.
+2) You are aware of an HTTP server in the environment (H3-1-Target at 10.3.0.1) and need to gain access to the contents being hosted. The target HTTP server cannot be accessed directly from your network (go ahead and try), but does allow hosts in its own 10.1.0.0/29 network to connect to it. 
+Use your access through the compromised host (10.1.0.1) in the target network to access it. Use local port forwarding to view the page hosted by H3 (10.3.0.1) on your local environment’s browser.
 
-{empty} +
+3) Tear down the connections once you have completed this task.
 
-* Tear down the connections once you have completed this task.
+_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.1.0.1/Local port forwarding--->H3-1-Target's Webpage_
 
-{empty} +
-
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.20.X--->SSH tunnel through 10.1.0.1/Local port forwarding--->H3-1-Target's Webpage_
-
-{empty} +
-
-* Clear your browser cache
+4) Clear your browser cache
 
 {empty} +
 
 === Task 2)
 
-* You know that the H1 SSH Server (10.1.0.1) you connected through in the previous task can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use nmap to find out what’s out there and what it's hosting. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
+1) You know that Target host at 10.1.0.1, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use nmap to find out what’s out there and what it's hosting. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
 
-{empty} +
+2) You are only concerned with this additional host (for now), which is in the 10.3.0.0/25 range.
 
-* You are only concerned with ssh, telnet, ftp, and http services for this activity.
+3) You are only concerned with finding ssh, telnet, ftp, and http services on hosts for this activity.
 
-{empty} +
+_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.1.0.1/Dynamic port forwarding--->10.3.0.0/25 network_
 
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.20.X--->SSH tunnel through 10.1.0.1/Dynamic port forwarding--->10.3.0.0/24 network_
+4) Once you find out the host's identity, and what services are available, interact with those services!
 
-{empty} +
-
-* Once you find out the host's identity, and what services are available, interact with those services!
-
-{empty} +
-
-* Clear your browser cache
+5)  Clear your browser cache
 
 {empty} +
 
@@ -73,3 +67,18 @@ _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.20.X--->SSH tunnel through 10.1
 
 {empty} +
 
+== Hints
+
+* Not Applicable
+
+{empty} +
+
+== Challenge
+
+* Not Applicable
+
+{empty} +
+
+== Useful Resources
+
+* HAK5 SSH port forwarding: https://www.youtube.com/watch?v=g_Row8zEJZc

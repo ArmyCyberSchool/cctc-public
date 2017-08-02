@@ -115,7 +115,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.large
-      image: Windows Server 2012 R2
+      image: Windows Server 2016
       name:
         str_replace:
           template: lastname-Domain-Controller
