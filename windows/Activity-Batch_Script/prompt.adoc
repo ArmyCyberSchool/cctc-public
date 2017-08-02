@@ -8,9 +8,28 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives / Outcomes
+[square]
+* CCWI001: Employ commands using command line interface
+* CCWI002: Employ commands using Windows Management Instrumentation Command-line
+* CCWI004.002: Create a batch script that will perform basic enumeration of a workstation
+* CCWI008.001: Explain how to find the current status of a Windows process
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
+
+{empty} +
+
+== Scenario
+N/A
+
+{empty} +
+
 == Activity
 
-Write a batch script to quickly enumerate your Windows system using Windows executables. At a minimum, the script should capture:
+Write a batch script to quickly enumerate your Windows system.
+
+=== Task 1)
+Write a script using Windows executables that captures the following information:
 
 [square]
 * User and group information
@@ -21,7 +40,10 @@ Write a batch script to quickly enumerate your Windows system using Windows exec
 * System configuration information
 * Directory and file information in key locations
 
+=== Task 2)
 Rewrite your script to capture the same information using Windows Management Instrumentation Console (WMIC) commands.
+
+{empty} +
 
 == Deliverables
 [square]
@@ -29,8 +51,7 @@ Rewrite your script to capture the same information using Windows Management Ins
 * A batch script running WMIC commands
 * The output of both scripts 
 
-== Learning Objectives / Outcomes
-[square]
-* Familiarity with Command Prompt and WMIC shells
-* Confidence interacting with Windows from a command line interface
-* Familiarity with Windows commands that can be used to enumerate the system
+{empty} +
+
+== Hints
+N/A

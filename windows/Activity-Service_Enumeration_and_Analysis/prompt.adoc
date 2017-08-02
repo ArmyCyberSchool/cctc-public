@@ -8,16 +8,30 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives
+
+[square]
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI003: Employ commands using Powershell
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
+
+{empty} +
+
+== Scenario
+N/A
+
 == Activity
 
+=== Task 1)
 Run the following command in PowerShell:
 
 `Get-Random –InputObject $(Get-Service) –Count 10`
 
-Query the identified services using the GUI, using sc.exe from the command line, and using PowerShell with both .NET framework service object definitions and Windows Management Instrumentation object definition.
+Query the identified services using the GUI, using sc.exe from the command line, and using PowerShell with both .NET framework service object definitions and Windows Management Instrumentation object definition
+(TIP: In Powershell, 'sc' is an alias for Set-Content).
 
-TIP: In Powershell, 'sc' is an alias for Set-Content.
-
+=== Task 2)
 Answer the following questions for each service:
 
 [square]
@@ -26,16 +40,15 @@ Answer the following questions for each service:
 * What applications or other services may need this service? Why?
 * What are the security implications of this service? How can it be used for malicious purposes or indicate security issues with the system?
 
+{empty} +
+
 == Deliverables / Submit
 
 [square]
 * Commands used to query and enumerate service information
 * A document summarizing your answers and assessment
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with Windows services
-* Confidence enumeration Windows services through various techniques
-* Familiarity with baseline “normal” Windows service and their states
-* Confidence researching and analyzing Windows services
+== Hints
+N/A

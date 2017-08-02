@@ -10,11 +10,11 @@
 == Learning Objectives
 
 [square]
-*SKILL 1.1 Use command line commands to gain situational awareness of the current workstation
-*SKILL 2.1 Use WMIC commands to gain situational awareness of the current workstation
-*SKILL 3.1 Identify the purpose of using Powershell in operations
-*SKILL 4: Develop scripts
-*SKILL 12: Identify the importance of situational awareness
+* CCWI001.001: Use command line commands to gain situational awareness of the current workstation
+* CCWI002.001: Use WMIC commands to gain situational awareness of the current workstation
+* CCWI003.001: Identify the purpose of using Powershell in operations
+* CCWI004: Develop scripts
+* CCWI012: Identify the importance of situational awareness
 
 {empty} +
 

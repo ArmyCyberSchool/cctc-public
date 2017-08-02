@@ -8,8 +8,25 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives / Outcomes
+
+[square]
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI008.001: Explain how to find the current status of a Windows process
+* CCWI008.002: Explain the process states and identify why they are important
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
+
+{empty} +
+
+== Scenario
+N/A
+
+{empty} +
+
 == Activity
 
+=== Task 1)
 Download the SysInternals Suite to your Windows system from TechNet at: +
 https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
 
@@ -24,6 +41,7 @@ Run the following SysInternals tools to get familiar with their functionality:
 * PsService
 * ListDLLs
 
+=== Task 2)
 Complete the following tasks and document the tool and process used to compete the task:
 
 [square]
@@ -34,14 +52,14 @@ Complete the following tasks and document the tool and process used to compete t
 * Launch Notepad on your Windows 7 system. Suspend the Notepad process from your Windows 10 machine.
 * Query the services running on your Windows 7 system from your Windows 10 system. Stop the Windows Defender service on Windows 7 from Windows 10. Verify that the service was stopped in Windows 7. Restart the service from Windows 10.
 
+{empty} +
+
 == Deliverables
 
 [square]
 * A document summarizing your process used to accomplish the tasks
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with SysInternals Suite tools
-* Capability to apply SysInternals tools achieve specific tasks
-* Confidence manipulating processes and services on local and remote systems
+== Hints
+N/A

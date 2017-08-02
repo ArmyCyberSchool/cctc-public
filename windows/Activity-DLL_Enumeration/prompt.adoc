@@ -8,18 +8,41 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives / Outcomes
+
+[square]
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI003: Employ commands using Powershell
+* CCWI004.003: Create Powershell script that will perform basic enumeration of a workstation
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
+
+{empty} +
+
+== Scenario
+N/A
+
+{empty} +
+
 == Activity
 
 Write a PowerShell script that enumerates all Dynamic-link libraries (DLLs) loaded into processes.
 Output a clearly formatted and annotated list by process of every DLL loaded into each process:
 
-[square]
-* Get the list of processes
-* Iterate over the list of processes
-** Output the process name
-** Output the list of DLLs (modules) loaded into each process
+=== Task 1)
+Get the list of running processes.
 
-Output a unique list of all DLLs loaded into every process. If system32.dll is loaded into 30 processes, it appears only once in this list.
+=== Task 2)
+Iterate over the list of processes.
+
+For each process:
+* Output the process name
+* Output the list of DLLs (modules) loaded into each process
+
+=== Task 3)
+Output a unique list of all DLLs loaded into every process.  If, for example, system32.dll is loaded into 30 processes, it appears only once in this list.
+
+{empty} +
 
 == Deliverables
 
@@ -27,10 +50,7 @@ Output a unique list of all DLLs loaded into every process. If system32.dll is l
 * A script that lists DLLs loaded into each process, and its output
 * A script that lists unique DLLs loaded into every process, and its output
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with PowerShell objects, properties, and variables
-* Understanding and manipulating arrays
-* Familiarity with the ForEach-Object cmdlet and iterating over arrays
-* Confidence writing scripts to achieve specified objectives
+== Hints
+N/A

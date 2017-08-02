@@ -2,10 +2,32 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Modify Audit Policy
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+
+* CCWI004: Develop scripts
+* CCWI013: Explain the purpose of Windows Registry
+* CCWI014.002: Use command line syntax to query, view, analyze, modify and create Registry values
+* CCWI014.003: Explain when and how changes to the Registry are expected to take effect
+* CCWI016: Identify basic Windows firewall concepts 
+* CCWI031.003: Discuss the differences between malicious and normal activity
+* CCWI022: Define Windows auditing
+
+{empty} +
 
 == Scenario
 
-You have access to a Windows system through a PowerShell session, but you do not have GUI access. You are running a false flag operation and want to make it look like you are a low-level hacker. You want to modify the Windows Firewall policy to allow for external telnet access. You must verify if your actions left logs and if you have achieved the desired effect.
+You have access to a Windows system through a PowerShell session, but you do not have GUI access.
+You are running a false flag operation and want to make it look like you are a low-level hacker.
+You want to modify the Windows Firewall policy to allow for external telnet access.
+You must verify if your actions left logs and if you have achieved the desired effect.
+
+{empty} +
 
 == Setup
 
@@ -14,13 +36,21 @@ Conduct this activity on your Windows 7 machine. Prepare the system by completin
 * Go to Control Panel -> System and Security -> Windows Firewall -> Advanced Settings -> Inbound Rules -> New Rule -> Port -> Next -> TCP 23 -> Next -> Block the Connection -> Next -> Name: TELNET
 * In an administrative Command Prompt run the following command: `auditpol.exe /set /category:* /success:enable /failure:enable`
 
+{empty} +
+
 == Activity
+Write a PowerShell script to make it look like you are a low-level hacker.
 
-Write a PowerShell script to do the following:
+=== Task 1)
+Write a PowerShell script to modify the Windows firewall to allow TELNET traffic by command-line/PowerShell modification of the Windows Registry.
 
-* Step 1: Modify the Windows firewall to allow TELNET traffic by command-line/PowerShell modification of the Windows Registry
-* Step 2: Modify the audit policy to disable credential validation
-* Step 3: Retrieve the firewall logs for today's date
+=== Task 2)
+Extend your script to modify the audit policy to disable credential validation.
+
+=== Task 3)
+Have your script retrieve the firewall logs for today's date.
+
+{empty} +
 
 == Deliverables
 
@@ -28,6 +58,8 @@ Write a PowerShell script to do the following:
 * The output / screenshot of your script indicating Step 2 and 3 were successful
 * Screenshot of Windows Firewall GUI, proving that the changes took effect
 * Documented analysis of Windows logging behavior with regards to Windows Firewall modifications
+
+{empty} +
 
 == Grading
 
@@ -37,9 +69,7 @@ I am uncertain if we should make this a graded exercise. The grading standard se
 * +20% - Successfully modified Windows firewall through the registry
 * +10% - Clear and concise analysis of Windows Firewall logging behavior
 
-== Learning Objectives / Outcomes
+{empty} +
 
-* Familiarity with Registry Modification, Windows firewall, and auditing
-* Researching Windows PowerShell cmdlets and advanced command line applications
-* Assessing security and operational implications of audit policy modifications
-* Presenting analysis in a clear and concise manner
+== Hints
+N/A
