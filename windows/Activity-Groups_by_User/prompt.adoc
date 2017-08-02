@@ -11,10 +11,10 @@
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with external commands in PowerShell
-* Understanding string objects
-* Confidence with PowerShell string manipulation
-* Parsing and outputting data in a clear and organized manner
+* CCWI003: Employ commands using Powershell
+* CCWI004.003: Create Powershell script that will perform basic enumeration of a workstation
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
 
 {empty} +
 

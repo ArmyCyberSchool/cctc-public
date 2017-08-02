@@ -10,10 +10,9 @@
 
 == Learning Objectives / Outcomes
 
-* Confidence writing PowerShell scripts to achieve a specific task
-* Familiarity iterating over data to extract pertinent information
-* Familiarity with PowerShell functions, recursion, flow control, and code blocks
-* Familiarity with PowerShell comparison operators and conditional statements
+* CCWI003: Employ commands using Powershell
+* CCWI004: Develop scripts
+* CCWI008.001: Explain how to find the current status of a Windows process
 
 {empty} +
 

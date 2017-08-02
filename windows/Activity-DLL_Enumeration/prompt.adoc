@@ -11,10 +11,11 @@
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with PowerShell objects, properties, and variables
-* Understanding and manipulating arrays
-* Familiarity with the ForEach-Object cmdlet and iterating over arrays
-* Confidence writing scripts to achieve specified objectives
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI003: Employ commands using Powershell
+* CCWI004.003: Create Powershell script that will perform basic enumeration of a workstation
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
 
 {empty} +
 

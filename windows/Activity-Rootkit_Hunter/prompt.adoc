@@ -11,10 +11,11 @@
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with string manipulation and formatting
-* Familiarity with parsing data in PowerShell from both strings and objects
-* Familiarity comparing dissimilar outputs in PowerShell
-* Confidence building scripts to achieve specified tasks
+* CCWI003: Employ commands using Powershell
+* CCWI004.003: Create Powershell script that will perform basic enumeration of a workstation
+* CCWI031.003: Discuss the differences between malicious and normal activity
+* CCWI031.006: Explain what should be assessed during enumeration of the environment
+* CCWI031.007: Describe how to detect and enumerate malware
 
 {empty} +
 

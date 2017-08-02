@@ -10,10 +10,13 @@
 
 == Learning Objectives / Outcomes
 
-* Familiarity with Registry Modification, Windows firewall, and auditing
-* Researching Windows PowerShell cmdlets and advanced command line applications
-* Assessing security and operational implications of audit policy modifications
-* Presenting analysis in a clear and concise manner
+* CCWI004: Develop scripts
+* CCWI013: Explain the purpose of Windows Registry
+* CCWI014.002: Use command line syntax to query, view, analyze, modify and create Registry values
+* CCWI014.003: Explain when and how changes to the Registry are expected to take effect
+* CCWI016: Identify basic Windows firewall concepts 
+* CCWI031.003: Discuss the differences between malicious and normal activity
+* CCWI022: Define Windows auditing
 
 {empty} +
 

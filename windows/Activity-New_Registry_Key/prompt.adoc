@@ -11,10 +11,10 @@
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with the Windows registry and methods to interact with it
-* Familiarity with forensically relevant Windows registry keys and run keys
-* Confidence editing registry keys for specific purposes
-* Capability to use the Windows registry to store information
+* CCWI004: Develop scripts
+* CCWI013: Explain the purpose of Windows Registry
+* CCWI014.002: Use command line syntax to query, view, analyze, modify and create Registry values
+* CCWI014.003: Explain when and how changes to the Registry are expected to take effect
 
 {empty} +
 

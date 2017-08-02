@@ -10,9 +10,12 @@
 
 == Learning Objectives / Outcomes
 [square]
-* Familiarity with Command Prompt and WMIC shells
-* Confidence interacting with Windows from a command line interface
-* Familiarity with Windows commands that can be used to enumerate the system
+* CCWI001: Employ commands using command line interface
+* CCWI002: Employ commands using Windows Management Instrumentation Command-line
+* CCWI004.002: Create a batch script that will perform basic enumeration of a workstation
+* CCWI008.001: Explain how to find the current status of a Windows process
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
 
 {empty} +
 

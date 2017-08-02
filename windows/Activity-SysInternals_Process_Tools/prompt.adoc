@@ -11,9 +11,11 @@
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with SysInternals Suite tools
-* Capability to apply SysInternals tools achieve specific tasks
-* Confidence manipulating processes and services on local and remote systems
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI008.001: Explain how to find the current status of a Windows process
+* CCWI008.002: Explain the process states and identify why they are important
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
 
 {empty} +
 

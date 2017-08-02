@@ -11,10 +11,10 @@
 == Learning Objectives
 
 [square]
-* Familiarity with Windows services
-* Confidence enumeration Windows services through various techniques
-* Familiarity with baseline “normal” Windows service and their states
-* Confidence researching and analyzing Windows services
+* CCWI001.002: Use System Internals tools to gain situational awareness of the current workstation
+* CCWI003: Employ commands using Powershell
+* CCWI031.001: Identify baseline knowledge on a machine
+* CCWI031.002: Gather baseline knowledge on a machine
 
 {empty} +
 
