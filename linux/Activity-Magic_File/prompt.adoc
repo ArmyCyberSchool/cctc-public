@@ -10,7 +10,6 @@
 
 == Learning Objectives
 
-* CCNI003 - Analyze the Linux file system
 * CCNI003.005 -  Discuss file system attributes
 
 {empty} +
