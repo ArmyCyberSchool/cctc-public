@@ -7,9 +7,8 @@
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
-== Learning Objectives
 
-[square]
+== Learning Objectives / Outcomes
 * CCWI001.001: Use command line commands to gain situational awareness of the current workstation
 * CCWI002.001: Use WMIC commands to gain situational awareness of the current workstation
 * CCWI003.001: Identify the purpose of using Powershell in operations
