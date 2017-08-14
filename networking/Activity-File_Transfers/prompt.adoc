@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../cctc.css
 
-= Activity 1- File Transfers
+= Activity - File Transfers
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
