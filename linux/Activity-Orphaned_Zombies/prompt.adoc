@@ -22,7 +22,7 @@ You need to create some abnormal behavior on a target system to consume resource
 
 == Deliverables
 
-[]square
+[square]
 * Your script that creates the orphanded zombies.
 * Screenshoot of your process list output identifying the orphaned zombies nested under init.
 
