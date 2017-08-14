@@ -1,5 +1,5 @@
 :doctype: book
-:stylesheet: ../cctc.css
+:stylesheet: ../../cctc.css
 
 = Activity - File Transfers
 :doctype: book
