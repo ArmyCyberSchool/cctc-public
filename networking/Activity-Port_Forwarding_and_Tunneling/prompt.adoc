@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../cctc.css
 
-= Activity 3- Port Forwarding and Tunneling
+= Activity - Port Forwarding and Tunneling
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
