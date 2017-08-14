@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../cctc.css
 
-= Activity 2- Netcat Relays
+= Activity - Netcat Relays
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
