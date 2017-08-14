@@ -2,39 +2,15 @@
 :stylesheet: ../../cctc.css
 
 = Activity- Mapping a Network
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 == Learning Objectives / Outcomes
 [square]
 * Skill 3: Perform network discovery
 * Objective 3.1- Analyze router configurations and create a network map
 
-{empty} +
-
 == Scenario
 
-You have been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance (ROUTER_CONFIG.txt). In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
-
-{empty} +
-
-== Activity
-
-=== Task 1) 
-You will start your network infrastructure discovery by analyzing the configuration file and documenting any information about the network device/network segment. Besides from providing a basis for your network topology map, you should also compile a list of security vulnerabilities that can be used to access or exploit the device.
-
-{empty} +
-
-== Deliverables
-[square]
-* A powerpoint or similar graphic representation of the network with appropriate labels for significant information
-* A list of at least (7) vulnerabilities noted for the device analyzed
-* Recommendations to mitigate the listed vulnerabilities (commands would be helpful where applicable)
-
-{empty} + 
+You have been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance. In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
 
 ----
 GROVETOWN_PD#show run
@@ -217,3 +193,15 @@ ntp server comcast.net
 end
 
 ----
+
+== Activity
+
+=== Task 1) 
+You will start your network infrastructure discovery by analyzing the configuration file and documenting any information about the network device/network segment. Besides from providing a basis for your network topology map, you should also compile a list of security vulnerabilities that can be used to access or exploit the device.
+
+== Deliverables
+[square]
+* A powerpoint or similar graphic representation of the network with appropriate labels for significant information
+* A list of at least (7) vulnerabilities noted for the device analyzed
+* Recommendations to mitigate the listed vulnerabilities (commands would be helpful where applicable)
+
