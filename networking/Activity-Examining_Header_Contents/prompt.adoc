@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../cctc.css
 
-= Activity 1- Examining Header Contents
+= Activity - Examining Header Contents
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
