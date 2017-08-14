@@ -1,7 +1,12 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity- Mapping a Network
+= Activity - Mapping a Network
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
 
 == Learning Objectives / Outcomes
 [square]
