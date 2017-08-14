@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../cctc.css
 
-= Activity 4- Remote Port Forwarding
+= Activity - Remote Port Forwarding
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
