@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity- Scapy for ARP
+= Activity - Scapy for ARP
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
