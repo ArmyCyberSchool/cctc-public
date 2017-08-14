@@ -1,5 +1,5 @@
 :doctype: book
-:stylesheet: ../cctc.css
+:stylesheet: ../../cctc.css
 
 = Activity - Examining Header Contents
 :doctype: book
