@@ -1,7 +1,7 @@
 :doctype: book
-:stylesheet: ../cctc.css
+:stylesheet: ../../cctc.css
 
-= Activity 2- TCPDump Basics & Filters
+= Activity - TCPDump Basics & Filters
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
