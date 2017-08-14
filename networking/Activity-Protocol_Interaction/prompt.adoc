@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity- Protocol Interaction
+= Activity - Protocol Interaction
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
