@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity- ICMPv6 RA with Scapy
+= Activity - ICMPv6 RA with Scapy
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
