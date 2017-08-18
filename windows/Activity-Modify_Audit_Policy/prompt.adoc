@@ -73,3 +73,13 @@ I am uncertain if we should make this a graded exercise. The grading standard se
 
 == Hints
 N/A
+
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+"Windows Firewall with Advanced Security Administration with Windows PowerShell," Microsoft Corporation. https://technet.microsoft.com/en-us/library/hh831755(v=ws.11).aspx

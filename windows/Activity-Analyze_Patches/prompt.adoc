@@ -54,3 +54,12 @@ Provide a technical summary that outlines your recommended course of action.
 == Hints
 N/A
 
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+"CVE-2016-3251," Microsoft Corporation. https://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3251

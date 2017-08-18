@@ -50,3 +50,18 @@ Create a PowerShell script that is run when a user logs on. This script should l
 == Hints
 N/A
 
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+* "Windows registry information for advanced users," Microsof Corporation. https://support.microsoft.com/en-us/help/256986/windows-registry-information-for-advanced-users
+
+* "Predefined Keys," Microsoft Corporation. https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836(v=vs.85).aspx
+
+* "What are Control Sets? What is CurrentControlSet?" Microsoft Corporation. https://support.microsoft.com/en-us/help/100010/what-are-control-sets-what-is-currentcontrolset
+
+* "Hivelist," Microsoft Corporation. https://technet.microsoft.com/en-us/library/cc951686.aspx

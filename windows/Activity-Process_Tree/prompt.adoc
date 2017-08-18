@@ -44,4 +44,15 @@ Your process tree will have multiple roots. The following conditions indicate a 
 {empty} +
 
 == Hints
+If you are stuck, first try to make a function `get-children` that takes in a process id
+`ppid` and returns all processes that have `ppid` as the parent parent process.
+
+{empty} +
+
+== Challenge
 N/A
+
+{empty} +
+
+== Useful Resources
+"Examples," github user davidfowl. https://gist.github.com/davidfowl/984358. Note:  This serves as an example of recursion in a powershell script.

@@ -56,3 +56,16 @@ if your script is taking too long to run try looking at some CMD commands to bas
 == Challenge
 
 Script alerts on only specific information that is different.
+
+{empty} +
+
+== Useful Resources
+* "Windows registry information for advanced users," Microsoft Corporation. https://support.microsoft.com/en-us/help/256986/windows-registry-information-for-advanced-users
+
+* "Using the Get-ItemProperty Cmdlet," Microsoft Corporation. https://technet.microsoft.com/en-us/library/ee176852.aspx
+
+* "Predefined Keys," Microsoft Corporation. https://msdn.microsoft.com/en-us/library/windows/desktop/ms724836(v=vs.85).aspx
+
+* "What are Control Sets? What is CurrentControlSet?" Microsoft Corporation. https://support.microsoft.com/en-us/help/100010/what-are-control-sets-what-is-currentcontrolset
+
+* "Hivelist," Microsoft Corporation. https://technet.microsoft.com/en-us/library/cc951686.aspx
