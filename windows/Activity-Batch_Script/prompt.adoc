@@ -55,3 +55,13 @@ Rewrite your script to capture the same information using Windows Management Ins
 
 == Hints
 N/A
+
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+* “Using the Windows Management Instrumentation Command-line (WMIC) tool,” Microsoft Corporation. https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/wmic.mspx?mfr=true

@@ -47,3 +47,17 @@ Compare the output to identify only the differences that result from the two met
 
 == Hints
 N/A
+
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+* "Process Explorer v16.21," Microsoft Corporation. https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+
+* "PsList v1.4," Microsoft Corporation. https://docs.microsoft.com/en-us/sysinternals/downloads/pslist
+
+* "Get-Process," Microsoft Corporation. https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Get-Process?view=powershell-5.1

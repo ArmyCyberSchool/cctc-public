@@ -55,3 +55,15 @@ Cleanly output the user and the groups in the format `[user]: [group1] [group2] 
 N/A
 
 {empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+* "Windows Batch Scripting," Wikibooks. https://en.wikibooks.org/wiki/Windows_Batch_Scripting#String_processing
+
+* "Net Service Commands," Microsoft Corporation. https://technet.microsoft.com/en-us/library/bb490949.aspx
+
+* "Viewing a User's Group Membership," Microsoft Corporation. https://technet.microsoft.com/en-us/library/dd378920(WS.10).aspx

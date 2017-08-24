@@ -54,3 +54,13 @@ Output a unique list of all DLLs loaded into every process.  If, for example, sy
 
 == Hints
 N/A
+
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+* “Dynamic-Link Library Security,” Microsoft Corporation. https://msdn.microsoft.com/en-us/library/windows/desktop/ff919712(v=vs.85).aspx

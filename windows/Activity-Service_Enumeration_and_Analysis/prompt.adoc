@@ -51,4 +51,22 @@ Answer the following questions for each service:
 {empty} +
 
 == Hints
+Besides Process Explorer, the de facto tool for understanding processes, try using the tool Handle to see what resources this service uses.
+Also, Google is a great resource for finding out information about generic
+Windows services.
+
+{empty} +
+
+== Challenge
 N/A
+
+{empty} +
+
+== Useful Resources
+"Process Explorer v16.21," Microsoft Corporation. https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+
+"Handle v4.1," Microsoft Corporation. https://docs.microsoft.com/en-us/sysinternals/downloads/handle
+
+"Essential Tools for Windows Services: SC.EXE," Microsoft Corporation.
+https://www.coretechnologies.com/blog/windows-services/essential-tools-windows-services-sc-exe/
+

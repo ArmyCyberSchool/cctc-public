@@ -63,3 +63,14 @@ Complete the following tasks and document the tool and process used to compete t
 
 == Hints
 N/A
+
+{empty} +
+
+== Challenge
+N/A
+
+{empty} +
+
+== Useful Resources
+"Sysinternals Suite," Microsoft Corporation. https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite
+
