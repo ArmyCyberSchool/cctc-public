@@ -47,7 +47,7 @@ Write a PowerShell script to modify the Windows firewall to allow TELNET traffic
 Extend your script to modify the audit policy to disable credential validation.
 
 === Task 3)
-Have your script retrieve the firewall logs for today's date.
+Have your script retrieve the firewall event logs for today's date.
 
 {empty} +
 
