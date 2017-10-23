@@ -1,6 +1,6 @@
-heat_template_version: 2016-10-14
+heat_template_version: 2017-02-24
 
-description: Heat Template for Linux module of CCTC - Provides base resources and Debian LXDE system
+description: Heat Template for Linux module of CCTC - Debian 16.04 and Ubuntu 16.04
 
 parameters:
 
@@ -42,6 +42,8 @@ resources:
           template: lastName_Network
           params:
             lastName: { get_param: last_name }
+      admin_state_up: true
+      shared: false
 
   stu-subnet:
     type: OS::Neutron::Subnet
@@ -67,8 +69,11 @@ resources:
           template: 10.studentID.0.254
           params:
             studentID: { get_param: student_id }
-      network: { get_resource: stu-network }
+      network_id: { get_resource: stu-network }
       dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      host_routes: []
+      ip_version: 4
       name:
         str_replace:
           template: lastname_subnet
@@ -90,8 +95,13 @@ resources:
     properties:
       router_id: { get_resource: stu-router }       
       subnet_id: { get_resource: stu-subnet }
+      
+  float_ip_1:
+    type: OS::Neutron::FloatingIP
+    depends_on: stu-router
+    properties: { floating_network: public }
 
-  host1-port:
+  float_port_1:
     type: OS::Neutron::Port
     properties:
       network_id: { get_resource: stu-network }
@@ -103,66 +113,78 @@ resources:
               params:
                 studentID: { get_param: student_id }
       port_security_enabled: false
+      
+  float_ip_assoc_1:
+    type: OS::Neutron::FloatingIPAssociation
+    properties:
+      floatingip_id: { get_resource: float_ip_1 }
+      port_id: { get_resource: float_port_1 }
 
   host1:
     type: OS::Nova::Server
     properties:
       name:
         str_replace:
-          template: lastname-Debian-GUI
+          template: lastname-Ubuntu 16.04
           params:
             lastname: { get_param: last_name }
-      image: Debian LXDE
+      image: Ubuntu 16.04
       flavor: cy.medium
+      diskConfig: AUTO
       networks: 
-        - port: { get_resource: host1-port }
+        - port: { get_resource: float_port_1 }
       user_data: 
         str_replace:
           template: |
             #!/bin/bash            
             echo 127.0.0.1 $(hostname) >> /etc/hosts
-            export DEBIAN_FRONTEND=noninteractive
-            apt-get update
-            apt-get -y install locate dnsutils lsof aptitude ftp auditd telnet samba
-            apt-get -y install locate dnsutils lsof aptitude ftp auditd telnet samba
+            apt-get -y update
+            pkg_array=({install,locate,dnsutils,lsof,aptitude,ftp,auditd,telnet,samba,git,zip,unzip,figlet,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,install,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,build-essential,hydra,hydra-gtk,john,xrdp,tigervnc-standalone-server,netcat,firefox,figlet,ubuntu_desktop})
+            for x in ${pkg_array[@]}; do apt-get install -y $x; done
+            apt-get -y install qemu && apt-get -y install qemu
+            apt-get -y upgrade
             updatedb
             mandb
-            apt-get -y install figlet hexedit tree
-            apt-get -y install figlet hexedit tree
-            wget 10.50.20.28/downloads/linux/banner.sh -O /usr/share/misc/banner.sh
-            chmod +x /usr/share/misc/banner.sh
-            wget 10.50.20.28/downloads/linux/check.pyc -O /usr/share/misc/check.pyc
-            chmod +x /usr/share/misc/check.pyc
+            mkdir /usr/share/cctc
+            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.25.121/linux/ -P /usr/share/cctc/
+            wget 10.50.25.121/linux/check.pyc -O /usr/share/cctc/check.pyc
+            wget 10.50.25.121/linux/banner.sh -O /usr/share/cctc/banner.sh
             cat > /usr/share/misc/check_script.sh << "__EOF__"
             #!/bin/bash
             /usr/bin/env python /usr/share/misc/check.pyc
             __EOF__
-            chmod +x /usr/share/misc/check_script.sh
             echo 'alias check="/usr/share/misc/check_script.sh"' >> /etc/bash.bashrc
-            mkdir /usr/share/cctc
-            wget 10.50.20.28/downloads/linux/runme -O /usr/share/cctc/runme
-            wget 10.50.20.28/downloads/linux/page.html -O /usr/share/cctc/page.html
-            apt-get install -y qemu
-            apt-get install -y qemu
-            wget 10.50.20.28/downloads/linux/fun.vdi -O /usr/share/cctc/fun.vdi
-            wget 10.50.20.28/downloads/linux/mbroken.zip -O /usr/share/cctc/mbroken.zip
-            wget 10.50.20.28/downloads/linux/NMAP_all_hosts.txt -O /usr/share/cctc/NMAP_all_hosts.txt
-            wget 10.50.20.28/downloads/linux/LEMARCHAND.zip -O /usr/share/cctc/LEMARCHAND.zip
-            wget 10.50.20.28/downloads/linux/MYSTERIOUS_FILE -O /usr/share/cctc/MYSTERIOUS_FILE
-            wget 10.50.20.28/downloads/linux/sorted.zip -O /usr/share/cctc/sorted.zip
-            useradd $user -m -U -s /bin/bash
-            usermod -aG sudo $user
-            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-            echo "root:$password" | chpasswd
+            chmod +x /usr/share/cctc/*
+            chmod +x /usr/share/cctc/{check.pyc,banner.sh,check_script.sh}
+            sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+            service ssh restart
+            useradd $user -m -U -G sudo -s /bin/bash
+            useradd -m zeus -U -G sudo -s /bin/bash
+            echo "root:password" | chpasswd
             echo "$user:$password" | chpasswd
+            echo "zeus:password" | chpasswd
+            easy_install pip
+            pip install pefile capstone
+            git clone https://github.com/g0tmi1k/exe2hex.git /usr/share/exe2hex
+            git clone https://github.com/1aN0rmus/TekDefense-Automater.git /usr/share/automater
+            git clone https://github.com/secretsquirrel/the-backdoor-factory.git /usr/share/backdoor
+            git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
+            /usr/share/Veil/setup/setup.sh -c
+            git clone https://github.com/danielmiessler/SecList.git /usr/share/seclists
             reboot
           params:
             $user: { get_param: last_name }
             $password: { get_param: password }
             $studentID: { get_param: student_id }
       user_data_format: RAW
+  
+  float_ip_2:
+    type: OS::Neutron::FloatingIP
+    depends_on: stu-router
+    properties: { floating_network: public }
 
-  host2-port:
+  float_port_2:
     type: OS::Neutron::Port
     properties:
       network_id: { get_resource: stu-network }
@@ -174,71 +196,67 @@ resources:
               params:
                 studentID: { get_param: student_id }
       port_security_enabled: false
-
+  
+  float_ip_assoc_2:
+    type: OS::Neutron::FloatingIPAssociation
+    properties:
+      floatingip_id: { get_resource: float_ip_2 }
+      port_id: { get_resource: float_port_2 }
+  
   host2:
     type: OS::Nova::Server
     properties:
       name:
         str_replace:
-          template: lastname-Windows-10-SAMBA
+          template: Debian 16.04
           params:
             lastname: { get_param: last_name }
-      image: Windows 10
+      image: Debian LXDE
       flavor: cy.medium
+      diskConfig: AUTO
       networks: 
-        - port: { get_resource: host2-port }
-      user_data: 
-        str_replace:
-          template: |
-            #ps1_sysnative
-            $ErrorActionPreference = 'SilentlyContinue'
-            netsh advfirewall set allprofiles state off
-            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
-            net user /add $user $password /y
-            net localgroup administrators /add $user
-            exit 1001
-          params:
-            $user: { get_param: last_name }
-            $password: { get_param: password }
-            $studentID: { get_param: student_id }
-      user_data_format: RAW
-
-  host3-port:
-    type: OS::Neutron::Port
-    properties:
-      network_id: { get_resource: stu-network }
-      fixed_ips:
-        - subnet_id: { get_resource: stu-subnet }
-          ip_address:
-            str_replace:
-              template: 10.studentID.0.3
-              params:
-                studentID: { get_param: student_id }
-      port_security_enabled: false
-
-  host3:
-    type: OS::Nova::Server
-    properties:
-      name:
-        str_replace:
-          template: lastname-Debian-Backdoor-Target
-          params:
-            lastname: { get_param: last_name }
-      image: Debian Stretch
-      flavor: cy.small
-      networks: 
-        - port: { get_resource: host3-port }
+        - port: { get_resource: float_port_2 }
       user_data: 
         str_replace:
           template: |
             #!/bin/bash            
             echo 127.0.0.1 $(hostname) >> /etc/hosts
             export DEBIAN_FRONTEND=noninteractive
-            useradd $user -m -U -s /bin/bash
-            usermod -aG sudo $user
-            sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-            echo "root:$password" | chpasswd
+            apt-get -y update
+            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,telnet,samba,git,zip,unzip,figlet,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,build-essential,hydra,hydra-gtk,john,xrdp,tigervnc-standalone-server,netcat,firefox,figlet})
+            for x in ${pkg_array[@]}; do apt-get install -y $x; done
+            apt-get -y install qemu && apt-get -y install qemu
+            apt-get -y upgrade
+            updatedb
+            mandb
+            mkdir /usr/share/cctc
+            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.25.121/linux/ -P /usr/share/cctc/
+            wget 10.50.25.121/linux/check.pyc -O /usr/share/cctc/check.pyc
+            wget 10.50.25.121/linux/banner.sh -O /usr/share/cctc/banner.sh
+            cat > /usr/share/misc/check_script.sh << "__EOF__"
+            #!/bin/bash
+            /usr/bin/env python /usr/share/misc/check.pyc
+            __EOF__
+            echo 'alias check="/usr/share/misc/check_script.sh"' >> /etc/bash.bashrc
+            chmod +x /usr/share/cctc/*
+            chmod +x /usr/share/cctc/{check.pyc,banner.sh,check_script.sh}
+            sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+            sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
+            service ssh restart
+            useradd $user -m -U -G sudo -s /bin/bash
+            useradd -m zeus -U -G sudo -s /bin/bash
+            echo "root:password" | chpasswd
             echo "$user:$password" | chpasswd
+            echo "zeus:password" | chpasswd
+            easy_install pip
+            pip install pefile capstone
+            git clone https://github.com/g0tmi1k/exe2hex.git /usr/share/exe2hex
+            git clone https://github.com/1aN0rmus/TekDefense-Automater.git /usr/share/automater
+            git clone https://github.com/secretsquirrel/the-backdoor-factory.git /usr/share/backdoor
+            git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
+            /usr/share/Veil/setup/setup.sh -c
+            git clone https://github.com/danielmiessler/SecList.git /usr/share/seclists
             reboot
           params:
             $user: { get_param: last_name }
