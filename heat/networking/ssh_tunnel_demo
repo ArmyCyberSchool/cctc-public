@@ -1,0 +1,234 @@
+description: Heat Template - Networking - SSH Demo
+
+heat_template_version: '2016-10-14'
+
+parameters:
+  username:
+    default: user
+    description: Username
+    label: Username
+    type: string
+  password:
+    default: password
+    description: Root password
+    hidden: true
+    label: Password
+    type: string
+
+resources:
+  main_router:
+    type: OS::Neutron::Router
+    properties:
+      external_gateway_info: {network: public}
+      name: external_router
+
+  main_router_interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: {get_resource: main_router}
+      subnet_id: {get_resource: main_subnet}
+
+  main_subnet:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+      - {end: 10.0.0.200, start: 10.0.0.2}
+      cidr: 10.0.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.0.0.254
+      host_routes: []
+      ip_version: 4
+      name: main_subnet
+      network_id: {get_resource: main_network}
+
+  main_network:
+    type: OS::Neutron::Net
+    properties: 
+      admin_state_up: true  
+      name: main_network 
+
+  bob_host:
+    type: OS::Nova::Server
+    properties:
+      flavor: cy.medium
+      image: Debian LXDE
+      name: bob_host
+      networks:
+      - port: {get_resource: bob_port}
+      user_data:
+        str_replace:
+          params:
+            $password: {get_param: password}
+            $user: {get_param: username}
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate lsof 
+            apt-get -y install wireshark tcpdump 
+            apt-get -y install apache2
+            apt-get -y install nmap 
+
+            echo "CREATE USER"
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+
+            useradd bob -m -U -s /bin/bash
+            usermod -aG sudo bob
+            echo "bob:password" | chpasswd
+
+            reboot
+      user_data_format: RAW
+
+  bob_port:
+    type: OS::Neutron::Port
+    properties:
+      fixed_ips:
+      - {ip_address: 10.0.0.101}
+      network_id: {get_resource: main_network}
+      port_security_enabled: false
+
+  john_host:
+    type: OS::Nova::Server
+    properties:
+      flavor: cy.medium
+      image: Debian LXDE
+      name: john_host
+      networks:
+      - port: {get_resource: john_port}
+      user_data:
+        str_replace:
+          params:
+            $password: {get_param: password}
+            $user: {get_param: username}
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate lsof 
+            apt-get -y install wireshark tcpdump 
+            apt-get -y install apache2
+            apt-get -y install nmap 
+
+            echo "CREATE USER"
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+
+            useradd john -m -U -s /bin/bash
+            usermod -aG sudo john
+            echo "john:password" | chpasswd
+
+            reboot
+      user_data_format: RAW
+
+  john_port:
+    type: OS::Neutron::Port
+    properties:
+      fixed_ips:
+      - {ip_address: 10.0.0.102}
+      network_id: {get_resource: main_network}
+      port_security_enabled: false
+
+  mike_host:
+    type: OS::Nova::Server
+    properties:
+      flavor: cy.medium
+      image: Debian LXDE
+      name: mike_host
+      networks:
+      - port: {get_resource: mike_port}
+      user_data:
+        str_replace:
+          params:
+            $password: {get_param: password}
+            $user: {get_param: username}
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate lsof 
+            apt-get -y install wireshark tcpdump 
+            apt-get -y install apache2
+            apt-get -y install nmap 
+
+            echo "CREATE USER"
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+
+            useradd mike -m -U -s /bin/bash
+            usermod -aG sudo mike
+            echo "mike:password" | chpasswd
+
+            reboot
+      user_data_format: RAW
+
+  mike_port:
+    type: OS::Neutron::Port
+    properties:
+      fixed_ips:
+      - {ip_address: 10.0.0.103}
+      network_id: {get_resource: main_network}
+      port_security_enabled: false
+
+
+
+
+
+  james_host:
+    type: OS::Nova::Server
+    properties:
+      flavor: cy.medium
+      image: Debian LXDE
+      name: james_host
+      networks:
+      - port: {get_resource: james_port}
+      user_data:
+        str_replace:
+          params:
+            $password: {get_param: password}
+            $user: {get_param: username}
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate lsof 
+            apt-get -y install wireshark tcpdump 
+            apt-get -y install apache2
+            apt-get -y install nmap 
+
+            echo "CREATE USER"
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+
+            useradd james -m -U -s /bin/bash
+            usermod -aG sudo james
+            echo "james:password" | chpasswd
+
+            reboot
+      user_data_format: RAW
+
+  james_port:
+    type: OS::Neutron::Port
+    properties:
+      fixed_ips:
+      - {ip_address: 10.0.0.104}
+      network_id: {get_resource: main_network}
+      port_security_enabled: false
+
