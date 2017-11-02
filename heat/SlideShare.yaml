@@ -1,0 +1,122 @@
+description: Heat Template - Webserver
+heat_template_version: '2016-10-14'
+parameters:
+  class_name:
+    constraints:
+    - description: name must be no longer than 15 characters
+      length: {max: 15, min: 1}
+    - {allowed_pattern: '[a-zA-Z]*', description: Last name may only contain letters}
+    default: null
+    description: Class Type
+    label: Class
+    type: string
+  module_name:
+    constraints:
+    - description: name must be no longer than 15 characters
+      length: {max: 15, min: 1}
+    - {allowed_pattern: '[a-zA-Z]*', description: Last name may only contain letters}
+    default: null
+    description: module name (windows/linux/networking/programming)
+    label: module
+    type: string
+  password:
+    constraints:
+    - description: Password must be between 8 and 20 characters
+      length: {max: 20, min: 8}
+    - {allowed_pattern: '[a-zA-Z0-9]*', description: Password may not contain special
+        characters}
+    default: password
+    description: Set root/admin password for instances
+    hidden: true
+    label: Password
+    type: string
+resources:
+  external_router:
+    properties:
+      external_gateway_info: {network: public}
+      name: external_router
+    type: OS::Neutron::Router
+  external_router_interface_0:
+    properties:
+      router_id: {get_resource: external_router}
+      subnet_id: {get_resource: subnet_0}
+    type: OS::Neutron::RouterInterface
+  
+  host1:
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian LXDE
+      name:
+        str_replace:
+          params:
+            lastname: {get_param: class_name}
+          template: SlideShare
+      networks:
+      - port: {get_resource: host1_subnet_0_port}
+      user_data:
+        str_replace:
+          params:
+            $password: {get_param: password}
+            $user: {get_param: class_name}
+            $course: {get_param: module_name}
+          template: |
+            #!/bin/bash
+            echo 127.0.0.1 $(hostname) >> /etc/hosts
+            echo 173.230.138.130 git.cybbh.space >> /etc/hosts
+
+            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get update
+            apt-get -y install locate dnsutils lsof
+            apt-get -y install nginx nodejs build-essential ethtool git make gcc
+            cd /var/www/html
+            git clone git://github.com/hakimel/reveal.js.git
+            echo "INSTALLS COMPELTE"
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/index.html -O /var/www/html/index.nginx-debian.html
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_1.html -O /var/www/html/reveal.js/section_1.html
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_2.html -O /var/www/html/reveal.js/section_2.html
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_3 .html-O /var/www/html/reveal.js/section_3.html
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_4.html -O /var/www/html/reveal.js/section_4.html
+            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_5.html -O /var/www/html/reveal.js/section_5.html 
+            
+            #Disable TCP Offloading
+            cat <<EOF > /etc/network/if-up.d/tcpoffload
+            #!/bin/bash
+            if [ $IFACE = \"eth1\" ]; then
+                /sbin/ethtool -K eth1 tx off sg off tso off
+            fi
+            EOF
+            chmod +x /etc/network/if-up.d/tcpoffload
+            echo "CREATE USER"
+            useradd $user -m -U -s /bin/bash
+            usermod -aG sudo $user
+            echo "root:$password" | chpasswd
+            echo "$user:$password" | chpasswd
+            reboot
+      user_data_format: RAW
+    type: OS::Nova::Server
+  host1_subnet_0_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.100.0.1}
+      network_id: {get_resource: network_0}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  network_0:
+    properties: {admin_state_up: true, name: Net0, shared: false}
+    type: OS::Neutron::Net
+  subnet_0:
+    properties:
+      allocation_pools:
+      - {end: 10.100.0.250, start: 10.100.0.200}
+      cidr: 10.100.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.100.0.254
+      host_routes: []
+      ip_version: 4
+      name: subnet0
+      network_id: {get_resource: network_0}
+    type: OS::Neutron::Subnet
