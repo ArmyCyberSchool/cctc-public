@@ -73,12 +73,12 @@ resources:
             cd /var/www/html
             git clone git://github.com/hakimel/reveal.js.git
             echo "INSTALLS COMPELTE"
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/index.html -O /var/www/html/index.nginx-debian.html
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_1.html -O /var/www/html/reveal.js/section_1.html
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_2.html -O /var/www/html/reveal.js/section_2.html
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_3 .html-O /var/www/html/reveal.js/section_3.html
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_4.html -O /var/www/html/reveal.js/section_4.html
-            wget https://git.cybbh.space/CCTC/public/raw/Sarah_reveal/$course/slides/section_5.html -O /var/www/html/reveal.js/section_5.html 
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/index.html -O /var/www/html/index.nginx-debian.html
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/section_1.html -O /var/www/html/reveal.js/section_1.html
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/section_2.html -O /var/www/html/reveal.js/section_2.html
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/section_3 .html-O /var/www/html/reveal.js/section_3.html
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/section_4.html -O /var/www/html/reveal.js/section_4.html
+            wget https://git.cybbh.space/CCTC/public/raw/master/$course/slides/section_5.html -O /var/www/html/reveal.js/section_5.html 
             
             #Disable TCP Offloading
             cat <<EOF > /etc/network/if-up.d/tcpoffload
