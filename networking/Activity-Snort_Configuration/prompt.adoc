@@ -28,7 +28,7 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 == Task 1
 
-1) After the script has completed, you can confirm that snort has installed/configured correctly with "snort --version"
+1) Confirm that snort has been installed/configured correctly with "snort --version"
 
 2) Run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
 (You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create it’s own process.)
