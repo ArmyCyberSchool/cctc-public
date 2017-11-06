@@ -41,66 +41,70 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Network Filtering</h1>
+					<h3>CCTC- Networking</h3>
+				</section>
+
+				<section>
+					<h2>Outcomes</h2>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						SKILL 7: Define methodologies of filtering
+						SKILL 8: Identify Filtering devices
+						SKILL 9: Configure filtering devices
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
+						<h2>Firewall Modes</h2>
+						<h3>Obj. 7.1</h3>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						- Routed Mode
+						- Transparent Mode
+						
+						Where/How should you arrange Firewalls in an Enterprise Topology?
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h2>Filtering Basics</h2>
+					<h3>Obj. 7.1, 7.6</h3>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					    - Host based versus Network Based Firewalls
+					        - IPTables, Windows FW
+					        - Network Based FW's com ein many flavors
+					    - Packet Filtering
+					    - Stateful Inspection
+					    - Application level gateways
 					</p>
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
+					<h2>Fire Walking</h2>
 					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+					    - Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices
+					    - Traceroute uses ICMP or UDP
+					    - On Linux:
+					                -T sents TCP syn
+					                -m sets max TTL
+					                -p sets destination ports (udp-start port then increments, TCP- constant)
+					                -U sets constant udp port
+			            - Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies
+			            - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses
+					</p>
+				</section>
+
+				<section>
+					<h2>Intrusion Detection vs. Prevention</h2>
+					<p>
+						- IDS: Intrusion Detection System
+						    - Do not need to be inline
+						    - Logging, Alerting
+					    - IPS: Intrusion Prevention System
+					        - Needs to be inline
+					        - Dropping, Blocking, Resetting, Sandboxing
+					    - Signatures
+					        - Atomic
+					        - Stateful
 					</p>
 				</section>
 
