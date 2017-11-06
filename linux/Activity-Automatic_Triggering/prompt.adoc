@@ -10,7 +10,7 @@
 
 == Scenario
 
-Your SSH monitoring process needs to be deployed on multiple systems and needs to survive reboots. Additionally, system admins are inadvertently killing incorrect processes while trying to remediate the attack, including your monitoring process. You need to ensure your script can easily be deployed on multiple systems and can survive reboots and being killed.
+Your SSH monitoring process needs to be deployed on multiple systems and needs to survive reboots. Additionally, system admins are inadvertently killing processes while trying to remediate the attack, including your monitoring process. You need to ensure your script can easily be deployed on multiple systems and can survive reboots and being killed.
 
 == Activity
 
@@ -30,7 +30,7 @@ Test your script on your system to ensure that the monitoring script can properl
 == Learning Objectives / Outcomes
 
 [square]
-* Familiarity with Linux scheduled tasks (cron)
-* Familiarity interacting with services and Linux applications from scripts
+* Confidence using Linux scheduled tasks (cronjobs)
+* Familiarity with Linux Daemon startup & functionality
 * Familiarity with Bash conditional operations
 * Confidence writing Bash scripts to achieve specific objectives
