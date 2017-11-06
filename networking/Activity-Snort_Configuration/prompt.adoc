@@ -30,8 +30,8 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 1) Confirm that snort has been installed/configured correctly with "snort --version"
 
-2) Run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
-(You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create it’s own process.)
+2) Be sure to have *root privileges*, then run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+(You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create its own process.)
 
 3) Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
 
