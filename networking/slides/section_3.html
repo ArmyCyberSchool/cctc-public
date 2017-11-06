@@ -25,6 +25,11 @@
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
+			<style type="text/css">
+            <!--
+            .tab { margin-left: 40px; }
+            -->
+            </style>
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
@@ -57,7 +62,7 @@
 						<h3>Obj. 7.1</h3>
 					<p align="left">- Routed Mode </p>
 					<p align="left">- Transparent Mode </p>
-					<p align="left">Where/How should you arrange Firewalls in an Enterprise Topology?</p>
+					<p>Where/How should you arrange Firewalls in an Enterprise Topology?</p>
 					
 				</section>
 
@@ -65,11 +70,11 @@
 					<h2>Filtering Basics</h2>
 					<h3>Obj. 7.1, 7.6</h3>
 					<p align="left">- Host based versus Network Based Firewalls </p>
-					<p align="left">        - IPTables, Windows FW </p>
-					<p align="left">       - Network Based FW's com ein many flavors </p>
-					<p align="left">    - Packet Filtering </p>
-					<p align="left">    - Stateful Inspection </p>
-					<p align="left">    - Application level gateways </p>
+					<p align="left", class="tab">- IPTables, Windows FW </p>
+					<p align="left", class="tab">- Network Based FW's come in many flavors </p>
+					<p align="left">- Packet Filtering </p>
+					<p align="left">- Stateful Inspection </p>
+					<p align="left">- Application level gateways </p>
 				</section>
 
 				<section>
