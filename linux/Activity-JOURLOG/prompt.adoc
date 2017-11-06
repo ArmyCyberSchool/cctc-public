@@ -1,6 +1,8 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
+image::../Resources/journalctl.png[JOURLOG,height="300",width="650",float="left"]
+
 = Activity - JOURLOG
 :doctype: book
 :source-highlighter: coderay
@@ -22,27 +24,22 @@
 == Outcomes
 
 [square]
-* Familiarity with the journalctl toolset
-
-{empty} +
-
-== Scenario
-
-NONE
+* Understanding capabilities of SYSTEMD journalctl tool
+* Deployment of journalctl in a Linux infrastructure
 
 {empty} +
 
 == Activity
 
-Requirements: linux system with systemd installed
+Requirements: linux system with SYSTEMD installed
 
 === Task 1)
 
-Write a script that utilizes journalctl to evaluate the kernel’s error and  warning log entries twice on your system, at  30 sec intervals, uses diff to compare the two files, and output the results to a file located in /usr/share/cctc/.  
+Write a script that utilizes journalctl to evaluate the kernel’s error and warning messages twice on your system, at 30 sec intervals, uses `diff` to compare the two output files, and output the results to a file located in `/usr/share/cctc/`.  
 
 === Task 2)
 
-Utilize journalctl to display the last 10 logs entries associated with the cronservice, ever generated, and the last 15 log entries associated with your UID  that generated in the last hour, and output all the results one file located in /usr/share/cctc/ in addition to displaying the results to screen.
+Utilize journalctl to display the last 10 logs entries associated with the cron service, ever generated, and the last 15 log entries associated with your UID that generated in the last hour, and output all the results one file located in `/usr/share/cctc/` in addition to displaying the results to screen.
 
 {empty} +
 
@@ -54,16 +51,10 @@ Utilize journalctl to display the last 10 logs entries associated with the crons
 
 == Hints
 
-* `tee`
-
-{empty} +
-
-== Challenge
-
-NONE
+* `tee --help`
 
 {empty} +
 
 == Useful Resources
 
-NONE
+https://www.loggly.com/ultimate-guide/using-journalctl/
