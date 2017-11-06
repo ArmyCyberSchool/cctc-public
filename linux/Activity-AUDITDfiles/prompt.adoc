@@ -1,24 +1,24 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - NAME
+= Activity - AUDITDFiles
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-image::../resources/auditd.png[auditd]
+image::../Resources/auditd.png[auditd]
 
 == Learning Objectives / Outcomes
 
-* CCNI009 - Identify auditing activities
-* CCNI009.001 - Explain system logging
-* CCNI009.002 - Identify application logging
-* CCNI009.003 - Explain authentication and authorization logs
-* CCNI010 - Identify actions that contribute to log files
-* CCNI010.001 Describe the actions that contribute to entries in log files
-* CCNI010.002 Analyze log files for anomalous activity
+* CCNI009       - Identify auditing activities
+* CCNI009.001   - Explain system logging
+* CCNI009.002   - Identify application logging
+* CCNI009.003   - Explain authentication and authorization logs
+* CCNI010       - Identify actions that contribute to log files
+* CCNI010.001   - Describe the actions that contribute to entries in log files
+* CCNI010.002   - Analyze log files for anomalous activity
 
 {empty} +
 
