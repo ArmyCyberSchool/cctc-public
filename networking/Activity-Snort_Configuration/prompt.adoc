@@ -28,18 +28,14 @@ First, students will need to access their “Router”. This is a Linux host wit
 
 == Task 1
 
-1) You will need to download the snort.sh bash script and pull it into the router. 
+1) After the script has completed, you can confirm that snort has installed/configured correctly with "snort --version"
 
-2) Once this is downloaded, the script can be run to install, configure and setup a simple test rule in snort.
-
-3) After the script has completed, you can confirm that snort has installed/configured correctly with "snort --version"
-
-4) Run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+2) Run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
 (You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create it’s own process.)
 
-5) Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
+3) Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
 
-6) Now you will practice customizing this icmp rule.
+4) Now you will practice customizing this icmp rule.
 
 {empty} +
 
