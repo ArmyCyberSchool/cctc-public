@@ -1,25 +1,38 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Brute Force
+image::../Resources/brute.png[BASHSOC]
+
+= Activity - Service Brute Force
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+{empty} +
+
 == Activity
 
 Using what you've learned about Hydra, attempt to brute force the SMB service password:
 
-Step 1: create a colon delimited username:password file, or seperate user and pass lists, to be used with Hydra.
+*Step 1:* create a colon delimited username:password file, or seperate user and pass lists, to be used with Hydra.
 
-Step 2: check the SMB service status on the target WIN7 system using netcat; verify SMB is listening.
+*Step 2:* check the SMB service status on the target WIN7 system using netcat; verify SMB is listening.
 
-Step 3: begin brute force attack...reveal user(s) passwords
+*Step 3:* begin brute force attack...reveal user(s) passwords
 
-Tip: http://tools.kali.org/password-attacks/hydra
+{empty} +
 
-Finished Early? Try "acunetix acuforum": https://automatetheplanet.com/thc-hydra-password-cracking-by-examples/
+== Challenge:
 
-Right-Click in FireFox and select 'Inspect Element'
+Try "acunetix acuforum": https://automatetheplanet.com/thc-hydra-password-cracking-by-examples/ +
+
+Right-Click in FireFox and select 'Inspect Element' +
+
+{empty} +
+
+== Usefull Resource: 
+
+http://tools.kali.org/password-attacks/hydra +
+https://github.com/vanhauser-thc/thc-hydra/blob/master/README +
