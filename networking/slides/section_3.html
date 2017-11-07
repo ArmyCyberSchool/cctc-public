@@ -131,11 +131,11 @@
 					<p> Extended Access List (Cisco) <br>
 				    ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
-				    <p>deny tcp </p><p font color="red">host 172.16.0.1 </p><p></p>host 192.168.0.2 eq 80 <br>
-				    deny 10.0.0.0 0.0.0.255 <br>
-					permit any </p>
+				    deny tcp host 172.16.0.1 host 192.168.0.2 eq 80 <br>
+				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
+					permit ip any any log </p>
 					<br>
-                    <p>What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?</p>
+                    <p>What is the best interface/direction to place the ACL on to deny only host 172.16.0.1 access to HTTP & TFTP to host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</p>
 				</section>
 
 				<section>
