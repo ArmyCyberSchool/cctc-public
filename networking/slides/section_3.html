@@ -40,67 +40,68 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+			    <!-- Slide 1 -->
 				<section>
 					<h2>Network Filtering</h2>
 					<h3>CCTC- Networking</h3>
 				</section>
-
+                <!-- Slide 2 -->
 				<section>
 					<h3>Outcomes</h3>
-					<p>SKILL 7: Define methodologies of filtering</p>	
-					<p>SKILL 8: Identify Filtering devices</p>
-					<p>SKILL 9: Configure filtering devices</p>
+					<p>SKILL 7: Define methodologies of filtering<br>	
+					SKILL 8: Identify Filtering devices<br>
+					SKILL 9: Configure filtering devices</p>
 				</section>
-
+                <!-- Slide 3 -->
 				<section>
 						<h3>Firewall Modes</h3>
 						<h4>Obj. 7.1</h4>
-					<p align="left">- Routed Mode </p>
-					<p align="left">- Transparent Mode </p>
+					<p align="left">- Routed Mode <br>
+					- Transparent Mode </p>
 					<p>Where/How should you arrange Firewalls in an Enterprise Topology?</p>
-					
 				</section>
-
+                <!-- Slide 4 -->
 				<section>
 					<h3>Filtering Basics</h3>
 					<h4>Obj. 7.1, 7.6</h4>
 					<p align="left">- Host based versus Network Based Firewalls </p>
-					<ul> 
+					<ul align="left"> 
 					    <li> IPTables, Windows FW </li>
 					    <li> Network Based FW's come in many flavors </li>
 					</ul>
-					<p align="left">- Packet Filtering </p>
-					<p align="left">- Stateful Inspection </p>
-					<p align="left">- Application level gateways </p>
+					<p align="left">- Packet Filtering <br>
+					- Stateful Inspection <br>
+					- Application level gateways </p>
 				</section>
-
+                <!-- Slide 5 -->
 				<section>
 					<h3>Fire Walking</h3>
-					<p align="left">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices </p>
-					<p align="left">- Traceroute uses ICMP or UDP</p>
-					<p align="left">- On Linux:</p>
-					<ul>
+					<p align="left">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
+					<p align="left">- Traceroute uses ICMP or UDP<br>
+					- On Linux:</p>
+					<ul align="left">
 					    <li>- T sents TCP syn</li>
 					    <li>- m sets max TTL</li>
-					       <li>- p sets destination ports (udp-start port then increments, TCP- constant)</li>
-				    	<li>- U sets constant udp port</li>
-			        <p align="left">- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies</p>
-			        <p align="left">- Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</p>
+					    <li>- p sets destination ports (udp-start port then increments, TCP- constant)</li>
+				        <li>- U sets constant udp port</li>
+			        <p align="left">- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies<br>
+			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</p>
 				</section>
-
+                <!-- Slide 6 -->
 				<section>
 					<h3>Intrusion Detection vs. Prevention</h3>
 					<p align="left">- IDS: Intrusion Detection System </p>
-					<p class="indent">- Do not need to be inline </p>
-					<p class="indent">- Logging, Alerting </p>
+					<ul align="left">
+					    <li>- Do not need to be inline <li>
+					    <li>- Logging, Alerting </li>
 					<p align="left">- IPS: Intrusion Prevention System </p>
-					<p class="indent">- Needs to be inline </p>
-					<p class="indent">- Dropping, Blocking, Resetting, Sandboxing </p>
-					<p align="left">- Signatures </p>
-					<p class="indent">- Atomic </p>
-					<p class="indent">- Stateful </p>
+					<ul align="left">
+					    <li>- Dropping, Blocking, Resetting, Sandboxing </li>
+					    <li>- Signatures </li>
+					    <li>- Atomic </li>
+    					<li>- Stateful </li>
 				</section>
-
+                <!-- Slide 6 -->
 				<section data-markdown>
 					<script type="text/template">
 						## Markdown support
