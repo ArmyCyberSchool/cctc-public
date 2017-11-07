@@ -93,6 +93,7 @@
 
 				<section>
 					<h3>Intrusion Detection vs. Prevention</h3>
+					<h4>Obj. 7.1, 7.2</h4>
 					<p align="left">- IDS: Intrusion Detection System </p>
 					<ul align="left">
 					    <li>- Do not need to be inline <li>
@@ -101,25 +102,25 @@
 					<p align="left">- IPS: Intrusion Prevention System </p>
 					<ul align="left">
 					    <li>- Dropping, Blocking, Resetting, Sandboxing </li>
-					    <li>- Signatures </li>
+					</ul>
+					<p align="left">- Signatures </p>
+					<ul align="left">
 					    <li>- Atomic </li>
     					<li>- Stateful </li>
     			    </ul>
 				</section>
 
 				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+				    <h3>ACLs</h3>
+					<h4> Obj. 7.3, 7.4, 7.5 </h4>
+					<script type="text/template", align="left">
 
 						```
 						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						  ip access-list standard 1
+						  permit host 10.0.0.1
+						  deny 10.0.0.0 0.0.0.255
+						  permit any
 						</section>
 						```
 					</script>
