@@ -118,25 +118,25 @@
 					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
 					
-					<p> <font size="5"> Standard Access List (Cisco) </font><</p>
-				    <p> <font size="5">ip access-list standard 1 </font><</p>
-				    <p> <font size="5">permit host 10.0.0.1 </font><</p>
-				    <p> <font size="5">deny 10.0.0.0 0.0.0.255 </font><</p>
-					<p> <font size="5">permit any </font></p>
+					<p> <font size="4"> Standard Access List (Cisco) </font></p>
+				    <p> <font size="4">ip access-list standard 1 </font></p>
+				    <p> <font size="4">permit host 10.0.0.1 </font></p>
+				    <p> <font size="4">deny 10.0.0.0 0.0.0.255 </font></p>
+					<p> <font size="4">permit any </font></p>
 					<br>
-                    <p align="center">What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts? </font> </p>
+                    <p align="center">What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts? </p>
 				</section>
 				
 				<section style="text-align: left;">
 				    <h3 align="center">Extended ACLs</h3>
 					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p> <font size="5"> Extended Access List (Cisco) </font><</p>
-				    <p> <font size="5"> ip access-list extended 101 </font><</p>
-				    <p> <font size="5"> remark action protocol (src IP) (src port) (dst IP) (dst port) </font><</p>
-				    <p> <font size="5"> deny tcp host 172.16.0.1 host 192.168.0.2 eq 80 </font><</p>
-				    <p> <font size="5"> deny udp host 172.16.0.1 host 192.168.0.2 eq 69 </font><</p>
-					<p> <font size="5"> permit ip any any log </font></p>
+					<p> <font size="4"> Extended Access List (Cisco) </font></p>
+				    <p> <font size="4"> ip access-list extended 101 </font></p>
+				    <p> <font size="4"> remark action protocol (src IP) (src port) (dst IP) (dst port) </font></p>
+				    <p> <font size="4"> deny tcp host 172.16.0.1 host 192.168.0.2 eq 80 </font></p>
+				    <p> <font size="4"> deny udp host 172.16.0.1 host 192.168.0.2 eq 69 </font></p>
+					<p> <font size="4"> permit ip any any log </font></p>
 					<br>
                     <p align="center">What is the best interface/direction to place the ACL on to deny only host 172.16.0.1 access to HTTP & TFTP to host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</p>
 				</section>
