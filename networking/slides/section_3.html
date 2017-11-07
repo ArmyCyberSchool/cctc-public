@@ -117,8 +117,7 @@
 				    <h3 align="center">Standard ACLs</h3>
 					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<blockquote style="text-align: left;"><font size="4"> Standard Access List (Cisco) <br>
-				    ip access-list standard 1 <br>
+					<blockquote style="text-align: left;"><font size="4"> ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </font></blockquote>
@@ -129,19 +128,18 @@
 				    <h3 align="center">Extended ACLs</h3>
 					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<blockquote style="text-align: left;"><font size="4"> Extended Access List (Cisco) <br>
-				    ip access-list extended 101 <br>
+					<blockquote style="text-align: left;"><font size="4"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny tcp host 172.16.0.1 host 192.168.0.2 eq 80 <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></blockquote>
-                    <p align="center"><font size="4"></font>What is the best interface/direction to place the ACL on to deny only host 172.16.0.1 access to HTTP & TFTP to host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</font></p>
+                    <p align="center"><font size="4">What is the best interface/direction to place the ACL on to deny only host 172.16.0.1 access to HTTP & TFTP to host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</font></p>
 				</section>
 				
                 <section style="text-align: left;">
 				    <h3 align="center">Practice the Logic</h3>
 					<h4 align="center"> Obj. 7.7</h4>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" align="bottom" style="max-height: 60%; max-width: 60%">
+					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" align="middle" style="max-height: 60%; max-width: 60%">
 					<br>
 					<blockquote style="text-align: left;"> <font size="4"> Router 2, interface G0/1 inbound <br>
                     ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
