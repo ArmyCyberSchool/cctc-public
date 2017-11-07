@@ -66,7 +66,7 @@
 					<h3 align="center">Filtering Basics</h3>
 					<h4 align="center">Obj. 7.1, 7.6</h4>
 					<p>- Host based versus Network Based Firewalls </p>
-					<ul margin=10, padding=10> 
+					<ul> 
 					    <li> IPTables, Windows FW </li>
 					    <li> Network Based FW's come in many flavors </li>
 					</ul>
@@ -83,7 +83,7 @@
 				</section>
 				
 				<section style="text-align: left;">
-				<h3 Traceroute Tricks </h3>
+				<h3>Traceroute Tricks</h3>
 					<p>- Traceroute uses ICMP or UDP<br>
 					- On Linux:</p>
 					<ul align="left">
@@ -95,32 +95,33 @@
 				</section>
 
 				<section style="text-align: left;">
-					<h3>Intrusion Detection vs. Prevention</h3>
-					<h4>Obj. 7.1, 7.2</h4>
-					<p align="left">- IDS: Intrusion Detection System </p>
-					<ul align="left">
+					<h3 align="center">Intrusion Detection vs. Prevention</h3>
+					<h4 align="center">Obj. 7.1, 7.2</h4>
+					<p></p>- IDS: Intrusion Detection System </p>
+					<ul>
 					    <li>Do not need to be inline </li>
 					    <li>Logging, Alerting </li>
 					</ul>
-					<p align="left">- IPS: Intrusion Prevention System </p>
-					<ul align="left">
+					<p>- IPS: Intrusion Prevention System </p>
+					<ul>
 					    <li>Dropping, Blocking, Resetting, Sandboxing </li>
 					</ul>
-					<p align="left">- Signatures </p>
-					<ul align="left">
+					<p>- Signatures </p>
+					<ul>
 					    <li>Atomic </li>
     					<li>Stateful </li>
     			    </ul>
 				</section>
 
-				<section>
-				    <h3>ACLs</h3>
-					<h4> Obj. 7.3, 7.4, 7.5 </h4>
-					<p align="left"> Standard Access List (Cisco) <br>
+				<sections tyle="text-align: left;">
+				    <h3 align="center">ACLs</h3>
+					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
+					<p> Standard Access List (Cisco) <br>
 				    ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </p>
+					<br>
                     <p>What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?</p>
 				</section>
 
