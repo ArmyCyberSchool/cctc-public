@@ -138,7 +138,20 @@
 					permit ip any any log </font></blockquote>
                     <p align="center">What is the best interface/direction to place the ACL on to deny only host 172.16.0.1 access to HTTP & TFTP to host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</p>
 				</section>
-
+				
+                <section style="text-align: left;">
+				    <h3 align="center">Practice the Logic</h3>
+					<h4 align="center"> Obj. 7.7</h4>
+					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" align="bottom" style="max-height: 35%; max-width: 35%">
+					<blockquote align="left"><font size="4"> Router 2, interface G0/1 inbound <br>
+                    ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
+                    ip access-list deny tcp any any eq 20-21 <br>
+                    ip access-list permit ip any any <br>
+                    Router 1, interface G0/2 inbound <br>
+                    ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
+                    ip access-list deny ip 10.0.0.0 0.0.0.255 any <br>
+                    ip access-list permit ip any any </font></blockquote>
+				</section>
 				<section>
 					<section id="fragments">
 						<h2>Fragments</h2>
