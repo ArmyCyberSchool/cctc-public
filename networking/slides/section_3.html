@@ -116,17 +116,21 @@
                 <section data-markdown>
 					<script type="text/template">
 						## Standard ACLs
-                        Obj. 7.3, 7.4, 7.5
+						
 						What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?
+						
 
 						```
-						  ip access-list standard 1
-				          permit host 10.0.0.1
-				          deny 10.0.0.0 0.0.0.255
-					      permit any
+						ip access-list standard 1
+				        permit host 10.0.0.1
+				        deny 10.0.0.0 0.0.0.255
+					    permit any
 						```
 					</script>
-
+					
+					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
+                </section>
+                
 				<section style="text-align: left;">
 				    <h3 align="center">Standard ACLs</h3>
 					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
