@@ -89,8 +89,6 @@
 				        <li> -U: sets constant udp port</li>
 			        </ul>
 			        <a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Dow
-n arrow">
 						</a>
 			        </section>
 				</section>
@@ -100,7 +98,7 @@ n arrow">
 					<h4>Obj. 7.1, 7.2</h4>
 					<p align="left">- IDS: Intrusion Detection System </p>
 					<ul align="left">
-					    <li>Do not need to be inline <li>
+					    <li>Do not need to be inline </li>
 					    <li>Logging, Alerting </li>
 					</ul>
 					<p align="left">- IPS: Intrusion Prevention System </p>
@@ -117,16 +115,12 @@ n arrow">
 				<section>
 				    <h3>ACLs</h3>
 					<h4> Obj. 7.3, 7.4, 7.5 </h4>
-					<script type="text/template",align="left">
-
-						```
-						<Standard Access List (Cisco)>
-						  ip access-list standard 1
-						  permit host 10.0.0.1
-						  deny 10.0.0.0 0.0.0.255
-						  permit any
-						```
-					</script>
+					<p align="left"> Standard Access List (Cisco) <br>
+				    ip access-list standard 1 <br>
+				    permit host 10.0.0.1 <br>
+				    deny 10.0.0.0 0.0.0.255 <br>
+					permit any </p>
+                    <p>What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?</p>
 				</section>
 
 				<section>
