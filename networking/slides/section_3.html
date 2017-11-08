@@ -76,7 +76,7 @@
 				</section>
 
 				<section style="text-align: left;">
-					<h4>Fire Walking</h4>
+					<h4 align="center">Fire Walking</h4>
 					<p align="left">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
 					- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies<br>
 			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</p>
@@ -159,13 +159,13 @@
 				<section style="text-align: left;">
 					<h4 align="center">IPTables Order</h4>
 					<p align="center"> Obj. 7.8</p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/IPtables.png" style="max-height: 80%; max-width: 80%; margin-left= auto; margin-right= auto;">
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/IPtables.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 				
 				<section style="text-align: left;">
 					<h4 align="center">Inside IPTables</h4>
 					<p align="center"> Obj. 7.8, 7.9</p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/InsideIPtables.png" style="max-height: 80%; max-width: 80%; margin-left= auto; margin-right= auto;">
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/InsideIPtables.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 				
 				<section style="text-align: left;">
@@ -203,7 +203,7 @@
 					<p><font size="6">Syntax/Example</font></p>
 					<ul><font size="5">
 					    <li>Iptables –t [Table] –[add/delete/insert/policy…] <font color="blue">Chain</font> <font color="red">Rule</font> [-p (protocols) etc] <font color="green">–j TARGET</font></li>
-                        <li>Iptables –Policy font color="blue">INPUT</font> <font color="green">–j DROP</font></li>
+                        <li>Iptables –Policy <font color="blue">INPUT</font> <font color="green">–j DROP</font></li>
                     </font></ul>
 					<p><font size="6">Filtering Rules</font></p>
 					<ul><font size="5">
