@@ -121,7 +121,7 @@
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </font></p>
-                    <p align="center"><font size="5"><bold>What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts? </bold></font></p>
+                    <p>What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?</p>
 				</section>
 				
 				<section style="text-align: left;">
@@ -132,20 +132,22 @@
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
-                    <p align="center"><font size="5"><bold>What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</bold></font></p>
+                    <p>What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts in that (and other subnets) to access these services?</p>
 				</section>
 				
                 <section style="text-align: left;">
 				    <h3 align="center">Practice the Logic</h3>
 					<h4 align="center"> Obj. 7.7</h4>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 50%; max-width: 50%; align= bottom">
+					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; align= bottom; margin-left= auto; margin-right= auto;">
 					<br>
+					<p><bold>Router 2, interface G0/1 inbound </bold></p>
 					<ul><font size="3"> 
-					    <li><bold>Router 2, interface G0/1 inbound </bold></li>
                         <li>ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 </li>
                         <li>ip access-list deny tcp any any eq 20-21 </li>
                         <li>ip access-list permit ip any any </li>
-                        <li><bold>Router 1, interface G0/2 inbound </bold></li>
+                    </font></ul>
+                    <p><bold>Router 1, interface G0/2 inbound </bold></p>
+                    <ul><font size="3">
                         <li>ip access-list deny ip 192.168.0.0 0.0.0.255 any </li>
                         <li>ip access-list deny ip 10.0.0.0 0.0.0.255 any </li>
                         <li>ip access-list permit ip any any </li>
