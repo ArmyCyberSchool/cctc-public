@@ -66,7 +66,7 @@
 					<h4 align="center">Filtering Basics</h4>
 					<p align="center">Obj. 7.1, 7.6</p>
 					<p>- Host based versus Network Based Firewalls </p>
-					<ul><font size="6"
+					<ul><font size="6">
 					    <li> IPTables, Windows FW </li>
 					    <li> Network Based FW's come in many flavors </li>
 					</font></ul>
@@ -129,18 +129,18 @@
 				    <h4 align="center">Extended ACLs</h4>
 					<p align="center"> Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p style="margin-right= 500px;"><font size="6"> ip access-list extended 101 <br>
+					<p style="margin-right= 500px;"><font size="5"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
 					<br>
-                    <p><font size="6">What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts to access these services?</font></p>
+                    <p><font size="5">What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts to access these services?</font></p>
 				</section>
 				
                 <section style="text-align: left;">
 				    <h4 align="center">Practice the Logic</h4>
 					<p align="center"> Obj. 7.7</p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; margin-left= auto; margin-right= auto;">
+					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;">
 					<br>
 					<p><font size="6">Router 2, interface G0/1 inbound </font></p>
 					<ul><font size="4"> 
@@ -171,26 +171,26 @@
 				<section style="text-align: left;">
 					<h4 align="center">Building Rules</h4>
 					<p align="center"> Obj. 7.13</p>
-					<p>Table: Use –t to define table (if not Filter)<br>
+					<p><font size="6">Table: Use –t to define table (if not Filter)<br>
                     Add/Delete/Insert: Use -A, -D, -I (can insert rule with number)<br>
                     Chain: INPUT/OUTPUT/PRE or POST ROUTING<br>
                     Target: Use -j to define an action (DROP/ACCEPT etc…)<br>
                     Protocol: Protocols. tcp, udp, icmp, etc. (-p)<br>
                     Source: Source ip-address of the packet (-s)<br>
-                    Destination: Destination ip-address for the packet (-d)</p>
+                    Destination: Destination ip-address for the packet (-d)</font></p>
 				</section>
 				
 				<section style="text-align: left;">
 					<h4 align="center">Targets and Rules</h4>
 					<p align="center"> Obj. 7.13</p>
-					<p><font size="5">Rules</font></p>
-					<ul><font size="4">
+					<p><font size="6">Rules</font></p>
+					<ul><font size="5">
 					    <li>If the criteria is matched, it goes to the rules specified in the target (or) executes the special values mentioned in the target.</li>
                         <li>If the criteria is not matched, it moves on to the next rule (SEQUENTIAL)</li>
                         <li>“Policy”- default rule, can be changed with -P</li>
                     </font></ul>
-                    <p><font size="5">Targets (ex. Filter applicable)</font></p>
-                    <ul><font size="4">
+                    <p><font size="6">Targets (ex. Filter applicable)</font></p>
+                    <ul><font size="5">
                         <li>ACCEPT –accept the packet</li>
                         <li>DROP –drop the packet</li>
                         <li>REJECT – is used to send back an error packet in response to the matched packet (still drops packet)</li>
@@ -200,19 +200,19 @@
 				<section style="text-align: left;">
 					<h4 align="center">Examples</h4>
 					<p align="center"> Obj. 7.10, 7.11</p>
-					<p><font size="5">Syntax/Example</font></p>
-					<ul><font size="4">
-					    <li>Iptables –t [Table] –[add/delete/insert/policy…] Chain <font color="red">Rule</font> [-p (protocols) etc] –j TARGET</li>
-                        <li>Iptables –Policy INPUT –j DROP</li>
+					<p><font size="6">Syntax/Example</font></p>
+					<ul><font size="5">
+					    <li>Iptables –t [Table] –[add/delete/insert/policy…] <font color="blue">Chain</font> <font color="red">Rule</font> [-p (protocols) etc] <font color="green">–j TARGET</font></li>
+                        <li>Iptables –Policy font color="blue">INPUT</font> <font color="green">–j DROP</font></li>
                     </font></ul>
-					<p><font size="5">Filtering Rules</font></p>
-					<ul><font size="4">
-					    <li>Iptables –A OUTPUT –d 197.10.10.1 –p tcp –dport 80 –j ACCEPT</li>
-                        <li>Iptables –A INPUT –s 150.147.23.1 –p udp –dport 69 –j DROP</li>
+					<p><font size="6">Filtering Rules</font></p>
+					<ul><font size="5">
+					    <li>Iptables –A <font color="blue">OUTPUT</font> <font color="red">–d 197.10.10.1 –p tcp –dport 80</font> <font color="green">–j ACCEPT</font></li>
+                        <li>Iptables –A <font color="blue">INPUT</font> <font color="red">–s 150.147.23.1 –p udp –dport 69</font> <font color="green">–j DROP</font></li>
                     </font></ul>
-                    <p><font size="5">Adding a rule using Bytecode</font></p>
-                    <ul><font size="4">
-                        <li>iptables -A OUTPUT -m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0' -j ACCEPT</li>
+                    <p><font size="6">Adding a rule using Bytecode</font></p>
+                    <ul><font size="5">
+                        <li>iptables -A <font color="blue">OUTPUT</font> <font color="red">-m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0'</font> <font color="green">-j ACCEPT</font></li>
                     </font></ul>
 				</section>
 				
