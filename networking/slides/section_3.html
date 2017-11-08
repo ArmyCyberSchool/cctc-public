@@ -77,9 +77,9 @@
 
 				<section style="text-align: left;">
 					<h4 align="center">Fire Walking</h4>
-					<p align="left">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
+					<p align="left"><font size="6">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
 					- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies<br>
-			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</p>
+			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</font></p>
 				</section>
 				
 				<section style="text-align: left;">
@@ -137,10 +137,10 @@
                     <p><font size="5">What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts to access these services?</font></p>
 				</section>
 				
-                <section style="text-align: left;">
-				    <h4 align="center">Practice the Logic</h4>
-					<p align="center"> Obj. 7.7</p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;">
+                <section>
+				    <h4>Practice the Logic</h4>
+					<p> Obj. 7.7</p>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
 					<br>
 					<p><font size="6">Router 2, interface G0/1 inbound </font></p>
 					<ul><font size="4"> 
@@ -220,32 +220,32 @@
 					<h4 align="center">Source NAT (IP)</h4>
 					<p align="center"> Obj. 7.14, 7.15</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/SNAT.png" style="max-height: 80%; max-width: 80%;"></center>
-					<p>Change the source address to <font color="red"> 1.1.1.1</font></p>
-					<p>iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 1.1.1.1</p>
+					<p><font size="6">Change the source address to <font color="red"> 1.1.1.1</font></font></p>
+					<p><font size="6">iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 1.1.1.1</font></p>
 				</section>
 				
 				<section style="text-align: left;">
 					<h4 align="center">Source NAT (IP & port)</h4>
 					<p align="center"> Obj. 7.14, 7.15</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/SPAT.png" style="max-height: 80%; max-width: 80%;"></center>
-					<p>Change the source address to <font color="red"> 1.1.1.1</font> and the port to <font color="red">9001</font></p>
-					<p>iptables -t nat -A POSTROUTING -p tcp -o eth0 -j SNAT --to 1.1.1.1:9001</p>
+					<p><font size="6">Change the source address to <font color="red"> 1.1.1.1</font> and the port to <font color="red">9001</font></font></p>
+					<p><font size="6">iptables -t nat -A POSTROUTING -p tcp -o eth0 -j SNAT --to 1.1.1.1:9001</font></p>
 				</section>
 				
 			    <section style="text-align: left;">
 					<h4 align="center">Destination NAT (IP)</h4>
 					<p align="center"> Obj. 7.14, 7.15</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/DNAT.png" style="max-height: 80%; max-width: 80%;"></center>
-					<p>Change the destination address to <font color="red"> 10.0.0.1</font></p>
-					<p>iptables -t nat -A PREROUTING -i eth0 -j DNAT --to 10.0.0.1</p>
+					<p><font size="6">Change the destination address to <font color="red"> 10.0.0.1</font></font></p>
+					<p><font size="6">iptables -t nat -A PREROUTING -i eth0 -j DNAT --to 10.0.0.1</font></p>
 				</section>
 				
 				<section style="text-align: left;">
 					<h4 align="center">Port Forwarding</h4>
 					<p align="center"> Obj. 7.14, 7.15</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/DPAT.png" style="max-height: 80%; max-width: 80%;"></center>
-					<p>Forward traffic to an internal or private IP on port <font color="red"> 8080</font></p>
-					<p>iptables -t nat -A PREROUTING -p tcp -o eth0 -j DNAT --to 10.0.0.1:8080</p>
+					<p><font size="6">Forward traffic to an internal or private IP on port <font color="red"> 8080</font></font></p>
+					<p><font size="6">iptables -t nat -A PREROUTING -p tcp -o eth0 -j DNAT --to 10.0.0.1:8080</font></p>
 				</section>
 				
 			</div>
