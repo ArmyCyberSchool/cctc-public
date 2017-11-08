@@ -54,8 +54,8 @@
 				</section>
 
 				<section style="text-align: left;">
-						<h3 align="center">Firewall Modes</h3>
-						<h4 align="center">Obj. 7.1</h4>
+						<h4 align="center">Firewall Modes</h4>
+						<p align="center">Obj. 7.1</p>
 					<p>- Routed Mode <br>
 					- Transparent Mode </p>
 					<br>
@@ -63,40 +63,40 @@
 				</section>
 
 				<section style="text-align: left;">
-					<h3 align="center">Filtering Basics</h3>
-					<h4 align="center">Obj. 7.1, 7.6</h4>
+					<h4 align="center">Filtering Basics</h4>
+					<p align="center">Obj. 7.1, 7.6</p>
 					<p>- Host based versus Network Based Firewalls </p>
-					<ul> 
+					<ul><font size="6"
 					    <li> IPTables, Windows FW </li>
 					    <li> Network Based FW's come in many flavors </li>
-					</ul>
+					</font></ul>
 					<p align="left">- Packet Filtering <br>
 					- Stateful Inspection <br>
 					- Application level gateways </p>
 				</section>
 
 				<section style="text-align: left;">
-					<h3>Fire Walking</h3>
+					<h4>Fire Walking</h4>
 					<p align="left">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
 					- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies<br>
 			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</p>
 				</section>
 				
 				<section style="text-align: left;">
-				<h3 align="center">Traceroute Tricks</h3>
+				<h4 align="center">Traceroute Tricks</h4>
 					<p>- Traceroute uses ICMP or UDP<br>
 					- On Linux:</p>
-					<ul>
+					<ul><font size="6">
 					    <li> -T: sents TCP syn</li>
 					    <li> -m: sets max TTL</li>
 					    <li> -p: sets destination ports (udp-start port then increments, TCP- constant)</li>
 				        <li> -U: sets constant udp port</li>
-			        </ul>
+			        </font></ul>
 				</section>
 
 				<section style="text-align: left;">
-					<h3 align="center">Intrusion Detection vs. Prevention</h3>
-					<h4 align="center">Obj. 7.1, 7.2</h4>
+					<h4 align="center">Intrusion Detection vs. Prevention</h4>
+					<p align="center">Obj. 7.1, 7.2</p>
 					<p>- IDS: Intrusion Detection System </p>
 					<ul><font size="6">
 					    <li>Do not need to be inline </li>
@@ -114,10 +114,10 @@
 				</section>
                 
 				<section style="text-align: left;">
-				    <h3 align="center">Standard ACLs</h3>
-					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
+				    <h4 align="center">Standard ACLs</h4>
+					<p align="center"> Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p style="margin-right= 500px;"><font size="5"> ip access-list standard 1 <br>
+					<p style="margin-right= 500px;"><font size="6"> ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </font></p>
@@ -126,10 +126,10 @@
 				</section>
 				
 				<section style="text-align: left;">
-				    <h3 align="center">Extended ACLs</h3>
-					<h4 align="center"> Obj. 7.3, 7.4, 7.5 </h4>
+				    <h4 align="center">Extended ACLs</h4>
+					<p align="center"> Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p style="margin-right= 500px;"><font size="5"> ip access-list extended 101 <br>
+					<p style="margin-right= 500px;"><font size="6"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
@@ -138,17 +138,17 @@
 				</section>
 				
                 <section style="text-align: left;">
-				    <h3 align="center">Practice the Logic</h3>
-					<h4 align="center"> Obj. 7.7</h4>
+				    <h4 align="center">Practice the Logic</h4>
+					<p align="center"> Obj. 7.7</p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; margin-left= auto; margin-right= auto;">
 					<br>
-					<p><bold>Router 2, interface G0/1 inbound </bold></p>
+					<p><font size="6">Router 2, interface G0/1 inbound </font></p>
 					<ul><font size="4"> 
                         <li>ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 </li>
                         <li>ip access-list deny tcp any any eq 20-21 </li>
                         <li>ip access-list permit ip any any </li>
                     </font></ul>
-                    <p><bold>Router 1, interface G0/2 inbound </bold></p>
+                    <p><font size="6">Router 1, interface G0/2 inbound </font></p>
                     <ul><font size="4">
                         <li>ip access-list deny ip 192.168.0.0 0.0.0.255 any </li>
                         <li>ip access-list deny ip 10.0.0.0 0.0.0.255 any </li>
@@ -157,20 +157,20 @@
 				</section>
 				
 				<section style="text-align: left;">
-					<h3>IPTables Order</h3>
-					<h2> Obj. 7.8</h2>
+					<h4 align="center">IPTables Order</h4>
+					<p align="center"> Obj. 7.8</p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/IPtables.png" style="max-height: 80%; max-width: 80%; margin-left= auto; margin-right= auto;">
 				</section>
 				
 				<section style="text-align: left;">
-					<h3>Inside IPTables</h3>
-					<h2> Obj. 7.8, 7.9</h2>
+					<h4 align="center">Inside IPTables</h4>
+					<p align="center"> Obj. 7.8, 7.9</p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/Sarah_Filtering_Slides/networking/slides/images/InsideIPtables.png" style="max-height: 80%; max-width: 80%; margin-left= auto; margin-right= auto;">
 				</section>
 				
 				<section style="text-align: left;">
-					<h3>Building Rules</h3>
-					<h2> Obj. 7.13</h2>
+					<h4 align="center">Building Rules</h4>
+					<p align="center"> Obj. 7.13</p>
 					<p>Table: Use –t to define table (if not Filter)<br>
                     Add/Delete/Insert: Use -A, -D, -I (can insert rule with number)<br>
                     Chain: INPUT/OUTPUT/PRE or POST ROUTING<br>
@@ -181,8 +181,8 @@
 				</section>
 				
 				<section style="text-align: left;">
-					<h3>Targets and Rules</h3>
-					<h2> Obj. 7.13</h2>
+					<h4 align="center">Targets and Rules</h4>
+					<p align="center"> Obj. 7.13</p>
 					<p><font size="5">Rules</font></p>
 					<ul><font size="4">
 					    <li>If the criteria is matched, it goes to the rules specified in the target (or) executes the special values mentioned in the target.</li>
@@ -198,8 +198,8 @@
 				</section>
 				
 				<section style="text-align: left;">
-					<h3>Examples</h3>
-					<h2> Obj. 7.10, 7.11</h2>
+					<h4 align="center">Examples</h4>
+					<p align="center"> Obj. 7.10, 7.11</p>
 					<p><font size="5">Syntax/Example</font></p>
 					<ul><font size="4">
 					    <li>Iptables –t [Table] –[add/delete/insert/policy…] Chain <font color="red">Rule</font> [-p (protocols) etc] –j TARGET</li>
