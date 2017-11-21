@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-image::../Resources/brute.png[BASHSOC]
+image::../Resources/brute.png[HYDRA,height="150",width="350",float="left"]
 
 = Activity - Service Brute Force
 :doctype: book
@@ -10,17 +10,27 @@ image::../Resources/brute.png[BASHSOC]
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives
+
+* CCNI013       - Explore Linux Exploitation tools
+** CCNI013.003   - Define credentials
+
+{empty} +
+
+== Learning Outcomes
+
+[square]
+* Familiarity with "common creds" service attacks
+* Usage of Hydra to defeat IDS/IPS detection
+
 {empty} +
 
 == Activity
 
-Using what you've learned about Hydra, attempt to brute force the SMB service password:
-
-*Step 1:* create a colon delimited username:password file, or seperate user and pass lists, to be used with Hydra.
-
-*Step 2:* check the SMB service status on the target WIN7 system using netcat; verify SMB is listening.
-
-*Step 3:* begin brute force attack...reveal user(s) passwords
+* Using what you've learned about Hydra, attempt to brute force the SMB service password:
+** create a colon delimited username:password file, or seperate user and password lists, to be used with Hydra.
+** check the SMB service status on the target system using Netcat, Nmap, Metasploit, etc.; verify SMB is listening.
+** begin brute force attack...reveal additional services vulnerable to common-cred attacks
 
 {empty} +
 
@@ -28,7 +38,7 @@ Using what you've learned about Hydra, attempt to brute force the SMB service pa
 
 Try "acunetix acuforum": https://automatetheplanet.com/thc-hydra-password-cracking-by-examples/ +
 
-Right-Click in FireFox and select 'Inspect Element' +
+Tip: Right-Click in FireFox and select 'Inspect Element' +
 
 {empty} +
 
