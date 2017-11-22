@@ -8,25 +8,29 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left"]
+
 == Learning Objectives
 
-* CCNI003.002 - Describe file system ownership properties
+* CCNI003 - Analyze the Linux file system
+** CCNI003.002 - Describe file system ownership properties
+** CCNI003.003 - Discuss file system permissions
 
 {empty} +
 
-== Outcomes
+== Learning Outcomes
 
 [square]
-* Familiarity with key Linux files: `/etc/passwd`, `/etc/shadow`, `/etc/group`
-* Familiarity with Linux command line text editors
-* Understanding of group membership and its effects on file access
+* Familiarity with key Linux files: `/etc/{passwd,group,shadow}`
+* Familiarity with Linux command line text-editors
+* Understand group membership and its effects on file access
 * Confidence querying and editing password attributes for groups and users
 
 {empty} +
 
 == Scenario
 
-You are on an OCO mission; through your movement behind enemy lines, you gained access to a system whose authentication security was fairly weak. You have limited privileges on the system, and wish to escalate your privileges. 
+You have gained limited privileged access to a system whose authentication security protocol was easily bypassed.
 
 {empty} +
 
@@ -35,18 +39,19 @@ You are on an OCO mission; through your movement behind enemy lines, you gained 
 === Task 1)
 
 [square]
-* Copy your `/etc/passwd`, `/etc/shadow` and `/etc/group` files to a backup directory.
-* As a user in the sudoers group, add a user 'ken' to the system
-* Using a text editor, edit user ken in `/etc/passwd` for the following:
-** GID (Group ID) '0'
-** 'bash' shell
-** home directory of `/home/ken`
-** password attribute to 'not required'
-** full name of 'Maintenance Account'
-** account set to expire on 1 Jan 2020
-** next password change for 30 days from now
-** password change warning of 10 days
-* Check to ensure that these changes have taken effect from via the command line
+* Escalate your priveleges and display the system's shadowed user passwords
+** Copy your `/etc/{passwd,group,shadow}` files to a backup directory.
+** As a user in the sudoers group, add a user 'ken' to the system
+** Using a text-editor, edit user 'ken' in `/etc/passwd` for the following:
+*** Group ID 0
+*** BASH shell
+*** home directory of `/home/ken`
+*** password attribute to 'not required'
+*** full name of `Maintenance Account`
+*** account expiration of 1 Jan 2020
+*** next password change for 30 days from now
+*** password change warning of 10 days
+* Check to ensure that your changes have taken effect via the command line
 
 === Task 2)
 
@@ -56,9 +61,9 @@ You are on an OCO mission; through your movement behind enemy lines, you gained 
 * Are you in the root GID?
 * Still as user 'ken', type `cat /etc/shadow`
 * Why are you not able to view the shadow file?
-* Hint: `ls -al /ect/shadow`
+** Hint: `ls -al /ect/shadow`
 * Identify which groups user 'ken' belongs to; is user 'ken' in more than one group?
-* How many groups is user 'dachosen1' in?
+* How many groups are YOU in?
 
 === Task 3)
 
@@ -79,18 +84,6 @@ You are on an OCO mission; through your movement behind enemy lines, you gained 
 
 {empty} +
 
-== Hints
-
-NONE
-
-{empty} +
-
-== Challenge
-
-NONE
-
-{empty} +
-
 == Useful Resources
 
-* https://www.cyberciti.biz/faq/understanding-etcshadow-file/
+https://www.cyberciti.biz/faq/understanding-etcshadow-file/
