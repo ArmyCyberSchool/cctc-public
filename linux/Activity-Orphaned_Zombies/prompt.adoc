@@ -8,27 +8,75 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Scenario
+image::../Resources/orphaned_zombies.png[oz,height="250",width="650",float="left"]
 
-You need to create some abnormal behavior on a target system to consume resources and to alert admins of "suspicious" activity.
+{empty} +
 
-== Activity
+== Learning Objectives
 
-[square]
-* Write a script that creates three zombie / defunct processes that are orphaned.
-* Your orphaned zombies should only exist temporarily for 30 seconds and should automatically resove themselves after that time period.
-* Run your script to create your orphaned zombies. Ensure the defunct process are orphaned and adopted by init.
-* Identify the orphaned zombies in a process list output.
+* CCNI006       - Identify Linux processes
+** CCNI006.003   - Employ commands to enumerate processes
+** CCNI006.005   - Discuss orphaned and defunct processes
+* CCNI007   - Develop shell scripts
+** CCNI007.001   - Demonstrate basic familiarity with shell scripting
+** CCNI007.002   - Explain variables and variable manipulation
+** CCNI007.003   - Employ commands for string manipulation
 
-== Deliverables
+{empty} +
 
-[square]
-* Your script that creates the orphanded zombies.
-* Screenshoot of your process list output identifying the orphaned zombies nested under init.
-
-== Learning Objectives / Outcomes
+== Learning Outcomes
 
 [square]
 * Familiarity with linux processes and process management
 * Familiarity with ps binary
-* Confidence spawning and manipulating processes
+* Confidence spawning and manipulating processes 
+
+{empty} +
+
+== Scenario
+
+You need to create some abnormal process behavior on a target system to consume resources and alert admins of "suspicious" activity.
+
+{empty} + 
+
+== Activity
+
+[square]
+* Three Orphaned Zombies:
+** Write a script that creates three zombie / defunct processes that are orphaned.
+** Your orphaned zombies should only exist temporarily for 30 seconds and should automatically resove themselves after that time period.
+** Ensure the defunct process are orphaned and adopted by init.
+** Identify the orphaned zombies in a process list output.
+* What is the danger of having many zombie processes running at one time?
+
+{empty} +
+
+== Deliverables
+
+[square]
+* Your script that creates the three orphanded zombies.
+
+{empty} +
+
+== Hints
+
+Zombie:
+`sleep 1 & exec sleep 60`
+
+Orphan:
+`(sleep 60 &)`
+
+----
+if [ $(ps -AL --no-headers | wc -l) -ge $(( $(cat /proc/sys/kernel/pid_max) - 100 )) ]
+then
+    echo 'ZOMBIE ATTACK!'
+else
+    echo "all good"
+fi
+----
+
+{empty} +
+
+== Useful Resources
+
+https://www.gmarik.info/blog/2012/orphan-vs-zombie-vs-daemon-processes/ +
