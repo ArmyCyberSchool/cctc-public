@@ -1,12 +1,14 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Regular Expressions 2
+= Challenge - Regular Expressions 2
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
+
+image::../Resources/regex2.png[regex2,height="150",width="350",float="left"]
 
 == Learning Objectives 
 
@@ -16,49 +18,35 @@
 
 {empty} +
 
-== Outcomes
+== Learning Outcomes
 
 [square]
 * Familiarity with regular expressions, their syntax and their application
 * Confidence generating simple regular expressions to match specific patterns
-
-{empty} +
-
-== Scenario
-
-NONE
+* Reinforce and exercise skills learned
 
 {empty} +
 
 == Activity
 
-Access the Interactive Challenge known as REGEX Crossword at: https://regexcrossword.com/
-
-[square]
-* Complete all 5 beginner challenges
-* Complete all 5 intermediate challenges
+* Access the Interactive Challenge known as REGEX Crossword at: https://regexcrossword.com/
+** Complete all 5 beginner challenges
+** Complete all 5 intermediate challenges
 
 {empty} +
 
 == Deliverables
 
-[square]
 * Screenshot of each completed crossword
-
-{empty} +
-
-== Hints
-
-NONE
 
 {empty} +
 
 == Challenge
 
-* If time permits: work on the experienced challenges
+* Tackle the EXPERIENCED challenges
 
 {empty} +
 
 == Useful Resources
 
-NONE
+https://regexr.com/ +
