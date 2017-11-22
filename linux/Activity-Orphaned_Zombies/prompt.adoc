@@ -17,6 +17,7 @@ image::../Resources/orphaned_zombies.png[oz,height="250",width="650",float="left
 * CCNI006       - Identify Linux processes
 ** CCNI006.003   - Employ commands to enumerate processes
 ** CCNI006.005   - Discuss orphaned and defunct processes
+** CCNI006.007   - Evaluate the validity of Linux processes
 * CCNI007   - Develop shell scripts
 ** CCNI007.001   - Demonstrate basic familiarity with shell scripting
 ** CCNI007.002   - Explain variables and variable manipulation
