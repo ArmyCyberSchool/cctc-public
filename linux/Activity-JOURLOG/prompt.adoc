@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-image::../Resources/journalctl.png[JOURLOG,height="300",width="650",float="left"]
+//image::../Resources/journalctl.png[JOURLOG,height="500",width="850",float="left"]
 
 = Activity - JOURLOG
 :doctype: book
@@ -13,48 +13,51 @@ image::../Resources/journalctl.png[JOURLOG,height="300",width="650",float="left"
 == Learning Objectives
 
 * CCNI009 - Identify auditing activities
-* CCNI009.001 - Explain system logging
-* CCNI009.002 - Identify application logging
+** CCNI009.001 - Explain system logging
+** CCNI009.002 - Identify application logging
 * CCNI010 - Identify actions that contribute to log files
-* CCNI010.001 Describe the actions that contribute to entries in log files
-* CCNI010.002 Analyze log files for anomalous activity
+** CCNI010.001 Describe the actions that contribute to entries in log files
+** CCNI010.002 Analyze log files for anomalous activity
 
 {empty} +
 
 == Outcomes
 
 [square]
-* Understanding capabilities of SYSTEMD journalctl tool
+* Understanding capabilities of systemd journalctl tool
 * Deployment of journalctl in a Linux infrastructure
 
 {empty} +
 
 == Activity
 
-Requirements: linux system with SYSTEMD installed
+Requirements: linux system with systemd installed +
+check: `ls -al /sbin/init` +
 
-=== Task 1)
-
-Write a script that utilizes journalctl to evaluate the kernel’s error and warning messages twice on your system, at 30 sec intervals, uses `diff` to compare the two output files, and output the results to a file located in `/usr/share/cctc/`.  
-
-=== Task 2)
-
-Utilize journalctl to display the last 10 logs entries associated with the cron service, ever generated, and the last 15 log entries associated with your UID that generated in the last hour, and output all the results one file located in `/usr/share/cctc/` in addition to displaying the results to screen.
+* Write a script that utilizes journalctl to evaluate kernel messages .. Have your script:
+** dump kernel error and warning messages only, at 30 second intervals.
+** terminate after two iterations of message dumps has been reached.
+** use `diff` in your script, to compare the two output dump files.  
+** display the last 10 logs entries associated with the cron service, ever generated.
+** display the last 15 log entries associated with your UID that generated in the last hour.
+** in addition to displaying the results to screen, have them also output to a file in `/usr/share/cctc`
 
 {empty} +
 
 == Deliverables
 
-* A file containing all of the results
+* your script
+* a file in `/usr/share/cctc` containing all of the results
 
 {empty} +
 
-== Hints
+== Hint
 
-* `tee --help`
+* `man tee | grep -A1 DESCRIPTION`
 
 {empty} +
 
 == Useful Resources
 
-https://www.loggly.com/ultimate-guide/using-journalctl/
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-using_the_journal +
+https://www.loggly.com/ultimate-guide/using-journalctl/ +
