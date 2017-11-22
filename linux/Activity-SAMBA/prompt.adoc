@@ -8,22 +8,54 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+{empty} +
+
+image::../Resources/samba.png[samba,height="150",width="650",float="left"]
+
+{empty} +
+
 == Scenario
 
-You're serving on an OCO team, whose mission is to exfil the SYSTEMINFO of the target Windows system using only SAMBA protocol.
+Operating on a system your team has already gained access to, using only the SAMBA protocol, you need to exfil the SYSTEMINFO off the target Windows system.
+
+{empty} +
 
 == Activity
 
 [square]
 * Write a bash script that achieves the following objectives:
-* creates a shared directory named /cctcsmb  with read, write, and execute permissions for Owner, Group and Others;
-* add a new Samba user named samcctc;
-* create a group called smbusers;
-* add samcctc to this new group;
-* give samcctc ownership of the /cctcsmb directory;
-* configure smb.conf  file so that it allows guest access, is not read only, and can also be browsed; have your script output the settings of ONLY the permissions settings for the files and/or groups, directories you altered. 
-* Hint: $ /etc/init.d/samba restart
+** creates a shared directory named `/cctcsmb`  with read, write, and execute permissions for Owner, Group and Others
+** adds a new Samba user named `samcctc`
+** creates a group called `smbusers`
+** adds `samcctc` to this new group
+** gives `samcctc` ownership of the `/cctcsmb` directory
+** configure `smb.conf`  file so that it allows guest access, is not read only, and can also be browsed
+* have your script output:
+** the settings of ONLY the permissions settings for the files and/or groups, directories you altered. 
 
-*non-scripted:*
+{empty} +
+ 
+* non-scripted:
+** Connect to the SAMBA Server you setup via a Windows system using user `samcctc`
+** exfiltrate the SYSTEMINFO, via SAMBA, from the Windows target
 
-Connect to the SAMBA Server you setup via a Windows system using user samcctc; exfiltrate the SYSTEMINFO, via SAMBA, from the Windows target.
+{empty} +
+
+== Deliverables
+
+* Your script
+* SYSTEMINFO from target Windows system
+
+{empty} +
+
+== Hints
+
+`systemctl restart smbd`
+`systemctl restart smb.service`
+
+{empty} +
+
+== Useful Resources
+
+http://www.tldp.org/HOWTO/SMB-HOWTO-7.html +
+https://www.brennan.id.au/18-Samba.html +
