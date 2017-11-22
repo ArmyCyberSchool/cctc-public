@@ -8,20 +8,55 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
+
+== Learning Objectives
+
+* CCNI006   - Identify Linux processes
+** CCNI006.001   - Identify common processes for Linux startup
+** CCNI006.002   - Identify common processes for Linux machine
+** CCNI006.003   - Employ commands to enumerate processes
+** CCNI006.007   - Evaluate the validity of Linux processes
+* CCNI007   -  Develop shell scripts       
+** CCNI007.001   - Demonstrate basic familiarity with shell scripting
+** CCNI007.002   - Explain variables and variable manipulation
+** CCNI007.003   - Employ commands for string manipulation
+** CCNI007.005   - Create a bash script to perform basic enumeration on a Linux machine
+
+{empty} +
+
+== Learning Outcomes
+
+[square]
+* Familiarity of the `ps` command, and it's various capabilities/switches
+* Understanding which processes to look for to detect signs of malicious activity
+* Ability to formulate a flow of sequential commands to achieve a stated objective
+
+{empty} +
+
 == Activity
 
-Without using the 'top' command, Write a script that monitors processes, and also monitors for malicious activity.
+* Write a script that monitors processes, and also monitors for malicious activity
+** do not use the `top` command.
+** have your script:
+*** take snapshots of the process list at 30 second intervals
+*** compare the differences, and output the reuslts to a file, as well as the terminal.
 
-Your script should take snapshots of the process list at 30 second intervals, compare the differences, and output to  proc.lst  as well as to the screen.
+{empty} +
 
 == Deliverables
 
-[square]
-* Your script
+* Your script 
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity of the 'ps' command, and it's various capabilities/swicthes
-* Understanding which processes to look for to detect signs of malicious activity
-* Ability to formulate a flow of sequencial commands to achieve a stated objective
+== Hints
+
+`awk, sed, cut, sort, uniq`
+
+{empty} +
+
+== Useful Resources
+
+https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/an_overview_of_linux_processes21?lang=en +
+https://www.tutorialspoint.com/unix/unix-processes.htm +
