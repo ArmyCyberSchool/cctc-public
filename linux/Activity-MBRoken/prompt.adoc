@@ -8,20 +8,21 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/MBR.png[mbroken,height="150",width="250",float="left"]
+
 == Learning Objectives
 
 * CCNI004 - Describe the Linux boot process
-* CCNI004.001 - Identify components of the boot process
-* CCNI004.004 - Describe partitions
+** CCNI004.001 - Identify components of the boot process
+** CCNI004.004 - Describe partitions
 
 {empty} +
 
-== Outcomes
+== Learning Outcomes
 
 [square]
 * Familiarity with the parts of a correctly formatted Linux MBR
 * Ability to analyze an MBR using CLI binaries and identify misconfigurations.
-* Operational Context: http://www.pcworld.com/article/3046626/security/petya-ransomware-overwrites-mbrs-locking-users-out-of-their-computers.html
 
 {empty} +
 
@@ -33,51 +34,39 @@ The hard drive in your Commander's laptop, containing critical files, stopped re
 
 == Activity
 
-You have access to a broken generic MBR. Fix the MBR so your career doesn't go down the drain along with those files. The file is located here: */usr/share/cctc/mbroken.zip*
+[square]
+* You have access to a baseline MBR (mbrgood.zip), as well as the bad MBR (mbroken.zip)
+** The files are located here: `/usr/share/cctc/`
+* Start by verifying that you have the correct boot record file. 
+** Unzip the file `mbroken.zip` and check its MD5 hash: `b73f30cf162511fe8429ff907a5a9f53`
 
-Start by verifying that you have the correct boot record file. Unzip the file and check its MD5 hash: b73f30cf162511fe8429ff907a5a9f53
-
-Both Ubuntu and Debian are permitted for this exercise.
-
-=== Task 1)
-
-Find the MD5 hash of the bootstrap code.
-
-=== Task 2)
-
-Find the MD5 hash of the second partition entry.
-
-=== Task 3)
-
-Figure out what's still wrong with the MBR. Find the hex characters (ALL CAPS, no spaces).
-NOTE: You are looking for a string of hex characters (i.e. "DEADBEEF").
+* Using Linux binaries:
+** MD5 hash the bootstrap/bootloader code.
+** MD5 hash the second partition entry code.
+** Figure out what's still wrong with the MBR. Find the hex characters (ALL CAPS, no spaces).
+*** NOTE: You are looking for a string of hex characters (i.e. "DEADBEEF").
 
 {empty} +
 
 == Deliverables
 
-Check your work using MD5 hashes. Use the `md5sum` command: `$ CMD... | md5sum`
+Check your work:  `$ CMD... | md5sum`
 
-* Bootstrap code: d59a68c7b6d62ecaa1376dfb73a3b7be
-* Second partition: 41a8cbc4d7314c23c7e7f6b0a799d76b
-* Hex string: d7c07574567e1af6856be94a590ec2dc
+* Bootstrap code:   `d59a68c7b6d62ecaa1376dfb73a3b7be`
+* Second partition: `41a8cbc4d7314c23c7e7f6b0a799d76b`
+* Hex string:       `d7c07574567e1af6856be94a590ec2dc`
 
 {empty} +
 
 == Hints
 
 * `dd`, `hexdump`
-* Read up on the specs for a properly forumated MBR
+* Read up on the specs for a properly formated MBR
 * Your endian may be off
-
-{empty} +
-
-== Challenge
-
-NONE
 
 {empty} +
 
 == Useful Resources
 
-* http://thestarman.pcministry.com/asm/mbr/PartTables.htm
+http://thestarman.pcministry.com/asm/mbr/PartTables.htm +
+Operational Context: http://www.pcworld.com/article/3046626/security/petya-ransomware-overwrites-mbrs-locking-users-out-of-their-computers.html +
