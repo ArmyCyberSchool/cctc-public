@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Windows FG6 Slides</title>
+		<meta name="description" content="Windows FG6 Slides">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/cybbh_reveal.css">
+		<link rel="stylesheet" href="css/theme/cybbh.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				Windows
+Processes
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Day 4
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+BIOS
+Pre-Boot: Power On Self Test (POST)
+MBR: 
+Loads boot code 
+Bootcode: 
+Searches partition table for boot sector and loads NTLDR
+NTLDR: 
+Reads boot.ini to display OS choices and runs NTDETECT.com to query hardware 
+Stored data from NTDETECT.com in HKLM\Hardware registry key 
+Kicks off NTOSKRNL.exe and HAL.dll
+NTOSKRNL.exe: 
+starts SMSS.exe 
+SMSS.exe: 
+Launches Winlogon.exe and CSRSS 
+Winlogon: 
+Starts LSASS 
+loads MSGINA
+starts SCM
+starts logonui.exe 
+accepts secure attention sequence
+Pre-boot, Boot, Logon - Windows XP 
+
+
+Skill 5: Define the Windows pre-boot process
+Skill 6: Define the Windows boot process
+Skill 7: Identify the Windows logon process
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Pre-boot, Boot, Logon - Windows XP (cont.)
+
+MSGINA.dll: 
+Graphical Identification and Authorization (GINA) dll library. 
+Activates the user shell. 
+Customizable identification and authentication procedures. 
+Logon Dialog.   
+Winlogon: 
+receives credentials from MSGINA and passes them to LSASS 
+LSASS: 
+checks creds against LSA database cache, the against NTLM or kerberos, if not found. 
+Sends user token back to winlogon.
+Winlogon: 
+starts userinit in user context 
+Userinit: 
+loads user profile, runs startup programs, starts explorer.exe 
+
+
+Skill 5: Define the Windows pre-boot process
+Skill 6: Define the Windows boot process
+Skill 7: Identify the Windows logon process
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Bios 
+Power On Self Test (POST) 
+MBR
+First 512 byte sector on hard disk. 
+Reads and loads Volume Boot Record 
+VBR
+Loads bootmgr into memory 
+Bootmgr 		
+Reads Boot Config Database (BCD)
+Boot menu and memtest 
+Calls winload (fresh boot)  
+Calls winresume (if resuming) 
+Winload 
+Loads NTOSKRNL.exe
+Loads dependencies
+Loads device drivers 
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Pre-boot - Windows 7
+
+Two different types of pre-boot processes  
+
+EFI/UEFI
+Power On Self Test (POST) 
+
+Runs boot loader out of NVRAM
+Loads BCD (also in NVRAM).
+ 
+Boot loader detects hardware  
+
+EFI boot manager gives OS boot menu
+
+Winload.efi: EFI version of winload 
+
+Requires EFI system partition
+Formatted as FAT 
+Up to 1GB in size 
+
+
+Skill 5: Define the Windows pre-boot process
+Skill 6: Define the Windows boot process
+Skill 7: Identify the Windows logon process
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+NTOSKRNL:
+SYSTEM
+Prepares for running native systems 
+Runs smss
+HAL.dll
+Hardware Abstraction Layer 
+Interfaces driver to kernel 
+Smss
+Session manager 
+Session 0 loads Win32k.sys (kernel subsystem) 
+Runs wininit
+Wininit
+Starts Service Control Manager (SCM) 
+Starts Local Security Authority SubSystem (LSASS) 
+Starts Local Session Manager (LSM) 
+CSRSS
+Client/Server Runtime SubSystem
+Client side of the win32 subsystem process
+Thread creation
+Boot - Windows 7
+
+Skill 5: Define the Windows pre-boot process
+Skill 6: Define the Windows boot process
+Skill 7: Identify the Windows logon process
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Skill 5: Define the Windows pre-boot process
+Skill 6: Define the Windows boot process
+Skill 7: Identify the Windows logon process
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Logon
+
+Winlogon
+Coordinates logon and useractivity
+Launches logonui
+
+Logonui
+Interactive logon dialog box 
+
+Services
+Loads auto-start drivers and services 
+
+
+NOTE: Main difference between local logon and domain logon is where the user is authenticating. 
+
+Local Logon: User authenticates locally with the SAM 
+
+Domain Logon: User authenticates with the Domain Controller 
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Activity 
+
+Monitor the boot process in procmon
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Tools 
+
+Tasklist 								#cmd.exe; view loaded modules, services, owner
+
+Pslist								#sysinternals; view detailed information on processes
+
+WMIC PROCESS list full 				#WMIC; view executable path for process 
+
+Get-process							#powershell 
+
+Get -wmiobject -class win32_process 	#powershell
+
+Task manager 						#GUI 
+Processes and Threads
+
+8.1 Explain how to find the current status of Windows processes
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+PID’s Sequence 
+Out of order PID’s may warrant investigation 
+
+Names
+Processes with names that do not look familiar may warrant investigation
+Processes that are spelled incorrectly or too many of a specific process warrant investigation
+
+Process Age
+Processes that should have been running from the start of the machine but have only been running for hours warrant investigation. 
+Ex. A process named smss.exe that has not been running since the start of the machine. 
+
+Priority Levels 
+Check to make sure processes do not have a higher or lower priority than required 
+
+Handles 
+Check to see what libraries or files the process has open 
+Process Validity
+
+9.2 Determine abnormal activities that are taking place on a system, based on a process list
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+DEMO: Stress the system: 
+Download and install heavyload V3.40 on VM. check all boxes and run the test 
+“https://www.jam-software.com/heavyload/download/.shtml” 
+Stress system with heavyload V3.40 and analyze with: 
+Native cmd.exe 
+Procexp 
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+DEMO: PROCMON Process Creation 
+Load procmon - showing PID, PPID, Thread ID. Add filters: 
+Process name is calc.exe : Include 
+Operation is process start : Include 
+Operation is thread create : Include 
+Operation is Load Image : Include 
+Run calc.exe from cmd or powershell prompt 
+View events process start, thread create, load image: kernel32.dll, next thread create
+Show properties on process start (right click) point out user(U) vs kernel(K) level execution on stack. 
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Great example of dynamic analysis
+
+
+
+
+Research Activity 
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Process States 
+The students will research and define the process states
+
+They will understand that one of them will be chosen at random to brief the class on their research findings
+
+Use the random name generator (Script) to choose the briefer
+
+Once the briefer is finished, cover the material below on the process states. Emphasize that wording is not important (ex: new vs. created)
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Process States 
+
+New/Created 
+Open the file (.exe) 
+Create initial thread 
+Pass to kernel32.dll to check permissions 
+Pass to csrss, build structure, spawns first sub-thread, inserts into windows subsystem-wide proc list
+Starts execution of initial thread 
+For real-time systems, processes may be held in “New State” to avoid contention
+Otherwise, move to “Ready State” automatically
+Running
+Process currently being executed (one or more threads executing) 
+Ready 
+Process is ready to execute when given the opportunity (CPU Time) 
+Waiting
+Process can’t execute until some event occurs (I/O Read) 
+Terminated/Exit
+Termination of a process due to a halt or abort 
+
+
+8.2 Explain the process states and identify why they are important
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Paging
+
+Memory is allocated to processes in distinct chunks known as “Pages” 
+
+A page is the smallest unit of protection at the hardware level 
+4KB for small page, 2MB for large page
+
+When Physical memory (RAM) becomes overcommitted (threads try to use more memory than is available), pages are written to the page file on disk. 
+
+A page fault occurs when a thread references an invalid page. 
+If this page is on disk in the page file, it can be brought back into memory. 
+Paging
+8.2 Explain the process states and identify why they are important
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+What are Windows Services? 
+Long running executable applications that run in their own session 
+Can be started automatically at boot, on demand, or when requested 
+Can be paused, stopped, or restarted 
+Run in the background, normally without a user interface 
+Provide a service such as http, ftp, or rdp. 
+
+How do we view service on a machine? 
+
+Sc							#cmd.exe; allows the querying and management of windows services 
+Get-service 					#powershell 
+WMIC service 					# WMIC 
+
+Examples: 
+Sc queryex eventlog 				#info for eventlog service including PID
+Tasklist /FI “pid eq XXX” /v 			#query tasklist for PID associated with eventlog 
+Tasklist /FI “pid eq XXX” /svc 		#query tasklist for svchost services 
+Sc qdescription eventlog 			#query eventlog service description
+Sc qc eventlog 					#show the binary command that loads the service
+
+THOUGHT: What if the service is R/W to someone it shouldn’t be? Furthermore, what context do services run as?
+
+
+
+Services
+8.2 Explain the process states and identify why they are important
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+Activity 
+
+Service Enumeration
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Day 5
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Threads
+Basic unit to which the OS allocates processor time. 
+
+Can execute any part of the process code 
+including parts currently being executed by another thread.
+
+Share memory with each other as well as the process
+
+Deadlock is possible if the threads are waiting for each other’s resources
+
+Synchronization (semaphores, mutexes) are used to control access to shared variables
+
+Csrss maintains a list of threads
+
+Threads are part of a execution priority pool 0-31 per processor, highest executes next
+
+
+Threads and Handles 
+8.3 Explain process threads and handles
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+Handles
+Objects are data structures representing a system resource (file, thread, etc.)
+
+Applications can’t access objects directly, must obtain a handle
+
+Handles for each process are tracked in an internal table known as the Object Manager
+
+Handles allow a common interface to objects, regardless of underlying changes to the object
+
+Handles allow Windows to track ACLs for objects during handle creation time
+Threads and Handles 
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Research Activity 
+
+Thread States
+Have students read sections out of the Windows Processes Book Excerpt under Windows Resources.  Pg 416 and 417 cover thread states.
+
+The students will understand that one of them will be chosen at random to brief the class on the findings of their research
+
+Use the random name generator (Script) to select the briefer
+
+Once the briefer is finished, cover the material below, on the thread states.
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+The 8 Thread States 
+
+Ready: Waiting for execution, in priority pool
+
+Deferred Ready: Selected to run, but not yet executed. Optimization for scheduling database
+
+Standby: Next thread to run, only one per processor per system
+
+Running: A thread currently running on a processor
+
+Waiting: A period of inactivity while waiting for an event
+
+Transition: Ready for execution, but paging needed to bring stack back into memory
+
+Terminated: Finished execution, heading for deallocation in most cases
+
+Initialized: Thread is being created
+
+Thread States
+8.4 Describe the thread states
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+
+
+8.4 Describe the thread states
+
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+
+So what is the difference between processes, threads, and handles?
+
+Process is the primary container (memory structure) for a program being executed.
+
+Threads represent sequential machine-code instructions that a processor executes
+
+Handles are pointers to OS objects referenced within a process
+
+8.5 Discuss the differences between processes, threads and handles
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+What are system processes? 
+Processes owned by, and executed by the operating system.
+They are required for the system to function.
+
+
+What are the 2 types? 
+
+User Mode
+Runs in private virtual address space.
+Applications are isolated, one crash will not cause another to crash
+
+Kernel Mode
+All kernel mode programs run in a single virtual address space
+Not isolated from other processes
+
+
+
+
+
+System Processes 
+8.6 Describe system processes
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Virus
+Requires user interaction to replicate
+Worm
+DOES NOT require user interaction to replicate 
+Trojan
+Malware hidden within another legitimate program 
+Not usually self-replicating
+Malicious Mobile Code 
+Transmitted from remote host to local host 
+Executed without user instruction (i.e. Javascript, VBScript, etc…) 
+Blended Attack 
+Multiple infection/transmission methods used as one 
+Types of Malware - Attacks
+
+10.1 Distinguish between types of malware
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Types of Malware - Tools 
+
+Backdoor 
+Malicious program that allows illegitimate access to machine. User is unaware. 
+Remote Access Tool (RAT) 
+malicious program that provides remote command and control 
+Rootkit
+Malicious program that is ONLY used to hide things. DOES NOT provide access or command and control alone. 
+Keylogger
+records keyboard usage
+Botnet Client
+Remote administration/Command and Control of a botnet 
+Spyware  
+Monitors behavior of user
+Adware   
+Paid for ads to infected users
+Ransomware 
+Blocks access to a resource, requires payment from victim
+10.1 Distinguish between types of malware
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Bot Herder
+Person in control of the botnet 
+Botnet 
+Multiple machines infected and controlled by a bot herder
+Zombie 
+Individual machine infected and part of the botnet
+
+Purpose: 
+Allows bot herder to utilize all the machines to accomplish a task
+Tasks include things such as: 
+Attack (DDoS) 
+Computation (Algorithm/Password Cracking) 
+Infection of additional systems
+Obfuscation of traffic 
+Bitcoin Mining 
+
+Methodology
+A payload is configured to infect the intended machines and delivered in some way to the victim
+The victim executes the payload, infecting the machine, and joining the botnet (implanted) 
+Victim machine’s implant calls back to bot herder for additional instructions. 
+Bot Herders, Botnets, and Zombies
+10.2 Discuss the purpose and methodology of bots and botnets
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+
+
+Research Activity 
+
+Malware Research
+Have students read sections out of the Windows Processes Book Excerpt under Windows Resources.  Pg 416 and 417 cover thread states.
+
+The students will understand that one of them will be chosen at random to brief the class on the findings of their research
+
+Use the random name generator (Script) to select the briefer
+
+Once the briefer is finished, cover the material below, on the thread states.
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Day 6
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+There are 2 (two) main types of malware/process analysis
+Static & Dynamic 
+
+Static Analysis 
+Static analysis examines malware without actually running it. 
+Strings
+IDA Pro, OLEDebug 
+Searching for DLLs the strings output. 
+OSINT (Open Source Research)
+Hash the file and check the hash to see if there is anything online about it.
+
+Dynamic Analysis 
+Watching the malware while it is running
+ProcMon, Task Manager, Procexep
+TCPView 
+OLEDebug, IDA Pro
+Reg Shot (tool or custom look at keys)
+WireShark.
+
+Malware/Process Analysis
+Need to find skill for this one
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Ability to run multiple virtual machines off a single set of hardware
+VMs can be dynamically created and allocated to users
+A single baseline image can be maintained and updated, rather than multiple physical devices
+VM instances can be rolled back to undo any changes that take place during a session
+Can provide fault tolerance through redundant hardware and migration
+could be used as a pivot point
+could provide persistence if you can compromise the data store
+running from virtual machine lessens attribution
+able to spin up whatever OS you need.
+Malware analysis
+quick restoral times
+could create honey pot or tar pit
+able to spin up whatever OS you need
+harder for malware to maintain persistence
+manageability.
+Virtualization - Benefits
+11.1 Discuss the importance of virtual machines.
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Typically require more upfront planning and configuration
+In public cloud environments, lack of granularity in control of data at rest can lead to compliance issues (HIPPA, etc).
+Some functions may not work well in a VM, such as copy/paste, printers, netstat, without additional setup effort.
+Persistence can be lost if the target machine is restored
+could end up in a honey pot or tar pit
+If the data store is compromised all new instances will also be compromised
+planning and initial setup cost more with virtual networks.
+Virtualization - Risks 
+11.1 Discuss the importance of virtual machines.
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+What is situational awareness? 
+
+A method of gaining an understanding of the current operating environment on the target machine.
+It applies both defensively and offensively.
+Allows you to get an idea of what the system is used for and what type of users use it.
+This is what is used to decide what courses of action are appropriate for the system.
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Situational Awareness 
+12.1 Explain the situational awareness process
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+What areas are the most important to be aware of ?
+
+Running Processes
+Active Users
+Network Communications
+Logging
+Scheduled Jobs
+Aliases 
+
+Easiest way to gain situational awareness on a machine?
+Using the CLI commands previously mentioned and more to come!  
+Situational Awareness (Cont.) 
+12.1 Explain the situational awareness process
+12.2 List ways to gain situational awareness on a remote system
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+
+Exercise
+
+Windows Baseline Processes
+Have students read sections out of the Windows Processes Book Excerpt under Windows Resources.  Pg 416 and 417 cover thread states.
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+The students will understand that one of them will be chosen at random to brief the class on the findings of their research
+
+Use the random name generator (Script) to select the briefer
+
+Once the briefer is finished, cover the material below, on the thread states.
+
+</section>
+
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
