@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Windows FG6 Slides</title>
+		<meta name="description" content="Windows FG6 Slides">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/cybbh_reveal.css">
+		<link rel="stylesheet" href="css/theme/cybbh.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+System Hardening, Auditing, & Logs
+
+Day 8
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+A Firewall blocks network traffic based on rules.
+Firewall Definition
+16 Identify basic Windows Firewall concepts
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Control Panel GUI => wf.msc
+
+netsh advfirewall show allprofiles
+
+Get-NetFirewallRule | Select Name, Enabled, Direction, Description | Format-List
+The Windows Firewall
+16.1 Enable Windows Firewall settings with the graphical user interface and command line tools
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+
+The service itself
+HKLM\SYSTEM\CurrentControlSet\services\MpsSvc
+Executable hosting the service is svchost.exe
+The hosted DLL is mpssvc.dll
+Profiles
+Private
+Public
+Work \ Domain
+Multiple profiles can be active on one interface at the same time
+Log settings are per profile
+Windows Firewall Components
+16.2 Describe the different components of Windows Firewall
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+Each file in NTFS has a security descriptor
+This security descriptor can include:
+Security identifiers (SIDs) for the owner
+A DACL that specifies the access rights allowed or denied to particular users or groups.
+A SACL that specifies the types of access attempts that generate audit records for the object.
+New Technology File System (NTFS)
+17.1 Describe basic file and folder permissions
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+GUI
+Right click, select Properties, select Security tab
+Command Line
+cacls.exe (Windows NT 3.5+)
+icacls.exe (Windows Server 2003 SP2+)
+WMI
+wmic PATH Win32_LogicalFileSecuritySetting WHERE path="C:\\Windows\\system32\\notepad.exe” CALL GetSecurityDescriptor
+Powershell
+Get-Acl C:\Windows\System32\notepad.exe | Format-List
+Sysinternals
+accesschk C:\Windows\System32\notepad.exe
+Modifying Permissions
+17.2 Modify permissions in Windows
+17.3 Apply permissions based on users and groups
+
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Previously Windows File Protection (WFP) in XP
+Watched for system file overwrite attempts
+Checked file signature against known good
+If bad, replaced with copy from system32/dllcache folder
+Windows Resource Protection does the same thing
+Additionally, it will now keep the protected files from being installed to begin with, rather than just overwriting them. Can only installed with TrustedInstaller
+Also can protect system registry keys
+Windows Resource Protection
+18.1 Describe Windows Resource Protection
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Full list of protected files available at: https://msdn.microsoft.com/en-us/library/windows/desktop/aa382530(v=vs.85).aspx
+
+Windows Resource Protection
+What is protected?
+18.2 Identify files that are protected by Windows Resource Protection
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Unable to overwrite protected files while Windows is running
+Still able to load drive into another OS, and overwrite them
+Able to look for drivers installed by 3rd Party to compromise still
+Security Implications
+18.3 Discuss the security implications of Windows Resource Protection on a compromised system
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+UAC limits the privileges of user run applications, even when run as Administrator, to prevent the modification of system files, resources, or settings.  Requesting elevated privileges requires explicit acknowledgement from the user. [6]
+Some Windows executables can "auto elevate" without a prompt.
+User Account Control
+19.1 Identify the purpose of User Account Control (UAC)
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+UIPI is part of UAC.  Each process is given a privilege level.
+Higher integrity level can send messages to lower level integrity
+Lower can only read from higher
+UIPI can be bypassed by signed and trusted applications with the UIaccess manifest setting
+User Interface Privilege Isolation
+19.1 Identify the purpose of User Account Control (UAC)
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Is the practice of assuring information and managing risks related to the use, processing, storage, and transmission of information or data and the systems and processes used for those purposes.
+Includes protection of the integrity, availability, authenticity, non-repudiation and confidentiality of user data.
+Concerned with the business as a whole.
+Designed to cover more than just electronic information (paper, verbal)
+Multi-discipline approach to protecting the business as a whole
+Uses all available security mechanisms (technology, organisational, human-oriented, legal)
+Decision making takes place at the management level
+Information assurance (IA)
+20.1 Discuss information assurance and information security policies
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Preservation of confidentiality, integrity and availability of information. Note: In addition, other properties, such as authenticity, accountability, non-repudiation and reliability can also be involved. ~ ISO27000
+CIA Triade is the basis for InfoSec, but it has been greatly expanded upon since the 1970’s when first introduced to include a wide-range of 'Security Goals'
+Primary focus is on technical security mechanisms
+Crafted by technical employees rather than management
+Information Security
+20.1 Discuss information assurance and information security policies
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Day 9
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Monitors traffic across the wire.  Can be inline or passive.  Inline often modifies traffic between destination and source.
+Firewalls
+IDS/IPS
+Web/Application Proxy
+VPN Concentrator
+Host-based Security Products
+21.2 Identify network security products
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Runs local on the machine, only concerned with that machine.
+OS dependent, version dependent.
+Some install as a service. Many new versions are cloud based.
+System Firewalls
+Process monitoring, kernel calls
+Directory monitoring
+System Setting/Registry monitoring
+Log monitoring
+AAA
+Application Whitelisting
+Network Security Products
+21.2 Identify network security products
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Device/Software maintains a database of previously identified attack signatures.
+Compares activities and binaries to this database to determine if they are a match.
+Only capable of catching previously identified attacks
+Signatures require constant updating
+Small changes to a binary could bypass the signature
+Signature Based Detection
+21.3 Discuss signature based detection
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Device/Software develops a baseline of the system, then looks for anomalous activity
+Has potential to catch 0-day attacks (Good Luck)
+Larger number of false positives vs detection based (Job Security)
+Heuristic Based Detection
+21.4 Discuss heuristic based detection
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+At startup (or on config changes), LSASS sends the system audit policy to the Security Reference Monitor (SRM).
+When an object is accessed, SRM generates auditing messages and sends them to LSASS.
+LSASS sends the event log messages on to the Event Logger.
+Auditing settings are contained in the System Access Control List (SACL)
+Object-access ACE:
+Audit settings defined on a per object basis
+Global Audit Policy - SACL
+Global policy to setup auditing on all objects of one type:
+File system objects
+Registry keys
+Local Security Policy must also be enabled to auditing to be logged
+Windows Auditing
+22.1 Explain why audit policies are important
+22.2 Explain the functionality of the main logs
+22.3 Discuss audit policy settings
+22.4 Identify the kinds of events that get audited and what they mean
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+eventvwr
+C:\Windows\System32\Winevt folder.
+Locations are configurable.
+Analyze Event Logs
+24.1 Identify events that would be audited and why
+24.2 Identify the location of logs on the Windows system
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Command Prompt
+wevtutil el				# show all logs
+wevtutil gli security		# get security log info
+wevtutil qe security /c:3	# get last 3 events from security log
+Powershell
+Get-EventLog -LogName System -Newest 10
+Command Line Tools to View Event Logs
+24.3 Employ command line tools to view event logs
+</section><section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+Discuss the purpose of covering your tracks
+Discussion: Covering Tracks
+</section>
+
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
