@@ -108,11 +108,12 @@ Identify concealed process and connections not being displayed by netstat, and p
 /proc/net/{tcp,udp} , tree , inodes
 ls /proc/$PID/
 cat /proc/$PID/syscall
+find /lib/modules/$(uname -r) -type f -name "*.ko" | awk -F/ '{print $NF}'
 ----
 
 {empty} +
 
 == Useful Resources
 
-https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/an_overview_of_linux_processes21?lang=en +
-https://www.tutorialspoint.com/unix/unix-processes.htm +
+http://tldp.org/HOWTO/Module-HOWTO/x73.html +
+https://www.cyberciti.biz/faq/inux-kernel-where-to-find-modules/ +
