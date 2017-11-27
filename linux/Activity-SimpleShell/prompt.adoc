@@ -8,7 +8,7 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-image::../Resources/simple.png[simple,height="150",width="450",float="left"]
+image::../Resources/simpleshell.png[simple,height="450",width="450",float="left"]
 
 == Learning Objectives
 
