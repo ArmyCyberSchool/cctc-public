@@ -8,15 +8,111 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-== Activity
+image::../Resources/rootkits.png[rootkit,height="150",width="450",float="left"]
 
-[square]
-* Identify concealed processes and connections not being displayed by netstat, top, and ps
-* Once identified, design a script that tracks down these PIDs, and displays the information being concealed.
-* Hint: `/proc/net/{tcp,udp}, tree, inodes`
+== Learning Objectives
 
-== Learning Objectives / Outcomes
+* CCNI012   - Analyze different types of rootkits and backdoors
+** CCNI012.001   - Discuss and define the main types of backdoors
+** CCNI012.002   - Discuss and define the main types of rootkits
+** CCNI012.003   - Identify different backdoor persistence techniques
+** CCNI012.004   - Describe backdoor communication methods
+** CCNI012.005   - Describe methods to detect and mitigate rootkits
+** CCNI012.006   - Demonstrate how rootkits can be used to provide false information to a user
+
+{empty} +
+
+== Learning Outcomes
 
 [square]
 * Ability to discern truth from fiction, as it pertains to rootkit activity
+* DCO and OCO purposes for rootkits
 * Building a kitable tool for future Incident Response use
+
+{empty} +
+
+== Activity
+
+[square]
+* *User-land rootkit:*
+** in your `/usr/share/cctc/rootkit` directory .. compile `/usr/share/cctc/rootkit/sudo.c` using `/usr/bin/gcc` or `/usr/bin/tcc`:
+
+----
+cd /rootkit/ &&  gcc sudo.c -o sudo
+cp /usr/bin/sudo /root/sudo.bak && ls /root | grep sudo.bak
+cp /rootkit/sudo /usr/bin/sudo
+----
+ 
+* as a user in the sudo group(not root), run following command(s):
+
+----
+sudo netstat -taulpn
+apt-get install -y rkhunter
+rkhunter -c | more  || rkhunter -c && grep -i warning /var/log/rkhunter.log
+----
+ 
+
+* *Kernel-land rootkit:*
+
+----
+cd /rootkit/0010100010 && make
+----
+ 
+at this point .. baseline your binaries, and systemcalls, etc .. +
+
+----
+find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -exec md5sum {} >> /root/baselined_bins.txt \;
+lsmod >> /root/baselined_kernel_modules.txt
+ps -elf >> /root/baselined_processes.txt
+netstat -tulpan >> /root/baselined_connections.txt
+----
+
+and anything else you THINK might help you ID a rootkit presence . . +
+
+
+* Inject r00tk1t (kernel module):
+
+----
+insmod /rootkit/0010100010/r00tk1t.ko
+----
+
+Hide a process: +
+
+----
+kill -31 $(ps -elf | grep -v grep | grep sshd | awk '{print $4}')
+----
+
+Hide a binary: +
+
+----
+mv /bin/netstat /bin/hidemenetstat
+----
+
+Identify concealed process and connections not being displayed by netstat, and ps +
+
+{empty} +
+
+*INSTRUCTOR DEMO* +
+
+{empty} +
+
+== Deliverables
+
+* Your script 
+
+{empty} +
+
+== Hints
+
+----
+/proc/net/{tcp,udp} , tree , inodes
+ls /proc/$PID/
+cat /proc/$PID/syscall
+----
+
+{empty} +
+
+== Useful Resources
+
+https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/an_overview_of_linux_processes21?lang=en +
+https://www.tutorialspoint.com/unix/unix-processes.htm +
