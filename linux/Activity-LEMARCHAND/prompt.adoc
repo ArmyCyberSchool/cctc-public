@@ -33,7 +33,7 @@ image::../Resources/puzzle.png[lemarchand,height="350",width="650",float="left"]
 == Activity
 
 [square]
-Write a script that iteratively un-compresses the file type, until you reach the final file, the FLAG within.
+Write a script that will iteratively uncompress the file by type, until you reach the final file that contains the FLAG within
 
 * Compressed file location: /usr/share/cctc/MYSTERIOUS_FILE
 
