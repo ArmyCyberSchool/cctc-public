@@ -16,7 +16,7 @@ image::../Resources/samba.png[samba,height="150",width="650",float="left"]
 
 == Scenario
 
-Operating on a system your team has already gained access to, using only the SAMBA protocol, you need to exfil the SYSTEMINFO off the target Windows system.
+You are operating on a system that your team has previously gained access to.  Using only the SAMBA protocol, you need to exfil the SYSTEMINFO off the target Windows system.
 
 {empty} +
 
