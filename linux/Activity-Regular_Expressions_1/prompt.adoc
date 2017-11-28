@@ -24,7 +24,7 @@
 == Learning Outcomes
 
 [square]
-* Familiarity with regular expressions, their syntax and application
+* Familiarity with regular expressions, their syntax and, their application
 * Confidence generating simple regular expressions to match specific patterns
 
 {empty} +
