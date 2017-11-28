@@ -42,7 +42,7 @@ Tip: Right-Click in FireFox and select 'Inspect Element' +
 
 {empty} +
 
-== Usefull Resource: 
+== Useful Resource: 
 
 http://tools.kali.org/password-attacks/hydra +
 https://github.com/vanhauser-thc/thc-hydra/blob/master/README +
