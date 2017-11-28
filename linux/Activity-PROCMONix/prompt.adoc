@@ -28,7 +28,7 @@ image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 == Learning Outcomes
 
 [square]
-* Familiarity of the `ps` command, and it's various capabilities/switches
+* Familiarity of the `ps` command, and its various capabilities/switches
 * Understanding which processes to look for to detect signs of malicious activity
 * Ability to formulate a flow of sequential commands to achieve a stated objective
 
@@ -40,7 +40,7 @@ image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 ** do not use the `top` command.
 ** have your script:
 *** take snapshots of the process list at 30 second intervals
-*** compare the differences, and output the reuslts to a file, as well as the terminal.
+*** compare the differences, and output the results to a file, as well as the terminal.
 
 {empty} +
 
