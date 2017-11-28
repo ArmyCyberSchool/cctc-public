@@ -36,7 +36,7 @@ check: `ls -al /sbin/init` +
 
 * Write a script that utilizes journalctl to evaluate kernel messages .. Have your script:
 ** dump kernel error and warning messages only, at 30 second intervals.
-** terminate after two iterations of message dumps has been reached.
+** terminate after two iterations of message dumps have been reached.
 ** use `diff` in your script, to compare the two output dump files.  
 ** display the last 10 logs entries associated with the cron service, ever generated.
 ** display the last 15 log entries associated with your UID that generated in the last hour.
