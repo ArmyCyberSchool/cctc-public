@@ -23,7 +23,6 @@ image::../Resources/regex2.png[regex2,height="150",width="350",float="left"]
 [square]
 * Familiarity with regular expressions, their syntax, and their application
 * Confidence generating simple regular expressions to match specific patterns
-* Reinforce and exercise skills learned
 
 {empty} +
 
