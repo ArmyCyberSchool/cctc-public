@@ -50,8 +50,8 @@ Operating on a system your team has already gained access to, using only the SAM
 
 == Hints
 
-`systemctl restart smbd`
-`systemctl restart smb.service`
+`systemctl restart smbd` +
+`systemctl restart smb.service` +
 
 {empty} +
 
