@@ -31,14 +31,14 @@ image::../Resources/magic_file.png[magic,height="150",width="450",float="left"]
 
 == Scenario
 
-File:  `/usr/share/cctc/runme` contains critical information, however, it does not seem to be running corectly. 
+File:  `/usr/share/cctc/runme` contains critical information, however, it does not seem to be running correctly. 
 
 {empty} +
 
 == Activity
 
 [square]
-* Identify the file:  `/usr/share/cctc/runme` and make a copy to a working directory.
+* Identify the file:  `/usr/share/cctc/runme` and make a copy to a working directory (PRO TIP: Never make changes to your only copy of a file, or you may not be able to revert back if you inadvertently break the file/script further).
 ** Identify why the file doesn't run corectly.
 ** Fix the file and run it to extract the critical information.
 
@@ -47,7 +47,7 @@ File:  `/usr/share/cctc/runme` contains critical information, however, it does n
 == Deliverables
 
 [square]
-* Document detailing your process to analyze, fix, and corectly run the `/usr/share/cctc/runme` program.
+* Document detailing your process to analyze, fix, and correctly run the `/usr/share/cctc/runme` program.
 * Output of the program's critical information.
 
 {empty} +
