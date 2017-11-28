@@ -27,7 +27,7 @@
 
 == Scenario
 
-System admins have began to notice malicious traffic from thier client systems.  In an effort to thwart any non-recognized communications, the sysyem admins are indvertently killing processes, including your monitoring process.
+System admins have began to notice malicious traffic from thier client systems.  In an effort to thwart any non-recognized communications, the system admins are inadvertently killing processes, including your monitoring process.
 
 == Activity
 
@@ -37,8 +37,8 @@ System admins have began to notice malicious traffic from thier client systems. 
 ** If the monitoring script is not running, the persistence script should launch the monitoring script.
 
 * Write a deployment script that applies Linux functionality to ensure the persistence script is executed when the system is launched/rebooted.
-** Test your script on your system to ensure that the monitoring script can properly recover from reboots and having it's process killed.
-** If your peristence script exists, your deployment script should exit, howver if your persistence script does not exist, your deployment script should generate it.
+** Test your script on your system to ensure that the monitoring script can properly recover from reboots and having its process killed.
+** If your persistence script exists, your deployment script should exit, however if your persistence script does not exist, your deployment script should generate it.
 
 {empty} +
 
@@ -51,7 +51,7 @@ image::../Resources/auto_trigger.png[auto_triggered,height="500",width="800",flo
 [square]
 * Your deployment script
 * Your persistence script
-* Proof that your persistence script properly recovers the monitoring script from reboots, and from having it's process killed
+* Proof that your persistence script properly recovers the monitoring script from reboots, and from having its process killed
 
 == Useful Resources
 
