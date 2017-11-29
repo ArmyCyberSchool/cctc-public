@@ -8,17 +8,58 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/simpleshell.png[simple,height="450",width="450",float="left"]
+
+== Learning Objectives
+
+* CCNI002   - Employ commands using common shells
+** CCNI002.003   - Demonstrate appropriate use of pipes and redirection
+** CCNI002.004   - Explain the fundamentals of Boolean logic
+** CCNI002.005   - Identify methods of gaining more information about commands and switches
+
+{empty} +
+
+== Learning Outcomes
+
+[square]
+* Familiarity with functionality of the netcat binary
+* Greater understanding of fifos and backpipes, and what takes place with one
+
+{empty} +
+
 == Activity
 
 [square]
-* Create a bash script using netcat that hosts a bash shell on a listener.
-* From that listener, print out the host's machine-id:
-* `$ cat /etc/machine-id  ||  cat /var/lib/dbus/machine-id`
-* Do not install any binaries; use only the netcat version already installed on the box
-* `e0238601dd1320b9e0c29a0c33ef91aa /bin/nc`
+* Create a bash script:
+** host a BASH shell on a netcat listener.
+* From the netcat listener:
+** print out the host's machine-id: `$ cat /etc/machine-id  ||  cat /var/lib/dbus/machine-id`
+* Do not install any binaries; use only the `/bin/nc` version already installed on the system
 
-== Learning Objectives / Outcomes
+{empty} +
 
-[square]
-* Familiarity with the netcat binary functionality
-* Greater understanding of backpipes, and what takes place with one
+== Deliverables
+
+* Your script 
+
+{empty} +
+
+== Hints
+
+----
+man /usr/bin/mkfifo | grep -A1 DESCRIPTION
+man /bin/mknod | grep -A1 "DESCRIPTION\|FIFO"
+
+mkfifo 123
+ls -l | wc -l > 123 &
+cat < 123
+----
+
+
+{empty} +
+
+== Useful Resources
+
+http://www.linuxjournal.com/article/2156 +
+https://www.lanmaster53.com/2011/05/7-linux-shells-using-built-in-tools/ +
+

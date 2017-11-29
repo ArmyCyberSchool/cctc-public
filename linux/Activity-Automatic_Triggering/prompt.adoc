@@ -8,29 +8,52 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== Learning Objectives
+
+[square]
+* CCNI006  - Identify Linux processes
+** CCNI006.003  - Employ commands to enumerate processes
+** CCNI006.004  - Explain the functionality of daemons
+* CCNI011  - Discuss the reasons to establish permanent presence
+** CCNI011.001  - Define permanent presence
+
+== Learning Outcomes
+
+[square]
+* Confidence using Linux scheduled tasks (cronjobs)
+* Familiarity with Linux Daemon startup & functionality
+* Familiarity with Bash conditional operations
+* Confidence writing Bash scripts to achieve specific objectives
+
 == Scenario
 
-Your SSH monitoring process needs to be deployed on multiple systems and needs to survive reboots. Additionally, system admins are inadvertently killing incorrect processes while trying to remediate the attack, including your monitoring process. You need to ensure your script can easily be deployed on multiple systems and can survive reboots and being killed.
+System admins have began to notice malicious traffic from thier client systems.  In an effort to thwart any non-recognized communications, the system admins are inadvertently killing processes, including your monitoring process.
 
 == Activity
 
-Write a persistence script that checks if your monitoring script is running. If the monitoring script is running, the persistence script should do nothing. If the monitoring script is not running, the persistence script should launch the monitoring script.
+* Write a persistence script that checks if your monitoring script (from previous activity) is running.
+** If the monitoring script does not exist, the persistence script should create it.
+** If the monitoring script is running, the persistence script should wait "x" min, and check again. 
+** If the monitoring script is not running, the persistence script should launch the monitoring script.
 
-Write a deployment script that applies Linux functionality to ensure the persistence script is executed when the system is launched and at least once every 15 minutes.
+* Write a deployment script that applies Linux functionality to ensure the persistence script is executed when the system is launched/rebooted.
+** Test your script on your system to ensure that the monitoring script can properly recover from reboots and having its process killed.
+** If your persistence script exists, your deployment script should exit, however if your persistence script does not exist, your deployment script should generate it.
 
-Test your script on your system to ensure that the monitoring script can properly recover from reboots and being killed.
+{empty} +
+
+image::../Resources/auto_trigger.png[auto_triggered,height="500",width="800",float="left"]
+
+{empty} +
 
 == Deliverables
 
 [square]
-* Your persistence script
 * Your deployment script
-* Proof that your persistence script properly recovers the monitoring script from reboots and being killed
+* Your persistence script
+* Proof that your persistence script properly recovers the monitoring script from reboots, and from having its process killed
 
-== Learning Objectives / Outcomes
+== Useful Resources
 
-[square]
-* Familiarity with Linux scheduled tasks (cron)
-* Familiarity interacting with services and Linux applications from scripts
-* Familiarity with Bash conditional operations
-* Confidence writing Bash scripts to achieve specific objectives
+https://crontab.guru/ +
+https://bscb.cornell.edu/about/resources/linux-cron-and-crontab +

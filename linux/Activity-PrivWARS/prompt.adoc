@@ -1,22 +1,22 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - File Permissions and ACLS
+= Activity - PrivWARS
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/PRIVWARS.png[PRIVWARS,height="150",width="450",float="left"]
+
 == Learning Objectives
 
 [square]
 * CCNI003 - Analyze the Linux file system
-* CCNI003.001 - Describe file system hierarchy
-* CCNI003.002 - Describe file system ownership properties
-* CCNI003.003 - Discuss file system permissions
-* CCNI003.004 - Discuss file system timestamps
-* CCNI003.005 - Discuss file system attributes
+** CCNI003.002 - Describe file system ownership properties
+** CCNI003.003 - Discuss file system permissions
+** CCNI003.005 - Discuss file system attributes
 
 {empty} +
 
@@ -25,8 +25,7 @@
 [square]
 * Familiarity with Linux file permissions
 * Familiarity with Linux access control lists (ACLs)
-* Familiarity editing users, groups, and ACLs
-* Familiarity with editing and applying permissions and ACLs
+* Familiarity editing and applying permissions and ACLS to users and groups
 
 {empty} +
 
@@ -38,64 +37,77 @@ _Welcome to the Galactic Empire Messaging System!_ One of our servers recently f
 
 == Activity
 
-Given the attributes below, recreate the users, groups, and messages/files, and assign applicable permissions, ACLs, and attributes for each:
+* Given the attributes below:
+** recreate the users, groups, and messages/files below
+** assign applicable permissions, ACLs, and attributes for each
 
-_2 User Groups:_
+{empty} +
+
+*_2 User Groups:_*
 [width="15%"]
 |===
-|Name       |GUID
-|`rebels`   |`2000`
-|`imps`     | `2100`
+|*Name*       |*GUID*
+|`rebels`     |`2000`
+|`imps`       | `2100`
 |===
 
-_2 ACLs:_
+{empty} +
+
+*_2 ACLs:_*
 [width="20%"]
 |===
-|GUID   |Access Permissions
-|`2000` |`rwx`
-|`2100` |`rwx`
+|*GUID*   |*Access Permissions*
+|`2000`   |`rwx`
+|`2100`   |`rwx`
 |===
 
-_4 Users:_
+{empty} +
+
+*_4 Users:_*
 [width="50%"]
 |===
-|Name           |UID    |Real Name          |Office
-|`smuggla4lyfe` |`2010` |`han.solo`         |`corellia`
-|`notacommittee`|`2011` |`leia.organa`      |`alderaan`
-|`dachosen1`    |`2110` |`anakin.skywalker` |`tatooine`
-|`ultimatepowah`|`2111` |`sheev.palpatine`  |`naboo`
+|*Name*           |*UID*    |*Real Name*          |*Office*
+|`smuggla4lyfe`   |`2010`   |`han.solo`           |`corellia`
+|`notacommittee`  |`2011`   |`leia.organa`        |`alderaan`
+|`dachosen1`      |`2110`   |`anakin.skywalker`   |`tatooine`
+|`ultimatepowah`  |`2111`   |`sheev.palpatine`    |`naboo`
 |===
 
-_Files/messages:_ +
-`rebels_only`           is owned by leia, & the rebels, is rwx-able by the owner, and all rebels but no one else. +
-`imps_only`		        is owned by palpatine, and the imps, is rwx-able by the owner, rx-able by all imps, and has no further permissions. +
-`rebel_scum!`           is owned by anakin, and the imps, is rwx-able by the owner, and is read-only by everyone else. +
-Hint: Should 'everyone else' include the group? +
-`imps_are_bad`          is owned by `nobody`, and the rebels, readable by the owner, rwx-able by the rebels group, and is read-only by others. +
-`rebel_base_location`   is owned by sheev, and the imps, and is fully accessible(rwx) by the imps group. +
-`deathstar_plans`       is owned by Leia, and the rebels, and is fully accessible(rwx) by the rebels group. +
+{empty} +
+
+*_Files/messages:_* +
+----
+rebels_only           is owned by leia, & the rebels, is rwx-able by the owner, and all rebels but no one else.
+
+imps_only		      is owned by palpatine, and the imps, is rwx-able by the owner, rx-able by all imps, and has no further permissions.
+
+rebel_scum!           is owned by anakin, and the imps, is rwx-able by the owner, and is read-only by everyone else.
+                      Hint: Should 'everyone else' include the group?
+
+imps_are_bad          is owned by `nobody`, and the rebels, readable by the owner, rwx-able by the rebels group, and is read-only by others.
+
+rebel_base_location   is owned by sheev, and the imps, and is fully accessible(rwx) by the imps group.
+
+deathstar_plan        is owned by Leia, and the rebels, and is fully accessible(rwx) by the rebels group.
+----
 
 {empty} +
 
 == Deliverables
 
-* Once you have completed all the required tasks above, run the following command from the working directory to get the flag: `$ check` +
-* Verification of check script success
+* Once you have completed all the required tasks above:
+** run the following command from the working directory to get the flag: `$ check` +
+** verification of `check` script success
 
 {empty} +
 
 == Hints
 
-* From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
-
-{empty} +
-
-== Challenge
-
-NONE
+From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
 
 {empty} +
 
 == Useful Resources
 
-NONE
+https://www.tutorialspoint.com/unix/unix-file-permission.htm +
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/System_Administration_Guide/s1-acls-setting.html +

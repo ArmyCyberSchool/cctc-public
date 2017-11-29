@@ -8,56 +8,57 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+image::../Resources/magic_file.png[magic,height="150",width="450",float="left"]
+
 == Learning Objectives
 
-* CCNI003.005 -  Discuss file system attributes
+* CCNI002 -   Employ commands using common shells
+** CCNI002.005 -  Identify methods of gaining more information about commands and switches
+* CCNI003 -   Analyze the Linux file system
+** CCNI003.005 -   Discuss file system attributes
 
 {empty} +
 
-== Outcomes
+== Learning Outcomes
 
 [square]
-* Familiarity with file formats and magic numbers
-* Familiarity with how Linux identifies file types
-* Familiarity editing binary files in Linux
+* Familiarity with: 
+** file formats and magic numbers
+** how Linux identifies file types
+** editing binary files in Linux
 
 {empty} +
 
 == Scenario
 
-There is a file in `/usr/share/cctc` called `runme` that you need to run to extract critical information. However, it does not seem to be working. Identify the problem, remedy the situation and run the program to extract the information.
+File:  `/usr/share/cctc/runme` contains critical information, however, it does not seem to be running correctly. 
 
 {empty} +
 
 == Activity
 
 [square]
-* Identify the file runme in /usr/share/cctc and make a copy to a working directory
-* Identify why the file cannot run.
-* Fix the file and run it.
+* Identify the file:  `/usr/share/cctc/runme` and make a copy to a working directory (PRO TIP: Never make changes to your only copy of a file, or you may not be able to revert back if you inadvertently break the file/script further).
+** Identify why the file doesn't run corectly.
+** Fix the file and run it to extract the critical information.
 
 {empty} +
 
 == Deliverables
 
 [square]
-* Document detailing your process to analyze, fix, and run the `runme` program
-* Output of the program
+* Document detailing your process to analyze, fix, and correctly run the `/usr/share/cctc/runme` program.
+* Output of the program's critical information.
 
 {empty} +
 
 == Hints
 
-* What type of file is a Linux executable binary, such as ls and ps, similar to .exe files in Windows?
-
-{empty} +
-
-== Challenge
-
-NONE
+What type of file is a Linux executable binary, such as `ls` and `ps`, similar to `.exe` files in Windows?
 
 {empty} +
 
 == Useful Resources
 
-* https://en.wikipedia.org/wiki/List_of_file_signatures
+https://www.garykessler.net/library/file_sigs.html +
+https://en.wikipedia.org/wiki/List_of_file_signatures +

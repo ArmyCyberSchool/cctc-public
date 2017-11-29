@@ -1,6 +1,8 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
+
+
 = Activity - Regular Expressions 1
 :doctype: book
 :source-highlighter: coderay
@@ -8,25 +10,22 @@
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+{empty} +
+
 == Learning Objectives / Outcomes
 
-* CCNI003.007 - Describe regular expressions
-* CCNI003.008 - Create regular expressions to find data within in the file system
-* CCNI003.009 - Identify the information that a regular expression will return
+* CCNI003 -  Analyze the Linux file system
+** CCNI003.007 - Describe regular expressions
+** CCNI003.008 - Create regular expressions to find data within in the file system
+** CCNI003.009 - Identify the information that a regular expression will return
 
 {empty} +
 
-== Outcomes
+== Learning Outcomes
 
 [square]
-* Familiarity with regular expressions, their syntax and their application
+* Familiarity with regular expressions, their syntax and, their application
 * Confidence generating simple regular expressions to match specific patterns
-
-{empty} +
-
-== Scenario
-
-NONE
 
 {empty} +
 
@@ -37,32 +36,25 @@ Access RegexOne REGEX interactive tutorial at the following location: https://re
 [square]
 * Complete REGEX Lessons 1-15
 * Complete REGEX Problems 1-8
-* Lesson X and Problem X are optional
-* Identify a complete solution to all problems; While the solution on the LEFT will allow you to continue, it is not a complete solution, like the one on the RIGHT.
+* Identify a complete solution to all problems
+** While the solution on the LEFT will allow you to continue, it is not a complete solution, like the one on the RIGHT.
 
-image::regexImage1.png[alt="Image1", width="1000", height="200"]
+image::../Resources/regex1.png[regex1,height="200",width="750",float="left"]
 
 {empty} +
 
 == Deliverables
 
-[square]
 * List of regular expressions used to solve each lesson and problem
-
-{empty} +
-
-== Hints
-
-NONE
 
 {empty} +
 
 == Challenge
 
-NONE
+Lesson X and Problem X
 
 {empty} +
 
 == Useful Resources
 
-NONE
+https://regexr.com/ +
