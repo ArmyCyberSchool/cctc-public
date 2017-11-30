@@ -97,18 +97,18 @@
 					<h4>Intrusion Detection vs. Prevention</h4>
 					<p>Obj. 7.1, 7.2</p>
 					<p align="left">- IDS: Intrusion Detection System </p>
-					<ul align="left"><font size="6">
-					    <li>Do not need to be inline </li>
-					    <li>Logging, Alerting </li>
+					<ul><font size="6">
+					    <li align="left">Do not need to be inline </li>
+					    <li align="left">Logging, Alerting </li>
 					</font></ul>
 					<p align="left">- IPS: Intrusion Prevention System </p>
-					<ul align="left"><font size="6">
-					    <li>Dropping, Blocking, Resetting, Sandboxing </li>
+					<ul><font size="6">
+					    <li align="left">Dropping, Blocking, Resetting, Sandboxing </li>
 					</font></ul>
 					<p align="left">- Signatures </p>
 					<ul><font size="6">
-					    <li>Atomic </li>
-    					<li>Stateful </li>
+					    <li align="left">Atomic </li>
+    					<li align="left">Stateful </li>
     			    </font></ul>
 				</section>
                 
@@ -128,7 +128,7 @@
 				    <h4>Extended ACLs</h4>
 					<p> Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p salign="left"><font size="5"> ip access-list extended 101 <br>
+					<p align="left"><font size="5"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
@@ -215,14 +215,14 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Source NAT (IP)</h4>
 					<p> Obj. 7.14, 7.15</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/SNAT.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/SNAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the source address to <font color="red"> 1.1.1.1</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 1.1.1.1</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<p> Obj. 7.14, 7.15</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/SPAT.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/SPAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the source address to <font color="red"> 1.1.1.1</font> and the port to <font color="red">9001</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A POSTROUTING -p tcp -o eth0 -j SNAT --to 1.1.1.1:9001</font></p>
 				</section>
