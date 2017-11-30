@@ -97,12 +97,12 @@
 					<h4>Intrusion Detection vs. Prevention</h4>
 					<p>Obj. 7.1, 7.2</p>
 					<p align="left">- IDS: Intrusion Detection System </p>
-					<ul><font size="6">
+					<ul align="left"><font size="6">
 					    <li>Do not need to be inline </li>
 					    <li>Logging, Alerting </li>
 					</font></ul>
 					<p align="left">- IPS: Intrusion Prevention System </p>
-					<ul><font size="6">
+					<ul align="left"><font size="6">
 					    <li>Dropping, Blocking, Resetting, Sandboxing </li>
 					</font></ul>
 					<p align="left">- Signatures </p>
@@ -116,7 +116,7 @@
 				    <h4>Standard ACLs</h4>
 					<p>Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p style="margin-right= 500px;"><font size="6"> ip access-list standard 1 <br>
+					<p align="left"><font size="6"> ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </font></p>
@@ -128,7 +128,7 @@
 				    <h4>Extended ACLs</h4>
 					<p> Obj. 7.3, 7.4, 7.5 </p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
-					<p style="margin-right= 500px;"><font size="5"> ip access-list extended 101 <br>
+					<p salign="left"><font size="5"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
