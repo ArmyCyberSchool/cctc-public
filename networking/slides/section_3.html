@@ -115,7 +115,7 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Standard ACLs</h4>
 					<p>Obj. 7.3, 7.4, 7.5 </p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
+					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
 					<p align="left"><font size="6"> ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
@@ -127,7 +127,7 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Extended ACLs</h4>
 					<p> Obj. 7.3, 7.4, 7.5 </p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
+					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
 					<p salign="left"><font size="5"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
@@ -137,7 +137,7 @@
 				
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<p> Obj. 7.7</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
 					<p align="left"><font size="5">Router 2, interface G0/1 inbound </font></p>
 					<ul><font size="4"> 
                         <li>ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 </li>
@@ -155,13 +155,13 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>IPTables Order</h4>
 					<p> Obj. 7.8</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/IPtables.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/IPtables.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Inside IPTables</h4>
 					<p> Obj. 7.8, 7.9</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/InsideIPtables.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/InsideIPtables.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -230,7 +230,7 @@
 			    <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Destination NAT (IP)</h4>
 					<p> Obj. 7.14, 7.15</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/DNAT.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/DNAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the destination address to <font color="red"> 10.0.0.1</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A PREROUTING -i eth0 -j DNAT --to 10.0.0.1</font></p>
 				</section>
@@ -238,7 +238,7 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Port Forwarding</h4>
 					<p> Obj. 7.14, 7.15</p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/DPAT.png" style="max-height: 80%; max-width: 80%;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/DPAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Forward traffic to an internal or private IP on port <font color="red"> 8080</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A PREROUTING -p tcp -o eth0 -j DNAT --to 10.0.0.1:8080</font></p>
 				</section>
