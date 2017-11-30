@@ -97,19 +97,15 @@
 					<h4>Intrusion Detection vs. Prevention</h4>
 					<p>Obj. 7.1, 7.2</p>
 					<p align="left">- IDS: Intrusion Detection System </p>
-					<ul><font size="6">
-					    <li align="left">Do not need to be inline </li>
-					    <li align="left">Logging, Alerting </li>
+					<p><font size="4">Do not need to be inline <br>
+					Logging, Alerting </font></p>
 					</font></ul>
 					<p align="left">- IPS: Intrusion Prevention System </p>
-					<ul><font size="6">
-					    <li align="left">Dropping, Blocking, Resetting, Sandboxing </li>
-					</font></ul>
+					<p><font size="4"> Dropping, Blocking, Resetting, Sandboxing </font></p>
 					<p align="left">- Signatures </p>
-					<ul><font size="6">
-					    <li align="left">Atomic </li>
-    					<li align="left">Stateful </li>
-    			    </font></ul>
+					<ul><font size="4">
+					    <p align="left"><font size="4">Atomic <br>
+    					Stateful </font></p>
 				</section>
                 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -120,7 +116,7 @@
 				    permit host 10.0.0.1 <br>
 				    deny 10.0.0.0 0.0.0.255 <br>
 					permit any </font></p>
-					<br>
+					<p>----------------------</p>
                     <p align="left"><font size="6">What interface/direction is the ACL applied to allow host 10.0.0.1 to access the 172.16.0.0 network, but deny ALL OTHER 10.0.0.0 hosts?</font></p>
 				</section>
 				
@@ -132,6 +128,7 @@
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
 				    deny udp host 172.16.0.1 host 192.168.0.2 eq 69 <br>
 					permit ip any any log </font></p>
+					<p>----------------------</p>
                     <p align="left"><font size="5">What is the best interface/direction to place the ACL on to DENY only host 172.16.0.1 access to TFTP on host 192.168.0.2, but allow all other hosts to access these services?</font></p>
 				</section>
 				
@@ -139,13 +136,13 @@
 					<p> Obj. 7.7</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
 					<p align="left"><font size="5">Router 2, interface G0/1 inbound </font></p>
-					<ul><font size="4"> 
+					<ul align="left"><font size="4"> 
                         <li>ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 </li>
                         <li>ip access-list deny tcp any any eq 20-21 </li>
                         <li>ip access-list permit ip any any </li>
                     </font></ul>
                     <p align="left"><font size="5">Router 1, interface G0/2 inbound </font></p>
-                    <ul><font size="4">
+                    <ul align="left"><font size="4">
                         <li>ip access-list deny ip 192.168.0.0 0.0.0.255 any </li>
                         <li>ip access-list deny ip 10.0.0.0 0.0.0.255 any </li>
                         <li>ip access-list permit ip any any </li>
