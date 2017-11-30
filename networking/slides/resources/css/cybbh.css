@@ -33,7 +33,7 @@ body {
 
 .reveal .slides > section,
 .reveal .slides > section > section {
-  line-height: 0.8;
+  line-height: 1.0;
   font-weight: inherit; }
 
 /*********************************************
@@ -75,7 +75,8 @@ body {
  *********************************************/
 .reveal p {
   margin: 20px 0;
-  line-height: 0.8; }
+  text-align: left;
+  line-height: 1.0; }
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -96,6 +97,7 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
+  line-height: 1.1;
   margin: 0 0 0 1em; }
 
 .reveal ol {
