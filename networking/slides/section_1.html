@@ -134,7 +134,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>What about IPV6?</h4>
-					<p> (Obj. 2.1 Describe active method used for network discovery, 2.2 Explain the potential mitigation technique for netowrk discovery)</font> </p>
+					<p> (Obj. 2.1)</p>
 					<ul> 
 					  <li><font size="6">Host address space is enormous: scanning an entire prefix is out of the questions.</font> </li>
 					  <li><font size="6">(64 bit host space, with 1 probe/sec would take 5 billions years)</font> </li>
@@ -143,20 +143,20 @@
 					  <li><font size="6">References:</font> </li>
 					  <li><font size="6">RFC 7707</font> </li>
 					  <li><font size="6">Interesting Read: https://www.cs.columbia.edu/~smb/papers/v6worms.pdf</font> </li>
-			       		</ul>
+			       	</ul>
 				</section>	
 				
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section datta-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Scanning</h4>
-					<p>(Obj.2.6 Identify the items of interest when performing internal reconnaissance picture</p>
-				    <ul> 	    
-					  <li><font size="6">Run with root priviledge: send raw ARP packet, nearly impossible to block or hide from this type of scan</font> </li>
-					  <li><font size="6">Run without root priviledge</font> </li>
-					  <li><font size="6">Cannot open raw sockets;</font> </li>
-					  <li><font size="6">Connects to the 2 TCP port (80 and (443)</font> </li>
-					  <li><font size="6">Host considered "up" if the connection succeeds or is reset</font> </li>
-                      <li><font size="6">ICMP: Nmap can do icmp ping sweeps however there is</font> </li>
-					</ul>
+					<p>(Obj.2.6)</p>
+					<p> Nmap is a highly popular scanning tool</p>
+				    <p><font size="6">Nmap host discovery run with root priviledge: <br>
+				    send raw ARP packet, nearly impossible to block or hide from this type of scan</font> </p>
+					<p><font size="6">Nmap Host discovery run without root priviledge: <br>
+					- Cannot open raw sockets <br>
+					- Connects to the 2 TCP port (80 and (443) <br>
+					- Host considered "up" if the connection succeeds/reset </font></p>
+                    <p align="left"><font siz="6"> ICMP: Nmap can do icmp ping sweeps however since OS'es & FW's oftem block/drop ICMP this can be unreliable </font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -170,29 +170,31 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Diagrams</h4>
 					<p>(Obj. 3.1 Analyze a router configuration and create a network map)<br> </p>
-					<ul> 
-					  <li><font size="6">Standards Icons</font></li>
-					  <li><font size="6">Configuration</font></li>
-					  <li><font size="6">Physical</font></li>
-					  <li><font size="6">Wired/Wireless</font></li>
-					  <li><font size="6">Star topologogy most common</font></li>
-					  <li><font size="6">Depict actual connection</font></li>
-					  <li><font size="6">Logical</font></li> 
-					  <li><font size="6">How you communicate over the medium</font></li>
-					  <li><font size="6">Protocol/Language</font></li>
-					  <li><font size="6">Ethernet (CSMA/CD)</font></li>
-			       </ul>
-			    	</section>
+					<p align="left"><font size="6">Standards Icons</font></p>
+				    <img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/icons.png" align="right" style="max-height: 35%; max-width: 35%">
+                    <p align="left"><font size="6">Physical Diagrams</font></p>
+                    <ul>
+					   <li><font size="6">Medium; i.e. Wired/Wireless</font></li>
+					   <li><font size="6">Topologogy (star most common)</font></li>
+					   <li><font size="6">Depict port/interface connection</font></li>
+					</ul>
+                    <p align="left"><font size="6">Logical Diagrams</font></p> 
+                    <ul>
+					   <li><font size="6">IP Addressing/Networks</font></li>
+					   <li><font size="6">Protocol/Language</font></li>
+			        </ul>
+			    </section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Navigating Network Devices</h4>
-				    <p>(Obj. 3.1 Analyze a router configuration and create a network map)</p>
+				    <p>(Obj. 3.1)</p>
 				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/Navigating.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Security Concern and Implications</h4>
-					<p>(Obj. 3.1 Analyze a router configuration and create a network map, 2.5 Discuss best practices for network analysis)</p>  
+					<p>(Obj. 3.1)</p>  
+					<p align="left"> A few items to consider</p>
 					<ul>
 				      <li><font size="6">Enable password vs. Enable secret </font></li>
 					  <li><font size="6">Finger Service (Network devices and hosts) </font> </li>
@@ -203,6 +205,7 @@
 					  <li><font size="6">Remote Access (Telnet)</font> </li>
 					  <li><font size="6">Logging<br> </font> </li>
 			    	</ul>
+			    	<p> What else can you think of? </p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
