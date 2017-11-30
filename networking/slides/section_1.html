@@ -69,7 +69,7 @@
 				    	  <li><font size="6">Identifying Content of Interest</font> <br> </li>
 					  <li><font size="6">Identifying Vulnerability </font> </li>
 					</ul>
-				    	<p><font size="3">All the business of war, and indeed all the business of life, is to endeavor to find out what you don't know by what you do: that's what I called 'guessing what was at the othe side of the hill" Duke of Wellington </font> </p>               
+				    	<p><font size="4">All the business of war, and indeed all the business of life, is to endeavor to find out what you don't know by what you do: that's what I called 'guessing what was at the othe side of the hill" Duke of Wellington </font> </p>               
                 		</section>
                 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -78,11 +78,11 @@
 					<p>Without visiting the website, collect all the information you can about:</p> 
 			   	    	<p> packetlife.com </p>
 			   		<ul>
-					  <li><font right size="3">Resource: http://www.iana.org </font> </li>
-					  <li><font right size="3">https://newgtlds.icann.org/en </font> </li>
-				          <li><font right size="3">https://ww.dnsstuf.com/tools# </font> </li>
-			        	  <li><font right size="3">https://www.whois.net </font></li>
-			        	  <li><font right size="3">https://www.shodan.io </font></li>
+					  <li><font right size="4">Resource: http://www.iana.org </font> </li>
+					  <li><font right size="4">https://newgtlds.icann.org/en </font> </li>
+				          <li><font right size="4">https://ww.dnsstuf.com/tools# </font> </li>
+			        	  <li><font right size="4">https://www.whois.net </font></li>
+			        	  <li><font right size="4">https://www.shodan.io </font></li>
 					</ul>
    				   </section>
 					
@@ -134,8 +134,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>What about IPV6?</h4>
-					<p> <font size="4">(Obj. 2.1 Describe active method used for network discovery)</font> </p> 
-					<p> <font size="4">(Obj. 2.2 Explain the potential mitigation technique for netowrk discovery)</font> </p>
+					<p> (Obj. 2.1 Describe active method used for network discovery, 2.2 Explain the potential mitigation technique for netowrk discovery)</font> </p>
 					<ul> 
 					  <li><font size="6">Host address space is enormous: scanning an entire prefix is out of the questions.</font> </li>
 					  <li><font size="6">(64 bit host space, with 1 probe/sec would take 5 billions years)</font> </li>
@@ -150,14 +149,14 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Scanning</h4>
 					<p>(Obj.2.6 Identify the items of interest when performing internal reconnaissance picture</p>
-				    	<ul> 	    
+				    <ul> 	    
 					  <li><font size="6">Run with root priviledge: send raw ARP packet, nearly impossible to block or hide from this type of scan</font> </li>
 					  <li><font size="6">Run without root priviledge</font> </li>
 					  <li><font size="6">Cannot open raw sockets;</font> </li>
 					  <li><font size="6">Connects to the 2 TCP port (80 and (443)</font> </li>
 					  <li><font size="6">Host considered "up" if the connection succeeds or is reset</font> </li>
-                    			  <li><font size="6">ICMP: Nmap can do icmp ping sweeps however there is</font> </li>
-				    	</ul>
+                      <li><font size="6">ICMP: Nmap can do icmp ping sweeps however there is</font> </li>
+					</ul>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -182,12 +181,12 @@
 					  <li><font size="6">How you communicate over the medium</font></li>
 					  <li><font size="6">Protocol/Language</font></li>
 					  <li><font size="6">Ethernet (CSMA/CD)</font></li>
-			        	</ul>
+			       </ul>
 			    	</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Navigating Network Devices</h4>
-				    	<p>(Obj. 3.1 Analyze a router configuration and create a network map)</p>
+				    <p>(Obj. 3.1 Analyze a router configuration and create a network map)</p>
 					<p>Privilege level makes a difference - Don't rely on "show run"</p>
 				</section>
 
@@ -195,7 +194,7 @@
 					<h4>Security Concern and Implications</h4>
 					<p>(Obj. 3.1 Analyze a router configuration and create a network map, 2.5 Discuss best practices for network analysis)</p>  
 					<ul>
-				    	  <li><font size="6">Enable password vs. Enable secret </font></li>
+				      <li><font size="6">Enable password vs. Enable secret </font></li>
 					  <li><font size="6">Finger Service (Network devices and hosts) </font> </li>
 					  <li><font size="6">Proprietary Protocols (CDP/FDP/DTP/VTP) </font> </li>
 					  <li><font size="6">IP Gratuitous ARP (Network devices and hosts)</font> </li>
@@ -203,11 +202,11 @@
 					  <li><font size="6">IP Source Route</font> </li>
 					  <li><font size="6">Remote Access (Telnet)</font> </li>
 					  <li><font size="6">Logging<br> </font> </li>
-			    		</ul>
+			    	</ul>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				<p> The END....Questions </p>
+				<p> Questions </p>
 				
 				</section>
 
