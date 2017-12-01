@@ -47,7 +47,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Outcomes</h3>
-					<p> SKILL 2: Identify fundamentals of network discovery. </p>
+					<p><font size="5"> SKILL 2: Identify fundamentals of network discovery. </font></p>
 					<p align="left"><font size="5"> Objectives </font></p>
 					<p align="left"><font size="4">2.1 Describe active methods used for network discovery </font> </p>
 					<p align="left"><font size="4">2.2 Explain the potential mitigation techniques for network discovery </font></p>
@@ -73,11 +73,11 @@
 					<p>(Obj. 2.2 thur 4)</p>
 					<p align="left"> Without visiting the website, collect all the information you can about: packetlife.net </p>
 					<p>-------------------------------</p>
-			   	    <p align="left"><font size="5">Resource: http://www.iana.org </font> </p>
-					<p align="left"><font size="5">https://newgtlds.icann.org/en </font> </p>
-				    <p align="left"><font size="5">https://ww.dnsstuf.com/tools# </font> </p>
-			        <p align="left"><font size="5">https://www.whois.net </font></p>
-			        <p align="left"><font size="5">https://www.shodan.io </font></p>
+			   	    <p align="right"><font size="4">Resource: http://www.iana.org </font> </p>
+					<p align="right"><font size="4">https://newgtlds.icann.org/en </font> </p>
+				    <p align="right"><font size="4">https://ww.dnsstuf.com/tools# </font> </p>
+			        <p align="right"><font size="4">https://www.whois.net </font></p>
+			        <p align="right"><font size="4">https://www.shodan.io </font></p>
 
    				   </section>
 					
@@ -85,29 +85,29 @@
 					<h4>Socal Engineering</h4>
 					<p>(Obj. 2.2 thru 4)</p>
 					<p><font size="4"><i>"Any act that influence a person to take an action that may or may not be in their best interest." </i></font></p>
-					<p align="left"><font size="4">Set a frame (pretexting) for interaction/ prime for response.</font></p> 
+					<p align="left"><font size="5"><b>Set a frame (pretexting) for interaction/ prime for response.</b></font></p> 
 				    <p align="left"><font size="4">- Reciprocity</font> </p>         
 					<p align="left"><font size="4">- Scarcity </font></p>            
 					<p align="left"><font size="4">- Authority </font></p>           
 					<p align="left"><font size="4">- Social Proof </font></p>
 					<p align="left"><font size="4">- Sympathy </font></p>
-					<a href="https://www.youtube.com/watch?v=opRMrEfAIiI">Social Engineering for a password?</a>
+					<a href="https://www.youtube.com/watch?v=opRMrEfAIiI"><font size="4">Social Engineering for a password?</font></a>
 				</section>
 					
             	<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Socal Engineering (Cont.)</h4>
 					<p>(Obj. 2.2 thru 4)</p>
-					<p align="left"><font size="4">- Phone/email/In-person </font></p>
-					<a href="https://www.youtube.com/watch?v=lc7scxvKQOo">Check out this example</a>
-					<p align="left"><font size="4"> What techniques were used? </font></p>
-					<p align="left"><font size="4">Mental Buffer-Overflow: layering loop (stories/information) until the subject tunes out/can't keep tract, inject bad stuff </font></p>
-				    <p align="left"><font size="4">Questions: Language structure that forces the execution of instructions.</font></p>
+					<p align="left"><font size="5">- Phone/email/In-person </font></p>
+					<a href="https://www.youtube.com/watch?v=lc7scxvKQOo"><font size="4">Check out this example</font></a>
+					<p align="left"><font size="5"> What techniques were used? </font></p>
+					<p align="left"><font size="5">Mental Buffer-Overflow: layering loop (stories/information) until the subject tunes out/can't keep tract, inject bad stuff </font></p>
+				    <p align="left"><font size="5">Questions: Language structure that forces the execution of instructions.</font></p>
 			    </section>
 						   					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>TCP Flags</h4>
 					<p>(Obj. 2.1)</p>
-					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/flags.png" style="position: right; height: 300px;">
+					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/flags.png" align="right" style="max-height: 35%; max-width: 35%";>
 				    <p align="left"><font size="4">- Illegal flag combination can be used to determine Operating System </font> </p>
 					<p align="left"><font size="4">- X-mas Tree scan is one popular example used in nmap w/OS detection (URG/PSH/FIN flag)</font> </p>
 					<p align="left"><font size="4">- Linux Only sends RSTs if the port is open (no RST for closed ports)</font> </p>
@@ -117,17 +117,17 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Port Scanning</h4> 
 				    <p>(Obj. 2.2 thru 4)</p>
-				    <p align="left"><font size="5">Popular Scannning tools</font></p>
-				    <p align="left"><font size="4">Nmap </font> </p>       
-				    <p align="left"><font size="4">Netcat </font> </p>     					   
-				    <p align="left"><font size="4">Scapy </font> </p>
-			       	<p align="left"><font size="5">Common Scanning Methods</font></p>
-			       	<p align="left"><font size="4">TCP Connect()Scan (IDS/logs catch this easily!) </font> </p>
-				    <p align="left"><font size="4">SYN Scan (half-open) </font> </p>
-				    <p align="left"><font size="4">ACK Scan (What is this for?)</font> </p> 
-				    <p align="left"><font size="4">Stealth Scans </font> </p>
-				    <p align="left"><font size="4">NULL or FIN Scan (proper response - open_drop; closed-send an RST) </font> </p>
-				    <p align="left"><font size="4">UDP Scan (how does that work?!) </font> </p>
+				    <p align="left"><font size="5"><b>Popular Scannning tools</b></font></p>
+				    <p align="left"><font size="4">- Nmap <br>       
+				    - Netcat <br>     					   
+				    - Scapy </font> </p>
+			       	<p align="left"><font size="5"><b>Common Scanning Methods</b></font></p>
+			       	<p align="left"><font size="4">- TCP Connect()Scan (IDS/logs catch this easily!) <br>
+				    - SYN Scan (half-open) <br>
+				    - ACK Scan (What is this for?)<br> 
+				    - Stealth Scans <br>
+				    - NULL or FIN Scan (proper response - open_drop; closed-send an RST) <br>
+				    - UDP Scan (how does that work?!) </font> </p>
 				  </section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -139,9 +139,9 @@
 					  <li><font size="6">Identifying address become key</font> </li>
 					  <li><font size="6">Scanning locally or remote (probe multicast all-node, link local)</font> </li>
 					</ul>
-					  <p align="right"><font size="4">References:</font> </p>
-					  <p align="right"><font size="4">RFC 7707</font> </p>
-					  <p align="right"><font size="4">Interesting Read: https://www.cs.columbia.edu/~smb/papers/v6worms.pdf</font> </p>
+					  <p align="right"><font size="4">References:<br>
+					  RFC 7707<br>
+					  Interesting Read: https://www.cs.columbia.edu/~smb/papers/v6worms.pdf</font></p>
 				</section>	
 				
 				<section datta-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -161,7 +161,6 @@
 					<h4>Diagrams</h4>
 					<p>(Obj. 3.1) </p>
 				    <img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/icons.png" align="right" style="max-height: 35%; max-width: 35%">
-				    <small>Standard Icons</small>
                     <p align="left"><font size="6"><b>Physical Diagrams</b></font></p>
                     <p align="left"><font size="6">- Medium; i.e. Wired/Wireless</font></p>
 					<p align="left"><font size="6">- Topologogy (star most common)</font></p>
