@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Network Discovery</title>
+		<title>Network Exploitation</title>
 
-		<meta name="description" content="CCTC Section 1">
+		<meta name="Network Exploitation" content="CCTC Section 5">
 		<meta name="author" content="Sarah Rees and Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,277 +38,227 @@
 	<body>
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h2>Network Exploitation</h2>
-					<h3>CCTC Networking</h3>
+				
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h1>Network Exploitation</h1>
+					<h5>CCTC Networking</h5>
 				</section>
 
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Outcomes</h3>
 					<h2>SKILL 18: Cyberspace Ops Methodologies</h2>
-					<h2>Objectives -</h2>
-						<p>18.1 Describe the mindset of Cyber Actors</p>
-						<p>18.2 Describe the standard internal exploitation methodologies</p>
-						<p>18.3 Describe standard external exploitaion methodologies</p>
-						<p>18.4 Discuss the importance of testing tools in a controlled environment</p>
+					<h2 align="left">Objectives</h2>
+						<p align="left">18.1 Describe the mindset of Cyber Actors</p>
+						<p align="left">18.2 Describe the standard internal exploitation methodologies</p>
+						<p align="left">18.3 Describe standard external exploitaion methodologies</p>
+						<p align="left">18.4 Discuss the importance of testing tools in a controlled environment</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Hacker Methodology</h4>
-					<h4 align="center">(obj.18.1 - Describe the mindset of cyber actors)</h4>
-						<p>Footprinting</p>
-						<p>Scanning</p>
-						<p>Enumeration</p>
-						<p>Network Mapping</p>
-						<p>Gaining Access</p>
-						<p>Privilege Escalation</p>
-						<p>Post Exploitaion</p>
-						<p>Target Survey & remote Forensics Analysis</p>
-						<p>Cover Tracks (cleanup)</p>
-						<p>Data Collection</p>
-						<p>Rootkit (aka Backdoor, aka Implant, aka Persistence)</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Hacker Methodology</h4>
+					<h4>(Obj.18.1)</h4>
+						<p align="left"><font size="6"> reconnaissance (Footprinting, Scanning, Enumeration, Net Mapping)<br>
+						Gaining Access<br>
+						Privilege Escalation<br>
+						Post Exploitaion<br>
+						Target Survey & remote Forensics Analysis<br>
+						Cover Tracks (cleanup)<br>
+						Data Collection<br>
+						Establish Persistence</font></p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Cyber Threat Actors</h4>
-					<h4 align="center">(obj. 18.1 - Describe the mindset of cyber actors)</h4>
-					<p>Reference JP3-12R</p>
-					<p>Nation State</p>
-					<p>Transnational Actor</p>
-					<p>Criminal</p>
-					<p>Individual Actors or Small Group</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Cyber Threat Actors</h4>
+					<h4>(Obj. 18.1)</h4>
+					<p align="left"><i>Reference JP3-12R</i></p>
+					<p align="left">Nation State</p>
+					<p align="left">Transnational Actor</p>
+					<p align="left">Criminal</p>
+					<p align="left">Individual Actors or Small Group</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Cyber Threat Actors</h4>
-					<h4 align="center">(obj. 18.1 - Describe the mindset of cyber atctors)</h4>
-					<p>Reference Sans.org</p>
-					<p>Cybercriminals</p>
-					<p>State Sponsored</p>
-					<p>Hacktivist</p>
-					<p>Insider Threats</p>
-					<p>Partner</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Cyber Threat Actors</h4>
+					<h4>(Obj. 18.1)</h4>
+					<p align="left"><i>Reference SANS.org</i></p>
+					<p align="left">Cybercriminals</p>
+					<p align="left">State Sponsored</p>
+					<p align="left">Hacktivist</p>
+					<p align="left">Insider Threats</p>
+					<p align="left">Partner</p>
 				</section>
 
-				<section style="text-align: left;">
-						<h4 align="center">Threat Actions</h4>
-						<h4 align="center">(obj. 18.1 - Describe the mindset of cyber actors)</h4>
-						<p>Malware</p>
-						<p>Hacking</p>
-						<p>Social Tactics</p>
-						<p>Misuse</p>
-						<p>Physical</p>
-						<p>Error</p>
-						<p>Environmental</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+						<h4>Threat Actions</h4>
+						<h4>(Obj. 18.1)</h4>
+						<p align="left">- Malware</p>
+						<p align="left">- Hacking</p>
+						<p align="left">- Social Tactics</p>
+						<p align="left">- Misuse</p>
+						<p align="left">- Physical</p>
+						<p align="left">- Error</p>
+						<p align="left">- Environmental</p>
                 <section>
                     
-				<section style="text-align: left;">
-					<h4 align="center">Exploitation Methodologies</h4>
-					<h4 align="center" >(obj. 18.2 - 18.4)</h4>
-					<p></p>
-					<p>Internal Exploitaion vs. External Exploitaion</p>
-					<p>Commonly compromised Assets</p>
-					<p>Importance of Testing Tools</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Exploitation Methodologies</h4>
+					<h4>(Obj. 18.2 - 18.4)</h4>
+					<p align="left">Internal Exploitaion vs. External Exploitaion</p>
+					<p align="left">Commonly Compromised Assets</p>
+					<p align="left">Importance of Testing Tools</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Outcomes</h4>
-					<h4 align="center">Skill 19: Define Common frameworks for conducting cyberspace operations</h4>
-					<p>Objectives-</p>
-					<p>19.1 Describe exfiltration strategies</p>
-					<p>19.2 Describe the benefits of acquiring critical systems</p>
-					<p>Explain the benefits of acquiring domain credentials</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Outcomes</h4>
+					<h4>Skill 19: Define Common frameworks for conducting cyberspace operations</h4>
+					<p align="left">Objectives-</p>
+					<p align="left">19.1 Describe exfiltration strategies</p>
+					<p align="left">19.2 Describe the benefits of acquiring critical systems</p>
+					<p align="left">Explain the benefits of acquiring domain credentials</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Exfiltration</h4>
-					<h4 align="center">(obj. 19.1 - 19.3)</h4>
-					<p></p>
-					<p>Exfiltration done via outbound connections are very common, and hard to counter</p>
-					<p>at the pereimeter since this is an area that has been created to</p>
-					<p>focus on incoming threats</p>
-					<p></p>
-					<p>Common protocols are used to mask data exfiltration:</p>
-					<p>HTTP/HTTPS, FTP and DNS for example easily blend into normal</p>
-					<p>outbound network traffic, thus obfuscating the attacker's actions</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Exfiltration</h4>
+					<h4>(Obj. 19.1 - 19.3)</h4>
+					<p align="left"><font size="6">Exfiltration done via outbound connections are very common, and hard to counter at the pereimeter since this is an area that has been created to focus on incoming threats</font></p>
+					<p align="left"><font size="6">Common protocols are used to mask data exfiltration:<br>
+					HTTP/HTTPS, FTP and DNS for example easily blend into normal outbound network traffic, thus obfuscating the attacker's actions</font></p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Exfiltration</h4>
-					<h4 align="center">(obj. 19.1 - 19.3)</h4>
-					<p></p>
-					<p>In-band vs. out-of-band</p>
-					<p>Access</p>
-					<p>Persistence</p>
-					<p>Means</p>
-					<p>Custom exfiltration tool vs Native utilities</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Exfiltration</h4>
+					<h4>(Obj. 19.1 - 19.3)</h4>
+					<p align="left">- In-band vs. out-of-band</p>
+					<p align="left">- Access</p>
+					<p align="left">- Persistence</p>
+					<p align="left">- Means</p>
+					<p align="left">- Custom exfiltration tool vs Native utilities</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Critical Systems</h4>
-					<h4 align="center">obj. 19.2: (describe the benefits of acquiring critical systems)</h4>
-					<p></p>
-					<p>Assess operational architecture</p>
-					<p>What types of functions are controlled by systems</p>
-					<p>How are dependencies represented among systems</p>
-					<p></p>
-					<p>Geopgraphic (i.e. Control over infrastructure/area)</p>
-					<p>physical (i.e. Router/hardware)</p>
-					<p>Logical (i.e. DNS/software</p>
-					<p>Cyber Persona (i.e. accounts/credentials/access to information)</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Critical Systems</h4>
+					<h4>(Obj. 19.2)</h4>
+					<p align="left"><font size="5">- Assess Operational Architecture<br>
+					- What types of functions are controlled by systems<br>
+					- How are dependencies represented among systems<br>
+					- Geopgraphic (i.e. Control over infrastructure/area)<br>
+					 -Physical (i.e. Router/hardware)<br>
+					- Logical (i.e. DNS/software<br>
+					- Cyber Persona (i.e. accounts/credentials/access to information)</font></p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Credentials</h4>
-					<h4 align="center">obj. 19.3: Explain the benefits of acquiring domain credentials)</h4>
-					<p></p>
-					<p>Common means for stealing credentials: Social Engineering, Phishing, Reusing</p>
-					<p>stolen passwords/shared credentials, brute force, securityquestion reuse</p>
-					<p></p>
-					<p>Credentials can provide adversary with:</p>
-					<p>Remote Access - gain remote entry into networks using Virtula Private networks (VPN)</p>
-					<p>or remote access protocols, like RDP and VNC</p>
-					<p></p>
-					<p>Movement within a network - Stolen credentials (especially domain admin credentials)</p>
-					<p>can allow an attacker to move laterally within a network, or potentially</p>
-					<p>deeper into higher security areas</p>
-					<p></p>
-					<p>Cloud Access - Cloud services that can be accessed via domain credentials</p>
-					<p>provide a means for an attacker to easily access valuable data, especially</p>
-					<p>as organizations move more and more information into the cloud</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Credentials</h4>
+					<h4>(Obj. 19.3)</h4>
+					<p align="left"><font size="4">Common means for stealing credentials: Social Engineering, Phishing, Reusing stolen passwords/shared credentials, brute force, security question reuse</font></p>
+					<p align="left"><font size="4">Credentials can provide adversary with: Remote Access - gain remote entry into networks using Virtula Private networks (VPN) or remote access protocols, like RDP and VNC</font></p>
+					<p align="left"><font size="4">Movement within a network: Stolen credentials (especially domain admin credentials)can allow an attacker to move laterally within a network, or potentially deeper into higher security areas</font></p>
+					<p align="left"><font size="4">Cloud Access: Cloud services that can be accessed via domain credentials provide a means for an attacker to easily access valuable data, especially as organizations move more and more information into the cloud</font></p>
 				</section>
 				
 				</section>
-                    <h4 align="center">Credentials</h4>
-                    <h4 align="center">obj. 19.3 (Explain the benefits of acquiring domain credentials)</h4>
-                    <p></p>
-                    <p>Admin/Domain Admin Credentials</p>
-                    <p>Need to be audited</p>
-                    <p>Should not have the ability to alter audit files</p>
-                    <p>Require secondary approval</p>
-                    <p></p>
-                    <p>Access Controls</p>
-                    <p>Behavioral analysis</p>
-                    <p>Context Awareness</p>
-                    <p></p>
-                    <p>Multi-factor authentication</p>
+                    <h4>Credentials</h4>
+                    <h4>(Obj. 19.3)</h4>
+                    <p align="left">Admin/Domain Admin Credentials<br>
+                    - Need to be audited<br>
+                    - Should not have the ability to alter audit files<br>
+                    - Require secondary approval<br>
+                    <p align="left"><font size="5">Access Controls<br>
+                    - Behavioral analysis<br>
+                    - Context Awareness<br>
+                    - Multi-factor authentication</font></p>
 				<section>
 				
-				<section style="text-align: left;">
-					<h4 align="center">Outcomes</h4>
-					<h4 align="center">Skill 20: Discuss methods to gain access</h4>
-					<p></p>
-					<p>Objectives-</p>
-					<p>20.1 Define shellcode</p>
-					<p>20.2 Define the process for ensuring shellcode executes</p>
-					<p>20.3 Discuss code injection</p>
-					<p>20.4 Explain the process of code injection</p>
-					<p>20.5 Explain methods of detecting code injection</p>
-					<p>20.6 Describe the process to escalate privileges</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Outcomes</h4>
+					<h4>Skill 20: Discuss methods to gain access</h4>
+					<p align="left">Objectives-</p>
+					<p align="left">20.1 Define shellcode</p>
+					<p align="left">20.2 Define the process for ensuring shellcode executes</p>
+					<p align="left">20.3 Discuss code injection</p>
+					<p align="left">20.4 Explain the process of code injection</p>
+					<p align="left">20.5 Explain methods of detecting code injection</p>
+					<p align="left">20.6 Describe the process to escalate privileges</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Gaining Access</h4>
-					<h4 align="center">(obj. 20.1 - 20.2)</h4>
-					<p></p>
-					<p>Shellcode</p>
-					<p>Machine code</p>
-					<p>Exploit vunerability; deliver payload</p>
-					<p>Types</p>
-					<p>Process ensuring execution</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Gaining Access</h4>
+					<h4>(Obj. 20.1 - 20.2)</h4>
+					<p align="left">Shellcode</p>
+					<p align="left">- Machine code</p>
+					<p align="left">- Exploit vunerability; deliver payload</p>
+					<p align="left">https://www.coresecurity.com/system/files/publications/2016/05/TheShellcodeGeneration.pdf</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h3>References</h3>
-					<p>https://www.coresecurity.com/system/files/publications/2016/05/TheShellcodeGeneration.pdf</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Gaining Access</h4>
+					<p align="left">Code Injection: exploitaion of a computer bug that is caused by processing invalid data.</p>
+					<p align="left">Injection is used by an attacker to introduce code into a vulnerable computer program and change/manipulate the course of execution</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Gaining Access</h4>
-					<p>Code Injection: exploitaion of a computer bug that is caused by processing invalid data.</p>
-					<p>Injection is used by an attacker to introduce code into a vulnerable computer program</p>
-					<p>and change/manipulate the course of execution</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Gaining Access</h4>
+					<p align="left">SQL Injection is a code injection technique that could destroy or compromise the integrity of a database</p>
+					<p align="left">SQL Injection is one of the most common web hacking techniques</p>
+					<p align="left">SQL Injection involved placing of malicious code within SQL statements, via web page input</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Gaining Access</h4>
-					<p></p>
-					<p>SQL Injection is a code injection technique that could destroy or compromise the integrity of a database</p>
-					<p></p>
-					<p>SQL Injection is one of the most common web hacking techniques</p>
-					<p></p>
-					<p>SQL Injection involved placing of malicious code within SQL statements, via web page input</p>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Outcomes</h4>
+					<h4>Skill 21: Identify implications of network traffic captures</h4>
+					<p align="left"></p>
+					<p align="left">Objectives-</p>
+					<p align="left">21.1 Define Network Attacks</p>
+					<p align="left">21.2 Compare network attack strategies</p>
+					<p align="left">21.3 Discuss collateral effects of cyberspace attacks</p>
 				</section>
 
-				<section style="text-align: left;">
-					<h4 align="center">Outcomes</h4>
-					<h4 align="center">Skill 21: Identify implications of network traffic captures</h4>
-					<p></p>
-					<p>Objectives-</p>
-					<p></p>
-					<p>21.1 Define Network Attacks</p>
-					<p>21.2 Compare network attack strategies</p>
-					<p>21.3 Discuss collateral effects of cyberspace attacks</p>
-				</section>
-
-                <section style="text-align: left;">
-                    <h4 align="center">Network Attack Strategies</h4>
-                    <h4 align="center">(obj. 21.1 Define network attack strategies</h4>
-                    <p></p>
-                    <p>Internal</p>
-                    <p>Packet Sniffing</p>
-                    <p>Man in the Middle</p>
-                    <p>Network Scanning</p>
-                    <p></p>
-                    <p>External</p>
-                    <p>DoS</p>
-                    <p>Access Attack</p>
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                    <h4>Network Attack Strategies</h4>
+                    <h4>(Obj. 21.1)</h4>
+                    <ul>
+                    	<li>Internal vs External</li>
+                    	<li>Packet Sniffing</li>
+                    	<li>Man in the Middle</li>
+                    	<li>Network Scanning</li>
+                    	<li>DoS/DDoS</li>
+                    	<li>Access Attack</li>
+                    </ul>
                 </section>
                 
-                <section style="text-align: left;">
-                    <h4 align="center">Collateral Effects</h4>
-                    <h4>obj. 21.3 (Discuss collateral effects of cyberspace attacks)</h4>
-                    <p></p>
-                    <p>Ashley Madison:</p>
-                    <p></p>
-                    <p>Responsibility claimed by the "Impact Team"</p>
-                    <p>9.7 Gb posted  on Tor</p>
-                    <p>Site source code posted MANY git repos</p>
-                    <p>Little hard evidence released; not clear whether this was an insider or external hacking</p>
-                    <p></p>
-                    <p>What are some collateral effects?</p>
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                    <h4>Collateral Effects</h4>
+                    <h4>(Obj. 21.3)</h4>
+                    <p align="left"><font size="6">Ashley Madison:<br>
+                    -Responsibility claimed by the "Impact Team"<br>
+                    - Approx. 9.7 Gb posted  on Tor<br>
+                    - Site source code posted MANY git repos<br>
+                    - Little hard evidence released; not clear whether this was an insider or external hacking</font></p>
+                    <p align="left"><font size="4">What are some collateral effects?</font></p>
                 </section>
                 
-                <section style="text-align: left;">
-                    <h4 align="center">Collateral Effects</h4>
-                    <h4 align="center">obj. 21.3 (Discuss collateral effects of cyberspace attacks)</h4>
-                    <p></p>
-                    <p>Yahoo Hacking:</p>
-                    <p></p>
-                    <p>Yahoo's hacking has been measured as the largest data breach in history</p>
-                    <p></p>
-                    <p>2014 hack: 500 million accounts, 2014 hack: up to 1 billion accounts</p>
-                    <p>Not disclosed until 2016</p>
-                    <p>Two Russian FSB officials indicted</p>
-                    <p>US has no extradition treaty with Russia</p>
-                    <p></p>
-                    <p>What are some collateral effects?</p>
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                    <h4>Collateral Effects</h4>
+                    <h4>(Obj. 21.3)</h4>
+                    <p align="left"><font size="6">Yahoo Hacking:<br>
+                    - Yahoo's hacking has been measured as the largest data breach in history<br>
+                    - 2014 hack: 500 million accounts, 2014 hack: up to 1 billion accounts<br>
+                    - Not disclosed until 2016<br>
+                    - Two Russian FSB officials indicted<br>
+                    - US has no extradition treaty with Russia</font></p>
+                    <p align="left"><font size="4">What are some collateral effects?</font></p>
                 </section>
                 
-                <section style="text-align: left;">
-                    <h4 align="center">Collateral Effects</h4>
-                    <h4 align="center">obj. 21.3 Discuss collateral effects of cyberspace attacks</h4>
-                    <p></p>
-                    <p>OPM Hack</p>
-                    <p></p>
-                    <p>Breached december 2014</p>
-                    <p>21 Million current/former Fed. Employees' PII leaked</p>
-                    <p>China is suspected of the breach</p>
-                    <p>SF-86's...foreign contacts?</p>
-                    <p></p>
-                    <p>What are some of the collateral effects?</p>
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                    <h4>Collateral Effects</h4>
+                    <h4>(Obj. 21.3)</h4>
+                    <p align="left"><font size="6">OPM Hack<br>
+                    - >Breached december 2014<br>
+                    - 21 Million current/former Fed. Employees' PII leaked<br>
+                    - China is suspected of the breach<br>
+                    - SF-86's...foreign contacts?</font></p>
+                    <p align="left"><font size="4">What are some of the collateral effects?</font></p>
                 </section>
                 
             </div>
