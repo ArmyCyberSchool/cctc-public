@@ -1,0 +1,41 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Service Enumeration and Analysis
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Run the following command in PowerShell:
+
+`Get-Random –InputObject $(Get-Service) –Count 10`
+
+Query the identified services using the GUI, using sc.exe from the command line, and using PowerShell with both .NET framework service object definitions and Windows Management Instrumentation object definition.
+
+TIP: In Powershell, 'sc' is an alias for Set-Content.
+
+Answer the following questions for each service:
+
+[square]
+* What does this service do? What does it provide to the system?
+* When does this service get launched?
+* What applications or other services may need this service? Why?
+* What are the security implications of this service? How can it be used for malicious purposes or indicate security issues with the system?
+
+== Deliverables / Submit
+
+[square]
+* Commands used to query and enumerate service information
+* A document summarizing your answers and assessment
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with Windows services
+* Confidence enumeration Windows services through various techniques
+* Familiarity with baseline “normal” Windows service and their states
+* Confidence researching and analyzing Windows services

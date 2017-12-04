@@ -1,0 +1,34 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Batch Script WMIC
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Write a batch script using only WMIC commands to quickly enumerate your Windows system. At a minimum, the script should capture:
+
+[square]
+* User and group information
+* Information on running processes
+* Service information
+* Network configuration information
+* Information about hosts on the same network (no active scanning)
+* System configuration information
+* Directory and file information in key locations
+
+
+== Deliverables
+[square]
+* A batch script running WMIC commands
+* The output of this script
+
+== Learning Objectives / Outcomes
+[square]
+* Familiarity with Command Prompt and WMIC
+* Confidence interacting with Windows from a command line interface
+* Familiarity with Windows commands that can be used to enumerate the system

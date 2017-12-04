@@ -1,0 +1,33 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity – Baseline Your Registry
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Scenario
+
+You want to enumerate your registry to create a baseline for future forensic reference and to take registry snapshots at specific points in time. Additionally, you want easily to identify registry changes over time by comparing results from different runs of this baseline script.
+
+== Activity
+
+Create a PowerShell script that queries the registry and records the values and data from forensically relevant registry keys. Write a second script that compares the output of two baseline runs and identifies differences between run times. This script should input the two datasets as command line arguments. For best results, this script alerts only the specific information that is different.
+
+== Deliverables
+
+[square]
+* The script that baselines the registry
+* The output of your baseline registry script
+* The script that compares baseline runs
+* The output of the script that compares two runs
+
+== Learning Objectives / Outcomes
+
+[square]
+* Confidence querying and documenting registry keys and values
+* Familiarity with forensically relevant Windows registry keys
+* Familiarity with feeding input to scripts - command line arguments
+* Capability to compare similar data sets
