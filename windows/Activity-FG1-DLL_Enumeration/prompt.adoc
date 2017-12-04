@@ -1,0 +1,36 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - DLL Enumeration
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Write a Batch script that enumerates all Dynamic-link libraries (DLLs) loaded into processes.
+Output a clearly formatted and annotated list by process of every DLL loaded into each process:
+
+[square]
+* Get the list of processes
+* Iterate over the list of processes
+** Output the process name
+** Output the list of DLLs (modules) loaded into each process
+
+Output a unique list of all DLLs loaded into every process. If system32.dll is loaded into 30 processes, it appears only once in this list.
+
+== Deliverables
+
+[square]
+* A script that lists DLLs loaded into each process, and its output
+* A script that lists unique DLLs loaded into every process, and its output
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with Batch commands, properties, and variables
+* Understanding and manipulating Batch variables
+* Familiarity with the For loop
+* Confidence writing scripts to achieve specified objectives

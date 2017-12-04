@@ -1,0 +1,47 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - SysInternals Process Tools
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Activity
+
+Download the SysInternals Suite to your Windows system from TechNet at: +
+https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx
+
+Run the following SysInternals tools to get familiar with their functionality:
+
+[square]
+* Process Explorer
+* Process Monitor
+* PsList
+* PsKill
+* PsSuspend
+* PsService
+* ListDLLs
+
+Complete the following tasks and document the tool and process used to compete the task:
+
+[square]
+* Launch Notepad, create a new txt document and save it to the desktop. With Notepad still open, identify the file that is open (presuming you do not already know). 
+* Force kill the active running instance of Notepad.
+* Identify all the registry entries that are accessed, edited, and created when launching Notepad and accessing a single .txt file.
+* Launch Notepad on your Windows 7 system. Query the processes running on your Windows 7 system from your Windows 10 system. Kill Notepad on your Windows 7 system from your Windows 10 system.
+* Launch Notepad on your Windows 7 system. Suspend the Notepad process from your Windows 10 machine.
+* Query the services running on your Windows 7 system from your Windows 10 system. Stop the Windows Defender service on Windows 7 from Windows 10. Verify that the service was stopped in Windows 7. Restart the service from Windows 10.
+
+== Deliverables
+
+[square]
+* A document summarizing your process used to accomplish the tasks
+
+== Learning Objectives / Outcomes
+
+[square]
+* Familiarity with SysInternals Suite tools
+* Capability to apply SysInternals tools achieve specific tasks
+* Confidence manipulating processes and services on local and remote systems

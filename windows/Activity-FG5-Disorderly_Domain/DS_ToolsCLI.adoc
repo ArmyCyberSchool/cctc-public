@@ -1,0 +1,55 @@
+:doctype: book
+:styledir: /home/gitlab-runner/builds/119e33fe/0/CCTC/private/
+:stylesheet: {styledir}cctc.css
+//file path above may change depending on the location
+
+[blue]#*PowerShell DSTools Ext. Commands>*#
+
+[green]#Windows 10 "Admin Approval Mode" Prevents "net use" in cmd.exe; use PowerShell:# +
+net use * \\ [purple]#*<Server IP>*# \"Warrior Share" /user:army.warriors\administrator PassWord12345!! +
+*cd* [purple]#*?*#*:\WarriorShare; Get-ChildItem*
+
+dsquery ou -limit 0 -s [purple]#*<Server IP>*# -u Administrator -p PassWord12345!! | more +
+[green]## displays all organizational units (OUs) in the Domain (Server Specific / IP)#
+
+dsquery * -filter ObjectClass=user -limit 0 -attr name mail ` +
+-s [purple]#*<Server IP>*# -u Administrator -p PassWord12345!! | more +
+[green]## displays all users names and emails in the entire Domain#
+
+dsquery user -name * -limit 0 -s 192.168.217.174 -u Administrator ` +
+-p PassWord12345!! | dsget user -samid -desc -s [purple]#*<Server IP>*# ` +
+-u Administrator -p PassWord12345!! | more +
+[green]## you have to include the credentials on both sides of a pipe; +
+# .. they are not continued through the pipe. +
+# this command extracts the names and descriptions of all Domain users, regardless of OU.#
+
+[green]#Same as above, BUT pulls all user attributes (using dsget) for single user: Bob# +
+dsquery user -name ` +
+"CN=Jade Perkins,OU=S-4,OU=STAFF,OU=HQ,OU=WARRIORS,DC=army,DC=warriors" ` +
+-s [purple]#*<Server IP>*# -u Administrator -p PassWord12345!! | dsget user * -s [purple]#*<Server IP>*# ` +
+-u Administrator -p PassWord12345!!
+
+`https://ss64.com/nt/dsget-user.html`
+
+dsquery * -filter ObjectClass=user ` +
+" CN=Jade Perkins,OU=S-4,OU=STAFF,OU=HQ,OU=WARRIORS,DC=army,DC=warriors " -attr * +
+[green]## returns ALL (dsquery) attributes for user: Bob#
+
+[blue]#*PowerShell AD CMDLET Usage >*#
+
+Get-ADUser -Filter * -SearchBase "OU=WARRIORS,DC=army,DC=warriors" | ` +
+Select-Object -ExpandProperty DistinguishedName | more +
+[green]## displays powershell object "DistinguishedName" for every user in OU=WARRIORS#
+
+[green]## trick here is passing creds with PowerShell AD CMDLETS .. one way to do it ..# +
+$username = "Administrator" +
+$password = "PassWord12345!!" +
+$secstr = New-Object -TypeName System.Security.SecureString +
+$password.ToCharArray() | ForEach-Object {$secstr.AppendChar($_)} +
+[red]#$cred# = new-object -typename System.Management.Automation.PSCredential -argumentlist $username, $secstr
+
+Get-ADUser -Filter * -SearchBase "OU=WARRIORS,DC=army,DC=warriors" -server ` +
+[purple]#*<Server IP>*# -Credential [red]#$cred#
+
+Get-Help Get-AD* | Select-Object Name, Synopsis +
+[green]## displays All PowerShell AD CMDLETs and thier purpose.#
