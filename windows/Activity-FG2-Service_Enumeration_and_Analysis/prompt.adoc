@@ -12,7 +12,7 @@
 
 Run the following command in PowerShell:
 
-`Get-Random –InputObject $(Get-Service) –Count 10`
+`Get-Random –InputObject $(Get-Service) –Count 5`
 
 Query the identified services using the GUI, using sc.exe from the command line, and using PowerShell with both .NET framework service object definitions and Windows Management Instrumentation object definition.
 
