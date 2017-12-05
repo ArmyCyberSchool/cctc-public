@@ -39,8 +39,8 @@
 		<div class="reveal">
 				<div class="slides">
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h2>Traffic Manipulation</h2>
-					<h3>Networkingework</h3>
+					<h1>Traffic Manipulation</h1>
+					<h5>Networkingework</h5>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -71,7 +71,7 @@
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Convert Channels</h4>
-					<p>(Obj. 10.2 Describe covert methods for transferring files)</p>
+					<p>(Obj. 10.2)</p>
 					<p>Header modulation, Header Manipulation, Header Options</p>
 					<p>Data Field</p>
 					<br>
@@ -80,7 +80,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Data Exfiltration</h4>
-					<p>(Obj. 10.2 Describe convert methods for transferring files</p>
+					<p>(Obj. 10.2)</p>
 					<ul>
 					  <li><font size="6">Covertnes (Capacity of the medium - Transmission Rate</font></li>
 					  <li><font size="6">The lower transmssion rate compared to the mediume capacity, the more cover the operation is </font></li>	
@@ -91,55 +91,62 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Files Transfer Basic</h4>
-					<p>(Obj. 10.1 Describe commomn methods for transfering files</p>
+					<p>(Obj. 10.1)</p>
 					<p>Stdin (channel 0) / Standou Stdout (channel 1)</p>
 					<p>Pipes</p>
-					<p>Fifo in nature</p>
-					<p>Can live longer than the poces its faciliation</p>
-					<p>Can use it for a pass-through in data transfers</p>
-					<p>Client.Listerning</p>
+					<ul>
+						<li>Fifo in nature</li>
+						<li>Can live longer than the poces its faciliation</li>
+						<li>Can use it for a pass-through in data transfers</li>
+					</ul>
+					<p>Client.Lister</p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Netcat</h4>	
-					<p>(Obj. 10.3 Explain the forward file transfer process with netcat</p>
-					<p>(Obj. 10.4 Explain the reverse file transfer process with netcat</p>
-					<p>Netcat: Cilent to Listener file transfer</p>
-					<p>Client(sends file) 10.0.0.2.9001 file.txt</p>
-					<p>Listener (receive file) nc-1 -p 9001 > file.txt</p>
-					<p>Listener (send file file) nc-1 -p 9001 > file.txt</p>
-					<p>Client (receive file) nc10.0.0.2.9001 > file.txt</p>
+					<p>(Obj. 10.3 - 4)</p>
+					<p><font size="4">Netcat: Client to Listener file transfer</font></p>
+					<p><font size="4">Client(sends file) 10.0.0.2.9001 file.txt</font></p>
+					<p><font size="4">Listener (receive file) nc-1 -p 9001 > newfile.txt</font></p>
+				</section>
+
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Netcat</h4>	
+					<p>(Obj. 10.3 - 4)</p>
+					<p><font size="4">Netcat: Listener to Client file transfer</font></p>
+					<p><font size="4">Listener(sends file) nc-1 -p 9001 > file.txt</font></p>
+					<p><font size="4">Client (receive file) nc 10.0.0.2.9001 > newfile.txt</font></p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Netcat Relays</h4>
-					<p>(Obj. 10.3: Explain the forward file transfer process with netcat.</p>
-					<p>(Obj. 10.4: Explain the reverse file transfer process with netcat.</p>
-					<p>Client (relay file mk nod mypipe p nc 10.0.0.3 9002 0 pipe | nc 10.0.0.1. 9001 | tee mypipe</p>
-					<p> or </p>
-					<p> nc 10.0.0.3 90020  my pipe | nc 10.0.0.1 9001 > 1 mypipe </p>
-					<p> Lister2 (sends file) nc-l -p 9002 file.txt</p>
-					<p> Lister1 (reeives file)nc-l p 9001 file.txt</p>
+					<p>(Obj. 10.3 - 4) </p>
+					<p><font size="4">Client Relay <br>
+					mk nod mypipe p <br>
+					nc 10.0.0.3 9002 &lt 0 pipe | nc 10.0.0.1. 9001 | tee mypipe<br>
+					or <br>
+					nc 10.0.0.3 9002 &lt 0 mypipe | nc 10.0.0.1 9001 1 &gt mypipe </font></p>
+					<p><font size="4"> Lister2 (sends file) nc-l -p 9002 &lt file.txt</font></p>
+					<p><font size="4"> Lister1 (receives file) nc-l p 9001 &gt file.txt</font></p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-			        	<h4> FPIPE</h4>
-					<p>Obj. 12.5 Use FPIPE to perform redirector</p>
-					<p>FPipe v2.1 - Port redirectors</p>
-					<p>FPipe is a source port forward/redirector. It can create a TCP or UDP stream with a source porrt of your choice.<br> 
-					This is useful for getting past the firwall that allow traffice with souce ports of say 23, to connect with internal servers.</p>
-				    <p> Usually a client has a random high number source port, which a firewall picks off in its filter. However the firewall 
-				    might let Telnet traffic throuh. FPipe can force the stream to always use a specific source port, in this case the Telnet 
-				    source port. By doing this, the firewall sees the steam as an allowed service and let's the stream through.</p>
+			        <h4> FPIPE</h4>
+					<p>(Obj. 12.5)</p>
+					<p><font size="4">FPIPE is a port/stream redirector commonly used for windows systems. It can create a TCP or UDP stream with a source port of your choice.<br> 
+					This is useful for getting past the firwall that allow traffice with souce ports of say 23, to connect with internal servers.</font></p>
+				    <p><font size="4"> Usually a client has a random high number source port, which a firewall picks off in its filter. However the firewall 
+				    	might let HTTPS traffic throuh, for example. FPipe can force the stream to always use a specific source port, in this case the HTTPS 
+				   	 source port. By doing this, the firewall sees the steam as an allowed service and let's the stream through.</font></p>
 				</section>
 				    
 			    <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4> BOTNET (Another Covert Channel)</h4>
-					<p>Obj. 12.4 Explain the challenges of discovering covert channels</p>
-					<p>- Master/Zombies</p>
-					<p>- Used for: Spam, DDOS, Spyware, Virus, CLickfraud </p>
-					<p>- Notorious Examples: Conflicker, Zeus, TDL-4 (Alureon)</p>
-					<p>- Commonly used protocol for CC: HTTP, IRC, UDP, DNS over TCP</p>
+					<p>(Obj. 12.4)</p>
+					<p><font size="6">- Master/Zombies</font></p>
+					<p><font size="6">- Used for: Spam, DDOS, Spyware, Virus, CLickfraud </font></p>
+					<p><font size="6">- Notorious Examples: Conflicker, Zeus, TDL-4 (Alureon)</font></p>
+					<p><font size="6">- Commonly used protocol for C2: HTTP, IRC, UDP, DNS over TCP</font></p>
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -147,28 +154,25 @@
 				   	 <p> Obj. 12.6 Describe protocol swapping)</p>   
 				   	 <p> DNSCAT2 is just on of many</p>
 				   	 <p> Most often, common protocol are used to hid devioius actions</p>
-				  	 <p> Common Botnet CC protocols are also popular choces for customer programs that provide protocols swapping</p>
+				  	 <p> Common Botnet C2 protocols are also popular choces for programs that provide protocol swapping</p>
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> SKILL 13: Identify fundamentals of secure shell protocol</h4>
-				   	    <p> Objective<br> </p>
-				    	<p> 13.1 Discuss SSH tunnels</p>
-				    	<p> 13.2 Discuss SSH reverse tunnels</p>
-				   	    <p> 13.3 Interpret tunnel diagrams</p>
-				   	    <p> 13.4 Describe the process for using SSH to connet to a remot machine</p>
-				    	<p> 13.5 Explain the purpose of multi-hop tunneling</p>
-				    	<p> 13.6 Explain the process for multi-hop tunneling</p>
-				    	<p> 13.7 Describe the appropriate use of reverse tunnels</p>
-				    	<p> 13.8 Describe basic port forwarding</p>
-				   	    <p> 13.9 Set up an inital SSH tunel and add another tunnel using another toolDiscuss SSH tunnels</p>
+				   	<p> Objective </p>
+				    	<p><font size="4">13.1 Discuss SSH tunnels</font></p>
+				   	<p><font size="4"> 13.3 Interpret tunnel diagrams</font></p>
+				   	<p><font size="4"> 13.4 Describe the process for using SSH to connet to a remote machine</font></p>
+				    	<p><font size="4"> 13.5 Explain the purpose of multi-hop tunneling</font></p>
+				    	<p><font size="4"> 13.6 Explain the process for multi-hop tunneling</font></p>
+				    	<p><font size="4"> 13.8 Describe basic port forwarding</font></p>
+				   	<p><font size="4"> 13.9 Set up an inital SSH tunel and add another tunnel using another tool</font></p>
 				 </section>
 				    
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Getting Around the Pesky Firewall</h4>
-				    	<p> Objective 13.3 , 4 and 8</p>
-				    	<p> Imagine that you are at work, but you wanted to do - no work related activities. Your company Firewalls prevent you from accessing a website you want to browse to (gambling.com)</p>
-				    	<p>SSH is allowed from the inside of the network outbound because the IT staff must do remote adminstration of devices at branch offiices.</p>
+				    	<p> (Obj. 13.3 - 4, 8)</p>
+				    	<p><font size="6"> Imagine that you are at work, but you wanted to do - no work related activities. Your company Firewalls prevent you from accessing a website you want to 						browse to (gambling.com). SSH is allowed from the inside of the network outbound because the IT staff must do remote adminstration of devices at branch offiices.</font></p>
 				 </section>
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -179,75 +183,73 @@
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Local Port Forwarding with IPv6</h4>
-				    	<p> Objective 13.3 , 4 and 8</p>
-				    	<p> The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
-				    	the address field (not th colon to specify the port info) this is done by enclosing the addres in square brackets which must then be escaped with backslashes:</p>
-				    	<p> ssh _l 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1</p>
-					    <p>For link-local address(fe80::0 specify the interface following the GWY</p>
+				    	<p> Obj. 13.3 - 4, 8)</p>
+				    	<p><font size="6"> The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
+				    	the address field (not th colon to specify the port info) this is done by enclosing the addres in square brackets which must then be escaped with backslashes:</font></p>
+				    	<p><font size="4"> ssh _l 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1<br>
+					For link-local address(fe80::0 range) specify the interface following the SSH GWY</font></p>
 				    	<p>picture here</p>
 				 </section>
 				    
-				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4>Tunnel within a Tunnel </h4>
-				    	<p>Objective 13.3 and 9<br> </p>
-				    	<p> Scenario: You have credentials for an SSH server, but it does not allow you to open a shell. How can you leverage this to move through obstacles?</p>
-			        	<p> Use the -NT flag stop ssh from trying to open a terminal session<br> </p>
-			        	<p> 1 . Use local port forward (on host A) to direct the SSH server (host B) to connect your local port to another host's (host C) SSH service</p>
-			        	<p> Open an SSH Session to your local port, which creates an SSH tunnel to host C, through the Tunnel to host B </p>
-				 </section>
-				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4> SSH Tunneling </h4>
-				   	    <p> Objective 13.3 thur 9<br> </p>
-				   	    <p> Someone from the Security team noticed all the SSH traffic destined to your SSH Server and blocked it in the firewall. Luckily, they can't block all SSH; you can just used a different Server. However, you don't control this server so you account won't allow you to open a terminal session. You need to SSH to your home server to SCP some files you need.</p>
+				    	<h4> Tunnel within a Tunnel </h4>
+				   	<p>(Obj. 13.3, 9)</p>
+				   	<p> Someone from the Security team noticed all the SSH traffic destined to your SSH Server and blocked it in the firewall. Luckily, they can't block all SSH; you can just used a different Server. However, you don't control this server so you account won't allow you to open a terminal session. You need to SSH to your home server to SCP some files you need.</p>
 				        <p>picture here </p>
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>SSH Tunneling</h4>
-				    	<p>Objective 13.3 thur 9</p>
-				    	<p>What if access polices prevented you from getting to your Home machine from the first gateway, but you could pivot into a second SSH server, then to the Target? Try two levels of SSH tunneling (Tunnel inception)</p>
+				    	<p>(Obj. 13.3 - 9)</p>
+				    	<p><font size="6">What if access polices prevented you from getting to your Home machine from the first gateway, but you could pivot into a second SSH server, then to the Target? Try two levels of SSH tunneling (Tunnel inception)</font></p>
 				        <p> picture here</p>
 				</section>
+
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    	<h4> SKILL 13: Identify fundamentals of secure shell protocol</h4>
+				   	<p> Objective </p>
+				    	<p><font size="4"> 13.2 Discuss SSH reverse tunnels</font></p>
+				    	<p><font size="4"> 13.7 Describe the appropriate use of reverse tunnels</font></p>
+				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4>Remote SSH Tunneling</h4>
-				    	<p>Objective 13.2 thur 7</p>
-				    	<p>Inside Host initiates the tunnel to tell the remote host where to forward its local ports to (through the tunnel)</p>
+				    	<h4>Remote Port Forwarding (Reverse SSH Tunnel) </h4>
+				    	<p>(Obj. 13.2 - 7)</p>
+				    	<p><font size="6">Inside Host initiates the tunnel to tell the remote host where to forward its port to (through the tunnel)</font></p>
 				    	<p>picture here</p>
 				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>Remote SSH Tunneling</h4>
-				    	<p>Objective 13.3 thur 7</p>
+				    	<p>(Obj.13.3 - 7)</p>
 				    	<p>Inside Host initiate the tunnel to tell the remote host where to forward its locat port to (throught the tunnel)</p>
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>Remote SSH Tunneling</h4>
-				     	<p>Objective 13.3 thur 7</p>
-				    	<p>Inside Host initiate the tunnel to tell the remote host (HOME) where to forward its locat port to (9001) to (throught the tunnel)</p>
+				     	<p>(Obj. 13.3 - 7)</p>
+				    	<p><font size="6">Inside Host initiate the tunnel to tell the remote host (HOME) where to forward its locat port to (9001) to (throught the tunnel)</font></p>
 				    	<p>picture here</p>
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				   	    <h4>Local and Remote SSH Tunneling</h4>
-				   	    <p>Objective 13.2 and 5 thur 7</p>
-				    	<p>Inside initiates the tunnel to tell the remote host where to forward its local port to (through the tunnel)</p>
-				    	<p>Home initates a tunnel to forward it's local port to meet up with the port of the pivot that is receiving the foward Webpage</p>
+				   	<h4>Local and Remote SSH Tunneling</h4>
+				   	<p>(Obj. 13.2, 5, 7)</p>
+				    	<p><font size="6">Inside initiates the tunnel to tell the remote host where to forward its local port to (through the tunnel)<br>
+				    	Home initates a tunnel to forward it's local port to meet up with the port of the pivot that is receiving the foward Webpage</font></p>
 				 </section>
 				    
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				   	    <h4>Dynamic Port Forwarding</h4>
-				   	    <p>Objective 13.3 thur 9</p>
-				   	    <p>Can be used dynamic port forwarding over an SSH tunnel: defaults to port 9050 (can be changed)</p>
-				    	<p>Run TCP/IP based application on your host machine thru proxy chains: the SSH forwarding allows you to access assets from a remote (SSH Target) perspective</p>
-				    	<p>You cannot access the target, but you can SSH into a compromised host who has access</p>
+				   	<h4>Dynamic Port Forwarding</h4>
+				   	<p>(Obj. 13.3 - 9)</p>
+				   	<p><font size="6">Dynamic port forwarding over an SSH tunnel <br>
+					Needs a "wrapper" to specify the endpoint. This can be proxy settings in your browser, or a program like Proxychains (defaults to port 9050) </font></p>
+				    	<p><font size="6">Run TCP/IP based application on your host machine thru proxy chains: the SSH forwarding allows you to access MANY (dynamic) target ports</font></p>
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				   	    <h4>Dynamic Port Forwarding</h4>
-				   	    <p>Objective 13.3 thur 9</p>
-					    <p>picture here</p>
+				   	<h4>Dynamic Port Forwarding</h4>
+				   	<p>(Obj. 13.3 - 9)</p>
+					<p>picture here</p>
 				</section>
 			</div>
 		</div>
