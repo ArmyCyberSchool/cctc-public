@@ -10,6 +10,8 @@
 
 image::../Resources/PRIVWARS.png[PRIVWARS,height="150",width="450",float="left"]
 
+{empty} +
+
 == Learning Objectives
 
 [square]
@@ -48,7 +50,7 @@ _Welcome to the Galactic Empire Messaging System!_ One of our servers recently f
 |===
 |*Name*       |*GUID*
 |`rebels`     |`2000`
-|`imps`       | `2100`
+|`imps`       |`2100`
 |===
 
 {empty} +
@@ -88,7 +90,7 @@ imps_are_bad          is owned by `nobody`, and the rebels, readable by the owne
 
 rebel_base_location   is owned by sheev, and the imps, and is fully accessible(rwx) by the imps group.
 
-deathstar_plan        is owned by Leia, and the rebels, and is fully accessible(rwx) by the rebels group.
+deathstar_plans       is owned by Leia, and the rebels, and is fully accessible(rwx) by the rebels group.
 ----
 
 {empty} +
@@ -104,10 +106,11 @@ deathstar_plan        is owned by Leia, and the rebels, and is fully accessible(
 == Hints
 
 From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
+`man usermod | grep -A2 "SEE ALSO"`
 
 {empty} +
 
 == Useful Resources
 
 https://www.tutorialspoint.com/unix/unix-file-permission.htm +
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/System_Administration_Guide/s1-acls-setting.html +
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/acls-setting +
