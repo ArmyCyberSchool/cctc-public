@@ -192,10 +192,11 @@
 				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4> Tunnel within a Tunnel </h4>
+				    <h4> Tunnel within a Tunnel </h4>
 				   	<p>(Obj. 13.3, 9)</p>
 				   	<p> Someone from the Security team noticed all the SSH traffic destined to your SSH Server and blocked it in the firewall. Luckily, they can't block all SSH; you can just used a different Server. However, you don't control this server so you account won't allow you to open a terminal session. You need to SSH to your home server to SCP some files you need.</p>
-				        <p>picture here </p>
+				    <center><img src="https://git.cybbh.space/CCTC/public/master/networking/slides/images/Network_Traffic_Manipulation/tunnel-in-tunnel.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -207,7 +208,7 @@
 
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> SKILL 13: Identify fundamentals of secure shell protocol</h4>
-				   	<p> Objective </p>
+				   	    <p> Objective </p>
 				    	<p><font size="4"> 13.2 Discuss SSH reverse tunnels</font></p>
 				    	<p><font size="4"> 13.7 Describe the appropriate use of reverse tunnels</font></p>
 				 </section>
@@ -216,27 +217,17 @@
 				    	<h4>Remote Port Forwarding (Reverse SSH Tunnel) </h4>
 				    	<p>(Obj. 13.2 - 7)</p>
 				    	<p><font size="6">Inside Host initiates the tunnel to tell the remote host where to forward its port to (through the tunnel)</font></p>
-				    	<p>picture here</p>
+				    	<center><img src="https://git.cybbh.space/CCTC/public/master/networking/slides/images/Network_Traffic_Manipulation/remote.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+
 				 </section>
-				    
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4>Remote SSH Tunneling</h4>
-				    	<p>(Obj.13.3 - 7)</p>
-				    	<p>Inside Host initiate the tunnel to tell the remote host where to forward its locat port to (throught the tunnel)</p>
-				</section>
-				    
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    	<h4>Remote SSH Tunneling</h4>
-				     	<p>(Obj. 13.3 - 7)</p>
-				    	<p><font size="6">Inside Host initiate the tunnel to tell the remote host (HOME) where to forward its locat port to (9001) to (throught the tunnel)</font></p>
-				    	<p>picture here</p>
-				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				   	<h4>Local and Remote SSH Tunneling</h4>
 				   	<p>(Obj. 13.2, 5, 7)</p>
 				    	<p><font size="6">Inside initiates the tunnel to tell the remote host where to forward its local port to (through the tunnel)<br>
 				    	Home initates a tunnel to forward it's local port to meet up with the port of the pivot that is receiving the foward Webpage</font></p>
+				        <center><img src="https://git.cybbh.space/CCTC/public/master/networking/slides/images/Network_Traffic_Manipulation/Meet-in-Middle.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+
 				 </section>
 				    
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -244,12 +235,13 @@
 				   	<p>(Obj. 13.3 - 9)</p>
 				   	<p><font size="6">Dynamic port forwarding over an SSH tunnel <br>
 					Needs a "wrapper" to specify the endpoint. This can be proxy settings in your browser, or a program like Proxychains (defaults to port 9050) </font></p>
-				    	<p><font size="6">Run TCP/IP based application on your host machine thru proxy chains: the SSH forwarding allows you to access MANY (dynamic) target ports</font></p>
+				    <center><img src="https://git.cybbh.space/CCTC/public/master/networking/slides/images/Network_Traffic_Manipulation/dynamic.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				   	<h4>Dynamic Port Forwarding</h4>
+				   	<h4>ProxyChains</h4>
 				   	<p>(Obj. 13.3 - 9)</p>
-					<p>picture here</p>
+				   	<p><font size="6">Run TCP/IP based application on your host machine thru proxychains: the SSH forwarding allows you to access MANY (dynamic) target ports</font></p>
+					<center><img src="https://git.cybbh.space/CCTC/public/master/networking/slides/images/Network_Traffic_Manipulation/proxychains.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
 				</section>
 			</div>
 		</div>
