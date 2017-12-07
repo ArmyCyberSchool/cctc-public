@@ -301,6 +301,7 @@
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Supervisory Workstations</h3>
+					<img src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-1-ICS-hardware_Supervisory-workstation-Process-Control.png">
 				</section>
 
 <!-- Industrial Control Software and Programing (Skill 14.2) -->
@@ -379,10 +380,10 @@
 					<section>
 						<br>
 						<h4>Windows Embedded</h4>
-						<img style="height: 500px" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-2-ICS-software-RTOS_Windows%20embedded.jpg">
-				    		<div>
+						<span>
+							<img style="height: 500px" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-2-ICS-software-RTOS_Windows%20embedded.jpg">
 							<small>Look and feel of Windows for controllers</small>
-						</div>
+						</span>
 					</section>	
 					<section>
 						<br>
@@ -491,13 +492,18 @@
 				    <h3>Industrial Control Network Protocols</h3>
 				    <section>
 				        <p>ICS supervisory systems communicate to the subordinate controllers via a mix of proprietory and open standard protocols.  The protocols are designed to carry deterministic control and status signals between the systems.  Security controls were added after the protocols were already mature.</p>
-				    </section>
-				    <section>
-				        <br>
-				        <h4>MODBUS</h4>
-				        <small>Old and insecure, but very widely used.</small>
-				    </section>
-				    <section>
+				 </section>
+				 <section>
+					 <br>
+					 <h4>MODBUS</h4>
+					 <small>Old and insecure, but very widely used.</small>
+				 </section>
+				 <section>
+					 <br>
+					 <h4>OPC</h4>
+					 <small>OPC and OPC UA are used to bridge between IT and OT networks.  OPC is an insecure protocol, primarily designed to provide access, not to restrict it.</small>
+				</section>
+			       	<section>
 				        <br>
 				        <h4>DNP3</h4>
 				        <small>Used in the electrical grid.  Modern implementations include authentication and integrity controls.</small>
@@ -560,19 +566,19 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h1>ICS Zones</h1>
 				</section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    <h3>Business IT Zone</h3>
+				    <p>Normal IT infrastructure used for data and information processing.  Usually connected to the internet.</p>
+				</section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    <h3>Supervisory OT Zone</h3>
+				    <p>Has Supervisory workstations, Data Historians, and Engineering Workstations, with unrestricted network access to controllers.</p>
+				</section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    <h3>Field or Plant Zone</h3>
+				    <p>Connects controllers to sensors, end point actuators, or remote terminals.  This can be over LAN, WAN, Serial, or even Pnumatic networks.</p>
+				</section>
 <!--
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h3>Real Time Operating Systems</h3>
-				    <p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optomised to handle real time and deterministic functions</p>
-				</section>
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h3>Real Time Operating Systems</h3>
-				    <p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optomised to handle real time and deterministic functions</p>
-				</section>
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h3>Real Time Operating Systems</h3>
-				    <p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optomised to handle real time and deterministic functions</p>
-				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h3>Real Time Operating Systems</h3>
 				    <p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optomised to handle real time and deterministic functions</p>
