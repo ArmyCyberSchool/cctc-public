@@ -47,6 +47,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">					
 				<h3>Outcomes</h3>
+				    <br>
 					<p align="left">SKILL 7: Define methodologies of filtering</p>	
 					<p align="left">SKILL 8: Identify Filtering devices</p>
 					<p align="left">SKILL 9: Configure filtering devices</p>
@@ -54,22 +55,19 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Firewall Basics</h4>
-					<p>Obj. 7.1</p>
+					<p>(Obj. 7.1)</p>
+					<br>
 				    <p align="left">- Routed Mode <br>
 				    - Transparent Mode </p>
-			        <p align="left"> Whitelist vs. Blacklist logic</p>
+			        <p align="left"> -Whitelist vs. Blacklist logic</p>
+			        <br>
 			    	<p align="left">Where/How should you arrange Firewalls in an Enterprise Topology?</p>
-			    	<aside class="notes">
-			        -In routed mode, the firewall is a "router hop" in the network. This means it has interfaces in different networks, can perform NAT between connected networks, and can use routing protocols to relay subnet information between security zones.
-                    -Transparent firewall is placed on the network as a Layer 2 device that acts like a "bump in the wire". It is not seen as a hop to connected devices. There are many benefits to this type of setup. One thing in particular is that it makes it much more difficult for an adversary to find the firewall and perform reconnaissance such as "Firewalking".
-		            -A Whitelist tests desired input against a list of possible correct input’s. A list of good conditions/values is gathered, then the input recieved is compared to verify that it matches the good condition/value.
-		            -A Blacklist tests a desired input against a list of negative input’s. A list of bad conditions/values is gathered, then the input recieved is compared to verify that it matches the bad condition/value.
-	                </aside>
+
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Filtering Basics</h4>
-					<p>Obj. 7.1, 7.6</p>
+					<p>(Obj. 7.1, 7.6)</p>
 					<p align="left">- Host based versus Network Based Firewalls </p>
 					<ul><font size="6">
 					    <li> IPTables, Windows FW </li>
@@ -82,6 +80,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Fire Walking</h4>
+					<br>
 					<p align="left"><font size="6">- Use ICMP, UDP, or TCP packets to test whether ports/protocols are allowed through filtering devices <br>
 					- Incrementing TTL; TTL expirations trigger ICMP TTL exceeded replies<br>
 			        - Defense: block outgoing ICMP Time exceeded packets at the perimeter or use Network Address Translation to hide any/all internal network addresses</font></p>
@@ -101,20 +100,20 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Intrusion Detection vs. Prevention</h4>
-					<p>Obj. 7.1, 7.2</p>
-					<p align="left"><font size="6">- IDS: Intrusion Detection System </font></p>
-					<p align="left"><font size="5">Do not need to be inline <br>
+					<p>(Obj. 7.1, 7.2)</p>
+					<p align="left"><font size="6">IDS: Intrusion Detection System </font></p>
+					<p align="left"><font size="5"> -Do not need to be inline <br>
 					Logging, Alerting </font></p>
-					<p align="left"><font size="6">- IPS: Intrusion Prevention System </font></p>
-					<p align="left"><font size="5"> Dropping, Blocking, Resetting, Sandboxing </font></p>
-					<p align="left"><font size="6">- Signatures </font></p>
-					<p align="left"><font size="5"> Atomic <br>
-    				Stateful </font></p>
+					<p align="left"><font size="6">IPS: Intrusion Prevention System </font></p>
+					<p align="left"><font size="5"> -Dropping, Blocking, Resetting, Sandboxing </font></p>
+					<p align="left"><font size="6">Signatures </font></p>
+					<p align="left"><font size="5"> -Atomic <br>
+    				 -Stateful </font></p>
 				</section>
                 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Standard ACLs</h4>
-					<p>Obj. 7.3, 7.4, 7.5 </p>
+					<p>(Obj. 7.3, 7.4, 7.5)</p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
 					<p align="left"><font size="6"> ip access-list standard 1 <br>
 				    permit host 10.0.0.1 <br>
@@ -126,7 +125,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Extended ACLs</h4>
-					<p> Obj. 7.3, 7.4, 7.5 </p>
+					<p>(Obj. 7.3, 7.4, 7.5)</p>
 					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/ACL.png" align="right" style="max-height: 35%; max-width: 35%">
 					<p align="left"><font size="5"> ip access-list extended 101 <br>
 				    remark action protocol (src IP) (src port) (dst IP) (dst port) <br>
@@ -137,37 +136,42 @@
 				</section>
 				
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<p> Obj. 7.7</p>
+					<h4>Practice</h4>
+					<p>(Obj. 7.7)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
 					<p align="left"><font size="5">Router 2, interface G0/1 inbound </font></p>
-					<ul align="left"><font size="4"> 
-                        <li>ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 </li>
-                        <li>ip access-list deny tcp any any eq 20-21 </li>
-                        <li>ip access-list permit ip any any </li>
-                    </font></ul>
+					<p align ="left"><font size="4"> ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
+                    ip access-list deny tcp any any eq 20-21 <br>
+                    ip access-list permit ip any any</font></p>
                     <p align="left"><font size="5">Router 1, interface G0/2 inbound </font></p>
-                    <ul align="left"><font size="4">
-                        <li>ip access-list deny ip 192.168.0.0 0.0.0.255 any </li>
-                        <li>ip access-list deny ip 10.0.0.0 0.0.0.255 any </li>
-                        <li>ip access-list permit ip any any </li>
-                    </font></ul>
+                    <p align="left"><font size="4">ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
+                    ip access-list deny ip 10.0.0.0 0.0.0.255 any <br>
+                    ip access-list permit ip any any</font></p>
+				</section>
+				
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    <h4>Why Iptables?</h4>
+				    <p>IPTables can collect statistics on byte/packet counts for each rule. (IP Accounting) <br>
+                    IPTables can be used for NAT (including masquerading and port forwarding) <br>
+                    IPTables can perform packet mangling to modify fields in headers</p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>IPTables Order</h4>
-					<p> Obj. 7.8</p>
+					<p>(Obj. 7.8)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/IPtables.png" style="max-height: 80%; max-width: 80%;"></center>
+				    <p><font size="5">IPTables chains represent the various hooks that the kernal’s networking stack interact with. The chain determines when a packet is examined.  Using the diagram, you can see how packets that are recieved, or sent from a NIC are processed through various chains.</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Inside IPTables</h4>
-					<p> Obj. 7.8, 7.9</p>
+					<p>(Obj. 7.8, 7.9)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/InsideIPtables.png" style="max-height: 80%; max-width: 80%;"></center>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Building Rules</h4>
-					<p> Obj. 7.13</p>
+					<p>(Obj. 7.13)</p>
 					<p align="left"><font size="6">Table: Use –t to define table (if not Filter)<br>
                     Add/Delete/Insert: Use -A, -D, -I (can insert rule with number)<br>
                     Chain: INPUT/OUTPUT/PRE or POST ROUTING<br>
@@ -179,7 +183,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Targets and Rules</h4>
-					<p> Obj. 7.13</p>
+					<p>(Obj. 7.13)</p>
 					<p align="left"><font size="6">Rules</font></p>
 					<ul><font size="5">
 					    <li>If the criteria is matched, it goes to the rules specified in the target (or) executes the special values mentioned in the target.</li>
@@ -196,7 +200,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Examples</h4>
-					<p> Obj. 7.10, 7.11</p>
+					<p>(Obj. 7.10, 7.11)</p>
 					<p align="left"><font size="6">Syntax/Example</font></p>
 					<ul><font size="5">
 					    <li>Iptables –t [Table] –[add/delete/insert/policy…] <font color="blue">Chain</font> <font color="red">Rule</font> [-p (protocols) etc] <font color="green">–j TARGET</font></li>
@@ -211,18 +215,28 @@
                     <ul><font size="5">
                         <li>iptables -A <font color="blue">OUTPUT</font> <font color="red">-m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0'</font> <font color="green">-j ACCEPT</font></li>
                     </font></ul>
+                    
+                        <section>
+                            <p class="fragment"> Drop all traffic going to the website: www.dangerouspage.com *</p>
+                            <p><span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span>
+                            <span>Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </span>
+                            <span>iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span>
+                            <span>Accept any NEW connections from a range of ports from 20-23</span>
+                            <span>iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span></p>
+                        </section>
 				</section>
-				
+
+
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Source NAT (IP)</h4>
-					<p> Obj. 7.14, 7.15</p>
+					<p>(Obj. 7.14, 7.15)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/SNAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the source address to <font color="red"> 1.1.1.1</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 1.1.1.1</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<p> Obj. 7.14, 7.15</p>
+					<p>(Obj. 7.14, 7.15)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/SPAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the source address to <font color="red"> 1.1.1.1</font> and the port to <font color="red">9001</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A POSTROUTING -p tcp -o eth0 -j SNAT --to 1.1.1.1:9001</font></p>
@@ -230,7 +244,7 @@
 				
 			    <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Destination NAT (IP)</h4>
-					<p> Obj. 7.14, 7.15</p>
+					<p>(Obj. 7.14, 7.15)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/DNAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Change the destination address to <font color="red"> 10.0.0.1</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A PREROUTING -i eth0 -j DNAT --to 10.0.0.1</font></p>
@@ -238,7 +252,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Port Forwarding</h4>
-					<p> Obj. 7.14, 7.15</p>
+					<p>(Obj. 7.14, 7.15)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/DPAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Forward traffic to an internal or private IP on port <font color="red"> 8080</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A PREROUTING -p tcp -o eth0 -j DNAT --to 10.0.0.1:8080</font></p>
