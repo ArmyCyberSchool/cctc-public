@@ -139,12 +139,12 @@
 					<h4>Practice</h4>
 					<p>(Obj. 7.7)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
-					<p align="left"><font size="5">Router 2, interface G0/1 inbound </font></p>
-					<p align ="left"><font size="4"> ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
+					<p align="left"><font size="4">Router 2, interface G0/1 inbound </font></p>
+					<p align ="left"><font size="3"> ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
                     ip access-list deny tcp any any eq 20-21 <br>
                     ip access-list permit ip any any</font></p>
-                    <p align="left"><font size="5">Router 1, interface G0/2 inbound </font></p>
-                    <p align="left"><font size="4">ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
+                    <p align="left"><font size="4">Router 1, interface G0/2 inbound </font></p>
+                    <p align="left"><font size="3">ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
                     ip access-list deny ip 10.0.0.0 0.0.0.255 any <br>
                     ip access-list permit ip any any</font></p>
 				</section>
@@ -215,16 +215,17 @@
                     <ul><font size="5">
                         <li>iptables -A <font color="blue">OUTPUT</font> <font color="red">-m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0'</font> <font color="green">-j ACCEPT</font></li>
                     </font></ul>
-                    
-                        <section>
-                            <p class="fragment"> Drop all traffic going to the website: www.dangerouspage.com *</p>
-                            <p><span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span>
-                            <span>Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </span>
-                            <span>iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span>
-                            <span>Accept any NEW connections from a range of ports from 20-23</span>
-                            <span>iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span></p>
-                        </section>
 				</section>
+				
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                            <h4> Try these...</h4>
+                            <p class="fragment"><font size="4">Drop all traffic going to the website: www.dangerouspage.com
+                            <span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span>
+                            <span class="fragment">Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </span>
+                            <span class="fragment">iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span>
+                            <span class="fragment">Accept any NEW connections from a range of ports from 20-23</span>
+                            <span class="fragment">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span></font></p>
+                </section>
 
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
