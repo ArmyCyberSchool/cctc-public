@@ -53,12 +53,18 @@
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Firewall Modes</h4>
+					<h4>Firewall Basics</h4>
 					<p>Obj. 7.1</p>
 				    <p align="left">- Routed Mode <br>
 				    - Transparent Mode </p>
-				    <br>
+			        <p align="left"> Whitelist vs. Blacklist logic</p>
 			    	<p align="left">Where/How should you arrange Firewalls in an Enterprise Topology?</p>
+			    	<aside class="notes">
+			        -In routed mode, the firewall is a "router hop" in the network. This means it has interfaces in different networks, can perform NAT between connected networks, and can use routing protocols to relay subnet information between security zones.
+                    -Transparent firewall is placed on the network as a Layer 2 device that acts like a "bump in the wire". It is not seen as a hop to connected devices. There are many benefits to this type of setup. One thing in particular is that it makes it much more difficult for an adversary to find the firewall and perform reconnaissance such as "Firewalking".
+		            -A Whitelist tests desired input against a list of possible correct input’s. A list of good conditions/values is gathered, then the input recieved is compared to verify that it matches the good condition/value.
+		            -A Blacklist tests a desired input against a list of negative input’s. A list of bad conditions/values is gathered, then the input recieved is compared to verify that it matches the bad condition/value.
+	                </aside>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
