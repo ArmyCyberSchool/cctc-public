@@ -149,7 +149,7 @@
 				
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4>Why Iptables?</h4>
-				    <p>IPTables can collect statistics on byte/packet counts for each rule. (IP Accounting) <br>
+				    <p align="left">IPTables can collect statistics on byte/packet counts for each rule. (IP Accounting) <br>
                     IPTables can be used for NAT (including masquerading and port forwarding) <br>
                     IPTables can perform packet mangling to modify fields in headers</p>
 				</section>
@@ -158,7 +158,7 @@
 					<h4>IPTables Order</h4>
 					<p>(Obj. 7.8)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/IPtables.png" style="max-height: 50%; max-width: 50%;"></center>
-				    <p><font size="5">IPTables chains represent the various hooks that the kernal’s networking stack interact with. The chain determines when a packet is examined.  Using the diagram, you can see how packets that are recieved, or sent from a NIC are processed through various chains.</font></p>
+				    <p align ="left"><font size="5">IPTables chains represent the various hooks that the kernal’s networking stack interact with. The chain determines when a packet is examined.  Using the diagram, you can see how packets that are recieved, or sent from a NIC are processed through various chains.</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -217,12 +217,12 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
                             <h4> Try these...</h4>
-                            <p class="fragment"><font size="4">Drop all traffic going to the website: www.dangerouspage.com <br>
-                            <span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span> <br>
+                            <p class="fragment">Drop all traffic going to the website: www.dangerouspage.com </p>
+                            <span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span><br>
                             <span class="fragment">Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </span><br>
                             <span class="fragment">iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span><br>
                             <span class="fragment">Accept any NEW connections from a range of ports from 20-23</span><br>
-                            <span class="fragment">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span></font></p>
+                            <span class="fragment">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span>
                 </section>
 
 
