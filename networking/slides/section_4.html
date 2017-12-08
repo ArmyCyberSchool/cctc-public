@@ -58,7 +58,7 @@
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
                     			<h4>Basic Files Transfer: SCP</h4>
-                    			<p align="text-align: left;">(Obj. 10.1 Describe common methods for transferring files</p>
+                    			<p>(Obj. 10.1)</p>
 					<ul>
 					  <li><font size="6">Copying "file1.txt.from the local client to a remote client.</font></li>
 					  <li><font size="6">Execute From Client</font></li>
@@ -73,6 +73,7 @@
 					<h4>Convert Channels</h4>
 					<p>(Obj. 10.2)</p>
 					<p align="left">-Protocol Headers: modulation, manipulation, options</p>
+<br>
 					<p align="left">- Data Field</p>
 					<br>
 				        <p align="left"><i>Example: ICMP allows you to write hex to the date portions with (-p) switch </i></p>					
@@ -82,19 +83,19 @@
 					<h4>Data Exfiltration</h4>
 					<p>(Obj. 10.2)</p>
 					<ul>
-					  <li><font size="6">Covertness = function of Capacity of the medium/Transmission Rate</font></li>	
+					  <li><font size="6">Covertness = function of Capacity of the Medium/Transmission Rate</font></li>	
 					  <li><font size="6">Most common methods of data exfiltration: HTTPS/HTTPS, DNS, FTP, RDP, SMTP/email, SMB, TOR </font></li>
 					  <li><font size="6">Techniques to help obfuscate the exfiltration: Compression, Encoding, Encryption </font></li>
 					</ul>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Files Transfer Basic</h4>
+					<h4>File Transfer Basics</h4>
 					<p>(Obj. 10.1)</p>
 					<p align="left">Stdin (channel 0) / Stdout (channel 1)</p>
 					<p align="left">Pipes<br>
 					- Fifo in nature<br>
-					- Can live longer than the poces its faciliation<br>
+					- Can live longer than the process it facilitates<br>
 					- Can use it for a pass-through in data transfers</p>
 					<p align="left">Client vs.Listener</p>
 				</section>
@@ -103,18 +104,18 @@
 					<h4>Netcat</h4>	
 					<p>(Obj. 10.3 - 4)</p>
 					<p align="left"><font size="4">Netcat: Client to Listener file transfer</font></p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Client.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
-					<p align="left"><font size="4">Client(sends file) 10.0.0.2.9001 file.txt</font></p>
-					<p align="left"><font size="4">Listener (receive file) nc-1 -p 9001 > newfile.txt</font></p>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Client.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+					<p align="left"><font size="5">Client(sends file) 10.0.0.2.9001 file.txt</font></p>
+					<p align="left"><font size="5">Listener (receive file) nc-1 -p 9001 > newfile.txt</font></p>
 				</section>
 
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Netcat</h4>	
 					<p>(Obj. 10.3 - 4)</p>
 					<p align="left"><font size="4">Netcat: Listener to Client file transfer</font></p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Listen.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
-					<p align="left"><font size="4">Listener(sends file) nc-1 -p 9001 > file.txt</font></p>
-					<p align="left"><font size="4">Client (receive file) nc 10.0.0.2.9001 > newfile.txt</font></p>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Listen.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+					<p align="left"><font size="5">Listener(sends file) nc-1 -p 9001 > file.txt</font></p>
+					<p align="left"><font size="5">Client (receive file) nc 10.0.0.2.9001 > newfile.txt</font></p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -132,10 +133,10 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 			        <h4> FPIPE & Redictors</h4>
 					<p>(Obj. 12.5)</p>
-					<p align="left"><font size="6">- FPIPE is a port/stream redirector commonly used for windows systems. It can create a TCP or UDP stream with a source port of your choice.<br> 
+					<p align="left"><font size="5">- FPIPE is a port/stream redirector commonly used for windows systems. It can create a TCP or UDP stream with a source port of your choice.<br> 
 					This is useful for getting past the firwall that allow traffice with souce ports of say 23, to connect with internal servers.</font></p>
-					<p align="left"><font size="6">- Redirectors can be used to change source/destination port information IOT mask origin or subvert security measures </font></p>
-				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/redirector.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+					<p align="left"><font size="5">- Redirectors can be used to change source/destination port information IOT mask origin or subvert security measures </font></p>
+				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/redirector.png" style="max-height: 70%; max-width: 70%; align: middle;"></center>	
 				</section>
 				    
 			    <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -150,8 +151,8 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4> Nothing to see here...Just DNS packets...</h4>    
 				   	 <p>(Obj. 12.6 Describe protocol swapping)</p>   
-				   	 <p align="left">- DNSCAT2 is just on of many</p>
-				   	 <p align="left">- Most often, common protocols are used to hide devioius actions</p>
+				   	 <p align="left">- DNSCAT2 is just one of many</p>
+				   	 <p align="left">- Most often, common protocols are used to hide devious actions</p>
 				  	 <p align="left">- Common Botnet C2 protocols are also popular choices for programs that provide protocol swapping</p>
 				</section>
 				    
@@ -171,23 +172,22 @@
 				    	<h4> Getting Around the Pesky Firewall</h4>
 				    	<p> (Obj. 13.3 - 4, 8)</p>
 				    	<p align="left"><font size="4"> Imagine that you are at work, but you wanted to do non-work related activities. Your company Firewalls prevent you from accessing a website you want to browse to (gambling.com). SSH is allowed from the inside of the network outbound because the IT staff must do remote adminstration of devices at branch offiices.</font></p>
-				 	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/scenario.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				 	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/scenario.png" style="max-height: 70%; max-width: 70%; align: middle;"></center>	
 				</section>
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Local Port Forwarding</h4>
 				    	<p> Objective 13.3,4 and 8</p>
-				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/localport.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/localport.png" style="max-height: 70%; max-width: 70%; align: middle;"></center>	
 				 </section>
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Local Port Forwarding with IPv6</h4>
 				    	<p> Obj. 13.3 - 4, 8)</p>
-				    	<p align="left"><font size="4"> The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
+				    	<p align="left"><font size="6">- The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
 				    	the address field (not th colon to specify the port info) this is done by enclosing the address in square brackets which must then be escaped with backslashes:</font></p>
 				    	<p align="left"><font size="4"> ssh -L 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1<br>
-					For link-local address(fe80::0 range) specify the interface following the SSH GWY</font></p>
-				    	<p>picture here</p>
+					(For link-local address(fe80::0 range) specify the interface following the SSH GWY)</font></p>
 				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
