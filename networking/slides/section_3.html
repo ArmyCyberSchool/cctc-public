@@ -213,9 +213,7 @@
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
                             <h4> Try these...</h4>
-                            <p class="fragment"><u>Drop all traffic going to the website: www.dangerouspage.com </u></p>
-                            <span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span><br>
-                            <span class="fragment"><u>Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </u></span><br>
+                            <p class="fragment"><u>Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </u></span><br>
                             <span class="fragment">iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span><br>
                             <span class="fragment"><u>Accept any NEW connections from a range of ports from 20-23</u></span><br>
                             <span class="fragment">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span>
