@@ -136,29 +136,31 @@
 				</section>
 				
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
-					<p align="left"><font size="4">Router 2, interface G0/1 inbound </font></p>
-					<p align ="left"><font size="3"> ip access-list permit tcp 192.168.0.0 0.0.0.255 host 10.0.0.2 eq 20-21 <br>
-                    ip access-list deny tcp any any eq 20-21 <br>
-                    ip access-list permit ip any any</font></p>
-                    <p align="left"><font size="4">Router 1, interface G0/2 inbound </font></p>
-                    <p align="left"><font size="3">ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
-                    ip access-list deny ip 10.0.0.0 0.0.0.255 any <br>
-                    ip access-list permit ip any any</font></p>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/PracticeACL.png" style="max-height: 50%; max-width: 50%;"></center>
+					<p align="left"><font size="4"><b>Router 2, interface G0/1 inbound (Whitelisting)</b></font></p>
+					<p align ="left"><font size="3"> ip access-list permit tcp 192.168.0.0 0.0.0.255 any eq domain <br>
+                   			 ip access-list permit tcp 192.168.0.0 0.0.0.255 any eq www <br>
+                			    ip access-list deny ip any any</font></p>
+                 			   <p align="left"><font size="4"><b>Router 1, interface G0/2 inbound (Blacklisting)</b></font></p>
+                			    <p align="left"><font size="3">ip access-list deny ip 192.168.0.0 0.0.0.255 any <br>
+                			    ip access-list deny ip 10.0.0.0 0.0.0.255 any <br>
+                 			   ip access-list permit ip any any</font></p>
 				</section>
 				
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h4>Why Iptables?</h4>
-				    <p align="left">IPTables can collect statistics on byte/packet counts for each rule. (IP Accounting) <br>
-                    IPTables can be used for NAT (including masquerading and port forwarding) <br>
-                    IPTables can perform packet mangling to modify fields in headers</p>
+				    <h4>IPTables; not just for Filtering!</h4>
+				    <p align="left">- Collects statistics on byte/packet counts for each rule (IP Accounting) <br>
+				    <br>
+                    		    - Can be used for NAT (including masquerading & port forwarding) <br>
+				    <br>
+                   		    - Can perform packet mangling to modify fields in headers</p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>IPTables Order</h4>
 					<p>(Obj. 7.8)</p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/IPtables.png" style="max-height: 50%; max-width: 50%;"></center>
-				    <p align ="left"><font size="5">IPTables chains represent the various hooks that the kernal’s networking stack interact with. The chain determines when a packet is examined.  Using the diagram, you can see how packets that are recieved, or sent from a NIC are processed through various chains.</font></p>
+				   	 <p align ="left"><font size="5">IPTables "Chains" (circled) represent various hooks that the kernal's networking stack interact with. The chain determines when a packet is examined.  Using the diagram, you can see how packets are processed through various chains as they enter or leave a host.</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -170,13 +172,13 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Building Rules</h4>
 					<p>(Obj. 7.13)</p>
-					<p align="left"><font size="6">Table: Use –t to define table (if not Filter)<br>
-                    Add/Delete/Insert: Use -A, -D, -I (can insert rule with number)<br>
-                    Chain: INPUT/OUTPUT/PRE or POST ROUTING<br>
-                    Target: Use -j to define an action (DROP/ACCEPT etc…)<br>
-                    Protocol: Protocols. tcp, udp, icmp, etc. (-p)<br>
-                    Source: Source ip-address of the packet (-s)<br>
-                    Destination: Destination ip-address for the packet (-d)</font></p>
+					<p align="left"><font size="6"><u>Table:</u> Use the "t" flag to define table (if not Filter)<br>
+                    			<u>Add/Delete/Insert:</u> Use -A, -D, -I (can insert rule with number)<br>
+                   			 <u>Chain:</u> INPUT/OUTPUT/PRE or POST ROUTING<br>
+                   			 <u>Target:</u> Use -j to define an action (DROP/ACCEPT etc)<br>
+                   			 <u>Protocol:</u> Protocols. tcp, udp, icmp, etc. (-p)<br>
+                   			 <u>Source:</u> Source ip-address of the packet (-s)<br>
+                   			 <u>Destination:</u> Destination ip-address for the packet (-d)</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -184,44 +186,38 @@
 					<p>(Obj. 7.13)</p>
 					<p align="left"><font size="6">Rules</font></p>
 					<ul><font size="5">
-					    <li>If the criteria is matched, it goes to the rules specified in the target (or) executes the special values mentioned in the target.</li>
-                        <li>If the criteria is not matched, it moves on to the next rule (SEQUENTIAL)</li>
-                        <li>“Policy”- default rule, can be changed with -P</li>
-                    </font></ul>
-                    <p align="left"><font size="6">Targets (ex. Filter applicable)</font></p>
-                    <ul><font size="5">
-                        <li>ACCEPT –accept the packet</li>
-                        <li>DROP –drop the packet</li>
-                        <li>REJECT – is used to send back an error packet in response to the matched packet (still drops packet)</li>
-                    </font></ul>
+					  <li>If the criteria is matched, it goes to the rules specified in the target (or) executes the special values mentioned in the target.</li>
+                       			  <li>If the criteria is not matched, it moves on to the next rule (SEQUENTIAL)</li>
+                      			  <li><b>Policy-</b> default rule, can be changed with "P"</li>
+                    			</font></ul>
+                    			<p align="left"><font size="6">Targets (ex. Filter applicable)</font></p>
+                    			<ul><font size="5">
+                      			  <li>ACCEPT: accept the packet</li>
+                      			  <li>DROP: drop the packet</li>
+                     			  <li>REJECT: is used to send back an error packet in response to the matched packet (still drops packet)</li>
+                   			 </font></ul>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Examples</h4>
 					<p>(Obj. 7.10, 7.11)</p>
 					<p align="left"><font size="6">Syntax/Example</font></p>
-					<ul><font size="5">
-					    <li>Iptables –t [Table] –[add/delete/insert/policy…] <font color="blue">Chain</font> <font color="red">Rule</font> [-p (protocols) etc] <font color="green">–j TARGET</font></li>
-                        <li>Iptables –Policy <font color="blue">INPUT</font> <font color="green">–j DROP</font></li>
-                    </font></ul>
+					<p align="left"><font size="5">Iptables -t [Table] –[add/delete/insert/policy] <font color="blue">Chain</font> <font color="red">Rule</font> [-p (protocols) etc] <font color="green">-j TARGET</font><br>
+                    Iptables - Policy <font color="blue">INPUT</font> <font color="green">- j DROP</font></font></p>
 					<p align="left"><font size="6">Filtering Rules</font></p>
-					<ul><font size="5">
-					    <li>Iptables –A <font color="blue">OUTPUT</font> <font color="red">–d 197.10.10.1 –p tcp –dport 80</font> <font color="green">–j ACCEPT</font></li>
-                        <li>Iptables –A <font color="blue">INPUT</font> <font color="red">–s 150.147.23.1 –p udp –dport 69</font> <font color="green">–j DROP</font></li>
-                    </font></ul>
-                    <p align="left"><font size="6">Adding a rule using Bytecode</font></p>
-                    <ul><font size="5">
-                        <li>iptables -A <font color="blue">OUTPUT</font> <font color="red">-m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0'</font> <font color="green">-j ACCEPT</font></li>
-                    </font></ul>
+					<p align="left"><font size="5">Iptables -A <font color="blue">OUTPUT</font> <font color="red"> -d 197.10.10.1 -p tcp --dport 80</font> <font color="green">- j ACCEPT</font><br>
+                    Iptables -A<font color="blue">INPUT</font> <font color="red">- s 150.147.23.1 -p udp --dport 69</font> <font color="green">-j DROP</font></font></p>
+             		<p align="left"><font size="6">Adding a rule using Bytecode</font></p>
+					<p align="left"><font size="5">iptables -A<font color="blue">OUTPUT</font> <font color="red">-m bpf --bytecode '4,48 0 0 9,21 0 1 6,6 0 0 1,6 0 0 0'</font> <font color="green">-j ACCEPT</font></font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
                             <h4> Try these...</h4>
-                            <p class="fragment">Drop all traffic going to the website: www.dangerouspage.com </p>
+                            <p class="fragment"><u>Drop all traffic going to the website: www.dangerouspage.com </u></p>
                             <span class="fragment">iptables -A OUTPUT -p tcp -d www.dangerouspage.com -j DROP</span><br>
-                            <span class="fragment">Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </span><br>
+                            <span class="fragment"><u>Drop Traffic From Mac Address "DE:AD:BE:EF:CA:FE" </u></span><br>
                             <span class="fragment">iptables -A INPUT -m mac --mac-source DE:AD:BE:EF:CA:FE -j DROP</span><br>
-                            <span class="fragment">Accept any NEW connections from a range of ports from 20-23</span><br>
+                            <span class="fragment"><u>Accept any NEW connections from a range of ports from 20-23</u></span><br>
                             <span class="fragment">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</span>
                 </section>
 
