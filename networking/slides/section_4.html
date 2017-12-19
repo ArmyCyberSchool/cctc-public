@@ -59,14 +59,24 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
                     			<h4>Basic Files Transfer: SCP</h4>
                     			<p>(Obj. 10.1)</p>
-					<ul>
-					  <li><font size="6">Copying "file1.txt.from the local client to a remote client.</font></li>
-					  <li><font size="6">Execute From Client</font></li>
-					  <li><font size="6">scp file1.txt username@10.0.0.2:/directory/path</font></li>
-					  <li><font size="6">Copy "file2.txt" from a remote client to the local client </font></li>
-					  <li><font size="6">Execute From CLient</font></li>
-					  <li><font size="6">scp username@10.0.0.2:file2.txt/directory/path </font></li>
-					</ul>
+					            <ul>
+					             <li><font size="6">Copying "file1.txt.from the local client to a remote client.</font></li>
+					            <li><font size="6">Execute From Client</font></li>
+					             <li><font size="6">scp file1.txt username@10.0.0.2:/directory/path</font></li>
+                             </ul>
+                             <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/SCPto.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+
+                </section>
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+                    			<h4>Basic Files Transfer: SCP</h4>
+                    			<p>(Obj. 10.1)</p>
+                    			<ul>
+				            	  <li><font size="6">Copy "file2.txt" from a remote client to the local client </font></li>
+					             <li><font size="6">Execute From Client</font></li>
+					              <li><font size="6">scp username@10.0.0.2:file2.txt/directory/path </font></li>
+				            	</ul>
+				            	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/SCPfrom.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -82,11 +92,9 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Data Exfiltration</h4>
 					<p>(Obj. 10.2)</p>
-					<ul>
-					  <li><font size="6">Covertness = function of Capacity of the Medium/Transmission Rate</font></li>	
-					  <li><font size="6">Most common methods of data exfiltration: HTTPS/HTTPS, DNS, FTP, RDP, SMTP/email, SMB, TOR </font></li>
-					  <li><font size="6">Techniques to help obfuscate the exfiltration: Compression, Encoding, Encryption </font></li>
-					</ul>
+					<p><font size="6">Covertness = function of Capacity of the Medium/Transmission Rate</font></p>	
+					<p><font size="6">Most common methods of data exfiltration: HTTPS/HTTPS, DNS, FTP, RDP, SMTP/email, SMB, TOR </font></p>
+					<p><font size="6">Techniques to help obfuscate the exfiltration: Compression, Encoding, Encryption </font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -105,8 +113,8 @@
 					<p>(Obj. 10.3 - 4)</p>
 					<p align="left"><font size="4">Netcat: Client to Listener file transfer</font></p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Client.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
-					<p align="left"><font size="5">Client(sends file) 10.0.0.2.9001 file.txt</font></p>
-					<p align="left"><font size="5">Listener (receive file) nc-1 -p 9001 > newfile.txt</font></p>
+					<p align="left"><font size="5">Client(sends file) 10.0.0.2.9001 &lt; file.txt</font></p>
+					<p align="left"><font size="5">Listener (receive file) nc-1 -p 9001 &gt; newfile.txt</font></p>
 				</section>
 
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -123,11 +131,11 @@
 					<p>(Obj. 10.3 - 4) </p>
 					<p align="left"><font size="4">Client Relay <br>
 					mk nod mypipe p <br>
-					nc 10.0.0.3 9002 &lt 0 pipe | nc 10.0.0.1. 9001 | tee mypipe<br>
+					nc 10.0.0.3 9002 &lt; 0 pipe | nc 10.0.0.1. 9001 | tee mypipe<br>
 					or <br>
-					nc 10.0.0.3 9002 &lt 0 mypipe | nc 10.0.0.1 9001 1 &gt mypipe </font></p>
-					<p align="left"><font size="4"> Lister2 (sends file) nc-l -p 9002 &lt file.txt</font></p>
-					<p align="left"><font size="4"> Lister1 (receives file) nc-l p 9001 &gt file.txt</font></p>
+					nc 10.0.0.3 9002 &lt; 0 mypipe | nc 10.0.0.1 9001 1 &gt; mypipe </font></p>
+					<p align="left"><font size="4"> Lister2 (sends file) nc-l -p 9002 &lt; file.txt</font></p>
+					<p align="left"><font size="4"> Lister1 (receives file) nc-l p 9001 &gt; file.txt</font></p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -186,7 +194,7 @@
 				    	<p> Obj. 13.3 - 4, 8)</p>
 				    	<p align="left"><font size="6">- The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
 				    	the address field (not th colon to specify the port info) this is done by enclosing the address in square brackets which must then be escaped with backslashes:</font></p>
-				    	<p align="left"><font size="4"> ssh -L 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1<br>
+				    	<p align="left"><font size="5"> ssh -L 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1<br>
 					(For link-local address(fe80::0 range) specify the interface following the SSH GWY)</font></p>
 				 </section>
 				    
@@ -216,15 +224,15 @@
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> SKILL 13: Identify fundamentals of secure shell protocol</h4>
 				   	    <p> Objectives </p>
-				    	<p align="left"> 13.2 Discuss SSH reverse tunnels</font></p>
-				    	<p align="left"> 13.7 Describe the appropriate use of reverse tunnels</font></p>
+				    	<p align="left"> 13.2 Discuss SSH reverse tunnels</p>
+				    	<p align="left"> 13.7 Describe the appropriate use of reverse tunnels</p>
 				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>Remote Port Forwarding (Reverse SSH Tunnel) </h4>
 				    	<p>(Obj. 13.2 - 7)</p>
 				    	<p align="left"><font size="4">Inside Host initiates the tunnel to tell the remote host where to forward its port to (through the tunnel)</font></p>
-				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/remote.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/Remote.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
 
 				 </section>
 				    
