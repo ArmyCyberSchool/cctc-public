@@ -28,7 +28,15 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
+        <style>
+            #th1, #td1 {
+                font-weight: bold;
+                border: 2px solid;
+            }
+            #td2 {
+                border-bottom: 1px solid;
+            }
+        </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -55,32 +63,32 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>OT vs IT</h3>
 			    	<small>
-			    		<table>
+			    		<table td style="border-bottom: 1px solid">
 				            <thead>
 				                <tr>    
-				                    <th>Category</th><th>Information Technology</th><th>Operational Technology</th>
+				                    <th id="th1">Category</th><th id="th1">Information Technology</th><th id="th1">Operational Technology</th>
 				                </tr>
 				            </thead>
 				            <tr>
-				                <td>Performance</td><td>Non-real-time</td><td>Real-Time</td>
+				                <td id="td1">Performance</td><td id="td2">Non-real-time</td><td id="td2">Real-Time</td>
 				            </tr>
 				            <tr>
-				                <td>Availability</td><td>Rebooting and interupts routine and authorized</td><td>Rebooting may not be acceptable.  Up time at least 99.999%</td>
+				                <td id="td1">Availability</td><td id="td2">Rebooting and interupts routine and authorized</td><td id="td2">Rebooting may not be acceptable.  Up time at least 99.999%</td>
 				            </tr>
 				            <tr>
-				                <td>Safety</td><td>No personnel or environmental concerns</td><td>Personnel and Environmental Hazards</td>
+				                <td id="td1">Safety</td><td id="td2">No personnel or environmental concerns</td><td id="td2">Personnel and Environmental Hazards</td>
 				            </tr>
 				            <tr>
-				                <td>Manipulates</td><td>Data</td><td>Physical Environment</td>
+				                <td id="td1">Manipulates</td><td id="td2">Data</td><td id="td2">Physical Environment</td>
 				            </tr>
 				            <tr>
-				                <td>Upgrades & Patches</td><td>Simple and routine</td><td>Seldom if even possible</td>
+				                <td id="td1">Upgrades & Patches</td><td id="td2">Simple and routine</td><td id="td2">Seldom if even possible</td>
 				            </tr>
 				            <tr>
-				                <td>Security</td><td>Patch System</td><td>Isolate System</td>
+				                <td id="td1">Security</td><td id="td2">Patch System</td><td id="td2">Isolate System</td>
 				            </tr>
 				            <tr>
-				                <td>Life Cycle</td><td>3 to 5 years</td><td>15 to 20 years</td>
+				                <td id="td1">Life Cycle</td><td id="td2">3 to 5 years</td><td id="td2">15 to 20 years</td>
 				            </tr>
 				        </table>
 				    </small>
