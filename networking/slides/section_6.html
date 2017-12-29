@@ -28,7 +28,22 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
+        <style>
+            #th1 {
+                font-weight: bold;
+                border: 2px solid;
+                padding: 0.5em 0.5em 0.5em 0.5em;
+            }
+            #td1 {
+                font-weight: bold;
+                border-right: 2px solid;
+                padding: 0.5em 0.5em 0.5em 0.5em;
+            }
+            #td2 {
+                border-left: 1px solid;
+                padding: 0.5em 0.5em 0.5em 0.5em;
+            }
+        </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -52,6 +67,39 @@
 						This is the world of Industrial Control Systems.
 					</small>
 				</section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>OT vs IT</h3>
+			    	<small>
+			    		<table>
+				            <thead>
+				                <tr>    
+				                    <th id="th1">Category</th><th id="th1">Information Technology</th><th id="th1">Operational Technology</th>
+				                </tr>
+				            </thead>
+				            <tr>
+				                <td id="td1">Performance</td><td id="td2">Non-real-time</td><td id="td2">Real-Time</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Availability</td><td id="td2">Rebooting and interupts routine and authorized</td><td id="td2">Rebooting may not be acceptable.  Up time at least 99.999%</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Safety</td><td id="td2">No personnel or environmental concerns</td><td id="td2">Personnel and Environmental Hazards</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Manipulates</td><td id="td2">Data</td><td id="td2">Physical Environment</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Upgrades & Patches</td><td id="td2">Simple and routine</td><td id="td2">Seldom if even possible</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Security</td><td id="td2">Patch System</td><td id="td2">Isolate System</td>
+				            </tr>
+				            <tr>
+				                <td id="td1">Life Cycle</td><td id="td2">3 to 5 years</td><td id="td2">15 to 20 years</td>
+				            </tr>
+				        </table>
+				    </small>
+				</section>
 
 <!-- Skill 15 ICS Security Incidents -->
 
@@ -66,6 +114,13 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<br>
 					<h3>ICS Security Incidents</h3>
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				    	<br>
+						<h4>Maroochy Sewage Sump</h4>
+						<img src="https://git.cybbh.space/CCTC/public/raw/Section_6_ICS_slides/networking/slides/images/ICS-Slides/15-1-ICS-Security-Incidents_Maroochy_raw-sewage.jpg" style="height: 300px;">
+				    	<br>
+				    	<small>In 2000, Vitek Boden, a disgruntled employee of Hunter Watertech, dumped 800,000 liters of raw sewage into the river and coastal waterways of Maroochydore, Queensland, Australia.</small>
+				    </section>
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<br>
 						<h4>Aurora Generator Test</h4>
@@ -118,29 +173,27 @@
 <!-- Who done it? Anti ICS actors (Skill 15.1) -->
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h2>Who attacks Industrial Control Systems?</h2>
-					<h5>Why do they do it?</h5>
-				</section>
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h3>Attackers</h3>
-					<ul>
-					    <li>State Actors</li>
-					    <li>Organized Crime</li>
-					    <li>Hacktivists</li>
-					    <li>Terrorists</li>
-			        </ul>
-				</section>
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h3>Motivations</h3>
-					<ul>
-					    <li>Cripple Adversary Critical Infrastructure</li>
-					    <li>Blackmail</li>
-					    <li>Spreading Fear</li>
-					    <li>Destabilizing Governments</li>
-					    <li>Profit</li>
-			        </ul>
-				</section>
-
+					<h3>Who attacks Industrial Control Systems?</h3>
+    				<section>
+    					<h3>Attackers</h3>
+    					<ul>
+    					    <li>State Actors</li>
+    					    <li>Organized Crime</li>
+    					    <li>Hacktivists</li>
+    					    <li>Terrorists</li>
+    			        </ul>
+    				</section>
+    				<section>
+    					<h3>Motivations</h3>
+    					<ul>
+    					    <li>Cripple Adversary Critical Infrastructure</li>
+    					    <li>Blackmail</li>
+    					    <li>Spreading Fear</li>
+    					    <li>Destabilizing Governments</li>
+	    				    <li>Profit</li>
+    			        </ul>
+    				</section>
+                </section>
 <!-- Skill 14 - Introduction to Industrial Control Systems -->
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -175,6 +228,8 @@
 				</section>
 
 <!-- WTF is a Control System anyway? (Skill 14) -->
+
+
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h2>Control System Operation</h2>
@@ -233,7 +288,7 @@
 				        <img src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-5-ICS-theory_PIDforDummies_pid_simplified.png" style="float: left; width: 450px; border: 0px none #fff; box-shadow: 0 0 0px rgba(0, 0, 0, 0);">
 					<p class="fragment">Sum of:</p>
 					<div class="fragment" style="clear: none;"><small>Proportional (current value)</small></div>
-					<div class="fragment" style="clear: none;"><small>Integral (average of all past values)</small></div>
+					<div class="fragment" style="clear: none;"><small>Integral (average of all past values)</small><img style="height: 175px;" src="https://git.cybbh.space/CCTC/public/raw/Section_6_ICS_slides/networking/slides/images/ICS-Slides/14-1-Control-Theory_Integral-area_under_curve.gif"></div>
 					<div class="fragment" style="clear: none;"><small>Differential (current rate of change in value)</small></div> 
 				</section>   
 
@@ -261,7 +316,7 @@
 					<h3>Controllers</h3>
 					<section>
 						<br>
-						<h4>Analogue Relays</h4>
+						<h4>Analog Relays</h4>
 						<img style="height: 300px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-1-ICS-hardware_relay.gif">
 					</section>
 					<section>
@@ -301,10 +356,11 @@
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Engineering Workstations</h3>
+					<img style="height: 400px" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/14-1-ICS-Hardware_Engineer-Workstation.jpg">
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Supervisory Workstations</h3>
-					<img src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-1-ICS-hardware_Supervisory-workstation-Process-Control.png">
+					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/14-1-ICS-Hardware_Supervisory-workstations.gif">
 				</section>
 
 <!-- Industrial Control Software and Programing (Skill 14.2) -->
@@ -374,9 +430,12 @@
 					    	<small>Many microcontrollers<br>just use C</small>
 					</section>
 				</section>
+				
+<!-- RTOS -->
+
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Real Time Operating Systems</h3>
-					<p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optomised to handle real time and deterministic functions</p>
+					<p>More powerful controllers use Real Time Operating Systems, (RTOS). RTOS are lightweight OSs optimized to handle real time and deterministic functions</p>
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Real Time Operating Systems</h3>
@@ -384,8 +443,9 @@
 						<br>
 						<h4>Windows Embedded</h4>
 						<span>
-							<img style="height: 500px" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-2-ICS-software-RTOS_Windows%20embedded.jpg">
-							<small>Look and feel of Windows for controllers</small>
+<!--							<img style="height: 300px; position: left" src="https://git.cybbh.space/CCTC/public/raw/Section_6_ICS_slides/networking/slides/images/ICS-Slides/14-2-RTOS_win7-embedded.jpg"> -->
+							<img style="height: 400px; position: center" src="https://git.cybbh.space/CCTC/public/raw/Section_6_ICS_slides/networking/slides/images/ICS-Slides/14-2-RTOS_WinCE50.PNG">
+							<div><small>Look and feel of Windows for controllers</small></div>
 						</span>
 					</section>	
 					<section>
@@ -420,11 +480,13 @@
 					</ul>
 				</section>
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h3>Industrial Control Applications</h3>			
+					<small><br></small>
+					<h3>ICS Applications</h3>			
 					<section>
 					        <br>
 					        <h4>Distributed Control Systems (DCS)</h4>
 					        <small>Multilevel Control across a LAN</small>
+					        <img style="height:250" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-3-ICS-Industries&Applications_DCS.png"
 						<ul>
 							<li>Automotive Manufacturing</li>
 							<li>Printing Plants</li>
