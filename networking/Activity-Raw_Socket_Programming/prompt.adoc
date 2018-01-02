@@ -32,13 +32,15 @@ You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 netwo
 
 .Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
 
-* You can retrieve a shell of the script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
+{empty} +
 
-* Fill in all the areas with “?”. Read the Comments carefully!
+1) You can retrieve a shell of the script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
 
-* You may also build your own script from scratch or make modifications to the script provided if you have python experience.
+2) Fill in all the areas with “?”. Read the Comments carefully!
 
-* After you have made your changes to the script (or created your own), ensure you have  permission to execute it. Bring up Wireshark to view the packet and execute the script. You can use "python RAWSOCK.py" to execute.
+3) You may also build your own script from scratch or make modifications to the script provided if you have python experience.
+
+4) After you have made your changes to the script (or created your own), ensure you have  permission to execute it. Bring up Wireshark to view the packet and execute the script. You can use "python RAWSOCK.py" to execute.
 
 {empty} +
 
