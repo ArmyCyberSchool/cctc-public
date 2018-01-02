@@ -1,0 +1,51 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Raw Socket Programming
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+[square]
+* Skill 1: Identify Networking Fundamentals
+* Objectives 1.1 Understanding the OSI model and Basic Networking
+* Objectives 1.2 Understanding User space vs Kernel Space for network functions
+* Objectives 1.3 Explain the difference between user space/kernel space sockets
+* Objectives 1.4 Tool and OS feature operations
+
+
+{empty} +
+
+== Scenario
+
+You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python installed however so you must use this to achieve your goal.  You can use the socket, sys and one additional module of your choice. 
+
+{empty} +
+
+== Activity
+
+=== Task 1) 
+
+** Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target hosts.
+
+** You can retrieve a shell of the script at: https://git.cybbh.space/CCTC/public/blob/master/networking/additional_resources/RAWSOCK.py
+
+** Fill in all the areas with “?”. Read the Comments carefully!
+
+** You may also build your own script from scratch or make modifications to the script provided if you have python experience.
+
+
+{empty} +
+
+== Deliverables
+[square]
+
+* Document your steps to fill in the script.
+* Screenshot showing successful communications between your Linux client and the message target at 10.1.0.1.
+* Screenshot showing how (and validating) that the message was somehow obfuscated for transmission.
+
+{empty} + 
+
