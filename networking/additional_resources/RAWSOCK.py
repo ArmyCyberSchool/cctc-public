@@ -4,15 +4,15 @@ from struct import *
 # Create a raw socket
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_RAW)
-except socket.error , msg:
-    print 'Socket creation failed!. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
+except socket.error as msg:
+    print ('Socket creation failed!. Error Code : ' + str(msg[0]) + ' Message ' + msg[1])
     sys.exit()
      
 # Construct the packet. We are going to add the IP header, then just stick some data in it since a raw socket can handle this.
 packet = '';
  
 source_ip = '10.1.0.2'	# This is your H1 client...but you can spoof this address if you want!
-dest_ip = '10.1.0.1' 	# This is the "router" in your environment, but it can be whereever you want to send the packets.	
+dest_ip = '10.1.0.1' 	# This is the "router" in your environment, but it can be wherever you want to send the packets.	
  
 # IP header info in decimal. You need to consider the full field size and the decimal therein. The ip_ihl_ver field for example is actually read as 2 nibbles, however for ease of coding, we're going to just use the decimal value of the entire byte, assuming that the packet is not using IP options.
 ip_ver_ihl = ?	# Decimal representing '0x45', as this is the first byte of a normal IPv4 packet.
