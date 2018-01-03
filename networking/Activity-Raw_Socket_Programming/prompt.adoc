@@ -66,7 +66,7 @@ except socket.error as msg:
 
 _Ensure you use "network" or big-endian for your byte order._
 
-*The snippet below is not funtional, but demonstrates how to initiate the packet, set data into the IP header fields, and shows an incomplete line for using the pack function.
+* The snippet below is not funtional, but demonstrates how to initiate the packet, set data into the IP header fields, and shows an incomplete line for using the pack function.
 
 ----
 packet = '';
@@ -92,7 +92,7 @@ ip_header = pack('!????????????' , ip_ver_ihl, ip_tos, ip_len, ip_id, ip_frag, i
 
 4) The last part of the script will be creating your packet and sending your packet using the raw socket you have created.
 
-*The snippet below is not funtional, but demonstrates how to assemble the packet and send it.
+* The snippet below is not funtional, but demonstrates how to assemble the packet and send it.
 
 ----
 packet = ip_header + user_data_variable
