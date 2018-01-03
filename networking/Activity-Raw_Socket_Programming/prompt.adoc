@@ -64,7 +64,7 @@ except socket.error as msg:
 
 * https://docs.python.org/2/library/struct.html
 
-_ensure you use "network" or big-endian for your byte order.
+_Ensure you use "network" or big-endian for your byte order._
 
 *The snippet below is not funtional, but demonstrates how to initiate the packet, set data into the IP header fields, and shows an incomplete line for using the pack function.
 
