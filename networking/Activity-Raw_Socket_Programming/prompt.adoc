@@ -22,7 +22,7 @@
 
 == Scenario
 
-.You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys and one additional module of your choice. 
+.You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
 .Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
 {empty} +
 
@@ -46,7 +46,14 @@
 === Task 2)
 *Start your script*
 
-1) Start by using the following reference to create a raw socket with error handleing:
+1) Create a script and start by importing the appropriate modules.
+
+----
+import socket, sys, ????
+from struct import *
+----
+
+2) Start the program by using the following reference to create a raw socket with error handleing:
 
 * https://docs.python.org/2/tutorial/errors.html
 
@@ -60,7 +67,7 @@ except socket.error as msg:
     sys.exit()
 ----
 
-2) Next you will need to create a packet with an IP header and a message. This will require a number of variables. You can use the following, or create your own list, as long as it can be arranged into a structure appropriately. See the following refernce on how to pack data into structures:
+3) Next you will need to create a packet with an IP header and a message. This will require a number of variables. You can use the following, or create your own list, as long as it can be arranged into a structure appropriately. See the following refernce on how to pack data into structures:
 
 * https://docs.python.org/2/library/struct.html
 
@@ -88,9 +95,9 @@ ip_daddr = socket.inet_aton ( dest_ip )
 ip_header = pack('!????????????' , ip_ver_ihl, ip_tos, ip_len, ip_id, ip_frag, ip_ttl, ip_proto, ip_check, ip_saddr, ip_daddr)
 ----
 
-3) You will need to create user data to insert into the packet (after the IP header) as well. This data will need to be encoded. You can use a module of your choice to achieve this, however a good place to start maybe the binascii module.
+4) You will need to create user data to insert into the packet (after the IP header) as well. This data will need to be encoded. You can use a module of your choice to achieve this, however a good place to start maybe the binascii module.
 
-4) The last part of the script will be creating your packet and sending your packet using the raw socket you have created.
+5) The last part of the script will be creating your packet and sending your packet using the raw socket you have created.
 
 * The snippet below is not funtional, but demonstrates how to assemble the packet and send it.
 
