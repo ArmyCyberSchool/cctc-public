@@ -101,3 +101,7 @@ resources:
       name: subnet0
       network_id: {get_resource: network_0}
     type: OS::Neutron::Subnet
+    
+  network_0:
+    properties: {admin_state_up: true, name: Net0, shared: false}
+    type: OS::Neutron::Net
