@@ -5,7 +5,7 @@ parameters:
     constraints:
     - description: Last name must be no longer than 15 characters
       length: {max: 15, min: 1}
-    - {allowed_pattern: '[a-zA-Z]*', description: Last name may only contain letters}
+    - {allowed_pattern: '[a-zA-Z0-9]*', description: Last name may only contain letters and numbers}
     default: null
     description: Last Name
     label: Last Name
