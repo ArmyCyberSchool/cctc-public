@@ -81,12 +81,12 @@ _Welcome to the Galactic Empire Messaging System!_ One of our servers recently f
 ----
 rebels_only           is owned by leia, & the rebels, is rwx-able by the owner, and all rebels but no one else.
 
-imps_only		      is owned by palpatine, and the imps, is rwx-able by the owner, rx-able by all imps, and has no further permissions.
+imps_only             is owned by palpatine, and the imps, is rwx-able by the owner, rx-able by all imps, and has no further permissions.
 
 rebel_scum!           is owned by anakin, and the imps, is rwx-able by the owner, and is read-only by everyone else.
                       Hint: Should 'everyone else' include the group?
 
-imps_are_bad          is owned by `nobody`, and the rebels, readable by the owner, rwx-able by the rebels group, and is read-only by others.
+imps_are_bad          is owned by nobody, and the rebels, readable by the owner, rwx-able by the rebels group, and is read-only by others.
 
 rebel_base_location   is owned by sheev, and the imps, and is fully accessible(rwx) by the imps group.
 
@@ -105,7 +105,7 @@ deathstar_plans       is owned by Leia, and the rebels, and is fully accessible(
 
 == Hints
 
-From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t`
+From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t` +
 `man usermod | grep -A2 "SEE ALSO"`
 
 {empty} +
