@@ -96,7 +96,7 @@ resources:
             apt-get -y install wireshark tcpdump p0f scapy
             apt-get -y install nmap proxychains pv
             apt-get -y install nginx proftpd
-            apt-get -y install ethtool git make gcc
+            apt-get -y install ethtool git make gcc lxde
             git clone http://github.com/iagox86/dnscat2.git
             echo "INSTALLS COMPELTE" 
             cd dnscat2/client
