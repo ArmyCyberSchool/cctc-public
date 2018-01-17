@@ -43,6 +43,11 @@
                 border-left: 1px solid;
                 padding: 0.5em 0.5em 0.5em 0.5em;
             }
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+            }
+            }
         </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -484,16 +489,22 @@
 					<section>
 					        <br>
 					        <h4>Distributed Control Systems (DCS)</h4>
-					        <img style="float: right; height: 250px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-3-ICS-Industries&Applications_DCS.png"></img>
-					        <small style="max-width: 300px; margin: 0; padding: 1em; margin-right: 320px;">
-					            Multilevel Control across a LAN
-					            <ul>
-							        <li>Automotive Manufacturing</li>
-							        <li>Printing Plants</li>
-							        <li>Chemical Plants</li>
-							        <li>Water Treatment facilities</li>
-						        </ul>
-						    </small>
+					        <div class="flex-container">
+					            <div>
+					                <small>
+					                    Multilevel Control across a LAN
+					                    <ul>
+							                <li>Automotive Manufacturing</li>
+							                <li>Printing Plants</li>
+							                <li>Chemical Plants</li>
+							                <li>Water Treatment facilities</li>
+						                </ul>
+						            </small>
+						        </div>
+					            <div>
+					                <img style="float: right; height: 350px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-3-ICS-Industries&Applications_DCS.png"></img>
+					            </div>
+					        </div>
 					</section>
 					<section>
 					        <br>
