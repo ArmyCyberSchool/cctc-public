@@ -42,7 +42,7 @@ You have gained limited privileged access to a system whose authentication secur
 * Escalate your priveleges and display the system's shadowed user passwords
 ** Copy your `/etc/{passwd,group,shadow}` files to a backup directory.
 ** As a user in the sudoers group, add a user 'ken' to the system
-** Using a text-editor, edit user 'ken' in `/etc/passwd` for the following:
+** Using a text-editor, edit user 'ken' in `/etc/{passwd,shadow}` for the following:
 *** Group ID 0
 *** BASH shell
 *** home directory of `/home/ken`
