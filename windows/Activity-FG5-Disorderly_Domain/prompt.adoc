@@ -31,8 +31,9 @@ image:./DD.png["DD",height="200",width="350"]
 
 * Install RSAT Tools on the DC
 
-# * Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
-# once logged in to Win10, there will be a desktop shortcut for Win10 RSAT download. 
+// * Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
+
+// once logged in to Win10, there will be a desktop shortcut for Win10 RSAT download. 
 
 == Scenario
 
