@@ -26,20 +26,20 @@ You need to do some reconnaissance and intelligence gathering in a target networ
 
 == Activity
 
-You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "home" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers " do not not allow login ", only SSH tunneling; ensure you use the appropriate flags in your commands. Your credentials for the target network are: username:studentXX, password:passwordXX, where XX is your student number. If you have a single digit student number, just use that digit (i.e. student1/password1)
+You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "H1" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers " do not not allow login ", only SSH tunneling; ensure you use the appropriate flags in your commands. Your credentials for the target network are: username:studentXX, password:passwordXX, where XX is your student number. If you have a single digit student number, just use that digit (i.e. student1/password1)
 {empty} +
 
 === Task 1)
-1) The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. This host has an internal IP of 10.3.0.10.
+1) The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. Discover what the internal ip address is for the compromised (pivot) machine..
 
 2) You are aware of an HTTP server in the environment (H3-1-Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/29 network to connect to it. 
-Use your access through the compromised host (10.3.0.10) in the target network to access it. Use local port forwarding to view the page hosted by H3 (10.3.0.1) on your local environment’s browser.
+Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by H3 (10.3.0.1) on your local environment’s browser.
 
-* Hint " WGET , localhost:[port] "
+* Hint "Use wget or browse to the localhost:[port]"
 
 3) Tear down the connections once you have completed this task.
 
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.3.0.10/Local port forwarding--->H3-1-Target's Webpage_
+_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Local port forwarding--->H3-1-Target's Webpage_
 
 4) Clear your browser cache
 
@@ -47,13 +47,13 @@ _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.3.0.10/Local port forwa
 
 === Task 2)
 
-1) You know that Target network 10.3.0.10, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
+1) You know that your pivot machine, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
 
 2) You are only concerned with this additional host (for now), which is in the 10.3.0.0/25 range.
 
 3) You are only concerned with finding ssh, telnet, ftp, and http services on hosts for this activity.
 
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/ 10.3.0.10/Dynamic port forwarding--->10.3.0.0/25 network_
+_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/25 network_
 
 4) Once you find out the host's identity, and what services are available, interact with those services!
 
