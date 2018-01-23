@@ -209,8 +209,8 @@ resources:
   host3:
     properties:
       diskConfig: AUTO
-      flavor: cy.small
-      image: Debian Stretch
+      flavor: cy.medium
+      image: Debian Jessie
       name:
         str_replace:
           params:
@@ -279,8 +279,8 @@ resources:
   host4:
     properties:
       diskConfig: AUTO
-      flavor: cy.small
-      image: Debian Stretch
+      flavor: cy.medium
+      image: Debian Jessie
       name:
         str_replace:
           params:
