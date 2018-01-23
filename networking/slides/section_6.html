@@ -510,9 +510,9 @@
 					        <br>
 						<h4>Supervisory Control And Data Acquisition (SCADA)</h4>
 						<small>
-							<div>Multilevel control and monitoring across a WAN</div>
+							<div>Multilevel control and monitoring across a WAN - typically polls slaves 2 - 10 sec interval</div>
 							<ul>
-						        	<li>Electrical Grid</li>
+							    <li>Electrical Grid</li>
 								<li>Pipelines</li>
 								<li>Railroad Systems</li>
 								<li>Traffic Lights</li>
@@ -586,9 +586,9 @@
 					 <br>
 					 <h4>MODBUS</h4>
 					 <div>
-						 <small>Old and insecure, but very widely used.</small>
+						 <small>Old (1979) and insecure, but very widely used across hundreds of vendors and many industries.  Open protocol since early 2000's.  No security provided.</small>
 					 </div>
-					 <img style="height: 350px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/17-1-ICS-Protocols_MODBUS.PNG">
+					 <img style="height: 350px;" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/17-0-ModbusTCP-protocol.jpg">
 				 </section>
 				 <section>
 					 <br>
@@ -663,26 +663,34 @@
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>ICS Functional Zones</h3>
 					<section>
+					    <br>
+					    <h4>Purdue Model</h4>
+					    <img style="height: 300px; border: none; float: left" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/16-0-PurdueModel.jpg">
+					    <img style="height: 300px; border: none; float: right" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/16-0-PurdueModel1.jpg">
+					</section>
+					<section>
 						<br>
-						<h4>Business IT Zone</h4>
+						<h4>Enterprise IT Zone</h4>
+						<img style="height: 275px; border: none;" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/16-0-IT-crowd-fire.gif"> 
 						<p>Normal IT infrastructure used for data and information processing.  Usually connected to the internet.</p>
 					</section>
 					<section>
 				    		<br>
-						<h4>Supervisory OT Zone</h4>
+						<h4>Supervisory Manufacturing/OT Zone</h4>
+						<img style="height: 275px; border: none;" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/16-0-scada-sliders.jpg">
 						<p>Has Supervisory workstations, Data Historians, and Engineering Workstations, with unrestricted network access to controllers.</p>
 					</section>
 					<section>
 						<br>
-						<h4>Field or Plant Zone</h4>
+						<h4>Field, Plant or Cell Zone</h4>
+						<img style="height: 275px; border: none;" src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/ICS-Slides/16-0-Plant-Zone_hardHat.png">
 						<p>Connects controllers to sensors, end point actuators, or remote terminals.  This can be over LAN, WAN, Serial, or even Pnumatic networks.</p>
 					</section>
 					<section>
 					    <br>
 					    <h4>Safety Instrumented Systems Zone</h4>
-					    <small>Independent safety controls, relief valves and other systems that prevent systems from failing catastrophically with ensuing loss of life and property</small>
-                        <img style="height: 320px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-3-ICS-Industries&Applications-SIS_Layers-of-Protection.jpg">
-					</section>
+                        <img style="height: 300px;" src="https://git.cybbh.space/CCTC/internal/raw/master/facilitation-guides/networking/images/FG5-Industrial-Control-Systems/14-3-ICS-Industries&Applications-SIS_Layers-of-Protection.jpg">
+					    <p>Independent safety controls, relief valves and other systems that prevent catastrophic failures with ensuing loss of life and property</p>					</section>
 				</section>
 <!--				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>ICS Security Zones</h3>
