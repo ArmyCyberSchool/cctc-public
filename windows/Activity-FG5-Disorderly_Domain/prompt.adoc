@@ -27,10 +27,13 @@ image:./DD.png["DD",height="200",width="350"]
 == Setup
 
 [square]
-* Add new stack template: +
-`10.50.22.211/heat/DD.yaml`
-* Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
-once logged in to Win10, there will be a desktop shortcut for Win10 RSAT download. 
+* download DD VM from link provided by instructor or yaml +
+
+* Install RSAT Tools on the DC
+
+// * Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
+
+// once logged in to Win10, there will be a desktop shortcut for Win10 RSAT download. 
 
 == Scenario
 
@@ -44,11 +47,11 @@ For this reason, you are not to delete, disable, or otherwise alter any active d
 
 == Activity
 
-Using PowerShell and the Domain Services skills you have learned, achieve the following objectives (be sure to include all findings in your report):
+Using PowerShell and the Domain Services skills, achieve the following objectives (be sure to include all findings in your report):
 
 [square]
 * Find and report security violations concerning shared files and folders in the "Warrior Share" drive.
-* Verify Account Security requirements IAW S-6 Password Security SOP (location: Windows 10 Desktop) are being met.
+* Verify Account Security requirements IAW S-6 Password Security SOP (location: DC Desktop) are being met.
 * Locate and report any account anomalies.
 * Report any additional anomalous findings to the Brigade S-2 (Instructor) to determine if they warrant further investigation.
 * Determine if details of the Medical Convoy have been leaked or not.
@@ -62,6 +65,8 @@ Using PowerShell and the Domain Services skills you have learned, achieve the fo
   password: PassWord12345!!
 
 *Windows 10 (Remote Connection):* +
+
+* If using openstack +
 
   user:     administrator
   password: password
