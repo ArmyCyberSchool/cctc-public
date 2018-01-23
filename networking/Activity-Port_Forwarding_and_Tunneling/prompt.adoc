@@ -32,8 +32,8 @@ You will be using the SSH tunneling Shared Topology for this exercise. You will 
 === Task 1)
 1) The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. Discover what the internal ip address is for the compromised (pivot) machine..
 
-2) You are aware of an HTTP server in the environment (H3-1-Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/29 network to connect to it. 
-Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by H3 (10.3.0.1) on your local environment’s browser.
+2) You are aware of an HTTP server in the environment (Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/29 network to connect to it. 
+Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by a webserver(10.3.0.1) on your local host’s browser.
 
 * Hint "Use wget or browse to the localhost:[port] in your web browser"
 
