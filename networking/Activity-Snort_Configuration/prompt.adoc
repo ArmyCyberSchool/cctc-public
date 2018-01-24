@@ -22,7 +22,7 @@
 
 {empty} +
 
-First, students will need to access their “Router”. This is a Linux host with the Quagga router package installed. The router has 3 interfaces, but we will be looking at interfaces eth1 (10.1.0.1) and eth2 (10.2.0.1).
+First, students will need to access their H1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2).
 
 {empty} +
 
