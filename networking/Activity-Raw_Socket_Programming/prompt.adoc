@@ -92,7 +92,7 @@ ip_proto = ?
 ip_check = 0
 ip_saddr = socket.inet_aton ( source_ip )
 ip_daddr = socket.inet_aton ( dest_ip )
-# Packing the feilds into a structure
+# Packing the fields into a structure
 ip_header = pack('!????????????' , ip_ver_ihl, ip_tos, ip_len, ip_id, ip_frag, ip_ttl, ip_proto, ip_check, ip_saddr, ip_daddr)
 ----
 
