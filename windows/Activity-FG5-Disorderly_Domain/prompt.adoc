@@ -27,9 +27,11 @@ image:./DD.png["DD",height="200",width="350"]
 == Setup
 
 [square]
-* download DD VM from link provided by instructor or yaml +
+* Download DD VM from link provided by instructor or yaml +
 
-* Install RSAT Tools on the DC
+* RSAT Tools are installed on the DC
+
+* If doing activity remotely, you will need to install RSAT tools on your workstation.
 
 // * Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
 
@@ -43,7 +45,7 @@ The Brigade's mission is to diminish the efforts of a terrorist organization, kn
 The Brigade Commander is convinced that someone in his organization is working with E.V.I.L., and is very concerned that the details concerning an operation for an +
 Emergency Convoy of Critical Medical Supplies may have been leaked by unknown trusted insider(s). +
 He wants you to determine if the operation details have been leaked, without tipping off the unknown trusted insider(s). +
-For this reason, you are not to delete, disable, or otherwise alter any active directory object, in any way. +
+For this reason, you are not to delete, disable, or otherwise alter any active directory object(s), in any way. +
 
 == Activity
 
@@ -62,7 +64,7 @@ Using PowerShell and the Domain Services skills, achieve the following objective
 *Domain Controller:* +
 
   user:     Administrator
-  password: PassWord12345!!
+  password: ReallyStrongPassword!!
 
 *Windows 10 (Remote Connection):* +
 
@@ -73,7 +75,7 @@ Using PowerShell and the Domain Services skills, achieve the following objective
 
 
 *Note:* Do not make any changes to the DC. Do not write files. Do not delete files. Only use *_query_* and *_get_* style commands. +
-Do not use any variation of an *_add_* command or *_mod_* command.
+Do not use any variation of an *_add_* command or *_mod_* commabenaiah.l.hatfieldnd.
 
 == Hints: 
 
