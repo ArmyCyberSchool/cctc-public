@@ -75,7 +75,7 @@ Using PowerShell and the Domain Services skills, achieve the following objective
 
 
 *Note:* Do not make any changes to the DC. Do not write files. Do not delete files. Only use *_query_* and *_get_* style commands. +
-Do not use any variation of an *_add_* command or *_mod_* commabenaiah.l.hatfieldnd.
+Do not use any variation of an *_add_* command or *_mod_* command
 
 == Hints: 
 
