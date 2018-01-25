@@ -37,7 +37,7 @@ First check your Linux Host's ARP table. If an entry exists for your target (10.
 
 You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
 
-Befeore you begin, configure your linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
+Before you begin, configure your linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
 
 Now to craft your request:
 
