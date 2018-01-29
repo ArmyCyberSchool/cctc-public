@@ -64,7 +64,7 @@ Using PowerShell and the Domain Services skills, achieve the following objective
 *Domain Controller:* +
 
   user:     Administrator
-  password: ReallyStrongPassword!!
+  password: ReallyStrongPassword!!!!
 
 *Windows 10 (Remote Connection):* +
 
