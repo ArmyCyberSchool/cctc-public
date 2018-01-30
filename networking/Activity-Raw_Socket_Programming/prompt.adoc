@@ -83,17 +83,9 @@ packet = '';
 source_ip = 'x.x.x.x'
 dest_ip = 'x.x.x.x'	
 ip_ver_ihl = ?
-ip_tos = ?	    
-ip_len = 0      
-ip_id = ?       
-ip_frag = ?	   
-ip_ttl = ?   
-ip_proto = ?
-ip_check = 0
-ip_saddr = socket.inet_aton ( source_ip )
-ip_daddr = socket.inet_aton ( dest_ip )
-# Packing the fields into a structure
-ip_header = pack('!????????????' , ip_ver_ihl, ip_tos, ip_len, ip_id, ip_frag, ip_ttl, ip_proto, ip_check, ip_saddr, ip_daddr)
+# Continue adding any/all header fields that are required
+# Pack the fields into a structure
+ip_header = pack('!????????????' , ip_ver_ihl, header-field, header-field, header-field...)
 ----
 
 4) You will need to create user data to insert into the packet (after the IP header) as well. This data will need to be encoded. You can use a module of your choice to achieve this, however a good place to start maybe the binascii module.
@@ -120,7 +112,7 @@ s.FUNCTION(packet, (dest_ip , 0 ))
 === Task 4)
 *Check your results*
 
-1) You can retrieve a shell of the script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
+1) You can retrieve a shell example of a script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
 
 2) Fill in all the areas with “?”. Read the Comments carefully!
 
