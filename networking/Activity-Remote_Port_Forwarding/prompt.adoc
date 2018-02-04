@@ -20,34 +20,62 @@
 {empty} +
 
 == Scenario
-You are provided with information about your target network, indicating that there is a specific host in a target network with extremely strict inbound rules; the outbound rules are more flexible however. 
-Since you can’t get any packets IN to it, you must focus on getting packets OUT. You have an insider (his name is Jose) that is willing to set up remote port forwarding on the host so that you can get your hands on sensitive information its webpage is hosting. 
-You will need to play the role of Jose and telnet to the floating IP provided by your instructor (10.50.X.X).
+
+You are provided with information about your target network that indicates a specific host in the target network is set up with extremely strict inbound rules; the outbound rules are more flexible however. 
+Since you can’t get any packets IN to it, you must focus on getting packets OUT. You have an insider (his name is Jose) that is willing to set up remote port forwarding on the host so that you can get your hands on sensitive information being hosted on it's web page. 
+
+* You will need to "play" the role of Jose initially and telnet to the floating IP provided by your instructor (10.50.X.X).
+
+*SSH Credentials:*
+----
+
+Telnet (Jose):
+    studentxx
+    passwordxx
+
+Tunnel (No Terminal):
+    tunnel
+    password
+
+Student (Terminal Access):
+    studentxx
+    passwordxx
+
+----
+
+
 == Activity
 
-Using remote port forwarding, Jose will establish a tunnel out from the host he has access to and forward its webpage (or anything else you decided to specify) to a port on a host port that you can access from your network. This will allow you to connect from outside the network (using local port forwarding) to the port on the pivot and receive a webpage (or whatever else is available).
+Using remote port forwarding, Jose needs to establish a tunnel outbound from the host he has access to and forward its webpage (or anything else you decided to specify) to a specific port on a host machine that you can access from your network (Atropia Pivot). This provides you with the ability to connect from the outside network (using local port forwarding) to the port specified on the Atropia pivot and receive the webpage (or whatever else is available) from the target machine.
 
 {empty} +
 
 === Task 1)
 
-1) Acting as the "insider", Jose, access the H2 -1 Reverse Target via telnet (use your studentXX/passwordXX account). You can set up reverse port forwarding there to forward the webpage it is hosting. 
-2) The webpage on H2-1 Target needs to be forwarded to port 90XX (XX is your student number) on the H1 pivot host.
+1) Acting as the "insider", Jose, access the target machine via telnet (use your student SSH credentials). 
+
+2.) Set up a remote port forward to 90XX at the Atropia pivot from the target machine in order to host the webpage from the target machine. (Utilize your tunnel SSH credentials)
 
 {empty} +
 
 === Task 2)
 
-1) After Jose establishes the reverse tunnel, you should return to your home machine. Here you will need to tunnel through the compromised SSH Server, 10.50.X.X, and perform local port forwarding. 
-2) Your SSH tunnels should connect a local port on your machine to the port on H1 that Jose is sending the webpage to (90XX). 
-3) Once complete, you should be able to access H2-1's webpage from the browser on your home client.
-4)  Clear your browser cache.
+1.) After Jose establishes the reverse tunnel, you should return to your home machine (H1). You will need to create a local port forward in order to tunnel through the compromised SSH Server (Atropia), at 10.50.X.X.
+
+2.) Your SSH tunnels should connect a local port on your machine (any random port) to the port (90XX) on the compromised pivot host (Atropia) that Jose is sending the webpage to.
+
+3.) Once complete, you should be able to access the target machine's webpage from the browser on your home client.
+
+4.) Clear your browser cache.
+
 {empty} +
+
 
 === Task 3)
 
-1) The H2-1 host has access to an FTP server on the 10.2.0.0/25 network. Find the host with the FTP server.
-2)  Access the FTP service from your H1 GUI in your home environment through remote and dynamic port forwarding and retrieve the files.
+1.) The H2-1 host has access to an FTP server on the 10.2.0.0/25 network. Find the host with the FTP server.
+
+2.) Access the FTP service from your H1 GUI in your home environment through remote and dynamic port forwarding and retrieve the files.
 
 {empty} +
 
