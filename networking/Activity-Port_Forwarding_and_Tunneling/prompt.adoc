@@ -35,7 +35,9 @@ Tunnel (No Terminal):tunnel:password
 Student (Terminal Access):studentxx:passwordxx
 :===
 
-Note: When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
+Note: +
+   - In place of "xx" in the above credentials, use your student number (ex: username: student2 password: password2). + 
+   - When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
 == Activity
 
