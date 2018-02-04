@@ -47,7 +47,7 @@ Using remote port forwarding, Jose needs to establish a tunnel outbound from the
 
 *Utilize the diagram below for Task 1 and Task 2:*
 
-image::https://git.cybbh.space/CCTC/public/raw/Cantrell_PromptEdits/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task1.png[Task1]
+image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task1.png[Task1]
 
 === Task 1)
 *Perform the actions our insider, Jose, would take in order to make this possible:*
@@ -74,6 +74,12 @@ image::https://git.cybbh.space/CCTC/public/raw/Cantrell_PromptEdits/networking/A
 
 
 === Task 3)
+
+*Utilize the diagram below for Task 3:*
+
+image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task3.png[Task3]
+
+
 *As the malicious external actor, you need to discover and interact with other services to obtain additional information:* 
 
 1.) Our insider, Jose, has discovered his host can reach various services on other hosts within the 10.2.0.0/25 network. 
