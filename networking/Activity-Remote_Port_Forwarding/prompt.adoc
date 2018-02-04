@@ -94,7 +94,9 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 
 == Deliverables
 [square]
-* Screenshots showing your commands and successful access of the target webpage and ftp files on H2-1
+
+* Screenshots showing your commands and successful access of the target webpage host by jose, open ports discovered through scans, interaction with other available hosts and their services, files obtained
+
 * An explanation of the commands/process you used to reach the target (from both Jose, and your perspective)
 
 {empty} +
