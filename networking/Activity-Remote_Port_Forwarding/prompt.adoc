@@ -49,6 +49,7 @@ Using remote port forwarding, Jose needs to establish a tunnel outbound from the
 *Perform the actions our insider, Jose, would take in order to make this possible:*
 
 1.) Acting as the "insider", Jose, access the target host via telnet (utilize the "student" SSH credentials). 
+
 2.) Set up a remote port forward to 90XX at the Atropia pivot on the target host in order to host it's webpage. (Utilize the "tunnel" SSH credentials)
 
 {empty} +
