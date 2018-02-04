@@ -45,12 +45,17 @@ Using remote port forwarding, Jose needs to establish a tunnel outbound from the
 
 {empty} +
 
+*Utilize the diagram below for Task 1 and Task 2:*
+
+image::https://git.cybbh.space/CCTC/public/raw/Cantrell_PromptEdits/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task1.png[Task1]
+
 === Task 1)
 *Perform the actions our insider, Jose, would take in order to make this possible:*
 
 1.) Acting as the "insider", Jose, access the target host via telnet (utilize the "student" SSH credentials). 
 
 2.) Set up a remote port forward to 90XX at the Atropia pivot on the target host in order to host it's webpage. (Utilize the "tunnel" SSH credentials)
+
 
 {empty} +
 
