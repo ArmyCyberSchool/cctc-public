@@ -30,7 +30,7 @@ Tunnel (No Terminal):tunnel:password
 Student (Terminal Access):studentxx:passwordxx
 :===
 
-Note: When utilizing the "tunnel" user credentials, you must specify a -NT at the end of your command, otherwise it will not work.
+Note: When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
 == Scenario
 
