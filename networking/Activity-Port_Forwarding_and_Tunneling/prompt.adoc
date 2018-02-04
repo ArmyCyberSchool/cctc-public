@@ -24,6 +24,19 @@
 You need to do some reconnaissance and intelligence gathering in a target network. This network can be accessed through a public facing interface on one of its hosts. This public facing IP will be provided by the instructor (10.50.X.X).  Be aware that some of the target network's INSIDE IP's will be the same as the IP's inside your own environment. 
 {empty} +
 
+== Credentials
+
+:===
+Description:Username:Password
+Telnet (Jose):studentxx:passwordxx
+
+Tunnel (No Terminal):tunnel:password
+
+Student (Terminal Access):studentxx:passwordxx
+:===
+
+Note: When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
+
 == Activity
 
 You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "H1" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers " do not not allow login ", only SSH tunneling; ensure you use the appropriate flags in your commands. 
