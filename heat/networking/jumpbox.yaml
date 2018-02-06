@@ -60,9 +60,8 @@ resources:
             apt-get -y install proxychains pv
             apt-get -y install nginx proftpd
             apt-get -y install ethtool git make gcc
+            apt-get -y install lxde
             echo "INSTALLS COMPELTE" 
-            cd dnscat2/client
-            make
             #Disable TCP Offloading
             cat <<EOF > /etc/network/if-up.d/tcpoffload
             #!/bin/bash
