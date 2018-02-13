@@ -47,7 +47,7 @@ If the students want to use a tool from within the host (example: tcpdump, netca
 {empty} +
 
 ** The first entry point is "Net-Final-1". This is our pivot point; it's used for ennumeration and access into a target network. This is also an exfil point and can be reached via SSH to the floating IP provided. You will be exfilling data securely from this box to your Home network.
-Operationally, protocol allows for exfil data to only to placed inside the /usr/share/cctc directory. This is where you will begin your operation.
+Operational protocol only allows for the exfilled data to only be placed inside the /usr/share/cctc directory. This is where you will begin your operation.
 
 {empty} +
 
