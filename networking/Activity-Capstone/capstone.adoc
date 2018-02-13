@@ -45,7 +45,7 @@ You must take OP notes (to include commands and vectors used) during the capston
 {empty} +
 
 ** The first entry point is "Net-Final-1". This is our pivot point; it's used for ennumeration and access into a target network. This is also an exfil point and can be reached via SSH to the floating IP provided. You will be exfilling data securely from this box to your Home network.
-Operational protocol only allows for the exfilled data to be placed inside the /usr/share/cctc directory. This is where you will begin your operation.
+Operational protocol only allows for the exfilled data to be placed inside the /usr/share/cctc directory on any host you end up obtaining a shell on. Begin your operation at Net-Final-1.
 
 {empty} +
 
