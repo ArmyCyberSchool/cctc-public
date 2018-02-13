@@ -21,12 +21,8 @@ U.S. Army Cyber School
 {empty} +
 
 
-
 == Introduction to Capstone
 '''
-
-
-
 
 {empty} +
 
@@ -50,30 +46,30 @@ If the students want to use a tool from within the host (example: tcpdump, netca
 
 {empty} +
 
-The first entry point is "Net-Final-1". This is our pivot point; it's used for ennumeration and access into a target network. This is also an exfil point and can be reached via SSH to the floating IP provided. You will be exfilling data securely from this box to your Home network.
+** The first entry point is "Net-Final-1". This is our pivot point; it's used for ennumeration and access into a target network. This is also an exfil point and can be reached via SSH to the floating IP provided. You will be exfilling data securely from this box to your Home network.
 Operationally, protocol allows for exfil data to only to placed inside the /usr/share/cctc directory. This is where you will begin your operation.
 
 {empty} +
 
-Once you have secured the flag, you will use the exfilled intelligence to exploit any vulnerable target boxes. You should see telnet open... 
+** Once you have secured the flag, you will use the exfilled intelligence to exploit any vulnerable target boxes. You should see telnet open... 
 
 {empty} +
 
-Upon reaching the next host, you will need to check for any hosts that are connected and may allow you to use your set of compromised credentials.
+** Upon reaching the next host, you will need to check for any hosts that are connected and may allow you to use your set of compromised credentials.
 
 {empty} +
 
-After you have accessed any further targets, using the intelligence provided, try to find the message being beaconed out. This can be done from the host reciveing or the host sending the beacon.
+** After you have accessed any further targets, using the intelligence provided, try to find the message being beaconed out. This can be done from the host reciveing or the host sending the beacon.
 
 {empty} +
 
-You have recieved instructions to access and record information from target websites. One website must be accessed through your pivot point, but the webpages will need to be viewed in a browser on your local host since they may contain graphics. The other website resides on a host that doesn't allow SSH...so you will need to figure out an alternate method to access the information.
+** You have recieved instructions to access and record information from target websites. One website must be accessed through your pivot point, but the webpages will need to be viewed in a browser on your local host since they may contain graphics. The other website resides on a host that doesn't allow SSH...so you will need to figure out an alternate method to access the information.
 
 {empty} +
 
-You should be ready to access another, highly secured portion of the target network. This portion is only accessible from the 10.25.0.9 host.  Within that area, you will find an FTP server, and two hosts that have a web service configured. You need to retrieve the information from these targets to complete your mission. 
+** You should be ready to access another, highly secured portion of the target network. This portion is only accessible from the 10.25.0.9 host.  Within that area, you will find an FTP server, and two hosts that have a web service configured. You need to retrieve the information from these targets to complete your mission. 
 
-There are a total of 9 flags within the network.
-'''
+*There are a total of 9 flags within the network*
+
 
 
