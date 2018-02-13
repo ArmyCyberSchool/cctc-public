@@ -51,7 +51,7 @@ First, students will need to access their H1 host. The host has 2 interfaces, bu
 
 5) Send a ping fro H1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
 
-6) Finally, go back to your host and send a ping without the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
+6) Finally, go back to your host and send a ping with the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
 
 {empty} +
 
