@@ -63,7 +63,7 @@ Operational protocol only allows for the exfilled data to be placed inside the /
 
 {empty} +
 
-** You have recieved instructions to access and record information from target websites. One website must be accessed through your pivot point, but the webpages will need to be viewed in a browser on your local host since they may contain graphics. The other website resides on a host that doesn't allow SSH...so you will need to figure out an alternate method to access the information.
+** You have recieved authorizations to access and record information from target websites. One website must be accessed through your pivot point, but the webpages will need to be viewed in a browser on your local host since they may contain graphics. The other website resides on a host that doesn't allow SSH...so you will need to figure out an alternate method to access the information.
 
 {empty} +
 
