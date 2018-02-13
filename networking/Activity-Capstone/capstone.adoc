@@ -2,7 +2,6 @@
 :doctype: book
 :stylesheet: ../cctc.css
 |===
-a|image::https://git.cybbh.space/CCTC/advance-sheets/raw/master/resources/images/cyber_logo.jpg[Cyber,width=256,float="left"]
 a|= Networking: Capstone Guide
 |===
 '''
