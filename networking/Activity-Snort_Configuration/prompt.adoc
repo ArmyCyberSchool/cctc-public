@@ -37,6 +37,7 @@ First, students will need to access their H1 host. The host has 2 interfaces, bu
 
 4) Now you will practice customizing this icmp rule.
 
+
 {empty} +
 
 == Task 2
@@ -53,21 +54,24 @@ First, students will need to access their H1 host. The host has 2 interfaces, bu
 
 6) Finally, go back to your host and send a ping with the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
 
+
 {empty} +
 
 == Task 3
 
 1) In order to add custom rules of your own, you will need to write the rules, AND add them to be included within the snort.conf file.
 
-2) You will be writing a rule to alert on the vulnerability exploited in the attack-trace.pcap from the traffic analysis section. Be sure you are looking for the VULNERABILITY and not the exploit. This can be accomplished without payload inspection.
+2) You will be writing a rule to alert on the vulnerability exploited in the attack-trace.pcap from the traffic analysis section. Be sure you are looking for the VULNERABILITY and not the exploit.
 The rule should be written in the /etc/snort/rules directory. For example, you may name your rule “attack.rule”.
 
 _For this rule, you should use variables. Define the variables inside the snort.conf file_
 
-3) Once the rule has been created, add to the snort.conf file. Edit this file to add a line including your new rule. For example, add the line “include /etc/snort/rules/attack.rule” to the file. 
+3) Once the rule has been created, add new rule to the snort.conf file. For example, add the line “include /etc/snort/rules/attack.rule” to the snort.conf. 
 This will ensure the rule you created in the previous step is used.
 
-4) Transfer the attack-trace.pcap to the snort/router; using the "-r" flag, run the pcap through snort.
+
+4) Read the attack-trace.pcap using snort (-r reads pcap).
+
 
 5) Check your alert logs to ensure that your alert was triggered by the traffic in the pcap as you intended.
 
@@ -80,11 +84,10 @@ This will ensure the rule you created in the previous step is used.
 
 == Challenge
 
-1) Your challenge task will be to create a custom rule in snort that will alert on a syn-flood. A syn flood can indicate either a DoS, or more commonly, a scanning attempt.
+1) Your challenge task will be to create a custom set of rules in snort that will alert on a stealth port scan. 
 
-2) In order to do this, you will need to utilize the "flow" and "detection_filter" functions in your rule. 
 
-3) Once you have created the rule and implemented it, test it be attempting an aggressive syn scan from H1 using Nmap, or another tool of your choice.
+2) Once you have created the rule and implemented it, test it using Nmap or another tool of your choice.
 
 {empty} +
 
