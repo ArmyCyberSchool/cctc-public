@@ -34,9 +34,7 @@ The capstone is meant to provide you with a way to test your hands-on skills bas
 The infrastructure is shared. There is a unique "compromised" credential set for each student (studentX/passwordX).
 {empty} +
 
-If the students want to use a tool from within the host (example: tcpdump, netcat, arp, etc...) they should find the tool/command via the 
-"whereis" command. This will provide the directory path that the tool/command can be accessed from. In order to use the tool/command, the student may need to specify the full directory path. 
-
+You must take OP notes during the capstone and submit this with the Capstone exercise in Blackboard.
 '''
 
 
