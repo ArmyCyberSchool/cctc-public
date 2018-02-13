@@ -34,7 +34,7 @@ The capstone is meant to provide you with a way to test your hands-on skills bas
 The infrastructure is shared. There is a unique "compromised" credential set for each student (studentX/passwordX).
 {empty} +
 
-You must take OP notes during the capstone and submit this with the Capstone exercise in Blackboard.
+You must take OP notes (to include commands and vectors used) during the capstone and submit this with the Capstone exercise in Blackboard.
 '''
 
 
