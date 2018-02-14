@@ -1,5 +1,5 @@
 description: Heat Template - Networking - Individual for Students
-heat_template_version: '2016-10-14'
+heat_template_version: '2017-09-01'
 parameters:
   last_name:
     constraints:
@@ -58,7 +58,6 @@ resources:
             apt-get -y install locate dnsutils lsof ftp telnet
             apt-get -y install tcpdump scapy
             apt-get -y install proxychains pv
-            apt-get -y install nginx proftpd
             apt-get -y install ethtool git make gcc
             apt-get -y install lxde
             echo "INSTALLS COMPELTE" 
