@@ -36,12 +36,12 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.medium
-      image: Debian Jessie
+      image: Ubuntu 16.04
       name:
         str_replace:
           params:
             lastname: {get_param: last_name}
-          template: H1-lastname-Debian-GUI
+          template: H1-lastname-Ubuntu-GUI
       networks:
       - port: {get_resource: host1_subnet_0_port}
       user_data:
@@ -59,7 +59,6 @@ resources:
             apt-get -y install tcpdump scapy
             apt-get -y install proxychains pv
             apt-get -y install ethtool git make gcc
-            apt-get -y install lxde
             echo "INSTALLS COMPELTE" 
             #Disable TCP Offloading
             cat <<EOF > /etc/network/if-up.d/tcpoffload
