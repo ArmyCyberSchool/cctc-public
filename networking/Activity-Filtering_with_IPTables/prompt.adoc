@@ -62,6 +62,8 @@ You will be constructing and placing IPTables rules to meet the intent for filte
 
 3. Apply logging to the rule created from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages located in "/var/logs/messages"  file that should be created by initiating a ping on the H1 client.
 
+4. Utilize bpf bytecode to block icmp traffic with "deadbeef" in the payload. (You must flush your current table rules)
+
 {empty} +
 
 == Useful Resources
