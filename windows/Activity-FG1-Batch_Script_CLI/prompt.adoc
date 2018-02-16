@@ -1,34 +1,44 @@
-:doctype: book
-:stylesheet: ../../cctc.css
-
 = Activity - Batch Script CLI
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Activity
+== Learning Objectives
 
-Write a batch script using only CLI (No WMIC, No Powershell) commands to quickly enumerate your Windows system using Windows executables. At a minimum, the script should capture:
+* CCWI000 - 
+** CCWI000.000 - 
 
-[square]
-* User and group information
-* Information on running processes
-* Service information
-* Network configuration information
-* Information about hosts on the same network (no active scanning)
-* System configuration information
-* Directory and file information in key locations
+== Learning Outcomes
 
-
-== Deliverables
-[square]
-* A batch script running Windows executables
-* The output of that script
-
-== Learning Objectives / Outcomes
-[square]
 * Familiarity with Command Prompt
 * Confidence interacting with Windows from a command line interface
 * Familiarity with Windows commands that can be used to enumerate the system
+
+== Scenario
+
+* N/A
+
+=== Task 1)
+
+* Write a batch script using only CLI (No WMIC or Powershell) commands to quickly enumerate your Windows system using Windows executables. At a minimum, the script should capture:
+** User and group information
+** Information on running processes
+** Service information
+** Network configuration information
+** Information about hosts on the same network (no active scanning)
+** System configuration information
+** Directory and file information in key locations
+
+== Deliverables
+
+* A batch script running Windows executables
+* The output of that script
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
