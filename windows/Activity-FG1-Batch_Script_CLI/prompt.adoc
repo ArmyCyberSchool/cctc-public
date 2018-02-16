@@ -18,6 +18,7 @@
 === Task 1)
 
 * Write a batch script using only CLI (No WMIC or Powershell) commands to quickly enumerate your Windows system using Windows executables. At a minimum, the script should capture:
+
 ** User and group information
 ** Information on running processes
 ** Service information
