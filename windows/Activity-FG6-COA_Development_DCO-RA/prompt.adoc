@@ -1,38 +1,41 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - COA Development for DCO-RA
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+= Activity - COA Development
 
-== Activity: COA Development for DCO-RA
-A critical server is being Dos’d by an adversary. You must conduct a Defensive Cyber Operations (DCO) Response action (DCO-RA) to stop the attack. 
-As a group, you must first develop 3 technical courses of action using the Military Decision Making Process (MDMP).
-You have leveraged your intelligence sources and discovered that the attacking machine is a windows 7 box located in Denovia.
-The machine was compromised in the past but has since been patched and the credentials have changed, therefore the exploits and credentials you have at your disposal will not grant you access.
-Utilizing the skills, and concepts you have learned in this module, stop the attack.
-Ultimately the instructor will approve one of your COAs and allow you to attempt to stop the denial of service attack.
+== Learning Objectives
 
+* CCWI000 - 
+** CCWI000.000 - 
 
-[square]
-* Understand scenario
-* Develop COAs
-* Discuss the implications of the technical courses action you develop
-* Propose your COAs
-* Carry out a valid DCO-RA based off your COA
+== Learning Outcomes
 
-
-== Deliverables
-[square]
-* Stop the denial of service attack
-
-
-
-== Learning Objectives / Outcomes
-[square]
 * Become familiar with incident response
 * Obtain a hands on practical application for Course of Action Development
 * Demonstrate the fundamentals of everything learned in the Windows module
+
+== Scenario
+
+* You have been notified of a DoS attack against a critical server. You must respond to this incident and stop the attack. You have discovered that the attacking machine is a Windows 7 machine located in Denovia. The Denovian machine was compromised in the past, but has since been patched and the credentials have changed; therefore, the exploits and credentials you have at your disposal will not grant you access.
+
+=== Task 1)
+
+* As a group, you must first develop and recommend 3 technical courses of action
+* The instructor will approve one of your COAs and allow you to attempt to stop the denial of service attack.
+
+== Deliverables
+
+* Develop and recommend 3 COAs
+* Stop the denial of service attack
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
