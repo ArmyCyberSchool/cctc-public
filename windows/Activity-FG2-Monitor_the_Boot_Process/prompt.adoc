@@ -1,29 +1,47 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Monitor the boot process
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+= Activity - Monitor the Boot Process
 
-== Activity
+== Learning Objectives
+
+* CCWI000 - 
+** CCWI000.000 - 
+
+== Learning Outcomes
+
+* Define the Windows pre-boot process
+* Define the Windows boot process
+* Analyzing the boot process
+* Familiarity with Sysinternals Procmon 
+
+== Scenario
+
+* N/A
+
+=== Task 1)
+
 * Configure Sysinternals Procmon to monitor the boot process. Reboot your computer, open Procmon and save the output.
 * Set up Procmon to monitor the boot process again.
 * Double-click bootmalware.exe. This will reboot your machine.
-* Analyze the 2 dump files and Compare the outputs. 
+* Analyze the 2 dump files and Compare the outputs.
+
 ** note: BootUNmalware.exe will revert your machine back to normal in case you made a mistake
 
-* You are to monitor the WalletService service.
+* You are to monitor the "WalletService" service.
 
 == Deliverables
-[square]
+
 * A demo / presentation to the class that discusses the steps taken in analysis and the differences you identified between the two dump files.
 
-== Learning Objectives / Outcomes
-[square]
-*Define the Windows pre-boot process
-*Define the Windows boot process
-*Analyzing the boot process
-*Familiarity with Sysinternals Procmon 
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
