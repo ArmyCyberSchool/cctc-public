@@ -97,7 +97,7 @@ resources:
           template: |
             #!/bin/bash
             echo 127.0.0.1 $(hostname) >> /etc/hosts
-            echo 173.230.138.130 git.cybbh.space >> /etc/hosts
+            echo 52.247.160.149 git.cybbh.space >> /etc/hosts
             sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
             export DEBIAN_FRONTEND=noninteractive
             apt-get update
@@ -297,7 +297,7 @@ resources:
           template: |
            #!/bin/bash
            echo 127.0.0.1 $(hostname) >> /etc/hosts
-           echo 173.230.138.130 git.cybbh.space >> /etc/hosts
+           echo 52.247.160.149 git.cybbh.space >> /etc/hosts
            sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
            export DEBIAN_FRONTEND=noninteractive
            apt-get update
