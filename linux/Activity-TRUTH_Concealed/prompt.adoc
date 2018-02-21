@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - TRUTH Concealed
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/rootkits.png[rootkit,height="150",width="450",float="left"]
 
@@ -20,20 +15,18 @@ image::../Resources/rootkits.png[rootkit,height="150",width="450",float="left"]
 ** CCNI012.005   - Describe methods to detect and mitigate rootkits
 ** CCNI012.006   - Demonstrate how rootkits can be used to provide false information to a user
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Ability to discern truth from fiction, as it pertains to rootkit activity
 * DCO and OCO purposes for rootkits
 * Building a kitable tool for future Incident Response use
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
-[square]
+=== Task 1)
+
 * *User-land rootkit:*
 ** in your `/usr/share/cctc/rootkit` directory .. compile `/usr/share/cctc/rootkit/sudo.c` using `/usr/bin/gcc` or `/usr/bin/tcc`:
 
@@ -58,7 +51,7 @@ rkhunter -c | more  || rkhunter -c && grep -i warning /var/log/rkhunter.log
 cd /rootkit/0010100010 && make
 ----
  
-at this point .. baseline your binaries, and systemcalls, etc .. +
+* at this point .. baseline your binaries, and systemcalls, etc ..
 
 ----
 find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -exec md5sum {} >> /root/baselined_bins.txt \;
@@ -67,8 +60,8 @@ ps -elf >> /root/baselined_processes.txt
 netstat -tulpan >> /root/baselined_connections.txt
 ----
 
-and anything else you THINK might help you ID a rootkit presence . . +
 
+* and anything else you THINK might help you ID a rootkit presence ..
 
 * Inject r00tk1t (kernel module):
 
@@ -76,31 +69,27 @@ and anything else you THINK might help you ID a rootkit presence . . +
 insmod /rootkit/0010100010/r00tk1t.ko
 ----
 
-Hide a process: +
+
+* Hide a process:
 
 ----
 kill -31 $(ps -elf | grep -v grep | grep sshd | awk '{print $4}')
 ----
 
-Hide a binary: +
+
+* Hide a binary:
 
 ----
 mv /bin/netstat /bin/hidemenetstat
 ----
 
-Identify concealed process and connections not being displayed by netstat, and ps +
 
-{empty} +
-
-*INSTRUCTOR DEMO* +
-
-{empty} +
+* Identify concealed process and connections not being displayed by netstat, and ps
+* *INSTRUCTOR DEMO*
 
 == Deliverables
 
-* Your script 
-
-{empty} +
+* Your script
 
 == Hints
 
@@ -111,9 +100,11 @@ cat /proc/$PID/syscall
 find /lib/modules/$(uname -r) -type f -name "*.ko" | awk -F/ '{print $NF}'
 ----
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-http://tldp.org/HOWTO/Module-HOWTO/x73.html +
-https://www.cyberciti.biz/faq/inux-kernel-where-to-find-modules/ +
+* http://tldp.org/HOWTO/Module-HOWTO/x73.html
+* https://www.cyberciti.biz/faq/inux-kernel-where-to-find-modules/
