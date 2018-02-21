@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - SimpleShell
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/simpleshell.png[simple,height="450",width="450",float="left"]
 
@@ -17,32 +12,26 @@ image::../Resources/simpleshell.png[simple,height="450",width="450",float="left"
 ** CCNI002.004   - Explain the fundamentals of Boolean logic
 ** CCNI002.005   - Identify methods of gaining more information about commands and switches
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with functionality of the netcat binary
 * Greater understanding of fifos and backpipes, and what takes place with one
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
-[square]
+=== Task 1)
+
 * Create a bash script:
 ** host a BASH shell on a netcat listener.
 * From the netcat listener:
 ** print out the host's machine-id: `$ cat /etc/machine-id  ||  cat /var/lib/dbus/machine-id`
 * Do not install any binaries; use only the `/bin/nc` version already installed on the system
 
-{empty} +
-
 == Deliverables
 
 * Your script 
-
-{empty} +
 
 == Hints
 
@@ -55,11 +44,11 @@ ls -l | wc -l > 123 &
 cat < 123
 ----
 
+== Challenge
 
-{empty} +
+* N/A
 
 == Useful Resources
 
-http://www.linuxjournal.com/article/2156 +
-https://www.lanmaster53.com/2011/05/7-linux-shells-using-built-in-tools/ +
-
+* http://www.linuxjournal.com/article/2156
+* https://www.lanmaster53.com/2011/05/7-linux-shells-using-built-in-tools/
