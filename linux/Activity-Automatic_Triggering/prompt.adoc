@@ -2,15 +2,9 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Automatic Triggering
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 == Learning Objectives
 
-[square]
 * CCNI006  - Identify Linux processes
 ** CCNI006.003  - Employ commands to enumerate processes
 ** CCNI006.004  - Explain the functionality of daemons
@@ -19,7 +13,6 @@
 
 == Learning Outcomes
 
-[square]
 * Confidence using Linux scheduled tasks (cronjobs)
 * Familiarity with Linux Daemon startup & functionality
 * Familiarity with Bash conditional operations
@@ -27,33 +20,39 @@
 
 == Scenario
 
-System admins have began to notice malicious traffic from thier client systems.  In an effort to thwart any non-recognized communications, the system admins are inadvertently killing processes, including your monitoring process.
+* System admins have began to notice malicious traffic from thier client systems.  In an effort to thwart any non-recognized communications, the system admins are inadvertently killing processes, including your monitoring process.
 
-== Activity
+=== Task 1)
 
 * Write a persistence script that checks if your monitoring script (from previous activity) is running.
 ** If the monitoring script does not exist, the persistence script should create it.
 ** If the monitoring script is running, the persistence script should wait "x" min, and check again. 
 ** If the monitoring script is not running, the persistence script should launch the monitoring script.
 
+=== Task 2)
+
 * Write a deployment script that applies Linux functionality to ensure the persistence script is executed when the system is launched/rebooted.
 ** Test your script on your system to ensure that the monitoring script can properly recover from reboots and having its process killed.
 ** If your persistence script exists, your deployment script should exit, however if your persistence script does not exist, your deployment script should generate it.
 
-{empty} +
-
 image::../Resources/auto_trigger.png[auto_triggered,height="500",width="800",float="left"]
 
-{empty} +
 
 == Deliverables
 
-[square]
 * Your deployment script
 * Your persistence script
 * Proof that your persistence script properly recovers the monitoring script from reboots, and from having its process killed
 
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
 == Useful Resources
 
-https://crontab.guru/ +
-https://bscb.cornell.edu/about/resources/linux-cron-and-crontab +
+* https://crontab.guru/
+* https://bscb.cornell.edu/about/resources/linux-cron-and-crontab
