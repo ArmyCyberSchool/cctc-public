@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Password Cracking
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 
@@ -16,48 +11,41 @@ image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 ** CCNI013.003   - Define credentials
 ** CCNI013.004   - Perform credential cracking
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with hash types, password crackers and their syntax and application
 * Confidence with credential cracking
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
-[square]
+=== Task 1)
+
 * Run a dictionary attack
 ** using the windows hashes you captured from the previous activity, and a wordlist of your choice, from `/usr/share/seclists/Passwords/` 
 *** unshadow the passwords of the provided 3TC_PA55W0RD, and 3TC_5HAD0W files, in `/usr/share/cctc/PassCrack.zip`
 *** reveal the passwords using JTR, and a wordlist from seclists
 
-{empty} +
+== Deliverables
+
+* cracked user shadowed passwords 
+
+== Hints
+
+* N/A
 
 == Challenge
 
-[square]
 * visit the website associated with the target System: http://127.0.0.1/warriors/
 ** determine some key details about the author of the website
 *** devise a new wordlist using tools: Cewl and JTR Config Generator
 *** target the un-cracked hash for the website author (Dan), and using the newly generated worldist, and JTR, reveal the author's password
 
-{empty} +
+* Challenge Hints:
+** Company Policy concerning Website Passwords:
+*** All Passwords must be ALPHANUMERIC, uppercase, contain no special chars, and be between 10 and 20 chars in length.
 
-== Deliverables
-
-* cracked user shadowed passwords 
-
-{empty} +
-
-== Challenge Hints
-
-* Company Policy concerning Website Passwords:
-** All Passwords must be ALPHANUMERIC, uppercase, contain no special chars, and be between 10 and 20 chars in length.
-
-{empty} +
 
 Cewl Install Instructions:
 
@@ -70,7 +58,7 @@ gem install rubyzip
 gem install spider
 ----
 
-Website Setup Instructions:
+** Website Setup Instructions:
 
 ----
 mkdir /var/www
@@ -80,7 +68,7 @@ mv /var/www/warriors /var/www/html/
 firefox 127.0.0.1/warriors
 ----
 
-"JTR Config Generator" Install Instructions:
+** "JTR Config Generator" Install Instructions:
 
 ----
 cd $(find / -type f -name "john.conf" 2>/dev/null | grep -v metasploit)
@@ -90,8 +78,6 @@ make
 cd ./Defcon_JtrMakeConfig
 Usage: ./jtrMakeConfig
 ----
-
-{empty} +
 
 == Useful Resources
 
