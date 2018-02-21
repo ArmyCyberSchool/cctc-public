@@ -2,15 +2,8 @@
 :stylesheet: ../../cctc.css
 
 = Activity - MSFVenom
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/msfvenom.png[msfvenom,height="200",width="650",float="left"]
-
-{empty} +
 
 == Learning Objectives
 
@@ -20,31 +13,25 @@ image::../Resources/msfvenom.png[msfvenom,height="200",width="650",float="left"]
 ** CCNI002.005   - Identify purposes for Metasploit
 ** CCNI013.007   - Identify the purposes for custom malware
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with msfvenom
 * Ability to design specific shellcode to match intended target specifics
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
-[square]
+=== Task 1)
+
 * Using msfvenom, generate two custom payloads, 1 for a Window XP system, and 1 for a Windows 7 system. 
 ** The Windows XP payload needs to callback to the attacking machine and re-connect at reboot.
 ** The Windows 7 payload needs to callback to the attacking machine only when triggered by a user (get creative: replace IExplore icon, utilman.exe, etc.).
 *** Be sure your exploits are gaining SYSTEM level access.
 
-{empty} +
-
 == Deliverables
 
 * SYSTEM shell on target systems
-
-{empty} +
 
 == Hints
 
@@ -53,15 +40,14 @@ image::../Resources/msfvenom.png[msfvenom,height="200",width="650",float="left"]
 ** 0x0D == Carriage Return: would signify end of PASSWORD field, and terminate the buffer at that point.
 ** 0x0A == Line Feed: same reason as the carriage return.
 ** 0x20 == Spaces
-
 *** Syntax: `-b "\x00\x0a\x0d\x20"`
-
-{empty} +
 
 image::../Resources/msfvenom_2.png[msfvenom2,height="250",width="850",float="left"]
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom +
+* https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom
