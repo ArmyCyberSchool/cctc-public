@@ -46,8 +46,7 @@ image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 ** Company Policy concerning Website Passwords:
 *** All Passwords must be ALPHANUMERIC, uppercase, contain no special chars, and be between 10 and 20 chars in length.
 
-
-Cewl Install Instructions:
+* Cewl Install Instructions:
 
 ----
 git clone https://github.com/digininja/CeWL /usr/share/CeWL
@@ -58,7 +57,7 @@ gem install rubyzip
 gem install spider
 ----
 
-** Website Setup Instructions:
+* Website Setup Instructions:
 
 ----
 mkdir /var/www
@@ -68,7 +67,7 @@ mv /var/www/warriors /var/www/html/
 firefox 127.0.0.1/warriors
 ----
 
-** "JTR Config Generator" Install Instructions:
+* "JTR Config Generator" Install Instructions:
 
 ----
 cd $(find / -type f -name "john.conf" 2>/dev/null | grep -v metasploit)
