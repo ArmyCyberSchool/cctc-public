@@ -28,12 +28,10 @@ image::../Resources/samba.png[samba,height="150",width="650",float="left"]
 ** gives `samcctc` ownership of the `/cctcsmb` directory
 ** configure `smb.conf`  file so that it allows guest access, is not read only, and can also be browsed
 
-=== Task 2)
-
 * have your script output:
 ** the settings of ONLY the permissions settings for the files and/or groups, directories you altered. 
 
-=== Task 3)
+=== Task 2)
  
 * non-scripted:
 ** Connect to the SAMBA Server you setup via a Windows system using user `samcctc`
