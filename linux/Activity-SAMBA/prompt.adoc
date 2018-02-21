@@ -2,27 +2,24 @@
 :stylesheet: ../../cctc.css
 
 = Activity - SAMBA
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
-
-{empty} +
 
 image::../Resources/samba.png[samba,height="150",width="650",float="left"]
 
-{empty} +
+== Learning Objectives
+
+* CCNI000 - 
+** CCNI000.001 - 
+
+== Learning Outcomes
+
+* 
 
 == Scenario
 
-You are operating on a system that your team has previously gained access to.  Using only the SAMBA protocol, you need to exfil the SYSTEMINFO off the target Windows system.
+* You are operating on a system that your team has previously gained access to.  Using only the SAMBA protocol, you need to exfil the SYSTEMINFO off the target Windows system.
 
-{empty} +
+=== Task 1)
 
-== Activity
-
-[square]
 * Write a bash script that achieves the following objectives:
 ** creates a shared directory named `/cctcsmb`  with read, write, and execute permissions for Owner, Group and Others
 ** adds a new Samba user named `samcctc`
@@ -30,32 +27,33 @@ You are operating on a system that your team has previously gained access to.  U
 ** adds `samcctc` to this new group
 ** gives `samcctc` ownership of the `/cctcsmb` directory
 ** configure `smb.conf`  file so that it allows guest access, is not read only, and can also be browsed
+
+=== Task 2)
+
 * have your script output:
 ** the settings of ONLY the permissions settings for the files and/or groups, directories you altered. 
 
-{empty} +
+=== Task 3)
  
 * non-scripted:
 ** Connect to the SAMBA Server you setup via a Windows system using user `samcctc`
 ** exfiltrate the SYSTEMINFO, via SAMBA, from the Windows target
-
-{empty} +
 
 == Deliverables
 
 * Your script
 * SYSTEMINFO from target Windows system
 
-{empty} +
-
 == Hints
 
-`systemctl restart smbd` +
-`systemctl restart smb.service` +
+* `systemctl restart smbd`
+* `systemctl restart smb.service`
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-http://www.tldp.org/HOWTO/SMB-HOWTO-7.html +
-https://www.brennan.id.au/18-Samba.html +
+* http://www.tldp.org/HOWTO/SMB-HOWTO-7.html
+* https://www.brennan.id.au/18-Samba.html
