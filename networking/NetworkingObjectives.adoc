@@ -118,7 +118,51 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNE014.007 Explain the functionality of NAT within iptables
 ** CCNE014.008 Contrast IPtables with Windows Netsh Firewall
 ** CCNE014.009 Contrast iptable chains and ACLs
+ 
+== Section 6: Network Exploitation
 
+* SKILL CCNE015: Communicate cyberspace operations methodologies
+** CCNE015.001 Describe the mindset of cyber actors
+** CCNE015.002 Describe standard internal exploitation methodologies
+** CCNE015.003 Describe standard external exploitation methodologies
+** CCNE015.004 Discuss the importance of testing tools in a controlled environment
+
+* SKILL CCNE016: Define common frameworks for conducting cyberspace operations
+** CCNE016.001 Describe exfiltration strategies
+** CCNE016.002 Describe the benefits of acquiring critical systems
+** CCNE016.003 Explain the benefits of acquiring domain credentials
+
+* SKILL CCNE017: Discuss methods to gain access
+** CCNE017.001 Define shellcode
+** CCNE017.002 Define the process for ensuring shellcode executes
+** CCNE017.003 Discuss code injection
+** CCNE017.004 Explain the process of code injection
+** CCNE017.005 Explain methods of detecting code injection
+** CCNE017.006 Describe the processes to escalate privileges 
+
+* SKILL CCNE018: Describe network attacks
+** CCNE018.001 Define network attacks
+** CCNE018.002 Compare network attack strategies
+** CCNE018.003 Discuss collateral effects of cyberspace attacks
+
+== Section 7: Industrial Control Systems (ICS)
+
+* SKILL CCNE019: Define Industrial Control System (ICS) fundamentals
+** CCNE019.001 Describe ICS hardware
+** CCNE019.002 Describe ICS software
+** CCNE019.003 Discuss industries where ICS is most utilized
+** CCNE019.004 Describe industry processes
+** CCNE019.005 Describe basic operations of ICS
+** CCNE019.006 Identify ICS components
+
+* SKILL CCNE020: Identify ICS security incidents
+** CCNE020.001 Identify types of attackers to an ICS
+** CCNE020.002 Discuss ICS vulnerabilities
+
+* SKILL CCNE021: Identify ICS zones
+** CCNE021.001 Explain how defensive measures are used in ICS zones
+** CCNE021.002 Describe the role of zones in defense-in-depth
+* SKILL CCNE022: Identify ICS protocols
 
 
  
