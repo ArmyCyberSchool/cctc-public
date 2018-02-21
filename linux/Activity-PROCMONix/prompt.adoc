@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - PROCMONix
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 
@@ -23,40 +18,38 @@ image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 ** CCNI007.003   - Employ commands for string manipulation
 ** CCNI007.005   - Create a bash script to perform basic enumeration on a Linux machine
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity of the `ps` command, and its various capabilities/switches
 * Understanding which processes to look for to detect signs of malicious activity
 * Ability to formulate a flow of sequential commands to achieve a stated objective
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
+
+=== Task 1)
 
 * Write a script that monitors processes, and also monitors for malicious activity
-** do not use the `top` command.
+** do not use the `top` command
 ** have your script:
 *** take snapshots of the process list at 30 second intervals
-*** compare the differences, and output the results to a file, as well as the terminal.
-
-{empty} +
+*** compare the differences, and output the results to a file, as well as the terminal
 
 == Deliverables
 
-* Your script 
-
-{empty} +
+* Your script
 
 == Hints
 
 `awk, sed, cut, sort, uniq`
 
-{empty} +
+
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/an_overview_of_linux_processes21?lang=en +
-https://www.tutorialspoint.com/unix/unix-processes.htm +
+* https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/an_overview_of_linux_processes21?lang=en
+* https://www.tutorialspoint.com/unix/unix-processes.htm
