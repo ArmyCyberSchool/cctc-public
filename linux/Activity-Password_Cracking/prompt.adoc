@@ -80,5 +80,5 @@ Usage: ./jtrMakeConfig
 
 == Useful Resources
 
-https://digi.ninja/projects/cewl.php +
-https://sites.google.com/site/reusablesec2/jtrconfiggenerator +
+* https://digi.ninja/projects/cewl.php
+* https://sites.google.com/site/reusablesec2/jtrconfiggenerator
