@@ -1,36 +1,49 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Make firewall rules
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+= Activity - Make Firewall Rules
 
-== Activity: Make firewall rules
-You are developing an OCO tool for deployment on Windows machines. You will create a PowerShell script that creates the following firewall rules in attempt to conduct a denial of service attack:
+== Learning Objectives
 
-[square]
-* Block Skype
-* Block all wireless communications
-* Block port 80
-* Block DNS
+* CCWI000 - 
+** CCWI000.000 - 
 
-*Additionally, you want this effect to be limited in duration and sporadic.*
+== Learning Outcomes
 
-
-
-== Deliverables
-[square]
-* A PowerShell script that:
-** creates the rules necessary to accomplish the mission
-** Periodically removes and re-adds the rules.
-
-
-
-== Learning Objectives / Outcomes
-[square]
 * Enable Windows firewall settings with the graphical user interface and command line tools
 * Describe the different components of Windows firewall
 * Demonstrate basic functionality of PowerShell
+
+== Scenario
+
+* You are developing an OCO tool for deployment on Windows machines.
+
+=== Task 1)
+
+* You will create a PowerShell script that creates the following firewall rules in attempt to conduct a denial of service attack:
+
+** Block Skype
+** Block all wireless communications
+** Block port 80
+** Block DNS
+
+* Additionally, you want this effect to be limited in duration and sporadic.
+
+== Deliverables
+
+* A PowerShell script that:
+
+** Creates the rules necessary to accomplish the mission.
+** Periodically removes and re-adds the rules.
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

@@ -1,0 +1,41 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - COA Development
+
+== Learning Objectives
+
+* CCWI000 - 
+** CCWI000.000 - 
+
+== Learning Outcomes
+
+* Become familiar with incident response
+* Obtain a hands on practical application for Course of Action Development
+* Demonstrate the fundamentals of everything learned in the Windows module
+
+== Scenario
+
+* You have been notified of a DoS attack against a critical server. You must respond to this incident and stop the attack. You have discovered that the attacking machine is a Windows 7 machine located in Denovia. The Denovian machine was compromised in the past, but has since been patched and the credentials have changed; therefore, the exploits and credentials you have at your disposal will not grant you access.
+
+=== Task 1)
+
+* As a group, you must first develop and recommend 3 technical courses of action
+* The instructor will approve one of your COAs and allow you to attempt to stop the denial of service attack.
+
+== Deliverables
+
+* Develop and recommend 3 COAs
+* Stop the denial of service attack
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

@@ -1,39 +1,55 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Cover youtr tracks
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+= Activity - Cover your Tracks
 
-== Activity
+== Learning Objectives
 
-You are on an interactive operation. You have gained access to a target machine located in Denovia that belongs to a malware author. This malware author typically transfers the malware to a USB once per week and hand carries it to an unknown source for web hosting on a Denovian terrorist hacking site. You must corrupt the files to render them useless upon delivery to the website administrator. You cannot delete the files completely. You must cover your tracks prior to disconnecting from the target machine. This is a time sensitive operation, therefore performing these tasks manually is not feasible. The only other intel you have to go off of is that the word "atropia" has been used in the filenames of the malware in the past Create a PowerShell script that will:
+* CCWI000 - 
+** CCWI000.000 - 
 
-.*Setup*
-* Download and run covertracks.exe to "exploit" onto the machine.
-* Download and run restart.exe to undo the changes and restart the activity.
+== Learning Outcomes
 
-.*Instructions*
-[square]
-* Locate the files on the machine regardless of their names or location
-** Corrupt (not delete) all of the files
-** Time-stomp all of the files, to make it appear as if the timestamps haven’t changed
-* Wipe the logs completely and disconnect from the target
-
-
-
-
-== Deliverables
-[square]
-* A PowerShell Script that finds and corrupts all malware files, time-stomps, and clears the logs
-
-== Learning Objectives / Outcomes
-[square]
 * Demonstrate basic functionality of PowerShell
 * Discuss the purpose of creating a script
 * Identify the locations of logs on the Windows system
 * Identify events that would be audited and why
 * Employ command line tools to view event logs
+
+== Scenario
+
+* You are on an interactive operation. You have gained access to a target machine located in Denovia that belongs to a malware author. This malware author typically transfers the malware to a USB once per week and hand carries it to an unknown source for web hosting on a Denovian terrorist hacking site. You must corrupt the files to render them useless upon delivery to the website administrator. You cannot delete the files completely. You must cover your tracks prior to disconnecting from the target machine. This is a time sensitive operation, therefore performing these tasks manually is not feasible. The only other intel you have to go off of is that the word "atropia" has been used in the filenames of the malware in the past.
+
+=== Task 1)
+
+* Create a PowerShell script that will:
+
+** *Setup*
+
+*** Download and run covertracks.exe to "exploit" onto the machine.
+*** Download and run restart.exe to undo the changes and restart the activity.
+
+** *Instructions*
+
+*** Locate the files on the machine regardless of their names or location.
+
+**** Corrupt (not delete) all of the files.
+**** Time-stomp all of the files, to make it appear as if the timestamps haven’t changed.
+
+*** Wipe the logs completely and disconnect from the target.
+
+== Deliverables
+
+* A PowerShell Script that finds and corrupts all malware files, time-stomps, and clears the logs
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
