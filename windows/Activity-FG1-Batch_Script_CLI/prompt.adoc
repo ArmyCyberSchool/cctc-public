@@ -1,3 +1,6 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
 = Activity - Batch Script CLI
 
 == Learning Objectives
