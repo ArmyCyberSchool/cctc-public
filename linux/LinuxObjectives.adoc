@@ -10,76 +10,37 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCNI001: Identify common shells
 ** CCNI001.001 Describe common shells and their differences
-*** CCNI001.001.001: Be familiar with sh.
-*** CCNI001.001.002: Be able to explain bash.
-*** CCNI001.001.003: Understand there are many types of shells.
 ** CCNI001.002 Define common shell modes, features and functions
-*** CCNI001.002.001: Contrast interactive and login shells.
-*** CCNI001.002.002: Know the capabilities of a shell.
+** CCNI001.003 Describe environment initialization and implications
+
 
 * SKILL CCNI002: Employ commands using common shells
 ** CCNI002.001 Demonstrate basic familiarity with the command line interface
-*** CCNI002.001.001: Know how to interact with the filesystem.
-*** CCNI002.001.002: Learn about the local environment.
-*** CCNI002.001.003: Understand how arguments are passed to programs (in bash).
-*** CCNI002.001.004: Understand order of execution modifiers (in bash).
-** CCNI002.002 Describe environment initialization and implications
-*** CCNI002.002.001: Understand the process parent/child relationship.
-** CCNI002.003 Demonstrate appropriate use of pipes and redirection
-*** CCNI002.003.001: Know linux data streams.
-*** CCNI002.003.002: What is a pipe?
-*** CCNI002.003.003: What is a redirect?
-** CCNI002.004 Explain the fundamentals of Boolean logic
-*** CCNI002.004.001: Be able to use the boolean operators.
-*** CCNI002.004.002: Use boolean operations in bash.
-** CCNI002.005 Identify methods of gaining more information about commands and switches
-*** CCNI002.005.001: Use `man` pages.
+** CCNI002.002 Demonstrate appropriate use of pipes and redirection
+** CCNI002.003 Explain the fundamentals of Boolean logic
+** CCNI002.004 Identify methods of gaining more information about commands and switches
 
 * SKILL CCNI003: Analyze the Linux file system
 ** CCNI003.001 Describe file system hierarchy
-*** CCNI003.001.001: Know linux standard folder structure and purpose.
 ** CCNI003.002 Describe file system ownership properties
-*** CCNI003.002.001: Extended use of `ls`.
-*** CCNI003.002.002: Identify user and group owner.
-*** CCNI003.002.003: Understand how linux user groups work.
 ** CCNI003.003 Discuss file system permissions
-*** CCNI003.003.001: Identify file permissions from `ls` output.
-*** CCNI003.003.002: Use `chmod` to change permissions.
-*** CCNI003.003.003: Use hard and soft links.
-*** CCNI003.003.004: Identify the file types represented in the permissions block.
 ** CCNI003.004 Discuss file system timestamps
-*** CCNI003.004.001: Know the portions of a `stat` command.
 ** CCNI003.005 Discuss file system attributes
-*** CCNI003.005.001: Use `lsattr` and `chattr`.
 ** CCNI003.006 Employ commands to search the file system
-*** CCNI003.006.001: Search for a file by name or content.
 ** CCNI003.007 Describe regular expressions
-*** CCNI003.007.001: Write regular expressions.
-*** CCNI003.007.002: Be able to use all regex characters.
-*** CCNI003.007.003: Be able to translate a regex into words.
 ** CCNI003.008 Create regular expressions to find data within in the file system
-*** CCNI003.008.001: Use regular expressions to identify common data patterns.
 ** CCNI003.009 Identify the information that a regular expression will return 
-*** CCNI003.009.001: Understand regex capture groups.
 
 == Section 2: Boot Processes
 
 * SKILL CCNI004: Describe the Linux boot process
 ** CCNI004.001 Identify components of the boot process
-*** CCNI004.001.001: Describe the basic boot process. Explain each component.
 ** CCNI004.002 Explain the post kernel boot process
-*** CCNI004.002.002: Explain the purpose of `systemd`.
-*** CCNI004.002.003: Understand how init runlevels affect the boot process.
 ** CCNI004.003 Describe boot process differences across Linux variants
 ** CCNI004.004 Describe partitions
-*** CCNI004.004.001: Describe hard disk partitioning.
 
 * SKILL CCNI005: Assess boot configuration files
 ** CCNI005.001 Identify components of the boot configuration file
-*** CCNI005.001.001: Understand how Linux boot is configured.
-*** CCNI005.001.002: Configure `/etc/inittab`.
-*** CCNI005.001.003: Configure `/etc/rc4.d/` files for startup services.
-*** CCNI005.001.004: Configure `/etc/default/grub`.
 ** CCNI005.002 Identify system changes after modification of the boot configuration file
 
 == Section 3: Scripts & Processes
@@ -95,51 +56,19 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCNI007: Develop shell scripts
 ** CCNI007.001 Demonstrate basic familiarity with shell scripting
-*** CCNI007.001.001: Know shell script header.
-*** CCNI007.001.002: Be able to explain a script's purpose.
 ** CCNI007.002 Explain variables and variable manipulation
-*** CCNI007.002.001: Assign persistent variables.
-*** CCNI007.002.002: Set variables' value.
-*** CCNI007.002.003: Understand variable scope.
 ** CCNI007.003 Employ commands for string manipulation
-*** CCNI007.003.001: Split strings into arrays.
-*** CCNI007.003.002: Find elements in a string.
-*** CCNI007.003.003: Find size information about a string.
-*** CCNI007.003.004: Familiarity with `awk`.
 ** CCNI007.004 Identify hashing and file hashes
-*** CCNI007.004.001: Know the purpose of a hash.
-*** CCNI007.004.002: Reason about the ability for two inputs, A and B, to result in the same hash: `H(A)==H(B)`.
-*** CCNI007.004.003: Know common forms of hashing (name, resulting size, and relative security).
-*** CCNI007.004.004: Know how to view file hashes on linux.
 ** CCNI007.005 Create a bash script to perform basic enumeration on a Linux machine
-*** CCNI007.005.001: Know what is useful to enumerate on a linux machine baseline.
-*** CCNI007.005.002: See running processes.
-*** CCNI007.005.003: See services.
-*** CCNI007.005.004: See startup processes/services.
-*** CCNI007.005.005: Know common places to store data and when those places are used.
-*** CCNI007.005.006: See installed programs.
-*** CCNI007.005.007: Check resource usage.
-*** CCNI007.005.008: View network configuration.
-*** CCNI007.005.009: View attached hardware.
 
 * SKILL CCNI008: Identify Linux networking features
 ** CCNI008.001 Describe the local name resolution process on a Linux host
-*** CCNI008.001.001: Know locations to resolve a hostname and order searched.
 ** CCNI008.002 Describe the difference between regular and raw sockets
-*** CCNI008.002.001: Use regular sockets.
-*** CCNI008.002.002: Use raw sockets.
 ** CCNI008.003 Identify basic network services for Linux
-*** CCNI008.003.001: Find services listening on the network.
 ** CCNI008.004 Employ commands to gather network information
-*** CCNI008.004.001: View network configuration.
 ** CCNI008.005 Enumerate active connections on a Linux machine
-*** CCNI008.005.001: See all network services.
 ** CCNI008.006 Describe the advantages and disadvantages of Samba
-*** CCNI008.006.001: Know Samba's purpose.
-*** CCNI008.006.002: Understand Samba's weaknesses.
 ** CCNI008.007 Explain the functionality of telnet
-*** CCNI008.007.001: Know how `telnet` works.
-*** CCNI008.007.002: Perform a file transfer using multiple utilities in linux.
 ** CCNI008.008 Perform a file transfer using telnet
 ** CCNI008.009 Analyze network connections using Linux command line tools
 
@@ -158,39 +87,23 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCNI011: Discuss the reasons to establish permanent presence
 ** CCNI011.001 Define permanent presence
-*** CCNI011.001.001: Understand the characteristics of APTs.
-*** CCNI011.001.002: Know methods for retaining persistence.
 ** CCNI011.002 Describe the clean-up process associated with your activity
-*** CCNI011.002.001: List clean-up methods after attack.
 ** CCNI011.003 Identify indicators and symptoms of compromise
-*** CCNI011.003.001: List sources of suspicious activity.
 ** CCNI011.004 Develop a methodology for the enumeration of a compromised system
-*** CCNI011.004.001: Discuss important OS attributes to enumerate or baseline.
 
 * SKILL CCNI012: Analyze different types of rootkits and backdoors
 ** CCNI012.001 Discuss and define the main types of backdoors
-*** CCNI012.001.001: Define a backdoor.
 ** CCNI012.002 Discuss and define the main types of rootkits
-*** CCNI012.002.001: Define the purpose of rootkits.
 ** CCNI012.003 Identify different backdoor persistence techniques
-*** CCNI012.003.001: Identify common backdoors.
 ** CCNI012.004 Describe backdoor communication methods
 ** CCNI012.005 Describe methods to detect and mitigate rootkits
-*** CCNI012.005.001: Identify and explain ways to detect rootkits.
-*** CCNI012.005.002: Identify and explain ways to mitigate rootkit danger.
 ** CCNI012.006 Demonstrate how rootkits can be used to provide false information to a user
-*** CCNI012.006.001: Understand the implications of a rootkit from the user's perspective.
 
 * SKILL CCNI013: Explore Linux Exploitation tools
 ** CCNI013.001 Discuss shell code
-*** CCNI013.001.001: Describe shellcode.
 ** CCNI013.002 Identify remote shell code execution
-*** CCNI013.002.001: Be able to point out evidence of remote code execution.
 ** CCNI013.003 Define credentials
-*** CCNI013.003.001: Distinguish between a password and a password hash.
-*** CCNI013.003.002: Understand the importance of root credentials.
 ** CCNI013.004 Perform credential cracking
-*** CCNI013.004.001: Discuss methods used to determine the hashes that created original passwords.
 ** CCNI013.005 Identify purposes for Metasploit
 ** CCNI013.006 Define rainbow tables
 ** CCNI013.007 Identify the purposes for custom malware
