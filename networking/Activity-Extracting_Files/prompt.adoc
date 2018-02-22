@@ -1,0 +1,46 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Extracting Files
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+[square]
+* SKILL CCNE009: Identify packet sniffing tools
+** CCNE009.003 Demonstrate packet decoding features of tools
+
+{empty} +
+
+== Activity
+
+{empty} +
+
+Wireshark makes exporting objects from some protocols very easy (HTTP for example), however there are no built-in features for exporting many other protocols. Specifically, protocols like FTP must be manually extracted.
+
+Download and use the following PCAPs for the activity:
+
+https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/FTP-file-extract.pcapng
+
+https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/HTTP-file-extract.pcapng
+
+=== Task 1)
+
+Using the "FTP-file-extract" and "HTTP-file-extract" PCAPs, practice file extraction.
+
+Extract a single image from the FTP PCAP (pantheon.jpg)
+
+You will find MANY image files within the HTTP PCAP; choose the image of your choice, but be sure to note the packet number that it was derived from.
+
+{empty} + 
+
+
+== Deliverables
+[square]
+* Your images, as extracted from the PCAPS
+{empty} + 
+
+
