@@ -36,7 +36,7 @@
 </div></div>
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="5b0d52fe0a821c2993e03d0e4d3f9fdd"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 909px; left: 15px; top: 189px;" data-block-id="159b0102507f0774addeb352cba28619"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left;">
-<p style="text-align:center"><u><span style="color:#000000; font-size:24.999999999999996pt">SKILL 4: Identify the sections of common packet headers</span></u></p>
+<p style="text-align:center"><u><span style="color:#000000; font-size:24.999999999999996pt">SKILL CCNE009: Identify packet sniffing tools, SKILL CCNE010: Identify implications of network traffic captures</span></u></p>
 
 <p> </p>
 
@@ -44,173 +44,31 @@
 
 <ul>
 	<li style="color:#000000; font-size:24.999999999999996pt">
-	<p><span style="color:#000000; font-size:24.999999999999996pt">4.1 Identify the various packet headers</span></p>
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE009.001 Explain Using Berkley Packet Filters (BPF) with sniffing tools</span></p>
 	</li>
 	<li style="color:#000000; font-size:24.999999999999996pt">
-	<p><span style="color:#000000; font-size:24.999999999999996pt">4.2 Explain address auto-configuration</span></p>
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE009.002 Use BPFs to view multiple protocol types</span></p>
 	</li>
 	<li style="color:#000000; font-size:24.999999999999996pt">
-	<p><span style="color:#000000; font-size:24.999999999999996pt">4.3 Describe IPv4 packet structures</span></p>
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE009.003 Demonstrate packet decoding features of tools</span></p>
 	</li>
 	<li style="color:#000000; font-size:24.999999999999996pt">
-	<p><span style="color:#000000; font-size:24.999999999999996pt">4.4 Describe IPv6 packet structures</span></p>
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE009.004 Identify how sniffing and filtering relate to DNS protocol (poisoning/misuse)</span></p>
 	</li>
 	<li style="color:#000000; font-size:24.999999999999996pt">
-	<p><span style="color:#000000; font-size:24.999999999999996pt">4.5 Describe common ICMP message types</span></p>
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE010.001 Discuss security implications of major protocol traffic in baselining</span></p>
+	</li>
+		<li style="color:#000000; font-size:24.999999999999996pt">
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE010.002 Explain why network monitoring tools are deployed</span></p>
+	</li>
+		<li style="color:#000000; font-size:24.999999999999996pt">
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE010.003 Explain the impact of network monitoring tools in exploitation operations</span></p>
+	</li>
+		<li style="color:#000000; font-size:24.999999999999996pt">
+	<p><span style="color:#000000; font-size:24.999999999999996pt">CCNE010.004 Explain the impact of network monitoring tools in DODIN operations</span></p>
 	</li>
 </ul>
-</div></div></section><section data-id="c8edfb814de1a1f2fb1d3d101466f082"><div class="sl-block" data-block-type="text" style="width: 863px; left: 80px; top: 39px; height: auto;" data-block-id="a02867e438c958fd18cd7cc9e2282a02"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><span style="font-size:1.4em"><strong>Ethernet Header</strong></span></p>
-
-<p><span style="font-size:1.4em"><strong><span style="font-size:0.9em">(Obj 4.1: Identify the various packet headers)</span></strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="4d259a9172bd0baa5ffc2622ad541868"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 515px; height: 102px; left: 223px; top: 195px;" data-block-id="407b5e82944ee426fb021d8a81f3fa63"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="515" data-natural-height="102" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/EthernetFramePreamble.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 431px; height: 144px; left: 264px; top: 519px;" data-block-id="ebe538424b0cc8286479b07583863c50"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="599" data-natural-height="200" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/CommonEthertypes.png"></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 156px;" data-block-id="adfd2cce040f4a8238c7e5698d1d61b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
-<p><span style="font-size:0.7em">Fig 1. Ethernet Frame with Preamble</span></p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 480px;" data-block-id="791c713529615ebbad2c76a5e6160115"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
-<p><span style="font-size:0.7em">Fig 3. Common Ethertypes</span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 80px; left: 77px; top: 358px;" data-block-id="b31288dc182dc9c874031362e77bb8b3"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="1276" data-natural-height="126" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/EthernetFrame.png"></div></div></section><section data-id="e3f85bb60ee8556948fa63c931bb7894"><div class="sl-block" data-block-type="text" style="width: 847px; left: 89px; top: 31px; height: auto;" data-block-id="62be0ac15093b95dbbfdabc34fe67fbb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>802.1Q VLAN Tagging</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="df227ba58351589334a3ddc137a9be26"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="width: 806px; height: 438px; left: 89px; top: 192px;" data-block-id="0ede4495060dbb8a6106cba497540f05"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="948" data-natural-height="515" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/802.1QFrame.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 57px; top: 140px; height: auto;" data-block-id="7c9b64edc433bdeebcb42fd7994733c0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - 802.3 VLAN Tag added to Frame</strong></span></p>
-</div></div></section><section data-id="985dc56fbc4d603b502d9d076b421ed4"><div class="sl-block" data-block-type="text" style="width: 847px; left: 89px; top: 31px; height: auto;" data-block-id="6ea3b1035a7fc79ae325096523c7200b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>IPv4 Headers (Network Layer)</strong></p>
-
-<p><strong>(Obj. 4.1, 4.3 through 4.4)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="e1e333b528cfb4a56c493d1872576a58"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 57px; top: 140px; height: auto;" data-block-id="52c87f36518ae29d4321ae7177fee26a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - IPv4 Header</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 149px; left: 65px; top: 187px;" data-block-id="0d5d59ffed93ff537e9b23063d045beb"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="863" data-natural-height="160" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/IPv4Header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 751px; height: 280px; left: 104px; top: 381px;" data-block-id="8da32c92b13c6cf53f538225559cc6ef"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="751" data-natural-height="280" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/IPv4HeaderPacket_example.PNG"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 89px; top: 413px; height: auto;" data-block-id="1c156fe2c60624ca498b95c5b7879310"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
-<p><span style="font-size:0.7em"><strong>Fig. 2 - Example IPv4 Packet</strong></span></p>
-</div></div></section><section data-id="41d4decd744c879797a2c7f8bbaa8055"><div class="sl-block" data-block-type="text" style="width: 847px; left: -177px; top: 253px; height: auto;" data-block-id="8f2f88b0c80af9127c9dea659f9ebc05"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>Fragmentation</strong></p>
-
-<p><strong>(Obj. 4.1, 4.3 through 4.4)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="b7d972cf6d87e84bb9dff241f3cb99af"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 500px; height: 685px; left: 459px; top: 15px;" data-block-id="a8339f93bafd168339f850fc79994882"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="502" data-natural-height="688" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fragmentation.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 120px; top: 654px; height: auto;" data-block-id="40ab4543c456e29d02dea77394d86ac5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
-<p style="text-align: left;"><span style="font-size:0.5em">Retrieved from http://www.tcpipguide.com/free/t_IPMessageFragmentationProcess-2.htm</span></p>
-</div></div></section><section data-id="6899f09619f3a5cb1fd4db38601fc3a2"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 19px; height: auto;" data-block-id="736a11663ac3aa0245921015ae43a590"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><strong>IPv4 / IPv6 Header Field Comparison</strong></p>
-
-<p><strong>(Obj. 4.1, 4.3 through 4.4)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="8ed0ca1b4f0fb1d75b152bb32fb5b092"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 446px; left: 91px; top: 150px;" data-block-id="9a31d0f6634475ad2f968d044857bad6"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="872" data-natural-height="483" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/IPv4_vs_IPv6_Header.png"></div></div></section><section data-id="dfae19e95b3b73a75420c076aebe8bc9"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 19px; height: auto;" data-block-id="586851e71828755f99bed5a02a385790"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>IPv6 Header</strong></p>
-
-<p><strong>(Obj. 4.1, 4.3 through 4.4)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="932ccf367a6e6d1d4671f7a52d30975e"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 225px; left: 101px; top: 160px;" data-block-id="e393e590ba0aa6902a38032fe7dbdcec"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="852" data-natural-height="238" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/IPv6Header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 57px; top: 121px; height: auto;" data-block-id="a8654e77d131bab56819b61da096ec96"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - IPv6 Header</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 763px; height: 292px; left: 101px; top: 398px;" data-block-id="0eab0c69ee9247355d733c9bfd2fe568"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="763" data-natural-height="292" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/IPv6HeaderPacket_example.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 95px; top: 427px; height: auto;" data-block-id="7236ecbdf9a0dea580e6b326d126288c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
-<p><span style="font-size:0.7em"><strong>Fig. 2 - Example IPv6 Packet</strong></span></p>
-</div></div></section><section data-id="2a3a5eab507fbb095fd1495d750a4eb1"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="bf5ab129f46c4b23116a1b5c8d42fead"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><strong>TTL Analysis</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="aa84a636cf357afb15301b976a410181"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 267px; height: auto;" data-block-id="572407051bd4f22e292ed370380ea46a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - Default Initial TTL Values</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 94px; top: 70px; height: auto;" data-block-id="454bc27e79b68fb234d66f406479a71a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14;">
-<ul>
-	<li><span style="font-size:0.7em">Vendors have chosen different values for TTL which can provide insight to which OS family a generated packet is from. </span></li>
-</ul>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 508px; height: 371px; left: 226px; top: 315px;" data-block-id="56d07b281d533d2709a90f6e8016484a"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="508" data-natural-height="371" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Default_TTL.PNG"></div></div></section><section data-id="4bc6d2b81d29068a49112c40501239cd"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="7123a451ad4a4efe7ba768e0215a882f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>UDP Headers</strong></p>
-
-<p><strong>(Obj. 4.1 Identify the various packet headers)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="c14bfcdb0d77f575f780b1fe3d7c531e"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 224px; height: auto;" data-block-id="40849bc72e72516ae2020910945162c8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - UDP Header</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 90px; left: 77px; top: 273px;" data-block-id="0602b767447aa60be987f264a8492efa"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="841" data-natural-height="94" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/UDPHeader.png"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 242px; left: 77px; top: 427px;" data-block-id="5cc246bdb334fe4908021ebf2ed45155"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="1071" data-natural-height="321" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/UDPHeader_example.PNG"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 388px; height: auto;" data-block-id="afc169bff2ca4cad18a0231597733a5d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
-<p><span style="font-size:0.7em"><strong>Fig. 2 - Example UDP Datagram</strong></span></p>
-</div></div></section><section data-id="39d760d02a8087fa0ac3ad9078507f4e"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="3cfe8d2c011944ec7a46a15e4ca7305a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>TCP Headers</strong></p>
-
-<p><strong>(Obj. 4.1 Identify the various packet headers)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="0059a4b084ddcc5827e3b8c346dd4c59"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 140px; height: auto;" data-block-id="b0897dfbe7e9b730133482609a6b28e8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - TCP Header</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 33px; top: 459px; height: auto;" data-block-id="2786cfda243966544ebccbba305bb20f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
-<p><span style="font-size:0.7em"><strong>Fig. 2 - Example TCP Segment</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 216px; left: 74px; top: 459px;" data-block-id="352c36b5179c3a301d0b43c8abd29c22"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="970" data-natural-height="260" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/TCPHeaderPacket_example.PNG"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 204px; left: 77px; top: 186px;" data-block-id="e70b2990aa14c0ca1a7ac9b2841d4a28"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="940" data-natural-height="238" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/TCPHeader.png"></div></div></section><section data-id="98508792040c8448740f5fc2df5da7c5"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="8833ce3ada7afea0211bc08d235a5950"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><strong>TCP Flags</strong></p>
-
-<p><strong>(Obj. 4.1 Identify the various packet headers)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="642500aff65eddca8f1e457863029011"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 541px; height: auto;" data-block-id="bbfd990dfd5671637723a82ffe0efcdf"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - TCP Flag Breakout (Binary and Hex)</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 557px; height: 384px; left: 212px; top: 157px;" data-block-id="bcaeecfb9a13171a23136b4317cdb332"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="557" data-natural-height="384" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/TCP_Flags.png"></div></div></section><section data-id="fdb831c11a1df43de1065d3b2f479903"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="d889b395c0a0a431e1b375c8b18b1b2a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>ICMP Headers</strong></p>
-
-<p><strong>(Obj. 4.2, 4.5)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="22621d35b7c8746f08ba0ee2e3a34504"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 56px; top: 140px; height: auto;" data-block-id="58d76bd4023c57b7c4338bcb971f4f21"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - Example ICMP Header</strong></span></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 67px; left: 77px; top: 186px;" data-block-id="944385821fe6211bb3f4109def1076a4"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1043" data-natural-height="87" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/ICMPHeader.PNG"></div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 806px; height: 287px; left: 77px; top: 368px;" data-block-id="c936258cc207fb33c6405da2cf363ad1"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="979" data-natural-height="348" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/ICMPHeader_example.PNG"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 57px; top: 381px; height: auto;" data-block-id="58febe8e75f29034cc0954f9eed5fda4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16;">
-<p><span style="font-size:0.7em"><strong>Fig. 1 - Example ICMP Packet</strong></span></p>
-</div></div></section><section data-id="b6af3d79abd7ad1bab3918f07820b1a4"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="eb2bb03d98a720d9f338b4d371d1d223"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
-<p><strong>Common ICMP Examples</strong></p>
-
-<p><strong>(Obj. 4.2, 4.5)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="d69e920b89d77e4d1f7f9e414100c8b0"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-</section><section data-id="73070b1d6d91e24624a1436f0e27ecf5"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="d05c783f8a288bad1f66b4a7ae659e1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
-<p><strong>Review Address Auto Configuration</strong></p>
-
-<p><strong>SLAAC</strong></p>
-
-<p><strong>(Obj. 4.2, 4.5)</strong></p>
-</div></div>
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="de49d1de5f52597583f6667eddfd4b25"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 847px; left: 17px; top: 368px; height: auto;" data-block-id="c48586c9f2f469aabeb938ad6fd0a463"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; text-align: left;">
-<ul>
-	<li>Static</li>
-	<li>DHCP</li>
-	<li>APIPA</li>
-</ul>
-
-<p> </p>
-
-<ul>
-	<li>Review SLAAC</li>
-	<li>One or more IPv6 prefixes</li>
-	<li>RFC 4862</li>
-</ul>
-</div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 743px; height: 218px; left: 189px; top: 259px;" data-block-id="f3335e949739b2d19e738bced62c9c6f"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="743" data-natural-height="218" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Ipv6eui64.png"></div></div></section><section data-id="26478fac6fc7f26da74d18b278412c93"><div class="sl-block" data-block-type="text" style="width: 847px; left: 74px; top: 121px; height: auto;" data-block-id="b2df39035a3f0dc7a0701fde55b085d0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="26478fac6fc7f26da74d18b278412c93"><div class="sl-block" data-block-type="text" style="width: 847px; left: 74px; top: 121px; height: auto;" data-block-id="b2df39035a3f0dc7a0701fde55b085d0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <p><u>Skill 5: Identify packet sniffing tools</u></p>
 </div></div>
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="347e4ac3ac67e3821092b3132bb3e8c5"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
@@ -566,7 +424,6 @@
 <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 27px;" data-block-id="424c32f6360e87d6f125aae03778d796"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p><strong>Flow Analysis</strong></p>
 
-<p>(Obj. 5.4, 5.8, 6.2 through 3)</p>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 842px; left: 59px; top: 179px;" data-block-id="6b6ec46eb7a2886a268c47a2e154bc4a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
 <ul>
@@ -587,58 +444,12 @@
  </p>
 
 <p> </p>
-</div></div></section><section data-id="8ea8914da16fe9afff8324c9eef75400">
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="b2457fe4d97cd9c2de5ff5a2c979d083"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 17px;" data-block-id="b14bb28c758d6c3b7567b54e8062a612"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<p><strong>Outcomes</strong></p>
-
-<p> </p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 43px; top: 35px;" data-block-id="6020231087640010f88f1c98d1605619"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
-<p style="color:rgb(0, 0, 0)"> </p>
-
-<p style="color:rgb(0, 0, 0); text-align:center"><span style="font-size:1.0em"><u><span style="color:rgb(0, 0, 0)">Skill 5: Identify packet sniffing tools</span></u></span></p>
-
-<p style="color:#000000; font-size:27.999999999999996pt"><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">Objectives-</span></span></p>
-
-<ul>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.8 Discuss passive approaches to network analysis</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.9 Explain how host analysis can be used to gather network information</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.10 Explain server identification</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.11 Perform server identification</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.12 Explain how server identification can be used to gather network information</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.13 Explain how packet captures can be used to gather network information</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.14 Describe the principles of p0f</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.15 Discuss the purpose of p0f databases</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.16 Describe the process of sniffing for an operating system</span></span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="font-size:0.7em"><span style="color:rgb(0, 0, 0)">5.17 Assess TTL/hop counts</span></span></p>
-	</li>
-</ul>
-</div></div></section><section data-id="3319cda1888214bd69c9491bb3446ac6">
+</div></div></section>
+<section data-id="3319cda1888214bd69c9491bb3446ac6">
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="9abc6ccdd3e506e09a3ec0fff74b9514"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 104px; top: 35px;" data-block-id="adeed0adf8fd575981777044d9a29070"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <p><strong>Server Identification</strong></p>
 
-<p><span style="color:#000000; font-size:24.999999999999996pt">( Obj. </span><span style="color:#000000">5.12 Explain how server identification can be used to gather network information)</span></p>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 15px; top: 268px;" data-block-id="77252a3a44e60606aaf588f0073ec00e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
 <ul>
@@ -668,7 +479,6 @@
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="3d668835ae2edf0a91d0a21cd6d84a40"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 74px; top: 35px;" data-block-id="2ac3b28dee45cc220c3c3c061b3d94d3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <p style="text-align:center"><strong>Signatures</strong><br>
-<span style="color:#000000; font-size:24.999999999999996pt">( Obj. 5.10 thru 13)</span></p>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 7px; top: 149px;" data-block-id="ab5225dfbb9b22edb89f3bb244ad456b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
 <ul>
@@ -709,44 +519,8 @@
 
 <p> </p>
 </div></div>
-<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 159px; height: 227px; left: 749px; top: 36px;" data-block-id="75b1e5a4b30fe1473ba7dae40bf71010"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="159" data-natural-height="227" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fingerprint.png"></div></div></section><section data-id="5a46a2b7624f10c75a2e76ad61c513a9">
-<div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="5973506a6a8d0489911c792ef0d5a9cb"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 74px; top: 35px;" data-block-id="221079329663cda31c9adf52c476df3a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
-<p style="text-align:center"><strong>P0f for OS Identification</strong><br>
-<span style="color:#000000; font-size:24.999999999999996pt">( Obj. 5.14 thru 16)</span></p>
-</div></div>
-<div class="sl-block" data-block-type="text" style="height: auto; width: 916px; left: 22px; top: 140px;" data-block-id="1cfe019c5dc52303a2cf28bfe4cfad07"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;">
-<ul>
-	<li style="color:#000000">
-	<p><span style="color:#000000">P0f primarily looks at TCP/IP Header attributes to make a determination (packaged and custom signatures)</span></p>
-	</li>
-	<li style="color:#000000">
-	<p><span style="color:#000000">P0f signature includes the following: 1.2.3.4.5.6.7.8.9</span></p>
-	</li>
-</ul>
-
-<p style="color:#000000"><span style="color:#000000">1: IP version</span></p>
-
-<p style="color:#000000"><span style="color:#000000">2: Initial TTL</span></p>
-
-<p style="color:#000000"><span style="color:#000000">3: IP Options</span></p>
-
-<p style="color:#000000"><span style="color:#000000">4: MSS</span></p>
-
-<p style="color:#000000"><span style="color:#000000">5: Windows size (value or multiple of value)</span></p>
-
-<p style="color:#000000"><span style="color:#000000">6: Window Scale</span></p>
-
-<p style="color:#000000"><span style="color:#000000">7: TCP Options (in the orders listed in the field)</span></p>
-
-<p style="color:#000000"><span style="color:#000000">8: Quirks (DF-Flag or IP ID)</span></p>
-
-<p style="color:#000000"><span style="color:#000000">9: Payload Class </span></p>
-
-<p> </p>
-
-<p> </p>
-</div></div></section><section data-id="e9f4ca753c84829f6780bf26d256a134">
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 159px; height: 227px; left: 749px; top: 36px;" data-block-id="75b1e5a4b30fe1473ba7dae40bf71010"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="159" data-natural-height="227" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fingerprint.png"></div></div></section>
+<section data-id="e9f4ca753c84829f6780bf26d256a134">
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="165b68f31f6aaa374791b28e9b32f394"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 74px; top: 35px;" data-block-id="e41be49cf5a4fc554ae243aadbe5938d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <p style="text-align:center"><strong>Outcomes</strong></p>
@@ -854,7 +628,6 @@
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="db0a577b4d648ff900ba4f8fdc674305"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 74px; top: 14px;" data-block-id="6fed46a3edea7659aba7cb518372a062"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p><strong>Network Monitoring</strong><br>
-<span style="color:#000000; font-size:24.999999999999996pt">(Obj. 6.2 thru 3)</span></p>
 </div></div>
 <div class="sl-block" data-block-type="text" style="height: auto; width: 646px; left: 45px; top: 251px;" data-block-id="a25c7b5964adec94ebb3bd23804e759d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(0, 0, 0); border-width: 1px;">
 <ul>
