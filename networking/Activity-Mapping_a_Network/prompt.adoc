@@ -210,6 +210,9 @@ You will start your network infrastructure discovery by analyzing the configurat
 You have obtained some PCAPs that were captured from the network where the target router was operating. Using the information you see in the PCAPs, draw out your network map to include any other devices or routes you think are present.
 
 You can download the PCAPS here:
+https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap1.pcap
+https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap2.pcap
+https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap3.pcap
 
 == Deliverables
 [square]
