@@ -1,0 +1,69 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - What is Happening Here
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+[square]
+* SKILL CCNE009: Identify packet sniffing tools
+** CCNE009.003 Demonstrate packet decoding features of tools
+
+{empty} +
+
+== Activity
+
+{empty} +
+
+Traffic is generally viewed in a tool like Wireshark or TCPDump, however being able to understand the hexadecimal representation and interpret the traffic is an important skill in traffic analysis. Tools can lie!
+
+{empty} +
+
+=== Task 1)
+Identify the traffic for the packets listed below and answer the following questions: 
+
+What type of transaction is represented in these packets?
+
+Is this normal traffic?
+
+-Provide any details you learned from the packets.
+
+{empty} + 
+
+----
+
+ Layer 2Layer 3Layer 4Data
+
+Packet 1
+
+00 00 00 00 00 00 00 00 00 00 00 00 08 00 45 08 00 6F 65 D2 40 00 40 06 51 62 C0 A8 00 FE C0 A8
+
+  00 FE DB 62 0C EA CC D8 BC A7 CD 34 98 95 80 18 02 12 83 AE 00 00 01 01 08 0A 00 F1 5D F0 00 F1
+
+  39 01 37 00 00 00 03 69 6E 73 65 72 74 20 69 6E 74 6F 20 66 6F 6F 20 28 61 6E 69 6D 61 6C 2C 20
+
+  6E 61 6D 65 29 20 76 61 6C 75 65 73 20 28 22 64 6F 67 22 2C 20 22 47 6F 6F 66 79 22 29
+
+Packet 2
+
+00 00 00 00 00 00 00 00 00 00 00 00 08 00 45 08 00 3F 4B 60 40 00 40 06 6C 04 C0 A8 00 FE C0 A8
+
+  00 FE 0C EA DB 62 CD 34 98 95 CC D8 BC E2 80 18 02 11 83 7E 00 00 01 01 08 0A 00 F1 5D F0 00 F1
+
+  5D F0 07 00 00 01 00 01 01 02 00 00 00
+  
+----
+
+{empty} +
+
+== Deliverables
+[square]
+* All the attributes of the traffic that were discovered from analyzing the hexadecimal information provided should be noted with an indication of the hex bytes that provided the information. Ensure you annotate which header the information came from, or if it was found in the data section.
+
+{empty} + 
+
+
