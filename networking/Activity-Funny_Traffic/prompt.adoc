@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - What is Happening Here
+= Activity - Funny Traffic
 :doctype: book
 :source-highlighter: coderay
 :listing-caption: Listing
