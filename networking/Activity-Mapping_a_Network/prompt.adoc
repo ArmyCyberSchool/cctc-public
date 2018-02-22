@@ -204,6 +204,13 @@ end
 === Task 1) 
 You will start your network infrastructure discovery by analyzing the configuration file and documenting any information about the network device/network segment. Besides from providing a basis for your network topology map, you should also compile a list of security vulnerabilities that can be used to access or exploit the device.
 
+{empty} +
+
+=== Task 2)
+You have obtained some PCAPs that were captured from the network where the target router was operating. Using the information you see in the PCAPs, draw out your network map to include any other devices or routes you think are present.
+
+You can download the PCAPS here:
+
 == Deliverables
 [square]
 * A powerpoint or similar graphic representation of the network with appropriate labels for significant information
