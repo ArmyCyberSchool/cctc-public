@@ -222,6 +222,12 @@
                             <span class="fragment"><font size="5"><u>Accept any NEW connections from a range of ports from 20-23</u></font></span><br>
                             <span class="fragment"><font size="5">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 20:23 -j ACCEPT</font></span>
                 </section>
+                
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>IPTables Practice</h4>
+					<p align="left"><font size="6">Using the Iptables and extension manpages, practice IPTables syntax</font></p>
+					<a href="https://git.cybbh.space/CCTC/public/blob/master/networking/Activity-Filtering_with_IPTables/prompt.adoc">IPTables Activity</a>
+				</section>
 
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -249,6 +255,12 @@
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/DPAT.png" style="max-height: 80%; max-width: 80%;"></center>
 					<p align="left"><font size="6">- Forward traffic to an internal or private IP on port <font color="red"> 8080</font></font></p>
 					<p align="left"><font size="6">- iptables -t nat -A PREROUTING -p tcp -o eth0 -j DNAT --to 10.0.0.1:8080</font></p>
+				</section>
+				
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>NAT with IPTables</h4>
+					<p align="left"><font size="6">Using the Iptables, practice NATing</font></p>
+					<a href="https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-IPTables_for_NATing">IPTables Activity</a>
 				</section>
 				
 			</div>
