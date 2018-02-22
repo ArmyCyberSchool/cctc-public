@@ -42,8 +42,6 @@
 
 </div></div></section><section data-id="c8edfb814de1a1f2fb1d3d101466f082"><div class="sl-block" data-block-type="text" style="width: 863px; left: 80px; top: 39px; height: auto;" data-block-id="a02867e438c958fd18cd7cc9e2282a02"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
 <p><strong>Ethernet Header</strong></p>
-
-<p><span style="font-size:1.4em"><strong><span style="font-size:0.9em">(CCNE002.001 Identify the various packet headers)</span></strong></span></p>
 </div></div>
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="4d259a9172bd0baa5ffc2622ad541868"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 515px; height: 102px; left: 223px; top: 195px;" data-block-id="407b5e82944ee426fb021d8a81f3fa63"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="515" data-natural-height="102" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/EthernetFramePreamble.png"></div></div>
@@ -76,8 +74,6 @@
 <p><span style="font-size:0.7em"><strong>Fig. 2 - Example IPv4 Packet</strong></span></p>
 </div></div></section><section data-id="41d4decd744c879797a2c7f8bbaa8055"><div class="sl-block" data-block-type="text" style="width: 847px; left: -177px; top: 253px; height: auto;" data-block-id="8f2f88b0c80af9127c9dea659f9ebc05"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <p><strong>Fragmentation</strong></p>
-
-<p><strong>(CCNE002.002 Describe IPv4 and IPv6 packet structures)</strong></p>
 </div></div>
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="b7d972cf6d87e84bb9dff241f3cb99af"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
 <div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 500px; height: 685px; left: 459px; top: 15px;" data-block-id="a8339f93bafd168339f850fc79994882"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="502" data-natural-height="688" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fragmentation.png"></div></div>
@@ -189,7 +185,7 @@
 <p><strong>Discuss basics behind User/Kernel Space</strong></p>
 
 <p><strong>CCNE001.002 Understanding User space vs Kernel Space for network functions</strong></p>
-
+<p> </p>
 <ul>
 	<li>System Memory: Kernel space vs. User space</li>
 	<li>Sockets: Familys/Types</li>
@@ -203,7 +199,9 @@
 <section data-id="73070b1d6d91e24624a1436f0e27ecf5"><div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="d05c783f8a288bad1f66b4a7ae659e1d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
 <p><strong>Discuss Network Namespaces</strong></p>
 <p><strong>Potential Uses</strong></p>
-<p>A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices. By default a process inherits its network namespace from its parent. Initially all the processes share the same default network namespace from the init process.</p>
+<p align="left">A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices. By default a process inherits its network namespace from its parent. Initially all the processes share the same default network namespace from the init process.</p>
+
+<p> </p>
 <ul>
 	<li>Namespaces may be used in testing of complicated or intricate networking configurations from a single host.</li>
 	<li>Sensitive services may be placed in a more locked-down, firewall-restricted namespace than normal system services.</li>
