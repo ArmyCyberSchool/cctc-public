@@ -11,11 +11,9 @@
 == Learning Objectives / Outcomes
 [square]
 
-* SKILL CCNE013: Identify fundamentals of secure shell protocol
-* CCNE013.002 Discuss SSH reverse tunnels
-* CCNE013.006 Explain the process for multi-hop tunneling
-* CCNE013.007 Describe the appropriate use of of reverse tunnels
-* CCNE013.008 Describe basic port forwarding
+** CCNE006.005 Explain the purpose and process of multi-hop tunneling
+** CCNE006.007 Describe the appropriate use of of reverse tunnels
+** CCNE006.008 Describe forward, remote and dynamic port forwarding
 
 {empty} +
 
