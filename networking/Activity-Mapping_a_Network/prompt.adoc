@@ -211,7 +211,13 @@ You have obtained some PCAPs that were captured from the network where the targe
 
 You can download the PCAPS here:
 https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap1.pcap
+
+{empty} +
+
 https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap2.pcap
+
+{empty} +
+
 https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap3.pcap
 
 == Deliverables
