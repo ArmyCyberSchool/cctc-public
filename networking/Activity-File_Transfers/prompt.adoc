@@ -11,10 +11,10 @@
 == Learning Objectives / Outcomes
 [square]
 * Skill 10: Perform file transfers
-* Objective 10.1- Describe common methods for transferring files 
-* Objective 10.2- Describe covert methods for transferring files
-* Objective 10.3- Explain the forward file transfer process with netcat
-* Objective 10.5- Demonstrate the process for transferring files via terminal
+** CCNE008.001 Describe common methods for transferring files
+** CCNE008.002 Describe covert methods for transferring files
+** CCNE008.005 Explain the forward and reverse file transfer process with netcat
+** CCNE008.006 Demonstrate the process for transferring files via terminal
 
 {empty} +
 
