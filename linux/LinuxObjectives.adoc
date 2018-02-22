@@ -11,14 +11,14 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 * SKILL CCNI001: Identify common shells
 ** CCNI001.001 Describe common shells and their differences
 ** CCNI001.002 Define common shell modes, features and functions
+** CCNI001.003 Describe environment initialization and implications
 
 
 * SKILL CCNI002: Employ commands using common shells
 ** CCNI002.001 Demonstrate basic familiarity with the command line interface
-** CCNI002.002 Describe environment initialization and implications
-** CCNI002.003 Demonstrate appropriate use of pipes and redirection
-** CCNI002.004 Explain the fundamentals of Boolean logic
-** CCNI002.005 Identify methods of gaining more information about commands and switches
+** CCNI002.002 Demonstrate appropriate use of pipes and redirection
+** CCNI002.003 Explain the fundamentals of Boolean logic
+** CCNI002.004 Identify methods of gaining more information about commands and switches
 
 * SKILL CCNI003: Analyze the Linux file system
 ** CCNI003.001 Describe file system hierarchy
