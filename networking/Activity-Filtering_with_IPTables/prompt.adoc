@@ -5,7 +5,7 @@
 
 == Learning Objectives
 
-* CCNE007.013 Construct IPTable rules
+* CCNE007.013 - Construct IPTable rules
 
 == Learning Outcomes
 
