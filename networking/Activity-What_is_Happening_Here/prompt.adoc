@@ -2,37 +2,26 @@
 :stylesheet: ../../cctc.css
 
 = Activity - What is Happening Here
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* SKILL CCNE009: Identify packet sniffing tools
-** CCNE009.003 Demonstrate packet decoding features of tools
+== Learning Objectives
 
-{empty} +
+* CCNE009 - Identify packet sniffing tools
+** CCNE009.003 - Demonstrate packet decoding features of tools
 
-== Activity
+== Learning Outcomes
 
-{empty} +
+* N/A
 
-Traffic is generally viewed in a tool like Wireshark or TCPDump, however being able to understand the hexadecimal representation and interpret the traffic is an important skill in traffic analysis. Tools can lie!
+== Scenario
 
-{empty} +
+* Traffic is generally viewed in a tool like Wireshark or TCPDump, however being able to understand the hexadecimal representation and interpret the traffic is an important skill in traffic analysis. Tools can lie!
 
 === Task 1)
-Identify the traffic for the packets listed below and answer the following questions: 
 
-What type of transaction is represented in these packets?
-
-Is this normal traffic?
-
--Provide any details you learned from the packets.
-
-{empty} + 
+* Identify the traffic for the packets listed below and answer the following questions: 
+** What type of transaction is represented in these packets?
+** Is this normal traffic?
+** Provide any details you learned from the packets.
 
 ----
 
@@ -58,12 +47,18 @@ Packet 2
   
 ----
 
-{empty} +
-
 == Deliverables
-[square]
+
 * All the attributes of the traffic that were discovered from analyzing the hexadecimal information provided should be noted with an indication of the hex bytes that provided the information. Ensure you annotate which header the information came from, or if it was found in the data section.
 
-{empty} + 
+== Hints
 
+* N/A
 
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
