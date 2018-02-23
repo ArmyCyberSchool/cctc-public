@@ -6,11 +6,11 @@
 == Learning Objectives
 
 * CCNE005 - Identify packet sniffing tools
-** CCNE005.1 - Explain Berkley Packet Filters (BPF)
-** CCNE005.2 - Use BPFs to view multiple protocol types
-** CCNE005.3 - Demonstrate packet decoding features
-** CCNE005.4 - Describe network sniffing
-** CCNE005.5 - Identify common networking sniffing tools
+** CCNE005.001 - Explain Berkley Packet Filters (BPF)
+** CCNE005.002 - Use BPFs to view multiple protocol types
+** CCNE005.003 - Demonstrate packet decoding features
+** CCNE005.004 - Describe network sniffing
+** CCNE005.005 - Identify common networking sniffing tools
 
 == Scenario
 
