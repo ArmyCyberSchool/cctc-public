@@ -6,10 +6,10 @@
 == Learning Objectives
 
 * CCNE004 - Identify the sections of common packet headers
-** CCNE004.001- Identify the various packet headers
-** CCNE004.003- Describe IPv4 packet structures
-** CCNE004.004- Describe IPv6 packet structures
-** CCNE004.005- Describe common ICMP message types
+** CCNE004.001 - Identify the various packet headers
+** CCNE004.003 - Describe IPv4 packet structures
+** CCNE004.004 - Describe IPv6 packet structures
+** CCNE004.005 - Describe common ICMP message types
 
 == Learning Outcomes
 
