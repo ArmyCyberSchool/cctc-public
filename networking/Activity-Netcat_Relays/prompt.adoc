@@ -2,66 +2,51 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Netcat Relays
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-** CCNE008.005 Explain the forward and reverse file transfer process with netcat
-** CCNE008.006 Demonstrate the process for transferring files via terminal
+== Learning Objectives
 
-{empty} +
+* CCNE008.005 - Explain the forward and reverse file transfer process with netcat
+* CCNE008.006 - Demonstrate the process for transferring files via terminal
 
-== Activity
+== Learning Outcomes
 
-You will be transferring files between H1 and the DMZ client using the H3 client as a relay.
+* N/A
 
-{empty} +
+== Scenario
+
+* You will be transferring files between H1 and the DMZ client using the H3 client as a relay.
 
 === Task 1) 
 
-Send secrectstuff.txt from H1 to the DMZ Client. H3 will be the relay. You *CANNOT* make *outbound* connections on H3.
-
-{empty} +
-
-* Create a file named "secretstuff.txt" on the H1 host. Write the message "This is important information" into the file. You will be sending this to the DMZ host through a relay at H3.
-
-* For the transfer of "secretstuff", H3 cannot make outbound connections.
-
-{empty} +
+* Send secrectstuff.txt from H1 to the DMZ Client. H3 will be the relay. You *CANNOT* make *outbound* connections on H3.
+** Create a file named "secretstuff.txt" on the H1 host. Write the message "This is important information" into the file. You will be sending this to the DMZ host through a relay at H3.
+** For the transfer of "secretstuff", H3 cannot make outbound connections.
 
 === Task 2) 
 
-Send supersecrectstuff.txt from H1 to the DMZ Client. H3 will be the relay. You can *ONLY* make *outbound* connections on H3.
-
-
-{empty} +
-
-* Create a file on the H1 client named "supersecretstuff.txt" and write the message "passwords should be complex" into the file. You will be sending this to the DMZ client through a relay on H3.
-
-* For the transfer of "supersecretstuff", H3 can only make outbound connections.
-
-{empty} +
+* Send supersecrectstuff.txt from H1 to the DMZ Client. H3 will be the relay. You can *ONLY* make *outbound* connections on H3.
+** Create a file on the H1 client named "supersecretstuff.txt" and write the message "passwords should be complex" into the file. You will be sending this to the DMZ client through a relay on H3.
+** For the transfer of "supersecretstuff", H3 can only make outbound connections.
 
 === Task 3) 
 
-Send secrectsquirrelstuff.txt from H1 to the DMZ Client. H3 will be the relay. You can *ONLY* make *outbound* connections on H1, and you can *ONLY* make *inbound* connections on the DMZ client.
-
-{empty} +
-
-* Create a file on the H1 client named "secretsquirrelstuff.txt" and write the message "awww nuts" into the file. You will be sending this to the DMZ client through a relay on H3.
-
-* For the transfer of "secretsquirrelstuff", the relay for H3 should be configured to ensure the H1 is making an *outbound* connection, while the DMZ Client is making an *inbound* connection.
-
-{empty} +
+* Send secrectsquirrelstuff.txt from H1 to the DMZ Client. H3 will be the relay. You can *ONLY* make *outbound* connections on H1, and you can *ONLY* make *inbound* connections on the DMZ client.
+** Create a file on the H1 client named "secretsquirrelstuff.txt" and write the message "awww nuts" into the file. You will be sending this to the DMZ client through a relay on H3.
+** For the transfer of "secretsquirrelstuff", the relay for H3 should be configured to ensure the H1 is making an *outbound* connection, while the DMZ Client is making an *inbound* connection.
 
 == Deliverables
-[square]
+
 * Screenshots showing your commands and the successful file transfers
 * An explanation of the commands/process you used to transfer the files through the relay
 
-{empty} +
+== Hints
 
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
