@@ -59,7 +59,7 @@ b.pdst= "Target IP"
 == Challenge
 
 * Choose 1
-** create a script to send ARP packets to an entire subnet range, to automate the host discovery process
+** Create a script to send ARP packets to an entire subnet range, to automate the host discovery process
 ** Try crafting packets to poison the ARP table/cache in the Windows client (insert bogus information)
 
 == Useful Resources
