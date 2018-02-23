@@ -2,72 +2,45 @@
 :stylesheet: ../../cctc.css
 
 = Activity - IPTables for Filtering
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
+== Learning Objectives
 
 * CCNE007.013 Construct IPTable rules
 
-{empty} +
+== Learning Outcomes
 
-== Activity
+* N/A
 
-You will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
+== Scenario
+
+* You will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
 
 === Task 1)
 
-1. The H1 client should be allowed to initiate new telnet and SSH connections. H1 should also allow connections outbound to tcp/udp ports 1234, 9001, 9002, 1111, 2222 and 9050. Established communications should also be allowed to ensure communications are successful.
-
-
-2. The H3 client should be allowed to initiate new SSH, HTTP,  and TCP 9001-9002 connections. Established communications should also be allowed to ensure communications are successful.
-
-
-3. Both H1 and H3 clients should never allow traffic to/from TCP/UDP ports 7777 and 9999.
-
-
-4. Deny ping (ICMP) operations on H1 and H3 hosts. (Remember ping is a two part transaction. You should be thorough and filter both parts)
-
-
-5. Ensure your Policy for the INPUT, OUTPUT, and FORWARD tables default policy is ACCEPT.
-
-
-5. Test Condition:  Attempt to SSH between the H1 and H3 Clients (you can use non-standard ports such as 9999 or 7777 to test and verify the DROP rules). Ensure your IPTables rules are enforcing the above requirements.
-
-
-{empty} +
+. The H1 client should be allowed to initiate new telnet and SSH connections. H1 should also allow connections outbound to tcp/udp ports 1234, 9001, 9002, 1111, 2222 and 9050. Established communications should also be allowed to ensure communications are successful.
+. The H3 client should be allowed to initiate new SSH, HTTP,  and TCP 9001-9002 connections. Established communications should also be allowed to ensure communications are successful.
+. Both H1 and H3 clients should never allow traffic to/from TCP/UDP ports 7777 and 9999.
+. Deny ping (ICMP) operations on H1 and H3 hosts. (Remember ping is a two part transaction. You should be thorough and filter both parts)
+. Ensure your Policy for the INPUT, OUTPUT, and FORWARD tables default policy is ACCEPT.
+. Test Condition:  Attempt to SSH between the H1 and H3 Clients (you can use non-standard ports such as 9999 or 7777 to test and verify the DROP rules). Ensure your IPTables rules are enforcing the above requirements.
 
 == Deliverables
 
 * Document the rules and process you used to construct the IPTables rules.
-
 * Test the rules to confirm they meet the intent of the activity.
-
-{empty} +
 
 == Hints
 
 * The "-m" flag is an extension that helps to define matches of a list of more specific criteria, such as "states" and "multiport".
 
-{empty} +
-
 == Challenge
 
-1. Change the TTL on H3 from 64 to 128.
-
-2. Apply IPTables to mitigate SYN Floods. (Try testing with nmap)
-
-3. Apply logging to the rule created from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages located in "/var/logs/messages"  file that should be created by initiating a ping on the H1 client.
-
-4. Utilize bpf bytecode to block icmp traffic with "deadbeef" in the payload. (You must flush your current table rules)
-
-{empty} +
+. Change the TTL on H3 from 64 to 128.
+. Apply IPTables to mitigate SYN Floods. (Try testing with nmap)
+. Apply logging to the rule created from Task 1 that drops ping/ICMP traffic on H1. Verify that you can see the messages located in "/var/logs/messages"  file that should be created by initiating a ping on the H1 client.
+. Utilize bpf bytecode to block icmp traffic with "deadbeef" in the payload. (You must flush your current table rules)
 
 == Useful Resources
 
 * http://ipset.netfilter.org/iptables.man.html
-
 * http://ipset.netfilter.org/iptables-extensions.man.html
