@@ -5,9 +5,9 @@
 
 == Learning Objectives
 
-* CCNE013.006 Explain the process for multi-hop tunneling
-* CCNE013.008 Describe basic port forwarding
-* CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool
+* CCNE013.006 - Explain the process for multi-hop tunneling
+* CCNE013.008 - Describe basic port forwarding
+* CCNE013.009 - Set up an initial SSH tunnel and add another tunnel using another tool
 
 == Scenario
 
