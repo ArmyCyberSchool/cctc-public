@@ -5,10 +5,11 @@
 
 == Learning Objectives
 
+* CCNE001.014 - Describe address resolution protocol (ARP)
 * CCNE002 - Identify fundamentals of network discovery
 ** CCNE002.006 - Identify the items of interest when performing internal reconnaissance
 * CCNE003 - Perform network discovery
-** CCNE001.014 - Describe address resolution protocol (ARP)
+
 
 == Learning Outcomes
 
