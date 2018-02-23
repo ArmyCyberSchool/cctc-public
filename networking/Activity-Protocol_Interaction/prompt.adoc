@@ -2,49 +2,53 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Protocol Interaction
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 2: Identify fundamentals of network discovery
-* Objective 2.6- Identify the items of interest when performing internal reconnaissance
-* Skill 3: Perform network discovery
-* Objective 1.14- Describe address resolution protocol (ARP)
+== Learning Objectives
 
-{empty} +
+* CCNE002 - Identify fundamentals of network discovery
+** CCNE002.006 - Identify the items of interest when performing internal reconnaissance
+* CCNE003 - Perform network discovery
+** CCNE001.014 - Describe address resolution protocol (ARP)
+
+== Learning Outcomes
+
+* N/A
 
 == Scenario
 
-Interacting with protocols can be done in various ways. These should be explored to ensure that you can access your targets, regardless of limitations such as no internet browser for viewing HTTP. As discussed, tools like netcat, wget and curl. You can use your Linux client (10.1.0.2) and install these (or other tools you would like to try). You can access HTTP or FTP on H3 via these alternate means.
-
-{empty} +
-
-== Activity
+* Interacting with protocols can be done in various ways. These should be explored to ensure that you can access your targets, regardless of limitations such as no internet browser for viewing HTTP. As discussed, tools like netcat, wget and curl. You can use your Linux client (10.1.0.2) and install these (or other tools you would like to try). You can access HTTP or FTP on H3 via these alternate means.
 
 === Task 1) 
 
-Using netcat, wget and curl, or over CLI tools, access resources over FTP or HTTP on H3. Custom/CLI based protocol interaction extends beyond FTP and HTTP, however these provide a good starting point for getting familiar with the process.
+* Using netcat, wget and curl, or over CLI tools, access resources over FTP or HTTP on H3. Custom/CLI based protocol interaction extends beyond FTP and HTTP; however, these provide a good starting point for getting familiar with the process.
 
-Helpful hints:
+== Deliverables
 
-WGET:
+* Ensure you thoroughly document the syntax and process for using the tools you practiced with. You should also ensure you document any difficulties or limitations you encounter.
 
+== Hints
+
+* WGET:
+
+----
 Examples:
     
     For HTTP, you can grab the html file: wget [IP address/hostname]
+----
 
-NETCAT: Use nc –nvv IP port to connect to a service (and get information about it like the version). 
 
+* NETCAT: Use nc –nvv IP port to connect to a service (and get information about it like the version). 
+
+----
 Examples:
     
     For HTTP you can grab server and html file info with HEAD or GET Requests ( HEAD / HTTP/1.0)
+----
 
-CURL: use [protocol://prefix] to specifiy, otherwise http is assumed. Curl can download files, cancel, resume and rate limit downloads.
 
+* CURL: use [protocol://prefix] to specifiy, otherwise http is assumed. Curl can download files, cancel, resume and rate limit downloads.
+
+----
 Examples:
     
     Use –v for verbose, full request/response outputs. –I for only responses.
@@ -56,14 +60,12 @@ Examples:
     For FTP:  ftp://example.com/mydirectory/myfile.txt --user username:password -o file.txt
     
     Proxy use: ssh - -D localhost:9001 user@remotehost, then curl --proxy socks5h://localhost:9001 http://targetIP:80
+----
 
-{empty} +
+== Challenge
 
-== Deliverables
-[square]
+* N/A
 
-* Ensure you thoroughly document the syntax and process for using the tools you practiced with. You should also ensure you document any difficulties or limitations you encounter.
+== Useful Resources
 
-{empty} + 
-
-
+* N/A
