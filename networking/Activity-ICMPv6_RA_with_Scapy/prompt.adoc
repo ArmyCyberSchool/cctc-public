@@ -6,8 +6,8 @@
 == Learning Objectives
 
 * CCNE001 - Identify core networking features
-* CCNE001.009 - Describe methods for assigning IP addresses
-* CCNE001.015 - Describe ICMP
+** CCNE001.009 - Describe methods for assigning IP addresses
+** CCNE001.015 - Describe ICMP
 
 == Learning Outcomes
 
