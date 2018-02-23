@@ -10,7 +10,7 @@
 
 == Scenario
 
-* First, students will need to access their H1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2)
+* Students will need to access their H1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2)
 
 == Task 1
 
@@ -50,8 +50,8 @@ This will ensure the rule you created in the previous step is used.
 
 == Challenge
 
-. Your challenge task will be to create a custom set of rules in snort that will alert on a stealth port scan. 
-. Once you have created the rule and implemented it, test it using Nmap or another tool of your choice.
+* Your challenge task will be to create a custom set of rules in snort that will alert on a stealth port scan. 
+* Once you have created the rule and implemented it, test it using Nmap or another tool of your choice.
 
 == Useful Resources
 
