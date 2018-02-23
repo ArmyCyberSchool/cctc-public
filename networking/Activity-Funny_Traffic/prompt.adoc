@@ -30,23 +30,23 @@
 * Sample 1- See the "SANTA.pcapng" file
 * Sample 2 (these two packets are related, consider how they are related)
 
-* Packet 1:
-
----
+** Packet 1:
++
+----
 00 00 39 CF D9 CD 00 40 33 D9 7C FD 08 00 45 00 00 38 00 F2 20 00 40 11 AF 37 0A 01 01 01 81 6F
 
 1E 1B 7C AB 4E E5 00 24 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 
 00 00 00 00 00 00
----
-
-* Packet 2:
-
----
+----
++
+** Packet 2:
++
+----
 00 00 39 CF D9 CD 00 40 33 D9 7C FD 08 00 45 00 00 18 00 F2 00 03 40 11 CF 54 0A 01 01 01 81 6F
 
 1E 1B 7C AB 4E E5
----
+----
 
 * Sample 3- See the "Are your getting this.pcap" file
 ** (hint- follow the tcp stream starting at the HTTP Get request, packet 4)
