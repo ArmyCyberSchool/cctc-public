@@ -2,116 +2,86 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Remote Port Forwarding
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
+== Learning Objectives
 
-** CCNE006.005 Explain the purpose and process of multi-hop tunneling
-** CCNE006.007 Describe the appropriate use of of reverse tunnels
-** CCNE006.008 Describe forward, remote and dynamic port forwarding
+* CCNE006 - Identify fundamentals of secure shell protocol & port forwarding
+** CCNE006.005 - Explain the purpose and process of multi-hop tunneling
+** CCNE006.007 - Describe the appropriate use of of reverse tunnels
+** CCNE006.008 - Describe forward, remote and dynamic port forwarding
 
-{empty} +
+== Learning Outcomes
 
-== Credentials
+* N/A
 
-:===
+== Scenario
+
+* You are provided with information about your target network that indicates a specific host in the target network is set up with extremely strict inbound rules; the outbound rules are more flexible however. 
+* Since you can’t get any packets IN to it, you must focus on getting packets OUT. You have an insider, Jose, that you have convinced to set up remote port forwarding on the target host. This will allow you to gain access to the sensitive information hosted on it's web server. 
+* You will need to "play" the role of Jose initially and telnet to the floating IP provided by your instructor (10.50.X.X)
+
+* Credentials:
++
+----
 Description:Username:Password
 Telnet (Jose):studentxx:passwordxx
 
 Tunnel (No Terminal):tunnel:password
 
 Student (Terminal Access):studentxx:passwordxx
-:===
+----
 
-Note: +
-   - In place of "xx" in the above credentials, use your student number (ex: username: student2 password: password2). + 
-   - When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
-== Scenario
+* Notes:
+** In place of "xx" in the above credentials, use your student number (ex: username: student2 password: password2).
+** When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
-You are provided with information about your target network that indicates a specific host in the target network is set up with extremely strict inbound rules; the outbound rules are more flexible however. 
-Since you can’t get any packets IN to it, you must focus on getting packets OUT. You have an insider, Jose, that you have convinced to set up remote port forwarding on the target host. This will allow you to gain access to the sensitive information hosted on it's web server. 
+* Using remote port forwarding, Jose needs to establish a tunnel outbound from the host he has access to and forward its webpage (or anything other services you decided to specify) to a specific port on a host that you can access from your network (Atropia Pivot). This provides you with the ability to connect from the outside network (using local port forwarding) to the port specified on the Atropia pivot (90XX) and receive the webpage (or whatever else is available) hosted from the target host.
 
-* You will need to "play" the role of Jose initially and telnet to the floating IP provided by your instructor (10.50.X.X).
-
-== Activity
-
-Using remote port forwarding, Jose needs to establish a tunnel outbound from the host he has access to and forward its webpage (or anything other services you decided to specify) to a specific port on a host that you can access from your network (Atropia Pivot). This provides you with the ability to connect from the outside network (using local port forwarding) to the port specified on the Atropia pivot (90XX) and receive the webpage (or whatever else is available) hosted from the target host.
-
-{empty} +
-
-*Utilize the diagram below for Task 1 and Task 2:*
+* *Utilize the diagram below for Task 1 and Task 2:*
 
 image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task1.png[task1]
 
 === Task 1)
-*Perform the actions our insider, Jose, would take in order to make this possible:*
 
-1.) Acting as the "insider", Jose, access the target host via telnet (utilize the "student" SSH credentials). 
+* *Perform the actions our insider, Jose, would take in order to make this possible:*
 
-2.) Set up a remote port forward to 90XX at the Atropia pivot on the target host in order to host it's webpage. (Utilize the "tunnel" SSH credentials)
-
-
-{empty} +
+. Acting as the "insider", Jose, access the target host via telnet (utilize the "student" SSH credentials). 
+. Set up a remote port forward to 90XX at the Atropia pivot on the target host in order to host it's webpage. (Utilize the "tunnel" SSH credentials)
 
 === Task 2)
-*As the malicious external actor, connect to the service our insider Jose has hosted for us:*
 
-1.) After Jose establishes the reverse tunnel, you should return to your home machine (H1). You will need to create a local port forward in order to tunnel through the compromised SSH Server (Atropia), at 10.50.X.X. (Utilize the the "tunnel" user credentials)
+* *As the malicious external actor, connect to the service our insider Jose has hosted for us:*
 
-2.) Your SSH tunnels should connect a local port on your H1 host (port of your choosing, 1111 for example) to the port (90XX) on the compromised pivot host (Atropia) that Jose is sending the webpage to via the remote tunnel created in task 1.
-
-3.) Once complete, you should be able to access the target host's webpage from the browser on your H1 client at the local port you chose in step 2 of task 2.
-
-4.) Clear your browser cache.
-
-{empty} +
-
+. After Jose establishes the reverse tunnel, you should return to your home machine (H1). You will need to create a local port forward in order to tunnel through the compromised SSH Server (Atropia), at 10.50.X.X. (Utilize the the "tunnel" user credentials)
+. Your SSH tunnels should connect a local port on your H1 host (port of your choosing, 1111 for example) to the port (90XX) on the compromised pivot host (Atropia) that Jose is sending the webpage to via the remote tunnel created in task 1.
+. Once complete, you should be able to access the target host's webpage from the browser on your H1 client at the local port you chose in step 2 of task 2.
+. Clear your browser cache.
 
 === Task 3)
 
-*Utilize the diagram below for Task 3:*
+* *Utilize the diagram below for Task 3:*
 
 image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Remote_Port_Forwarding/Task3.png[task3]
 
-
-*As the malicious external actor, you need to discover and interact with other services to obtain additional information:* 
-
-1.) Our insider, Jose, has discovered his host can reach various services on other hosts within the 10.2.0.0/25 network. 
-
+* *As the malicious external actor, you need to discover and interact with other services to obtain additional information:* 
+** Our insider, Jose, has discovered his host can reach various services on other hosts within the 10.2.0.0/25 network. 
 * You will need to "play" the role of Jose once again. Telnet to the floating IP provided by your instructor (10.50.X.X). Then, change the tunnel commands for the appropriate service being accessed (SSH, FTP, HTTP, etc..)
-
-2.) Scan the network and interact with services of interest from your H1 host in your home environment utilizing remote and dynamic port forwarding to obtain the files.
-
+** Scan the network and interact with services of interest from your H1 host in your home environment utilizing remote and dynamic port forwarding to obtain the files.
 * Dynamic port forwarding will use proxychains, by default proxychains is setup to utilize port 9050 on your H1 host. This must be specified in your tunnel commands in order to work properly.
 
-{empty} +
-
 == Deliverables
-[square]
 
 * Screenshots showing your commands and successful access of the target webpage host by jose, open ports discovered through scans, interaction with other available hosts and their services, files obtained
-
 * An explanation of the commands/process you used to reach the target (from both Jose, and your perspective)
-
-{empty} +
 
 == Hints
 
-* Not Applicable
-
-{empty} +
+* N/A
 
 == Challenge
 
-* Not Applicable
-
-{empty} +
+* N/A
 
 == Useful Resources
 
