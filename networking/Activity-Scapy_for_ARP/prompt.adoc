@@ -2,92 +2,66 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Scapy for ARP
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 1: Identify core networking features
-* Objective 1.14- Describe address resolution protocol (ARP)
+== Learning Objectives
 
-{empty} +
+* CCNE001 - Identify core networking features
+** CCNE001.014 - Describe address resolution protocol (ARP)
 
 == Scenario
 
-You have control over a Linux client in a network (H1-10.1.0.2). Your target is a Windows 10 client (H2-10.1.0.3) in your same IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP in necessary for communications, whereas often times ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
-
-{empty} +
-
-== Activity
+* You have control over a Linux client in a network (H1-10.1.0.2). Your target is a Windows 10 client (H2-10.1.0.3) in your same IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP in necessary for communications, whereas often times ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
 
 === Task 1) 
 
-In linux, turn on ARP_ACCEPT for all interfaces:
+* In linux, turn on ARP_ACCEPT for all interfaces:
+** echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+* You can verify this by "cat /proc/sys/net/ipv4/conf/all/arp_accept", file should be 1 for enabled. If it is 0, it is still disabled.
 
-echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+* Now:
+** First check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) than delete the entry ("arp -d 10.1.0.3" or "ip -s -s neigh flush all") As long are you don't initiate communications with the host, the ARP table should stay clear of the host's information.
 
-You can verify this by "cat /proc/sys/net/ipv4/conf/all/arp_accept", file should be 1 for enabled. If it is 0, it is still disabled.
+* You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
 
+* Before you begin, configure your linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
 
-Now:
-First check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) than delete the entry ("arp -d 10.1.0.3" or "ip -s -s neigh flush all") As long are you don't initiate communications with the host, the ARP table should stay clear of the host's information.
+* Now to craft your request:
 
-You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
-
-Before you begin, configure your linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
-
-Now to craft your request:
-
-Set your fields  for a and b.
-
+* Set your fields  for a and b.
++
+----
 a=Ether()
-
 a.src= "Your MAC"
-
 a.dst= "ARP requests are broadcast"
-
 a.type= The hex code for ARP
 
 b=ARP()
-
 b.op= opcode for requests
-
 b.hwsrc=  "Your MAC"
-
 b.psrc= "Your IP"
-
 b.pdst= "Target IP"
+----
 
-*START UP WIRESHARK AND WATCH THE WIRE WHILE YOU SEND THE PACKET!*
+* *START UP WIRESHARK AND WATCH THE WIRE WHILE YOU SEND THE PACKET!*
 
-Send the packet using:
-
-sendp(a/b, iface="eth1" )
-
-{empty} + 
-
-=== Task 2)
-
-Challenge: Choose 1
-
-A) create a script to send ARP packets to an entire subnet range, to automate the host discovery process
-
-B) Try crafting packets to poison the ARP table/cache in the Windows client (insert bogus information)
-
-
-{empty} +
-
+* Send the packet using:
+* sendp(a/b, iface="eth1" )
 
 == Deliverables
-[square]
 
 * Document your steps in Scapy or Scapy script
 * Screen shot of the ARP table showing a successful ARP entry in response  to your crafted packet
 
+== Hints
 
-{empty} + 
+* N/A
 
+== Challenge
 
+* Choose 1
+** create a script to send ARP packets to an entire subnet range, to automate the host discovery process
+** Try crafting packets to poison the ARP table/cache in the Windows client (insert bogus information)
+
+== Useful Resources
+
+* N/A
