@@ -67,6 +67,3 @@ Operational protocol only allows for the exfilled data to be placed inside the /
 ** You should be ready to access another, highly secured portion of the target network. This portion is only accessible from the 10.25.0.9 host.  Within that area, you will find an FTP server, and two hosts that have a web service configured. You need to retrieve the information from these targets to complete your mission. 
 
 *There are a total of 9 flags within the network*
-
-
-
