@@ -2,96 +2,58 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Snort Configuration
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
+== Learning Objectives
 
-== Learning Objectives / Outcomes
-[square]
+* CCNE009 - Configure filtering devices
+** CCNE007.001 - Explain the function of different network devices and their recommended position on a network
 
-* SKILL CCNE009: Configure filtering devices
+== Scenario
 
-* CCNE007.001 Explain the function of different network devices and their recommended position on a network
-
-{empty} +
-
-== Activity
-
-{empty} +
-
-First, students will need to access their H1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2).
-
-{empty} +
+* Students will need to access their H1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2)
 
 == Task 1
 
-1) Confirm that snort has been installed/configured correctly with "snort --version"
-
-2) Be sure to have *root privileges*, then run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+. Confirm that snort has been installed/configured correctly with "snort --version"
+. Be sure to have *root privileges*, then run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
 (You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create its own process.)
-
-3) Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
-
-4) Now you will practice customizing this icmp rule.
-
-
-{empty} +
+. Test the default rule which will trigger on ANY icmp packet. You can send a ping from H1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
+. Now you will practice customizing this icmp rule.
 
 == Task 2
 
-1) Kill an existing Snort process running. 
-
-2) You will customize the icmp.rules file and change the matching condition. The rule should only alert if an icmp packet with the hex string of "DEADBEEF" is present in the payload.
-
-3) Change the sid to "9000000" and the msg to "COWS".
-
-4) Run Snort as a daemon on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
-
-5) Send a ping fro H1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
-
-6) Finally, go back to your host and send a ping with the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
-
-
-{empty} +
+. Kill an existing Snort process running. 
+. You will customize the icmp.rules file and change the matching condition. The rule should only alert if an icmp packet with the hex string of "DEADBEEF" is present in the payload.
+. Change the sid to "9000000" and the msg to "COWS".
+. Run Snort as a daemon on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
+. Send a ping fro H1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
+. Finally, go back to your host and send a ping with the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
 
 == Task 3
 
-1) In order to add custom rules of your own, you will need to write the rules, AND add them to be included within the snort.conf file.
-
-2) You will be writing a rule to alert on the vulnerability exploited in the attack-trace.pcap from the traffic analysis section. Be sure you are looking for the VULNERABILITY and not the exploit.
-The rule should be written in the /etc/snort/rules directory. For example, you may name your rule “attack.rule”.
-
-_For this rule, you should use variables. Define the variables inside the snort.conf file_
-
-3) Once the rule has been created, add new rule to the snort.conf file. For example, add the line “include /etc/snort/rules/attack.rule” to the snort.conf. 
+. In order to add custom rules of your own, you will need to write the rules, AND add them to be included within the snort.conf file.
+. You will be writing a rule to alert on the vulnerability exploited in the attack-trace.pcap from the traffic analysis section. Be sure you are looking for the VULNERABILITY and not the exploit.
+.. The rule should be written in the /etc/snort/rules directory. For example, you may name your rule “attack.rule”.
+.. _For this rule, you should use variables. Define the variables inside the snort.conf file_
+. Once the rule has been created, add new rule to the snort.conf file. For example, add the line “include /etc/snort/rules/attack.rule” to the snort.conf. 
 This will ensure the rule you created in the previous step is used.
-
-
-4) Read the attack-trace.pcap using snort (-r reads pcap).
-
-
-5) Check your alert logs to ensure that your alert was triggered by the traffic in the pcap as you intended.
-
-{empty} +
+. Read the attack-trace.pcap using snort (-r reads pcap).
+. Check your alert logs to ensure that your alert was triggered by the traffic in the pcap as you intended.
 
 == Deliverables
 
 * You should be able to produce alerts with Snort based on the tasks above. Check the alerts as well as the PCAP that Snort captures to verify you can alerting on the proper traffic.
 
+== Hints
+
+* N/A
 
 == Challenge
 
-1) Your challenge task will be to create a custom set of rules in snort that will alert on a stealth port scan. 
-
-2) Once you have created the rule and implemented it, test it using Nmap or another tool of your choice.
-
-{empty} +
+* Your challenge task will be to create a custom set of rules in snort that will alert on a stealth port scan. 
+* Once you have created the rule and implemented it, test it using Nmap or another tool of your choice.
 
 == Useful Resources
 
 *  http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node27.html
-
 * https://srcport.com/articles/300/snort-ids-cheat-sheet

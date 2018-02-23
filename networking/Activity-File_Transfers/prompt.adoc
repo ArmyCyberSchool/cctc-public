@@ -2,67 +2,50 @@
 :stylesheet: ../../cctc.css
 
 = Activity - File Transfers
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 == Learning Objectives / Outcomes
 [square]
-* Skill 10: Perform file transfers
-** CCNE008.001 Describe common methods for transferring files
-** CCNE008.002 Describe covert methods for transferring files
-** CCNE008.005 Explain the forward and reverse file transfer process with netcat
-** CCNE008.006 Demonstrate the process for transferring files via terminal
+* CCNE010 - Perform file transfers
+** CCNE008.001 - Describe common methods for transferring files
+** CCNE008.002 - Describe covert methods for transferring files
+** CCNE008.005 - Explain the forward and reverse file transfer process with netcat
+** CCNE008.006 - Demonstrate the process for transferring files via terminal
 
-{empty} +
+== Scenario
 
-== Activity
-
-For this exercise you will continue using your individual topology but *BEFORE YOU START*, ensure that you remove *all filtering rules*, and configure a permit any rule for the pfsense firewall on the LAN and OPT interfaces.  In this activity, you will use various file transfer methods between the H1 client and the H3 client. In later exercises.
-
-{empty} +
-
+* For this exercise you will continue using your individual topology but *BEFORE YOU START*, ensure that you remove *all filtering rules*, and configure a permit any rule for the pfsense firewall on the LAN and OPT interfaces.  In this activity, you will use various file transfer methods between the H1 client and the H3 client. In later exercises.
 
 === Task 1)
 
-You need to send SCP1 from H1 > H3 received as SCP3
-
-* Create "SCP1.txt" on the H1 client and write "SCP Transfer" into the file.
-
-* Use SCP to transfer SCP1 from H1 to H3. Name the file "SCP3.txt" on the H3 side.
-
-{empty} +
-
+* You need to send SCP1 from H1 > H3 received as SCP3
+** Create "SCP1.txt" on the H1 client and write "SCP Transfer" into the file.
+** Use SCP to transfer SCP1 from H1 to H3. Name the file "SCP3.txt" on the H3 side.
 
 === Task 2)
 
-You need to send NETCAT3 from H3 > H1 received as NETCAT1
-
-* Create "NETCAT3.txt" on the H3 client and write "NETCAT Transfer" into the file.
-
-* Use NETCAT to transfer NETCAT3 from H3 to H1. Name the file "NETCAT1.txt" on the H1 side.
-
-{empty} +
-
+* You need to send NETCAT3 from H3 > H1 received as NETCAT1
+** Create "NETCAT3.txt" on the H3 client and write "NETCAT Transfer" into the file.
+** Use NETCAT to transfer NETCAT3 from H3 to H1. Name the file "NETCAT1.txt" on the H1 side.
 
 === Task 3)
 
-You need to send SOCAT1 from H1 > H3 received as SOCAT3
-
-* Create "SOCAT1.txt" on the H1 client and write "SOCAT Transfer" into the file.
-
-* Use SOCAT to transfer SOCAT1 from H1 to H3. Name the file "SOCAT3.txt" on the H3 side.
-
-{empty} +
-
+* You need to send SOCAT1 from H1 > H3 received as SOCAT3
+** Create "SOCAT1.txt" on the H1 client and write "SOCAT Transfer" into the file.
+** Use SOCAT to transfer SOCAT1 from H1 to H3. Name the file "SOCAT3.txt" on the H3 side.
 
 == Deliverables
-[square]
+
 * Ensure after each transfer that the new file contents were received with the message appropriate to the transfer you are conducting.
 * Document the syntax for the transfers and any issues you may have had (and how you resolved them).
 
-{empty} +
+== Hints
 
+* N/A
 
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

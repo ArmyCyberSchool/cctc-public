@@ -2,66 +2,54 @@
 :stylesheet: ../../cctc.css
 
 = Activity - ICMPv6 RA with Scapy
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 1: Identify core networking features
-* Objective 1.9 Describe methods for assigning IP addresses
-* Objective 1.15- Describe ICMP
+== Learning Objectives
 
-{empty} +
+* CCNE001 - Identify core networking features
+** CCNE001.009 - Describe methods for assigning IP addresses
+** CCNE001.015 - Describe ICMP
+
+== Learning Outcomes
+
+* N/A
 
 == Scenario
 
-You have control over a Linux client (10.1.0.2) in an IPv4 network. Your target is a Windows 10 client (10.1.0.3) that you have learned has the default, IPv6 enabled on the NIC. Since you are in an IPv4 network, you would like to use IPv6 between yourself and the target to help obfuscate your operation. You will use scapy and leverage IPv6 auto configuration functions to create a means of IPv6 direct communications between the Linux and Windows Machine.
-
-{empty} +
-
-== Activity
+* You have control over a Linux client (10.1.0.2) in an IPv4 network. Your target is a Windows 10 client (10.1.0.3) that you have learned has the default, IPv6 enabled on the NIC. Since you are in an IPv4 network, you would like to use IPv6 between yourself and the target to help obfuscate your operation. You will use scapy and leverage IPv6 auto configuration functions to create a means of IPv6 direct communications between the Linux and Windows Machine.
 
 === Task 1) 
 
-Some helpful information:
-
-First check your configurations. You should configure a recognizable IPv6 address (hint-hint).  Edit the "interface" file in etc/networks adding inet6 information.
-
-Set your fields a-e.
-Set your destination (use the multicast address for solicited nodes)
-a = IPv6()
-
-Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
-b = ICMPv6ND_RA()
-
---then--
-
-a.dst = "the destination"  (remember to do this for any fields you are setting in the below specified areas!)
-
-Set your source MAC Address (link layer address); You should have taken note of this when you checked your ifconfig.
-c = ICMPv6NDOptSrcLLAddr()
-
-Set your MTU (use defaults)
-d = ICMPv6NDOptMTU()
-
-Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
-e = ICMPv6NDOptPrefixInfo()
-
-send your packet!
-
-send(a/b/c/d/e, iface="eth1")
-
-{empty} +
+* Some helpful information:
+** First check your configurations. You should configure a recognizable IPv6 address (hint-hint).  Edit the "interface" file in etc/networks adding inet6 information.
+** Set your fields a-e.
+*** Set your destination (use the multicast address for solicited nodes)
+**** a = IPv6()
+*** Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
+**** b = ICMPv6ND_RA()
+** --then--
+**** a.dst = "the destination"  (remember to do this for any fields you are setting in the below specified areas!)
+*** Set your source MAC Address (link layer address); You should have taken note of this when you checked your ifconfig.
+**** c = ICMPv6NDOptSrcLLAddr()
+*** Set your MTU (use defaults)
+**** d = ICMPv6NDOptMTU()
+*** Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
+**** e = ICMPv6NDOptPrefixInfo()
+** Send your packet!
+*** send(a/b/c/d/e, iface="eth1")
 
 == Deliverables
-[square]
 
 * Document your steps in Scapy or Scapy script
 * Screenshot showing successful communications (pings) between the Linux and Windows Computer on their new IPv6 Network addresses.
 
-{empty} + 
+== Hints
 
+* N/A
 
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

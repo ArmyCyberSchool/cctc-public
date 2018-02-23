@@ -2,79 +2,62 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Examining Header Contents
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 4: Identify the sections of common packet headers
-* Objective 4.1- Identify the various packet headers
-* Objective 4.3- Describe IPv4 packet structures
-* Objective 4.4- Describe IPv6 packet structures
-* Objective 4.5- Describe common ICMP message types
+== Learning Objectives
 
-{empty} +
+* CCNE004 - Identify the sections of common packet headers
+** CCNE004.001 - Identify the various packet headers
+** CCNE004.003 - Describe IPv4 packet structures
+** CCNE004.004 - Describe IPv6 packet structures
+** CCNE004.005 - Describe common ICMP message types
 
-== Activity
+== Learning Outcomes
+
+* N/A
+
+== Scenario
+
+* Packet headers and contents are represented in hexadecimal in sniffers. However, as you learn to use different sniffers and look at the information within the header fields, the information may need to be evaluated as binary or decimal. Practicing conversion of binary, hexadecimal and decimal is vital to being able to filter or decipher information in header fields.
+* Understanding some of the most basic and common headers and the fields within them is important to being able to recognize anomalies or target your analysis.
 
 === Task 1) 
-Packet headers and contents are represented in hexadecimal in sniffers. However, as you learn to use different sniffers and look at the information within the header fields, the information may need to be evaluated as binary or decimal. Practicing conversion of binary, hexadecimal and decimal is vital to being able to filter or decipher information in header fields.
 
-* Answer the following conversion questions. Do not use a calculator, and be sure to show your work:
+* Answer the following conversion questions. Do *not* use a calculator and be sure to show your work:
 
-{empty} + 
-
-1. Convert 555 from decimal to binary. 
-
-2. Convert 35 from hexadecimal to decimal.
- 
-3. Convert 1010101001 from binary to hexadecimal. 
-
-4. Convert 1100111 from binary to hexadecimal. 
-
-5. Convert 4B from hexadecimal to decimal. 
-
-6. Convert 650 from decimal to hexadecimal.
-
-{empty} + 
+. Convert 555 from decimal to binary. 
+. Convert 35 from hexadecimal to decimal.
+. Convert 1010101001 from binary to hexadecimal. 
+. Convert 1100111 from binary to hexadecimal. 
+. Convert 4B from hexadecimal to decimal. 
+. Convert 650 from decimal to hexadecimal.
 
 === Task 2)
-Understanding some of the most basic and common headers and the fields within them is important to being able to recognize anomalies or target your analysis.
 
 * Fill in the blank or provide a short answer for the following questions:
 
-{empty} + 
-
-1) In a TCP or UDP Header, the source and destination port fields are how many bits/bytes?  Why are these bits/bytes required?
-
-2) The source address field shows the IPv6 address of the source of the packet. What is the size of the source address field?
-
-3) ICMP is used to relay what types of information through a network?
-
-4) An ICMP type 8 message is used for what purpose?
-
-5) Every header must declare what its payload (next protocol) is. In the Ethernet Header, what field declares the protocol that is encapsulated within the frame?
-
-6) What are the DF and MF flags in the IPv4 header used for? Are these flags used in IPv6 headers?  Why or why not?
-
-7) In the IPv4 header, what is the TTL field used for?
-
-8) What would an ICMP type 11 message indicate?
-
-9) What are checksum fields used for within packet headers?
-
-10) What is the difference between the IHL and the total length fields in an IPv4 header?
-
-{empty} +
-
+. In a TCP or UDP Header, the source and destination port fields are how many bits/bytes?  Why are these bits/bytes required?
+. The source address field shows the IPv6 address of the source of the packet. What is the size of the source address field?
+. ICMP is used to relay what types of information through a network?
+. An ICMP type 8 message is used for what purpose?
+. Every header must declare what its payload (next protocol) is. In the Ethernet Header, what field declares the protocol that is encapsulated within the frame?
+. What are the DF and MF flags in the IPv4 header used for? Are these flags used in IPv6 headers?  Why or why not?
+. In the IPv4 header, what is the TTL field used for?
+. What would an ICMP type 11 message indicate?
+. What are checksum fields used for within packet headers?
+. What is the difference between the IHL and the total length fields in an IPv4 header?
 
 == Deliverables
-[square]
+
 * Provide complete responses to the questions above.
 
-{empty} + 
+== Hints
 
+* N/A
 
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

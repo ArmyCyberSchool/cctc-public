@@ -2,32 +2,25 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Advanced IPTables for Filtering
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
+== Learning Objectives
 
-* CCNE007.013 Construct IPTable rules
+* CCNE007.013 - Construct IPTable rules
 
-{empty} +
+== Learning Outcomes
 
-== Activity
+* N/A
 
-You will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
+== Scenario
 
-
+* You will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
 
 === Task 1)
 
-1. You will configure rules on H3 the allow only very specific connections to be recieved from H1.
+. You will configure rules on H3 the allow only very specific connections to be recieved from H1.
+. All your IPTables Rules MUST BE ON H3. Combine as many rules as you can.
 
-
-2. All your IPTables Rules MUST BE ON H3. Combine as many rules as you can.
-
-Conditions to meet on H3 via IPTables rules:
+* Conditions to meet on H3 via IPTables rules:
 
 ** H3 can recieve and respond to ARP requests sourced from H1's MAC address, All other MAC addresses are dropped (test this by sending an arp request with scapy with a spoofed MAC; see if H3 drops it)
 ** H3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is 64 (test this by setting an IPTable rule in H1 to change the TTL value in all outbound packets)
@@ -38,25 +31,20 @@ Conditions to meet on H3 via IPTables rules:
 ** H3 will REJECT connections on port 4444 from H1 (test with netcat)
 ** H3 is NOT Allowed to SOURCE SSH connections TO H1 (test with SSH)
 
-
-{empty} +
-
 == Deliverables
 
 * Document the rules and process you used to construct the IPTables rules.
-
 * Test the rules to confirm they meet the intent of the activity.
-
-{empty} +
 
 == Hints
 
 * The "-m" flag is an extension that helps to define matches of a list of more specific criteria, such as "states" and "multiport".
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
 * http://ipset.netfilter.org/iptables.man.html
-
 * http://ipset.netfilter.org/iptables-extensions.man.html

@@ -2,98 +2,72 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Port Forwarding and Tunneling
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
+== Learning Objectives
 
-- CCNE013.006 Explain the process for multi-hop tunneling
-
-- CCNE013.008 Describe basic port forwarding
-
-- CCNE013.009 Set up an initial SSH tunnel and add another tunnel using another tool
-
-{empty} +
+* CCNE013.006 - Explain the process for multi-hop tunneling
+* CCNE013.008 - Describe basic port forwarding
+* CCNE013.009 - Set up an initial SSH tunnel and add another tunnel using another tool
 
 == Scenario
 
-You need to do some reconnaissance and intelligence gathering in a target network. This network can be accessed through a public facing interface on one of its hosts. This public facing IP will be provided by the instructor (10.50.X.X).  Be aware that some of the target network's INSIDE IP's will be the same as the IP's inside your own environment. 
-{empty} +
+* You need to do some reconnaissance and intelligence gathering in a target network. This network can be accessed through a public facing interface on one of its hosts. This public facing IP will be provided by the instructor (10.50.X.X).  Be aware that some of the target network's INSIDE IP's will be the same as the IP's inside your own environment.
+** Credentials:
 
-== Credentials
-
-:===
+----
 Description:Username:Password
 Telnet (Jose):studentxx:passwordxx
 
 Tunnel (No Terminal):tunnel:password
 
 Student (Terminal Access):studentxx:passwordxx
-:===
+----
 
-Note: +
-   - In place of "xx" in the above credentials, use your student number (ex: username: student2 password: password2). + 
-   - When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
-== Activity
+* Notes:
+** In place of "xx" in the above credentials, use your student number (ex: username: student2 password: password2).
+** When utilizing the "tunnel" user credentials, you must specify a "-NT" at the end of your command, otherwise it will not work.
 
-You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "H1" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers " do not not allow login ", only SSH tunneling; ensure you use the appropriate flags in your commands. 
-
+* You will be using the SSH tunneling Shared Topology for this exercise. You will be working from your individual environment, using your "H1" client and SSH'ing into a target topology. You have an account for an SSH server(s) in an environment that you can reach from your home client. Be aware that some of the SSH Servers " do not not allow login ", only SSH tunneling; ensure you use the appropriate flags in your commands.
 
 === Task 1)
 
 image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Port_Forwarding_and_Tunneling/Task1.png[Task1]
-1) The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. Discover what the internal ip address is for the compromised (pivot) machine..
 
-2) You are aware of an HTTP server in the environment (Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/26 network to connect to it. 
-Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by a webserver (10.3.0.1) on your local host’s browser.
+. The public facing host’s outside IP is what you will use to setup the first tunnel, allowing you access into the network. Discover what the internal ip address is for the compromised (pivot) machine..
+. You are aware of an HTTP server in the environment (Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/26 network to connect to it. 
 
-* Hint "Use wget or browse to the localhost:[port] in your web browser"
+* Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by a webserver (10.3.0.1) on your local host’s browser.
+* _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Local port forwarding--->H3-1-Target's Webpage_
 
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Local port forwarding--->H3-1-Target's Webpage_
-
-3) Clear your browser cache and teardown your connections.
-
-{empty} +
+. Clear your browser cache and teardown your connections.
 
 === Task 2)
+
 image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Port_Forwarding_and_Tunneling/Task2.png[Task2]
-1) You know that your pivot machine, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
 
-2) You are only concerned with this additional host (for now), which is in the 10.3.0.0/26 range.
+. You know that your pivot machine, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
+. You are only concerned with this additional host (for now), which is in the 10.3.0.0/26 range.
+. You are only concerned with finding ssh, telnet, ftp, and http services on hosts for this activity.
 
-3) You are only concerned with finding ssh, telnet, ftp, and http services on hosts for this activity.
+* _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/26 network_
 
-_Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/26 network_
-
-4) Once you find out the host's identity, and what services are available, interact with those services!
-
-5)  Clear your browser cache and teardown your connections.
-
-{empty} +
+. Once you find out the host's identity, and what services are available, interact with those services!
+.  Clear your browser cache and teardown your connections.
 
 == Deliverables
-[square]
+
 * Screenshots showing your commands and access into the target topology
 * A list of the services that you interacted with
 * An explanation of the commands/process you used to reach the targets and their services.
-{empty} +
 
 == Hints
 
-* Not Applicable
-
-{empty} +
+*  Use wget or browse to the localhost:[port] in your web browser
 
 == Challenge
 
-* Not Applicable
-
-{empty} +
+* N/A
 
 == Useful Resources
 

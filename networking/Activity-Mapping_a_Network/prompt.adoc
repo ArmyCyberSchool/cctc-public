@@ -2,20 +2,15 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Mapping a Network
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 3: Perform network discovery
-* Objective 3.1- Analyze router configurations and create a network map
+== Learning Objectives
+
+* CCNE003 - Perform network discovery
+** CCNE003.001 - Analyze router configurations and create a network map
 
 == Scenario
 
-You have been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance. In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
+* You have been tasked with assisting in a network security audit for several interconnected, local, municipal facilities. Your team has been provided with a router configuration file obtained from an improperly secured FTP server during reconnaissance. In addition to starting your network diagram, you should look at the configurations critically, noting any possible security vulnerabilities.
 
 ----
 GROVETOWN_PD#show run
@@ -199,33 +194,32 @@ end
 
 ----
 
-== Activity
+=== Task 1)
 
-=== Task 1) 
-You will start your network infrastructure discovery by analyzing the configuration file and documenting any information about the network device/network segment. Besides from providing a basis for your network topology map, you should also compile a list of security vulnerabilities that can be used to access or exploit the device.
-
-{empty} +
+* You will start your network infrastructure discovery by analyzing the configuration file and documenting any information about the network device/network segment. Besides from providing a basis for your network topology map, you should also compile a list of security vulnerabilities that can be used to access or exploit the device.
 
 === Task 2)
-You have obtained some PCAPs that were captured from the network where the target router was operating. Using the information you see in the PCAPs, draw out your network map to include any other devices or routes you think are present.
 
-You can download the PCAPS here:
-
-{empty} +
-
-https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap1.pcap
-
-{empty} +
-
-https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap2.pcap
-
-{empty} +
-
-https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap3.pcap
+* You have obtained some PCAPs that were captured from the network where the target router was operating. Using the information you see in the PCAPs, draw out your network map to include any other devices or routes you think are present.
+* You can download the PCAPS here:
+** https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap1.pcap
+** https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap2.pcap
+** https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Mapping_a_Network/cap3.pcap
 
 == Deliverables
-[square]
+
 * A powerpoint or similar graphic representation of the network with appropriate labels for significant information
 * A list of at least (7) vulnerabilities noted for the device analyzed
 * Recommendations to mitigate the listed vulnerabilities (commands would be helpful where applicable)
 
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A

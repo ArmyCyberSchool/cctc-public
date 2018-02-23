@@ -2,66 +2,53 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Raw Socket Programming
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
-[square]
-* Skill 1: Identify Networking Fundamentals
-* Objective 1.1 Understanding the OSI model and Basic Networking
-* Objective 1.3 Explain the difference between user space/kernel space sockets
-* Objective 1.4 Tool and OS feature operations
-* SKILL 2: Identify the sections of common packet headers
-* Objective 2.2 Describe IPv4 and IPv6 packet structures
+== Learning Objectives
 
+* CCNE001 - Identify Networking Fundamentals
+** CCNE001.001 - Understanding the OSI model and Basic Networking
+** CCNE001.003 - Explain the difference between user space/kernel space sockets
+** CCNE001.004 - Tool and OS feature operations
+* CCNE002 - Identify the sections of common packet headers
+** CCNE002.002 - Describe IPv4 and IPv6 packet structures
 
-{empty} +
+== Learning Outcomes
+
+* N/A
 
 == Scenario
 
-.You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
-.Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
-{empty} +
+* You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
+* Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
 
-== Activity
+=== Task 1)
 
-=== Task 1) 
-*Information gathering*
+* *Information gathering*
 
-1) First you will need to collect the information you will need in order to create a packet. The IP Header field info will need to be in decimal format; ensure you understand what should be represented within each field from a binary perspective, then convert this information to decimal.
+. First you will need to collect the information you will need in order to create a packet. The IP Header field info will need to be in decimal format; ensure you understand what should be represented within each field from a binary perspective, then convert this information to decimal.
+. Next you should have the IP Header field size that will contain the information. You will need this in order to properly store the variables assigned with the values identified in step 1 into a structure.
+. Lastly, get information about the python modules you are going to use. You know you will use socket and sys, as well as struct. You should also try to find a module you can use to help encode the information to obfuscate it. The following are references for the socket and sys modules: 
 
-2) Next you should have the IP Header field size that will contain the information. You will need this in order to properly store the variables assigned with the values identified in step 1 into a structure.
-
-3) Lastly, get information about the python modules you are going to use. You know you will use socket and sys, as well as struct. You should also try to find a module you can use to help encode the information to obfuscate it. The following are references for the socket and sys modules: 
-
-* https://docs.python.org/2/library/socket.html
-
-* https://docs.python.org/2/library/sys.html
-
-* https://docs.python.org/2/library/struct.html
-
-* https://docs.python.org/2/tutorial/errors.html
-
-{empty} +
+** https://docs.python.org/2/library/socket.html
+** https://docs.python.org/2/library/sys.html
+** https://docs.python.org/2/library/struct.html
+** https://docs.python.org/2/tutorial/errors.html
 
 === Task 2)
-*Start your script*
 
-1) Create a script and start by importing the appropriate modules. Replace the ???? in the snippet with a module of our choice to use for encoding/obfuscating your message.
+* *Start your script*
 
+. Create a script and start by importing the appropriate modules. Replace the ???? in the snippet with a module of our choice to use for encoding/obfuscating your message.
++
 ----
 import socket, sys, ????
 from struct import *
 ----
-
-2) Start the program by using the socket module reference to create a raw socket; you can reference the errors module for error handleing if desired:
-
-
-* The below snippet is an example of how to so this can be done. The snippet is not functional however; the CAPITALIZED items would need to be filled out appropriately. Reference the socket module to figure out what these values should be (check out the examples at the bottom, they are very helpful!).
-
++
+. Start the program by using the socket module reference to create a raw socket; you can reference the errors module for error handleing if desired:
++
+** The below snippet is an example of how to so this can be done. The snippet is not functional however; the CAPITALIZED items would need to be filled out appropriately. Reference the socket module to figure out what these values should be (check out the examples at the bottom, they are very helpful!).
++
 ----
 try:
     s = socket.FUNCTION(socket.FAMILY, socket.TYPE, socket.PROTOCOL)
@@ -69,13 +56,12 @@ except socket.error as msg:
     print 'Socket creation failed!. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
     sys.exit()
 ----
-
-3) Next you will need to create a packet with an IP header and a message. This will require a number of variables. You can use the following, or create your own list, as long as it can be arranged into a structure appropriately. See the struct module refernce on how to pack data into structures:
-
-_Ensure you use "network" or big-endian for your byte order._
-
-* The snippet below is not funtional, but demonstrates how to initiate the packet, set data into the IP header fields, and shows an incomplete line for using the pack function.
-
++
+. Next you will need to create a packet with an IP header and a message. This will require a number of variables. You can use the following, or create your own list, as long as it can be arranged into a structure appropriately. See the struct module refernce on how to pack data into structures:
++
+** _Ensure you use "network" or big-endian for your byte order._
+** The snippet below is not funtional, but demonstrates how to initiate the packet, set data into the IP header fields, and shows an incomplete line for using the pack function.
++
 ----
 packet = '';
 
@@ -87,47 +73,47 @@ ip_ver_ihl = ?
 # Pack the fields into a structure
 ip_header = pack('!????????????' , ip_ver_ihl, header-field, header-field, header-field...)
 ----
-
-4) You will need to create user data to insert into the packet (after the IP header) as well. This data will need to be encoded. You can use a module of your choice to achieve this, however a good place to start maybe the binascii module.
-
-5) The last part of the script will be creating your packet and sending your packet using the raw socket you have created.
-
-* The snippet below is not funtional, but demonstrates how to assemble the packet and send it.
-
++
+. You will need to create user data to insert into the packet (after the IP header) as well. This data will need to be encoded. You can use a module of your choice to achieve this, however a good place to start maybe the binascii module.
+. The last part of the script will be creating your packet and sending your packet using the raw socket you have created.
++
+** The snippet below is not funtional, but demonstrates how to assemble the packet and send it.
++
 ----
 packet = ip_header + user_data_variable
  
 s.FUNCTION(packet, (dest_ip , 0 ))
 ----
 
-{empty} +
-
 === Task 3)
-*Send your packet*
 
-1) You should have wireshark running when you send the packet so that you can verify that work script works.
+* *Send your packet*
 
-{empty} +
+. You should have wireshark running when you send the packet so that you can verify that work script works.
 
 === Task 4)
-*Check your results*
 
-1) You can retrieve a shell example of a script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
+* *Check your results*
 
-2) Fill in all the areas with “?”. Read the Comments carefully!
-
-3) After you have made your changes to the script, ensure you have  permission to execute it. Bring up wireshark to view the packet and execute the script. You can use "python RAWSOCK.py" to execute.
-
-4) Were the results comparable to the script you created in Task 1-3?  If not, what was different?  
-
-{empty} +
+. You can retrieve a shell example of a script at: https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/RAWSOCK.py
+. Fill in all the areas with “?”. Read the Comments carefully!
+. After you have made your changes to the script, ensure you have  permission to execute it. Bring up wireshark to view the packet and execute the script. You can use "python RAWSOCK.py" to execute.
+. Were the results comparable to the script you created in Task 1-3?  If not, what was different?  
 
 == Deliverables
-[square]
 
 * Document your steps to fill in the script.
 * Screenshot showing successful communications between your Linux client and the message target at 10.1.0.1.
 * Screenshot showing how (and validating) that the message was somehow obfuscated for transmission.
 
-{empty} + 
+== Hints
 
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
