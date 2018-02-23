@@ -2,51 +2,36 @@
 :stylesheet: ../../cctc.css
 
 = Activity - IPTables for NATing
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-== Learning Objectives / Outcomes
+== Learning Objectives
 
-* CCNE007.013 Construct IPTable rules
-
-* CCNE007.015 Explain the functionality of NAT within iptables
-
-{empty} +
+* CCNE007.013 - Construct IPTable rules
+* CCNE007.015 - Explain the functionality of NAT within iptables
 
 == Scenario
 
-Windows clients in the topology are not allowed to directly visit the 10.2.0.0 subnet. This would prevent H2 from accessing H3's webpage. H1 is allowed to access the website since it is a Linux Host; you have access to the H1 client in order to use NAT/port forwarding to allow Windows clients (H2) to access the site on H3 via H1. The intent is that traffic leaving your H2 client will be pointed to H1, but will actually be NATed and forwarded to the webpage on H3.
+* Windows clients in the topology are not allowed to directly visit the 10.2.0.0 subnet. This would prevent H2 from accessing H3's webpage. H1 is allowed to access the website since it is a Linux Host; you have access to the H1 client in order to use NAT/port forwarding to allow Windows clients (H2) to access the site on H3 via H1. The intent is that traffic leaving your H2 client will be pointed to H1, but will actually be NATed and forwarded to the webpage on H3.
+* *BEFORE YOU BEGIN*, you must ensure ip forwarding is enabled on H1. This is a feature which is disabled by default, but it order to NAT through H1, th client needs to be able to receive a packet in eth1 and then forward it back out eth1 toward it's destination. The feature for enabling forwarding is within the "/proc/sys/net/ipv4/ip_forward" file. The value of "0" indicates forwarding is disabled. You will need to change this value to 1.
+* Additionally, you should create a rule on H3 to Drop all traffic sourced from H2. This will help you to verify your results.
 
-{empty} +
+=== Task 1)
 
-== Activity
+. Use iptables to setup rules to forward traffic that reaches H1's port 80 and redirects it to H3's port 80.
+. Test to ensure this is working by trying to browse to H3's website from the H2, Windows client
 
+== Deliverables
 
-BEFORE YOU BEGIN, you must ensure ip forwarding is enabled on H1. This is a feature which is disabled by default, but it order to NAT through H1, th client needs to be able to receive a packet in eth1 and then forward it back out eth1 toward it's destination. The feature for enabling forwarding is within the "/proc/sys/net/ipv4/ip_forward" file. The value of "0" indicates forwarding is disabled. You will need to change this value to 1.
-
-Additionally, you should create a rule on H3 to Drop all traffic sourced from H2. This will help you to verify your results.
-
-
-Task 1:
-
-1. Use iptables to setup rules to forward traffic that reaches H1's port 80 and redirects it to H3's port 80.
-
-2. Test to ensure this is working by trying to browse to H3's website from the H2, Windows client
-
-{empty} +
+* N/A
 
 == Hints
 
 * You will need a prerouting entry and a postrouting entry. For simplicity in postrouting, you can use "-j MASQUERADE". This is used for Dynamic source NATing, and will EASILY allow H1 to relay the returned traffic from H3, back to the requesting client (H2).
 
-{empty} +
+== Challenge
 
+* N/A
 
 == Useful Resources
 
 * http://ipset.netfilter.org/iptables.man.html
-
 * http://ipset.netfilter.org/iptables-extensions.man.html
