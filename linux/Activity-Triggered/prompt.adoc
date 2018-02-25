@@ -2,40 +2,25 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Triggered
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
-
-{empty} +
 
 == Learning Objectives
 
-[square]
 * CCNI006  - Identify Linux processes
 ** CCNI006.003  - Employ commands to enumerate processes
 ** CCNI006.004  - Explain the functionality of daemons
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Confidence using Linux scheduled tasks (cronjobs)
 * Familiarity with Linux Daemon startup & functionality
 * Familiarity with Bash conditional operations
 * Confidence writing Bash scripts to achieve specific objectives
 
-{empty} +
-
 == Scenario
 
-A new denial of service, zero day, that remotely disables the SSH service, is being used against your publicly exposed server. 
+* A new denial of service, zero day, that remotely disables the SSH service, is being used against your publicly exposed server. 
 
-{empty} +
-
-== Activity
+=== Task 1)
 
 * Write a script that monitor the state of the SSH service:
 ** have your script:
@@ -43,25 +28,34 @@ A new denial of service, zero day, that remotely disables the SSH service, is be
 *** automatically re-enable the SSH service if it's disabled
 *** the SSH service should never be down for more than one minute
 *** if the service is enabled, the script wait "x" seconds and check the service status again
+
+=== Task 2)
+
 * For additional functionality:
 ** orphan the monitoring process so that, once launched, the script continues to run if you close the terminal
+
+=== Task 3)
+
 * Test your script on your system to ensure it is properly running:
 ** launch the monitoring script
 ** disable the SSH service
-** verify that the script automatically re-enables the service.
-
-{empty} +
+** verify that the script automatically re-enables the service
 
 image::../Resources/triggered.png[auto_triggered,height="300",width="500",float="left"]
 
-{empty} +
-
 == Deliverables
 
-[square]
-* The script that monitors for the SSH service and relaunches the service as necessary.
+* The script that monitors for the SSH service and relaunches the service as necessary
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://crontab.guru/ +
-https://bscb.cornell.edu/about/resources/linux-cron-and-crontab +
+* https://crontab.guru/
+* https://bscb.cornell.edu/about/resources/linux-cron-and-crontab

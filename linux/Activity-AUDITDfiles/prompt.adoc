@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - AUDITDFiles
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/auditd.png[auditd]
 
@@ -20,17 +15,14 @@ image::../Resources/auditd.png[auditd]
 ** CCNI010.001   - Describe the actions that contribute to entries in log files
 ** CCNI010.002   - Analyze log files for anomalous activity
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with auditd tool set, and it's functionality
 * Understand inode table structure & functionality
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
 === Task 1)
 
@@ -45,24 +37,23 @@ image::../Resources/auditd.png[auditd]
 ** set a password for `cctc_auser`.
 
 === Task 2)
-* Regain access to the audits you set up earlier in the exercise and review what traffic they captured manually using color grep , and using `ausearch` tool.
 
-{empty} +
+* Regain access to the audits you set up earlier in the exercise and review what traffic they captured manually using color grep , and using `ausearch` tool.
 
 == Deliverables
 
 * Your script 
-
-{empty} +
 
 == Hints
 
 * Do you need to login as a different user to generate the audit logs?
 * `$ sudo apt-get install -y auditd multitail`
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing +
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sec-defining_audit_rules_and_controls +
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sec-defining_audit_rules_and_controls

@@ -1,48 +1,44 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-image::../Resources/brute.png[HYDRA,height="150",width="350",float="left"]
+= Activity - Brute Force
 
-= Activity - Service Brute Force
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+image::../Resources/brute.png[HYDRA,height="150",width="350",float="left"]
 
 == Learning Objectives
 
 * CCNI013       - Explore Linux Exploitation tools
 ** CCNI013.003   - Define credentials
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with "common creds" service attacks
 * Usage of Hydra to defeat IDS/IPS detection
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
+
+=== Task 1)
 
 * Using what you've learned about Hydra, attempt to brute force the SMB service password:
 ** create a colon delimited username:password file, or seperate user and password lists, to be used with Hydra.
 ** check the SMB service status on the target system using Netcat, Nmap, Metasploit, etc.; verify SMB is listening.
 ** begin brute force attack...reveal additional services vulnerable to common-cred attacks
 
-{empty} +
+== Deliverables
 
-== Challenge:
+* N/A
 
-Try "acunetix acuforum": https://automatetheplanet.com/thc-hydra-password-cracking-by-examples/ +
+== Hints
 
-Tip: Right-Click in FireFox and select 'Inspect Element' +
+* Right-Click in FireFox and select 'Inspect Element'
 
-{empty} +
+== Challenge
+
+* Try "acunetix acuforum": https://automatetheplanet.com/thc-hydra-password-cracking-by-examples/
 
 == Useful Resource: 
 
-http://tools.kali.org/password-attacks/hydra +
-https://github.com/vanhauser-thc/thc-hydra/blob/master/README +
+* http://tools.kali.org/password-attacks/hydra
+* https://github.com/vanhauser-thc/thc-hydra/blob/master/README

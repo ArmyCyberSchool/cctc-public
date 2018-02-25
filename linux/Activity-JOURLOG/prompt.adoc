@@ -1,14 +1,9 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-//image::../Resources/journalctl.png[JOURLOG,height="500",width="850",float="left"]
-
 = Activity - JOURLOG
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+
+//image::../Resources/journalctl.png[JOURLOG,height="500",width="850",float="left"]
 
 == Learning Objectives
 
@@ -19,20 +14,18 @@
 ** CCNI010.001 Describe the actions that contribute to entries in log files
 ** CCNI010.002 Analyze log files for anomalous activity
 
-{empty} +
 
-== Outcomes
+== Learninig Outcomes
 
-[square]
 * Understanding capabilities of systemd journalctl tool
 * Deployment of journalctl in a Linux infrastructure
 
-{empty} +
+== Scenario
 
-== Activity
+* Requirements: linux system with systemd installed
+* check: `ls -al /sbin/init` +
 
-Requirements: linux system with systemd installed +
-check: `ls -al /sbin/init` +
+=== Task 1)
 
 * Write a script that utilizes journalctl to evaluate kernel messages .. Have your script:
 ** dump kernel error and warning messages only, at 30 second intervals.
@@ -42,22 +35,21 @@ check: `ls -al /sbin/init` +
 ** display the last 15 log entries associated with your UID that generated in the last hour.
 ** in addition to displaying the results to screen, have them also output to a file in `/usr/share/cctc`
 
-{empty} +
-
 == Deliverables
 
 * your script
 * a file in `/usr/share/cctc` containing all of the results
 
-{empty} +
 
-== Hint
+== Hints
 
 * `man tee | grep -A1 DESCRIPTION`
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-using_the_journal +
-https://www.loggly.com/ultimate-guide/using-journalctl/ +
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-using_the_journal
+* https://www.loggly.com/ultimate-guide/using-journalctl/

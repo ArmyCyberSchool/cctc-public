@@ -2,15 +2,8 @@
 :stylesheet: ../../cctc.css
 
 = Activity - Orphaned Zombies
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/orphaned_zombies.png[oz,height="250",width="650",float="left"]
-
-{empty} +
 
 == Learning Objectives
 
@@ -23,26 +16,18 @@ image::../Resources/orphaned_zombies.png[oz,height="250",width="650",float="left
 ** CCNI007.002   - Explain variables and variable manipulation
 ** CCNI007.003   - Employ commands for string manipulation
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with linux processes and process management
 * Familiarity with ps binary
 * Confidence spawning and manipulating processes 
 
-{empty} +
-
 == Scenario
 
-You need to create some abnormal process behavior on a target system to consume resources and alert admins of "suspicious" activity.
+* You need to create some abnormal process behavior on a target system to consume resources and alert admins of "suspicious" activity.
 
-{empty} + 
+=== Task 1)
 
-== Activity
-
-[square]
 * Three Orphaned Zombies:
 ** Write a script that creates three zombie / defunct processes that are orphaned.
 ** Your orphaned zombies should only exist temporarily for 30 seconds and should automatically resove themselves after that time period.
@@ -50,22 +35,14 @@ You need to create some abnormal process behavior on a target system to consume 
 ** Identify the orphaned zombies in a process list output.
 * What is the danger of having many zombie processes running at one time?
 
-{empty} +
-
 == Deliverables
 
-[square]
-* Your script that creates the three orphanded zombies.
-
-{empty} +
+* Your script that creates the three orphanded zombies
 
 == Hints
 
-Zombie:
-`sleep 1 & exec sleep 60`
-
-Orphan:
-`(sleep 60 &)`
+* Zombie: `sleep 1 & exec sleep 60`
+* Orphan: `(sleep 60 &)`
 
 ----
 if [ $(ps -AL --no-headers | wc -l) -ge $(( $(cat /proc/sys/kernel/pid_max) - 100 )) ]
@@ -76,8 +53,10 @@ else
 fi
 ----
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://www.gmarik.info/blog/2012/orphan-vs-zombie-vs-daemon-processes/ +
+* https://www.gmarik.info/blog/2012/orphan-vs-zombie-vs-daemon-processes/

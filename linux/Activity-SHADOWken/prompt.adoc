@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - SHADOWken
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left"]
 
@@ -16,8 +11,6 @@ image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left
 ** CCNI003.002 - Describe file system ownership properties
 ** CCNI003.003 - Discuss file system permissions
 
-{empty} +
-
 == Learning Outcomes
 
 [square]
@@ -26,19 +19,12 @@ image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left
 * Understand group membership and its effects on file access
 * Confidence querying and editing password attributes for groups and users
 
-{empty} +
-
 == Scenario
 
-You have gained limited privileged access to a system whose authentication security protocol was easily bypassed.
-
-{empty} +
-
-== Activity
+* You have gained limited privileged access to a system whose authentication security protocol was easily bypassed.
 
 === Task 1)
 
-[square]
 * Escalate your priveleges and display the system's shadowed user passwords
 ** Copy your `/etc/{passwd,group,shadow}` files to a backup directory.
 ** As a user in the sudoers group, add a user 'ken' to the system
@@ -55,7 +41,6 @@ You have gained limited privileged access to a system whose authentication secur
 
 === Task 2)
 
-[square]
 * Switch to the new user 'ken'
 * Type `id`
 * Are you in the root GID?
@@ -67,23 +52,25 @@ You have gained limited privileged access to a system whose authentication secur
 
 === Task 3)
 
-[square]
 * Type `exit` to switch back to your sudoer user account
 * Using a text editor, add user 'ken' to the group with write access to the `/etc/shadow` file
 * switch back to user 'ken'
 * Type `cat /etc/shadow`
 * Were you able to open the file this time?
 
-{empty} +
-
 == Deliverables
 
-[square]
 * Verification of ken’s ability to read `/etc/shadow`
 * Correct contents of `/etc/shadow`
 
-{empty} +
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-https://www.cyberciti.biz/faq/understanding-etcshadow-file/
+* https://www.cyberciti.biz/faq/understanding-etcshadow-file/

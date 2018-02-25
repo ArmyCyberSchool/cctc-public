@@ -1,12 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Challenge - Regular Expressions 2
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
+= Activity - Regular Expressions 2
 
 image::../Resources/regex2.png[regex2,height="150",width="350",float="left"]
 
@@ -16,36 +11,35 @@ image::../Resources/regex2.png[regex2,height="150",width="350",float="left"]
 * CCNI003.008 - Create regular expressions to find data within in the file system
 * CCNI003.009 - Identify the information that a regular expression will return
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with regular expressions, their syntax, and their application
 * Confidence generating simple regular expressions to match specific patterns
 
-{empty} +
-
-== Activity
+== Scenario
 
 * Access the Interactive Challenge known as REGEX Crossword at: https://regexcrossword.com/
-** Complete all 5 beginner challenges
-** Complete all 5 intermediate challenges
 
-{empty} +
+=== Task 1)
+
+* Complete all 5 beginner challenges
+
+=== Task 2)
+
+* Complete all 5 intermediate challenges
 
 == Deliverables
 
 * Screenshot of each completed crossword
 
-{empty} +
+== Hints
+
+* N/A
 
 == Challenge
 
 * Tackle the EXPERIENCED challenges
 
-{empty} +
-
 == Useful Resources
 
-https://regexr.com/ +
+* https://regexr.com/

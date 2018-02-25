@@ -1,39 +1,26 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-
-
 = Activity - Regular Expressions 1
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
-{empty} +
-
-== Learning Objectives / Outcomes
+== Learning Objectives
 
 * CCNI003 -  Analyze the Linux file system
 ** CCNI003.007 - Describe regular expressions
 ** CCNI003.008 - Create regular expressions to find data within in the file system
 ** CCNI003.009 - Identify the information that a regular expression will return
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with regular expressions, their syntax and, their application
 * Confidence generating simple regular expressions to match specific patterns
 
-{empty} +
+== Scenario
 
-== Activity
+* Access RegexOne REGEX interactive tutorial at the following location: https://regexone.com/
 
-Access RegexOne REGEX interactive tutorial at the following location: https://regexone.com/
+=== Task 1)
 
-[square]
 * Complete REGEX Lessons 1-15
 * Complete REGEX Problems 1-8
 * Identify a complete solution to all problems
@@ -41,20 +28,18 @@ Access RegexOne REGEX interactive tutorial at the following location: https://re
 
 image::../Resources/regex1.png[regex1,height="200",width="750",float="left"]
 
-{empty} +
-
 == Deliverables
 
 * List of regular expressions used to solve each lesson and problem
 
-{empty} +
+== Hints
+
+* N/A
 
 == Challenge
 
-Lesson X and Problem X
-
-{empty} +
+* Lesson X and Problem X
 
 == Useful Resources
 
-https://regexr.com/ +
+* https://regexr.com/

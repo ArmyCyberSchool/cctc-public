@@ -2,11 +2,6 @@
 :stylesheet: ../../cctc.css
 
 = Activity - LEMARCHAND
-:doctype: book
-:source-highlighter: coderay
-:listing-caption: Listing
-// Uncomment next line to set page size (default is Letter)
-//:pdf-page-size: A4
 
 image::../Resources/puzzle.png[lemarchand,height="350",width="650",float="left"]
 
@@ -20,38 +15,33 @@ image::../Resources/puzzle.png[lemarchand,height="350",width="650",float="left"]
 ** CCNI007.002   - Explain variables and variable manipulation
 ** CCNI007.003   - Employ commands for string manipulation
 
-{empty} +
-
 == Learning Outcomes
 
-[square]
 * Familiarity with BASH conditionals
 * Conditionals with magic numbers and file types
 
-{empty} +
+== Scenario
 
-== Activity
+* N/A
 
-[square]
-Write a script that will iteratively uncompress the file by type, until you reach the final file that contains the FLAG within
+=== Task 1)
 
+* Write a script that will iteratively uncompress the file by type, until you reach the final file that contains the FLAG within
 * Compressed file location: /usr/share/cctc/MYSTERIOUS_FILE
-
-{empty} +
 
 == Deliverables
 
-* Your script 
-
-{empty} +
+* Your script
 
 == Hints
 
 * while, for, if, elif, file
 
-{empty} +
+== Challenge
+
+* N/A
 
 == Useful Resources
 
-http://tldp.org/LDP/Bash-Beginners-Guide/html/chap_07.html +
-http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html +
+* http://tldp.org/LDP/Bash-Beginners-Guide/html/chap_07.html
+* http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
