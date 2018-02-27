@@ -119,14 +119,14 @@
 					<p align="left"><font size="4">Netcat: Client to Listener file transfer</font></p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Client.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
 					<p align="left"><font size="5">Client(sends file): nc 10.0.0.2 9001 &lt; file.txt</font></p>
-					<p align="left"><font size="5">Listener (receive file): nc-l -p 9001 &gt; newfile.txt</font></p>
+					<p align="left"><font size="5">Listener (receive file): nc -l -p 9001 &gt; newfile.txt</font></p>
 				</section>
 
 					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Netcat</h4>	
 					<p align="left"><font size="4">Netcat: Listener to Client file transfer</font></p>
 					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/NC_Listen.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
-					<p align="left"><font size="5">Listener(sends file): nc-l -p 9001 &lt; file.txt</font></p>
+					<p align="left"><font size="5">Listener(sends file): nc -l -p 9001 &lt; file.txt</font></p>
 					<p align="left"><font size="5">Client (receive file): nc 10.0.0.2 9001 &gt; newfile.txt</font></p>
 				</section>
 				
@@ -141,9 +141,9 @@
 					mknod mypipe p <br>
 					nc 10.0.0.3 9002 0 &lt;  mypipe | nc 10.0.0.1. 9001 | tee mypipe<br>
 					</font></p>
-					<p>Listener2 (sends info): nc -l -p 9002 &lt; infile.txt <br>
-					Listener1 (recieves info): nc -l -p 9001 &gt; outfile.txt</p>
-				    <p>Writes the output both to the screen (stdout) and to the named pipe (mypipe)</p>
+					<p align="left"><font size="4">Listener2 (sends info): nc -l -p 9002 &lt; infile.txt <br>
+					Listener1 (recieves info): nc -l -p 9001 &gt; outfile.txt</font></p>
+				    <p align="left"><font size="5">Writes the output both to the screen (stdout) and to the named pipe (mypipe)</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
