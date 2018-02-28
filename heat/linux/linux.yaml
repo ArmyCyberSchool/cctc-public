@@ -1,6 +1,6 @@
 heat_template_version: 2017-02-24
 
-description: Heat Template for Linux module of class - Debian 16.04 , Ubuntu 16.04 & Windows 7
+description: Heat Template for Linux module of class - Debian Jessie , Ubuntu 16.04 & Windows 7
 
 parameters:
 
