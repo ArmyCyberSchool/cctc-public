@@ -70,6 +70,13 @@
 </ul>
 </div></div></section>
 
+                <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Sniffing Basics</h4>
+					<p align="left">- Software vs. Hardware Sniffing</p>
+					<p align="left">- Mirrored port vs. Tap</p>
+					<p align="left">- NIC modes (Promiscuous or not)</p>
+				</section>
+
 <section data-id="23754f220beff69a22129caff30d7628"><div class="sl-block" data-block-type="text" style="width: 847px; left: 99px; top: 101px; height: auto;" data-block-id="7207b44bd8c5d8e3610efe55750d8ff1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
 </div></div>
 <div class="sl-block" data-block-type="image" style="width: 959px; height: 70px; left: 0px; top: 0px;" data-block-id="bc3775088d6bb274fbbba1210cadaeea"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png"></div></div>
@@ -177,6 +184,14 @@
 <div class="sl-block" data-block-type="text" style="width: 847px; left: 80px; top: 16px; height: auto;" data-block-id="c2c79538a2dd57d3fa6567e912e0e5d6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15;">
 <p><strong>Outcomes</strong></p>
 </div></div></section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Why Filter?</h4>
+					<p align="left">- Reduce Resource consumption (CPU or Storage)</p>
+					<p align="left">- Limit scope of catured traffic</p>
+					<p align="left">- Target traffic capture down to the bit!</p>
+				</section>
+
 <section data-id="8bcfbcf62b2fe58d013248597a0bd100"><div class="sl-block" data-block-type="text" style="width: 847px; left: 48px; top: 42px; height: auto;" data-block-id="f0c89ffdeba6476e1fe35575b3375312"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
 <p><strong>Berkley Packet Filters</strong></p>
 
@@ -185,6 +200,8 @@
 <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 817px; left: 48px; top: 173px;" data-block-id="087662430ceeeca62035dedbe357ac92"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
 <ul>
 	<li style="text-align: left;"><span style="color:#000000">BPF allows a user-space program (like TCPDump or IPTables) to attach a custom filter onto any socket</span></li>
+	<li style="text-align: left;"><span style="color:#000000">Programs like TCPDump can use built-in'Primitives', like 'net', 'port'  etc and qualifiers like 'src' or 'dst' (Wireshark has it's own set of 'expressions' for this same purpose)</span></li>
+	<li style="text-align: left;"><span style="color:#000000">Primitives are user-friendly shortcuts to BPF, but they can't target traffic as granularlly as a pure BPF</span></li>
 </ul>
 
 <p style="text-align:left"> </p>
