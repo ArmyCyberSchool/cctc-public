@@ -223,7 +223,7 @@ resources:
             git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
             /usr/share/Veil/setup/setup.sh -c
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
-            systemctl reboot.target
+            systemctl reboot
           params:
             $user: { get_param: last_name }
             $password: { get_param: password }
@@ -337,7 +337,7 @@ resources:
             git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
             /usr/share/Veil/setup/setup.sh -c
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
-            systemctl reboot.target
+            systemctl reboot
           params:
             $user: { get_param: last_name }
             $password: { get_param: password }
