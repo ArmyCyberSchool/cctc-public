@@ -135,7 +135,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.large
-      image: Windows 10
+      image: Windows 10 - New
       name:
         str_replace:
           template: lastname-Windows-10
