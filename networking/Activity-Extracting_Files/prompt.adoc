@@ -16,8 +16,8 @@
 
 * Wireshark makes exporting objects from some protocols very easy (HTTP for example), however there are no built-in features for exporting many other protocols. Specifically, protocols like FTP must be manually extracted.
 * Download and use the following PCAPs for the activity:
-** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/FTP-file-extract.pcapng
-** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/HTTP-file-extract.pcapng
+** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/PCAPS/FTP-file-extract.pcapng
+** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/PCAPS/HTTP-file-extract.pcapng
 
 === Task 1)
 
