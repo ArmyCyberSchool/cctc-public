@@ -2,6 +2,10 @@ import socket, sys, binascii, ipaddress, subprocess
 from struct import *
 from random import randint
 
+# The following script will send out probes for a "scan". You must ensure you use python3 when running this script as the ipaddress module is not available for python2.x. 
+# The script is only half of a port scanner; it does not capture return traffic and decode the responses.
+
+
 # Get local machine IP
 
 a = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
