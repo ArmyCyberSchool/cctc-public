@@ -79,12 +79,11 @@ for i in ip_net.hosts():
 
 
 # final packet creation
-  packet = ip_header + tcp_header
+    packet = ip_header + tcp_header
 
 #Send the packet
-  s.sendto(packet, (dest_ip , 0 ))
-  print("Packet sent")
-
+    s.sendto(packet, (dest_ip , 0 ))
+    print("Packet sent")
 sys.exit(0)
 
 
