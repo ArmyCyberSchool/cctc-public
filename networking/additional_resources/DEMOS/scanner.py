@@ -51,18 +51,18 @@ for i in range(start, end):
     tcp_seq = randint(0, 1000)
     tcp_ack_seq = 0
     tcp_doff = 5    #4 bit field, size of tcp header, 5 * 4 = 20 bytes
-    if type = 1:
+    if type == 1:
 #NULL SCAN- no tcp flags set
       tcp_flags = 0
-    elif type = 2:
+    elif type == 2:
 #FIN SCAN- no tcp flags set
       tcp_flags = 1
-    elif type = 3:
+    elif type == 3:
 #SYN SCAN
       tcp_flags = 2
 #XMAS TREE SCAN
     tcp_flags = 41
-  elif type = 4:
+  elif type == 4:
 #ACK SCAN
       tcp_flags = 16
   else:
