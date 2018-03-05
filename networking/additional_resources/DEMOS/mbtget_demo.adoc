@@ -1,0 +1,127 @@
+== mbtget Demo
+
+{empty} +
+
+*Learning Objectives / Outcomes*
+
+.SKILL 17: ICS Protocols
+
+** 17.1 Modbus
+
+{empty} +
+
+.SKILL 15: ICS Security Incidents
+
+** 15.2 Discuss ICS vulnerabilities
+
+{empty} +
+
+== Demo Walk-through
+
+{empty} +
+
+_mbtget_ is a user friendly modbus client that can read from and write to Modbus slaves.
+
+{empty} +
+
+In this demonstration, H1 (Debian GUI host) will act as the attacker and client. This is so that we can watch the traffic via wireshark. H3 (Debian CMD Line host) will act as the server.
+
+*Follow the below steps*
+
+
+{empty} +
+
+
+=== mbtget Setup
+
+{empty} +
+
+1) Log into H1. It is best to make yourself root, so you don't have to use sudo to install and use the tool.
+
+2) clone the git: `git clone https://github.com/sourceperl/mbtget.git`
+
+3) cd into mbtget: `cd mbtget`
+
+4) set up the makefile: `perl Makefile.PL`
+
+5) set up the makefile: `make`
+
+6) install mbtget `make install`
+
+{empty} +
+
+=== ModbusPal Setup
+
+{empty} +
+
+
+1) Log into H1. Bring up a shell; it is best to make yourself root, so you don't have to use sudo as you install and run the tools.
+
+2) install and download modbuspal
+
+1) install the java runtime environment: `sudo apt-get install default-jre`
+  
+2) clone MmodbusPal and a prebuild system: `git clone https://github.com/ControlThingsPlatform/modbuspal.git`
+
+3) change directory to the modbuspal directory and run the jar, as super user, (so it can write tcp): `sudo java -jar modbuspal.jar`
+
+4) In the ModbusPal GUI, click the Load button under Project, navigate to the modbuspal directory, and select _VoltageRegulator.xmpp_
+
+5) Under Automation, select the green triangle to start the input generator.  Then click the Run button at top center to start the modbus client on TCP port 502.
+
+6) You should open wireshark and observe the Modbus traffic to and from port 502 on the local host.
+
+{empty} +
+
+=== Using mbtget
+
+{empty} +
+
+1) In a terminal window, type `sudo mbtget -r3 -n 4`
+
+  ** as long as the modbuspal simulation is running, you should get the following output:
+  
+      values:
+      1 (ad 00000): 1XX
+      2 (ad 00001): 120
+      3 (ad 00001): 110
+      4 (ad 00001): 130
+      
+  *** note: the value in ad 00000 could be anywhere between 115 and 125, because of the automation
+
+2) To demonstrate writing to a coil, type `sudo mbtget -w6 150 -a 4`
+
+3) Rerun the reading command: `sudo mbtget -r3 -n 4`
+
+** output:
+
+    `values:`
+    `1 (ad 00000): 1XX`
+    `2 (ad 00001): 120`
+    `3 (ad 00002): 110`
+    `4 (ad 00003): 150`
+    
+4) check the ModbusPal GUI to show the students that register 4 has a value of `150`
+
+
+_There is no authentication or encryption in this protocol, it will accept any valid input!_
+
+{empty} +
+
+=== Using bash commands, ( `echo`, `nc`, and `xxd`) to manipulate modbus
+
+1) To read from the four registers on the modbus slave:
+
+`echo -e "xDE\xAD\x00\x00\x00\x06\x01\x03\x00\x01\x00\x04" | nc 127.0.0.1 502 | xxd`
+
+2) To write to register 2 on the modbus slave:
+
+`echo -e "xDE\xAD\x00\x00\x00\x06\x01\x06\x00\x02\xFF\xFF" | nc 127.0.0.1 502 | xxd`
+
+3) Verify that the register has changed in ModbusPal
+
+*References:*
+
+** https://github.com/ControlThingsPlatform/modbuspal
+** https://github.com/sourceperl/mbtget
+** https://youtu.be/oVDYaG2HInU
