@@ -83,6 +83,7 @@ for i in range(start, end):
 
 #Send the packet
     s.sendto(packet, (dest_ip , 0 ))
+    print (Packet sent)
 
 sys.exit(0)
 
