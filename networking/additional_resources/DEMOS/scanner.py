@@ -60,13 +60,11 @@ for i in range(start, end):
     elif type == 3:
 #SYN SCAN
       tcp_flags = 2
+    elif type == 4:
 #XMAS TREE SCAN
-    tcp_flags = 41
-  elif type == 4:
-#ACK SCAN
-      tcp_flags = 16
-  else:
-    print ("Invalid Scan Choice")
+      tcp_flags = 41
+    else:
+      print ("Invalid Scan Choice")
    
 #Continue with TCP header info
     tcp_window = socket.htons (5840)    #   maximum allowed window size
