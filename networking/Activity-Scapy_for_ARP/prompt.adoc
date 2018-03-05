@@ -26,7 +26,9 @@
 * Before you begin, configure your Linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
 
 * Now to craft your request:
-
+----
+    Type "Scapy" in the terminal of your H1 Linux machine
+----
 * Set your fields  for a and b.
 +
 ----
