@@ -68,7 +68,7 @@ for i in range(start, end):
 #XMAS TREE SCAN
       tcp_flags = 41
     else:
-      print ("Invalid Scan Choice")
+      print("Invalid Scan Choice")
    
 #Continue with TCP header info
     tcp_window = socket.htons (5840)    #   maximum allowed window size
@@ -83,7 +83,7 @@ for i in range(start, end):
 
 #Send the packet
     s.sendto(packet, (dest_ip , 0 ))
-    print (Packet sent)
+    print("Packet sent")
 
 sys.exit(0)
 
