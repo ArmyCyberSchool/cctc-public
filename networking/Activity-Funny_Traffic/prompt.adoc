@@ -16,8 +16,8 @@
 
 * Your team has been conducting traffic analysis for a network which was compromised. The team has asked you to look at (3) samples that stood out as anomalies.
 * You can find the PCAP resources in the networking folder of the resource server at:
-** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/AreyouGettingthis.pcap
-** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/SANTA.pcap
+** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/PCAPS/AreyouGettingthis.pcap
+** https://git.cybbh.space/CCTC/public/raw/master/networking/additional_resources/PCAPS/SANTA.pcap
 
 === Task 1)
 
