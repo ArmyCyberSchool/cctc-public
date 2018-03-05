@@ -9,7 +9,7 @@ from random import randint
 # Get local machine IP
 
 a = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-a.connect(('1.2.3.4', 0))
+a.connect(('10.1.0.1', 0))
 source_ip = a.getsockname()[0]
 b = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_RAW)
 b.bind((source_ip, 1))
