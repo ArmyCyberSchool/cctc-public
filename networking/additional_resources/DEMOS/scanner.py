@@ -29,7 +29,7 @@ end = y + 1
 ip_net = ipaddress.ip_network(net_addr)
 
 # Prompt the user for the type of scan
-type = int(input("Enter type of scan [1:NULL  2:FIN  3:SYN  4:XMAS]-   "))
+scantype = int(input("Enter type of scan [1:NULL  2:FIN  3:SYN  4:XMAS]-   "))
 
 for i in ip_net.hosts():
 
@@ -55,16 +55,16 @@ for i in ip_net.hosts():
     tcp_seq = randint(0, 1000)
     tcp_ack_seq = 0
     tcp_doff = 5    #4 bit field, size of tcp header, 5 * 4 = 20 bytes
-    if type == 1:
+    if scantype == 1:
 #NULL SCAN- no tcp flags set
       tcp_flags = 0
-    elif type == 2:
+    elif scantype == 2:
 #FIN SCAN- no tcp flags set
       tcp_flags = 1
-    elif type == 3:
+    elif scantype == 3:
 #SYN SCAN
       tcp_flags = 2
-    elif type == 4:
+    elif scantype == 4:
 #XMAS TREE SCAN
       tcp_flags = 41
     else:
