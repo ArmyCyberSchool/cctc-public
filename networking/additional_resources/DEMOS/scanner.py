@@ -49,7 +49,7 @@ for i in ip_net.hosts():
 
 #NULL SCAN
 
-for i in range(start, end):
+  for i in range(start, end):
     tcp_source = 65535
     tcp_dest = int(i)   # destination port
     tcp_seq = randint(0, 1000)
