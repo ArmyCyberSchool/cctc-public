@@ -9,7 +9,7 @@
 ** CCNE001.001 - Understanding the OSI model and Basic Networking
 ** CCNE001.003 - Explain the difference between user space/kernel space sockets
 ** CCNE001.004 - Tool and OS feature operations
-* CCNE002 - Identify the sections of common packet headers
+** CCNE002 - Identify the sections of common packet headers
 ** CCNE002.002 - Describe IPv4 and IPv6 packet structures
 
 == Learning Outcomes
@@ -18,16 +18,16 @@
 
 == Scenario
 
-* You have control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
+* You have administrative control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
 * Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
 
 === Task 1)
 
 * *Information gathering*
 
-. First you will need to collect the information you will need in order to create a packet. The IP Header field info will need to be in decimal format; ensure you understand what should be represented within each field from a binary perspective, then convert this information to decimal.
-. Next you should have the IP Header field size that will contain the information. You will need this in order to properly store the variables assigned with the values identified in step 1 into a structure.
-. Lastly, get information about the python modules you are going to use. You know you will use socket and sys, as well as struct. You should also try to find a module you can use to help encode the information to obfuscate it. The following are references for the socket and sys modules: 
+. First, you will need to collect information in order to create the packet. The IP Header field info will need to be in decimal format; ensure you understand what should be represented within each field from a binary perspective, then convert this information to decimal.
+. Next, you should have the IP Header field size that will contain the information. You will need this in order to properly store the variables assigned with the values identified in step 1 into a structure.
+. Lastly, get the information about the python modules you are going to use. You know you will use socket, sys, as well as struct. You should also search for a module you can use to help encode the information for obfuscation. The following links are references for the socket and sys modules: 
 
 ** https://docs.python.org/2/library/socket.html
 ** https://docs.python.org/2/library/sys.html
@@ -38,14 +38,14 @@
 
 * *Start your script*
 
-. Create a script and start by importing the appropriate modules. Replace the ???? in the snippet with a module of our choice to use for encoding/obfuscating your message.
+. Create a script and start by importing the appropriate modules. Replace the ???? in the snippet with a module of your choice to use for encoding/obfuscating your message.
 +
 ----
 import socket, sys, ????
 from struct import *
 ----
 +
-. Start the program by using the socket module reference to create a raw socket; you can reference the errors module for error handleing if desired:
+. Start the program by using the socket module reference to create a raw socket; you can reference the errors module for error handling if desired:
 +
 ** The below snippet is an example of how to so this can be done. The snippet is not functional however; the CAPITALIZED items would need to be filled out appropriately. Reference the socket module to figure out what these values should be (check out the examples at the bottom, they are very helpful!).
 +
