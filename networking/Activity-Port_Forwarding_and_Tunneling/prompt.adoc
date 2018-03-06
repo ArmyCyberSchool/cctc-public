@@ -27,7 +27,7 @@ Student (Terminal Access):studentxx:passwordxx
 
 * Notes:
 ** In place of "xx" use your student number (ex: username: student2 password: password2).
-** When utilizing the "tunnel" user credentials, you must specify a * "-NT" * at the end of your command, otherwise it will not work.
+** When utilizing the "tunnel" user credentials, you must specify a *-NT* at the end of your command, otherwise it will not work.
 
 * Use the SSH tunneling Shared Target for this exercise.  Work from your VTA environment, using your H1 client to SSH into a shared target.  You have credentials for servers in an environment with connectivity to both your host and the target network.  Be aware that some of the servers do not allow interactive login (NT), only tunneling.  Ensure you use the appropriate flags in your commands..
 
