@@ -47,14 +47,14 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 
 image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images/Activity-Port_Forwarding_and_Tunneling/Task2.png[Task2]
 
-. You know that your pivot machine, which you connected through in the previous task, can reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
+. Use the pivot machine you connected through in the previous task to reach another host in the 10.3.0.0/24 network, with an unknown IP. You will need to use netcat to discover open ports and valid IP addresses. Use proxychains to conduct your port scan through the tunnels, but remember it only supports TCP...use the proper flags.
 . You are only concerned with this additional host (for now), which is in the 10.3.0.0/26 range.
-. You are only concerned with finding ssh, telnet, ftp, and http services on hosts for this activity.
+. You are only concerned with the following services ssh, telnet, ftp, and http services on hosts for this activity.
 
 * _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/26 network_
 
-. Once you find out the host's identity, and what services are available, interact with those services!
-.  Clear your browser cache and teardown your connections.
+. Once you find out the identity of the hosts and available services, interact with those services!
+. Clear your browser cache and teardown your connections.
 
 == Deliverables
 
