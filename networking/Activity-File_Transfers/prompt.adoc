@@ -27,11 +27,7 @@
 ** Create "NETCAT3.txt" on the H3 client and write "NETCAT Transfer" into the file.
 ** Use NETCAT to transfer NETCAT3 from H3 to H1. Name the file "NETCAT1.txt" on the H1 side.
 
-=== Task 3)
 
-* You need to send SOCAT1 from H1 > H3 received as SOCAT3
-** Create "SOCAT1.txt" on the H1 client and write "SOCAT Transfer" into the file.
-** Use SOCAT to transfer SOCAT1 from H1 to H3. Name the file "SOCAT3.txt" on the H3 side.
 
 == Deliverables
 
