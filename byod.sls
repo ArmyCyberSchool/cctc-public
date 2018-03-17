@@ -1,6 +1,6 @@
 #!yaml|gpg
 ## Example connection request for ipa user christopher.w.apsey
-##
+## MAC should be in the format xx:xx:xx:xx:xx:xx
 ##
 ##byod:
 ##  christopher.w.apsey:
