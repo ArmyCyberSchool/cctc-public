@@ -39,7 +39,7 @@
 byod:
   nicholas.r.yost:
     mac: |
-	  -----BEGIN PGP MESSAGE-----
+      -----BEGIN PGP MESSAGE-----
 
       hQEMAxjBVwDDewikAQf7BZPwp5LYbNrLgpeQK8TlKDFaQ6oFlMTR1gQpEAx0YV78
       N/kem6blsQ6t5BqLA1I8HbBX93Oj5QQ+VLNw7qklaYIAwmWoFTCFUMLblVd8JJDq
