@@ -51,7 +51,7 @@ byod:
       SA6Vhu2Z+f4tq9XDk8twBlI=
       =8zZg
       -----END PGP MESSAGE-----
-	csr: |
+    csr: |
       -----BEGIN CERTIFICATE REQUEST-----
       MIICXzCCAUcCAQAwGjEYMBYGA1UEAwwPbmljaG9sYXMuci55b3N0MIIBIjANBgkq
       hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8HvvRZKzgZgjliO8m9vHVhV0ZbEyClGt
