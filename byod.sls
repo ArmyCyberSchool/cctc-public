@@ -36,4 +36,36 @@
 ##      msjdqw+mZzenft08+sti9Q==
 ##      -----END CERTIFICATE REQUEST-----
 
-byod:    
+byod:
+  nicholas.r.yost:
+    mac: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMAxjBVwDDewikAQf7BZPwp5LYbNrLgpeQK8TlKDFaQ6oFlMTR1gQpEAx0YV78
+      N/kem6blsQ6t5BqLA1I8HbBX93Oj5QQ+VLNw7qklaYIAwmWoFTCFUMLblVd8JJDq
+      +dpF/1/LPn4cfdjmFlqG0SonjINgNfh4S3zGjXDdrm/mrlR/Bfg95Bt56bO00QAj
+      mQwcfxUJ3IvEp0EMxLIsf+Wo3K7aurnXHPoI2K/Y8zsaV61SCl6gsKWch0IfHqFP
+      bhBeuZb7mT//nG5jeytQA0e5SQl8mPoHlCzoIt0POCZoaCIx0gftZ1xwESSnnlWo
+      pA6Mc2cLh/p5EDulV6Hbz9TUIUNc+Ntu6XwYdN42etJQARmbiUEN+SA1jpn7ZsnM
+      mrmt6sD8i/fDIXmpe4TqB8+SL3mU8P4a0uBitQs1go76zHhya80j9NdTn5zBPQid
+      SA6Vhu2Z+f4tq9XDk8twBlI=
+      =8zZg
+      -----END PGP MESSAGE-----
+    csr: |
+      -----BEGIN CERTIFICATE REQUEST-----
+      MIICXzCCAUcCAQAwGjEYMBYGA1UEAwwPbmljaG9sYXMuci55b3N0MIIBIjANBgkq
+      hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8HvvRZKzgZgjliO8m9vHVhV0ZbEyClGt
+      bEsLIC9F/JLFzs1+QU0NKka6Tw1BmS8UQ5X3v3SXt0aNrUSxXhCerQXJLrS4nJHY
+      5Wk0u/pbTZaLkfFftiY0DN1IlP+3RKq2NxZjHPsU+1pA0PFcP9z3XXc8OmBbYUHl
+      yV2dNs8SDqjulNERtkbLNQEJNZo6KYoYPCNWYvQL3PKIH84BdvSuBp/8cahLoOj9
+      54ub46445K0zYp8iE8QaJJPxGY8wifFB6477BYERHGb2vX5msguJ36kJ5jTvGucV
+      2/mes9O6c7aSTZvRpTQ07y38iy3y8Glfrib+qyUAO2Erv85VZPebSwIDAQABoAAw
+      DQYJKoZIhvcNAQELBQADggEBAJYfM9OhYuKPo5qSQWMu/0sbcolIodS9cdtihBmN
+      AvUbeI1pU/UhRrMIrPU4mjjB5IqMkY1mOkIiS2oXNLrV8nd4K2nYLN5TKdWSxCyU
+      t0T7P9eouHGq4hg4VQvI+VhDE5C0MkIOJZyl36/Q5XV60wqLZ9sSo3nh/xj8OPaA
+      nNiZbhkPDHgK9m72SF4IzTJO7Nqlm6DZb5GZq7v6giKJAmeOkfINKxV7YlnEvWuG
+      y9lKnR18pdf+zMb+E+8Mn1KvqmAACqH9bdsIVhdnL1KPeM4q6S3og/Cv4yufWYXQ
+      rCFYQaPFZHoTNxgpdUCjJTZ52P1wTL4/W0Kgk7MbmyzQxXQ=
+      -----END CERTIFICATE REQUEST-----
+
+
