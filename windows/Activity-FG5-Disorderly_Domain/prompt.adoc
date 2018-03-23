@@ -28,7 +28,7 @@ image:./DD.png["DD",height="200",width="350"]
 
 [square]
 * Add new stack template: +
-`10.50.20.175:8001/heat/DD.yaml`
+`https://git.cybbh.space/CCTC/public/raw/master/windows/Activity-FG5-Disorderly_Domain/Domain.yaml`
 * Download and install Remote Server Administration Tools (RSAT) on your WIN10 system: +
 once logged in to Win10, there will be a desktop shortcut for Win10 RSAT download. 
 
