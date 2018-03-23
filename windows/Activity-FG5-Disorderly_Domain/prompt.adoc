@@ -72,7 +72,7 @@ Do not use any variation of an *_add_* command or *_mod_* command.
 
 == Hints: 
 
-  net use * \\10.<student ID>.0.1\"Warrior Share" /user:army.warriors\Administrator PassWord12345!!
+  net use * "\\10.<student ID>.0.1\Warrior Share" /user:army.warriors\Administrator PassWord12345!!
   dsquery user -name * -limit 0 -s 10.<student ID>.0.1 -u Administrator -p PassWord12345!! | dsget user -samid -tel -dn -s -10.<student ID>.0.1 u Administrator -p PassWord12345!!
   
   # credentials are not persistent through a pipe; must be provided again after a pipe in command line.
