@@ -44,8 +44,8 @@ For this reason, you are not to delete, disable, or otherwise alter any active d
 
 == Activity
 
-Using PowerShell and the Domain Services skills you have learned, achieve the following objectives (be sure to include all findings in your report):
-Do not login directly to the DC, you must use remote commands from the Windows 10 Admin box for the entire Activity.
+* Do not login directly to the DC, you must use remote commands from the Windows 10 Admin box for the entire Activity.
+* Using PowerShell and the Domain Services skills you have learned, achieve the following objectives (be sure to include all findings in your report):
 
 [square]
 * Find and report security violations concerning shared files and folders in the "Warrior Share" drive.
