@@ -1,0 +1,321 @@
+description: Heat Template - Networking - Individual for Students
+heat_template_version: '2017-09-01'
+parameters:
+  last_name:
+    constraints:
+    - description: Last name must be no longer than 15 characters
+      length: {max: 15, min: 1}
+    - {allowed_pattern: '[a-zA-Z]*', description: Last name may only contain letters}
+    default: null
+    description: Last Name
+    label: Last Name
+    type: string
+  password:
+    constraints:
+    - description: Password must be between 8 and 20 characters
+      length: {max: 20, min: 8}
+    - {allowed_pattern: '[a-zA-Z0-9]*', description: Password may not contain special
+        characters}
+    default: password
+    description: Set root/admin password for instances
+    hidden: true
+    label: Password
+    type: string
+resources:
+  
+  secgroup0:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Enable RDP and ICMP
+      name: RDP/ICMP Enable
+      rules: [{"port_range_max":3389,"port_range_min":3389,"protocol":TCP},{"protocol":ICMP}]
+
+  network_0:
+    properties: {admin_state_up: true, name: Net0, shared: false}
+    type: OS::Neutron::Net
+  network_1:
+    properties: {admin_state_up: true, name: Net1, shared: false}
+    type: OS::Neutron::Net
+  network_2:
+    properties: {admin_state_up: true, name: Net2, shared: false}
+    type: OS::Neutron::Net
+  network_3:
+    properties: {admin_state_up: true, name: Net3, shared: false}
+    type: OS::Neutron::Net
+  subnet_0:
+    properties:
+      allocation_pools:
+      - {end: 10.0.0.250, start: 10.0.0.100}
+      cidr: 10.0.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.0.0.254
+      host_routes: []
+      ip_version: 4
+      name: subnet0
+      network_id: {get_resource: network_0}
+    type: OS::Neutron::Subnet
+  subnet_1:
+    properties:
+      allocation_pools:
+      - {end: 10.1.0.250, start: 10.1.0.100}
+      cidr: 10.1.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.1.0.254
+      host_routes:
+      - {destination: 10.1.0.0/24, nexthop: 10.1.0.1}
+      - {destination: 10.2.0.0/24, nexthop: 10.1.0.1}
+      - {destination: 10.3.0.0/24, nexthop: 10.1.0.1}
+      ip_version: 4
+      name: subnet1
+      network_id: {get_resource: network_1}
+    type: OS::Neutron::Subnet
+  subnet_2:
+    properties:
+      allocation_pools:
+      - {end: 10.2.0.250, start: 10.2.0.100}
+      cidr: 10.2.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.2.0.254
+      host_routes:
+      - {destination: 10.1.0.0/24, nexthop: 10.2.0.1}
+      - {destination: 10.2.0.0/24, nexthop: 10.2.0.1}
+      - {destination: 10.3.0.0/24, nexthop: 10.2.0.1}
+      ip_version: 4
+      name: subnet2
+      network_id: {get_resource: network_2}
+    type: OS::Neutron::Subnet
+  subnet_3:
+    properties:
+      allocation_pools:
+      - {end: 10.3.0.250, start: 10.3.0.100}
+      cidr: 10.3.0.0/24
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      gateway_ip: 10.3.0.254
+      host_routes:
+      - {destination: 10.1.0.0/24, nexthop: 10.3.0.1}
+      - {destination: 10.2.0.0/24, nexthop: 10.3.0.1}
+      - {destination: 10.3.0.0/24, nexthop: 10.3.0.1}
+      ip_version: 4
+      name: subnet3
+      network_id: {get_resource: network_3}
+    type: OS::Neutron::Subnet
+
+  external_router:
+    properties:
+      external_gateway_info: {network: public}
+      name: external_router
+    type: OS::Neutron::Router
+  external_router_interface_0:
+    properties:
+      router_id: {get_resource: external_router}
+      subnet_id: {get_resource: subnet_0}
+    type: OS::Neutron::RouterInterface
+  external_router_interface_1:
+    properties:
+      router_id: {get_resource: external_router}
+      subnet_id: {get_resource: subnet_1}
+    type: OS::Neutron::RouterInterface
+  external_router_interface_2:
+    properties:
+      router_id: {get_resource: external_router}
+      subnet_id: {get_resource: subnet_2}
+    type: OS::Neutron::RouterInterface
+  external_router_interface_3:
+    properties:
+      router_id: {get_resource: external_router}
+      subnet_id: {get_resource: subnet_3}
+    type: OS::Neutron::RouterInterface
+  
+  firewall1:
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: CCTC-pfsense
+      name: net-Firewall
+      networks:
+      - port: {get_resource: firewall1_subnet_0_port}
+      - port: {get_resource: firewall1_subnet_1_port}
+      - port: {get_resource: firewall1_subnet_2_port}
+      - port: {get_resource: firewall1_subnet_3_port}
+    type: OS::Nova::Server
+  firewall1_subnet_0_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.0.0.1}
+      network_id: {get_resource: network_0}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+  firewall1_subnet_1_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.1.0.1}
+      network_id: {get_resource: network_1}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+  firewall1_subnet_2_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.2.0.1}
+      network_id: {get_resource: network_2}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+  firewall1_subnet_3_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.3.0.1}
+      network_id: {get_resource: network_3}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+  
+  net1_subnet_1_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.1.0.2}
+      network_id: {get_resource: network_1}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  net1:
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian LXDE
+      name: net1
+      networks:
+      - port: {get_resource: net1_subnet_1_port}
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/net1.sh" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+    type: OS::Nova::Server
+      
+  nix1_net3_subnet_2_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.2.0.2}
+      network_id: {get_resource: network_2}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  nix1_net3:
+    type: OS::Nova::Server
+    properties:
+      name: nix1-net3
+      image: Ubuntu 16.04
+      flavor: cy.medium
+      diskConfig: AUTO
+      networks: 
+        - port: { get_resource: nix1_net3_subnet_2_port }
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/%20nix1_net3.sh" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+  
+  nix2_subnet_2_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.2.0.3}
+      network_id: {get_resource: network_2}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  nix2:
+    type: OS::Nova::Server
+    properties:
+      name: nix2
+      image: Debian LXDE
+      flavor: cy.medium
+      diskConfig: AUTO
+      networks: 
+        - port: { get_resource: nix2_subnet_2_port }
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/nix2.sh" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+  
+  
+  win2_nix3_subnet_2_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.2.0.4}
+      network_id: {get_resource: network_2}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  win2_nix3:
+    type: OS::Nova::Server
+    properties:
+      name: win2-nix3-SAMBA-Target
+      image: Windows 7
+      flavor: cy.large
+      diskConfig: AUTO
+      networks: 
+        - port: { get_resource: win2_nix3_subnet_2_port }
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/win2_nix3.ps1" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+
+  win1_subnet_2_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.2.0.5}
+      network_id: {get_resource: network_2}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+  win1:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.large
+      image: Windows 10
+      name: win1
+      networks:
+        - port: { get_resource: win1_subnet_2_port }
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/win1.ps1" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+  DMZ_subnet_3_port:
+    properties:
+      fixed_ips:
+      - {ip_address: 10.3.0.2}
+      network_id: {get_resource: network_3}
+      port_security_enabled: false
+    type: OS::Neutron::Port
+
+  DMZ:
+    properties:
+      diskConfig: AUTO
+      flavor: cy.medium
+      image: Debian Jessie
+      name: net-DMZ
+      networks:
+      - port: {get_resource: DMZ_subnet_3_port}
+      user_data:
+            str_replace:
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/DMZ.sh" }
+              params: 
+                $user: { get_param: last_name }
+                $password: { get_param: password }
+      user_data_format: RAW
+    type: OS::Nova::Server
