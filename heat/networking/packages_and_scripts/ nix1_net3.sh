@@ -13,9 +13,9 @@ mandb
 mkdir /usr/share/class
 
 # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
-wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.21.12/linux/ -P /usr/share/class/
-wget 10.50.21.12/linux/check.pyc -O /usr/share/misc/check.pyc
-wget 10.50.21.12/linux/banner.sh -O /usr/share/misc/banner.sh
+wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.17/linux/ -P /usr/share/class/
+wget 10.50.20.17/linux/check.pyc -O /usr/share/misc/check.pyc
+wget 10.50.20.17/linux/banner.sh -O /usr/share/misc/banner.sh
 cat > /usr/share/misc/check_script.sh << "__EOF__"
 #!/bin/bash
 /usr/bin/env python /usr/share/misc/check.pyc
