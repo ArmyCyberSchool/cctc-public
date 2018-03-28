@@ -52,23 +52,25 @@
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-                    			<h4>Basic Files Transfer: SCP</h4>
+                    			<h4>Sending Files to Remote using SCP</h4>
 					            <ul>
-					             <li><font size="6">Copying "file1.txt.from the local client to a remote client.</font></li>
+					             <li><font size="6">Copying "file1.txt" from the local client to a remote client.</font></li>
 					            <li><font size="6">Execute From Client</font></li>
-					             <li><font size="6">scp file1.txt username@10.0.0.2:/directory/path</font></li>
-                             </ul>
-                             <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/SCPto.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+					            </ul>
+						<br /><br /><br />
+                             <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/SCPto.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>
+					<p><font size="6"><b>scp file1.txt username@10.0.0.2:/directory/path </b></font></p>
 
                 </section>
                 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-                    			<h4>Basic Files Transfer: SCP</h4>
+                    			<h4>Receiving Files from Remote using SCP</h4>
                     			<ul>
 				            	  <li><font size="6">Copy "file2.txt" from a remote client to the local client </font></li>
 					             <li><font size="6">Execute From Client</font></li>
-					              <li><font size="6">scp username@10.0.0.2:file2.txt/directory/path </font></li>
-				            	</ul>
+					        </ul>
+						<br /><br /><br />					
 				            	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/SCPfrom.png" style="max-height: 50%; max-width: 50%; align: middle;"></center>	
+					<p><font size="6"><b>scp username@10.0.0.2:file2.txt/directory/path </b></font></p>
 
 				</section>
 					
@@ -137,18 +139,19 @@
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Netcat Relays</h4>
-					<p align="left"><font size="4">Client Relay <br>
+					<p align="left"><font size="5"><b>On Client Relay:</b> <br>
 					mknod mypipe p <br>
 					nc 10.0.0.3 9002 0 &lt;  mypipe | nc 10.0.0.1. 9001 | tee mypipe<br>
 					</font></p>
-					<p align="left"><font size="4">Listener2 (sends info): nc -l -p 9002 &lt; infile.txt <br>
-					Listener1 (recieves info): nc -l -p 9001 &gt; outfile.txt</font></p>
+					<p align="left"><font size="5"><b>On Listener2 (sends info): </b><br>
+					nc -l -p 9002 &lt; infile.txt <br /><br />
+					<b>On Listener1 (recieves info): </b><br>
+					nc -l -p 9001 &gt; outfile.txt</font></p>
 				    <p align="left"><font size="5">Writes the output both to the screen (stdout) and to the named pipe (mypipe)</font></p>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>File Trasfer Activity</h4>	
-					<a href="https://git.cybbh.space/CCTC/public/blob/master/networking/Activity-Netcat_Relays/prompt.adoc"> Transfering Files Activity</a>
+					<h4><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Netcat_Relays/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:4"> Netcat Relays Activity</a></h4>						
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
@@ -162,64 +165,64 @@
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Getting Around the Pesky Firewall</h4>
 				    	<p align="left"><font size="4"> Imagine that you are at work, but you wanted to do non-work related activities. Your company firewall prevents you from accessing a website you want to browse to (gambling.com). SSH is allowed from the inside of the network outbound because the IT staff must do remote administration of devices at branch offices.</font></p>
-				 	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/scenario.png" style="max-height: 70%; max-width: 70%; align: middle;"></center>	
+				 	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/scenario.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 				</section>
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Local Port Forwarding</h4>
-				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/localport.png" style="max-height: 70%; max-width: 70%; align: middle;"></center>	
+				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/localport.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
+				<p><b><font size="6">ssh -L 9001:209.0.0.1:80 home@190.10.0.1 -NT </font></b></p>
 				 </section>
 				     
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4> Local Port Forwarding with IPv6</h4>
 				    	<p align="left"><font size="6">- The major difference with IPv6 ssh tunneling is that the colon in the IPv6 address must be understood as part of 
 				    	the address field (not the colon to specify the port info); this is done by enclosing the address in square brackets which must then be escaped with backslashes:</font></p>
-				    	<p align="left"><font size="5"> ssh -L 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1<br>
-					(For link-local address(fe80::0 range) specify the interface following the SSH GWY)</font></p>
+				    	<p align="left"><b><font size="6"> ssh -L 9001:\2001:DEAD:BEEF::1\}80 user@2001:1234:1234::1</font></b><br>
+					<p align="left"><font size="6">(For link-local address(fe80::0 range) specify the interface following the SSH GWY)</font></p>
 				 </section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4> Tunnel within a Tunnel </h4>
 				   	<p align="left"><font size="4"> Someone from the Security team noticed all the SSH traffic destined to your Home SSH Server and blocked it in the firewall. Luckily, they can't block all SSH due to operational requirements; you can just used a different server. However, you don't control this server so you account won't allow you to open a terminal session. Using the "-NT" switches allows you to establish a tunnel, without opening a remote terminal session on the new SSH server. You need to SSH to your home server to SCP some files you need.</font></p>
-				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/tunnel-in-tunnel.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/tunnel-in-tunnel.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h4> Tunnel Inception </h4>
 				   	<p align="left"><font size="4"> Why stop there...lets add another tunnel!</font></p>
-				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/TunnelInception.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/TunnelInception.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 
 				</section>
 				    
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>SSH Tunneling</h4>
 				    	<p align="left"><font size="4">What if access polices prevented you from getting to your Home machine from the first gateway, but you could pivot into a second SSH server, then to the Target? Try two levels of SSH tunneling (Tunnel inception)</font></p>
-				        <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/tunnel-in-tunnel.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
+				        <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/tunnel-in-tunnel.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				   	<h4>Dynamic Port Forwarding</h4>
 				   	<p align="left"><font size="4">Dynamic port forwarding over an SSH tunnel <br>
 					Needs a "wrapper" to specify the endpoint. This can be proxy settings in your browser, or a program like Proxychains (Proxychains uses port 9050 by default but it can be changed/added to in the .conf file) </font></p>
-				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/dynamic.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/dynamic.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				   	<h4>ProxyChains</h4>
 				   	<p align="left"><font size="4">Run TCP/IP based application on your host machine thru proxychains: the SSH forwarding allows you to access MANY (dynamic) target ports</font></p>
-					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/proxychains.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>
+					<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/proxychains.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>
 				</section>
 				
 			    <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Local and Dynamic Port Forwarding Activity</h4>	
-					<a href="https://git.cybbh.space/CCTC/public/blob/master/networking/Activity-Port_Forwarding_and_Tunneling/prompt.adoc"> Port Forwarding</a>
+					<h4><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Port_Forwarding_and_Tunneling/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:4"> Local and Dynamic Port Forwarding Activity</a></h4>						
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    	<h4>Remote Port Forwarding (Reverse SSH Tunnel) </h4>
 				    	<p align="left"><font size="4">Inside host initiates the tunnel to tell the remote host where to forward its port to (through the tunnel)</font></p>
-				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/Remote.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				    	<center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/Remote.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 
 				 </section>
 				    
@@ -227,12 +230,11 @@
 				   	<h4>Local and Remote SSH Tunneling</h4>
 				    	<p align="left"><font size="4">Inside initiates the tunnel to tell the remote host where to forward its local port to (through the tunnel)<br>
 				    	Home initiates a tunnel to forward its local port to meet up with the port of the pivot that is receiving the forward Webpage</font></p>
-				        <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/Meet-in-Middle.png" style="max-height: 60%; max-width: 60%; align: middle;"></center>	
+				        <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Traffic_Manipulation/Meet-in-Middle.png" style="max-height: 80%; max-width: 80%; align: middle;"></center>	
 				 </section>
 				 
 				 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Remote Port Forwarding Activity</h4>	
-					<a href="https://git.cybbh.space/CCTC/public/blob/master/networking/Activity-Remote_Port_Forwarding/prompt.adoc"> Port Forwarding</a>
+					<h4><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Remote_Port_Forwarding/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:4"> Remote Port Forwarding Activity</a></h4>				
 				</section>
  
 			</div>
