@@ -13,19 +13,19 @@
 
 == Scenario
 
-* For this exercise you will continue using your individual topology but *BEFORE YOU START*, ensure that you remove *all filtering rules*, and configure a permit any rule for the pfsense firewall on the LAN and OPT interfaces.  In this activity, you will use various file transfer methods between the H1 client and the H3 client. In later exercises.
+* For this exercise you will continue using your individual topology but *BEFORE YOU START*, ensure that you remove *all filtering rules*, and configure a permit any rule for the pfsense firewall on the LAN and OPT interfaces.  In this activity, you will use various file transfer methods between the net1 client and the net3 client. In later exercises.
 
 === Task 1)
 
-* You need to send SCP1 from H1 > H3 received as SCP3
-** Create "SCP1.txt" on the H1 client and write "SCP Transfer" into the file.
-** Use SCP to transfer SCP1 from H1 to H3. Name the file "SCP3.txt" on the H3 side.
+* You need to send SCP1 from net1 > net3 received as SCP3
+** Create "SCP1.txt" on the net1 client and write "SCP Transfer" into the file.
+** Use SCP to transfer SCP1 from net1 to net3. Name the file "SCP3.txt" on the net3 side.
 
 === Task 2)
 
-* You need to send NETCAT3 from H3 > H1 received as NETCAT1
-** Create "NETCAT3.txt" on the H3 client and write "NETCAT Transfer" into the file.
-** Use NETCAT to transfer NETCAT3 from H3 to H1. Name the file "NETCAT1.txt" on the H1 side.
+* You need to send NETCAT3 from net3 > net1 received as NETCAT1
+** Create "NETCAT3.txt" on the net3 client and write "NETCAT Transfer" into the file.
+** Use NETCAT to transfer NETCAT3 from net3 to net1. Name the file "NETCAT1.txt" on the net1 side.
 
 
 
