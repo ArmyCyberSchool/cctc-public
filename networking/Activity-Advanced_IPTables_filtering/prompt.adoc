@@ -17,19 +17,19 @@
 
 === Task 1)
 
-. You will configure rules on H3 the allow only very specific connections to be recieved from H1.
-. All your IPTables Rules MUST BE ON H3. Combine as many rules as you can.
+. You will configure rules on net3 the allow only very specific connections to be recieved from net1.
+. All your IPTables Rules MUST BE ON net3. Combine as many rules as you can.
 
-* Conditions to meet on H3 via IPTables rules:
+* Conditions to meet on net3 via IPTables rules:
 
-** H3 can recieve and respond to ARP requests sourced from H1's MAC address, All other MAC addresses are dropped (test this by sending an arp request with scapy with a spoofed MAC; see if H3 drops it)
-** H3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is 64 (test this by setting an IPTable rule in H1 to change the TTL value in all outbound packets)
-** H3 will set its TTL to 255 when responding to Pings from H1
-** H3 can recieve connections on port 1234 from H1 (test with netcat)
-** H3 can recieve SSH connections from H1 (test with SSH)
-** H3 will REJECT connections on port 1234 from H1 IF sourced from an ephemeral port (test with netcat)
-** H3 will REJECT connections on port 4444 from H1 (test with netcat)
-** H3 is NOT Allowed to SOURCE SSH connections TO H1 (test with SSH)
+** net3 can recieve and respond to ARP requests sourced from net1's MAC address, All other MAC addresses are dropped (test this by sending an arp request with scapy with a spoofed MAC; see if H3 drops it)
+** net3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is 64 (test this by setting an IPTable rule in net1 to change the TTL value in all outbound packets)
+** net3 will set its TTL to 255 when responding to Pings from net1
+** net3 can recieve connections on port 1234 from net1 (test with netcat)
+** net3 can recieve SSH connections from net1 (test with SSH)
+** net3 will REJECT connections on port 1234 from net1 IF sourced from an ephemeral port (test with netcat)
+** net3 will REJECT connections on port 4444 from net1 (test with netcat)
+** net3 is NOT Allowed to SOURCE SSH connections TO net1 (test with SSH)
 
 == Deliverables
 
