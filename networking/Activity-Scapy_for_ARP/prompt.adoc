@@ -10,7 +10,7 @@
 
 == Scenario
 
-* You have control over a Linux client in a network (H1-10.1.0.2). Your target is a Windows 10 client (H2-10.1.0.3) in your same IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP in necessary for communications, whereas often ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
+* You have control over a Linux client in a network (net1-10.1.0.2). Your target is a Windows 10 client (net2-10.1.0.3) in your same IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP in necessary for communications, whereas often ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
 
 === Task 1) 
 
@@ -27,7 +27,7 @@
 
 * Now to craft your request:
 ----
-    Type "Scapy" in the terminal of your H1 Linux machine
+    Type "Scapy" in the terminal of your net1 Linux machine
 ----
 * Set your fields  for a and b.
 +
