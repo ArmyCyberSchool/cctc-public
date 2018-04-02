@@ -85,7 +85,7 @@ resources:
         str_replace:
           params:
             lastname: {get_param: last_name}
-          template: H1-lastname-Debian-GUI
+          template: net1-lastname-Debian-GUI
       networks:
       - port: {get_resource: host1_subnet_0_port}
       - port: {get_resource: host1_subnet_1_port}
@@ -165,7 +165,7 @@ resources:
         str_replace:
           params:
             lastname: {get_param: last_name}
-          template: H2-lastname-Windows-10
+          template: net2-lastname-Windows-10
       networks:
       - port: {get_resource: host2_subnet_0_port}
       - port: {get_resource: host2_subnet_1_port}
@@ -215,7 +215,7 @@ resources:
         str_replace:
           params:
             lastname: {get_param: last_name}
-          template: H3-lastname-Debian
+          template: net3-lastname-Debian
       networks:
       - port: {get_resource: host3_subnet_0_port}
       - port: {get_resource: host3_subnet_2_port}
@@ -285,7 +285,7 @@ resources:
         str_replace:
           params:
             lastname: {get_param: last_name}
-          template: H4-lastname-DMZ-Client
+          template: lastname-DMZ
       networks:
       - port: {get_resource: host4_subnet_0_port}
       - port: {get_resource: host4_subnet_3_port}
