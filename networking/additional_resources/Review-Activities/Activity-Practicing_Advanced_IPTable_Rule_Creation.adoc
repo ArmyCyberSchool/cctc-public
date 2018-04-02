@@ -4,28 +4,23 @@
 = Activity - Practicing Advanced IPTable Rule Creation
 
 
-image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_resources/Review-Activities/Review-Activity_Images/Practice-Network_Diagram.png
-
-
-
 == Learning Objectives
 
 * CCNE007.013 - Construct IPTable rules
-
-
 
 == Learning Outcomes
 
 * N/A
 
-
-
 == Scenario
+
+image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_resources/Review-Activities/Review-Activity_Images/Practice-Network_Diagram.png
+
 
 * Utilizing the above network diagram, you will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
 
 
-=== Task 
+== Task 
 
 . You will configure rules on H3 the allow for only very specific connections. You will be writing statements tied to different iptables chains.
 
@@ -33,7 +28,7 @@ image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_res
 
 
 
-=== Conditions to meet on H3 via IPTables rules:
+== Conditions to meet on H3 via IPTables rules:
 
 H3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is greater than 64
 
