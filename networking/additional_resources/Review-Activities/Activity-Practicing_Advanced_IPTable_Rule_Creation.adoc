@@ -3,7 +3,6 @@
 
 = Activity - Practicing Advanced IPTable Rule Creation
 
-
 == Learning Objectives
 
 * CCNE007.013 - Construct IPTable rules
@@ -16,35 +15,32 @@
 
 image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_resources/Review-Activities/Review-Activity_Images/Practice-Network_Diagram.png
 
-
 * Utilizing the above network diagram, you will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
 
+=== Task 
 
-== Task 
+* You will configure rules on H3 the allow for only very specific connections. You will be writing statements tied to different iptables chains.
 
-. You will configure rules on H3 the allow for only very specific connections. You will be writing statements tied to different iptables chains.
-
-. All of your IPTables Rules MUST BE ON H3. Combine as many rules as you can. 
-
+* All of your IPTables Rules MUST BE ON H3. Combine as many rules as you can. 
 
 
-== Conditions to meet on H3 via IPTables rules:
+=== Conditions to meet on H3 via IPTables rules:
 
-H3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is greater than 64
+. H3 can recieve and respond to Pings (echo-requests) only if the TTL in the packet is greater than 64
 
-H3 will change its TTL to 255 when responding to Pings from H1
+. H3 will change its TTL to 255 when responding to Pings from H1
 
-H3 can recieve connections on port 1234 from H4
+. H3 can recieve connections on port 1234 from H4
 
-H3 can recieve SSH connections from Admin
+. H3 can recieve SSH connections from Admin
 
-H3 will REJECT connections on port 1234 from H4 IF sourced from an ephemeral port
+. H3 will REJECT connections on port 1234 from H4 IF sourced from an ephemeral port
 
-H3 will REJECT connections on port 4444 from H5
+. H3 will REJECT connections on port 4444 from H5
 
-H3 is NOT allowed to source SSH connections TO either IP address on the router
+. H3 is NOT allowed to source SSH connections TO either IP address on the router
 
-H3 has a default policy of DROP
+. H3 has a default policy of DROP
 
 
 == Deliverables
