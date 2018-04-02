@@ -53,9 +53,9 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 
 * *As the malicious external actor, connect to the service our insider Jose has hosted for us:*
 
-. After Jose establishes the reverse tunnel, you should return to your home machine (H1). You will need to create a local port forward in order to tunnel through the compromised SSH Server (Atropia), at 10.50.X.X. (Utilize the the "tunnel" user credentials)
-. Your SSH tunnels should connect a local port on your H1 host (port of your choosing, 1111 for example) to the port (90XX) on the compromised pivot host (Atropia) that Jose is sending the webpage to via the remote tunnel created in task 1.
-. Once complete, you should be able to access the target host's webpage from the browser on your H1 client at the local port you chose in step 2 of task 2.
+. After Jose establishes the reverse tunnel, you should return to your home machine (net1). You will need to create a local port forward in order to tunnel through the compromised SSH Server (Atropia), at 10.50.X.X. (Utilize the the "tunnel" user credentials)
+. Your SSH tunnels should connect a local port on your net1 host (port of your choosing, 1111 for example) to the port (90XX) on the compromised pivot host (Atropia) that Jose is sending the webpage to via the remote tunnel created in task 1.
+. Once complete, you should be able to access the target host's webpage from the browser on your net1 client at the local port you chose in step 2 of task 2.
 . Clear your browser cache.
 
 === Task 3)
@@ -67,8 +67,8 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 ** *As the malicious external actor, you need to discover and interact with other services to obtain additional information:* 
 ** Our insider, Jose, has discovered his host can reach various services on other hosts within the 10.2.0.0/25 network. 
 ** You will need to "play" the role of Jose once again. Telnet to the floating IP provided by your instructor (10.50.X.X). Then, change the tunnel commands for the appropriate service being accessed (SSH, FTP, HTTP, etc..)
-** Scan the network and interact with services of interest from your H1 host in your home environment utilizing remote and dynamic port forwarding to obtain the files.
-** Dynamic port forwarding will use proxychains, by default proxychains is setup to utilize port 9050 on your H1 host. This must be specified in your tunnel commands in order to work properly.
+** Scan the network and interact with services of interest from your net1 host in your home environment utilizing remote and dynamic port forwarding to obtain the files.
+** Dynamic port forwarding will use proxychains, by default proxychains is setup to utilize port 9050 on your net1 host. This must be specified in your tunnel commands in order to work properly.
 
 == Deliverables
 
