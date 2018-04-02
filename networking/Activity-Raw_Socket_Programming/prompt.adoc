@@ -19,7 +19,7 @@
 == Scenario
 
 * You have administrative control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to get a message to 10.1.0.1. You don't have tools installed, and installing new tools or libraries would trigger an alarm. The host has Python 2.7 installed, so you can use this to achieve your goal.  You can use the socket, sys, struct and one additional module of your choice. 
-* Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the H1 or target host.
+* Using a python script, you will create a raw socket and code your message into the socket. This must be sent to the host at 10.1.0.1. You can verify success by using wireshark while you send the message on either the net1 or the target host.
 
 === Task 1)
 
