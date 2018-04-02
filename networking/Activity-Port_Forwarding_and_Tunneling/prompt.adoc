@@ -29,7 +29,7 @@ Student (Terminal Access):studentxx:passwordxx
 ** In place of "xx" use your student number (ex: username: student2 password: password2).
 ** When utilizing the "tunnel" user credentials, you must specify a *-NT* at the end of your command, otherwise it will not work.
 
-* Use the SSH tunneling Shared Target for this exercise.  Work from your VTA environment, using your H1 client to SSH into a shared target.  You have credentials for servers in an environment with connectivity to both your host and the target network.  Be aware that some of the servers do not allow interactive login (NT), only tunneling.  Ensure you use the appropriate flags in your commands..
+* Use the SSH tunneling Shared Target for this exercise.  Work from your VTA environment, using your net1 client to SSH into a shared target.  You have credentials for servers in an environment with connectivity to both your host and the target network.  Be aware that some of the servers do not allow interactive login (NT), only tunneling.  Ensure you use the appropriate flags in your commands..
 
 === Task 1)
 
@@ -39,7 +39,7 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 . You are aware of an HTTP server in the environment (Target at 10.3.0.1) and need to gain access to the contents being hosted. *The target HTTP server cannot be accessed directly from your network* (-NT), but does allow hosts in its own 10.3.0.0/26 network to connect to it. 
 
 * Use your access through the compromised host in the target network to access it. Use local port forwarding to view the page hosted by a webserver (10.3.0.1) on your local host’s browser.
-* _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Local port forwarding--->H3-1-Target's Webpage_
+* _Home net1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Local port forwarding--->net3-1-Target's Webpage_
 
 . Clear your browser cache and teardown your connections.
 
@@ -51,7 +51,7 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity_Images
 . You are only concerned with this additional host (for now), which is in the 10.3.0.0/26 range.
 . You are only concerned with the following services ssh, telnet, ftp, and http services on hosts for this activity.
 
-* _Home H1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/26 network_
+* _Home net1 (10.1.0.2) --->SSH tunnel through 10.50.X.X/Dynamic port forwarding--->10.3.0.0/26 network_
 
 . Once you find out the identity of the hosts and available services, interact with those services!
 . Clear your browser cache and teardown your connections.
