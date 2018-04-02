@@ -15,7 +15,7 @@
 
 image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_resources/Review-Activities/Review-Activity_Images/Practice-Network_Diagram.png
 
-* Utilizing the above network diagram, you will be constructing and placing IPTables rules to meet the intent for filtering on the Linux hosts as specified.
+* Utilizing the above network diagram, you will be constructing and placing IPTables rules to meet the intent per the directions on the Linux hosts as specified.
 
 == Task 
 
