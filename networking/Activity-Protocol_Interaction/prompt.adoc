@@ -17,11 +17,11 @@
 
 == Scenario
 
-* Interacting with protocols can be done in various ways. These should be explored to ensure that you can access your targets, regardless of limitations such as no internet browser for viewing HTTP. As discussed, tools like netcat, wget and curl. You can use your Linux client (10.1.0.2) and install these (or other tools you would like to try). You can access HTTP or FTP on H3 via these alternate means.
+* Interacting with protocols can be done in various ways. These should be explored to ensure that you can access your targets, regardless of limitations such as no internet browser for viewing HTTP. As discussed, tools like netcat, wget and curl. You can use your Linux client (10.1.0.2) and install these (or other tools you would like to try). You can access HTTP or FTP on net3 via these alternate means.
 
 === Task 1) 
 
-* Using netcat, wget and curl, or over CLI tools, access resources over FTP or HTTP on H3. Custom/CLI based protocol interaction extends beyond FTP and HTTP; however, these provide a good starting point for getting familiar with the process.
+* Using netcat, wget and curl, or over CLI tools, access resources over FTP or HTTP on net3. Custom/CLI based protocol interaction extends beyond FTP and HTTP; however, these provide a good starting point for getting familiar with the process.
 
 == Deliverables
 
