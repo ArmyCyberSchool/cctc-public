@@ -7,14 +7,17 @@
 image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_resources/Review-Activities/Review-Activity_Images/Practice-Network_Diagram.png
 
 
+
 == Learning Objectives
 
 * CCNE007.013 - Construct IPTable rules
 
 
+
 == Learning Outcomes
 
 * N/A
+
 
 
 == Scenario
@@ -27,6 +30,7 @@ image::https://git.cybbh.space/CCTC/public/tree/master/networking/additional_res
 . You will configure rules on H3 the allow for only very specific connections. You will be writing statements tied to different iptables chains.
 
 . All of your IPTables Rules MUST BE ON H3. Combine as many rules as you can. 
+
 
 
 === Conditions to meet on H3 via IPTables rules:
