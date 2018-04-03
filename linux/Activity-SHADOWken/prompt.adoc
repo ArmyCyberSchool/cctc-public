@@ -63,14 +63,6 @@ image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left
 * Verification of ken’s ability to read `/etc/shadow`
 * Correct contents of `/etc/shadow`
 
-== Hints
-
-* N/A
-
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * https://www.cyberciti.biz/faq/understanding-etcshadow-file/
