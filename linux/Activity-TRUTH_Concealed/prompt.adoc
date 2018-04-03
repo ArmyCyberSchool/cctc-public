@@ -47,7 +47,7 @@ rkhunter -c | more  || rkhunter -c && grep -i warning /var/log/rkhunter.log
 
 ----
 cd /rootkit/0010100010 && make
-Ubuntu Fix: apt-get install -y linux-headers-$(uname -a)
+Ubuntu Fix: apt-get install -y linux-headers-$(uname -r)
 ----
  
 * at this point .. baseline your binaries, process and connection outputs, etc ..
