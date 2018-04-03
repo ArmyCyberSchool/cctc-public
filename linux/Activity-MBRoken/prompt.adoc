@@ -23,7 +23,7 @@ image::../Resources/MBR.png[mbroken,height="150",width="250",float="left"]
 == Task 1)
 
 * You have access to a baseline MBR (mbrgood.zip), as well as the bad MBR (mbroken.zip)
-** The files are located here: `/usr/share/cctc/`
+** The files are located here: `/usr/share/class/`
 * Start by verifying that you have the correct boot record file. 
 ** Unzip the file `mbroken.zip` and check its MD5 hash: `b73f30cf162511fe8429ff907a5a9f53`
 * Using Linux binaries:
