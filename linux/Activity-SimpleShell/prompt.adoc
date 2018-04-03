@@ -44,10 +44,6 @@ ls -l | wc -l > 123 &
 cat < 123
 ----
 
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * http://www.linuxjournal.com/article/2156
