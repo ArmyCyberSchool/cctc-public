@@ -45,10 +45,6 @@
 
 * `man tee | grep -A1 DESCRIPTION`
 
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-using_the_journal
