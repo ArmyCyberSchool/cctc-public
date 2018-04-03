@@ -32,10 +32,6 @@ image::../Resources/regex2.png[regex2,height="150",width="350",float="left"]
 
 * Screenshot of each completed crossword
 
-== Hints
-
-* N/A
-
 == Challenge
 
 * Tackle the EXPERIENCED challenges
