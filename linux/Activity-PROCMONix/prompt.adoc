@@ -24,10 +24,6 @@ image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 * Understanding which processes to look for to detect signs of malicious activity
 * Ability to formulate a flow of sequential commands to achieve a stated objective
 
-== Scenario
-
-* N/A
-
 === Task 1)
 
 * Write a script that monitors processes, and also monitors for malicious activity
@@ -43,11 +39,6 @@ image::../Resources/procmonix.png[proc,height="150",width="450",float="left"]
 == Hints
 
 `awk, sed, cut, sort, uniq`
-
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 

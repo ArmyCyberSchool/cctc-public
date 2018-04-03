@@ -21,26 +21,24 @@ image::../Resources/rootkits.png[rootkit,height="150",width="450",float="left"]
 * DCO and OCO purposes for rootkits
 * Building a kitable tool for future Incident Response use
 
-== Scenario
-
-* N/A
-
 === Task 1)
 
 * *User-land rootkit:*
-** in your `/usr/share/cctc/rootkit` directory .. compile `/usr/share/cctc/rootkit/sudo.c` using `/usr/bin/gcc` or `/usr/bin/tcc`:
+** in your `/usr/share/class/rootkit` directory .. compile `/usr/share/class/rootkit/sudo.c` using `/usr/bin/gcc` or `/usr/bin/tcc`:
 
 ----
 cd /rootkit/ &&  gcc sudo.c -o sudo
 cp /usr/bin/sudo /root/sudo.bak && ls /root | grep sudo.bak
+
+sudo netstat -taulpn
+apt-get install -y rkhunter
+
 cp /rootkit/sudo /usr/bin/sudo
 ----
  
 * as a user in the sudo group(not root), run following command(s):
 
 ----
-sudo netstat -taulpn
-apt-get install -y rkhunter
 rkhunter -c | more  || rkhunter -c && grep -i warning /var/log/rkhunter.log
 ----
  
@@ -49,9 +47,10 @@ rkhunter -c | more  || rkhunter -c && grep -i warning /var/log/rkhunter.log
 
 ----
 cd /rootkit/0010100010 && make
+Ubuntu Fix: apt-get install -y linux-headers-$(uname -r)
 ----
  
-* at this point .. baseline your binaries, and systemcalls, etc ..
+* at this point .. baseline your binaries, process and connection outputs, etc ..
 
 ----
 find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -exec md5sum {} >> /root/baselined_bins.txt \;
@@ -78,9 +77,9 @@ kill -31 $(ps -elf | grep -v grep | grep sshd | awk '{print $4}')
 
 
 * Hide a binary:
-
+[subs=+quotes]
 ----
-mv /bin/netstat /bin/hidemenetstat
+mv /bin/netstat /bin/**hideme**netstat
 ----
 
 
@@ -99,10 +98,6 @@ ls /proc/$PID/
 cat /proc/$PID/syscall
 find /lib/modules/$(uname -r) -type f -name "*.ko" | awk -F/ '{print $NF}'
 ----
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 

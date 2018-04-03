@@ -47,14 +47,6 @@ image::../Resources/triggered.png[auto_triggered,height="300",width="500",float=
 
 * The script that monitors for the SSH service and relaunches the service as necessary
 
-== Hints
-
-* N/A
-
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * https://crontab.guru/

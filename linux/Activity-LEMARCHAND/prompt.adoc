@@ -20,14 +20,10 @@ image::../Resources/puzzle.png[lemarchand,height="350",width="650",float="left"]
 * Familiarity with BASH conditionals
 * Conditionals with magic numbers and file types
 
-== Scenario
-
-* N/A
-
 === Task 1)
 
 * Write a script that will iteratively uncompress the file by type, until you reach the final file that contains the FLAG within
-* Compressed file location: /usr/share/cctc/MYSTERIOUS_FILE
+* Compressed file location: `/usr/share/class/MYSTERIOUS_FILE`
 
 == Deliverables
 
@@ -36,10 +32,6 @@ image::../Resources/puzzle.png[lemarchand,height="350",width="650",float="left"]
 == Hints
 
 * while, for, if, elif, file
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 
