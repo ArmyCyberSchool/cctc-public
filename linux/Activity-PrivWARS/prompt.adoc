@@ -73,7 +73,7 @@ deathstar_plans       is owned by Leia, and the rebels, and is fully accessible(
 == Deliverables
 
 * Once you have completed all the required tasks above:
-** run the following command from the working directory to get the flag: `$ check` +
+** run the following command from the working directory to get the flag: `check` +
 ** verification of `check` script success
 
 == Hints
