@@ -78,12 +78,9 @@ deathstar_plans       is owned by Leia, and the rebels, and is fully accessible(
 
 == Hints
 
-From working directory: `$ ls -l | awk '{print $1, $3, $4, $9}' | column -t` +
+From working directory: +
+`ls -l | awk '{print $1, $3, $4, $9}' | column -t` +
 `man usermod | grep -A2 "SEE ALSO"`
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 
