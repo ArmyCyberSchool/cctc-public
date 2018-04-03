@@ -44,13 +44,6 @@ image::../Resources/auto_trigger.png[auto_triggered,height="500",width="800",flo
 * Your persistence script
 * Proof that your persistence script properly recovers the monitoring script from reboots, and from having its process killed
 
-== Hints
-
-* N/A
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 
