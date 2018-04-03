@@ -38,10 +38,6 @@ image::../Resources/magic_file.png[magic,height="150",width="450",float="left"]
 
 * What type of file is a Linux executable binary, such as `ls` and `ps`, similar to `.exe` files in Windows?
 
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * https://www.garykessler.net/library/file_sigs.html
