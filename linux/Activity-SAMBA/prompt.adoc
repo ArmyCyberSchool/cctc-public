@@ -7,12 +7,12 @@ image::../Resources/samba.png[samba,height="150",width="650",float="left"]
 
 == Learning Objectives
 
-* CCNI000 - 
-** CCNI000.001 - 
+* CCNI008 - Identify Linux networking features
+** CCNI008.006  - Describe the advantages and disadvantages of Samba 
 
 == Learning Outcomes
 
-* 
+* understand how to employ SAMBA services to transport files between unlike systems.
 
 == Scenario
 
@@ -46,10 +46,6 @@ image::../Resources/samba.png[samba,height="150",width="650",float="left"]
 
 * `systemctl restart smbd`
 * `systemctl restart smb.service`
-
-== Challenge
-
-* N/A
 
 == Useful Resources
 
