@@ -15,20 +15,12 @@ image::../Resources/brute.png[HYDRA,height="150",width="350",float="left"]
 * Familiarity with "common creds" service attacks
 * Usage of Hydra to defeat IDS/IPS detection
 
-== Scenario
-
-* N/A
-
 === Task 1)
 
 * Using what you've learned about Hydra, attempt to brute force the SMB service password:
 ** create a colon delimited username:password file, or seperate user and password lists, to be used with Hydra.
 ** check the SMB service status on the target system using Netcat, Nmap, Metasploit, etc.; verify SMB is listening.
 ** begin brute force attack...reveal additional services vulnerable to common-cred attacks
-
-== Deliverables
-
-* N/A
 
 == Hints
 
