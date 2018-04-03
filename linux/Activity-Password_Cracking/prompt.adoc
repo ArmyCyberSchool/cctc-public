@@ -16,10 +16,6 @@ image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 * Familiarity with hash types, password crackers and their syntax and application
 * Confidence with credential cracking
 
-== Scenario
-
-* N/A
-
 === Task 1)
 
 * Run a dictionary attack
@@ -30,10 +26,6 @@ image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 == Deliverables
 
 * cracked user shadowed passwords 
-
-== Hints
-
-* N/A
 
 == Challenge
 
@@ -76,6 +68,8 @@ tar -xf ./jtrMakeConfig.tar
 make
 cd ./Defcon_JtrMakeConfig
 Usage: ./jtrMakeConfig
+
+Hint:  is your character set in JTRMakeConfig exceptable by john?
 ----
 
 == Useful Resources
