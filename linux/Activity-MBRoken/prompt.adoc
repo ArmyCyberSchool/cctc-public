@@ -45,10 +45,6 @@ image::../Resources/MBR.png[mbroken,height="150",width="250",float="left"]
 * Read up on the specs for a properly formated MBR
 * Your endian may be off
 
-== Challenge
-
-* N/A
-
 == Useful Resources
 
 * http://thestarman.pcministry.com/asm/mbr/PartTables.htm
