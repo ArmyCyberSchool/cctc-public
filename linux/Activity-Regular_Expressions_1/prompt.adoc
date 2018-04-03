@@ -32,10 +32,6 @@ image::../Resources/regex1.png[regex1,height="200",width="750",float="left"]
 
 * List of regular expressions used to solve each lesson and problem
 
-== Hints
-
-* N/A
-
 == Challenge
 
 * Lesson X and Problem X
