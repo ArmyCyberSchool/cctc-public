@@ -24,7 +24,7 @@ image::../Resources/jtr.png[jtr,height="150",width="650",float="left"]
 
 * Run a dictionary attack
 ** using the windows hashes you captured from the previous activity, and a wordlist of your choice, from `/usr/share/seclists/Passwords/` 
-*** unshadow the passwords of the provided 3TC_PA55W0RD, and 3TC_5HAD0W files, in `/usr/share/cctc/PassCrack.zip`
+*** unshadow the passwords of the provided 3TC_PA55W0RD, and 3TC_5HAD0W files, in `/usr/share/class/PassCrack.zip`
 *** reveal the passwords using JTR, and a wordlist from seclists
 
 == Deliverables
@@ -61,7 +61,7 @@ gem install spider
 
 ----
 mkdir /var/www
-cd /var/www && cp /usr/share/cctc/warriors.zip ./ && unzip ./warriors.zip
+cd /var/www && cp /usr/share/class/warriors.zip ./ && unzip ./warriors.zip
 service apache2 start
 mv /var/www/warriors /var/www/html/
 firefox 127.0.0.1/warriors
@@ -71,7 +71,7 @@ firefox 127.0.0.1/warriors
 
 ----
 cd $(find / -type f -name "john.conf" 2>/dev/null | grep -v metasploit)
-cp /usr/share/cctc/jtrMakeConfig.tar ./
+cp /usr/share/class/jtrMakeConfig.tar ./
 tar -xf ./jtrMakeConfig.tar
 make
 cd ./Defcon_JtrMakeConfig
