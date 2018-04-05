@@ -10,9 +10,10 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCNE001: Identify Networking Fundamentals
 ** CCNE001.001 Understanding the OSI model and Basic Networking
-** CCNE001.002 Understanding User space vs Kernel Space for network functions
-** CCNE001.003 Explain the difference between user space/kernel space sockets
-** CCNE001.004 Tool and OS feature operations
+** CCNE001.002 Identify zero configuration networking
+** CCNE001.003 Understanding User space vs Kernel Space for network functions
+** CCNE001.004 Explain the difference between user space/kernel space sockets
+** CCNE001.005 Tool and OS feature operations
 
 * SKILL CCNE002: Identify the sections of common packet headers
 ** CCNE002.001 Identify the various packet headers
