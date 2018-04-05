@@ -107,7 +107,6 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCNI013.005 Identify purposes for Metasploit
 ** CCNI013.006 Define rainbow tables
 ** CCNI013.007 Identify the purposes for custom malware
-** CCNI013.008 Identify zero configuration networking
 
 '''
 
