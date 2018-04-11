@@ -42,22 +42,23 @@
 				<div class="slides">
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h1>Watching the Wire</h1>
-					<h5>CCTC-Networking</h5>
+					<h5>CCTC - Networking</h5>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				<h4>Outcomes</h4>
-					<p><font size="5"><u> SKILL CCNE009: Identify packet sniffing tools<br>SKILL CCNE010: Identify implications of network traffic captures</u> </font></p>
+					<p><font size="5"><u><b>SKILL CCNE009</b>: Identify packet sniffing tools<br>
+							     <b>SKILL CCNE010</b>: Identify implications of network traffic captures</u> </font></p>
 					<p align="left"><font size="5"><b> Objectives</b></font></p>
 				
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.001 Explain Using Berkley Packet Filters (BPF) with sniffing tools</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.002 Use BPFs to view multiple protocol types</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.003 Demonstrate packet decoding features of tools</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.004 Identify how sniffing and filtering relate to DNS protocol (poisoning/misuse)</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.001 Discuss security implications of major protocol traffic in baselining</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.002 Explain why network monitoring tools are deployed</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.003 Explain the impact of network monitoring tools in exploitation operations</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.004 Explain the impact of network monitoring tools in DODIN operations</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.001</b>: Explain Using Berkley Packet Filters (BPF) with sniffing tools</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.002</b>: Use BPFs to view multiple protocol types</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.003</b>: Demonstrate packet decoding features of tools</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.004</b>: Identify how sniffing and filtering relate to DNS protocol (poisoning/misuse)</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.001</b>: Discuss security implications of major protocol traffic in base-lining</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.002</b>: Explain why network monitoring tools are deployed</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.003</b>: Explain the impact of network monitoring tools in exploitation operations</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.004</b>: Explain the impact of network monitoring tools in DODIN operations</font></p>
 				
 				</section>
 
@@ -72,10 +73,10 @@
 
 <img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Wireshark.png" align="center top" style="max-height: 25%; max-width: 25%">
 <ul style="line-height:1.15em"><font size="6.5">
-	<li><strong>Great for graphic viewing or detailed traffic information (not well suited for large pcaps)</strong></li>
+	<li><strong>Great for viewing detailed traffic information in a graphical format(not well suited for large pcaps)</strong></li>
 	<li>Remote capture (Windows only)
 	<ul>
-		<li>Start Remote Packet Capture Protocol (local service) on target (WinPCAP)</li>
+		<li>Start a Remote Packet Capture Protocol (local service) on target (WinPCAP)</li>
 		<li>Connect remote interface on wireshark target IP:2002</li>
 	</ul>
 	</li>
@@ -162,14 +163,14 @@
 					<h4 style="line-height:0.2em">Why Filter Outputs?</h4><br><br>
 					<p align="left"><font size="6">- Reduce Resource consumption (CPU or Storage)</font></p>
 					<p align="left"><font size="6">- Limit scope of catured traffic</font></p>
-					<p align="left"><font size="6">- Target traffic capture down to the bit!</font></p><br><br><br>
+					<p align="left"><font size="6">- Target traffic capture down to the bit!</font></p><br><br><br><br><br><br>
 
 				</section>	
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>How do I Filter Outputs?</h4><br><br>
 					<p align="left"><font size="6">- <u>Programs like TCPDump can use built-in 'Primitives', like 'net', 'port'  etc and qualifiers like 'src' or 'dst'</u> (Wireshark has it's own set of 'expressions' for this same purpose) </font></p>
-				    	<p align="left"><font size="6">- Primitives are user-friendly shortcuts to BPF, but they can't target traffic as granularly as a pure BPF </font></p><br><br><br>
+				    	<p align="left"><font size="6">- Primitives are user-friendly shortcuts to BPF, but they can't target traffic as granularly as a pure BPF </font></p><br><br><br><br>
 
 
 				</section>
@@ -181,12 +182,12 @@
 					<li align="left">The filter code is sent to the kernel via the SO_ATTACH_FILTER option</li><br>
 					<li align="left">Libpcap is how this happens using TCPDump for example. </li><br>
 					<li align="left">The libpcap internal compiler takes the user input filter and generates a structure that can be loaded via SO_ATTACH_FILTER to the kernel.</li>
-</font></ul><br>
+</font></ul><br><br><br>
 			    </section>
 		
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				  
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Bytecode_slide.png" align="center" style="max-height: 100%; max-width: 100%">
+<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Bytecode_slide.png" align="center" style="max-height: 98%; max-width: 98%">
 
 				</section>
 
@@ -281,21 +282,21 @@ tcpdump 'ip[
 
 					<h4>Flow Analysis</h4><br><br>
 <ul style="line-height:1em"><font size="6.5">
-	<li>netflow - Developed by Cisco, IP traffic only, aggregates “flows” and sends statistics to a collection point for analysis</li><br>
-	<li>sflow - Industry standard, not restricted to IP, can monitor interface statistics and performs sampling 1/n packets and sends to a collection point - built into ASIC</li><br><br><br>
+	<li><b>netflow</b> - Developed by Cisco, IP traffic only, aggregates “flows” and sends statistics to a collection point for analysis</li><br>
+	<li><b>sflow</b> - Industry standard, not restricted to IP, can monitor interface statistics and performs sampling 1/n packets and sends to a collection point - built into ASIC</li><br><br><br><br>
 </font></ul>
 
    				   </section>
 
 <section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 
-					<h4>Server Identification</h4><br><br>
-<ul style="line-height:1em"><font size="6.5">
+					<h4 style="line-height:1.1em">Server Identification</h4><br><br>
+<ul style="line-height:0.8em"><font size="6.5">
 	<li>OS detection can be helpful in exploiting vulnerabilities in targets.</li><br>
 	<li>Many vulnerabilities require custom exploits to match the target OS and hardware architecture in order to be effective</li><br>
-<li>Backporting: Often vendors will take a fix/patch from a recent version of software and apply it to older versions. </li><br></font>
+<li>Back-porting: Often vendors will take a fix/patch from a recent version of software and apply it to older versions. </li><br></font>
 </ul>
-<p align="left"><font size="6.5"><i>This means that the vulnerability that may have been noted in the older OS you identified has been patched! </i></font></p><br><br>
+<p align="left"><font size="6.5"><i>This means that the vulnerability that may have been noted in the older OS you identified has been patched! </i></font></p>
 
 </section>   				   
 
@@ -303,7 +304,7 @@ tcpdump 'ip[
 <div class="fingerprint" data-block-type="image" style="width: 1800px; height: 0px; left: 0px; top: 0px;">
 <div class="fingerprint-content" style="z-index: 11;">
 <img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fingerprint.png"></div></div>
-				<h3>Signatures</h3>
+				<h4>Signatures</h4>
 <ul style="line-height:1.1em"><font size="6.5em">
 	<li><b>TTL</b></li><br>
 	<ul><li>DF - Don't Fragment bit (set/increment)</li>
