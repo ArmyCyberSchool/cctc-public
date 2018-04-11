@@ -49,6 +49,7 @@
 				<h4>Outcomes</h4>
 					<p><font size="5"> SKILL CCNE003: Identify fundamentals of network discovery </font></p>
 					<p align="left"><font size="5"> Objectives </font></p>
+				
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.001 Identify the items of interest when performing external reconnaissance</font></p>
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.002 Identify the items of interest when performing internal reconnaissance</font></p>
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.003 Describe active methods used for network discovery</font></p>
@@ -57,11 +58,12 @@
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.006 Explain the network discovery process from a defensive position</font></p>
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.007 Explain the potential mitigation techniques for network discovery</font></p>
                     <p align="left" style="line-height:0.5em"><font size="4">CCNE003.008 Discuss best practices for network analysis</font></p>
+				
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Reconnaissances</h4>
-				   	<p align="left"><font size="6">Identiying IP Addresess and Sub-domains</font></p>
+				   	<p align="left"><font size="6">Identifying IP Addresses and Sub-domains</font></p>
 				    <p align="left"><font size="6">Identifying People </font></p>
 				    <p align="left"><font size="6">Identifying Technologies</font></p>
 				    <p align="left"><font size="6">Identifying Content of Interest</font></p>
@@ -80,14 +82,18 @@
 			        	https://www.whois.net <br>
 			        	https://www.shodan.io </font></p>
 
-   				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Interactions with protocols/resources</h4>
-					<p align="left"><font size="5"> You may find yourself needing to obtain information from websites, FTP sites etc however you only have CLI access. Try practicing some methods for interacting with services from the command line. </font></p>
-					<a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Protocol_Interaction/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:4"> Protocol Interaction Activity</a>
-				</section>	
+   				   </section>
+   				   
+   				   	<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Interactions with protocols/resources</h4><br>
+					<p align="left"><font size="5"> You may find yourself needing to obtain information from websites, FTP sites etc however you only have CLI access. Try practicing some methods for interacting with services from the command line. </font></p><br>
+					<a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Protocol_Interaction/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:4"> Protocol Interaction Activity</a><br><br><br><br><br>
+			   	    
+
+   				   </section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Socal Engineering</h4>
+					<h4>Social Engineering</h4><br>
 					<p><font size="5"><i>"Any act that influence a person to take an action that may or may not be in their best interest." </i></font></p>
 					<p align="left"><font size="4">- Set a frame (pretexting) for interaction/ prime for response<br> 
 				    	- Reciprocity<br>         
@@ -99,25 +105,26 @@
 				</section>
 					
             	<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Socal Engineering (Cont.)</h4>
+					<h4>Social Engineering (Cont.)</h4><br>
 					<p align="left"><font size="5">- Phone/email/In-person <br>
 					- Mental Buffer-Overflow: layering loop (stories/information) until the subject tunes out/can't keep tract, inject bad stuff <br>
-				    	- Questions: Language structure that forces the execution of instructions.</font></p>
-					<a href="https://www.youtube.com/watch?v=lc7scxvKQOo" style="color:#0000fe"><font size="5"><b>Another Social Engineering Example - think about which techniques were used</b></font></a>
+				    	- Questions: Language structure that forces the execution of instructions.</font></p><br><br><br><br><br>
+					<a href="https://www.youtube.com/watch?v=lc7scxvKQOo"style="color:#0000fe"><font size="5"><b>Another Social Engineering Example - think about which techniques were used</b></font></a><br>
+					
 			    </section>
 						   					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>TCP Flags</h4>
-					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/flags.png" align="right" style="max-height: 35%; max-width: 35%">
+					<h4>TCP Flags</h4><br>
+					<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/flags.png" align="right" style="max-height: 37%; max-width: 37%";>
 				    <p align="left"><font size="4">- Illegal flag combination can be used to determine Operating System </font> </p>
 					<p align="left"><font size="4">- X-mas Tree scan is one popular example used in nmap w/OS detection (URG/PSH/FIN flag)</font> </p>
 					<p align="left"><font size="4">- Linux Only sends RSTs if the port is open (no RST for closed ports)</font> </p>
-				    <p align="left"><font size="4">- Windows Mac ALWAYS send RSTs if the TCP segment isn't a part of an established communciation</font> </p>
+				    <p align="left"><font size="4">- Windows Mac ALWAYS send RSTs if the TCP segment isn't a part of an established communication</font> </p>
 				</section>
 					
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h4>Port Scanning</h4> 
-				    <p align="left"><font size="5"><b>Popular Scannning tools</b></font></p>
+				    <h4>Port Scanning</h4>
+				    <p align="left"><font size="5"><b>Popular Scanning tools</b></font></p>
 				    <p align="left"><font size="4">- Nmap, Netcat, Scapy, Hping3...</font></p>      
 			       	    <p align="left"><font size="5"><b>Common Scanning Methods</b></font></p>
 			            <p align="left"><font size="4">- TCP Connect()Scan (IDS/logs catch this easily!) <br>
@@ -129,35 +136,35 @@
 				  </section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>What about IPV6?</h4>
+					<h4>What about IPV6?</h4><br>
 					<ul> 
 					  <li><font size="6">Host address space is enormous: scanning an entire prefix is out of the questions.</font> </li>
 					  <li><font size="6">(64 bit host space, with 1 probe/sec would take 5 billions years)</font> </li>
 					  <li><font size="6">Identifying address become key</font> </li>
 					  <li><font size="6">Scanning locally or remote (probe multicast all-node, link local)</font> </li>
-					</ul>
+					</ul><br><br><br><br>
 					  <p align="left"><font size="4">Additional Reading:<br>
-					  RFC 7707;https://www.cs.columbia.edu/~smb/papers/v6worms.pdf</font></p>
+					  RFC 7707 - <a href="https://www.cs.columbia.edu/~smb/papers/v6worms.pdf"style="color:#0000fe">https://www.cs.columbia.edu/~smb/papers/v6worms.pdf</a></font></p>
 				</section>	
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Scanning</h4>
 					<p><font size="6"><u> Nmap is a highly popular scanning tool </u></font></p>
-				    	<p align="left"><font size="6">Nmap host discovery run with root priviledge: <br>
+				    	<p align="left"><font size="6">Nmap host discovery run with root privilege: <br>
 				    	- send raw ARP packet, nearly impossible to block or hide from this type of scan</font> </p>
-					<p align="left"><font size="6">Nmap Host discovery run without root priviledge: <br>
+					<p align="left"><font size="6">Nmap Host discovery run without root privilege: <br>
 					- Cannot open raw sockets <br>
 					- Connects to the 2 TCP port (80 and (443) <br>
 					- Host considered "up" if the connection succeeds/reset </font></p>
-                    			<p align="left"><font size="6"> ICMP: Nmap can do icmp ping sweeps however since OS'es & FW's oftem block/drop ICMP this can be unreliable </font></p>
+                    			<p align="left"><font size="6"> ICMP: Nmap can do icmp ping sweeps however since OS'es & FW's often block/drop ICMP this can be unreliable </font></p>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Diagrams</h4>
+					<h4>Diagrams</h4><br>
 				    <img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Discovery/icons.png" align="right" style="max-height: 35%; max-width: 35%">
                     			<p align="left"><font size="6"><b>Physical Diagrams</b></font></p>
                     			<p align="left"><font size="6">- Medium; i.e. Wired/Wireless</font></p>
-					<p align="left"><font size="6">- Topologogy (star most common)</font></p>
+					<p align="left"><font size="6">- Topology (star most common)</font></p>
 					<p align="left"><font size="6">- Depict port/interface connection</font></p>
                     			<p align="left"><font size="6"><b>Logical Diagrams</b></font></p> 
                     			<p align="left"><font size="6">- IP Addressing/Networks</font></p>
@@ -165,12 +172,12 @@
 			    </section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Navigating Network Devices</h4>
-				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/Navigating.png" style="max-height: 80%; max-width: 80%;"></center>
+					<h4>Navigating Network Devices</h4><br>
+				    <center><img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Filtering/Navigating.png" style="max-height: 80%; max-width: 80%;"></center><br><br><br>
 				</section>
 
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-					<h4>Security Concern and Implications</h4>
+					<h4>Security Concern and Implications</h4><br>
 					<p align="left"> A few items to consider</p>
 					<ul>
 				      <li><font size="6">Enable password vs. Enable secret </font></li>
@@ -180,19 +187,19 @@
 					  <li><font size="6">IP ICMP Redirect (Network devices and hosts)</font> </li>
 					  <li><font size="6">IP Source Route</font> </li>
 					  <li><font size="6">Remote Access (Telnet)</font> </li>
-					  <li><font size="6">Logging<br> </font> </li>
+					  <li><font size="6">Logging<br> </font> </li><br><br>
 			    	</ul>
 				</section>
 				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>You Found a Router Configuration!</h4>
 				    <a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Mapping_a_Network/prompt.pdf?job=genpdf" style="color:#0000fe"> Mapping a Network Activity</a>
-                </section>
-				    
+				</section>
+				
 				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>P0f for Fingerprinting</h4>
 					<p align="left"><font size="4"> P0f primarily looks at TCP/IP Header attributes to make a determination (packaged and custom signatures)</font></p>
-			            <p align="left" style="line-height:0.5em"><font size="3">1: IP version</font></p>
+			<p align="left" style="line-height:0.5em"><font size="3">1: IP version</font></p>
                         <p align="left" style="line-height:0.5em"><font size="3">2: Initial TTL</font></p>
                         <p align="left" style="line-height:0.5em"><font size="3">3: IP Options</font></p>
                         <p align="left" style="line-height:0.5em"><font size="3">4: MSS</font></p>
@@ -203,7 +210,7 @@
                         <p align="left" style="line-height:0.5em"><font size="3">9: Payload Class </font></p>
                 </section>
 
-		    </div>
+			</div>
 
 		</div>
 
