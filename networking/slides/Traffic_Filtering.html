@@ -207,7 +207,7 @@
 					<h4>Examples</h4>
 					<p align="left"><font size="6"><b>Syntax/Example</b></font></p>
 					<p align="left"><font size="5">iptables -t [table] -[A(add)/D(del)/I(ins)/P(pol] <font color="blue">CHAIN</font> <font color="red">rule</font> [-p (protocol, etc)] <font color="green">-j TARGET</font><br>
-                    iptables -P <font color="blue">INPUT</font> <font color="green">-j DROP</font></font></p>
+                    iptables -P <font color="blue">INPUT</font> <font color="green">DROP</font></font></p>
 					<p align="left"><font size="6"><b>Filtering Rules</b></font></p>
 					<p align="left"><font size="5">iptables -A <font color="blue">OUTPUT</font> <font color="red"> -d 197.10.10.1 -p tcp --dport 80</font> <font color="green">- j ACCEPT</font><br>
                     iptables -A <font color="blue">INPUT</font> <font color="red">- s 150.147.23.1 -p udp --dport 69</font> <font color="green">-j DROP</font></font></p>
