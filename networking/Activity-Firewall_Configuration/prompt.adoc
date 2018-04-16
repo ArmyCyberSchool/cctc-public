@@ -1,7 +1,5 @@
 :doctype: book
-:styledir: /home/gitlab-runner/builds/119e33fe/0/CCTC/private/
-:stylesheet: {styledir}cctc.css
-//file path above may change depending on the location
+:stylesheet: ../../cctc.css
 
 == Learning Objectives / Outcomes
 
