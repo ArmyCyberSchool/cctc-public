@@ -1,0 +1,36 @@
+= Networking Slides
+
+toc::[]
+
+== Customizing Schoolhouse Template
+
+reveal.js uses https://en.wikipedia.org/wiki/Sass_(stylesheet_language)[Sass]
+to build templates. In order to update the schoolhouse template, you will first
+need to install some packages.
+
+1. Install http://nodejs.org/[Node.js] (4.0.0 or later)
+2. Run `cd <path_to_git_repo>/networking/slides`
+3. Run `npm install`
+
+Next, edit the file link:css/theme/source/cybbh.scss[cybbh.scss] to make
+modifications to the default template. cybbh.scss is based off of the
+link:css/theme/source/white.scss[white theme] for reveal.js.
+
+*DO NOT* edit link:css/reveal.scss[reveal.scss], the
+link:css/theme/template[base template] files, or any compiled CSS files. Doing
+so will make it difficult to apply updates from reveal.js.
+
+After you have made your modifications, run the following commands:
+
+1. `cd <path_to_git_repo>/networking/slides`
+2. `+npm run build -- css-themes+`
+3. `git add css/theme/source/cybbh.scss css/theme/cybbh.css`
+4. `git commit`
+5. `git push`
+
+Additional documentation can be found
+https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md[here].
+
+== Creating Presentations
+
+TODO
