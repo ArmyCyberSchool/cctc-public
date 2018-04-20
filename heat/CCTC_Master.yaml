@@ -285,7 +285,7 @@ resources:
       diskConfig: AUTO
       flavor: cy.large
       image: Windows 10
-      name: win1
+      name: win1_net2
       networks:
         - port: { get_resource: win1_subnet_2_port }
       user_data:
