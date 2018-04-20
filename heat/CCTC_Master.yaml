@@ -287,7 +287,7 @@ resources:
       image: Windows 10
       name: win1_net2
       networks:
-        - port: { get_resource: win1_subnet_2_port }
+        - port: { get_resource: win1_subnet_1_port }
       user_data:
             str_replace:
               template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/win1.ps1" }
