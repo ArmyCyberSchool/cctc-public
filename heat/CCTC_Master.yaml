@@ -272,7 +272,7 @@ resources:
                 $password: { get_param: password }
       user_data_format: RAW
 
-  win1_subnet_2_port:
+  win1_subnet_1_port:
     properties:
       fixed_ips:
       - {ip_address: 10.1.0.3}
