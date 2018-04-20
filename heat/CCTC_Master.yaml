@@ -275,7 +275,7 @@ resources:
   win1_subnet_2_port:
     properties:
       fixed_ips:
-      - {ip_address: 10.2.0.5}
+      - {ip_address: 10.1.0.3}
       network_id: {get_resource: network_2}
       port_security_enabled: false
     type: OS::Neutron::Port
