@@ -24,10 +24,9 @@
 ** Set your fields a-e.
 *** Set your destination (use the multicast address for solicited nodes)
 **** a = IPv6()
+**** a.dst = "the destination"  (remember to do this for any fields you are setting in the below specified areas!)
 *** Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
 **** b = ICMPv6ND_RA()
-** --then--
-**** a.dst = "the destination"  (remember to do this for any fields you are setting in the below specified areas!)
 *** Set your source MAC Address (link layer address); You should have taken note of this when you checked your ifconfig.
 **** c = ICMPv6NDOptSrcLLAddr()
 *** Set your MTU (use defaults)
