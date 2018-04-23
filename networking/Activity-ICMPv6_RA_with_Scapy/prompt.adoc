@@ -52,4 +52,4 @@
 
 == Useful Resources
 
-* N/A
+https://www.ietf.org/rfc/rfc3756.txt
