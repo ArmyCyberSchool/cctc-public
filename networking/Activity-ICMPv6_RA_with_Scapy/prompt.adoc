@@ -20,7 +20,7 @@
 === Task 1) 
 
 * Some helpful information:
-** First check your configurations. You should configure a recognizable IPv6 address (hint-hint).  Edit the "interface" file in etc/network adding inet6 information.
+** First check your configurations. You should configure a recognizable IPv6 address (hint-hint).  Edit the "interfaces" file in etc/network adding inet6 information.
 ** Set your fields a-e.
 *** Set your destination (use the multicast address for solicited nodes)
 **** a = IPv6()
