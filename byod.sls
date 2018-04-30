@@ -68,7 +68,7 @@ byod:
       rCFYQaPFZHoTNxgpdUCjJTZ52P1wTL4/W0Kgk7MbmyzQxXQ=
       -----END CERTIFICATE REQUEST-----
 
-byod
+byod:
   stephen.e.griffing:
   mac: |
    -----BEGIN PGP MESSAGE-----
