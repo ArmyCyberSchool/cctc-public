@@ -10,14 +10,14 @@
 
 == Scenario
 
-* Students will need to access their net1 host. The host has 2 interfaces, but we will be looking at interface eth1 (10.1.0.2)
+* Students will need to access their Net1 host and ensure their interface eth0 (10.1.0.2) is configured properly.
 
 == Task 1
 
 . Confirm that snort has been installed/configured correctly with "snort --version"
 . Be sure to have *root privileges*, then run Snort as a daemon (-D flag), on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
 (You can check that snort is running with “ps -ef | grep snort”. You may start snort on multiple interfaces; each will create its own process.)
-. Test the default rule which will trigger on ANY icmp packet. You can send a ping from net1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
+. Test the default rule which will trigger on ANY icmp packet. You can send a ping from Net1 to or thru the router's interface and check the alerts file that snort generates. The log files can be viewed in tcpdump/wireshark.
 . Now you will practice customizing this icmp rule.
 
 == Task 2
@@ -26,7 +26,7 @@
 . You will customize the icmp.rules file and change the matching condition. The rule should only alert if an icmp packet with the hex string of "DEADBEEF" is present in the payload.
 . Change the sid to "9000000" and the msg to "COWS".
 . Run Snort as a daemon on the appropriate interface. Ensure you are sending the logs to the /var/log/snort/ directory.
-. Send a ping fro net1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
+. Send a ping fro Net1 with "BEEF" ONLY in the payload and check the alert log in snort. You should NOT see the alerts for the pings that you sent with the payload information since it didn't explicitly match.
 . Finally, go back to your host and send a ping with the "DEADBEEF" payload and ensure that snort DOES trigger for these pings. You can kill snort once you have completed this task.
 
 == Task 3
