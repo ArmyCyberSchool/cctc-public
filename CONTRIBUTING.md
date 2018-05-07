@@ -5,7 +5,7 @@
 2. Submitting Issues
 3. Professional Git Usage
 4. Your First Contribution
-5. Labels, Commits, and More
+5. GitLab Features
 
 ## Introduction
 
@@ -22,8 +22,7 @@ are worth reading:
 - [A Rebase Workflow for Git](https://randyfay.com/content/rebase-workflow-git)
 
 This repository will observe the
-[Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). If you
-are not familiar with this workflow, please read the linked tutorial.
+[Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
 
 ## Submitting Issues
 
@@ -53,29 +52,26 @@ in the Introduction for a good example of standard workflow.
 * Have multiple significant changes take place in a single commit
     * Use your best judgment on commit frequency. A good rule of thumb is make a change, test that change, make sure
     nothing broke, & commit.
-* Submit a pull request on a feature branch that is not in sync with the master branch
+* Submit a merge request on a feature branch that is not in sync with the master branch
     * Once you believe you are complete with a feature branch, make sure your local feature branch is rebased on top of
-    the head of the remote master branch, then submit your pull request.
-    [Something like this](https://coderwall.com/p/9idt5g/keep-your-feature-branch-up-to-date) might be useful to add to
-    your environment and run every time you are about to commit.
-* Use git rebase if you are not finished with your feature. If you want to incrementally
+    the head of the remote master branch, then submit your merge request. Read the Your First Contribution section for
+    more details.
 
 #### DO:
-* Write meaningful commit messages. More details on this can be found below.
+* Write meaningful commit messages. More details on this can be found
+[in this blog post](https://chris.beams.io/posts/git-commit/).
 * Use the .gitignore file to ignore unnecessary files like compiled executables, temporary files, IDE configurations,
 and other files that do not contain code or documentation.
 [Here is a good list](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) of files that should be ignored.
-* Use social platforms like Slack, GitLab, or Github to discuss changes, de-conflict pull requests, and other work that
-is necessary to develop software when working as a team. Don't expect people to understand the changes you've made
-unless you communicate with them directly.
+* Use social platforms like Slack, GitLab, or face-to-face meetings to discuss changes, de-conflict pull requests, and
+other work that is necessary to develop software when working as a team.
 
 ## Your First Contribution
 
 Let's walk through a simple example of how you go from an idea to a solution fully merged into the master branch.
 
-The first step is putting the changes into words through the GitLab issue tracker.
-[Here is a simple example template](https://github.com/Urigo/angular-meteor/blob/master/.github/ISSUE_TEMPLATE.md) for
-how to create issues related to bugs or feature requests.
+The first step is putting the changes into words through the GitLab issue tracker. Read the _Submitting Issues_ section
+for more information.
 
 Once you do this, create a new branch in GitLab by going to the repository home page, clicking on the plus sign
 drop-down menu, and selecting _New branch_. Make sure the branch name starts with the issue number and then succinctly
@@ -84,11 +80,11 @@ paraphrases the issue title.
 Next, you will need to run ```git pull``` on your local machine to pull down the new branch. Then you run
 ```git checkout <feature-branch-name>``` to start working in the new feature branch.
 
-As you modify code or documentation, at some point you will determine you've reached a good point to stop, test your
-changes, make sure nothing broke, and commit. To do so, first run ```git status``` to see what files have changed.
-If there are files listed that you don't believe should be included in the remote repository (temporary files, local
-IDE configurations, compiled binaries, etc.), add them manually to the .gitignore file. From here you can add the files
-to git by running ```git add -A```. 
+As you start making changes to your specific feature, at some point you will determine you've reached a good point to
+stop, test your changes, make sure nothing broke, and commit. To do so, first run ```git status``` to see what files
+have changed. If there are files listed that you don't believe should be included in the remote repository (temporary
+files, local IDE configurations, compiled binaries, etc.), add them manually to the .gitignore file. From here you can
+add the files to git by running ```git add -A```. 
  
 After your files have been added, you need to commit your changes to the feature branch.
 [Please read this first](https://chris.beams.io/posts/git-commit/) before you make your first commit. A well-written
@@ -103,30 +99,39 @@ branch. To do this, run the following commands in succession:
 * ```git checkout -```
     * the dash is a built-in git variable that represents the previous branch/commit you were working on. In this case,
     it is the name of our feature branch.
-* ```git fetch origin```
 * ```git rebase master```
     * Depending on what changes have been made to master since you started working on your feature, there may be merge
-    conflicts that you need to resolve. Do this before you run the rest of the commands. An easy way to avoid this is to
-    separate responsibilities and communicate who is doing what so only one person is modifying a file at any time.
-    * 
+    conflicts that you need to resolve. An easy way to avoid this is to separate responsibilities and understand who is
+    doing what so only one person at a time is modifying any given file.
 * ```git push``` the local feature branch to the remote feature branch.
 
 Now that your remote feature branch is based on top of an up-to-date master branch, you can submit a merge request in
 GitLab.
 
 To do this, navigate to your branch in GitLab and click on the _Create merge request_ button. The title should
-automatically be generated to say _Resolve "<issue_title>"_ and the description should say _Closes #<issue_number>_.
+automatically be generated to say _Resolve "<issue_title>"_ and the description should say _Closes #<issue_number>_. You
+should definitely add more to the description to explain how everything turned out, what was tested, and what to expect.
 
 The final step before you submit the merge request is to decide if you want to delete the source branch when the merge
-request is accepted. In most cases you should remove the source branch because the feature is now part of master and has
-no reason to still exist as a seperate branch.
+request is accepted. In most cases you should check the box and remove the source branch because the feature is now part
+of master and has no reason to continue to exist as a separate branch.
 
 Once you verify everything, submit the merge request. If everything looks good by at least one other person looking over
-the changes and verify that the changes don't "break the build", then it will be merged into master.
+the changes and verifying that you didn't "break the build", then it will be merged into master.
 
 If something needs to be changed in the feature branch before merging, then make the changes, commit them to the feature
 branch, and execute the above commands again to ensure your changes are always on top of an up-to-date master branch.
 Rinse and repeat as many times as necessary.
 
-## Labels, Commits, and More
+## GitLab Features
 
+GitLab has a treasure trove of features that make collaboration as painless as possible for software developers. At a
+minimum, a successful team should be using assignees, labels, and issues when deciding who works on what. 
+
+Assignees simply assigns a GitLab account to an issue. You can assign multiple individuals to an issue.
+
+Labels are useful for creating issue categories. A simple example would be having a Feature label and a Bug label to
+differentiate features and bugs. Another example specific to CCTC would be a label to differentiate between the
+different modules (Windows, Linux, Networking) and then a generic OpenStack label.
+
+Issues have been explained in-depth already and should be foundational in any team workflow.
