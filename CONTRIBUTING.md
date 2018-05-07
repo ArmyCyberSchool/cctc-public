@@ -135,3 +135,13 @@ differentiate features and bugs. Another example specific to CCTC would be a lab
 different modules (Windows, Linux, Networking) and then a generic OpenStack label.
 
 Issues have been explained in-depth already and should be foundational in any team workflow.
+
+##### GitLab IDE
+
+GitLab has a very useful web IDE that allows you to edit files directly within your browser. Changes are tracked
+automatically and you can commit to either the current branch or a new branch without touching the command line.
+
+If you are working on a system that you have not configured to your liking or you need to make changes to text documents
+that don't require any sort of testing, the web IDE is a very powerful interface. For a more in-depth list of features,
+read the documentation [here](https://docs.gitlab.com/ee/user/project/repository/web_editor.html) and
+[here](https://docs.gitlab.com/ee/user/project/web_ide/).
