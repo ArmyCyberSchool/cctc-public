@@ -4,9 +4,9 @@ echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
+apt-get -y upgrade
 pkg_array=({locate,netcat,dnsutils,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
-apt-get upgrade
 cd /
 wget https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/daq_2.0.6-1_amd64.deb
 wget https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/snort_2.9.9.0-1_amd64.deb
