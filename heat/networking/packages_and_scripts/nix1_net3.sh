@@ -3,7 +3,7 @@ echo 127.0.0.1 $(hostname) >> /etc/hosts
 echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 apt-get -y update
 pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,figlet,lolcat,ubuntu_desktop,linux-headers-($uname -r),nginx,proftpd,ethtool,ruby,ruby-dev,gem,bundler})
-for x in ${pkg_array[@]}; do apt-get build-dep $x; done
+#for x in ${pkg_array[@]}; do apt-get build-dep $x; done
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
 apt-get -y install qemu && apt-get -y install qemu
 apt-get -y upgrade
