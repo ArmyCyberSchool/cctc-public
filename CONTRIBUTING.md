@@ -109,5 +109,9 @@ branch. To do this, run the following commands in succession:
     conflicts that you need to resolve. Do this before you run the rest of the commands. An easy way to avoid this is to
     separate responsibilities and communicate who is doing what so only one person is modifying a file at any time.
     * 
-* ```git push```
+* ```git push``` the local feature branch to the remote feature branch.
 
+Now that your remote feature branch is based on top of an up-to-date master branch, you can submit a pull request in
+GitLab.
+
+To do this, 
