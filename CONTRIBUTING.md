@@ -1,6 +1,6 @@
 # Contributing to CCTC
 
-####Table of Contents
+#### Table of Contents
 1. Introduction
 2. Submitting Issues
 3. Professional Git Usage
@@ -111,7 +111,22 @@ branch. To do this, run the following commands in succession:
     * 
 * ```git push``` the local feature branch to the remote feature branch.
 
-Now that your remote feature branch is based on top of an up-to-date master branch, you can submit a pull request in
+Now that your remote feature branch is based on top of an up-to-date master branch, you can submit a merge request in
 GitLab.
 
-To do this, 
+To do this, navigate to your branch in GitLab and click on the _Create merge request_ button. The title should
+automatically be generated to say _Resolve "<issue_title>"_ and the description should say _Closes #<issue_number>_.
+
+The final step before you submit the merge request is to decide if you want to delete the source branch when the merge
+request is accepted. In most cases you should remove the source branch because the feature is now part of master and has
+no reason to still exist as a seperate branch.
+
+Once you verify everything, submit the merge request. If everything looks good by at least one other person looking over
+the changes and verify that the changes don't "break the build", then it will be merged into master.
+
+If something needs to be changed in the feature branch before merging, then make the changes, commit them to the feature
+branch, and execute the above commands again to ensure your changes are always on top of an up-to-date master branch.
+Rinse and repeat as many times as necessary.
+
+## Labels, Commits, and More
+
