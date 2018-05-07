@@ -215,7 +215,7 @@ resources:
         - port: { get_resource: nix1_net3_subnet_2_port }
       user_data:
             str_replace:
-              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/12-fix-nix1-net3-telnet/heat/networking/packages_and_scripts/nix1_net3.sh" }
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/nix1_net3.sh" }
               params: 
                 $user: { get_param: last_name }
                 $password: { get_param: password }
