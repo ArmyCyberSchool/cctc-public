@@ -10,20 +10,20 @@
 
 == Scenario
 
-* You have control over a Linux client in a network (net1-10.1.0.2). Your target is a Windows 10 client (net2-10.1.0.3) in your same IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP in necessary for communications, whereas often ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
+* You have control over a Linux client in a network (net1-10.1.0.2). Your target is a Windows 10 client (net2-10.1.0.3) in your IPv4 network. You will use scapy and leverage ARP functions to manually "discover" the host. ARP is an important protocol in host discovery. The reason behind this is that ARP is necessary for normal communications, whereas often ICMP may be blocked by a host's firewall (Windows firewall blocks ping by default...so ICMP alone would not "see" a Windows client)
 
 === Task 1) 
 
-* In Linux, turn on ARP_ACCEPT for all interfaces:
+* In Linux, as root, turn on ARP_ACCEPT for all interfaces:
+** first cat /proc/sys/net/ipv4/conf/all/arp_accept
+*** you should see 0
 ** echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
 * You can verify this by "cat /proc/sys/net/ipv4/conf/all/arp_accept", file should be 1 for enabled. If it is 0, it is still disabled.
 
 * Now:
-** First check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) than delete the entry ("arp -d 10.1.0.3" or "ip -s -s neigh flush all") As long are you don't initiate communications with the host, the ARP table should stay clear of the host's information.
+** First check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) then delete the entry ("arp -d 10.1.0.3" or "ip -s neigh flush all") As long as you don't initiate communications with the host, the ARP table should stay clear of the host's information.
 
-* You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
-
-* Before you begin, configure your Linux client to accept gratuitous arp. (location: /proc/sys/net/ipv4/conf/all/arp_accept)
+* You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries when using the arp command. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
 
 * Now to craft your request:
 ----
@@ -33,7 +33,8 @@
 +
 ----
 a=Ether()
-a.src= "Your MAC"
+a.show() *this will show you what the variable now has for defaults*
+a.src= "Your MAC Address"
 a.dst= "ARP requests are broadcast"
 a.type= The hex code for ARP
 
