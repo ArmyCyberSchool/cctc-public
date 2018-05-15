@@ -15,26 +15,35 @@
 
 == Scenario
 
-* You have control over a Linux client (10.1.0.2) in an IPv4 network. Your target is a Windows 10 client (10.1.0.3) that you have learned has the default, IPv6 enabled on the NIC. Since you are in an IPv4 network, you would like to use IPv6 between yourself and the target to help obfuscate your operation. You will use scapy and leverage IPv6 auto configuration functions to create a means of IPv6 direct communications between the Linux and Windows Machine.
+* You have control over a Linux client (10.1.0.2) in an IPv4 network. Your target is a Windows 10 client (10.1.0.3) that you have learned has the default, IPv6 enabled on the NIC. Since you are in an IPv4 network, you would like to use IPv6 between yourself and the target to help obfuscate your operation. You will use scapy and leverage IPv6 auto configuration functions to create a means of IPv6 direct communications between the Linux and Windows Machine. 
 
 === Task 1) 
 
 * Some helpful information:
-** First check your configurations. You should configure a recognizable IPv6 address (hint-hint).  Edit the "interfaces" file in etc/network adding inet6 information.
-** Set your fields a-e.
-*** Set your destination (use the multicast address for solicited nodes)
+** First check to make sure you have a valid ipv6 address by using the ip addr or ifconfig commands.
+** Set your fields a-e. *You can use the show command to verify after setting each value. For example, a.show()* 
+*** Set your destination 
 **** a = IPv6()
-**** a.dst = "the destination"  (remember to do this for any fields you are setting in the below specified areas!)
+**** a.dst = "the destination"  (use the multicast address for solicited nodes)
 *** Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
 **** b = ICMPv6ND_RA()
-*** Set your source MAC Address (link layer address); You should have taken note of this when you checked your ifconfig.
+*** Set your source MAC Address (link layer address); 
 **** c = ICMPv6NDOptSrcLLAddr()
+**** c.lladdr = "Your LL Address" (This is your MAC address. You should have taken note of this when you checked your ifconfig)
 *** Set your MTU (use defaults)
 **** d = ICMPv6NDOptMTU()
 *** Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
 **** e = ICMPv6NDOptPrefixInfo()
-** Send your packet!
-*** send(a/b/c/d/e, iface="eth1")
+**** e.prefixlen= 64
+**** e.prefix= "prefix::" (specify a prefix you would like in hex)
+
+* Go to your Windows 10 client and run ipconfig before you send the packet. You should just see a link local ipv6 address.
+
+** Go back to scapy and send your packet!
+*** send(a/b/c/d/e, iface="eth0")
+
+
+* Go to your Windows 10 client and run ipconfig after you send the packet. You should see 2 new temporary IPv6 address with the prefix you just specified.
 
 == Deliverables
 
