@@ -1,4 +1,4 @@
-heat_template_version: 2017-02-24
+heat_template_version: 2018-05-17
 
 description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 (and UTW test).
 
@@ -135,7 +135,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.large
-      image: Windows 10 - New
+      image: Windows 10
       name:
         str_replace:
           template: lastname-Windows-10
