@@ -1,0 +1,9 @@
+make_slide_demo:
+  script:
+    - cd courseware/slides
+    - bundle config --local github.https true
+    - bundle --path=.bundle/gems --binstubs=.bundle/.bin
+    - bundle exec asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0 slides.adoc
+  artifacts:
+    paths:
+    - courseware/slides/slides.html
