@@ -1,0 +1,221 @@
+heat_template_version: 2017-02-24
+
+description: Heat Template for Disorderly Domain Exer of CCTC - Provides Windows 10 and 2016 Core Server.
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default: 
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+  password:
+    type: string
+    label: Password
+    description: Set root/admin password for instances
+    hidden: true
+    default: password
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+      -  allowed_pattern: "[a-zA-Z0-9]*"
+         description: Password may not contain special characters
+
+resources:
+
+  network_0:
+    type: OS::Neutron::Net
+    properties:
+      name:
+        str_replace:
+          template: lastName_network_0
+          params:
+            lastName: { get_param: last_name }
+      admin_state_up: true
+      shared: false
+
+  subnet_0:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.200
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }
+      dns_nameservers: [10.50.255.254]
+      enable_dhcp: true
+      host_routes: []
+      ip_version: 4
+      name:
+        str_replace:
+          template: lastname_subnet_0
+          params:
+            lastname: { get_param: last_name }
+      network_id:
+        get_resource: network_0
+
+  external_router:
+    type: OS::Neutron::Router
+    properties: 
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }
+      external_gateway_info: 
+        network: public
+
+  external_router_interface_0:
+    type: OS::Neutron::RouterInterface
+    properties: 
+      router_id: { get_resource: external_router }
+      subnet_id: { get_resource: subnet_0 }
+
+  server_1_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.1
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_1:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.mega
+      image: Windows 2016
+      name:
+        str_replace:
+          template: Disorderly_Domain
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_1_subnet_0_port }
+      user_data:
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            net user Administrator PassWord12345!!
+            New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "AutoAdminLogon" -PropertyType DWord -Value 1
+            New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "DefaultUserName" -PropertyType String -Value "Administrator"
+            New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "DefaultPassword" -PropertyType String -Value 'PassWord12345!!'
+            Invoke-WebRequest -Uri "10.50.20.175:8000/windows/.hidden/Disorderly_Domain/setup1.ps1" -OutFile "C:\windows\system32\setup1.ps1"
+            Invoke-WebRequest -Uri "10.50.20.175:8000/windows/.hidden/Disorderly_Domain/setup2.ps1" -OutFile "C:\windows\system32\setup2.ps1"
+            Invoke-WebRequest -Uri "10.50.20.175:8000/windows/.hidden/Disorderly_Domain/start.ps1" -OutFile "C:\windows\system32\start.ps1"
+            Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce" "setup1" 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noprofile -sta -File "C:\windows\system32\setup1.ps1"'
+            Update-Help -Force
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+
+  server_2_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.2
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
+
+  server_2:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.large
+      image: Windows 10
+      name:
+        str_replace:
+          template: lastname-Windows-10
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_2_subnet_0_port }
+      user_data:
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
+            (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-48.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
+            & c:\firefox.exe -ms
+            (new-object System.Net.WebClient).DownloadFile('https://notepad-plus-plus.org/repository/6.x/6.9.2/npp.6.9.2.Installer.exe','C:\npp.exe')
+            & c:\npp.exe /S
+            (new-object System.Net.WebClient).DownloadFile('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi','C:\putty.msi')
+            & msiexec /i c:\putty.msi /quiet /passive
+            (new-object System.Net.WebClient).DownloadFile('http://download.documentfoundation.org/libreoffice/stable/5.4.2/win/x86_64/LibreOffice_5.4.2_Win_x64.msi','C:\LibreOffice.msi')
+            & msiexec /i c:\LibreOffice.msi /quiet /passive
+            (new-object System.Net.WebClient).DownloadFile('http://10.50.20.175:8000/windows/.hidden/Disorderly_Domain/rsat.ico','C:\windows\system32\rsat.ico')
+            (new-object System.Net.WebClient).DownloadFile('http://10.50.20.175:8000/windows/.hidden/Disorderly_Domain/S-6_SOP.pdf','C:\windows\system32\S-6_Accounts_Security_SOP.pdf')
+            (new-object System.Net.WebClient).DownloadFile('http://10.50.20.175:8000/windows/.hidden/Disorderly_Domain/PsExec.exe','C:\windows\system32\psexec.exe')
+            #
+            #----generates RSAT desktop shortcut files needed for RSAT_ShortCut.ps1
+            Write-Output '$WshShell = New-Object -ComObject WScript.Shell' > C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output '$Shortcut = $WshShell.CreateShortcut("$Home\Desktop\RSAT Install.lnk")' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output '$Shortcut.TargetPath = "http://goo.gl/J4OguI"' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output '$Shortcut.IconLocation = "C:\windows\system32\rsat.ico"' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output '$Shortcut.Save()' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output 'Copy-Item -Path C:\Windows\System32\S-6_Accounts_Security_SOP.pdf -Destination C:\Users\Administrator\Desktop' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Write-Output 'Update-Help -Force' >> C:\Windows\System32\RSAT_ShortCut.ps1
+            Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+            #
+            #----alters GPO so Administrator can access web
+            secedit /export /cfg c:\secpol.cfg
+            (gc C:\secpol.cfg).replace("MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ScForceOption=4,0", "MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\FilterAdministratorToken=4,1") | Out-File -File C:\secpol.cfg
+            secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg
+            rm -force c:\secpol.cfg -confirm:$false
+            #
+            #----alters UIPI key so Administrator can acces web
+            Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -name "UIPI" -value "0x00000001(1)"
+            #
+            #----generates RSAT desktop shortcut on Administrator's desktop by running RSAT_ShortCut.ps1 on reboot
+            Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" -name "shortcut" 'c:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -sta -File "c:\Windows\System32\RSAT_ShortCut.ps1"'
+            net user /add $user $password /y
+            net localgroup administrators /add $user
+            net user administrator password
+            net user administrator /active:yes
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
