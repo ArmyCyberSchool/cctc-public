@@ -1,5 +1,5 @@
-heat_template_version: 2018-05-17
-
+heat_template_version: 2017-02-24
+# last updated 2018-05-25
 description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 (and UTW test).
 
 parameters:
