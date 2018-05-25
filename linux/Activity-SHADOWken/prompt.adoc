@@ -11,6 +11,7 @@ image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left
 ** CCNI003.002 - Describe file system ownership properties
 ** CCNI003.003 - Discuss file system permissions
 
+
 == Learning Outcomes
 
 [square]
