@@ -26,7 +26,7 @@ chmod +x /usr/share/misc/{check.pyc,banner.sh,check_script.sh}
 
 # ----- ENABLES SSH
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
 systemctl restart ssh
 
