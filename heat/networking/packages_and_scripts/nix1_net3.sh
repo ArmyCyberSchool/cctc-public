@@ -4,8 +4,49 @@ echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 apt-get update
 apt-get -y upgrade
 export DEBIAN_FRONTEND=noninteractive
-pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,figlet,lolcat,ubuntu_desktop,nginx,proftpd,ethtool,ruby,ruby-dev,gem,bundler,qemu})
+pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,tigervnc-standalone-server,netcat,firefox,figlet,lolcat,ubuntu_desktop,nginx,proftpd,ethtool,ruby,ruby-dev,gem,bundler,qemu})
 for x in ${pkg_array[@]}; do apt-get install -y ${x}; done
+
+# ----- Makes rdp work over vnc by default
+cd /etc/xrdp
+cat <<EOF | sudo patch -p1
+--- a/xrdp.ini     2017-06-19 14:05:53.290490260 +0900
++++ b/xrdp.ini  2017-06-19 14:11:17.788557402 +0900
+@@ -147,15 +147,6 @@ tcutils=true
+ ; Session types
+ ;
+
+-[Xorg]
+-name=Xorg
+-lib=libxup.so
+-username=ask
+-password=ask
+-ip=127.0.0.1
+-port=-1
+-code=20
+-
+ [Xvnc]
+ name=Xvnc
+ lib=libvnc.so
+@@ -166,6 +157,15 @@ port=-1
+ #xserverbpp=24
+ #delay_ms=2000
+
++[Xorg]
++name=Xorg
++lib=libxup.so
++username=ask
++password=ask
++ip=127.0.0.1
++port=-1
++code=20
++
+ [console]
+ name=console
+ lib=libvnc.so
+EOF
+sudo systemctl restart xrdp
+
 gem install lolcat bundler
 updatedb
 mandb
@@ -103,7 +144,7 @@ echo "This is a file hosted via ftp and accessible via anonymous login on H3." >
 #Disable TCP Offloading
 cat <<EOF > /etc/network/if-up.d/tcpoffload
 #!/bin/bash
-if [ $IFACE = \"eth1\" ]; then
+if [ \$IFACE = \"eth1\" ]; then
     /sbin/ethtool -K eth1 tx off sg off tso off
 fi
 EOF
