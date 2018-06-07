@@ -8,6 +8,8 @@ apt-get update
 apt-get -y upgrade
 pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
+
+# ----- Makes rdp work with VNC by default
 cd /etc/xrdp
 cat <<EOF | sudo patch -p1
 --- a/xrdp.ini     2017-06-19 14:05:53.290490260 +0900
@@ -46,6 +48,7 @@ cat <<EOF | sudo patch -p1
  lib=libvnc.so
 EOF
 sudo systemctl restart xrdp
+
 mkdir /usr/share/CCTC
 chmod 777 /usr/share/CCTC
 cd /usr/share/CCTC
