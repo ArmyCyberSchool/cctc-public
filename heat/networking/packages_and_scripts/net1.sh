@@ -6,8 +6,49 @@ export DEBIAN_FRONTEND=noninteractive
 echo "deb http://deb.debian.org/debian jessie-backports main contrib non-free" >> /etc/apt/sources.list
 apt-get update
 apt-get -y upgrade
-pkg_array=({libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev})
+pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
+
+# ----- Makes rdp work with VNC by default
+cd /etc/xrdp
+cat <<EOF | sudo patch -p1
+--- a/xrdp.ini     2017-06-19 14:05:53.290490260 +0900
++++ b/xrdp.ini  2017-06-19 14:11:17.788557402 +0900
+@@ -147,15 +147,6 @@ tcutils=true
+ ; Session types
+ ;
+
+-[Xorg]
+-name=Xorg
+-lib=libxup.so
+-username=ask
+-password=ask
+-ip=127.0.0.1
+-port=-1
+-code=20
+-
+ [Xvnc]
+ name=Xvnc
+ lib=libvnc.so
+@@ -166,6 +157,15 @@ port=-1
+ #xserverbpp=24
+ #delay_ms=2000
+
++[Xorg]
++name=Xorg
++lib=libxup.so
++username=ask
++password=ask
++ip=127.0.0.1
++port=-1
++code=20
++
+ [console]
+ name=console
+ lib=libvnc.so
+EOF
+sudo systemctl restart xrdp
+
 mkdir /usr/share/CCTC
 chmod 777 /usr/share/CCTC
 cd /usr/share/CCTC
