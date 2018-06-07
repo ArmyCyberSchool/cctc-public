@@ -3,7 +3,7 @@ echo 127.0.0.1 $(hostname) >> /etc/hosts
 echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y update
-pkg_array=({locate,dnsutils,ethtool,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,lolcat})
+pkg_array=({locate,dnsutils,ethtool,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,tiger-vnc-standalone-server,netcat,firefox,lolcat})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
 apt-get -y install qemu && apt-get -y install qemu
 apt-get -y upgrade
@@ -11,6 +11,46 @@ gem install lolcat
 updatedb
 mandb
 mkdir /usr/share/class
+
+# ----- Makes rdp work over vnc by default
+cd /etc/xrdp
+cat <<EOF | sudo patch -p1
+--- a/xrdp.ini     2017-06-19 14:05:53.290490260 +0900
++++ b/xrdp.ini  2017-06-19 14:11:17.788557402 +0900
+@@ -147,15 +147,6 @@ tcutils=true
+ ; Session types
+ ;
+
+-[Xorg]
+-name=Xorg
+-lib=libxup.so
+-username=ask
+-password=ask
+-ip=127.0.0.1
+-port=-1
+-code=20
+-
+ [Xvnc]
+ name=Xvnc
+ lib=libvnc.so
+@@ -166,6 +157,15 @@ port=-1
+ #xserverbpp=24
+ #delay_ms=2000
+
++[Xorg]
++name=Xorg
++lib=libxup.so
++username=ask
++password=ask
++ip=127.0.0.1
++port=-1
++code=20
++
+ [console]
+ name=console
+ lib=libvnc.so
+EOF
+sudo systemctl restart xrdp
 
 # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
 wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.181/linux/ -P /usr/share/class/
