@@ -6,6 +6,10 @@ apt-get -y upgrade
 export DEBIAN_FRONTEND=noninteractive
 pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,tigervnc-standalone-server,netcat,firefox,figlet,lolcat,ubuntu_desktop,nginx,proftpd,ethtool,ruby,ruby-dev,gem,bundler,qemu})
 for x in ${pkg_array[@]}; do apt-get install -y ${x}; done
+gem install lolcat bundler
+updatedb
+mandb
+mkdir /usr/share/class
 
 # ----- Makes rdp work over vnc by default
 cd /etc/xrdp
@@ -46,11 +50,6 @@ cat <<EOF | sudo patch -p1
  lib=libvnc.so
 EOF
 sudo systemctl restart xrdp
-
-gem install lolcat bundler
-updatedb
-mandb
-mkdir /usr/share/class
 
 # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
 wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.181/linux/ -P /usr/share/class/
