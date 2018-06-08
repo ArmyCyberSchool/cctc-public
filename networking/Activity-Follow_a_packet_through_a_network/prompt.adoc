@@ -54,7 +54,7 @@
 
 *** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend to have additional protocols selected as this will populate alot of extra information.
 
-*** To start a packet capture, select "Auto Capture/Play" in the "Play Controls" window. Use the "Back" and "Capture/Forward" to move forward and backwards. 
+*** To start a packet capture, ensure you are in "Simulation" and have edited the filter for the proper protocol(s). After you perform an action, you can capture 1 packet at a time by using the "Capture/Forward" or "Back" to move forward and backwards. To start capturing all packets you can select "Auto Capture/Play" in the "Play Controls" window.
 
 *** In the "Event List" window you will see your packet captures. Click them to view the packet contents. On some events you will see "Inbound" and "Outbound" tabs to identify the direction of traffic.
 
