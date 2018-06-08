@@ -18,11 +18,9 @@
 
 * The network provided is a fully functioning network with many different protocols working to function.
 
-* Device usernames will be "CCTC"
+* Router login usernames will be "cctc"
 
-* Email usernames will be the same as the computer name "instructorX" "studentX"
-
-* All passwords are "password"
+* All device passwords for this Activity is "password"
 
 
 === Task 1)
@@ -66,23 +64,114 @@
 
 . DHCP
 
-** Click to open any of the Instructor or Student laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". After you collected all the data packets. Describe in detail the steps of the process from the data you collected in regards to Layer 2 and Layer 3 from each device it traversed. 
+** Click to open any one of the Instructor laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". Follow the traffic from the host to the DHCP server.
 
-** Repeat previous step on each of the Student, Instructor, and Guest laptops. What differences did you notice between each of the DHCP requests from each of the systems?
+*** What type of traffic was initated by the Instructor laptop?
 
-. ICMP
+*** What is the destination MAC address of the inital packet sent by the host?
 
-** From any Instructor laptop, ping the IP address of any of the other Instructor laptops. What did you notice about the flow of the traffic?
+*** What is the destination IP address of the inital packet sent by the host?
+
+*** What is the source and destination ports?
+
+*** Where the Ether Type value would normally be, what did the value change to when it leaves the first switch?
+
+*** Which VLAN was it assigned to?
+
+*** What did the switch do with this traffic?
+
+*** What what did the VLAN change to when it left the router?
+
+*** What did the destination IP address change to?
+
+*** What caused this to happen?
+
+*** What did the switch change the Type filed to as it left the switch?
+
+*** What response did the server give?
+
+*** What response did the instructor laptop give to respond to the traffic from the DHCP server?
+
+*** What was the final response from the DHCP server?
+
+*** What network are the Instructor laptops assigned to?
+
+** Repeat previous step on each of the Student, Instructor, and Guest laptops. 
+
+*** What VLAN are the Students assigned to?
+
+*** What Network are the Students assigned to?
+
+*** What VLAN are the Guest assigned to?
+
+*** What Network are the Guests assigned to?
+
+. ICMP and ARP
+
+** From any Instructor laptop, ping the IP address of any of the other Instructor laptops.
+
+*** What protocol initiated before the ICMP packet started?
+
+*** What was the Type value?
+
+*** What was the target MAC address?
+
+*** What was the response from the destination device?
+
+*** What informaiton was provided from the destination device?
+
+*** What was the Type and Code values of the Ping that was sent?
+
+*** What was the Type and Code Values of the response from the destination?
 
 ** From a different Instructor laptop, ping the IP address of any of the Student laptops. What diferences did you notice about the flow of traffic?
 
-** From any of the Guest laptops, ping any Instructor or Student system. What differences did you notice?
+*** Who responded to the ARP request?
+
+** From any of the Guest laptops, ping any Instructor or Student system. 
+
+*** What type of frame did it use over the Wireless network?
 
 . TCP, HTTP, HTTPS, and DNS
 
-** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". What traffic was sent first? Describe the data flow. What type of traffic was sent after? Describe that flow.
+** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". 
 
-** Browse to "https://www.cctc.mil". What differences did you notice about this?
+*** What type of traffic did the host initate first?
+
+*** What was the destination port?
+
+*** What server did that traffic goto?
+
+*** What was the destination IP?
+
+*** What is the IP protocol number?
+
+*** What was the response from the destination device?
+
+*** What type of traffic did the host iniated second? 
+
+*** What was the destination port?
+
+*** What server did that traffic goto?
+
+*** What was the destination IP?
+
+*** What is the IP protocol number?
+
+*** What was the FLAGS set to as it left the host?
+
+*** What was the FLAGS set to as the response left the destination?
+
+*** What was the FLAGS set to when the host gave its final reponse?
+
+*** What type of traffic did the host initate third?
+
+*** What is the FLAGS set to?
+
+** Browse to "https://www.cctc.mil". 
+
+*** What was the destination port that is used in this case?
+
 
 . SMTP and POP3
 
@@ -114,17 +203,17 @@
 
 === Task 3)
 
-. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rouge" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
+. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rogue" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
 
-** Click on the "Rouge" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet0/20". 
+** Click on the "Rogue" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet0/20". 
 
 *** What eventually happened? 
 
-*** Can the Rouge PC attain an IP address? 
+*** Can the Rogue PC attain an IP address? 
 
 *** How was this able to happen?
 
-*** What happens if you connected the "Rouge" switch to any other interface?
+*** What happens if you connected the "Rogue" switch to any other interface?
 
 
 
