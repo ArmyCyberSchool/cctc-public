@@ -3,7 +3,7 @@ echo 127.0.0.1 $(hostname) >> /etc/hosts
 echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 export DEBIAN_FRONTEND=noninteractive
 apt-get -y update
-pkg_array=({locate,dnsutils,ethtool,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,tiger-vnc-standalone-server,netcat,firefox,lolcat})
+pkg_array=({locate,dnsutils,ethtool,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,tigervnc-standalone-server,netcat,firefox,lolcat})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
 apt-get -y install qemu && apt-get -y install qemu
 apt-get -y upgrade
