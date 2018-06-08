@@ -32,11 +32,15 @@
 
 ** Navigate to: https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network on your Net1. 
 
-** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username" (recommended)
+** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
 
-. Startup Packet Tracer on Net1. From Net 1 on the VTA, open a Terminal Window and type "packettracer".
+. Startup Packet Tracer on Net1. 
 
-** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer". (recommended)
+** Open Net 1 on the VTA, open a Terminal Window and type "packettracer".
+
+** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer".
+
+** Another option is to connect to your Net1 with xfreerdp. "xfreerdp /v:1{net1 floating ip}  /u:username /p:password /size:1920x1000  + clipboard"
 
 . Upon startup you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confim Guest" to open the program. A webpage will open but you can close this window.
 
