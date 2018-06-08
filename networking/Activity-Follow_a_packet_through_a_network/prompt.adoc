@@ -62,7 +62,7 @@
 
 === Task 2)
 
-* Ensure that you are in "Simulation" mode for this Acitivty. Select "Auto Capture/Play" prior to each step to capture the traffic.
+* Ensure that you are in "Simulation" mode for this Acitivty.
 
 . DHCP
 
