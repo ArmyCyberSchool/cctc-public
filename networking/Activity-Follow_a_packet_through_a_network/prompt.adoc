@@ -1,7 +1,7 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - Follow a Packet Trhough a Network
+= Activity - Follow a Packet Through a Network
 
 == Learning Objectives
 
@@ -30,13 +30,13 @@
 
 . Download the CCTC.pkt file.
 
-** Navigate to: "https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network" on your Net1. 
+** Navigate to: https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network on your Net1. 
 
-** Optionally you can download to you host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username"
+** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username" (recommended)
 
-. Startup Packet Tracer on Net1. Open a Terminal Window and type "packettracer".
+. Startup Packet Tracer on Net1. From Net 1 on the VTA, open a Terminal Window and type "packettracer".
 
-** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer".
+** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer". (recommended)
 
 . Upon startup you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confim Guest" to open the program. A webpage will open but you can close this window.
 
@@ -105,30 +105,29 @@
 
 ** What types of routed protocols do you see running?
 
-** What types of routing protocols are running. What information can you gather from the data traffic?
+** What types of routing protocols are running? What information can you gather from the data traffic?
 
 
 === Task 3)
 
-. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rougue" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
+. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rouge" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
 
-** Click on the "Rougue" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet
- 0/20". 
+** Click on the "Rouge" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet0/20". 
 
 *** What eventually happened? 
 
-*** Can the Rougue PC attain an IP address? 
+*** Can the Rouge PC attain an IP address? 
 
 *** How was this able to happen?
 
-*** What happens if you connected the "Rougue" switch to any other interface?
+*** What happens if you connected the "Rouge" switch to any other interface?
 
 
 
 == Deliverables
 
-* . Follow through the Activity and document each answer to the questions in a text editor. 
-* . Be prepared to discuss your discoveries with the class. 
+* Follow through the Activity and document each answer to the questions in a text editor. 
+* Be prepared to discuss your discoveries with the class. 
 
 == Hints
 
@@ -136,10 +135,7 @@
 
 == Challenge
 
-. 
-. 
-. 
-. 
+* N/A
 
 == Useful Resources
 
