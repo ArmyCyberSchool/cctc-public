@@ -1,0 +1,146 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Follow a Packet Trhough a Network
+
+== Learning Objectives
+
+* SKILL CCNE001: Understand Switching Technologies
+* SKILL CCNE002: Understand Routing Technologies
+* SKILL CCNE003: Understanging Static vs Dynamic Routing
+* SKILL CCNE004: Understanding Distance Vector vs Link State Routing Protocols
+
+== Learning Outcomes
+
+* N/A
+
+== Scenario
+
+* The network provided is a fully functioning network with many different protocols working to function.
+
+* Device usernames will be "CCTC"
+
+* Email usernames will be the same as the computer name "instructorX" "studentX"
+
+* All passwords are "password"
+
+
+=== Task 1)
+
+
+. Download the CCTC.pkt file.
+
+** Navigate to: "https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network" on your Net1. 
+
+** Optionally you can download to you host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username"
+
+. Startup Packet Tracer on Net1. Open a Terminal Window and type "packettracer".
+
+** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer".
+
+. Upon startup you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confim Guest" to open the program. A webpage will open but you can close this window.
+
+. From Packet Tracer, open the CCTC.pkt file that you downloaded. 
+
+. Upon opening, the virtual systems will boot up and start communicating. Give it a few moments for the Bootup, Spanning-tree and DHCP to complete.
+
+. During this Activity:
+
+*** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
+
+*** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend to have additional protocols selected as this will populate alot of extra information.
+
+*** To start a packet capture, select "Auto Capture/Play" in the "Play Controls" window. Use the "Back" and "Capture/Forward" to move forward and backwards. 
+
+*** In the "Event List" window you will see your packet captures. Click them to view the packet contents. On some events you will see "Inbound" and "Outbound" tabs to identify the direction of traffic.
+
+*** You can click to open any of the items on the network. The tab you will generally be using is the "Desktop" tab. On the Routers and Switches you will use the "CLI" tab.
+
+=== Task 2)
+
+* Ensure that you are in "Simulation" mode for this Acitivty. Select "Auto Capture/Play" prior to each step to capture the traffic.
+
+. DHCP
+
+** Click to open any of the Instructor or Student laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". After you collected all the data packets. Describe in detail the steps of the process from the data you collected in regards to Layer 2 and Layer 3 from each device it traversed. 
+
+** Repeat previous step on each of the Student, Instructor, and Guest laptops. What differences did you notice between each of the DHCP requests from each of the systems?
+
+. ICMP
+
+** From any Instructor laptop, ping the IP address of any of the other Instructor laptops. What did you notice about the flow of the traffic?
+
+** From a different Instructor laptop, ping the IP address of any of the Student laptops. What diferences did you notice about the flow of traffic?
+
+** From any of the Guest laptops, ping any Instructor or Student system. What differences did you notice?
+
+. TCP, HTTP, HTTPS, and DNS
+
+** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". What traffic was sent first? Describe the data flow. What type of traffic was sent after? Describe that flow.
+
+** Browse to "https://www.cctc.mil". What differences did you notice about this?
+
+. SMTP and POP3
+
+** Open any 2 laptops and place the windows side by side. Goto Desktop --> Email on each. On one laptop, click "Compose". In the "To:" block, enter the other laptop username and number then "@cctc.mil". (i.e. instructor1@cctc.mil or student4@cctc.mil). Enter any Subject and body then click "Send". Follow the traffic. On the other laptop click "Receive" and then follow the traffic. 
+
+. Telnet, SSH, TACACS+
+
+** From any laptop, Goto Desktop --> Command Prompt. 
+
+*** Telent to that computers local gateway IP address. What happened? Why?
+
+*** Try to SSH to the same IP (ssh -l cctc {ip address}). Follow the traffic. Eventually it will ask for the password to continue. Then continue to follow traffic. What happened?
+
+. WAN access with ICMP and HTTP/HTTPS
+
+** From any laptop. Ping the ip address of any of the webservers across the "internet". Follow the traffic. What happened specifically at the CCTC_RTR in regards to the IP address? What happened to the traffic as it flowed from Cyber_CTC to the WAN? What was different about the traffic as it flowed through the internet and then to the remote site?
+
+** Browse to each of the seperate external websites.
+
+
+=== Task 2)
+
+. Monitor all traffic. 
+
+** What types of routed protocols do you see running?
+
+** What types of routing protocols are running. What information can you gather from the data traffic?
+
+
+=== Task 3)
+
+. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rougue" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
+
+** Click on the "Rougue" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet
+ 0/20". 
+
+*** What eventually happened? 
+
+*** Can the Rougue PC attain an IP address? 
+
+*** How was this able to happen?
+
+*** What happens if you connected the "Rougue" switch to any other interface?
+
+
+
+== Deliverables
+
+* . Follow through the Activity and document each answer to the questions in a text editor. 
+* . Be prepared to discuss your discoveries with the class. 
+
+== Hints
+
+* N/A
+
+== Challenge
+
+. 
+. 
+. 
+. 
+
+== Useful Resources
+
+* N/A
