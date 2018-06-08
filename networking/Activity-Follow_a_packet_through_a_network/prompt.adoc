@@ -30,7 +30,7 @@
 
 . Download the CCTC.pkt file.
 
-** Navigate to: https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network on your Net1. 
+** Download: https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
 
 ** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
 
