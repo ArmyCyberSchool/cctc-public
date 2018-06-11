@@ -187,60 +187,59 @@
 
 ** Open any 2 laptops and place the windows side by side. Goto Desktop --> Email on each. On one laptop, click "Compose". In the "To:" block, enter the other laptop username and number then "@cctc.mil". (i.e. instructor1@cctc.mil or student4@cctc.mil). Enter any Subject and body then click "Send". Follow the traffic. 
 
-*** What server did the laptop initiate a connection with?
+*** 1. What server did the laptop initiate a connection with?
 
-*** What destination port number did it attempt to connect to?
+*** 2. What destination port number did it attempt to connect to?
 
-*** What protocol did it use to sent the email?
+*** 3. What protocol did it use to sent the email?
 
 ** Click "Reset Simulation". Then on the receiving laptop click "Receive".
 
-*** After the 3-way handshake, what portocol did it use to retrieve the email?
+*** 4. After the 3-way handshake, what portocol did it use to retrieve the email?
 
-*** What destination port number did it use?
+*** 5. What destination port number did it use?
 
 
 . Telnet, SSH, TACACS+
 
 ** From any laptop, Goto Desktop --> Command Prompt. Telent to that computers local gateway IP address.
 
-*** What port destination port did the laptop use to connect?
+*** 1. What port destination port did the laptop use to connect?
 
-*** After the 3-way handshake, what FLAG(s) send back to host?
+*** 2. After the 3-way handshake, what FLAG(s) send back to host?
 
-*** Why did you get this flag?
+*** 3. Why did you get this flag?
 
 ** Try to SSH to the same IP (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake it will eventually ask for the password to continue. 
 
-*** What FLAG(s) were set to send the password?
+*** 4. What FLAG(s) were set to send the password?
 
-*** What protocol was used to send the password?
+*** 5. What port and protocol was used to send the password?
 
-*** What device did the Gateway communicate with afterwards?
+*** 6. What device did the Gateway communicate with afterwards?
 
-*** What protocol did it use to communicate?
+*** 7. What protocol and port did it use to communicate?
 
-*** What destination port number did it use?
 
 
 . WAN access and HTTP/HTTPS
 
 ** From any laptop. Browse to www.comcast.com external website. Follow the traffic.
 
-*** What Layer 2 protocol is used over the Internet past the ISPs?
+*** 1. What Layer 2 protocol is used over the Internet past the ISPs?
 
-*** What address (decimal) did the ISP use to communicate to the internet?
+*** 2. What address (decimal) did the ISP use to communicate to the internet?
 
-*** What address (decimal) did the Internet use to communicate to Comcast?
+*** 3. What address (decimal) did the Internet use to communicate to Comcast?
 
 
 === Task 2)
 
 . Monitor all traffic. 
 
-** What types of routed protocols do you see running?
+** 1. What types of routed protocols do you see running?
 
-** What types of routing protocols are running? 
+** 2. What types of routing protocols are running? 
 
 
 === Task 3)
@@ -249,17 +248,17 @@
 
 ** Click on the "Rogue" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet0/20". 
 
-*** What happened to the connection? 
+*** 1. What happened to the connection? 
 
-*** Can the Rogue PC attain an IP address? 
+*** 2. Can the Rogue PC attain an IP address? 
 
-*** What protocol/feature made this happen?
+*** 3. What protocol/feature made this happen?
 
-*** Connect the "Rogue" switch to any other interface. What happened to the connection?
+*** 4. Connect the "Rogue" switch to any other interface. What happened to the connection?
 
-*** Can the Rogue PC attain an IP address? 
+*** 5. Can the Rogue PC attain an IP address? 
 
-*** What protocol/feature made this happen?
+*** 6. What protocol/feature made this happen?
 
 
 == Deliverables
