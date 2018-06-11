@@ -86,7 +86,7 @@
 
 *** What caused this to happen?
 
-*** What did the switch change the Type filed to as it left the switch?
+*** What did the switch change the Type field to as it left the switch?
 
 *** What response did the server give?
 
