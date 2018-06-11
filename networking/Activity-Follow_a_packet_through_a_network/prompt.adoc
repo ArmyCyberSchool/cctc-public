@@ -66,71 +66,69 @@
 
 ** Click to open any one of the Instructor laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". Follow the traffic from the host to the DHCP server.
 
-*** What type of traffic was initated by the Instructor laptop?
+*** 1. What type of traffic was initated by the Instructor laptop?
 
-*** What is the destination MAC address of the inital packet sent by the host?
+*** 2. What is the destination MAC address of the inital packet sent by the host?
 
-*** What is the destination IP address of the inital packet sent by the host?
+*** 3. What is the destination IP address of the inital packet sent by the host?
 
-*** What is the source and destination ports?
+*** 4. What is the source and destination ports?
 
-*** Where the Ether Type value would normally be, what did the value change to when it leaves the first switch?
+*** 5. Where the Ether Type value would normally be, what did the value change to when it leaves the first switch?
 
-*** Which VLAN was it assigned to?
+*** 6. Which VLAN was it assigned to?
 
-*** What did the switch do with this traffic?
+*** 7. What did the switch do with this traffic?
 
-*** What what did the VLAN change to when it left the router?
+*** 8. What what did the VLAN change to when it left the router?
 
-*** What did the destination IP address change to?
+*** 9. What did the destination IP address change to?
 
-*** What caused this to happen?
+*** 10. What caused this to happen?
 
-*** What did the switch change the Type field to as it left the switch?
+*** 11. What did the switch change the Type field to as it left the switch?
 
-*** What response did the server give?
+*** 12. What response did the server give?
 
-*** What response did the instructor laptop give to respond to the traffic from the DHCP server?
+*** 13. What response did the instructor laptop give to respond to the traffic from the DHCP server?
 
-*** What was the final response from the DHCP server?
+*** 14. What was the final response from the DHCP server?
 
-*** What network are the Instructor laptops assigned to?
+*** 15. What network are the Instructor laptops assigned to?
 
 ** Repeat previous step on each of the Student, Instructor, and Guest laptops. 
 
-*** What VLAN are the Students assigned to?
+*** 16. hat VLAN are the Students assigned to?
 
-*** What Network are the Students assigned to?
+*** 17. What Network are the Students assigned to?
 
-*** What VLAN are the Guest assigned to?
+*** 18. What VLAN are the Guest assigned to?
 
-*** What Network are the Guests assigned to?
+*** 19. What Network are the Guests assigned to?
 
 . ICMP and ARP
 
 ** From any Instructor laptop, ping the IP address of any of the other Instructor laptops.
 
-*** What protocol initiated before the ICMP packet started?
+*** 1. What protocol initiated before the ICMP packet started?
 
-*** What was the Type value?
+*** 2. What was the Type value?
 
-*** What was the target MAC address?
+*** 3. What was the target MAC address?
 
-*** What was the response from the destination device?
+*** 4. What was the response from the destination device?
 
-*** What informaiton was provided from the destination device?
+*** 5. What was the Type and Code values of the Ping that was sent?
 
-*** What was the Type and Code values of the Ping that was sent?
+*** 6. What was the Type and Code Values of the response from the destination?
 
-*** What was the Type and Code Values of the response from the destination?
+** From a different Instructor laptop, ping the IP address of any of the Student laptops.
 
-** From a different Instructor laptop, ping the IP address of any of the Student laptops. What diferences did you notice about the flow of traffic?
-
-*** Who responded to the ARP request?
+*** 7. Who responded to the ARP request?
 
 ** From any of the Guest laptops, ping any Instructor or Student system. 
 
-*** What type of frame did it use over the Wireless network?
+*** 8. What type of frame did it use over the Wireless network?
 
 
 . NAT
@@ -146,41 +144,43 @@
 
 ** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". 
 
-*** What type of traffic did the host initate first?
+*** 1. What type of traffic did the host initate first?
 
-*** What was the destination port?
+*** 2. What was the destination port?
 
-*** What server did that traffic goto?
+*** 3. What server did that traffic goto?
 
-*** What was the destination IP?
+*** 4. What was the destination IP?
 
-*** What is the IP protocol number?
+*** 5. What is the IP protocol number?
 
-*** What was the response from the destination device?
+*** 6. What was the response from the destination device?
 
-*** What type of traffic did the host iniated second? 
+*** 7. What type of traffic did the host iniated second? 
 
-*** What was the destination port?
+*** 8. What was the destination port?
 
-*** What server did that traffic goto?
+*** 9. What server did that traffic goto?
 
-*** What was the destination IP?
+*** 10. What was the destination IP?
 
-*** What is the IP protocol number?
+*** 11. What is the IP protocol number?
 
-*** What was the FLAG(s) set to as it left the host?
+*** 12. What was the FLAG(s) set to as it left the host?
 
-*** What was the FLAG(s) set to as the response left the destination?
+*** 13. What was the FLAG(s) set to as the response left the destination?
 
-*** What was the FLAG(s) set to when the host gave its final reponse?
+*** 14. What was the FLAG(s) set to when the host gave its final reponse?
 
-*** What type of traffic did the host initate third?
+*** 15. What type of traffic did the host initate third?
 
-*** What is the FLAG(s) set to?
+*** 16. What is the FLAG(s) set to?
+
+*** 17. What is the FLAG(s) set to once communication was completed?
 
 ** Browse to "https://www.cctc.mil". 
 
-*** What was the destination port that is used in this case?
+*** 18. What was the destination port that is used in this case?
 
 
 . SMTP and POP3
