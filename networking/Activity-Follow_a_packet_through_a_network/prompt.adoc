@@ -7,7 +7,7 @@
 
 * SKILL CCNE001: Understand Switching Technologies
 * SKILL CCNE002: Understand Routing Technologies
-* SKILL CCNE003: Understanging Static vs Dynamic Routing
+* SKILL CCNE003: Understanding Static vs Dynamic Routing
 * SKILL CCNE004: Understanding Distance Vector vs Link State Routing Protocols
 
 == Learning Outcomes
@@ -40,41 +40,41 @@
 
 ** Another option is to connect to your Net1 with xfreerdp. "xfreerdp /v:{net1 floating ip}  /u:username /p:password /size:1920x1000  + clipboard"
 
-. Upon startup you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confim Guest" to open the program. A webpage will open but you can close this window.
+. Upon startup, you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confirm Guest" to open the program. A webpage will open but you can close this window.
 
 . From Packet Tracer, open the CCTC.pkt file that you downloaded. 
 
-. Upon opening, the virtual systems will boot up and start communicating. Give it a few moments for the Bootup, Spanning-tree and DHCP to complete.
+. Upon opening, the virtual systems will boot up and start communicating. Give it a few moments for the Bootup, Spanning-tree, and DHCP to complete.
 
 . During this Activity:
 
 *** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
 
-*** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend to have additional protocols selected as this will populate alot of extra information.
+*** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend having additional protocols selected as this will populate a lot of extra information.
 
-*** To start a packet capture, ensure you are in "Simulation" and have edited the filter for the proper protocol(s). After you perform an action, you can capture 1 packet at a time by using the "Capture/Forward" or "Back" to move forward and backwards. To start capturing all packets you can select "Auto Capture/Play" in the "Play Controls" window.
+*** To start a packet capture, ensure you are in "Simulation" and have edited the filter for the proper protocol(s). After you perform an action, you can capture 1 packet at a time by using the "Capture/Forward" or "Back" to move forward and backward. To start capturing all packets you can select "Auto Capture/Play" in the "Play Controls" window.
 
-*** In the "Event List" window you will see your packet captures. Click them to view the packet contents. On some events you will see "Inbound" and "Outbound" tabs to identify the direction of traffic.
+*** In the "Event List" window you will see your packet captures. Click them to view the packet contents. On some events, you will see "Inbound" and "Outbound" tabs to identify the direction of traffic.
 
-*** You can click to open any of the items on the network. The tab you will generally be using is the "Desktop" tab. On the Routers and Switches you will use the "CLI" tab.
+*** You can click to open any of the items on the network. The tab you will generally be using is the "Desktop" tab. On the Routers and Switches, you will use the "CLI" tab.
 
 === Task 2)
 
-* Ensure that you are in "Simulation" mode for this Acitivty.
+* Ensure that you are in "Simulation" mode for this Activity.
 
 . DHCP
 
 ** Click to open any one of the Instructor laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". Follow the traffic from the host to the DHCP server.
 
-*** 1. What type of traffic was initated by the Instructor laptop?
+*** 1. What type of traffic was initiated by the Instructor laptop?
 
-*** 2. What is the destination MAC address of the inital packet sent by the host? (specify response in the xxxx.xxxx.xxxx format)
+*** 2. What is the destination MAC address of the initial packet sent by the host? (specify response in the xxxx.xxxx.xxxx format)
 
-*** 3. What is the destination IP address of the inital packet sent by the host? (Specify in the x.x.x.x format)
+*** 3. What is the destination IP address of the initial packet sent by the host? (Specify in the x.x.x.x format)
 
-*** 4. What is the protocol, source, and destination ports? (pick 3)
+*** 4. What are the protocol, source, and destination ports? (pick 3)
 
-*** 5. Where the Ether Type value would normally be, what did the value change to when it leaves the first switch? (specify answer in the proper hex format 0xNNNN )
+*** 5. Where would the Ether Type value normally be, what did the value change to when it leaves the first switch? (specify answer in the proper hex format 0xNNNN )
 
 *** 6. Which VLAN was it assigned to? (specify answer in decimal format)
 
@@ -86,7 +86,7 @@
 
 *** 10. What router command/action caused this to happen?
 
-*** 11. What did the switch change the Type filed to as it left the switch? (specify answer in hex 0xNNNN format)
+*** 11. What did the switch change the Type field to as it left the switch? (specify answer in hex 0xNNNN format)
 
 *** 12. What type of response did the DHCP server give?
 
@@ -133,18 +133,18 @@
 
 . NAT
 
-*** 1. From an Instructor Laptop, ping the 147.51.0.1 DMZ Gateway. Follow the Traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Instructor's source address to? (specify answer in x.x.x.x format)
+*** 1. From an Instructor Laptop, ping the 147.51.0.1 DMZ Gateway. Follow the Traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Instructor's source address to? (specify answer in x.x.x.x format)
 
-*** 2. From a Student Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Student's source address to? (specify answer in x.x.x.x format)
+*** 2. From a Student Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Student's source address to? (specify answer in x.x.x.x format)
 
-*** 3. From a Guest Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Guest's source address to? (specify answer in x.x.x.x format)
+*** 3. From a Guest Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Guest's source address to? (specify answer in x.x.x.x format)
 
 
 . TCP, HTTP, HTTPS, and DNS
 
 ** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". Follow the traffic.
 
-*** 1. What type of traffic did the host initate first?
+*** 1. What type of traffic did the host initiate first?
 
 *** 2. What was the destination port of this traffic?
 
@@ -156,7 +156,7 @@
 
 *** 6. What type of response came from the destination device?
 
-*** 7. What type of traffic did the host iniated second? 
+*** 7. What type of traffic did the host initiate second? 
 
 *** 8. What was the destination port for this traffic?
 
@@ -170,9 +170,9 @@
 
 *** 13. What was the FLAG(s) set to as the response left the destination? (select all that apply)
 
-*** 14. What was the FLAG(s) set to when the host gave its final reponse? (select all that apply)
+*** 14. What was the FLAG(s) set to when the host gave its final response? (select all that apply)
 
-*** 15. What type of traffic did the host initate third?
+*** 15. What type of traffic did the host initiate third?
 
 *** 16. What was the FLAG(s) set to for this traffic? (select all that apply)
 
@@ -189,22 +189,22 @@
 
 *** 1. What server did the laptop initiate a connection with?
 
-*** 2. What destination port number did it attempt to connect to?
+*** 2. What port number did was the attempted connection destined for?
 
 *** 3. What protocol did it use to send the email?
 
 ** Click "Reset Simulation". Then on the receiving laptop click "Receive".
 
-*** 4. After the 3-way handshake, what portocol did it use to retrieve the email?
+*** 4. After the 3-way handshake, what protocol did it use to retrieve the email?
 
 *** 5. What destination port number did it use for this traffic?
 
 
 . Telnet and ICMP
 
-** From any laptop, Goto Desktop --> Command Prompt. Telent to that computers local gateway IP address.
+** From any laptop, Goto Desktop --> Command Prompt. Telnet to that computers local gateway IP address.
 
-*** 1. What port destination port did the laptop use to connect?
+*** 1. What destination port did the laptop use for this connection?
 
 *** 2. After the 3-way handshake, what FLAG(s) was sent back to the host? (select all that apply)
 
@@ -221,13 +221,13 @@
 
 . SSH and TACACS+
 
-** From any laptop, try to SSH to your local gateway IP address. (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake it will eventually ask for the password to continue. 
+** From any laptop, try to SSH to your local gateway IP address. (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake, it will eventually ask for the password to continue. 
 
 *** 1. What FLAG(s) were set to send the password? (select all that apply)
 
 *** 2. What port and protocol was used to send the password to the router?
 
-*** 3. What device did the Gateway communicate with afterwards?
+*** 3. What device did the Gateway communicate with afterward?
 
 *** 4. What protocol and port did it use to communicate with this device?
 
