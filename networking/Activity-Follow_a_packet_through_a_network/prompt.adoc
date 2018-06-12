@@ -68,119 +68,119 @@
 
 *** 1. What type of traffic was initated by the Instructor laptop?
 
-*** 2. What is the destination MAC address of the inital packet sent by the host?
+*** 2. What is the destination MAC address of the inital packet sent by the host? (specify response in the xxxx.xxxx.xxxx format)
 
-*** 3. What is the destination IP address of the inital packet sent by the host?
+*** 3. What is the destination IP address of the inital packet sent by the host? (Specify in the x.x.x.x format)
 
-*** 4. What is the source and destination ports?
+*** 4. What is the protocol, source, and destination ports? (pick 3)
 
-*** 5. Where the Ether Type value would normally be, what did the value change to when it leaves the first switch?
+*** 5. Where the Ether Type value would normally be, what did the value change to when it leaves the first switch? (specify answer in the proper hex format 0xNNNN )
 
-*** 6. Which VLAN was it assigned to?
+*** 6. Which VLAN was it assigned to? (specify answer in decimal format)
 
-*** 7. What did the switch do with this traffic?
+*** 7. How did the switch treat this type of traffic?
 
-*** 8. What what did the VLAN change to when it left the router?
+*** 8. What did the VLAN change to when it left the router? (specify answer in decimal format)
 
-*** 9. What did the destination IP address change to?
+*** 9. What did the destination IP address change to when the traffic left the router? (specify answer in the x.x.x.x format)
 
-*** 10. What caused this to happen?
+*** 10. What router command/action caused this to happen?
 
-*** 11. What did the switch change the Type field to as it left the switch?
+*** 11. What did the switch change the Type filed to as it left the switch? (specify answer in hex 0xNNNN format)
 
-*** 12. What response did the server give?
+*** 12. What type of response did the DHCP server give?
 
-*** 13. What response did the instructor laptop give to respond to the traffic from the DHCP server?
+*** 13. What type of response did the instructor laptop give to respond to the traffic from the DHCP server?
 
 *** 14. What was the final response from the DHCP server?
 
-*** 15. What network are the Instructor laptops assigned to?
+*** 15. What network did you discover that the Instructor laptops are assigned to? (specify the network in the x.x.x.x /mask format)
 
 ** Repeat previous step on each of the Student, Instructor, and Guest laptops. 
 
-*** 16. hat VLAN are the Students assigned to?
+*** 16. What VLAN did you discover that the Students were assigned to? (specify answer in decimal format)
 
-*** 17. What Network are the Students assigned to?
+*** 17. What network are the Student laptops assigned to? (specify the network in the x.x.x.x /mask format)
 
-*** 18. What VLAN are the Guest assigned to?
+*** 18. What VLAN did you discover that the Guests were assigned to? (specify answer in decimal format)
 
-*** 19. What Network are the Guests assigned to?
+*** 19. What network are the Guests laptops assigned to? (specify the network in the x.x.x.x /mask format)
 
 . ICMP and ARP
 
-** From any Instructor laptop, ping the IP address of any of the other Instructor laptops.
+** From any Instructor laptop, ping the IP address of any of the other Instructor laptops. Follow the traffic. 
 
-*** 1. What protocol initiated before the ICMP packet started?
+*** 1. What protocol initiated before the ICMP packet started? (pick 2)
 
-*** 2. What was the Type value?
+*** 2. What was the Type field value for this traffic? (specify in hex format 0xNNNN )
 
-*** 3. What was the target MAC address?
+*** 3. What was the destination Layer 2 address of this traffic? (specify in xxxx.xxxx.xxxx format)
 
-*** 4. What was the response from the destination device?
+*** 4. Who responded to this traffic and what did they respond with?
 
-*** 5. What was the Type and Code values of the Ping that was sent?
+*** 5. What was the Type and Code values of the Ping that was sent? (pick 2)
 
-*** 6. What was the Type and Code Values of the response from the destination?
+*** 6. What was the Type and Code Values of the response from the destination? (pick 2)
 
-** From a different Instructor laptop, ping the IP address of any of the Student laptops.
+** From a different Instructor laptop, ping the IP address of any of the Student laptops. Follow the traffic. 
 
-*** 7. Who responded to the ARP request?
+*** 7. What device responded to the ARP request?
 
-** From any of the Guest laptops, ping any Instructor or Student system. 
+** From any of the Guest laptops, ping any Instructor or Student system. Follow the traffic. 
 
-*** 8. What type of frame did it use over the Wireless network?
+*** 8. What type of frame did the hosts use over the Wireless network?
 
 
 . NAT
 
-** From an Instructor Laptop, ping the 147.51.0.1 DMZ Gateway. Follow the Traffic. On the private/public boundry, what address did the router change the source address to?
+*** 1. From an Instructor Laptop, ping the 147.51.0.1 DMZ Gateway. Follow the Traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Instructor's source address to? (specify answer in x.x.x.x format)
 
-** From a Student Laptop, ping the same IP. Follow the traffic. What address did it change the source IP to?
+*** 2. From a Student Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Student's source address to? (specify answer in x.x.x.x format)
 
-** From a Guest Laptop, ping the same IP. Follow the traffic. What address did it change the source IP to?
+*** 3. From a Guest Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundry, what address did the router change the Guest's source address to? (specify answer in x.x.x.x format)
 
 
 . TCP, HTTP, HTTPS, and DNS
 
-** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". 
+** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". Follow the traffic.
 
 *** 1. What type of traffic did the host initate first?
 
-*** 2. What was the destination port?
+*** 2. What was the destination port of this traffic?
 
-*** 3. What server did that traffic goto?
+*** 3. To which server did that traffic goto?
 
-*** 4. What was the destination IP?
+*** 4. What was the destination IP of this traffic? (specify answer in the x.x.x.x format)
 
-*** 5. What is the IP protocol number?
+*** 5. What is the IP protocol number specified in this traffic?
 
-*** 6. What was the response from the destination device?
+*** 6. What type of response came from the destination device?
 
 *** 7. What type of traffic did the host iniated second? 
 
-*** 8. What was the destination port?
+*** 8. What was the destination port for this traffic?
 
-*** 9. What server did that traffic goto?
+*** 9. To which server did the second traffic flow goto?
 
-*** 10. What was the destination IP?
+*** 10. What was the destination IP of this traffic? (specify answer in the x.x.x.x format)
 
-*** 11. What is the IP protocol number?
+*** 11. What is the IP protocol number specified for this traffic?
 
-*** 12. What was the FLAG(s) set to as it left the host?
+*** 12. What was the FLAG(s) set to as it left the host? (select all that apply)
 
-*** 13. What was the FLAG(s) set to as the response left the destination?
+*** 13. What was the FLAG(s) set to as the response left the destination? (select all that apply)
 
-*** 14. What was the FLAG(s) set to when the host gave its final reponse?
+*** 14. What was the FLAG(s) set to when the host gave its final reponse? (select all that apply)
 
 *** 15. What type of traffic did the host initate third?
 
-*** 16. What is the FLAG(s) set to?
+*** 16. What was the FLAG(s) set to for this traffic? (select all that apply)
 
-*** 17. What is the FLAG(s) set to once communication was completed?
+*** 17. What was FLAG(s) set to once this traffic communication was completed? (select all that apply)
 
 ** Browse to "https://www.cctc.mil". 
 
-*** 18. What was the destination port that is used in this case?
+*** 18. What was the destination port used for this traffic?
 
 
 . SMTP and POP3
@@ -191,34 +191,45 @@
 
 *** 2. What destination port number did it attempt to connect to?
 
-*** 3. What protocol did it use to sent the email?
+*** 3. What protocol did it use to send the email?
 
 ** Click "Reset Simulation". Then on the receiving laptop click "Receive".
 
 *** 4. After the 3-way handshake, what portocol did it use to retrieve the email?
 
-*** 5. What destination port number did it use?
+*** 5. What destination port number did it use for this traffic?
 
 
-. Telnet, SSH, TACACS+
+. Telnet and ICMP
 
 ** From any laptop, Goto Desktop --> Command Prompt. Telent to that computers local gateway IP address.
 
 *** 1. What port destination port did the laptop use to connect?
 
-*** 2. After the 3-way handshake, what FLAG(s) send back to host?
+*** 2. After the 3-way handshake, what FLAG(s) was sent back to the host? (select all that apply)
 
-*** 3. Why did you get this flag?
+*** 3. Did you get any ICMP response? If so, what was the Type and code value? (select all that apply)
 
-** Try to SSH to the same IP (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake it will eventually ask for the password to continue. 
+*** 4. Why did you get this response?
 
-*** 4. What FLAG(s) were set to send the password?
+** From any laptop, Telnet to the DMX gateway address of 147.51.0.1.
 
-*** 5. What port and protocol was used to send the password?
+*** 5. Did you get any ICMP response? If so, what was the Type and code value? (select all that apply)
 
-*** 6. What device did the Gateway communicate with afterwards?
+*** 6. Why did you get this response?
 
-*** 7. What protocol and port did it use to communicate?
+
+. SSH and TACACS+
+
+** From any laptop, try to SSH to your local gateway IP address. (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake it will eventually ask for the password to continue. 
+
+*** 1. What FLAG(s) were set to send the password? (select all that apply)
+
+*** 2. What port and protocol was used to send the password to the router?
+
+*** 3. What device did the Gateway communicate with afterwards?
+
+*** 4. What protocol and port did it use to communicate with this device?
 
 
 
@@ -228,18 +239,18 @@
 
 *** 1. What Layer 2 protocol is used over the Internet past the ISPs?
 
-*** 2. What address (decimal) did the ISP use to communicate to the internet?
+*** 2. What layer 2 address did the ISP use to communicate to the internet? (specify answer in decimal format)
 
-*** 3. What address (decimal) did the Internet use to communicate to Comcast?
+*** 3. What Layer 2 address did the Internet use to communicate to Comcast? (specify answer in decimal format) 
 
 
 === Task 2)
 
-. Monitor all traffic. 
+. Monitor all traffic on the network. 
+ 
+*** 1. What types of routed protocols do you see running? (select all that apply)
 
-** 1. What types of routed protocols do you see running?
-
-** 2. What types of routing protocols are running? 
+*** 2. What types of routing protocols do you see running? (select all that apply)
 
 
 === Task 3)
@@ -250,15 +261,15 @@
 
 *** 1. What happened to the connection? 
 
-*** 2. Can the Rogue PC attain an IP address? 
+*** 2. Is the Rogue PC is able to attain an IP address (T/F)? 
 
-*** 3. What protocol/feature made this happen?
+*** 3. What switch protocol/feature made this happen?
 
 *** 4. Connect the "Rogue" switch to any other interface. What happened to the connection?
 
 *** 5. Can the Rogue PC attain an IP address? 
 
-*** 6. What protocol/feature made this happen?
+*** 6. What switch protocol/feature made this happen?
 
 
 == Deliverables
