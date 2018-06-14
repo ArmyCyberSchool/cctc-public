@@ -183,11 +183,12 @@ make
 #Disable TCP Offloading
 cat <<EOF > /etc/network/if-up.d/tcpoffload
 #!/bin/bash
-if [ \$IFACE = \"eth1\" ]; then
-    /sbin/ethtool -K eth1 tx off sg off tso off
-fi
+/sbin/ethtool -K eth1 tx off sg off tso off
 EOF
 chmod +x /etc/network/if-up.d/tcpoffload
+cd /etc/network/if-up.d/
+./tcpoffload
+cd /
 echo "CREATE USER"
 useradd $user -m -U -s /bin/bash
 usermod -aG sudo $user
