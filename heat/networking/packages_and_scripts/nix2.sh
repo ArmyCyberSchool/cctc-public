@@ -107,9 +107,10 @@ git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
 # ----- Disable TCP Offloading
 cat <<EOF > /etc/network/if-up.d/tcpoffload
 #!/bin/bash
-if [ $IFACE = \"eth1\" ]; then
-    /sbin/ethtool -K eth1 tx off sg off tso off
-fi
+/sbin/ethtool -K eth0 tx off sg off tso off
 EOF
 chmod +x /etc/network/if-up.d/tcpoffload
+cd /etc/network/if-up.d/
+./tcpoffload
+cd /
 reboot
