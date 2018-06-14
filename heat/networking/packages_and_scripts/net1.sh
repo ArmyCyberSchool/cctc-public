@@ -183,7 +183,7 @@ make
 #Disable TCP Offloading
 cat <<EOF > /etc/network/if-up.d/tcpoffload
 #!/bin/bash
-/sbin/ethtool -K eth1 tx off sg off tso off
+/sbin/ethtool -K eth0 tx off sg off tso off
 EOF
 chmod +x /etc/network/if-up.d/tcpoffload
 cd /etc/network/if-up.d/
