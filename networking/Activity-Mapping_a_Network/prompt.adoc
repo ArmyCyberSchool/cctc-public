@@ -48,15 +48,17 @@ username ADMINISTRATOR privilege 15 password 0 PASSWORD
 !
 security passwords min-length 5
 !
+cdp run
+!
 interface Embedded-Service-Engine0/0
  no ip address
  shutdown
 !
 interface GigabitEthernet0/0
  ip address 10.0.1.2 255.255.254.0
- no ip redirects
- no ip proxy-arp
- no ip directed-broadcast
+ ip redirects
+ ip proxy-arp
+ ip directed-broadcast
  standby 10 ip 10.0.1.1
  ip ospf 100 area 0
  duplex auto
@@ -64,9 +66,9 @@ interface GigabitEthernet0/0
 !
 interface GigabitEthernet0/1
  ip address 10.0.2.1 255.255.255.0
- ip redirects
- ip proxy-arp
- ip directed-broadcast
+ no ip redirects
+ no ip proxy-arp
+ no ip directed-broadcast
  duplex auto
  speed auto
 !
