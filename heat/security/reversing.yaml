@@ -1,0 +1,146 @@
+heat_template_version: 2018-03-02
+description: Heat template for the security module of CCTC - Provides Windows 10 machine
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number with No Leading Zeros
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default: 
+    constraints:
+      -  length: { min: 1, max: 15 }
+         description: Last name must be no longer than 15 characters
+      -  allowed_pattern: "[a-zA-Z]*"
+         description: Last name may only contain letters
+
+  password:
+    type: string
+    label: Password
+    description: Set root/admin password for instances
+    hidden: true
+    default: password
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+      -  allowed_pattern: "[a-zA-Z0-9]*"
+         description: Password may not contain special characters
+
+resources:
+
+  network_0:
+    type: OS::Neutron::Net
+    properties:
+      name:
+        str_replace:
+          template: lastName_network_0
+          params:
+            lastName: { get_param: last_name }
+      admin_state_up: true
+      shared: false
+
+  subnet_0:
+    type: OS::Neutron::Subnet
+    properties:
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.200
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }
+      dns_nameservers: 
+        - 10.50.255.254
+      enable_dhcp: true
+      host_routes: []
+      ip_version: 4
+      name:
+        str_replace:
+          template: lastname_subnet_0
+          params:
+            lastname: { get_param: last_name }
+      network_id:
+        get_resource: network_0
+
+  external_router:
+    type: OS::Neutron::Router
+    properties: 
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }
+      external_gateway_info: { network: public }
+
+  external_router_interface_0:
+    type: OS::Neutron::RouterInterface
+    properties: 
+      router_id: { get_resource: external_router }
+      subnet_id: { get_resource: subnet_0 }
+
+  secgroup0:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Enable RDP and ICMP
+      name: RDP/ICMP Enable
+      rules: [{"port_range_max":3389,"port_range_min":3389,"protocol":TCP},{"protocol":ICMP}]
+
+  float_ip: 
+    type: OS::Neutron::FloatingIP
+    depends_on: external_router
+    properties: { floating_network: public }
+    
+  float_port:
+    type: OS::Neutron::Port
+    depends_on: secgroup0
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.1
+              params:
+                studentID: { get_param: student_id }
+      security_groups:
+      - { get_resource: secgroup0 }
+
+  float_ip_assoc:
+    type: OS::Neutron::FloatingIPAssociation
+    properties:
+      floatingip_id: { get_resource: float_ip }
+      port_id: { get_resource: float_port }
+
+  
+  reversing_host:
+    type: OS::Nova::Server
+    properties:
+      image: Windows 10
+      name:
+        str_replace:
+          template: lastname_reversing_machine
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: float_port }
+      user_data:
+        str_replace:
+          template: { get_file: reversing_boot_script.ps1 }
