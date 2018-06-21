@@ -27,7 +27,7 @@ Task 1)
 
 3. Explicitly allow the net1 host to access the web page hosted by the net3 host. All other ports should still be blocked by the implicit deny rule.
 
-4. Explicitly allow the net1 host to access the DMZ host host via SSH.
+4. Explicitly allow the net1 host to access the DMZ host via SSH.
 
 *Test your rules *
 
