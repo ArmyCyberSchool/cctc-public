@@ -1,0 +1,158 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Raw Socket Programming
+
+== Learning Objectives
+
+* CCNE001 - Identify Networking Fundamentals
+** CCNE001.001 - Understanding the OSI model and Basic Networking
+** CCNE001.003 - Explain the difference between user space/kernel space sockets
+** CCNE001.004 - Tool and OS feature operations
+** CCNE002 - Identify the sections of common packet headers
+** CCNE002.002 - Describe IPv4 and IPv6 packet structures
+
+== Learning Outcomes
+
+* N/A
+
+== Scenario
+
+* You have administrative control (sudo privileges) on a Linux client (10.1.0.2) in an IPv4 network. You need to use ARP to manually discover the host at 10.1.0.3. 
+* Using a python3 script, you will create a raw socket and craft an ARP request. This must be sent to the host at 10.1.0.3.
+* You can use the socket, sys, and struct modules.
+
+=== Task 1)
+* *Prepare your system enviornment*
+** In Linux, turn on arp_accept for all interfaces. This will ensure that your system's ARP table is able to populate entries from gratuitous ARP responses:
++
+----
+echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+----
+
+** Next, ensure that an entry for 10.1.0.3 is not present in your ARP table. If it is, remove it before running your script.
++
+----
+root@net1:~# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.1.0.254               ether   fa:16:3e:89:3f:7b   C                     eth0
+10.1.0.100               ether   fa:16:3e:f1:ba:75   C                     eth0
+10.1.0.1                 ether   fa:16:3e:fc:1c:a4   C                     eth0
+10.1.0.3                 ether   fa:16:3e:06:9d:d0   C                     eth0
+root@net1:~#
+root@net1:~# arp -d 10.1.0.3
+root@net1:~#
+root@net1:~# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.1.0.254               ether   fa:16:3e:89:3f:7b   C                     eth0
+10.1.0.100               ether   fa:16:3e:f1:ba:75   C                     eth0
+10.1.0.1                 ether   fa:16:3e:fc:1c:a4   C                     eth0
+10.1.0.3                         (incomplete)                              eth0
+root@net1:~#
+----
+
+=== Task 2)
+
+* *Information gathering*
+
+. You will need to collect information on how an ARP header is structured.
+. It will also be useful to collect information about the python modules you are going to use: 
+
+** socket: https://docs.python.org/3/library/socket.html
+** sys: https://docs.python.org/3/library/sys.html
+** struct: https://docs.python.org/3/library/struct.html
+
+=== Task 3)
+
+* *Start your script*
+
+. Create a script and start by importing the appropriate modules. 
+
++
+. Begin the program by creating a raw socket, checking for errors, and binding to an interface on an arbitrary port.
++
+----
+try:
+    raw_sock = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.IPPROTO_RAW)
+except socket.error as err:
+    sys.exit("Error creating raw socket: " + str(err))
+ 
+raw_sock.bind(("eth0", 0))
+
+----
++
+. Next you will need to create an ethernet frame containing an ARP request. This will require a number of variables, each of which have to be packed into a bytes structure. See the link:https://docs.python.org/3/library/struct.html[struct] module refernce on how to pack data into structures. You can use the following structure for your program.
++
+----
+# imports
+
+try:                                                                                                                                                                                                           
+    raw_sock = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.IPPROTO_RAW)                                                                                                                            
+except socket.error as err:                                                                                                                                                                                    
+     sys.exit("Error creating raw socket: " + str(err))                                                                                                                                                         
+     
+raw_sock.bind(("eth0", 0))                                                                                         
+
+# Ethernet Frame can be built here
+# pack the ethernet frame here
+
+# ARP message can be built here
+# pack the ARP message here
+
+# add the ARP message onto the ethernet header here
+# send the frame
+----
+
+=== Task 4)
+
+* *Send your packet*
+. Ensure that you have sufficient permissions to run your script. Additionally, be aware that the arp command often requires privileged permissions to run.
+. If your script is called rawsock.py, you can run it with:
++
+----
+python3 rawsock.py
+----
+
+
+=== Task 5)
+
+* *Check your results*
+
+** Your messages can easily be examined with both Wireshark and tcpdump. To examine your frames with tcpdump, you can use the following command:
++
+----
+tcpdump arp host 10.1.0.3 -vX
+----
+
+** In order to verify the success of your script with one command, you can run the following to ensure that 10.1.0.3 returns has a MAC address after it's entry is cleared and your script is ran:
++
+----
+arp -d 10.1.0.3; sudo python3 rawarp.py; arp | grep 10.1.0.3
+----
+
+== Deliverables
+
+* A completed python script with documented code
+* Screenshot of the following command and it's output (replace script name as necessary):
++
+----
+arp -d 10.1.0.3; sudo python3 rawarp.py; arp | grep 10.1.0.3
+----
+
+== Hints
+* How does python represent hex bytes?
+* How does the socket module expect IP addresses to be packed?
+* How does my ARP message look compared to an ARP message sent after trying to ping a host not contained in the ARP table?
+
+== Challenge
+
+* Modularity Improvements
+** This script will most likely include a number of hard coded values. Add some modularity to this script by letting users enter in a target address and dynamically finding applicable source addresses.
+
+* ARP Scanner
+** This script currently only discovers one host. Add the functionality to scan an entire user entered subnet, and return a formatted list of the discovered hosts. 
+
+== Useful Resources
+
+* ARP RFC: https://tools.ietf.org/html/rfc826
+* Documentation on arp_accept: https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt

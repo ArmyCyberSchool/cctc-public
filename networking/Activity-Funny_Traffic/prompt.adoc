@@ -48,7 +48,7 @@
 1E 1B 7C AB 4E E5
 ----
 
-* Sample 3- See the "Are your getting this.pcap" file
+* Sample 3- See the "Are you getting this.pcap" file
 ** (hint- follow the tcp stream starting at the HTTP Get request, packet 4)
 
 == Deliverables

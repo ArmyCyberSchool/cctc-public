@@ -215,7 +215,7 @@ resources:
         - port: { get_resource: nix1_net3_subnet_2_port }
       user_data:
             str_replace:
-              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/%20nix1_net3.sh" }
+              template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/nix1_net3.sh" }
               params: 
                 $user: { get_param: last_name }
                 $password: { get_param: password }
@@ -272,11 +272,11 @@ resources:
                 $password: { get_param: password }
       user_data_format: RAW
 
-  win1_subnet_2_port:
+  win1_subnet_1_port:
     properties:
       fixed_ips:
-      - {ip_address: 10.2.0.5}
-      network_id: {get_resource: network_2}
+      - {ip_address: 10.1.0.3}
+      network_id: {get_resource: network_1}
       port_security_enabled: false
     type: OS::Neutron::Port
   win1:
@@ -285,9 +285,9 @@ resources:
       diskConfig: AUTO
       flavor: cy.large
       image: Windows 10
-      name: win1
+      name: win1_net2
       networks:
-        - port: { get_resource: win1_subnet_2_port }
+        - port: { get_resource: win1_subnet_1_port }
       user_data:
             str_replace:
               template: { get_file: "https://git.cybbh.space/CCTC/public/raw/master/heat/networking/packages_and_scripts/win1.ps1" }

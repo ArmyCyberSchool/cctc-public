@@ -36,7 +36,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.medium
-      image: pfsense
+      image: CCTC-pfsense
       name:
         str_replace:
           params:

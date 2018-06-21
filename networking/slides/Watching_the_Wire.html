@@ -14,7 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/cybbh_reveal.css">
+		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/cybbh.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -40,38 +40,38 @@
 
 		<div class="reveal">
 				<div class="slides">
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 					<h1>Watching the Wire</h1>
 					<h5>CCTC - Networking</h5>
 				</section>
 
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 				<h4>Outcomes</h4>
 					<p><font size="5"><u><b>SKILL CCNE009</b>: Identify packet sniffing tools<br>
 							     <b>SKILL CCNE010</b>: Identify implications of network traffic captures</u> </font></p>
 					<p align="left"><font size="5"><b> Objectives</b></font></p>
-				
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.001</b>: Explain Using Berkley Packet Filters (BPF) with sniffing tools</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.002</b>: Use BPFs to view multiple protocol types</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.003</b>: Demonstrate packet decoding features of tools</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE009.004</b>: Identify how sniffing and filtering relate to DNS protocol (poisoning/misuse)</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.001</b>: Discuss security implications of major protocol traffic in base-lining</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.002</b>: Explain why network monitoring tools are deployed</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.003</b>: Explain the impact of network monitoring tools in exploitation operations</font></p>
-                    <p align="left" style="line-height:0.5em"><font size="4"><b>CCNE010.004</b>: Explain the impact of network monitoring tools in DODIN operations</font></p>
-				
+
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.001 Explain Using Berkley Packet Filters (BPF) with sniffing tools</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.002 Use BPFs to view multiple protocol types</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.003 Demonstrate packet decoding features of tools</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE009.004 Identify how sniffing and filtering relate to DNS protocol (poisoning/misuse)</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.001 Discuss security implications of major protocol traffic in baselining</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.002 Explain why network monitoring tools are deployed</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.003 Explain the impact of network monitoring tools in exploitation operations</font></p>
+                    <p align="left" style="line-height:0.5em"><font size="4">CCNE010.004 Explain the impact of network monitoring tools in DODIN operations</font></p>
+
 				</section>
 
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 					<h4>Sniffing Basics</h4><br><br>
 				   		<p align="left"><font size="6">- Software vs. Hardware Sniffing</font></p>
 				   	 	<p align="left"><font size="6">- Mirrored port vs. Tap</font></p>
-				    		<p align="left"><font size="6">- NIC modes (Promiscuous or not)</font></p><br><br><br><br><br><br>				         
+				    		<p align="left"><font size="6">- NIC modes (Promiscuous or not)</font></p><br><br><br><br><br><br>
                 </section>
-                
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Wireshark.png" align="center top" style="max-height: 25%; max-width: 25%">
+				<section>
+
+<img src="images/Network_Analysis/Wireshark.png" align="center top" style="max-height: 25%; max-width: 25%">
 <ul style="line-height:1.15em"><font size="6.5">
 	<li><strong>Great for viewing detailed traffic information in a graphical format(not well suited for large pcaps)</strong></li>
 	<li>Remote capture (Windows only)
@@ -91,19 +91,19 @@
 </font></ul>
 
    				   </section>
-   				   
-   				   	<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Wireshark.png" align="center top" style="max-height: 25%; max-width: 25%"><br>
+   				   	<section>
+
+<img src="images/Network_Analysis/Wireshark.png" align="center top" style="max-height: 25%; max-width: 25%"><br>
 
 			<h4 style="line-height:0.5em"><font size="5">(Obj. 9.003 Demonstrate packet decoding features of tools)</font></h4>
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/WiresharkScreenshot2.png" align="center top" style="max-height: 65%; max-width: 65%">
-			   	    
+<img src="images/Network_Analysis/WiresharkScreenshot2.png" align="center top" style="max-height: 65%; max-width: 65%">
+
 
    				   </section>
-					
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+				<section>
 					<h4 style="line-height:0.8em">Decrypting Traffic</h4><br>
 <ul>
 	<li style="line-height:0.9em">Wireshark can only decrypt SSL/TLS packet data if RSA keys are used for key exchange.</li><br>
@@ -119,18 +119,18 @@
 <p style="text-align:right"><font size="4"><span style="line-height:0.5em">References:<br><a href="https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/"  style="color:#0000fe">https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/</a></span></font></p>
 
 				</section>
-					
-            	<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+            	<section>
 					<h4>Decrypting Traffic</h4>
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/WiresharkPreferences.png" align="center" style="max-height: 70%; max-width: 70%">
+<img src="images/Network_Analysis/WiresharkPreferences.png" align="center" style="max-height: 70%; max-width: 70%">
 
 
 <p style="text-align:right"><font size="4"><span style="line-height:0.5em">References:<br><a href="https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/"  style="color:#0000fe">https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/</a></span></font></p>
-					
+
 			    </section>
-						   					
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+				<section>
 					<h4>TCPDump</h4>
 <ul><font size="6">
 	<li><b>TCPDump can capture/parse large amounts of traffic</b></li><br>
@@ -139,16 +139,16 @@
 	<li><strong>Header information can be displayed at various levels of detail (verbosity)</strong></li>
 	</font></ul><br><br>
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/TCPDumpScreenshot.png" align="center" style="max-height: 70%; max-width: 70%">
+<img src="images/Network_Analysis/TCPDumpScreenshot.png" align="center" style="max-height: 70%; max-width: 70%">
 
 <p style="line-height:0.5em"><font size="6">What is the next ip offset value?</font></p>
 
 
 				</section>
-					
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				    <h4>Activity Time!</h4><br><br> 
-				    
+
+				<section>
+				    <h4>Activity Time!</h4><br><br>
+
 <a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-TCPDump_Basics_and_Filters/prompt.pdf?job=genpdf" style="color:#0000fe">TCPDump Basics and Filters</a><br><br>
 
 <a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-What_is_Happening_Here/prompt.pdf?job=genpdf" style="color:#0000fe">What is Happening Here</a><br><br>
@@ -159,15 +159,15 @@
 
 				  </section>
 
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 					<h4 style="line-height:0.2em">Why Filter Outputs?</h4><br><br>
 					<p align="left"><font size="6">- Reduce Resource consumption (CPU or Storage)</font></p>
 					<p align="left"><font size="6">- Limit scope of catured traffic</font></p>
 					<p align="left"><font size="6">- Target traffic capture down to the bit!</font></p><br><br><br><br><br><br>
 
-				</section>	
-				
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				</section>
+
+				<section>
 					<h4>How do I Filter Outputs?</h4><br><br>
 					<p align="left"><font size="6">- <u>Programs like TCPDump can use built-in 'Primitives', like 'net', 'port'  etc and qualifiers like 'src' or 'dst'</u> (Wireshark has it's own set of 'expressions' for this same purpose) </font></p>
 				    	<p align="left"><font size="6">- Primitives are user-friendly shortcuts to BPF, but they can't target traffic as granularly as a pure BPF </font></p><br><br><br><br>
@@ -175,7 +175,7 @@
 
 				</section>
 
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 					<h4>Berkley Packet Filters</h4><br><br>
 <ul><font size="6">
                     			<li align="left" >BPF allows a user-space program (like TCPDump or IPTables) to attach a custom filter onto any socket</li><br>
@@ -184,15 +184,15 @@
 					<li align="left">The libpcap internal compiler takes the user input filter and generates a structure that can be loaded via SO_ATTACH_FILTER to the kernel.</li>
 </font></ul><br><br><br>
 			    </section>
-		
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-				  
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Bytecode_slide.png" align="center" style="max-height: 98%; max-width: 98%">
+
+				<section>
+
+<img src="images/Network_Analysis/Bytecode_slide.png" align="center" style="max-height: 100%; max-width: 100%">
 
 				</section>
 
-		
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+				<section>
 					<h4>Berkley Packet Filters</h4><br>
 					  <p align="left"><font size="6"><b>Can you figure out what the filter is that produced this bytecode instruction?</b></font></p>
 					  <p align="left" style="line-height:0.8em"><font size="5.5"># tcpdump -d '____ and ____' </font></p>
@@ -204,7 +204,7 @@
 					  <p align="left" style="line-height:0.8em"><font size="5.5">(005) ret #0</font> </p>
 </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 					<h4>Berkley Packet Filters</h4><br>
 					  <p align="left"><font size="6"><b>Can you figure out what the filter is that produced this bytecode instruction?</b></font></p>
 					  <p align="left" style="line-height:0.8em"><font size="5.5"># tcpdump -d 'arp' </font></p>
@@ -214,7 +214,7 @@
 					  <p align="left" style="line-height:0.8em"><font size="5.5">(003) ret #0</font> </p><br><br>
 </section>
 
-				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				<section>
 					<h4>Berkley Packet Filter with Indexing</h4>
 					<p align="left" style="line-height:0.8em"><font size="6"> Primitives like 'tcp port 53' can work for filtering, but a BPF can provide a more powerful mechanism for filtering using byte indexing.</font></p>
 					<p align="left" style="line-height:0.5em"><font size="6">For example: tcpdump 'ip[0] > 69' looks for any ip options used</font> </p>
@@ -224,11 +224,11 @@
 <p style="text-align:left">
 tcpdump 'ip[
 <span style="color:#FF0000">byte</span>
- ] &amp; 
+ ] &amp;
 <span style="color:#00B050">mask</span>
 <span style="color:#F4A020">condition</span>'
 </p>
-					
+
 <p style="text-align:left">tcpdump ‘ip[0] &amp; 0x0F &gt; 0x05’</p>
 <p style="text-align:left">Original - 0100 0110 (options set)</p>
 <p style="text-align:left"> &emsp;<u>Mask - 0000 1111</u></p>
@@ -238,7 +238,7 @@ tcpdump 'ip[
 				</section>
 
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 					<h4>Berkley Packet Filter (cont.)</h4><br>
 
 
@@ -270,7 +270,7 @@ tcpdump 'ip[
 
 <p style="color:#000000;text-align:center"><span style="color:#000000">What does this filter show you?</span></p>
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/TCPFlagsBPF.PNG" align="center" style="max-height: 70%; max-width: 70%">
+<img src="images/Network_Analysis/TCPFlagsBPF.PNG" align="center" style="max-height: 70%; max-width: 70%">
 
 
 <p style="text-align:center line-height:1em"><font size="6"><em>Hint: An anagram for the TCP flags:</em></font></p>
@@ -278,7 +278,7 @@ tcpdump 'ip[
 <p style="text-align:center"><font size="6"><em> </em><strong><em>U</em></strong><em>nskilled </em><strong><em>A</em></strong><em>ttackers </em><strong><em>P</em></strong><em>ester </em><strong><em>R</em></strong><em>eal </em><strong><em>S</em></strong><em>ecurity </em><strong><em>F</em></strong><em>olk</em><em> </em></font></p>
 				</section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 
 					<h4>Flow Analysis</h4><br><br>
 <ul style="line-height:1em"><font size="6.5">
@@ -288,7 +288,7 @@ tcpdump 'ip[
 
    				   </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 
 					<h4 style="line-height:1.1em">Server Identification</h4><br><br>
 <ul style="line-height:0.8em"><font size="6.5">
@@ -298,13 +298,13 @@ tcpdump 'ip[
 </ul>
 <p align="left"><font size="6.5"><i>This means that the vulnerability that may have been noted in the older OS you identified has been patched! </i></font></p>
 
-</section>   				   
+</section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 <div class="fingerprint" data-block-type="image" style="width: 1800px; height: 0px; left: 0px; top: 0px;">
 <div class="fingerprint-content" style="z-index: 11;">
-<img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fingerprint.png"></div></div>
-				<h4>Signatures</h4>
+<img style="" data-natural-width="1383" data-natural-height="101" data-lazy-loaded="" data-src="images/Network_Analysis/Fingerprint.png"></div></div>
+				<h3>Signatures</h3>
 <ul style="line-height:1.1em"><font size="6.5em">
 	<li><b>TTL</b></li><br>
 	<ul><li>DF - Don't Fragment bit (set/increment)</li>
@@ -315,13 +315,13 @@ tcpdump 'ip[
 	<li>Selective Acknowledgement (RFC 2018); commonly used by Windows/Linux, not by always by FreeBSD/Solaris </li></font></ul><br><br>
 </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
-		
+<section>
+
 				<h4>Fragmented Packet</h4><br>
 
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fragment1.PNG" align="center" style="max-height: 80%; max-width: 80%">
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fragment2.PNG" align="center" style="max-height: 80%; max-width: 80%">
-<img src="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/Network_Analysis/Fragment3.PNG" align="center" style="max-height: 80%; max-width: 80%">
+<img src="images/Network_Analysis/Fragment1.PNG" align="center" style="max-height: 80%; max-width: 80%">
+<img src="images/Network_Analysis/Fragment2.PNG" align="center" style="max-height: 80%; max-width: 80%">
+<img src="images/Network_Analysis/Fragment3.PNG" align="center" style="max-height: 80%; max-width: 80%">
 
 
 <ul style="line-height:1em"><font size="6.5">
@@ -331,7 +331,7 @@ tcpdump 'ip[
 
 </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 					<h4 style="line-height:0.7em">Fragment Reassembly</h4><br>
 <ul style="line-height:0.62em"><font size="6">
                     			<li align="left" ><b>First</b> - Always accept the first value received for each offset in the packet</li><br>
@@ -340,7 +340,7 @@ tcpdump 'ip[
 					<li align="left"><b>BSD-Right</b> - This policy is similar to BSD, except fragments are right-trimmed (new fragments take precedence over those with a lesser or equal offset).</li><br>
 					<li align="left"><b>Linux</b> - The Linux policy is almost the same as the BSD policy, except existing fragments with = offset will be overwritten, at least in part.</li>
 </font></ul>
-			  
+
 <p style="text-align:right"><font size="4"><span style="line-height:0.5em">References:
 <a href="https://www.sans.org/reading-room/whitepapers/detection/ip-fragment-reassembly-scapy-33969"  style="color:#0000fe">https://www.sans.org/reading-room/whitepapers/detection/ip-fragment-reassembly-scapy-33969</a><br>
 <a href="http://www.icir.org/vern/papers/activemap-oak03.pdf" style="color:#0000fe">http://www.icir.org/vern/papers/activemap-oak03.pdf</a>
@@ -348,15 +348,15 @@ tcpdump 'ip[
 
   </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 					<h4 style="line-height:0.8em">Packet Injection</h4><br>
 <ul style="line-height:1.25em"><font size="6">
                     			<li align="left">Edge and Core ISPs</li>
 					<li align="left">Censorship, advertising, malware, notifications</li>
-					<li align="left">Comcast released RFC in 2011 explaining their packet injection/redirection techniques </li>				
+					<li align="left">Comcast released RFC in 2011 explaining their packet injection/redirection techniques </li>
 </font></ul>
 <p align="left"><font size="6"><b>Do packet injections by ISP’s used in seemingly benign ways put user at risk?</b></font></p>
-			  
+
 <p style="text-align:right"><font size="3"><span style="line-height:0.5em">References:<br>
 <a href="https://www.blackhat.com/docs/us-16/materials/us-16-Nakibly-TCP-Injection-Attacks-in-the-Wild-A-Large-Scale-Study-wp.pdf"  style="color:#0000fe">https://www.blackhat.com/docs/us-16/materials/us-16-Nakibly-TCP-Injection-Attacks-in-the-Wild-A-Large-Scale-Study-wp.pdf</a><br>
 <a href="http://thehackernews.com/2016/02/china-hacker-malware.html" style="color:#0000fe">http://thehackernews.com/2016/02/china-hacker-malware.html</a><br>
@@ -366,7 +366,7 @@ tcpdump 'ip[
 
   </section>
 
-<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/resources/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+<section>
 					<h4>Network Monitoring</h4><br><br><br>
 <ul style="line-height:1em"><font size="6.5">
 	<li><b>IDS/IPS</b></li><br>
