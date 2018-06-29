@@ -23,12 +23,12 @@
 * All device passwords for this Activity is "password"
 
 
-=== Task 1)
+=== Setup)
 
 
 . Download the CCTC.pkt file.
 
-** Download: https://git.cybbh.space/CCTC/public/tree/master/networking/Activity-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
+** Download: https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
 
 ** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
 
@@ -48,6 +48,10 @@
 
 . During this Activity:
 
+.Packet Tracer
+image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
+
+
 *** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
 
 *** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend having additional protocols selected as this will populate a lot of extra information.
@@ -58,9 +62,11 @@
 
 *** You can click to open any of the items on the network. The tab you will generally be using is the "Desktop" tab. On the Routers and Switches, you will use the "CLI" tab.
 
-=== Task 2)
+
+=== Task 1)
 
 * Ensure that you are in "Simulation" mode for this Activity.
+
 
 . DHCP
 
@@ -105,6 +111,7 @@
 *** 18. What VLAN did you discover that the Guests were assigned to? (specify answer in decimal format)
 
 *** 19. What network are the Guests laptops assigned to? (specify the network in the x.x.x.x /mask format)
+
 
 . ICMP and ARP
 
@@ -183,7 +190,7 @@
 *** 18. What was the destination port used for this traffic?
 
 
-. SMTP and POP3
+. TCP, SMTP and POP3
 
 ** Open any 2 laptops and place the windows side by side. Goto Desktop --> Email on each. On one laptop, click "Compose". In the "To:" block, enter the other laptop username and number then "@cctc.mil". (i.e. instructor1@cctc.mil or student4@cctc.mil). Enter any Subject and body then click "Send". Follow the traffic. 
 
@@ -200,7 +207,7 @@
 *** 5. What destination port number did it use for this traffic?
 
 
-. Telnet and ICMP
+. TCP, Telnet and ICMP
 
 ** From any laptop, Goto Desktop --> Command Prompt. Telnet to that computers local gateway IP address.
 
@@ -219,7 +226,7 @@
 *** 6. Why did you get this response?
 
 
-. SSH and TACACS+
+. TCP, SSH and TACACS+
 
 ** From any laptop, try to SSH to your local gateway IP address. (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake, it will eventually ask for the password to continue. 
 
