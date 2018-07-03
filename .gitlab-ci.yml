@@ -12,7 +12,7 @@ genpdf:
       - ./*/*/*.pdf
       - ./*/*/*/*.pdf
 
-networking_slides:
+networking_slides_adoc:
   script:
     - cd networking/slides/adoc
     - bundle config --local github.https true
