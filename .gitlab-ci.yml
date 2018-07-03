@@ -17,7 +17,7 @@ networking_slides_adoc:
     - cd networking/slides/adoc
     - bundle config --local github.https true
     - bundle --path=.bundle/gems --binstubs=.bundle/.bin
-    - bundle exec asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0 slides.adoc
+    - bundle exec asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0 networking/slides/slides.adoc
 
   artifacts:
     paths:
