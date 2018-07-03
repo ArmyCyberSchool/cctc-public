@@ -11,3 +11,15 @@ genpdf:
       - ./*/*.pdf
       - ./*/*/*.pdf
       - ./*/*/*/*.pdf
+
+networking_slides:
+  script:
+    - cd networking/slides/adoc
+    - bundle config --local github.https true
+    - bundle --path=.bundle/gems --binstubs=.bundle/.bin
+    - bundle exec asciidoctor-revealjs -a revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0 slides.adoc
+
+  artifacts:
+    paths:
+    - networking/slides/adoc/*.html
+    - networking/slides/adoc/*/*.html
