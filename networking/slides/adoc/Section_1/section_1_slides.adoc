@@ -1,4 +1,4 @@
-= Test 1
+= Section 1
 
 See https://asciidoctor.org/docs/asciidoctor-revealjs/ for more info
 
