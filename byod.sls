@@ -100,3 +100,36 @@ byod:
       sDbxpgU4LtfJfNjHkaXG5m6t2Bhnf9YRuWJYX6gX/T1KFZPRBrippeIOewqbT9FQ
       XjIOgqQ/lWpe+npd
       -----END CERTIFICATE REQUEST-----
+  jeffery.m.frazier:
+    mac: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMAxjBVwDDewikAQf/TzCnjfJjTxs9M3OKnLK6N6o18qRtiqIaSjR7+EmBXV/u
+      zd7bcWv/JMMUuJt09H3FNyebOFwvXgqs0Hyu8p9m/Ezr5p+Q9bXtpQkcj4nCYuCM
+      KLXdoPkEID+7AVq+mj0kN7DhojgjxkLP8EHnjZ66azonTkjIiqKgu18uqlz51T2V
+      DhE0jSrW1ldTLQRU3UN06IvlgfmY0Oeu6HMiH8sOaIu+tLpTckQC//875MSiL51b
+      MFv6gOk7OuqYLTQv3iOXAKWiYvVbLyPTariigUlx8vjqr4f3JN0WpMJc7nKru6jc
+      qNtTjuNESusXY5dd5svXuKAx3hwVHj6DdqWH4fPSWtJUAYFc39291JdSsWZ1eNZy
+      hKf5/LmiJ+SIq9RmsQyCUayEf0lW1XYJC3fqO1b7nE9YIMq5r3LdYp2R/jUx+d0u
+      5GU9mXn7thgbwPG9jia2wL830Lga
+      =nnqO
+      -----END PGP MESSAGE-----
+    csr: |
+      -----BEGIN CERTIFICATE REQUEST-----
+      MIIC4TCCAckCAQAwgZsxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJHQTEUMBIGA1UE
+      BwwLRm9ydCBHb3Jkb24xETAPBgNVBAoMCFNpbG90ZWNoMRQwEgYDVQQLDAtQcm9n
+      cmFtbWluZzERMA8GA1UEAwwIamZyYXppZXIxLTArBgkqhkiG9w0BCQEWHmplZmZl
+      cnkubS5mcmF6aWVyLmN0ckBtYWlsLm1pbDCCASIwDQYJKoZIhvcNAQEBBQADggEP
+      ADCCAQoCggEBAN8qHea5uUFBaOZLWnKUdqrXawLjAnJintPeJpOAohY9YqxWJJmc
+      Qvz9HGzrEPKs+NBHIxtOzzcaX4KWCryu3UQQg1tr76qtzz8q9EliJC6/g3ySmZwg
+      Y1YF2+nW4kAgeJT3vIOXl356KF/GHir29jSp3MMBqpGayVIStefpqQfULQVzqsvb
+      NF50ILSDCL0WV/BSR8T2/+jyzP0Ga3FrRG7bxMZPLfrQLgTtTAV8Wqn08ahb54Wf
+      vSpdZIB0PdeJ9ku8Jh3dEyFQYpz0vusNxH1DzlAndMOVk00s13ZJ1PCzCnflNf70
+      DTgDC8L9im3UIm+9Orr5Pj284ph2YIrYijcCAwEAAaAAMA0GCSqGSIb3DQEBCwUA
+      A4IBAQBX8FiLNg7vYVOaLac7G19/mliIlFUI5dSBrsWy882E6lni22psD4boGqnu
+      YfljdDaNladPVbFe4qDeKaRApojO2CUCpFPOLXpORliV05smanQMYksO04efNImL
+      N/csCxsVwCHBL0FSMENDaKrMBce6wjxHfgyYxaNiGOTCoXykgk5EjAIY2QiExLXC
+      2vYKyd8htk6WZ3rAVVrg8N/Ga41bTLxW5x3JjNw6hdQqQWGrns6GLE2iTCUw5bMe
+      OPj/KVy5P1htEehq1FL1ORbYqzMenv4J4hnoTqqJHhzgNlMaVRrP7DCbRZddG85D
+      G3uh8BS8ZZxoK3jRRPsbuPtPMGjS
+      -----END CERTIFICATE REQUEST-----
