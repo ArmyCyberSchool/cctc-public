@@ -1,0 +1,105 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - DVWA Injections
+:doctype: book
+:source-highlighter: coderay
+:listing-caption: Listing
+// Uncomment next line to set page size (default is Letter)
+//:pdf-page-size: A4
+
+== Learning Objectives / Outcomes
+
+* CCNE020.003 Discuss code injection
+* CCNE020.004 Explain the process of code injection
+* CCNE020.005 Explain methods of detecting code injection
+
+{empty} +
+
+== Scenario
+
+Not Applicable
+
+{empty} +
+
+== Activity
+
+You will be completing the lessons and activities for Injection Flaws in DVWA. (Complete the activities before attempting the Challenge)
+
+{empty} +
+
+=== Task 1)
+
+1) You will need to install DVWA and Xampp. Install xampp first by going to https://www.apachefriends.org/download.html and install into the C drive.
+
+2) Next, download DVWA from http://dvwa.co.uk/ and extract the files into C:\xampp\htdocs\
+
+3) Rename the folder DVWA-master to dvwa
+
+4) Rename the file C:\xampp\htdocs\dvwa\config\config.inc.php.dist to C:\xampp\htdocs\dvwa\config\config.inc.php
+
+5) Edit in wordpad or notepad ++ C:\xampp\htdocs\dvwa\config\config.inc.php and remove the db_password and leave the ‘’
+{empty} +
+
+=== Task 2) – When Xampp is finished
+
+1) Go into the Xampp interface and click start on Apache and MySQL
+
+2) Open a web browser, and go to 10.1.0.3/dvwa/setup.php and click create database
+
+2) Go to 10.1.0.3/dvwa/login.php, and login using admin and password
+
+3) Under DVWA Security set the security level to low
+{empty} +
+
+=== Task 3) 
+
+1) Choose the "SQL Injection" option and complete the tasks as specified.  
+
+Try the below command exactly as it shows: 
+
+%’ or ’0’=’0
+{empty} +
+
+=== Task 4)
+
+1) Choose the "XSS Stored" option and type any name in the name window. 
+
+Then, in the Message window, try: 
+
+<script>alert(‘XSS’);</script>
+
+Afterwards, click "Sign Guestbook"
+{empty} +
+=== Task 5) 
+
+1) Choose the "SQL Injection(Blind)" option and try the following commands:
+
+1
+1’
+1’ and 1=2 #
+1’ and 1=1 #
+{empty} +
+
+
+== Deliverables
+
+* None; Must be able to repeat actions for demonstration
+{empty} +
+
+== Hints
+
+* Hints are provided within the lessons/activities on DVWA
+{empty} +
+
+== Challenge
+
+* You may continue to explore other vulnerability lessons within DVWA, raise the security level or turn on PHPIDS
+
+http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson6/
+
+https://translate.google.com/translate?hl=en&sl=it&u=https://www.homelab.it/index.php/2016/01/14/dvwa-sql-injection/&prev=search
+
+http://www.hackingarticles.in/stored-xss-exploitation-dvwa-beginner-guide/
+
+{empty} +
