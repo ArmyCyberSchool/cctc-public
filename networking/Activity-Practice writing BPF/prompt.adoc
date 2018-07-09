@@ -13,7 +13,12 @@
 
 == Scenario
 
-* Berkley Packet Filters (BPF). You will need to be familiar with using BPF’s to capture and analyze traffic on target systems that is more focused than what standard TCPDump expressions can provide. Create the following filters using BPFs with protocol, byte offset, mask (if necessary) and condition. Do not use TCPDump expressions or primitives for these filters, even if they are available. This activity is meant to get you comfortable with BPFs, not TCPDump expressions and primitives.
+* Berkley Packet Filters (BPF). You will need to be familiar with using BPF’s to capture and analyze traffic on target systems that is more focused than what standard TCPDump expressions can provide. 
+
+** Create the following filters using BPFs with protocol, byte offset, mask (if necessary) and condition.
+** Do NOT use TCPdump expressions
+** Do NOT use BPF primitives
+
 
 === Task 1)
 
