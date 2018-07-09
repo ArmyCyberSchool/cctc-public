@@ -1,0 +1,63 @@
+= Lesson 123 - Leet Hacks
+
+See https://asciidoctor.org/docs/asciidoctor-revealjs/ for more info
+
+== Lists
+
+* This
+* is
+* a
+* list
+* new item
+
+[%notitle]
+== Ignored
+
+This is an example slide without a title.
+
+[NOTE.speaker]
+--
+These are speaker notes.
+--
+
+== Tables
+
+|==================
+|Sample  | Table  
+|Stuff 1 | Stuff 4 
+|Stuff 2 | Stuff 5 
+|Stuff 3 | Stuff 6  
+|==================
+
+[NOTE.speaker]
+--
+More notes
+--
+
+== Nested Slides
+
+=== One
+
+* This
+* is
+* a
+* list
+
+=== Two
+
+* This
+* is
+* a
+* list
+
+[%notitle]
+== Ignore
+
+image::https://images.techhive.com/images/article/2016/12/hacker_hire-100697015-large.jpg[canvas,size=contain]
+
+[NOTE.speaker]
+--
+
+More notes.
+
+--
