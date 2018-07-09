@@ -1,20 +1,18 @@
 :doctype: book
 :stylesheet: ../../cctc.css
 
-= Activity - TCPDump Basics & Filters
+= Activity - Practice Writing BPF
 
 == Learning Objectives
 
 * CCNE005 - Identify packet sniffing tools
 ** CCNE005.001 - Explain Berkley Packet Filters (BPF)
 ** CCNE005.002 - Use BPFs to view multiple protocol types
-** CCNE005.003 - Demonstrate packet decoding features
-** CCNE005.004 - Describe network sniffing
-** CCNE005.005 - Identify common networking sniffing tools
+
 
 == Scenario
 
-* TCPDump is a very useful CLI tool for collecting PCAP information. Its strength is in the fact that it is CLI, and therefore can generally capture much larger amounts of data than Wireshark. The graphic rendering and interpretation that Wireshark performs limits its use for collecting or dissecting very large PCAPs.
+* Berkley Packet Filters (BPF)
 
 === Task 1)
 
