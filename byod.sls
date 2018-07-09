@@ -6,7 +6,7 @@
 ##  christopher.w.apsey:
 ##    mac: |
 ##      -----BEGIN PGP MESSAGE-----
-##      
+##
 ##      hQEMAxjBVwDDewikAQf/dMyJLDscJHpIuDqRrPF0pYNtG/5iELEw7VlDQL87Qs1S
 ##      GaFAQ+DZftiXtHF908Oc5900qx6bb85P5O4UIir4wljV08YaPhbchUkMZo3IHY2X
 ##      PZJKsHn4ML27Feumor1vQFxJBzn4Bw5kF3lbLNpKbvnzrb4lfVPCeP+U0kuZF6zt
@@ -132,4 +132,35 @@ byod:
       2vYKyd8htk6WZ3rAVVrg8N/Ga41bTLxW5x3JjNw6hdQqQWGrns6GLE2iTCUw5bMe
       OPj/KVy5P1htEehq1FL1ORbYqzMenv4J4hnoTqqJHhzgNlMaVRrP7DCbRZddG85D
       G3uh8BS8ZZxoK3jRRPsbuPtPMGjS
+      -----END CERTIFICATE REQUEST-----
+  kenneth.w.peeples:
+    mac: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMAxjBVwDDewikAQgAmQn6anUlM4AVcKLeSYuHBQoDpkTQRqgDHDtTxp3Gl5jt
+      Kt7kB/JDQE+6n1kzn+5ZpWGEe86xY2jcLdgMPphQhK3lysuD23c4r1ZF6vlXseoI
+      0ByUgdKhWGyxqs/lXoDd/G0/PVBsFOpxYBtI8RiCzqYGCHdXqqMsdTPq4lqV8DiD
+      cUg3yran+AH+fT0reWsYOJ4AY9smZLrQHLQVjI55G4dVAx4vFaUSHUUz9H8lRtFk
+      ScqQGOBn7qjbtlunMBrMXSUsqTuV66+Q5e7W4QPyF5RYco77+Z3QUR3g0JSpeSn2
+      +EGRJMZNlUs+axhYkc1gbKCBF+sgD+BAb4VAmDU5w9JUAfONNXx37phtlgE9Ibwn
+      8rJGioLHqpeCzIPM8/tV9RPFUH4+H4/bXF2EDkDdhgfIxh4c7b7ycZYyfqzkkyQ7
+      EhwVDDXmL4/nqsfQe825RDpH7Xky
+      =hFEZ
+      -----END PGP MESSAGE-----
+    csr: |
+      -----BEGIN CERTIFICATE REQUEST-----
+      MIICgjCCAWoCAQAwHDEaMBgGA1UEAxMRa2VubmV0aC53LnBlZXBsZXMwggEiMA0G
+      CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvQG532ACr6E7HsoXm5U6sZ9VgofTR
+      uQjhZbN0iyB/IKjz6e12C1lpoTY+ef2tLRNaafl0PclZOyj7Ha3crLpHkNUHyTJQ
+      dR21UeZeGYv0K01I3PjGzazOBax9Bmt/ZORqBEmqJKck/Cw74I5dGpcuc65N18Tw
+      wrQjLslA/IXfzF/DWZN2iVgoJcKBbK8r0kdx3uxomwL4Da0shgvjBV+MwbrY8Q7e
+      lGO577UNQWR1zPAnClwgIdtla4xUM8xAfIbCy46dyzKTeS2Cu+SKBjQfDa4hhKSn
+      pSqNSKj1LUql3kiWg9VYoGByLXV6dV++v2dko+V0l2AEIwxWixHks5rnAgMBAAGg
+      ITAfBgkqhkiG9w0BCQ4xEjAQMA4GA1UdDwEB/wQEAwIE8DANBgkqhkiG9w0BAQsF
+      AAOCAQEAquNzCDx6gXTSzAlpjgImgp2VBqUjoy3faBzGxjb3ppTmMIHmagqupckI
+      0WLi/jxHUSRgvs/STWUi5Nm2/u7TAKgl721x/jHi9mh//Zpm+b0A95TDusTjg7zm
+      ngHznvI67saY8t2pj0c/V+GTmm4+5p01a2G4OygDVBcvYp6q8cEyeSMJ4LeDyejv
+      9SrgYDrwYatK93jWCmpwnxsOeOPgFUa7Umwec+5AOgaQ7DbOIQqdxW6JHD8QmlZ2
+      Cl7PabEJJ3eCeQELzxRuusAeAZXVbitxS3k+G9WFYCdjFO1v8sNlxGfEopKwV+Eg
+      9cFLZ2IF1k7a9ZolpWhqVArDpPPS2w==
       -----END CERTIFICATE REQUEST-----
