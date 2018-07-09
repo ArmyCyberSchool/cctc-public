@@ -5,52 +5,46 @@
 
 == Learning Objectives
 
-* CCNE005 - Identify packet sniffing tools
-** CCNE005.001 - Explain Berkley Packet Filters (BPF)
-** CCNE005.002 - Use BPFs to view multiple protocol types
+* SKILL CCNE005: Identify packet sniffing tools
+** CCNE005.001 Explain Berkley Packet Filters (BPF)
+** CCNE005.002 Use BPFs to view multiple protocol types
+** CCNE005.003 Demonstrate packet decoding features
 
 
 == Scenario
 
-* Berkley Packet Filters (BPF)
+* Berkley Packet Filters (BPF). You will need to be familiar with using BPF’s to capture and analyze traffic on target systems that is more focused than what standard TCPDump expressions can provide. Create the following filters using BPFs with protocol, byte offset, mask (if necessary) and condition. Do not use TCPDump expressions or primitives for these filters, even if they are available. This activity is meant to get you comfortable with BPFs, not TCPDump expressions and primitives.
 
 === Task 1)
 
-* Identify the following basic TCPDump commands/options:
+. Capture all packets with a TTL of 128 or less for both IPv4 and IPv6
 
-. Tcpdump –w capture.pcap
-. Tcpdump –r capture.pcap
-. Tcpdump –r capture.pcap port 80 –w http_traffic.pcap
-. Tcpdump –q –r capture.pcap | wc –l 
-. Tcpdump –i eth0 host 192.168.0.1
-. Tcpdump –A –r capture.pcap
-. Tcpdump –c 10 –r capture.pcap
-. Tcpdump –e –r capture.pcap
-. Tcpdump –n –r capture.pcap
-. Tcpdump –S –r capture.pcap 
-. Tcpdump –v (or –vv or –vvv)
+. Capture all inital ip traceroute traffic using icmp and UDP
 
-=== Task 2)
+. Capture all ip traffic with the DF bit set
 
-* You will need to be familiar with using expressions in TCPDump to capture and analyze traffic on target systems. To ensure you can quickly filter traffic to include the desired transactions/packets, identify the following filters.
+. Capture all packets with the MF flag set and Fragmentation offset result of 31744 / 8
 
-. Tcpdump host 192.168.1.1 or host 192.168.1.2 && port 80
-. Tcpdump src host 192.168.1.1 and dst host 192.168.1.2
-. Tcpdump host www.google.com
-. Tcpdump  src port 80 || src port 443 
-. Tcpdump ether dst host aa:bb:cc:dd:ee:ff
-. Tcpdump udp port 53 or tcp port 53
-. Tcpdump not port range 1025-65535
-. Tcpdump net 192.168.0.0 /24
-. Tcpdump not net 192.168.0.0 /24 
+. Capture all TCP packets with a destination port equal to or less than 1024
 
-=== Task 3)
+. Capture all/only IPv4 packets 
 
-* Now that you have some practice identifying filters, you can practice building filters using expressions.
+. Capture all ipv4 telnet and SSH traffic
 
-. ARP: Create a TCPDUMP filter that will capture all ARP traffic.
-. ICMP: Create a TCPDUMP filter that will capture all icmp echo replies coming into interface eth1.
-. TCP: Create a filter that will capture all the closure packets of TCP conversations (both graceful and not)
+. Capture all TCP packets with only the URG/PUSH/FIN flags set
+
+. Capture all traffic that contains a VLAN ID of 100
+
+. Capture all traffic that has an IPv4 address of 192.168.36.10
+
+. Capture all traffic that has a DSCP of 38
+
+. Capture all DNS zone transers
+
+. Capture all ARP traffic
+
+. Capture all IPv6 next header traffic of EIGRP
+
 
 == Deliverables
 
