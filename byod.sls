@@ -164,3 +164,18 @@ byod:
       Cl7PabEJJ3eCeQELzxRuusAeAZXVbitxS3k+G9WFYCdjFO1v8sNlxGfEopKwV+Eg
       9cFLZ2IF1k7a9ZolpWhqVArDpPPS2w==
       -----END CERTIFICATE REQUEST-----
+  kyle.w.jefferson:
+    mac: |
+      -----BEGIN PGP MESSAGE-----
+
+      hQEMAxjBVwDDewikAQgAutNqi5Hy8Yb/BHZP5PMHOA8QIEkIqd/FcGvfhW8iIWbM
+      RpmqZ1Jaoi8Q1hFa9xj5PPGT35dXaJOykpfZ9I2Y9UTJvDfoZKZ77x9sHXU0ltH5
+      VuYOKqpktisgbyIwwuue146uvMlv9BYWjtyl+Zwe0pVag1UuZTUwB6YfyV78J3FU
+      h8IRjytUAbMqmEfrKEVu4Z4GpGzo+TRLp1jb73t34vnXzKcMIUFEP9GiWEleuoc7
+      pbkE5pIrQBrtD0tBMkoyi4eeAAbeXqsq5VmVDuaHiTAAcGOA3i5gJAURrZWAXWL1
+      bC9wcA5aSTfNRo3Xju2hXUg7Nju+AG0Gb41IIggiQNJTAayXL9uUmaVv3Q+Ww93r
+      8XTlluycR/qun8/cZAYw2yooMWRCk3mRpuYVzBvbpLIVRieLcU7hEjM9DZcm6wDt
+      tcvt+NB5dH8utMr0FBbQ26fDMrA=
+      =bYnX
+      -----END PGP MESSAGE-----
+        
