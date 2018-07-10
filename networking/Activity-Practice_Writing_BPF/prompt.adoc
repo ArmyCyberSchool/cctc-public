@@ -1,0 +1,68 @@
+:doctype: book
+:stylesheet: ../../cctc.css
+
+= Activity - Practice Writing BPF
+
+== Learning Objectives
+
+* SKILL CCNE005: Identify packet sniffing tools
+** CCNE005.001 Explain Berkley Packet Filters (BPF)
+** CCNE005.002 Use BPFs to view multiple protocol types
+** CCNE005.003 Demonstrate packet decoding features
+
+
+== Scenario
+
+* Berkley Packet Filters (BPF). You will need to be familiar with using BPF’s to capture and analyze traffic on target systems that is more focused than what standard TCPDump expressions can provide. 
+
+** Create the following filters using BPFs with protocol, byte offset, mask (if necessary) and condition.
+** Do NOT use TCPdump expressions.
+** Do NOT use BPF primitives.
+
+
+=== Task 1)
+
+. Capture all packets with a TTL of 128 or less for both IPv4 and IPv6.
+
+. Capture all inital ip traceroute traffic using icmp and UDP.
+
+. Capture all ip traffic with the DF bit set.
+
+. Capture all packets with the MF flag set and Fragmentation offset result of 31744 / 8.
+
+. Capture all TCP packets with a destination port equal to or less than 1024.
+
+. Capture all/only IPv4 packets.
+
+. Capture all ipv4 telnet and SSH traffic.
+
+. Capture all TCP packets with only the URG/PUSH/FIN flags set.
+
+. Capture all traffic that contains a VLAN ID of 100.
+
+. Capture all traffic that has an IPv4 address of 192.168.36.10.
+
+. Capture all traffic that has a DSCP of 38.
+
+. Capture all DNS zone transfers.
+
+. Capture all ARP traffic.
+
+. Capture all IPv6 next header traffic of EIGRP.
+
+
+== Deliverables
+
+* Provide complete responses to the questions above.
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
