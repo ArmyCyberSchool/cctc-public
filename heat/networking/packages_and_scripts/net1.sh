@@ -10,10 +10,10 @@ pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scri
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
 # ----- Installs atom to work with python language
 wget https://atom.io/download/deb
-dpk -i atom-deb
+dpk -i deb
 python -m pip install 'python-language-server[all]'
-apm install atom-ide-ui
-apm install ide-python
+apm install atom-ide-ui ide-python
+rm deb
 # ----- Makes rdp work with VNC by default
 cd /etc/xrdp
 cat <<EOF | sudo patch -p1
