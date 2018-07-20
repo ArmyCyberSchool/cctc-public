@@ -24,8 +24,6 @@
 
 . Capture all packets with a TTL of 128 or less for both IPv4 and IPv6.
 
-. Capture all inital ip traceroute traffic using icmp and UDP.
-
 . Capture all ip traffic with the DF bit set.
 
 . Capture all packets with the MF flag set and Fragmentation offset result of 31744 / 8.
