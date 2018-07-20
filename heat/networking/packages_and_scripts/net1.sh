@@ -14,6 +14,11 @@ dpk -i deb
 python -m pip install 'python-language-server[all]'
 apm install atom-ide-ui ide-python
 rm deb
+# ----- Installs ZeroBrane Studio lua ide for disassembly
+wget https://download.zerobrane.com/ZeroBraneStudioEduPack-1.70-linux.sh
+chmod +x ZeroBraneStudioEduPack-1.70-linux.sh
+./ZeroBraneStudioEduPack-1.70-linux.sh
+rm ZeroBraneStudioEduPack-1.70-linux.sh
 # ----- Makes rdp work with VNC by default
 cd /etc/xrdp
 cat <<EOF | sudo patch -p1
