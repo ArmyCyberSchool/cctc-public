@@ -9,7 +9,7 @@ apt-get -y upgrade
 pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev,gvfs-bin,python-pip})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
 # ----- Installs atom to work with python language
-wget https://atom.io/download/deb atom-deb
+wget https://atom.io/download/deb
 dpk -i atom-deb
 python -m pip install 'python-language-server[all]'
 apm install atom-ide-ui
