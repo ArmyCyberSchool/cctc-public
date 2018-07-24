@@ -140,8 +140,8 @@ resources:
             export DEBIAN_FRONTEND=noninteractive
             echo 127.0.0.1 $(hostname) >> /etc/hosts
             apt-get -y update
-            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,figlet,lolcat,ubuntu_desktop})
             apt-get -y upgrade
+            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,figlet,lolcat,ubuntu_desktop})
             for x in ${pkg_array[@]}; do apt-get install -y $x; done
             apt-get -y install qemu && apt-get -y install qemu
             gem install lolcat
@@ -225,6 +225,7 @@ resources:
             /usr/share/Veil/setup/setup.sh -c
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
             systemctl reboot
+            systemctl set-default graphical.target
           params:
             $user: { get_param: last_name }
             $password: { get_param: password }
@@ -275,8 +276,8 @@ resources:
             echo 127.0.0.1 $(hostname) >> /etc/hosts
             export DEBIAN_FRONTEND=noninteractive
             apt-get -y update
-            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,lolcat,LXDE})
             apt-get -y upgrade
+            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,lolcat,LXDE})
             for x in ${pkg_array[@]}; do apt-get install -y $x; done
             apt-get -y install qemu && apt-get -y install qemu
             gem install lolcat
@@ -338,6 +339,7 @@ resources:
             git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
             /usr/share/Veil/setup/setup.sh -c
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
+            systemctl set-default graphical.target
             systemctl reboot
           params:
             $user: { get_param: last_name }
