@@ -1,51 +1,30 @@
 *Course: CCTC*
 
-* Category:  *OPERATING SYSTEMS*
-* (PAID)
-** Book Title: Active Directory Cookbook
-*** URL: https://www.amazon.com/Directory-Cookbook-Cookbooks-Svidergol-published/dp/B00E6T98FY/ref=sr_1_7?s=books&ie=UTF8&qid=1532628615&sr=1-7&keywords=active+directory+cookbook
-** Book Title: Windows Registry Forensics
-*** URL: https://www.amazon.com/Windows-Registry-Forensics-Advanced-Forensic/dp/1597495808/ref=sr_1_2?s=books&ie=UTF8&qid=1532628765&sr=1-2&keywords=windows+registry+forensics
-** Book Title: Windows Internals 7th Ed.
-*** URL: https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/ref=sr_1_1?s=books&ie=UTF8&qid=1532628845&sr=1-1&keywords=windows+internals
-** Book Title: SYSInternals Tools
-*** URL: https://www.amazon.com/Troubleshooting-Windows-Sysinternals-Tools-2nd/dp/0735684448/ref=sr_1_1?s=books&ie=UTF8&qid=1532634911&sr=1-1&keywords=sysinternals
-** Book Title: Powershell In Depth 2nd Ed.
-*** URL: https://www.manning.com/books/powershell-in-depth-second-edition
-** Book Title: PowerShell and WMI
-*** URL: https://www.manning.com/books/powershell-and-wmi
-** Book Title: Inside Windows Debugging
-*** URL: https://www.amazon.com/Soulami-Windows-Debugging_p1-Developer-Reference/dp/0735662789/ref=sr_1_2?s=books&ie=UTF8&qid=1532632131&sr=1-2&keywords=windows+debugging
-** Book Title: How Linux Works
-*** URL: https://skillport.books24x7.com/toc.aspx?bookid=75478
-** Book Title: Shell Scripting
-*** URL: https://www.amazon.com/Shell-Scripting-Automate-Command-Programming/dp/151738043X/ref=asap_bc?ie=UTF8
-** Book Title: Command line Kung Fu
-*** URL: https://www.amazon.com/Command-Line-Kung-Programming-One-liners/dp/1499222033/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=
-** Book Title: Rootkits and BootKits
-*** URL: https://nostarch.com/rootkits
-** Book Title: Art of Memory Forensics
-*** URL: https://www.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098/ref=pd_sim_14_28?_encoding=UTF8&pd_rd_i=1118825098&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT
-** Book Title: The IDA Pro Book
-*** URL: https://www.amazon.com/IDA-Pro-Book-Unofficial-Disassembler/dp/1593272898/ref=pd_sim_14_34?_encoding=UTF8&pd_rd_i=1593272898&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT
-** Book Title: PAM Mastery
-*** URL: https://www.amazon.com/PAM-Mastery-10-Michael-Lucas/dp/1537657704/ref=sr_1_1?s=books&ie=UTF8&qid=1532631528&sr=1-1&keywords=pam+mastery
-** Book Title: Logs and Log Mgmt.
-*** URL: https://www.amazon.com/gp/product/1597496359/ref=ox_sc_sfl_title_392?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
-** Book Title: C Programming Language 2nd Ed.
-*** URL: https://www.amazon.com/gp/product/0131103628/ref=ox_sc_sfl_title_414?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
+Category:  *OPERATING SYSTEMS* +
 
-* (FREE)
-** Book/Course Title: Intro Intel X86 ASM
-*** URL: http://opensecuritytraining.info/IntroX86-64.html
-** Book/Course Title: Intermediate Intel X86 ASM
-*** URL: http://opensecuritytraining.info/IntermediateX86.html
-** Book/Course Title: RE Software
-*** URL: http://opensecuritytraining.info/IntroductionToReverseEngineering.html
-** Book/Course Title: RE for beginners
-*** URL: http://www.hackinsight.org/free-content,34.html
-** Book/Course Title: Rootkits - How to Find Them
-*** URL: http://opensecuritytraining.info/Rootkits.html
+** https://www.amazon.com/Directory-Cookbook-Cookbooks-Svidergol-published/dp/B00E6T98FY/ref=sr_1_7?s=books&ie=UTF8&qid=1532628615&sr=1-7&keywords=active+directory+cookbook[Active Directory Cookbook]
+** https://www.amazon.com/Windows-Registry-Forensics-Advanced-Forensic/dp/1597495808/ref=sr_1_2?s=books&ie=UTF8&qid=1532628765&sr=1-2&keywords=windows+registry+forensics[Windows Registry Forensics]
+** https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/ref=sr_1_1?s=books&ie=UTF8&qid=1532628845&sr=1-1&keywords=windows+internals[Windows Internals 7th Ed.]
+** https://www.amazon.com/Troubleshooting-Windows-Sysinternals-Tools-2nd/dp/0735684448/ref=sr_1_1?s=books&ie=UTF8&qid=1532634911&sr=1-1&keywords=sysinternals[SYSInternals Tools]
+** https://www.manning.com/books/powershell-in-depth-second-edition[Powershell In Depth 2nd Ed.]
+** https://www.manning.com/books/powershell-and-wmi[PowerShell and WMI]
+** https://www.amazon.com/Soulami-Windows-Debugging_p1-Developer-Reference/dp/0735662789/ref=sr_1_2?s=books&ie=UTF8&qid=1532632131&sr=1-2&keywords=windows+debugging[Inside Windows Debugging]
+** https://skillport.books24x7.com/toc.aspx?bookid=75478[How Linux Works]
+** https://www.amazon.com/Shell-Scripting-Automate-Command-Programming/dp/151738043X/ref=asap_bc?ie=UTF8[Shell Scripting]
+** https://www.amazon.com/Command-Line-Kung-Programming-One-liners/dp/1499222033/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=[Command line Kung Fu]
+** https://nostarch.com/rootkits[Rootkits and BootKits]
+** https://www.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098/ref=pd_sim_14_28?_encoding=UTF8&pd_rd_i=1118825098&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT[The Art of Memory Forensics]
+** https://www.amazon.com/IDA-Pro-Book-Unofficial-Disassembler/dp/1593272898/ref=pd_sim_14_34?_encoding=UTF8&pd_rd_i=1593272898&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT[The IDA Pro Book]
+** https://www.amazon.com/PAM-Mastery-10-Michael-Lucas/dp/1537657704/ref=sr_1_1?s=books&ie=UTF8&qid=1532631528&sr=1-1&keywords=pam+mastery[PAM Mastery]
+** https://www.amazon.com/gp/product/1597496359/ref=ox_sc_sfl_title_392?ie=UTF8&psc=1&smid=ATVPDKIKX0DER[Logs and Log Mgmt.]
+** https://www.amazon.com/gp/product/0131103628/ref=ox_sc_sfl_title_414?ie=UTF8&psc=1&smid=ATVPDKIKX0DER[C Programming Language 2nd Ed.]
+
+* (FREE resources)
+** http://opensecuritytraining.info/IntroX86-64.html[Intro Intel X86 ASM]
+** http://opensecuritytraining.info/IntermediateX86.html[Intermediate Intel X86 ASM]
+** http://opensecuritytraining.info/IntroductionToReverseEngineering.html[Title: RE Software]
+** http://www.hackinsight.org/free-content,34.html[RE for beginners]
+** http://opensecuritytraining.info/Rootkits.html[Rootkits - How to Find Them]
 
 
 * Category: *NETWORKING*
@@ -73,7 +52,7 @@
 ** Book Title: Network Forensics
 *** URL: https://www.amazon.com/gp/product/0132564718/ref=ox_sc_sfl_title_451?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
 
-* (FREE)
+* (FREE resources)
 ** Book Title: Pcap Analysis & Network Hunting
 *** URL: http://opensecuritytraining.info/Pcap.html
 ** Book Title: Intro Network Forensics
@@ -91,7 +70,7 @@
 ** Book Title: WebApp Hackers Handbook
 *** URL: https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
 
-* (FREE)
+* (FREE resources)
 ** Book/Course Title: Stack Based Overflows - part 1
 *** URL: https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
 ** Book/Course Title: Stack Based Overflows - part 2: Jumping to shellcode
