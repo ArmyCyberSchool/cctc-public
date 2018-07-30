@@ -1,7 +1,6 @@
 *Course: CCTC*
 
 Category:  *OPERATING SYSTEMS* +
-
 ** https://www.amazon.com/Directory-Cookbook-Cookbooks-Svidergol-published/dp/B00E6T98FY/ref=sr_1_7?s=books&ie=UTF8&qid=1532628615&sr=1-7&keywords=active+directory+cookbook[Active Directory Cookbook]
 ** https://www.amazon.com/Windows-Registry-Forensics-Advanced-Forensic/dp/1597495808/ref=sr_1_2?s=books&ie=UTF8&qid=1532628765&sr=1-2&keywords=windows+registry+forensics[Windows Registry Forensics]
 ** https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/ref=sr_1_1?s=books&ie=UTF8&qid=1532628845&sr=1-1&keywords=windows+internals[Windows Internals 7th Ed.]
@@ -28,75 +27,46 @@ Category:  *OPERATING SYSTEMS* +
 
 
 * Category: *NETWORKING*
-(PAID)
-** Book Title: Applied Network Security Monitoring
-*** URL: https://www.amazon.com/Applied-Network-Security-Monitoring-Collection/dp/0124172083/ref=sr_1_1?s=books&ie=UTF8&qid=1532629200&sr=1-1&keywords=applied+network+security+monitoring
-** Book Title: The practice of Network Security Monitoring
-*** URL: https://www.amazon.com/Practice-Network-Security-Monitoring-Understanding/dp/1593275099/ref=sr_1_1?s=books&ie=UTF8&qid=1532629244&sr=1-1&keywords=NSM
-** Book Title: Practical Packet Analysis 3rd Ed.
-*** URL: https://www.amazon.com/Practical-Packet-Analysis-Wireshark-Real-World/dp/1593278020/ref=pd_bxgy_14_2?_encoding=UTF8&pd_rd_i=1593278020&pd_rd_r=9f65b414-9100-11e8-a9b7-f9452d2c743a&pd_rd_w=dg1v5&pd_rd_wg=jJBwC&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=1475879231140687736&pf_rd_r=11MSN538XMBD07GZNKNB&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=11MSN538XMBD07GZNKNB
-** Book Title: NMAP 6 Cookbook
-*** URL: https://www.amazon.com/Nmap-Cookbook-Network-Security-Scanning/dp/1507781385/ref=pd_sim_14_12?_encoding=UTF8&pd_rd_i=1507781385&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT
-** Book Title: Linux Firewalls
-*** URL: https://nostarch.com/firewalls.htm
-** Book Title: Tshark Traffic Analysis
-*** URL: https://www.amazon.com/Instant-Traffic-Analysis-Tshark-How/dp/178216538X/ref=sr_1_1?ie=UTF8&qid=1532630928&sr=8-1&keywords=tshark
-** Book Title: SSH Mastery
-*** URL: https://www.amazon.com/SSH-Mastery-OpenSSH-PuTTY-Tunnels/dp/1642350028/ref=sr_1_1?s=books&ie=UTF8&qid=1532631514&sr=1-1&keywords=ssh+mastery
-** Book Title: Networking for SysAdmins
-*** URL: https://www.amazon.com/Networking-Systems-Administrators-Mastery-5/dp/0692376941/ref=pd_sim_14_8?_encoding=UTF8&pd_rd_i=0692376941&pd_rd_r=f06b2dda-9105-11e8-9259-4bb674a35291&pd_rd_w=NZ8iy&pd_rd_wg=tiTjf&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=MQX8AST1NJPFXWJVJCT8&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=MQX8AST1NJPFXWJVJCT8#customerReviews
-** Book Title: DNSSEC Mastery
-*** URL: https://www.amazon.com/DNSSEC-Mastery-Securing-Domain-System/dp/1484924479/ref=pd_sim_14_16?_encoding=UTF8&pd_rd_i=1484924479&pd_rd_r=f06b2dda-9105-11e8-9259-4bb674a35291&pd_rd_w=NZ8iy&pd_rd_wg=tiTjf&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=MQX8AST1NJPFXWJVJCT8&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=MQX8AST1NJPFXWJVJCT8
-** Book Title: NetFlow Analysis
-*** URL: https://www.amazon.com/gp/product/1593272030/ref=ox_sc_sfl_title_389?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
-** Book Title: Network Forensics
-*** URL: https://www.amazon.com/gp/product/0132564718/ref=ox_sc_sfl_title_451?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
+** https://www.amazon.com/Applied-Network-Security-Monitoring-Collection/dp/0124172083/ref=sr_1_1?s=books&ie=UTF8&qid=1532629200&sr=1-1&keywords=applied+network+security+monitoring[Applied Network Security Monitoring]
+** https://www.amazon.com/Practice-Network-Security-Monitoring-Understanding/dp/1593275099/ref=sr_1_1?s=books&ie=UTF8&qid=1532629244&sr=1-1&keywords=NSM[The practice of Network Security Monitoring]
+** https://www.amazon.com/Practical-Packet-Analysis-Wireshark-Real-World/dp/1593278020/ref=pd_bxgy_14_2?_encoding=UTF8&pd_rd_i=1593278020&pd_rd_r=9f65b414-9100-11e8-a9b7-f9452d2c743a&pd_rd_w=dg1v5&pd_rd_wg=jJBwC&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=1475879231140687736&pf_rd_r=11MSN538XMBD07GZNKNB&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=11MSN538XMBD07GZNKNB[Practical Packet Analysis 3rd Ed.]
+** https://www.amazon.com/Nmap-Cookbook-Network-Security-Scanning/dp/1507781385/ref=pd_sim_14_12?_encoding=UTF8&pd_rd_i=1507781385&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT[NMAP 6 Cookbook]
+** https://nostarch.com/firewalls.htm[Linux Firewalls]
+** https://www.amazon.com/Instant-Traffic-Analysis-Tshark-How/dp/178216538X/ref=sr_1_1?ie=UTF8&qid=1532630928&sr=8-1&keywords=tshark[Tshark Traffic Analysis]
+** https://www.amazon.com/SSH-Mastery-OpenSSH-PuTTY-Tunnels/dp/1642350028/ref=sr_1_1?s=books&ie=UTF8&qid=1532631514&sr=1-1&keywords=ssh+mastery[SSH Mastery]
+** https://www.amazon.com/Networking-Systems-Administrators-Mastery-5/dp/0692376941/ref=pd_sim_14_8?_encoding=UTF8&pd_rd_i=0692376941&pd_rd_r=f06b2dda-9105-11e8-9259-4bb674a35291&pd_rd_w=NZ8iy&pd_rd_wg=tiTjf&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=MQX8AST1NJPFXWJVJCT8&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=MQX8AST1NJPFXWJVJCT8#customerReviews[Networking for SysAdmins]
+** https://www.amazon.com/DNSSEC-Mastery-Securing-Domain-System/dp/1484924479/ref=pd_sim_14_16?_encoding=UTF8&pd_rd_i=1484924479&pd_rd_r=f06b2dda-9105-11e8-9259-4bb674a35291&pd_rd_w=NZ8iy&pd_rd_wg=tiTjf&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=MQX8AST1NJPFXWJVJCT8&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=MQX8AST1NJPFXWJVJCT8[DNSSEC Mastery]
+** https://www.amazon.com/gp/product/1593272030/ref=ox_sc_sfl_title_389?ie=UTF8&psc=1&smid=ATVPDKIKX0DER[NetFlow Analysis]
+** https://www.amazon.com/gp/product/0132564718/ref=ox_sc_sfl_title_451?ie=UTF8&psc=1&smid=ATVPDKIKX0DER[Network Forensics]
 
 * (FREE resources)
-** Book Title: Pcap Analysis & Network Hunting
-*** URL: http://opensecuritytraining.info/Pcap.html
-** Book Title: Intro Network Forensics
-*** URL: http://opensecuritytraining.info/NetworkForensics.html
+** http://opensecuritytraining.info/Pcap.html[Pcap Analysis & Network Hunting]
+** http://opensecuritytraining.info/NetworkForensics.html[Intro Network Forensics]
 
 
 * Category: *SECURITY*  (in addition to the above refs)
-(PAID)
-** Book Title: Atacking Network Protocols
-*** URL: https://www.amazon.com/Attacking-Network-Protocols-Analysis-Exploitation/dp/1593277504/ref=pd_sim_14_8?_encoding=UTF8&pd_rd_i=1593277504&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT
-** Book Title: Hacking The Art of Exploitation
-*** URL: https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441/ref=pd_sim_14_56?_encoding=UTF8&pd_rd_i=1593271441&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT
-** Book Title: Burp Suite Starter
-*** URL: https://www.amazon.com/gp/product/1849695180/ref=ox_sc_sfl_title_457?ie=UTF8&psc=1&smid=ATVPDKIKX0DER
-** Book Title: WebApp Hackers Handbook
-*** URL: https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470
+** https://www.amazon.com/Attacking-Network-Protocols-Analysis-Exploitation/dp/1593277504/ref=pd_sim_14_8?_encoding=UTF8&pd_rd_i=1593277504&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT[Atacking Network Protocols]
+** https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441/ref=pd_sim_14_56?_encoding=UTF8&pd_rd_i=1593271441&pd_rd_r=be67c7dc-9100-11e8-bac5-a34d8716c49e&pd_rd_w=gYkc6&pd_rd_wg=uPQli&pf_rd_i=desktop-dp-sims&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=2610440344683357453&pf_rd_r=NDSKM9Q5WZ6H9W6718QT&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=NDSKM9Q5WZ6H9W6718QT[Hacking The Art of Exploitation]
+** https://www.amazon.com/gp/product/1849695180/ref=ox_sc_sfl_title_457?ie=UTF8&psc=1&smid=ATVPDKIKX0DER[Burp Suite Starter]
+** https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470[WebApp Hackers Handbook]
 
 * (FREE resources)
-** Book/Course Title: Stack Based Overflows - part 1
-*** URL: https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/
-** Book/Course Title: Stack Based Overflows - part 2: Jumping to shellcode
-*** URL: https://www.corelan.be/index.php/2009/07/23/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-2/
-** Book/Course Title: Kioptrix Levels 1,1.1,1.2
-*** URL: www.vulnhub.com
-** Book/Course Title: Hack The Box
-*** URL: https://www.hackthebox.eu/invite
+** https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/[Stack Based Overflows - part 1]
+** https://www.corelan.be/index.php/2009/07/23/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-2/[Stack Based Overflows - part 2: Jumping to shellcode]
+** www.vulnhub.com[Kioptrix Levels 1,1.1,1.2]
+** https://www.hackthebox.eu/invite[Hack The Box]
 
 
 * *Course: 17C10 Programming*
 
 * Category:  *BASH Programming*
-** Book Title: Shell Scripting
-*** URL: https://www.amazon.com/Shell-Scripting-Automate-Command-Programming/dp/151738043X/ref=asap_bc?ie=UTF8
-** Book Title: Command line Kung Fu
-*** URL: https://www.amazon.com/Command-Line-Kung-Programming-One-liners/dp/1499222033/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=
+** https://www.amazon.com/Shell-Scripting-Automate-Command-Programming/dp/151738043X/ref=asap_bc?ie=UTF8[Shell Scripting]
+** https://www.amazon.com/Command-Line-Kung-Programming-One-liners/dp/1499222033/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=[Command line Kung Fu]
 
 * Category:  *POWERSHELL Programming*
-** Book Title: Powershell In Depth 2nd Ed.
-*** URL: https://www.manning.com/books/powershell-in-depth-second-edition
-** Book Title: Windows PowerShell: The Personal Trainer 
-*** URL: https://www.amazon.com/Windows-PowerShell-Personal-Trainer-3-0/dp/1500838187/ref=sr_1_1?s=books&ie=UTF8&qid=1532628379&sr=1-1&keywords=personal+trainer+windows+powershell
+** https://www.manning.com/books/powershell-in-depth-second-edition[Powershell In Depth 2nd Ed.]
+** https://www.amazon.com/Windows-PowerShell-Personal-Trainer-3-0/dp/1500838187/ref=sr_1_1?s=books&ie=UTF8&qid=1532628379&sr=1-1&keywords=personal+trainer+windows+powershell[Windows PowerShell: The Personal Trainer]
 
 * Category: *PYTHON Programming*
-** Book Title: The Quick Python Book, Third Ed.
-*** URL: https://www.manning.com/books/the-quick-python-book-third-edition
-** Book Title: Python Programming for beginners
-*** URL: https://www.amazon.com/Python-Programming-Beginners-Introduction-Computer/dp/1501000861/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=
+** https://www.manning.com/books/the-quick-python-book-third-edition[The Quick Python Book, Third Ed.]
+** https://www.amazon.com/Python-Programming-Beginners-Introduction-Computer/dp/1501000861/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=[Python Programming for beginners]
