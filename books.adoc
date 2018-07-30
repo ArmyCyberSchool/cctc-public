@@ -1,6 +1,6 @@
 *Course: CCTC*
 
-Category:  *OPERATING SYSTEMS* +
+* Category:  *OPERATING SYSTEMS* +
 ** https://www.amazon.com/Directory-Cookbook-Cookbooks-Svidergol-published/dp/B00E6T98FY/ref=sr_1_7?s=books&ie=UTF8&qid=1532628615&sr=1-7&keywords=active+directory+cookbook[Active Directory Cookbook]
 ** https://www.amazon.com/Windows-Registry-Forensics-Advanced-Forensic/dp/1597495808/ref=sr_1_2?s=books&ie=UTF8&qid=1532628765&sr=1-2&keywords=windows+registry+forensics[Windows Registry Forensics]
 ** https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189/ref=sr_1_1?s=books&ie=UTF8&qid=1532628845&sr=1-1&keywords=windows+internals[Windows Internals 7th Ed.]
