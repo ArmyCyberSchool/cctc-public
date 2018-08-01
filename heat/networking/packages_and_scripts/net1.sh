@@ -6,9 +6,19 @@ export DEBIAN_FRONTEND=noninteractive
 echo "deb http://deb.debian.org/debian jessie-backports main contrib non-free" >> /etc/apt/sources.list
 apt-get update
 apt-get -y upgrade
-pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev})
+pkg_array=({xrdp,tigervnc-standalone-server,libssl1.0.0,libqt5webkit5,libqt5scripttools5,locate,netcat,dnsutils,curl,tmux,lsof,ftp,telnet,wireshark,tcpdump,p0f,scapy,nmap,proxychains,pv,nginx,proftpd,gdebi,install,ethtool,git,make,gcc,flex,bison,build-essential,checkinstall,libpcap-dev,libnet1-dev,libpcre3-dev,libnetfilter-queue-dev,iptables-dev,libdumbnet-dev,zlib1g-dev,gvfs-bin,python-pip})
 for x in ${pkg_array[@]}; do apt-get install -y $x; done
-
+# ----- Installs atom to work with python language
+wget https://atom.io/download/deb
+dpk -i deb
+python -m pip install 'python-language-server[all]'
+apm install atom-ide-ui ide-python
+rm deb
+# ----- Installs ZeroBrane Studio lua ide for disassembly
+wget https://download.zerobrane.com/ZeroBraneStudioEduPack-1.70-linux.sh
+chmod +x ZeroBraneStudioEduPack-1.70-linux.sh
+./ZeroBraneStudioEduPack-1.70-linux.sh
+rm ZeroBraneStudioEduPack-1.70-linux.sh
 # ----- Makes rdp work with VNC by default
 cd /etc/xrdp
 cat <<EOF | sudo patch -p1

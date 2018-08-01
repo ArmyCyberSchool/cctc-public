@@ -21,7 +21,7 @@
 . The Net3 client should be allowed to initiate new SSH, HTTP,  and TCP 9001-9002 connections. Established communications should also be allowed to ensure communications are successful.
 . Both Net1 and Net3 clients should never allow traffic to/from TCP/UDP ports 7777 and 9999.
 . Deny ping (ICMP) operations on Net1 and Net3 hosts. (Remember ping is a two part transaction. You should be thorough and filter both parts)
-. Ensure your Policy for the INPUT, OUTPUT, and FORWARD tables default policy is ACCEPT.
+. Ensure your Policy for the INPUT, OUTPUT, and FORWARD tables default policy is DROP.
 . Test Condition:  Attempt to SSH between the Net1 and Net3 Clients (you can use non-standard ports such as 9999 or 7777 to test and verify the DROP rules). Ensure your IPTables rules are enforcing the above requirements.
 
 == Deliverables

@@ -63,7 +63,7 @@ In this demonstration, H1 (Debian GUI host) will act as the attacker and client.
   
 2) clone MmodbusPal and a prebuild system: `git clone https://github.com/ControlThingsPlatform/modbuspal.git`
 
-3) change directory to the modbuspal directory and run the jar, as super user, (so it can write tcp): `sudo java -jar modbuspal.jar`
+3) change directory to the modbuspal directory and run the jar, as super user, (so it can write tcp): `sudo java -jar ModbusPal.jar &`
 
 4) In the ModbusPal GUI, click the Load button under Project, navigate to the modbuspal directory, and select _VoltageRegulator.xmpp_
 

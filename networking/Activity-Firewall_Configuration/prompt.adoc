@@ -11,7 +11,9 @@
 
 == Scenario
 
-Your organization needs access to a DMZ that was recently added. There is a pfsense firewall is attached to (2) trusted LANs and a DMZ. The DMZ should not be allowed to make unsolicited connections into the trusted networks.
+Your organization needs access to a DMZ that was recently added. There is a pfsense firewall is attached to (2) trusted LANs and a DMZ. The DMZ should not be allowed to make unsolicited connections into the trusted networks. 
+
+*Before you start this activity*, you will need to log into the pfsense machine and *disable the default allow rules to the Lan, Lan2, and DMZ interfaces*. You can find the IP addresses and username / password on your network diagram in the main networking directory of blackboard.
 
 {empty} +
 
@@ -19,11 +21,11 @@ Your organization needs access to a DMZ that was recently added. There is a pfse
 
 Task 1) 
 
-1. Allow tcp port 1234 destined to the DMZ host from net1. 
+1. Allow traffic from the net1 host to the DMZ host on TCP port 1234. 
 
-2. Explicitly Block and log traffic destined for tcp port 7777 from net1 to the DMZ host. All other ports should still be blocked by the implicit deny rule.
+2. Explicitly Block and log traffic from the net1 host to the DMZ host on TCP port 7777. All other ports should still be blocked by the implicit deny rule.
 
-3. Explicitly allow the net1 host to access the web page hosted by net3. All other ports should still be blocked by the implicit deny rule.
+3. Explicitly allow the net1 host to access the web page hosted by the net3 host. All other ports should still be blocked by the implicit deny rule.
 
 4. Explicitly allow the net1 host to access the DMZ host via SSH.
 
@@ -33,7 +35,7 @@ Task 1)
 
 Task 2)
 
-1. Acting as a insider, you have access to the net1 host. You need to provide access to the web server located on the net3 host to the DMZ client in order to stage information for exfiltration. *Use tunneling commands you learned during your SSH tunneling section to complete this task*
+1. Acting as a insider, you have access to *ONLY* the net1 host. You need to provide access to the web server located on the net3 host to the DMZ host in order to stage information for exfiltration. *Use tunneling commands you learned during your SSH tunneling section to complete this task*
 
 2. A network administrator has discovered the misconfiguration in the firewall. Acting as the network administrator perform the necessary firewall configurations to prevent future incidents and further harden the firewall device.
 
@@ -46,5 +48,7 @@ Task 2)
 
 {empty} +
 
+== References
 
+* https://www.netgate.com/docs/pfsense/config/example-basic-configuration.html
 
