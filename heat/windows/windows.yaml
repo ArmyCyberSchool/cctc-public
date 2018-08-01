@@ -1,5 +1,5 @@
 heat_template_version: 2017-02-24
-# last updated 2018-05-25
+# last updated 2018-08-01
 description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 (and UTW test).
 
 parameters:
@@ -135,7 +135,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.large
-      image: Windows 10
+      image: Windows 10 1803
       name:
         str_replace:
           template: lastname-Windows-10
@@ -213,32 +213,54 @@ resources:
             $studentID: { get_param: student_id }
       user_data_format: RAW
 
-  # server_3_subnet_0_port:
-    # type: OS::Neutron::Port
-    # properties:
-      # network_id: { get_resource: network_0 }
-      # fixed_ips:
-        # - ip_address:
-            # str_replace:
-              # template: 10.studentID.0.3
-              # params:
-                # studentID: { get_param: student_id }
-      # port_security_enabled: false
+  server_3_subnet_0_port:
+    type: OS::Neutron::Port
+    properties:
+      network_id: { get_resource: network_0 }
+      fixed_ips:
+        - ip_address:
+            str_replace:
+              template: 10.studentID.0.3
+              params:
+                studentID: { get_param: student_id }
+      port_security_enabled: false
 
-  # server_3:
-    # type: OS::Nova::Server
-    # properties:
-      # diskConfig: AUTO
-      # flavor: cy.medium
-      # image: Under the Wire
-      # name:
-        # str_replace:
-          # template: lastname-Under-the-Wire
-          # params:
-            # lastname: { get_param: last_name }
-      # networks:
-        # - port: { get_resource: server_3_subnet_0_port }
-        
+  server_3:
+    type: OS::Nova::Server
+    properties:
+      diskConfig: AUTO
+      flavor: cy.large
+      image: Windows 10
+      name:
+        str_replace:
+          template: lastname-Windows-10
+          params:
+            lastname: { get_param: last_name }
+      networks:
+        - port: { get_resource: server_3_subnet_0_port }
+      user_data:
+        str_replace:
+          template: |
+            #ps1_sysnative
+            $ErrorActionPreference = 'SilentlyContinue'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -Value 0
+            set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System' -name "dontdisplaylastusername" -Value 1
+            (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-48.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
+            & c:\firefox.exe -ms
+            (new-object System.Net.WebClient).DownloadFile('https://notepad-plus-plus.org/repository/6.x/6.9.2/npp.6.9.2.Installer.exe','C:\npp.exe')
+            & c:\npp.exe /S
+            (new-object System.Net.WebClient).DownloadFile('https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi','C:\putty.msi')
+            & msiexec /i c:\putty.msi /quiet /passive
+            net user /add $user $password /y
+            net localgroup administrators /add $user
+            exit 1001
+          params:
+            $user: { get_param: last_name }
+            $password: { get_param: password }
+            $studentID: { get_param: student_id }
+      user_data_format: RAW
+      
 outputs:
   floating_ip:
     description: Windows 10 floating IP for RDP access
