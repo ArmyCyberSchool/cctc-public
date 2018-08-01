@@ -1,0 +1,43 @@
+How to create a stack using a yaml file
+---------------------------------------
+
+Step 1: Log in to Open Stack at https://vta.cybbh.space
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Domain is *ipa* for instructors or *default* for students
+* Username is *CCTC-Classname-Student-XX* for students
+* Password is *MarinesFluorocarbonRounders* for students
+
+Step 2: Create a stack
+~~~~~~~~~~~~~~~~~~~~~
+
+* Click on *Orchestration* on the left pane, then *Stacks*
+* Click on the *Launch Stack* Button
+* Under *Template Source*, change *File* to *Direct Input*
+* Paste the raw yaml file data from the Git into the *Template Data* field
+* Click *Next*
+* In the *Stack Name* field, name your stack with no spaces
+* In the *Password for user* field, enter your password
+** *MarinesFluorocarbonRounders* for students
+* In the *Last Name* field, enter your last name
+** This will be your Windows logon username
+* *DO NOT CHANGE THE PASSWORD FIELD!*
+** the default password is *password*
+* In the *Student ID* field, use the student's desk position number
+** This will be part of the VM's IP address
+** *DO NOT USE 50. THIS IS RESERVED FOR FLOATING IPs!*
+** *If the student's position number is 1-9, only use a single digit in this field*
+* Click the *Launch Stack* button
+
+Step 3: Wait while your stack builds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* It will be done when the *Status* changes to *Create Complete*
+* *The Windows 10 1803 build takes upwards of 10 minutes to build*
+
+Step 4: Log into your Stack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Click on *Compute*, then *Instances* on the left pane
+* Click on the *VM* you want to log onto under *Instance Name*
+* Click on the *Console Tab* to view your VM
