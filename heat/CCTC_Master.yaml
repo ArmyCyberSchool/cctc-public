@@ -307,7 +307,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.medium
-      image: Debian Jessie
+      image: Debian Stretch
       name: net-DMZ
       networks:
       - port: {get_resource: DMZ_subnet_3_port}
