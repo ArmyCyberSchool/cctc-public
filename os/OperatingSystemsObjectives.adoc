@@ -1,0 +1,219 @@
+:doctype: book
+:stylesheet: ../cctc.css
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+
+= Cyber Common Technical Core (CCTC) Operating Systems Objectives
+
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
+
+{empty} +
+
+*¹   baseline skill , not taught by us; will be assessed OR is covered via. activity.* +
+*²   CCTCv2 skills; explicitly taught or assumed-known AND assessed/verified.*
+
+{empty} +
+
+== Section 1: Core Features
+
+* SKILL CCOS001: Identify common shells ¹ ²
+** CCOS001.001 Describe common shells and their differences ¹
+** CCOS001.002 Define common shell modes, features and functions ¹
+** *CCOS001.003 Describe shell environment initialization and implications ²*
+
+* SKILL CCOS002: Employ commands using common shells ¹ ²
+** CCOS002.001 Demonstrate basic familiarity with the command line interface ¹
+** *CCOS002.002 Determine BASH shell order of evaluation ²*
+** CCOS002.003 Demonstrate appropriate use of pipes and redirection ¹
+** CCOS002.004 Explain the fundamentals of Boolean logic ¹
+** CCOS002.005 Demonstrate methods of gaining more info. about commands and switches ¹
+
+* *SKILL CCOS004: Identify the significance of situational awareness ¹ ²*
+** *CCOS004.001 Explain potential reasons for heightened situational awareness ²*
+** *CCOS004.002 Implement command line commands to acquire situational awareness of the workstation ²*
+** *CCOS004.003 Use System Internals tools to gain situational awareness of the current Windows workstation ²*  
+
+* *SKILL CCOS005: Employ commands using Windows Management Instrumentation Command-line ¹ ²*
+
+* *SKILL CCOS006: Employ commands using Powershell ¹ ²*
+** *CCOS006.001 Demonstrate intermediate functionality of Powershell ²*
+
+* *SKILL CCOS007: Develop powershell scripts ¹ ²*
+** *CCOS007.001 Create a batch script that will perform basic enumeration of a workstation ²*
+
+* SKILL CCOS008: Analyze the Linux file system ¹ ²
+** CCOS008.001 Describe file system hierarchy ¹
+** CCOS008.002 Describe file system metadata (ownership, permissions, timestamps) ¹
+** *CCOS008.003 Describe file system attributes ²*
+** CCOS008.004 Employ commands to search the file system ¹
+** *CCOS008.005 Describe regular expressions ²*
+** *CCOS008.006 Create regular expressions to target data within in the file system ²*
+** *CCOS008.007 Determine data that a regular expression will return ²*
+
+== Section 2: Boot Processes
+
+* SKILL CCOS009: Describe the Linux and Windows boot processes ¹ ²
+** *CCOS009.001 Contrast BIOS and UEFI ²*
+** *CCOS009.002 Understand Windows TPM Secure/Trusted Boot ²*
+** *CCOS009.003 Identify components of the Linux and Windows boot process ²* 
+** CCOS009.004 Explain the post kernel boot process ¹
+** *CCOS009.005 Describe boot process differences ²*
+** CCOS009.006 Describe MBR and GPT partitions ¹
+
+* SKILL CCOS010: Assess Linux and Windows boot configuration files ¹ ²
+** *CCOS010.001 Identify components of the boot config file(s)* 
+** *CCOS010.002 Identify config file post-modification system behaivor*
+** *CCOS010.003 Remediate Linux and Windows bootkits ²*
+
+== Section 3: Scripts & Processes
+  
+* *SKILL CCNI011: Identify Windows processes ¹ ²*
+** *CCOS011.001 Explain how to find the current status of a Windows process ²*
+** *CCOS011.002 Discuss the differences between processes, threads and handles ²*
+** *CCOS011.003 Describe system processes ²*
+
+* *SKILL CCOS012: Analyze the validity of Windows processes ¹ ²*
+** *CCOS012.001 Determine the abnormal activities that are taking place on a system based on a process list ²*
+** *CCOS012.002 Discover hidden processes and services ²*
+
+* SKILL CCOS013: Identify Linux processes ¹ ²
+** CCOS013.001 Identify common processes for Linux startup ¹  
+** CCOS013.002 Identify Linux process relationships ¹  
+** CCOS013.003 Employ commands to enumerate processes ¹
+** CCOS013.004 Explain the functionality of daemons ¹
+** CCOS013.005 Enumerate orphaned and defunct/zombie processes ¹
+** *CCOS013.006 Demonstrate knowledge of apt/aptitude ²*
+** CCOS013.007 Evaluate the validity of Linux processes ¹
+
+* SKILL CCOS014: Develop shell scripts ¹
+** CCOS014.001 Demonstrate basic familiarity with shell scripting ¹
+** CCOS014.002 Explain variables and variable manipulation ¹
+** CCOS014.003 Employ commands for string manipulation ¹
+** CCOS014.004 Identify hashing and file hashes ¹
+** CCOS014.005 Create a BASH script to perform basic enumeration on a Linux system ¹
+
+* SKILL CCOS015: Identify Linux networking features ¹ ²
+** CCOS015.001 Describe the local name resolution process on a Linux host ¹
+** *CCOS015.002 Determine statuses of* SYSV ¹ and *SYSTEMD ² network services for Linux*
+** CCOS015.003 Enumerate network config. info. and connections on a Linux system ¹
+** *CCOS015.004 Demonstrate service config files(s) post-modification behaivor ² *
+** *CCOS015.005 Configure SAMBA for data transfer ²*
+** *CCOS015.006 Perform a file transfer using telnet ²*
+
+* *SKILL CCOS016: Define Windows Resource Protection (WRP) ¹ ²*
+** *CCOS016.001 Discuss the security implications of Windows Resource Protection on a compromised system ²*
+
+* *SKILL CCOS017: Define Windows Resource Protection ¹ ²*
+** *CCOS017.001 Identify the purpose of user account control ²*
+** *CCOS017.002 Identify if user account control is Active ²*
+** *CCOS017.003 Explain user account control Bypass (UAC) ²*
+** *CCOS017.004 Employ User Interface Privilege Isolation (UIPI) ²*
+
+== Section 4: Auditing & Logging
+
+* SKILL CCOS018: Identify auditing activities ²
+** *CCOS018.001 Contrast system, application and authentication logging ²*
+** *CCOS018.002 Configure rotation of logs ²*
+
+* SKILL CCOS019: Identify actions that contribute to log entries ²
+** *CCOS019.001 Deduce actions/behaivors that contribute to log files entries ²*
+** *CCOS019.002 Analyze log files for anomalous activity ²*
+
+* *SKILL CCOS020: Define Windows auditing ¹ ²*
+** *CCOS020.001 Review why audit policies are needed ²*
+** *CCOS020.002 Review the functionality of the main logs ²*
+** *CCOS020.003 Configure audit policy settings ²*
+** *CCOS020.004 Understand why events get audited ²*
+
+* *SKILL CCOS021: Tune the audit policy for anomalous activity reccognition ¹ ²*
+** *CCOS021.001 Use command line tools to view policy settings ²*
+
+* *SKILL CCOS022: Analyze event logs for anomalous activity ¹ ²*
+** *CCOS022.001 Identify the locations of logs on the Windows system ²*
+** *CCOS022.002 Employ command line tools to view event logs ²*
+
+* *SKILL CCOS023 Identify powershell logging ²*
+** *CCOS023.001 Identify PowerShell Default Logging ²*
+** *CCOS023.002 Identify PowerShell Local Logging ²*
+** *CCOS023.003 Identify PowerShell Domain Logging ²*
+
+== Section 5:  Windows Registry
+
+* *SKILL CCOS024: Employ Windows Registry tools ¹ ²*
+** *CCOS024.001 Use command line syntax to query, view, analyze, modify and create Registry values ²*
+** *CCOS024.002 Explain when and how changes to the Registry are expected to take effect ²*
+
+* *SKILL CCOS025: Analyze Windows Registry for suspicious activity ¹ ²*
+** *CCOS025.001 Identify Registry locations that contain forensically relevant information ²*
+** *CCOS025.002 Identify Registry locations that can be utilized for persistence ²*
+** *CCOS025.003 Perform basic analysis on a Windows system with a compromised Registry ²*
+
+== Section 6:  Virtualization
+
+* *SKILL CCOS026: Identify aspects of virtualization ¹ ²*
+** *CCOS026.001 Discuss the benefits of virtual machines ²*
+
+* *SKILL CCOS027: Implement Virtualization Based Security (VBS) ¹ ²*
+** *CCOS027.001: Implement Isolated User Mode (IUM) ²*
+** *CCOS027.002 Explain the purpose of Device Guard and Hyper Guard ²*
+** *CCOS027.003 Implement Credential Guard ²*
+
+== Section 7: Remoting
+
+* *SKILL CCOS028: Enable various components of Windows Remoting ¹ ²*
+** *CCOS028.001 Demonstrate ways to gain situational awareness on a remote system ²*
+** *CCOS028.002 Discuss the interaction of WinRM & WS-Man ²*
+** *CCOS028.003 Discuss the operational limitations of Serialized vs Deserialized objects ²*
+
+* *SKILL CCOS029: Identify the various Remoting Session Types ¹ ²*
+** *CCOS029.001 Discuss the operation of Invoke-Command ²*
+** *CCOS029.002 Compare PSSession via SSH Transport, Implicit Remoting ²*
+** *CCOS029.003 Discuss the differences of SSH Transport and OpenSSH ²*
+** *CCOS029.004 Discuss the benefits of Implicit Remoting ²*
+
+== Section 8: Understand x86_64 Assembly
+
+* **SKILL CCOS030: Understand x86_64 ASM (Intel) **
+** CCOS030.001 Explain datasizes, registers, and instructions 
+** **CCOS030.002 Describe the x86_64 stack**
+
+* **SKILL CCOS031: Follow C Source Code**
+** **CCOS031.001 Demonstrate variables and functions in C programs**
+
+* **SKILL CCOS032: Python Programming**
+** **CCOS032.001 Employ functions and variables in Python programs**
+** **CCOS032.002 Import Python libraries**
+
+== Section 9: Determining Binary Behavior
+
+* **SKILL CCOS033: Binaries Debugging**
+** **CCOS033.001 Follow program flow utilizing common debugging tools**
+** **CCOS033.002 Implement program breakpoints**
+** **CCOS033.003 Modify flag values**
+
+* **SKILL CCOS034: Binary Disassembly**
+** **CCOS034.001 Disassemble binaries utilizing common tools **
+** **CCOS034.002 Follow disassembled program/binary flow**
+
+* **SKILL CCOS035: Determine execution behaivor using program flow**
+
+== Section 10: Utilize flow of Program
+
+* **SKILL CCOS036: Discover hardcoded, obscured binary data**
+
+* **SKILL CCOS037: Reverse mathematical formulas to determine binary data**
+** **CCOS037.001 Determine mathematical formulas necessary to enumerate data in binary**
+** **CCOS037.002 Develop script(s) to generate data based on mathematical formula**
+
+* **SKILL CCOS038: Determine obscured functionality of binary**
+** **CCOS038.001 Locate filesystem and OS internals modification(s)**
+
+== Section 11: Exectuable Patching
+
+* **SKILL CCOS039: Demonstrate binary patching utilizing x96 debugging suite**
+** **CCOS039.001 Determine binary behaivor through reverse engineering and disassembly**
+** **CCOS039.002 Alter binary execution behavoir through precision patching**
+
+
+'''
+
+//[small]#Access at https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf#
