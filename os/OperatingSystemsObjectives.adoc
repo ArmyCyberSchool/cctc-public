@@ -46,18 +46,17 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS004.003 Describe PowerShell environment initialization and implications ($profile) ²*
 
 * *SKILL CCOS005: Employ commands using PowerShell ²*
-** *CCOS005.001 Demonstrate basic familiarity with the command line interface ²*
+** *CCOS005.001 Demonstrate basic familiarity with the PowerShell interface ²*
 *** *CCOS005.001.1 Demonstrate methods of gaining more info. about commands and switches ²*
 ** *CCOS005.002 Determine PowerShell order of evaluation ²*
 ** *CCOS005.003 Demonstrate appropriate use of pipes and redirection ²* 
 ** *CCOS005.004 Explain the fundamentals of Boolean logic ²*
 
 * *SKILL CCOS006: Identify the significance of situational awareness ²*
-** *CCOS006.001 Explain potential reasons for heightened situational awareness ²*
-** *CCOS006.002 Implement commands to acquire situational awareness of the workstation ²*
-** *CCOS006.003 Utilize SYSINTERNALS tools to gain situational awareness of workstation ²*
+** *CCOS006.001 Implement commands to acquire situational awareness of the workstation ²*
+** *CCOS006.002 Utilize SYSINTERNALS tools to gain situational awareness of workstation ²*
 
-* *SKILL CCOS007: Employ commands using Windows Management Instrumentation Command-line (WMIC) ¹ ²*
+* *SKILL CCOS007: Employ commands using Windows Management Instrumentation Command-line (WMIC) ²*
 
 * *SKILL CCOS008: Employ CMDLETs using Powershell ²*
 ** *CCOS008.001 Demonstrate intermediate functionality of Powershell ²*
@@ -90,12 +89,11 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 == Section 5: Windows Boot Processes
 
 * SKILL CCOS012: Describe the Windows boot processes ¹ ²
-** *CCOS012.001 Contrast BIOS and UEFI ²*
-** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot ²*
+** *CCOS012.001 Contrast BIOS and UEFI boot process ²*
+** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot ²* Discuss
 ** *CCOS012.003 Identify components of the Windows boot process ²* 
 ** CCOS012.004 Explain the post kernel boot process ¹
-** *CCOS012.005 Describe boot process differences ²*
-** CCOS012.006 Contrast MBR and GPT ¹
+** CCOS012.005 Contrast MBR and GPT ¹
 
 * SKILL CCOS013: Assess Windows boot configuration files ¹ ²
 ** CCOS013.001 Identify components of the boot config file(s) ¹ 
@@ -141,28 +139,28 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS018.001 Determine the abnormal activities that are taking place on a system based on a process list ²*
 ** *CCOS018.002 Discover hidden processes and services ²*
 
-* SKILL CCOS019: Develop PowerShell scripts ¹ ²
-** CCOS019.001 Demonstrate intermediate familiarity with PowerShell scripting ¹
+* *SKILL CCOS019: Develop PowerShell scripts ²*
+** *CCOS019.001 Demonstrate intermediate familiarity with PowerShell scripting ²*
 ** *CCOS019.002 Configure $profile script execution policy ²*
-** CCOS019.003 Explain variables and variable manipulation ¹
-** CCOS019.004 Employ commands for string manipulation ¹
+** *CCOS019.003 Explain variables and variable manipulation ²*
+** *CCOS019.004 Employ commands for string manipulation ²*
 ** *CCOS019.005 Perform PowerShell file hashing ²*
 ** *CCOS009.006 Create PowerShell scripts that will perform enumeration of a Windows system ²*
 
 * SKILL CCOS020: Identify Windows networking features ¹ ²
 ** CCOS020.001 Describe the local name resolution process on a Windows host ¹
-** CCOS020.003 Enumerate network config. info. and connections on a Windows system, using external commands¹
-** *CCOS020.004 Demonstrate service config files(s) post-modification behaivor ² *
+** CCOS020.003 Enumerate network config. info. and connections on a Windows system, using external commands ¹
+** *CCOS020.004 Demonstrate service configuration post-modification behaivor ² *
 ** *CCOS020.005 Configure SMB Share for data transfer ²*
 
 * *SKILL CCOS021: Define Windows Resource Protection (WRP) ¹ ²*
-** *CCOS021.001 Discuss the security implications of Windows Resource Protection on a compromised system ²*
+** *CCOS021.001 Contrast methods of resource integrity verificaion of compromised and non-compromised systems ²*
 
-* *SKILL CCOS022: Define Windows Resource Protection ¹ ²*
-** *CCOS022.001 Identify the purpose of user account control ²*
-** *CCOS022.002 Identify if user account control is Active ²*
-** *CCOS022.003 Explain user account control Bypass (UAC) ²*
-** *CCOS022.004 Employ User Interface Privilege Isolation (UIPI) ²*
+* *SKILL CCOS022: Examine UAC ¹ ²*
+** *CCOS022.001 Understand the purpose of user account control ²*
+** *CCOS022.002 Determine user account control state ²*
+** *CCOS022.003 Demonstrate user account control Bypass (UAC) ²*
+*** *CCOS022.004 Examine User Interface Privilege Isolation (UIPI) ²*
 
 == Section 4: Linux Auditing & Logging
 
@@ -187,7 +185,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * *SKILL CCOS027: Define Windows auditing ²*
 ** *CCOS027.001 Configure audit policy settings ²*
-** *CCOS027.002 Recognize audit events IDs ²*
+** *CCOS027.002 Recognize and research audit events IDs ²*
 
 * *SKILL CCOS028: Tune the audit policy for anomalous activity reccognition ²*
 ** *CCOS028.001 View audit policy settings using CMD shell ²*
@@ -223,7 +221,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS034.001: Implement Windows Isolated User Mode (IUM) ²*
 ** *CCOS034.002 Explain the purpose of Windows Device Guard ²*
 ** *CCOS034.002 Explain the purpose of Windows Hyper Guard ²*
-** *CCOS034.003 Implement Windows Credential Guard ²*
+** *CCOS034.003 Explain Windows Credential Guard ²*
 
 == Section 7: Windows Remoting
 
