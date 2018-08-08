@@ -286,7 +286,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 * **SKILL CCOS045: Determine obscured functionality of binary**
 ** **CCOS045.001 Locate filesystem and OS internals modification(s)**
 
-== Section 12: Exectuable Patching
+== Section 12: Executable Patching
 
 * **SKILL CCOS046: Demonstrate binary patching utilizing x96 debugging suite**
 ** **CCOS046.001 Determine binary behaivor through reverse engineering and disassembly**
