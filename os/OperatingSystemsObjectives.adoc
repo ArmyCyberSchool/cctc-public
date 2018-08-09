@@ -131,9 +131,8 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 == Section 7: Windows Scripts & Processes
   
 * *SKILL CCNI017: Identify Windows processes ²*
-** *CCOS017.001 Explain how to find the current status of a Windows process ²*
+** CCOS017.001 Explain how to find the current state of a Windows process ¹
 ** *CCOS017.002 Discuss the differences between processes, threads and handles ²*
-** *CCOS017.003 Describe system processes ²*
 
 * *SKILL CCOS018: Analyze the validity of Windows processes ¹ ²*
 ** *CCOS018.001 Determine the abnormal activities that are taking place on a system based on a process list ²*
@@ -162,7 +161,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS022.003 Demonstrate user account control Bypass (UAC) ²*
 *** *CCOS022.004 Examine User Interface Privilege Isolation (UIPI) ²*
 
-== Section 4: Linux Auditing & Logging
+== Section 8: Linux Auditing & Logging
 
 * *SKILL CCOS023: Identify auditing activities ²*
 ** *CCOS023.001 Contrast RSYSLOG system, application and authentication logging ²*
@@ -173,7 +172,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS024.001 Deduce actions and behaivors that contribute to log files entries ²*
 ** *CCOS024.002 Analyze log files for anomalous activity ²*
 
-== Section 4: Windows Auditing & Logging
+== Section 9: Windows Auditing & Logging
 
 * *SKILL CCOS025: Identify auditing activities ²*
 ** *CCOS025.001 Contrast system, application and authentication logging ²*
@@ -199,7 +198,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS030.002 Implement PowerShell Transcription ²*
 ** *CCOS030.003 Contrast PowerShell Default, Local, and Domain Logging ²*
 
-== Section 5:  Windows Registry
+== Section 10:  Windows Registry
 
 * SKILL CCOS031: Employ Windows Registry tools ¹ ²
 ** CCOS031.001 Use CMD shell syntax to query, view, analyze, modify and create Registry values ¹
@@ -211,7 +210,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS032.002 Identify Registry locations that can be utilized for persistence ²*
 ** *CCOS032.003 Create a PowerShell script to identify compromised Registry values ²*
 
-== Section 6:  Virtualization
+== Section 11:  Virtualization
 
 * SKILL CCOS033: Identify aspects of virtualization ¹
 ** CCOS033.001 Discuss the benefits of virtual machines ¹
@@ -223,7 +222,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS034.002 Explain the purpose of Windows Hyper Guard ²*
 ** *CCOS034.003 Explain Windows Credential Guard ²*
 
-== Section 7: Windows Remoting
+== Section 12: Windows Remoting
 
 * *SKILL CCOS035: Enable various components of Windows Remoting ²*
 ** *CCOS035.001 Gain situational awareness on a remote Windows system ²*
@@ -236,18 +235,18 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS036.003 Discuss the differences of SSH Transport and OpenSSH ²*
 ** *CCOS036.004 Discuss the benefits of Implicit Remoting ²*
 
-== Section 8: Windows Active Directory
+== Section 13: Windows Active Directory
 
-* *SKILL CCOS037: Understand Windows Active Directory ²*
-** *CCOS037.001 Understand domain trust relationships ²*
-** *CCOS037.002 Contrast privelege levels of local domain groups and accounts ²*
+* SKILL CCOS037: Understand Windows Active Directory ¹
+** CCOS037.001 Understand domain trust relationships ¹
+** CCOS037.002 Contrast privelege levels of local domain groups and accounts ¹
 ** CCOS037.003  Use CMD shell to query, view, analyze, modify and create AD objects ¹
 ** *CCOS037.004  Use PowerShell to query, view, analyze, modify and create AD objects ²*
 ** *CCOS037.005  Use PowerShell to survey Domain Controler security posture ²*
-** *CCOS037.006  Understand Kerberos Ticket Granting process ²*
-*** *CCOS037.006.1  Understand Kerberos security ²*
+** CCOS037.006  Understand Kerberos Ticket Granting process ¹
+*** CCOS037.006.1  Understand Kerberos security ¹
 
-== Section 9: Understand x86_64 Assembly
+== Section 14: Understand x86_64 Assembly
 
 * **SKILL CCOS037: Understand x86_64 ASM (Intel) **
 ** CCOS037.001 Explain datasizes, registers, and instructions 
@@ -255,12 +254,13 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * **SKILL CCOS038: Follow C Source Code**
 ** **CCOS038.001 Demonstrate variables and functions in C programs**
-
+----
 * **SKILL CCOS039: Python Programming**
 ** **CCOS039.001 Employ functions and variables in Python programs**
 ** **CCOS039.002 Import Python libraries**
+----
 
-== Section 10: Determining Binary Behavior
+== Section 15: Determining Binary Behavior
 
 * **SKILL CCOS040: Binaries Debugging**
 ** **CCOS040.001 Follow program flow utilizing common debugging tools**
@@ -273,7 +273,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * **SKILL CCOS042: Determine execution behaivor using program flow**
 
-== Section 11: Utilize flow of Program
+== Section 16: Utilize flow of Program
 
 * **SKILL CCOS043: Discover hardcoded, obscured binary data**
 
@@ -284,7 +284,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 * **SKILL CCOS045: Determine obscured functionality of binary**
 ** **CCOS045.001 Locate filesystem and OS internals modification(s)**
 
-== Section 12: Executable Patching
+== Section 17: Executable Patching
 
 * **SKILL CCOS046: Demonstrate binary patching utilizing x96 debugging suite**
 ** **CCOS046.001 Determine binary behaivor through reverse engineering and disassembly**
