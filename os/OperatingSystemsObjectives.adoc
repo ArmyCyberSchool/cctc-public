@@ -90,7 +90,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCOS012: Describe the Windows boot processes ¹ ²
 ** *CCOS012.001 Contrast BIOS and UEFI boot process ²*
-** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot ²* Discuss
+** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot ²*
 ** *CCOS012.003 Identify components of the Windows boot process ²* 
 ** CCOS012.004 Explain the post kernel boot process ¹
 ** CCOS012.005 Contrast MBR and GPT ¹
