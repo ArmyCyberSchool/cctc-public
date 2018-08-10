@@ -21,13 +21,13 @@ Your organization needs access to a DMZ that was recently added. There is a pfse
 
 Task 1) 
 
-1. Allow traffic from the net1 host to the DMZ host on TCP port 1234. 
+1. Allow traffic from the net1 host destined to the DMZ host TCP port 1234. 
 
-2. Explicitly Block and log traffic from the net1 host to the DMZ host on TCP port 7777. All other ports should still be blocked by the implicit deny rule.
+2. Explicitly Block and log traffic from the net1 host destined to the DMZ host TCP port 7777. All other ports should still be blocked by the implicit deny rule.
 
-3. Explicitly allow the net1 host to access the web page hosted by the net3 host. All other ports should still be blocked by the implicit deny rule.
+3. Explicitly allow the net1 host destined to net3 host via HTTP. All other ports should still be blocked by the implicit deny rule.
 
-4. Explicitly allow the net1 host to access the DMZ host via SSH.
+4. Explicitly allow the net1 host destined to access the DMZ host via SSH.
 
 *Test your rules *
 
