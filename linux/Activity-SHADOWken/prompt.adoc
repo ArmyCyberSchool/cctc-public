@@ -47,7 +47,7 @@ image::../Resources/SHADOWken.PNG[shadowken,height="150",width="450",float="left
 * Are you in the root GID?
 * Still as user 'ken', type `cat /etc/shadow`
 * Why are you not able to view the shadow file?
-** Hint: `ls -al /ect/shadow`
+** Hint: `ls -al /etc/shadow`
 * Identify which groups user 'ken' belongs to; is user 'ken' in more than one group?
 * How many groups are YOU in?
 
