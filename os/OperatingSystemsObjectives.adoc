@@ -9,7 +9,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 {empty} +
 
 *¹   baseline skill; assessed OR covered via. activity.* +
-*²   CCTCv2 skill; explicitly taught AND assessed/verified.*
+*²   CCTCv2 skill; explicitly taught AND assessed/verified.* +
 
 {empty} +
 
@@ -123,14 +123,14 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCOS016.001 Describe the local name resolution process on a Linux host ¹
 ** *CCOS016.002 Determine statuses of* SYSV ¹ and *SYSTEMD ² network services for Linux*
 ** CCOS016.003 Enumerate network config. info. and connections on a Linux system ¹
-** *CCOS016.004 Demonstrate service config files(s) post-modification behaivor ² *
+** *CCOS016.004 Demonstrate service config files(s) post-modification behaivor ²*
 ** *CCOS016.005 Configure SAMBA for data transfer ²*
 ** *CCOS016.006 Perform a file transfer using telnet ²*
 ** *CCOS016.007 Configure chronological jobs (CRON) ²*
 
 == Section 7: Windows Scripts & Processes
   
-* *SKILL CCNI017: Identify Windows processes ²*
+* *SKILL CCNI017: Identify Windows processes ¹ ²*
 ** CCOS017.001 Explain how to find the current state of a Windows process ¹
 ** *CCOS017.002 Discuss the differences between processes, threads and handles ²*
 
@@ -149,7 +149,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 * SKILL CCOS020: Identify Windows networking features ¹ ²
 ** CCOS020.001 Describe the local name resolution process on a Windows host ¹
 ** CCOS020.003 Enumerate network config. info. and connections on a Windows system, using external commands ¹
-** *CCOS020.004 Demonstrate service configuration post-modification behaivor ² *
+** *CCOS020.004 Demonstrate service configuration post-modification behaivor ²*
 ** *CCOS020.005 Configure SMB Share for data transfer ²*
 
 * *SKILL CCOS021: Define Windows Resource Protection (WRP) ¹ ²*
@@ -237,7 +237,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 == Section 13: Windows Active Directory
 
-* SKILL CCOS037: Understand Windows Active Directory ¹
+* SKILL CCOS037: Understand Windows Active Directory ¹ ²
 ** CCOS037.001 Understand domain trust relationships ¹
 ** CCOS037.002 Contrast privelege levels of local domain groups and accounts ¹
 ** CCOS037.003  Use CMD shell to query, view, analyze, modify and create AD objects ¹
@@ -246,49 +246,63 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** CCOS037.006  Understand Kerberos Ticket Granting process ¹
 *** CCOS037.006.1  Understand Kerberos security ¹
 
-== Section 14: Understand x86_64 Assembly
+== Section 14: Forensics
 
-* **SKILL CCOS037: Understand x86_64 ASM (Intel) **
-** CCOS037.001 Explain datasizes, registers, and instructions 
-** **CCOS037.002 Describe the x86_64 stack**
+* SKILL CCOS038: Data Collection and Analysis ¹ ²
+** CCOS38.001 Exposed to Chain of Custody ¹
+** CCOS38.002 Understand and Identify forensic analysis and tools ¹ 
+*** CCOS38.002.1 Analyze dd physical disk image ¹    
+**** CCOS38 002.1a Demonstrate file based analysis ¹
+**** *CCOS38.002.1b Demonstrate LIVE or DEAD memory analysis ²*
 
-* **SKILL CCOS038: Follow C Source Code**
-** **CCOS038.001 Demonstrate variables and functions in C programs**
-----
-* **SKILL CCOS039: Python Programming**
-** **CCOS039.001 Employ functions and variables in Python programs**
-** **CCOS039.002 Import Python libraries**
-----
+* SKILL CCOS039 Timeline Analysis ¹ ²
+** *CCOS39.1 Create timeline based on artifact analysis ²*
+*** *CCOS39.1a Determine Root Cause ²*
 
-== Section 15: Determining Binary Behavior
+* *SKILL CCOS040 Reveal rootkit(s) ²*
+** *CCOS40.1 Identify hidden Linux Kernel Modules (LKM) ²*
 
-* **SKILL CCOS040: Binaries Debugging**
-** **CCOS040.001 Follow program flow utilizing common debugging tools**
-** **CCOS040.002 Implement program breakpoints**
-** **CCOS040.003 Modify flag values**
+* *SKILL CCOS041 Hypervisor memory analysis ²*
+** *CCOS41.1 Identify hypervisor attacks ²*
 
-* **SKILL CCOS041: Binary Disassembly**
-** **CCOS041.001 Disassemble binaries utilizing common tools **
-** **CCOS041.002 Follow disassembled program/binary flow**
+== Section 15: Understand x86_64 Assembly
 
-* **SKILL CCOS042: Determine execution behaivor using program flow**
+* *SKILL CCOS042: Understand x86_64 ASM (Intel) ¹ ²*
+** CCOS042.001 Explain datasizes, registers, and instructions ¹ 
+** *CCOS042.002 Describe the x86_64 stack ²*
 
-== Section 16: Utilize flow of Program
+* *SKILL CCOS043: Follow C Source Code ²*
+** *CCOS043.001 Demonstrate variables and functions in C programs ²*
 
-* **SKILL CCOS043: Discover hardcoded, obscured binary data**
+== Section 16: Determining Binary Behavior
 
-* **SKILL CCOS044: Reverse mathematical formulas to determine binary data**
-** **CCOS044.001 Determine mathematical formulas necessary to enumerate data in binary**
-** **CCOS044.002 Develop script(s) to generate data based on mathematical formula**
+* *SKILL CCOS044: Binaries Debugging ²*
+** *CCOS044.001 Follow program flow utilizing common debugging tools ²*
+** *CCOS044.002 Implement program breakpoints ²*
+** *CCOS044.003 Modify flag values ²*
 
-* **SKILL CCOS045: Determine obscured functionality of binary**
-** **CCOS045.001 Locate filesystem and OS internals modification(s)**
+* *SKILL CCOS045: Binary Disassembly ²*
+** *CCOS045.001 Disassemble binaries utilizing common tools ²*
+** *CCOS045.002 Follow disassembled program/binary flow ²*
 
-== Section 17: Executable Patching
+* *SKILL CCOS046: Determine execution behaivor using program flow ²*
 
-* **SKILL CCOS046: Demonstrate binary patching utilizing x96 debugging suite**
-** **CCOS046.001 Determine binary behaivor through reverse engineering and disassembly**
-** **CCOS046.002 Alter binary execution behavoir through precision patching**
+== Section 17: Utilize flow of Program
+
+* *SKILL CCOS047: Discover hardcoded, obscured binary data ²*
+
+* *SKILL CCOS048: Reverse mathematical formulas to determine binary data ²*
+** *CCOS048.001 Determine mathematical formulas necessary to enumerate data in binary ²*
+** *CCOS048.002 Develop script(s) to generate data based on mathematical formula ²*
+
+* *SKILL CCOS049: Determine obscured functionality of binary ²*
+** *CCOS049.001 Locate filesystem and OS internals modification(s) ²*
+
+== Section 18: Executable Patching
+
+* *SKILL CCOS050: Demonstrate binary patching utilizing x96 debugging suite ²*
+** *CCOS050.001 Determine binary behaivor through reverse engineering and disassembly ²*
+** *CCOS050.002 Alter binary execution behavoir through precision patching ²*
 
 
 '''
