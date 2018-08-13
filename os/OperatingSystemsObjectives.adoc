@@ -40,9 +40,9 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 == Section 2: Windows Core Features
 
-* *SKILL CCOS004: Describe the PowerShell ²*
+* *SKILL CCOS004: PowerShell ²*
 ** *CCOS004.001 Describe PowerShell and .NET relationship ²*
-** *CCOS004.002 Implement Powershell $profile aliases and functions ²*
+** *CCOS004.002 Implement PowerShell $profile aliases and functions ²*
 ** *CCOS004.003 Describe PowerShell environment initialization and implications ($profile) ²*
 
 * *SKILL CCOS005: Employ commands using PowerShell ²*
@@ -59,7 +59,6 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 * *SKILL CCOS007: Employ commands using Windows Management Instrumentation Command-line (WMIC) ²*
 
 * *SKILL CCOS008: Employ CMDLETs using Powershell ²*
-** *CCOS008.001 Demonstrate intermediate functionality of Powershell ²*
 
 * SKILL CCOS009: Analyze the Windows file system ¹ ²
 ** CCOS009.001 Describe Windows file system hierarchy ¹
@@ -90,7 +89,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 
 * SKILL CCOS012: Describe the Windows boot processes ¹ ²
 ** *CCOS012.001 Contrast BIOS and UEFI boot process ²*
-** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot ²*
+** *CCOS012.002 Understand Windows TPM Secure/Trusted Boot and BitLocker ²*
 ** *CCOS012.003 Identify components of the Windows boot process ²* 
 ** CCOS012.004 Explain the post kernel boot process ¹
 ** CCOS012.005 Contrast MBR and GPT ¹
@@ -139,7 +138,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 ** *CCOS018.002 Discover hidden processes and services ²*
 
 * *SKILL CCOS019: Develop PowerShell scripts ²*
-** *CCOS019.001 Demonstrate intermediate familiarity with PowerShell scripting ²*
+** *CCOS019.001 Demonstrate intermediate level PowerShell scripting knowledge ²*
 ** *CCOS019.002 Configure $profile script execution policy ²*
 ** *CCOS019.003 Explain variables and variable manipulation ²*
 ** *CCOS019.004 Employ commands for string manipulation ²*
@@ -225,24 +224,22 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 == Section 12: Windows Remoting
 
 * *SKILL CCOS035: Enable various components of Windows Remoting ²*
-** *CCOS035.001 Gain situational awareness on a remote Windows system ²*
-** *CCOS035.002 Discuss the interaction of WinRM & WS-Man ²*
-** *CCOS035.003 Discuss the operational limitations of Serialized vs Deserialized objects ²*
+** *CCOS035.001 Discuss the interaction of WinRM & WS-Man ²*
+** *CCOS035.002 Discuss the operational limitations of Serialized vs Deserialized objects ²*
 
 * *SKILL CCOS036: Identify the various Remoting Session Types ²*
-** *CCOS036.001 Discuss the operation of Invoke-Command ²*
-** *CCOS036.002 Compare PSSession via SSH Transport, Implicit Remoting ²*
-** *CCOS036.003 Discuss the differences of SSH Transport and OpenSSH ²*
-** *CCOS036.004 Discuss the benefits of Implicit Remoting ²*
+** *CCOS036.001 Compare PSSession via SSH Transport, Implicit Remoting ²*
+** *CCOS036.002 Discuss the differences of SSH Transport and OpenSSH ²*
+** *CCOS036.003 Discuss the benefits of Implicit Remoting ²*
 
 == Section 13: Windows Active Directory
 
 * SKILL CCOS037: Understand Windows Active Directory ¹ ²
 ** CCOS037.001 Understand domain trust relationships ¹
-** CCOS037.002 Contrast privelege levels of local domain groups and accounts ¹
+** CCOS037.002 Contrast privilege levels of local domain groups and accounts ¹
 ** CCOS037.003  Use CMD shell to query, view, analyze, modify and create AD objects ¹
 ** *CCOS037.004  Use PowerShell to query, view, analyze, modify and create AD objects ²*
-** *CCOS037.005  Use PowerShell to survey Domain Controler security posture ²*
+** *CCOS037.005  Use PowerShell to survey Domain Controller security posture ²*
 ** CCOS037.006  Understand Kerberos Ticket Granting process ¹
 *** CCOS037.006.1  Understand Kerberos security ¹
 
