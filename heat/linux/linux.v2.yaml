@@ -272,7 +272,7 @@ resources:
             # echo "http://acng.bbh.cyberschool.army.mil:3142" > /etc/apt/sources.list
             apt-get -y update
             apt-get -y upgrade
-            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,python-setuptools,python-dev,xrdp,netcat,firefox,lolcat,LXDE})
+            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,python-setuptools,python-dev,xrdp,netcat,firefox,lolcat,xfce4})
             for x in ${pkg_array[@]}; do apt-get install -y $x; done
             apt-get -y install qemu && apt-get -y install qemu
             gem install lolcat
@@ -294,7 +294,7 @@ resources:
             
             # ----- ENABLES SSH
             sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-            sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+            sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
             sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
             systemctl restart ssh
             
