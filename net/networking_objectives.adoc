@@ -1,0 +1,150 @@
+:doctype: book
+:stylesheet: ../cctc.css
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-branch-insignia-official.png[Cyber,width=128,float="right"]
+
+= Cyber Common Technical Core (CCTC) Operating Systems Objectives
+
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
+
+{empty} +
+
+*¹   baseline skill , not taught by us; will be assessed OR is covered via. activity.* +
+*²   CCTCv2 skills; explicitly taught or assumed-known AND assessed/verified.*
+
+{empty} +
+
+---
+
+== Section 1: Network Fundamentals
+
+* *SKILL CCNE001: Networking Fundamentals ¹ ²*
+** CCNE001.001 Understanding the OSI model and Networking ¹
+
+* *SKILL CCNE002: Network Header fields ¹ ²*
+** CCNE002.001 Describe security implications present in header fields ²
+
+* *SKILL CCNE003: Layer 2 Switching Technologies ¹ ²*
+** CCNE003.001 Explain Layer 2 Switching and CAM table ¹
+** CCNE003.002 Explain CDP and LLDP ²
+** CCNE003.003 Understand VTP, STP, DTP ²
+** CCNE003.004 Discuss VLAN, 802.1q and 802.1ad ²
+** CCNE003.005 Identify and discuss security implications and mitigations for switching technologies ²
+
+
+* *SKILL CCNE004: Layer 3 Routing Technologies ¹ ²*
+** CCNE004.001 Explain Layer 3 Routing ¹
+** CCNE004.002 Discuss Routing Tables ¹
+** CCNE004.003 Understand HSRP and VRRP ¹ ²
+** CCNE004.004 Describe Software Defined Networking ¹ ²
+** CCNE004.005 Discuss static and dynamic routing ¹ ²
+** CCNE004.006 Identify and discuss security implications and mitigations for routing technologies ²
+
+
+== Section 2: Network Reconnaissance and Analysis
+
+
+* *SKILL CCNE005: Passive Network Information Gathering ¹ ²*
+** CCNE005.001 Identify items of interest when performing internal/external reconnaissance ¹ ²
+*** CCNE005.002 Describe passive methods used for network reconnaissance ¹ ²
+**** CCNE005.002.1 Perform information gathering using open source information ²
+**** CCNE005.002.2 Perform information gathering through host configuration analysis ²
+
+* *SKILL CCNE006 Network collection devices and relevant data ¹ ²* 
+** CCNE006.001 Identify sources of network data collection ¹
+** CCNE006.002 Explain network data collection devices and placement ²
+
+* *SKILL CCNE007: Passive Network Analysis¹ ²*
+** CCNE007.001 Discuss best practices for network traffic analysis ²
+** CCNE007.002 Describe the use of sniffing tools and methods ¹ ²
+*** CCNE007.002.1 Perform real-time network traffic sniffing ²
+** CCNE007.003 Create filters for items of interest when performing packet captures ²
+*** CCNE007.003.1 Identify default characteristics for system identification ²
+*** CCNE007.003.2 Perform traffic analysis using capture tools and filters ¹ ²
+** CCNE007.004 Determine traffic flow through protocol communication analysis ²
+** CCNE007.005 Perform traffic log analysis ² 
+
+* *SKILL CCNE008: Active Network Reconnaissance and Analysis ¹ ²*
+** CCNE008.001 Discuss best practices for network scanning and enumeration ¹ ²
+** CCNE008.001.1 Describe the use of scanning tools and methods ¹ ²
+*** CCNE008.001.2 Perform real-time network scanning ²
+*** CCNE008.001.3 Perform analysis of network scanning results ²
+
+* *SKILL CCNE009: Network Artifact Correlation¹ ²*
+** CCNE009.001 Map a network through correlation of relevant network artifacts gathered through reconnaissance and analysis ²
+
+
+== Section 3: Network Traffic Filtering
+
+* *SKILL CCNE010: Filtering Devices and Mechanisms ¹ ²*
+** CCNE010.001 Discuss filtering device types ¹
+** CCNE010.002 Explain how filters work at various layers of the OSI model ¹ ²
+*** CCNE0010.003 Describe the limitations of packet filters in terms of directionality ¹ ²
+** CCNE0010.004 Filter packets utilizing network devices ²
+** CCNE0010.005 Interpret a data flow diagram given a set of firewall rules ²
+** CCNE0010.006 Determine positioning of filtering devices on a network ¹ ²
+
+
+* *SKILL CCNE011: Intrusion Detection and Prevention ¹ ²*
+** CCNE011.001 Contrast Intrusion Detection Systems and Intrusion Prevention Systems ¹ ²
+** CCNE011.002 Construct advanced IDS / IPS rules ²
+** CCNE011.003 Interpret the effects of IDS / IPS rules on network traffic ²
+
+
+* *SKILL CCNE012: Host Based Filtering ¹ ²*
+** CCNE012.001 Describe the purpose of netfilter framework in the Linux kernel ²
+** CCNE012.002 Configure iptables and nftables rules ²
+*** CCNE012.003 Determine the effect of rules on traffic flows ²
+** CCNE012.004 Explain the functionality of NAT within iptables ¹ ²
+** CCNE012.005 Contrast OS Firewalls ²
+** CCNE012.006 Contrast host based and network based filtering ¹ ²
+
+
+== Section 4: Movement and Data Transfer
+
+* *SKILL CCNE013: Network Tunneling ²*
+** CCNE013.001 Understand the SSH tunneling process ²
+*** CCNE013.002 Explain the purpose and process of multi-hop tunneling ²
+** CCNE013.003 Perform SSH local, remote, and dynamic port forwarding ²
+** CCNE013.004 Evaluate tunnel diagrams ²
+
+
+* *SKILL CCNE014: Traffic redirection ¹ ²*
+** CCNE014.001 Discuss use cases for traffic redirection ¹ ²
+** CCNE014.002 Perform traffic redirection using tools and native commands ¹ ²
+*** CCNE014.003 Redirect network traffic utilizing iptables NAT table  ¹ ²
+
+
+* *SKILL CCNE015: Data Transfer ¹ ²*
+** CCNE015.001 Describe common methods for transferring data ¹ ²
+** CCNE015.002 Create reverse shells ¹ ²
+** CCNE015.003 Discuss native OS methods used for data transfer ¹ ²
+** CCNE015.004 Perform covert data transfer ²
+*** CCNE015.005 Avoid detection utilizing covert methods ²
+** CCNE015.006 Uncover covert channel communications ²
+
+
+== Section 5: Packet Creation and Manipulation
+
+* *SKILL CCNE016: Network Socket Communication ²*
+** CCNE0016.001 Understanding socket types for network functions ²
+** CCNE0016.002 Differentiate user space/kernel space sockets ²
+** CCNE0016.003 Understanding socket creation behavior based on privilege level ²
+** CCNE0016.003 Implement network programming with Python3 ²
+** CCNE0016.005 Perform packet creation applying RFC implementation ²
+
+
+== Section 6: Network Forensics
+
+* *SKILL CCNE017: Network Traffic Baselining ²*
+** CCNE017.001 Analyze network traffic statistics ²
+
+
+* *SKILL CCNE018: Anomaly Detection*
+** CCNE018.001 Identify malware types and indicators ¹ ²
+** CCNE018.002 Identify unknown protocols employing advanced protocol disassembly tools ²
+** CCNE018.003 Determine network anomalies through traffic analysis ²
+** CCNE018.004 Assess post compromise network behavior ²
+
+'''
+
+//[small]#Access at https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf#
