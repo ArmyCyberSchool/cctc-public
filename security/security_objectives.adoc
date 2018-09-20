@@ -1,0 +1,157 @@
+:doctype: book
+:stylesheet: ../../global-objects/resources/raw/master/css/stylefactoryfiles/_asciidoc.scss
+
+//:title: should have the name of the module (e.g. Security)
+:title: Security
+
+//:skillID: should contain the prefix for course objectives and skills (e.g. CCSE)
+:skillID: CCSE
+
+//:revdate: the last date the document was revised or edited
+:revdate: 06 APR 2018
+
+//:section#: name of sections
+:section1: Security Fundamentals
+:section2: Exploitation Fundamentals
+:section3: Industrial Control Systems (ICS)
+:section4: Incident Response
+:section5:
+:section6:
+:section7:
+:section8:
+
+//:skill#: Skill numbers by task as per the objectives sheet for the module (e.g. 001.001, 012.005)
+:skill01: 001
+:skill02: 002
+:skill03: 003
+:skill04:
+:skill05: 004
+:skill06: 005
+:skill07: 006
+:skill08: 007
+:skill09: 008
+:skill10: 009
+:skill11: 010
+:skill12: 011
+:skill13: 012
+:skill14: 013
+:skill15: 014
+:skill16: 015
+
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/USACYSup001.png[Cyber,180,141]
+{empty} +
+Version Date: {revdate}
+
+= Cyber Common Technical Core (CCTC) {title} Objectives
+
+{empty} +
+
+== Section 1: {section1}
+
+* SKILL {skillID}{skill01}: Understand security fundamentals and common frameworks of cyberspace operations
+** {skillID}{skill01}.001 - Understand security vs. usability and the CIA triad
+** {skillID}{skill01}.002 - Understand and discuss exploits and vulnerabilities
+** {skillID}{skill01}.003 - Understand and demonstrate the purposes for Metasploit
+** {skillID}{skill01}.004 - Understand and define credentials
+** {skillID}{skill01}.005 - Understand and define rainbow tables
+** {skillID}{skill01}.006 - Understand and describe the mindset of cyber actors
+** {skillID}{skill01}.007 - Understand the importance of testing tools in a controlled environment
+
+* SKILL {skillID}{skill02}: Understand and describe network attacks
+** {skillID}{skill02}.001 - Understand and compare network attack types and strategies
+** {skillID}{skill02}.002 - Understand the benefits of acquiring critical systems
+** {skillID}{skill02}.003 - Understand the benefits of acquiring domain credentials
+** {skillID}{skill02}.004 - Discuss collateral effects of network attacks
+
+{empty} +
+
+== Section 2: {section2}
+
+* SKILL {skillID}{skill03}: Understand exploitation methodology and tradecraft
+** {skillID}{skill03}.001 - Understand and communicate cyberspace operations methodologies
+** {skillID}{skill03}.002 - Understand and describe internal exploitation methodologies
+** {skillID}{skill03}.003 - Understand and describe external exploitation methodologies
+
+* SKILL {skillID}{skill05}: Understand and perform methods to gain intial access
+** {skillID}{skill05}.001 - Explore Linux exploitation tools
+** {skillID}{skill05}.002 - Discuss, define, and identify shell code and remote shell code execution
+** {skillID}{skill05}.003 - Understand and define the process for ensuring shellcode execution
+** {skillID}{skill05}.004 - Understand and discuss the process and methods of code injection
+** {skillID}{skill05}.005 - Understand and explain methods of detecting code injection
+** {skillID}{skill05}.006 - Understand and identify purposes for custom malware
+** {skillID}{skill05}.007 - Understand and perform credential cracking
+
+* SKILL {skillID}{skill06}: Understand and describe the processes to escalate privileges
+** {skillID}{skill06}.001 - Understand and describe escalating privileges in a Linux environment
+** {skillID}{skill06}.002 - Understand and describe escalating privileges in a Windows environment
+
+* SKILL {skillID}{skill07}: Understand and perform post exploitation activities
+** {skillID}{skill07}.001 - Understand and perform clean-up processes associated with your activity
+** {skillID}{skill07}.002 - Understand and identify indicators of compromise
+** {skillID}{skill07}.003 - Understand methodology for enumeration of compromised systems
+** {skillID}{skill07}.004 - Define and discuss permanent presence and how it's established
+** {skillID}{skill07}.005 - Define, discuss, and analyze different types of rootkits
+** {skillID}{skill07}.006 - Define, discuss, and analyze different types of backdoors
+** {skillID}{skill07}.007 - Describe methods to detect and mitigate rootkits
+** {skillID}{skill07}.008 - Understand and describe data exfiltration techniques
+
+{empty} +
+
+== Section 3: {section3}
+
+* SKILL {skillID}{skill08}: Define Industrial Control System (ICS) fundamentals
+** {skillID}{skill08}.001 - Describe industry processes
+** {skillID}{skill08}.002 - Describe basic operations of ICS
+** {skillID}{skill08}.003 - Identify ICS components
+** {skillID}{skill08}.004 - Discuss industries where ICS is most utilized
+** {skillID}{skill08}.005 - Describe ICS hardware
+** {skillID}{skill08}.006 - Describe ICS software
+
+* SKILL {skillID}{skill09}: Identify ICS security incidents
+** {skillID}{skill09}.001 - Identify types of attackers to an ICS
+** {skillID}{skill09}.002 - Discuss ICS vulnerabilities
+
+* SKILL {skillID}{skill10}: Identify ICS protocols
+** {skillID}{skill10}.001 - Modbus
+** {skillID}{skill10}.002 - DNP3
+** {skillID}{skill10}.003 - BACnet
+** {skillID}{skill10}.004 - Ethernet/IP
+** {skillID}{skill10}.005 - MAVlink
+
+* SKILL {skillID}{skill11}: Identify ICS zones
+** {skillID}{skill11}.001 - Explain how defensive measures are used in ICS zones
+** {skillID}{skill11}.002 - Describe the role of zones in defense-in-depth
+
+{empty} +
+
+== Section 4: {section4}
+
+* SKILL {skillID}{skill12}: Describe the phases of Incident Response
+** {skillID}{skill12}.001 - Identify what occurs in the Preparation phase of Incident Response
+** {skillID}{skill12}.002 - Identify what occurs in the Identification phase of Incident Response
+** {skillID}{skill12}.003 - Identify what occurs in the Containment phase of Incident Response
+** {skillID}{skill12}.004 - Identify what occurs in the Investigation phase of Incident Response
+** {skillID}{skill12}.005 - Identify what occurs in the Eradication phase of Incident Response
+** {skillID}{skill12}.006 - Identify what occurs in the Recovery phase of Incident Response
+
+* SKILL {skillID}{skill13}: Describe order of volatility
+** {skillID}{skill13}.001 - Discuss the factors involved when considering order of volatility
+** {skillID}{skill13}.002 - Assess the order of volatility during an incident
+
+* SKILL {skillID}{skill14}: Analyze the enumeration process
+** {skillID}{skill14}.001 - Identify baseline knowledge on a machine
+** {skillID}{skill14}.002 - Gather baseline knowledge on a machine
+** {skillID}{skill14}.003 - Discuss the differences between malicious and normal activity
+** {skillID}{skill14}.004 - Characterize system features through enumeration
+** {skillID}{skill14}.005 - Identify scheduled tasks that may affect the purpose or activity on a machine
+** {skillID}{skill14}.006 - Explain what should be assessed during enumeration of the environment
+** {skillID}{skill14}.007 - Describe how to detect and enumerate malware
+
+* SKILL {skillID}{skill15}: Discuss the documentation involved in a tactical survey
+** {skillID}{skill15}.001 - Identify the importance of operations notes (Op Notes)
+** {skillID}{skill15}.002 - Discuss the components of a report
+
+* SKILL {skillID}{skill16}: Use enumeration information to analyze courses of action
+** {skillID}{skill16}.001 - Discuss the primary factors for recommending a course of action based on enumeration
+** {skillID}{skill16}.002 - Identify the common vulnerabilities that could change the course of a mission
+** {skillID}{skill16}.003 - Discuss the development of courses of action
