@@ -1,4 +1,4 @@
-heat_template_version: 2016-10-14
+heat_template_version: 2017-02-24
 
 description: Heat Template for Windows Module of CCTC - Provides base resources, Windows 7, Windows 10 and UTW test.
 
@@ -137,8 +137,8 @@ resources:
             New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "AutoAdminLogon" -PropertyType DWord -Value 1
             New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "DefaultUserName" -PropertyType String -Value "Administrator"
             New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\winlogon" -Name "DefaultPassword" -PropertyType String -Value 'password123!@'
-            Invoke-WebRequest -Uri "http://10.50.20.28/scripts/setup1.ps1" -OutFile "C:\setup1.ps1"
-            Invoke-WebRequest -Uri "http://10.50.20.28/scripts/setup2.ps1" -OutFile "C:\setup2.ps1"
+            Invoke-WebRequest -Uri "http://10.50.23.39/scripts/setup1.ps1" -OutFile "C:\setup1.ps1"
+            Invoke-WebRequest -Uri "http://10.50.23.39/scripts/setup2.ps1" -OutFile "C:\setup2.ps1"
             Invoke-WebRequest -Uri "https://bitskrieg.net/mouse.zip" -OutFile "C:\mouse.zip"
             Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce" "setup1" 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noprofile -sta -File "C:\setup1.ps1"'
             exit 1001
