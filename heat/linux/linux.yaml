@@ -1,6 +1,6 @@
 heat_template_version: 2017-02-24
 
-description: Heat Template for Linux module of class - Debian Jessie , Ubuntu 16.04 & Windows 7
+description: Heat Template for Linux module of CCTC - Debian Stretch , Ubuntu 18.04 & Windows 7
 
 parameters:
 
@@ -128,7 +128,7 @@ resources:
           template: Ubuntu
           params:
             lastname: { get_param: last_name }
-      image: Ubuntu 16.04
+      image: Ubuntu 18.04
       flavor: cy.medium
       diskConfig: AUTO
       networks: 
@@ -139,12 +139,12 @@ resources:
             #!/bin/bash  
             export DEBIAN_FRONTEND=noninteractive
             echo 127.0.0.1 $(hostname) >> /etc/hosts
-            cp /etc/apt/sources.list /sources.list.bak
+            # cp /etc/apt/sources.list /sources.list.bak
             # echo "http://acng.bbh.cyberschool.army.mil:3142" > /etc/apt/sources.list
             apt-get -y update
             apt-get -y upgrade
             pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,figlet,lolcat,ubuntu_desktop})
-            for x in ${pkg_array[@]}; do apt-get install -y $x; done
+            for x in ${pkg_array[@]}; do apt-get install -y $x 2>/dev/null; done
             apt-get -y install qemu && apt-get -y install qemu
             gem install lolcat
             updatedb
@@ -152,9 +152,9 @@ resources:
             mkdir /usr/share/class
             
             # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
-            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.181/linux/ -P /usr/share/class/
-            wget 10.50.20.181/linux/check.pyc -O /usr/share/misc/check.pyc
-            wget 10.50.20.181/linux/banner.sh -O /usr/share/misc/banner.sh
+            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.23.39/linux/ -P /usr/share/class/
+            wget 10.50.23.39/linux/check.pyc -O /usr/share/misc/check.pyc
+            wget 10.50.23.39/linux/banner.sh -O /usr/share/misc/banner.sh
             cat > /usr/share/misc/check_script.sh << "__EOF__"
             #!/bin/bash
             /usr/bin/env python /usr/share/misc/check.pyc
@@ -226,9 +226,9 @@ resources:
             git clone https://github.com/Veil-Framework/Veil.git /usr/share/veil
             /usr/share/Veil/setup/setup.sh -c
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
-            systemctl reboot
             systemctl set-default graphical.target
-          params:
+            systemctl reboot
+            params:
             $user: { get_param: last_name }
             $password: { get_param: password }
             $studentID: { get_param: student_id }
@@ -266,7 +266,7 @@ resources:
           template: Debian
           params:
             lastname: { get_param: last_name }
-      image: Debian Jessie
+      image: Debian Stretch
       flavor: cy.medium
       diskConfig: AUTO
       networks: 
@@ -277,12 +277,12 @@ resources:
             #!/bin/bash            
             echo 127.0.0.1 $(hostname) >> /etc/hosts
             export DEBIAN_FRONTEND=noninteractive
-            cp /etc/apt/sources.list /sources.list.bak
+            # cp /etc/apt/sources.list /sources.list.bak
             # echo "http://acng.bbh.cyberschool.army.mil:3142" > /etc/apt/sources.list
             apt-get -y update
             apt-get -y upgrade
-            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,hexeditor,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,lolcat,LXDE})
-            for x in ${pkg_array[@]}; do apt-get install -y $x; done
+            pkg_array=({locate,dnsutils,lsof,aptitude,ftp,auditd,xinetd,telnetd,samba,git,zip,unzip,figlet,sshpass,hexedit,tree,apache2,gcc,tcc,build-essential,libreadline-dev,libssl-dev,libpq5,libpq-dev,libreadline5,libsqlite3-dev,libpcap-dev,git-core,autoconf,postgresql,pgadmin3,curl,zlib1g-dev,libxml2-dev,libxslt1-dev,libyaml-dev,nmap,python-setuptools,python-dev,hydra,hydra-gtk,john,xrdp,netcat,firefox,lolcat,task-gnome-desktop,gdm3})
+            for x in ${pkg_array[@]}; do apt-get install -y $x 2>/dev/null; done
             apt-get -y install qemu && apt-get -y install qemu
             gem install lolcat
             updatedb
@@ -290,9 +290,9 @@ resources:
             mkdir /usr/share/class
             
             # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
-            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.181/linux/ -P /usr/share/class/
-            wget 10.50.20.181/linux/check.pyc -O /usr/share/misc/check.pyc
-            wget 10.50.20.181/linux/banner.sh -O /usr/share/misc/banner.sh
+            wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.23.39/linux/ -P /usr/share/class/
+            wget 10.50.23.39/linux/check.pyc -O /usr/share/misc/check.pyc
+            wget 10.50.23.39/linux/banner.sh -O /usr/share/misc/banner.sh
             cat > /usr/share/misc/check_script.sh << "__EOF__"
             #!/bin/bash
             /usr/bin/env python /usr/share/misc/check.pyc
@@ -303,10 +303,10 @@ resources:
             
             # ----- ENABLES SSH
             sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
-            sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+            sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
             sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
             systemctl restart ssh
-            
+
             # ----- ENABLES TELNET
             cat > /etc/xinetd.d/telnet <<"__EOL__"
             # default: on
@@ -418,17 +418,17 @@ resources:
             Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
             
             # ----- UNINSTALLS KBs FOR EXPLOITATION
-            Invoke-WebRequest -Uri "10.50.20.181/linux/KB.ps1" -OutFile "C:\KB.ps1"
-            (new-object Net.WebClient).DownloadFile( "http://10.50.20.181/linux/KB.ps1", "C:\KB.ps1" )
-            Invoke-WebRequest -Uri "10.50.20.181/windows/.hidden/TTW/PsExec.exe" -OutFile "C:\PsExec.exe"
-            (new-object Net.WebClient).DownloadFile( "http://10.50.20.181/windows/.hidden/TTW/PsExec.exe", "C:\PsExec.exe" )
+            Invoke-WebRequest -Uri "10.50.23.39/linux/KB.ps1" -OutFile "C:\KB.ps1"
+            (new-object Net.WebClient).DownloadFile( "http://10.50.23.39/linux/KB.ps1", "C:\KB.ps1" )
+            Invoke-WebRequest -Uri "10.50.23.39/windows/.hidden/TTW/PsExec.exe" -OutFile "C:\PsExec.exe"
+            (new-object Net.WebClient).DownloadFile( "http://10.50.23.39/windows/.hidden/TTW/PsExec.exe", "C:\PsExec.exe" )
             Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce" -name "KB" 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noprofile -sta -File "C:\KB.ps1"'
             New-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" -Name AUOptions -Value 1 -PropertyType Dword | Out-Null
             get-service wuauserv | stop-service -Force
             C:\PsExec.exe -accepteula -u Bill -p DoDC0mPL1antPassW0rd!! \\$(hostname) cmd /c "exit" -accepteula -nobanner
             C:\PsExec.exe -accepteula -u Eeyore -p hatemyjob \\$(hostname) cmd /c "exit" -accepteula -nobanner
             exit 1001
-            shutdown -r -f
+            shutdown /r /f /t 0
           params:
             $user: { get_param: last_name }
             $password: { get_param: password }
