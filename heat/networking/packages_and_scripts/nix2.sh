@@ -53,9 +53,9 @@ EOF
 sudo systemctl restart xrdp
 
 # ----- GRABS PE BINARIES <ENSURE URL IS CURRENT>
-wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.20.181/linux/ -P /usr/share/class/
-wget 10.50.20.181/linux/check.pyc -O /usr/share/misc/check.pyc
-wget 10.50.20.181/linux/banner.sh -O /usr/share/misc/banner.sh
+wget -r -l 1 -nH -nd -R "index.html*","*.gif","*.pyc","banner.*" 10.50.23.39/linux/ -P /usr/share/class/
+wget 10.50.23.39/linux/check.pyc -O /usr/share/misc/check.pyc
+wget 10.50.23.39/linux/banner.sh -O /usr/share/misc/banner.sh
 cat > /usr/share/misc/check_script.sh << "__EOF__"
 #!/bin/bash
 /usr/bin/env python /usr/share/misc/check.pyc
