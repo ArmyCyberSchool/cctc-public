@@ -228,7 +228,7 @@ resources:
             git clone https://github.com/danielmiessler/SecLists.git /usr/share/seclists
             systemctl set-default graphical.target
             systemctl reboot
-            params:
+          params:
             $user: { get_param: last_name }
             $password: { get_param: password }
             $studentID: { get_param: student_id }
