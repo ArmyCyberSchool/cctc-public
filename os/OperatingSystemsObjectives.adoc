@@ -175,7 +175,7 @@ image::https://git.cybbh.space/global-objects/resources/raw/master/images/cyber-
 == Section 8: Windows Auditing & Logging
 
 * *SKILL CCOS025: Identify auditing activities ²*
-** *CCOS025.001 Contrast system, application and authentication logging ²*
+** *CCOS025.001 Contrast system, application and security logging ²*
 ** *CCOS025.002 Configure rotation of logs ²*
 
 * *SKILL CCOS026: Identify actions that contribute to log entries ²*
