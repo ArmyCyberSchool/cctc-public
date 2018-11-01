@@ -4,7 +4,7 @@ echo 52.247.160.149 git.cybbh.space >> /etc/hosts
 sed -i's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get -y install ethtool netcat
+apt-get -y install ethtool netcat openvpn
 echo "INSTALLS COMPELTE"
 echo "CREATE NETCAT LISTENERS"
 touch /file1.txt
