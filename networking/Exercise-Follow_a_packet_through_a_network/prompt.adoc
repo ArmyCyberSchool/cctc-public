@@ -1,0 +1,303 @@
+:doctype: book
+:stylesheet: ../../global-objects/resources/raw/master/css/stylefactoryfiles/_asciidoc.scss
+:icons: image
+:icondir: ../Images/adoc_icons
+
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/USACYSup001.png[Cyber,180,141]
+{empty} +
+
+Version Date: 1 November 2018
+
+= Exercise - Follow a Packet Through a Network
+
+== Learning Objectives
+
+* SKILL CCNE001: Networking Fundamentals
+* SKILL CCNE002: Network Header fields
+* SKILL CCNE003: Layer 2 Switching Technologies
+* SKILL CCNE004: Layer 3 Routing Technologies
+
+== Learning Outcomes
+
+* N/A
+
+== Scenario
+
+* The network provided is a fully functioning network with many different protocols working to function.
+
+* Router login usernames will be "cctc"
+
+* All device passwords for this Exercise is "password"
+
+
+=== Setup)
+
+
+. Download the CCTC.pkt file.
+
+** Download: https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
+
+** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
+
+. Startup Packet Tracer on Net1. 
+
+** Open Net 1 on the VTA, open a Terminal Window and type "packettracer".
+
+** Optionally you can run Packet Tracer on your host box from Net1: "ssh username@{net1 floatingip} -X" then run "packettracer".
+
+** Another option is to connect to your Net1 with xfreerdp. "xfreerdp /v:{net1 floating ip}  /u:username /p:password /size:1920x1000  + clipboard"
+
+. Upon startup, you will be asked for login credentials (which you will not have). Click the "Guest Login" at the bottom. After 10-15 seconds you can click "Confirm Guest" to open the program. A webpage will open but you can close this window.
+
+. From Packet Tracer, open the CCTC.pkt file that you downloaded. 
+
+. Upon opening, the virtual systems will boot up and start communicating. Give it a few moments for the Bootup, Spanning-tree, and DHCP to complete.
+
+. During this Exercise:
+
+.Packet Tracer
+image::https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
+
+
+*** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
+
+*** You will be required to select appropriate protocols under the "Event List Filters - Visible Events" window in the "Simulation" tab or each of the steps. To select the appropriate protocol select "Edit Filters". Would not recommend having additional protocols selected as this will populate a lot of extra information.
+
+*** To start a packet capture, ensure you are in "Simulation" and have edited the filter for the proper protocol(s). After you perform an action, you can capture 1 packet at a time by using the "Capture/Forward" or "Back" to move forward and backward. To start capturing all packets you can select "Auto Capture/Play" in the "Play Controls" window.
+
+*** In the "Event List" window you will see your packet captures. Click them to view the packet contents. On some events, you will see "Inbound" and "Outbound" tabs to identify the direction of traffic.
+
+*** You can click to open any of the items on the network. The tab you will generally be using is the "Desktop" tab. On the Routers and Switches, you will use the "CLI" tab.
+
+
+=== Task 1)
+
+* Ensure that you are in "Simulation" mode for this Exercise.
+
+
+. DHCP
+
+** Click to open any one of the Instructor laptops. Goto Desktop --> Command Prompt. Renew the IP address by typing in "ipconfig /renew". Follow the traffic from the host to the DHCP server.
+
+*** 1. What type of traffic was initiated by the Instructor laptop?
+
+*** 2. What is the destination MAC address of the initial packet sent by the host? (specify response in the xxxx.xxxx.xxxx format)
+
+*** 3. What is the destination IP address of the initial packet sent by the host? (Specify in the x.x.x.x format)
+
+*** 4. What are the protocol, source, and destination ports? (pick 3)
+
+*** 5. Where would the Ether Type value normally be, what did the value change to when it leaves the first switch? (specify answer in the proper hex format 0xNNNN )
+
+*** 6. Which VLAN was it assigned to? (specify answer in decimal format)
+
+*** 7. How did the switch treat this type of traffic?
+
+*** 8. What did the VLAN change to when it left the router? (specify answer in decimal format)
+
+*** 9. What did the destination IP address change to when the traffic left the router? (specify answer in the x.x.x.x format)
+
+*** 10. What router command/action caused this to happen?
+
+*** 11. What did the switch change the Type field to as it left the switch? (specify answer in hex 0xNNNN format)
+
+*** 12. What type of response did the DHCP server give?
+
+*** 13. What type of response did the instructor laptop give to respond to the traffic from the DHCP server?
+
+*** 14. What was the final response from the DHCP server?
+
+*** 15. What network did you discover that the Instructor laptops are assigned to? (specify the network in the x.x.x.x /mask format)
+
+** Repeat previous step on each of the Student, Instructor, and Guest laptops. 
+
+*** 16. What VLAN did you discover that the Students were assigned to? (specify answer in decimal format)
+
+*** 17. What network are the Student laptops assigned to? (specify the network in the x.x.x.x /mask format)
+
+*** 18. What VLAN did you discover that the Guests were assigned to? (specify answer in decimal format)
+
+*** 19. What network are the Guests laptops assigned to? (specify the network in the x.x.x.x /mask format)
+
+
+. ICMP and ARP
+
+** From any Instructor laptop, ping the IP address of any of the other Instructor laptops. Follow the traffic. 
+
+*** 1. What protocol initiated before the ICMP packet started? (pick 2)
+
+*** 2. What was the Type field value for this traffic? (specify in hex format 0xNNNN )
+
+*** 3. What was the destination Layer 2 address of this traffic? (specify in xxxx.xxxx.xxxx format)
+
+*** 4. Who responded to this traffic and what did they respond with?
+
+*** 5. What was the Type and Code values of the Ping that was sent? (pick 2)
+
+*** 6. What was the Type and Code Values of the response from the destination? (pick 2)
+
+** From a different Instructor laptop, ping the IP address of any of the Student laptops. Follow the traffic. 
+
+*** 7. What device responded to the ARP request?
+
+** From any of the Guest laptops, ping any Instructor or Student system. Follow the traffic. 
+
+*** 8. What type of frame did the hosts use over the Wireless network?
+
+
+. NAT
+
+*** 1. From an Instructor Laptop, ping the 147.51.0.1 DMZ Gateway. Follow the Traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Instructor's source address to? (specify answer in x.x.x.x format)
+
+*** 2. From a Student Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Student's source address to? (specify answer in x.x.x.x format)
+
+*** 3. From a Guest Laptop, ping the same IP. Follow the traffic. On either CCTC_RTR_1 or CCTC_RTR_2 on the private/public boundary, what address did the router change the Guest's source address to? (specify answer in x.x.x.x format)
+
+
+. TCP, HTTP, HTTPS, and DNS
+
+** From any of the Instructor, Student or Guest laptops. Goto Desktop --> Web Browser. In the URL enter "http://www.cctc.mil". Follow the traffic.
+
+*** 1. What type of traffic did the host initiate first?
+
+*** 2. What was the destination port of this traffic?
+
+*** 3. To which server did that traffic goto?
+
+*** 4. What was the destination IP of this traffic? (specify answer in the x.x.x.x format)
+
+*** 5. What is the IP protocol number specified in this traffic?
+
+*** 6. What type of response came from the destination device?
+
+*** 7. What type of traffic did the host initiate second? 
+
+*** 8. What was the destination port for this traffic?
+
+*** 9. To which server did the second traffic flow goto?
+
+*** 10. What was the destination IP of this traffic? (specify answer in the x.x.x.x format)
+
+*** 11. What is the IP protocol number specified for this traffic?
+
+*** 12. What was the FLAG(s) set to as it left the host? (select all that apply)
+
+*** 13. What was the FLAG(s) set to as the response left the destination? (select all that apply)
+
+*** 14. What was the FLAG(s) set to when the host gave its final response? (select all that apply)
+
+*** 15. What type of traffic did the host initiate third?
+
+*** 16. What was the FLAG(s) set to for this traffic? (select all that apply)
+
+*** 17. What was FLAG(s) set to once this traffic communication was completed? (select all that apply)
+
+** Browse to "https://www.cctc.mil". 
+
+*** 18. What was the destination port used for this traffic?
+
+
+. TCP, SMTP and POP3
+
+** Open any 2 laptops and place the windows side by side. Goto Desktop --> Email on each. On one laptop, click "Compose". In the "To:" block, enter the other laptop username and number then "@cctc.mil". (i.e. instructor1@cctc.mil or student4@cctc.mil). Enter any Subject and body then click "Send". Follow the traffic. 
+
+*** 1. What server did the laptop initiate a connection with?
+
+*** 2. What port number did was the attempted connection destined for?
+
+*** 3. What protocol did it use to send the email?
+
+** Click "Reset Simulation". Then on the receiving laptop click "Receive".
+
+*** 4. After the 3-way handshake, what protocol did it use to retrieve the email?
+
+*** 5. What destination port number did it use for this traffic?
+
+
+. TCP, Telnet and ICMP
+
+** From any laptop, Goto Desktop --> Command Prompt. Telnet to that computers local gateway IP address.
+
+*** 1. What destination port did the laptop use for this connection?
+
+*** 2. After the 3-way handshake, what FLAG(s) was sent back to the host? (select all that apply)
+
+*** 3. Did you get any ICMP response? If so, what was the Type and code value? (select all that apply)
+
+*** 4. Why did you get this response?
+
+** From any laptop, Telnet to the DMX gateway address of 147.51.0.1.
+
+*** 5. Did you get any ICMP response? If so, what was the Type and code value? (select all that apply)
+
+*** 6. Why did you get this response?
+
+
+. TCP, SSH and TACACS+
+
+** From any laptop, try to SSH to your local gateway IP address. (ssh -l cctc {ip address}). Follow the TCP traffic. After the 3-way handshake, it will eventually ask for the password to continue. 
+
+*** 1. What FLAG(s) were set to send the password? (select all that apply)
+
+*** 2. What port and protocol was used to send the password to the router?
+
+*** 3. What device did the Gateway communicate with afterward?
+
+*** 4. What protocol and port did it use to communicate with this device?
+
+
+
+. WAN access and HTTP/HTTPS
+
+** From any laptop. Browse to www.comcast.com external website. Follow the traffic.
+
+*** 1. What Layer 2 protocol is used over the Internet past the ISPs?
+
+*** 2. What layer 2 address did the ISP use to communicate to the internet? (specify answer in decimal format)
+
+*** 3. What Layer 2 address did the Internet use to communicate to Comcast? (specify answer in decimal format) 
+
+
+=== Task 2)
+
+. Monitor all traffic on the network. 
+ 
+*** 1. What types of routed protocols do you see running? (select all that apply)
+
+*** 2. What types of routing protocols do you see running? (select all that apply)
+
+
+=== Task 3)
+
+. Malicious attackers will try to access your network. Connect a straight-thru cable from "Rogue" switch. Click on the lightning bolt icon in the bottom left, then select solid black line icon. 
+
+** Click on the "Rogue" switch and select any of the open ports available. Then click on "CCTC_SW_4" and connect it to port "FastEthernet0/20". 
+
+*** 1. What happened to the connection? 
+
+*** 2. Is the Rogue PC is able to attain an IP address (T/F)? 
+
+*** 3. What switch protocol/feature made this happen?
+
+*** 4. Connect the "Rogue" switch to any other interface. What happened to the connection?
+
+*** 5. Can the Rogue PC attain an IP address? 
+
+*** 6. What switch protocol/feature made this happen?
+
+
+== Deliverables
+
+* Follow through the Activity and answer all question in BlackBoard. 
+
+== Hints
+
+* N/A
+
+== Challenge
+
+* N/A
+
+== Useful Resources
+
+* N/A
