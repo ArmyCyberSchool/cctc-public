@@ -1,14 +1,21 @@
 :doctype: book
-:stylesheet: ../../cctc.css
+:stylesheet: ../../global-objects/resources/raw/master/css/stylefactoryfiles/_asciidoc.scss
+:icons: image
+:icondir: ../Images/adoc_icons
 
-= Activity - Follow a Packet Through a Network
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/USACYSup001.png[Cyber,180,141]
+{empty} +
+
+Version Date: 1 November 2018
+
+= Exercise - Follow a Packet Through a Network
 
 == Learning Objectives
 
-* SKILL CCNE001: Understand Switching Technologies
-* SKILL CCNE002: Understand Routing Technologies
-* SKILL CCNE003: Understanding Static vs Dynamic Routing
-* SKILL CCNE004: Understanding Distance Vector vs Link State Routing Protocols
+* SKILL CCNE001: Networking Fundamentals
+* SKILL CCNE002: Network Header fields
+* SKILL CCNE003: Layer 2 Switching Technologies
+* SKILL CCNE004: Layer 3 Routing Technologies
 
 == Learning Outcomes
 
@@ -20,7 +27,7 @@
 
 * Router login usernames will be "cctc"
 
-* All device passwords for this Activity is "password"
+* All device passwords for this Exercise is "password"
 
 
 === Setup)
@@ -28,7 +35,7 @@
 
 . Download the CCTC.pkt file.
 
-** Download: https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
+** Download: https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
 
 ** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
 
@@ -46,10 +53,10 @@
 
 . Upon opening, the virtual systems will boot up and start communicating. Give it a few moments for the Bootup, Spanning-tree, and DHCP to complete.
 
-. During this Activity:
+. During this Exercise:
 
 .Packet Tracer
-image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
+image::https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
 
 
 *** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
@@ -65,7 +72,7 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow
 
 === Task 1)
 
-* Ensure that you are in "Simulation" mode for this Activity.
+* Ensure that you are in "Simulation" mode for this Exercise.
 
 
 . DHCP
@@ -281,8 +288,7 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow
 
 == Deliverables
 
-* Follow through the Activity and document each answer to the questions in a text editor. 
-* Be prepared to discuss your discoveries with the class. 
+* Follow through the Activity and answer all question in BlackBoard. 
 
 == Hints
 
