@@ -35,7 +35,7 @@ Version Date: 1 November 2018
 
 . Download the CCTC.pkt file.
 
-** Download: https://git.cybbh.space/CCTC/public/raw/master/networking/Exercise-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
+** Download: https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/CCTC.pkt on to your Net1. 
 
 ** Optionally you can download to your host box and use SCP to copy to Net1. "scp /home/username/Downloads/CCTC.pkt username@{net1 floating ip} /home/username".
 
@@ -56,7 +56,7 @@ Version Date: 1 November 2018
 . During this Exercise:
 
 .Packet Tracer
-image::https://git.cybbh.space/CCTC/public/raw/master/networking/Exercise-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
+image::https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/Exercise-Follow_a_packet_through_a_network/PT.png[Packet Tracer, width=1024]
 
 
 *** You can switch between "Realtime" and "Simulation" by clicking the icons in the bottom right corner on the window. You will be navigating between these modes for this Activity. 
@@ -288,8 +288,7 @@ image::https://git.cybbh.space/CCTC/public/raw/master/networking/Exercise-Follow
 
 == Deliverables
 
-* Follow through the Activity and document each answer to the questions in a text editor. 
-* Be prepared to discuss your discoveries with the class. 
+* Follow through the Activity and answer all question in BlackBoard. 
 
 == Hints
 
