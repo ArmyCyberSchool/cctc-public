@@ -113,4 +113,28 @@ chmod +x /etc/network/if-up.d/tcpoffload
 cd /etc/network/if-up.d/
 ./tcpoffload
 cd /
+#Allow 192.168.0.0/24 network for remote access after tunnel is created
+cat <<EOF > /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The normal eth0
+auto eth0
+iface eth0 inet dhcp
+  up route add -net 192.168.0.0/16 gw 10.1.0.254 dev eth0
+
+# Maybe the VM has 2 NICs?
+allow-hotplug eth1
+iface eth1 inet dhcp
+
+# Maybe the VM has 3 NICs?
+allow-hotplug eth2
+iface eth2 inet dhcp
+EOF
 reboot
