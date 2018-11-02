@@ -154,6 +154,12 @@ chmod +x /etc/network/if-up.d/tcpoffload
 cd /etc/network/if-up.d/
 ./tcpoffload
 cd /
+# Fix routing for openvpn
+echo "# The interface for ens3" >> /etc/network/interfaces
+echo "auto ens3" >> /etc/network/interfaces
+echo "iface ens3 inet dhcp" >> /etc/network/interfaces
+echo "  up route add -net 192.168.0.0 netmask 255.255.0.0 gw 10.2.0.254" >> /etc/network/interfaces
+# User Creation
 echo "CREATE USER"
 useradd $user -m -U -s /bin/bash
 usermod -aG sudo $user
