@@ -70,7 +70,7 @@ Should now be set to "1" for enabled. If it is "0", then it is still disabled.
 
  b=ARP()
  b.op= opcode for requests
- b.hwsrc=  "Your MAC"
+ b.hwsrc= "Your MAC"
  b.psrc= "Your IP"
  b.pdst= "Target IP"
 
@@ -102,4 +102,5 @@ Should now be set to "1" for enabled. If it is "0", then it is still disabled.
 
 == Useful Resources
 
-* N/A
+* https://scapy.readthedocs.io/en/latest/index.html
+
