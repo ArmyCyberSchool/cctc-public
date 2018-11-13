@@ -1,12 +1,28 @@
 :doctype: book
-:stylesheet: ../../cctc.css
+:stylesdir: ../../global-objects/resources/raw/master/css/stylefactoryfiles/
+:stylesheet: _asciidoc.scss
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/USACYSup001.png[Cyber,180,141]
+
+{empty} +
+
+Version Date: 13 November 2018 
+
+{empty} +
+
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
+
 
 = Activity - Scapy for ARP
 
+{empty} +
+
 == Learning Objectives
 
-* CCNE001 - Identify core networking features
-** CCNE001.014 - Describe address resolution protocol (ARP)
+* SKILL CCNE001: Networking Fundamentals ¹ ²
+** CCNE001.001 Understanding the OSI model and Networking ¹
+* SKILL CCNE002: Network Header fields ¹ ²
+** CCNE002.001 Describe security implications present in header fields ²
+* SKILL CCNE003: Layer 2 Switching Technologies ¹ ²
 
 == Scenario
 
@@ -14,46 +30,65 @@
 
 === Task 1) 
 
-* In Linux, as root, turn on ARP_ACCEPT for all interfaces:
-** first cat /proc/sys/net/ipv4/conf/all/arp_accept
-*** you should see 0
-** echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
-* You can verify this by "cat /proc/sys/net/ipv4/conf/all/arp_accept", file should be 1 for enabled. If it is 0, it is still disabled.
+* STEP 1: In Linux, as root, turn on ARP_ACCEPT for all interfaces:
 
-* Now:
-** First check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) then delete the entry ("arp -d 10.1.0.3" or "ip -s neigh flush all") As long as you don't initiate communications with the host, the ARP table should stay clear of the host's information.
+ cat /proc/sys/net/ipv4/conf/all/arp_accept
+ 
+It sould be set to "0" by default. We want to change to "1".
 
-* You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries when using the arp command. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
+ echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+ 
+You can verify this by:
 
-* Now to craft your request:
-----
-    Type "Scapy" in the terminal of your net1 Linux machine
-----
-* Set your fields  for a and b.
-+
-----
-a=Ether()
-a.show() *this will show you what the variable now has for defaults*
-a.src= "Your MAC Address"
-a.dst= "ARP requests are broadcast"
-a.type= The hex code for ARP
+ cat /proc/sys/net/ipv4/conf/all/arp_accept
+ 
+Should now be set to "1" for enabled. If it is "0", then it is still disabled.
 
-b=ARP()
-b.op= opcode for requests
-b.hwsrc=  "Your MAC"
-b.psrc= "Your IP"
-b.pdst= "Target IP"
-----
+* STEP 2: Check your Linux Host's ARP table. If an entry exists for your target (10.1.0.3) then delete the entry. As long as you don't initiate communications with the host, the ARP table should stay clear of the host's information.
+
+ arp -d 10.1.0.3
+ or
+ ip -s neigh flush all
+ 
+** You will see an "incomplete" entry for the host(s) after deleting any existing ARP entries when using the arp command. This is the state that the entry takes if there has ever been an ARP request sent (since uptime) but the ARP reply information is not available. In this case, if there was an ARP entry that you deleted/flushed, the state (having previously sent an ARP request) is still true; you are only flushing the reply information.
+
+* STEP 3: Now to craft your request:
+
+** Type "Scapy" in the terminal of your net1 Linux machine
+
+** You will need to set your fields for a and b. These fields relate to your Ether Header and ARP headers.
+
+*** Ether Header: 
+
+ a=Ether()
+ a.show() *this will show you what the variable now has for defaults*
+ a.src= "Your MAC Address"
+ a.dst= "ARP requests are broadcast"
+ a.type= The hex code for ARP
+
+*** ARP Header:
+
+ b=ARP()
+ b.op= opcode for requests
+ b.hwsrc=  "Your MAC"
+ b.psrc= "Your IP"
+ b.pdst= "Target IP"
+
 
 * *START UP WIRESHARK AND WATCH THE WIRE WHILE YOU SEND THE PACKET!*
 
 * Send the packet using:
-* sendp(a/b, iface="eth1" )
+
+ sendp(a/b, iface="eth0" )
+
+(the interface could be "eth0" or "eth1" depending on your device. You will need to verify which your device is using)
+
+{empty} +
 
 == Deliverables
 
 * Document your steps in Scapy or Scapy script
-* Screen shot of the ARP table showing a successful ARP entry in response  to your crafted packet
+* Screenshot the ARP table showing a successful ARP entry in response to your crafted packet
 
 == Hints
 
