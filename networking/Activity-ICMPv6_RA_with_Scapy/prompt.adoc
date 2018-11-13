@@ -1,13 +1,26 @@
 :doctype: book
-:stylesheet: ../../cctc.css
+:stylesdir: ../../global-objects/resources/raw/master/css/stylefactoryfiles/
+:stylesheet: _asciidoc.scss
+image::https://git.cybbh.space/global-objects/resources/raw/master/images/USACYSup001.png[Cyber,180,141]
+
+{empty} +
+
+Version Date: 13 November 2018 
+
+{empty} +
+
+// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
+
 
 = Activity - ICMPv6 RA with Scapy
 
 == Learning Objectives
 
-* CCNE001 - Identify core networking features
-** CCNE001.009 - Describe methods for assigning IP addresses
-** CCNE001.015 - Describe ICMP
+* SKILL CCNE001: Networking Fundamentals ¹ ²
+** CCNE001.001 Understanding the OSI model and Networking ¹
+* SKILL CCNE002: Network Header fields ¹ ²
+** CCNE002.001 Describe security implications present in header fields ²
+* SKILL CCNE004: Layer 3 Routing Technologies ¹ ²
 
 == Learning Outcomes
 
@@ -20,28 +33,42 @@
 === Task 1) 
 
 * Some helpful information:
-** First check to make sure you have a valid ipv6 address by using the ip addr or ifconfig commands.
-** Set your fields a-e. *You can use the show command to verify after setting each value. For example, a.show()* 
-*** Set your destination 
-**** a = IPv6()
-**** a.dst = "the destination"  (use the multicast address for solicited nodes)
-*** Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
-**** b = ICMPv6ND_RA()
-*** Set your source MAC Address (link layer address); 
-**** c = ICMPv6NDOptSrcLLAddr()
-**** c.lladdr = "Your LL Address" (This is your MAC address. You should have taken note of this when you checked your ifconfig)
-*** Set your MTU (use defaults)
-**** d = ICMPv6NDOptMTU()
-*** Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
-**** e = ICMPv6NDOptPrefixInfo()
-**** e.prefixlen= 64
-**** e.prefix= "prefix::" (specify a prefix you would like in hex)
 
-* Go to your Windows 10 client and run ipconfig before you send the packet. You should just see a link local ipv6 address.
+** First check to make sure your Net1 has a valid ipv6 address by using the "ip addr" or "ifconfig" commands.
 
-** Go back to scapy and send your packet!
-*** send(a/b/c/d/e, iface="eth0")
+* Set your fields a-e. Each field represents the various headers you will be creating. *You can use the show command to verify after setting each value. For example, a.show()* 
 
+* Set your destination in the IPv6 header.
+ 
+ a = IPv6()
+ a.dst = "the destination"  (use the multicast address for solicited nodes)
+
+* Set the type of IPv6 traffic (you are sending a Neighbor Discovery/Router Advertisement)
+
+ b = ICMPv6ND_RA()
+
+* Set your source MAC Address (link layer address); 
+
+ c = ICMPv6NDOptSrcLLAddr()
+ c.lladdr = "Your LL Address" (This is your MAC address. You should have taken note of this when you checked your ifconfig)
+
+* Set your MTU (use defaults)
+ 
+ d = ICMPv6NDOptMTU()
+
+* Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
+
+ e = ICMPv6NDOptPrefixInfo()
+ e.prefixlen= 64
+ e.prefix= "prefix::" (specify a prefix you would like in hex)
+
+* Go to your Windows 10 client ensure that IPv6 is enabled and then run ipconfig before you send the packet. You should just see a link local ipv6 address.
+
+** Go back to scapy on your Net1 and send your packet!
+
+ send(a/b/c/d/e, iface="eth0")
+
+(the interface could be "eth0" or "eth1" depending on your device. You will need to verify which your device is using)
 
 * Go to your Windows 10 client and run ipconfig after you send the packet. You should see 2 new temporary IPv6 address with the prefix you just specified.
 
@@ -59,5 +86,7 @@
 * N/A
 
 == Useful Resources
+
+https://scapy.readthedocs.io/en/latest/index.html
 
 https://www.ietf.org/rfc/rfc3756.txt
