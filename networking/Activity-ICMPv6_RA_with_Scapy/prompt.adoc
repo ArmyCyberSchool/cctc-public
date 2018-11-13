@@ -9,9 +9,6 @@ Version Date: 13 November 2018
 
 {empty} +
 
-// Printable format: https://git.cybbh.space/CCTC/public/builds/artifacts/master/file/linux/LinuxObjectives.pdf?job=genpdf
-
-
 = Activity - ICMPv6 RA with Scapy
 
 == Learning Objectives
