@@ -267,7 +267,7 @@ resources:
           params:
             lastname: { get_param: last_name }
       image: Debian Stretch
-      flavor: cy.medium
+      flavor: disk.large
       diskConfig: AUTO
       networks: 
         - port: { get_resource: float_port_2 }
