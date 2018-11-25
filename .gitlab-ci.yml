@@ -4,7 +4,7 @@ docker:
   image: debian:stable
   script:
       - apt-get update
-      - apt-get install -y ruby
+      - apt-get install -y ruby wget
       - gem install prawn --version 2.1.0
       - gem install prawn-svg --version 0.26.0
       - gem install prawn-templates --version 0.0.4
