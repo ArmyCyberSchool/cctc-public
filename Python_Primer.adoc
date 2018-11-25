@@ -1,5 +1,6 @@
 :doctype: book
 :stylesheet: ../../cctc.css
+:source-highlighter: rouge
 
 = **Python Primer**
 
@@ -43,7 +44,7 @@
 
 ==== Library:
 
-* A pre-built block of code that can be imported into another script for use; contains many pieces of code to be used individually; often called a module 
+* A pre-built block of code that can be imported into another script for use; contains many pieces of code to be used individually; often called a module
 ** A current list for your version of python can be found here https://docs.python.org/3/library/index.html
 
 ==== List:
@@ -73,65 +74,77 @@
 
 == *Basic Python Functionality:*
 
-  #!/usr/bin/python
-  
+[source,python]
+----
+#!/usr/bin/python
+----
+
 * This is a bang line. It is used to declare the beginning of the script so that the system knows where to look to run it
-|===
-|===
-  # Import the modules
-  import sys
-  import random
+
+[source,python]
+----
+# Import the modules
+import sys
+import random
+----
 
 * Above there are two things happening. First there is a comment telling what it is about to do. Second there are two libraries or modules being imported for use in the script.
 ** The comment is not run but is rather used by the person writing the script to help tell what is happening. This helps the person writing the script, the person using the script, and the person who may have to modify it in the future.
 ** The import lines has the program import the whole library or module. This is one way to import into a script you are writing, and the way you import may depend on what your aim is. You can also import submodules from a module(from LIBRARY import SUBLIBRARY), or have it import as needed (from LIBRARY import *).
-|===
-|===
-  ans = True
+
+[source,python]
+----
+ans = True
+----
+
 
 * This statement declare the variable ans and sets it's value to true. In this case this variable is used for the while loop listed directly below.
-|===
-|===
+[source,python]
+----
   while ans:
       question = raw_input("Ask the magic 8 ball a question: (press enter to quit) ")
-      
+----
+
 * This first line is a while loop, which is a type of function used in programming. It uses the variable ans as the argument, and will continue to run until it is false rather than true.
 * The second line creates a second variable called question. The value of the variable is determined by raw_input(which is a built in option to use in python). This means that the person using the script will be asked 'Ask the magic 8 ball a question:'. If the user inputs anything that is what will be used.
-|===
-|===    
+[source,python]
+----
       answers = random.randint(1,8)
-      
+----
+
 * This creates a third variable that uses one of the imported libraries from the beginning of the script. Random is the library/module and randint is the sublibrary/submodule. This allows that submodule to be used, and in this case for the numbers 1-8 to be randomized as the value for answers. Each time the function is used the value of answers will change to be one of the values only. i.e. 1,2,3, etc.
-|===
-|===    
+[source,python]
+----
       if question == "":
           sys.exit()
-          
+----
+
 * This is the statement that would cause the function to quit. This is what is known as a break, and is the equivilent of the variable ans being set to false instead of true. This is true as a statement only if there was no input from the user of the script. If there is no input, it tells the script to call the imported library to call the sublibrary exit to exit the program.
-|===
-|===    
+[source,python]
+----
       elif answers == 1:
           print "It is certain"
-    
+
       elif answers == 2:
           print "Outlook good"
-    
+
       elif answers == 3:
           print "You may rely on it"
-    
+
       elif answers == 4:
           print "Ask again later"
-    
+
       elif answers == 5:
           print "Concentrate and ask again"
-    
+
       elif answers == 6:
           print "Reply hazy, try again"
-    
+
       elif answers == 7:
           print "My reply is no"
-    
+
       elif answers == 8:
           print "My sources say no"
-          
+----
+
 * All of the above elif statements have the same basic function. It takes the value of the variable answers that was randomly chosen, to choose which answer is given back to the user of the script. Once one of the statements is true then the answer for that statement is printed to the screen. i.e answers = 2, then elif answers == 2: will be true. The script would then print 'Outlook good' to the user.
