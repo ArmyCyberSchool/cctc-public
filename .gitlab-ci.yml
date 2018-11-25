@@ -13,7 +13,6 @@ docker:
       - gem install asciidoctor-pdf --pre
       - wget -nc -q https://git.cybbh.space/global-objects/resources/raw/master/css/cted0001.css -O ./cctc.css
       - find . -name '*.adoc' -not -path "*./heat*" | while read adoc;do asciidoctor-pdf --trace -a allow-uri-read $adoc;done
-      - find . -name '*.html' -not -path "*./networking/slides*" -not -path "*./windows/slides*" | while read html;do file=$(echo $html | sed 's/\.[^.]*$//') && ./wkhtmltopdf $html $file.pdf; done
   artifacts:
     untracked: true
 
