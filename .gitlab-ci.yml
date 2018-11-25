@@ -1,5 +1,6 @@
 docker:
-  tags: docker
+  tags: 
+    - docker
   image: debian:stable
   services: asciidoctor/docker-asciidoctor:latest
   script:
