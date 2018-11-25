@@ -1,3 +1,18 @@
+docker:
+  tags: docker
+  image: debian:stable
+  services: asciidoctor/docker-asciidoctor:latest
+  script:
+      - wget -nc -q https://git.cybbh.space/global-objects/resources/raw/master/css/cted0001.css -O ./cctc.css
+      - find . -name '*.adoc' -not -path "*./heat*" | while read adoc;do asciidoctor --verbose $adoc;done
+      - find . -name '*.html' -not -path "*./networking/slides*" -not -path "*./windows/slides*" | while read html;do file=$(echo $html | sed 's/\.[^.]*$//') && ./wkhtmltopdf $html $file.pdf; done
+  artifacts:
+    paths:
+      - ./*.pdf
+      - ./*/*.pdf
+      - ./*/*/*.pdf
+      - ./*/*/*/*.pdf
+
 genpdf:
   script:
       - wget -nc -q https://git.cybbh.space/global-objects/binaries/raw/master/wkhtmltopdf -O ./wkhtmltopdf && chmod +x ./wkhtmltopdf
