@@ -2,7 +2,8 @@ docker:
   tags: 
     - docker
   image: debian:stable
-  services: asciidoctor/docker-asciidoctor:latest
+  services: 
+    - asciidoctor/docker-asciidoctor:latest
   script:
       - wget -nc -q https://git.cybbh.space/global-objects/resources/raw/master/css/cted0001.css -O ./cctc.css
       - find . -name '*.adoc' -not -path "*./heat*" | while read adoc;do asciidoctor --verbose $adoc;done
