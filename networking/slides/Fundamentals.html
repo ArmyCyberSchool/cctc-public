@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Networking Fundamentals for the Cyber Professional</title>
+		<title>Networking Fundamentals OSI TCP/IP for the Cyber Professional</title>
 
 		<meta name="description" content="How to hack control systems">
 		<meta name="author" content="Steve Griffing and Hakim El Hattab">
@@ -49,6 +49,21 @@
             }
             }
         </style>
+				<style>
+				{	box-sizing: border-box;}
+
+/* Create two equal columns that floats next to each other */
+					.column {
+						float: left;
+						width: 50%;
+						padding: 10px;
+						height: 400px; /* Should be removed. Only for demonstration */}
+/* Clear floats after the columns */
+					.row:after {
+						content: "";
+						display: table;
+						clear: both; }
+				</style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -58,171 +73,372 @@
 		<div class="reveal">
 			<div class="slides">
 <!-- Introduction -->
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h1>Network Fundamentals</h1>
 					<h5>CCTC - Networking</h5>
 				</section>
 <!-- Skills 1 and 2 Network Fundamentals and packet headers -->
 
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Outcomes</h3>
-					<h5>Skills</h5>
-					<ol>
-						<li>Identify Networking Fundamentals</li>
-						<li>Identify the sections of common headers</li><br><br><br><br><br><br><br>
-					</ol>
+					<ul>
+						<li><font size="6">SKILL CCNE001: Networking Fundamentals</font></li>
+						<ul>
+							<li><font size="4">CCNE001.001 Understanding the OSI model and Networking</font></li>
+						</ul>
+						<li><font size="6">SKILL CCNE002: Common Protocol Headers</font></li>
+							<ul>
+								<li><font size="4">CCNE002.001 Describe security implications present in common header fields</font></li>
+							</ul>
+							<li><font size="6">SKILL CCNE003: Layer 2 Switching Technologies</font></li>
+							<ul>
+								<li><font size="4">CCNE003.001 Explain Layer 2 Switching and CAM table</font></li>
+								<li><font size="4">CCNE003.002 Explain CDP and LLDP</font></li>
+								<li><font size="4">CCNE003.003 Understand VTP, STP, DTP</font></li>
+								<li><font size="4">CCNE003.004 Discuss VLAN, 802.1q and 802.1ad</font></li>
+								<li><font size="4">CCNE003.005 Identify and discuss security implications and mitigations for switching technologies</font></li>
+							</ul>
+					</ul><br><br><br><br><br><br><br>
+
 				</section>
 
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Outcomes Cont.</h3>
+					<ul>
+							<li><font size="6">SKILL CCNE004: Layer 3  Routing Technologies</font></li>
+							<ul>
+									<li><font size="4">CCNE004.001 Explain Layer 3 Routing</font></li>
+									<li><font size="4">CCNE004.002 Discuss Routing Tables</font></li>
+									<li><font size="4">CCNE004.003 Understand HSRP and VRRP</font></li>
+									<li><font size="4">CCNE004.004 Describe Software Defined Networking</font></li>
+									<li><font size="4">CCNE004.005 Discuss static and dynamic routing</font></li>
+									<li><font size="4">CCNE004.006 Identify and discuss security implications and mitigations for routing technologies</font></li>
+							</ul>
+					</ul>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Mathematics of networking</h3>
+					<small>Binary Identification</small>
+					<div><img src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Bits_Nibbles_Bytes.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+							<img src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Bit_Grouping.png" style="float: left; width: 50%; margin-right: 1%; margin-bottom: 0.5em;"><p style="clear: both;"></div>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+
+					<h3>Binary Conversion</h3>
+
+
+					<div><img style="height: 450px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" width="800" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Binary_Decimal_Hex.png"></div>
+
+
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Message Formatting Method</h3>
+
+					<div><img style="height: 120px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Message_Format.png"></div>
+						<small>Encapsulation and De-encapsulation</small>
+					<div><img style="height: 340px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/PDU_SDU.png"></div>
+
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>OSI model</h3>
+					<img style="height: 550px; width: 1000px;border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/OSI.png">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 				    <h1>Data Link Layer</h1>
 					<h4>OSI Layer 2</h4>
 				</section>
 
-				<!-- What's in an Ethernet Frame Header? -->
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<ul>
+						<li><font size="8">Data Link Sub-Layers</font></li>
+						<ul>
+							<li><font size="6">MAC (Media Access Control)</font></li>
+							<li><font size="6">LLC (Logical Link Control)</font></li>
+						</ul>
+					</ul>
+				</section>
+
+<!-- What's in an Ethernet Frame Header? -->
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h3>Ethernet Header</h3>
 					<small>Ethernet Frame with Preamble</small>
-					<div><img style="height: 90px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/EthernetFramePreamble.png"></div>
-					<div><img style="height: 110px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/EthernetFrame.png"></div>
+					<img style="height: 110px; width: 800px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/EthernetFramePreamble.png">
+					<img style="height: 110px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/EthernetFrame.png">
 					<small>Common Ethertypes</small>
-					<div><img style="height: 180px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/CommonEthertypes.png"></div>
-					<div>
+					<img style="height: 140px; width: 800px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/CommonEthertypes.png">
 				</section>
 
-<!-- Have fun with Virtual LANs (Skill 2)-->
-
-
-				<section>
-					<h3>802.1Q VLAN Tagging</h3>
-					<small>Fig. 1 - 802.3 VLAN Tag added to Frame</small>
-					<img style="height: 375px; padding: 0px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/802.1QFrame.png">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>ARP Header</h4>
+					<img style="height: 450px; width: 1000px; padding: 0px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/ARP_Header.png">
 				</section>
 
-<!-- ARP Activity -->
-				<section>
-				</H5>Outcome: You will become knowledgable on how the ethernet frame is built, and how tools such as scapy can interact with them.</H5>
-				<br /><br /><br /><br />
-				<div><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Scapy_for_ARP/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:2em"><small><strong>ARP Activity</strong></small></a></div>
-				</section>
+	<!-- IP Headers -->
 
-<!-- IP Headers -->
-
-				<section>
-				    <h1>Network Layer</h1>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				  <h1>Network Layer</h1>
 					<h4>OSI Layer 3</h4>
-					<small>CCNE002.002 Describe IPv4 and IPv6 packet structures</small>
+					<small>(CCNE002)</small>
 				</section>
-				<section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>IPv4 Headers</h4>
-					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>IPv4 Header</strong></p>
-					<img style="height: 200px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/IPv4Header.png">
+					<img style="height: 400px; width: 1000px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/IPv4_Header.png">
 					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>Example IPv4 Packet</strong></p>
-					<img style="height: 250px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/IPv4HeaderPacket_example.PNG">
 				</section>
 
-
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>Fragmentation Process</h4>
-					<img style="float: Middle; height: 540px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/Fragmentation.png">
-			    	<p style="text-align: left,bottom; font-size:0.3em">Retrieved from <a href="http://www.tcpipguide.com/free/t_IPMessageFragmentationProcess-2.htm">http://www.tcpipguide.com/free/t_IPMessageFragmentationProcess-2.htm</a></p>
+					<img style="float: Middle; height: 500px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Fragmentation.png">
+			    	<p style="textstyle-align: left,bottom; font-size:0.3em">Retrieved from <a href="http://www.tcpipguide.com/free/t_IPMessageFragmentationProcess-2.htm">http://www.tcpipguide.com/free/t_IPMessageFragmentationProcess-2.htm</a></p>
+						<p style="textstyle-align: left,bottom; font-size:0.5em">
 				</section>
 
-
-				<section>
-					<h4>IPv4 / IPv6 Header Field Comparison</h4>
-					<small>Obj. 4.1, 4.3 through 4.4</small>
-					<img style="height: 450px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/IPv4_vs_IPv6_Header.png">
-				</section>
-				<section>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
 					<h4>IPv6 Headers</h4>
-					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>IPv6 Header</strong></p>
-					<img style="height: 200px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/IPv6Header.png">
-					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>Example IPv6 Packet</strong></p>
-					<img style="height: 250px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/IPv6HeaderPacket_example.png">
+					<img style="height: 550px; width=1000px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/IPv6_Header.png">
+					<p style="font-size:0.3em; margin-top: 0em; margin-bottom: 0em;"><strong>Example IPv6 Packet</strong></p>
 				</section>
 
-				<section>
-				    <h3>TTL Analysis</h3>
-				    <p><small>Vendors have chosen different values for TTL which can provide insight to which OS family a generated packet is from.</small></p>
-					<img style="height: 371px;" src="images/Network_Analysis/Default_TTL.PNG">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>IPv4 / IPv6 Header Field Comparison</h4>
+					<small>Comparison Outlook</small>
+					<img style="height: 450px; width=1000px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/IPv4_vs_IPv6_Header.png">
 				</section>
-				<section>
-				    <h3>ICMP Headers</h3>
-					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>ICMP Header</strong></p>
-					<img style="height: 90px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/ICMPHeader.PNG">
-					<p style="font-size:0.5em; margin-top: 1em; margin-bottom: 0em;"><strong>Example ICMP Packet</strong></p>
-					<img style="height: 250px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="images/Network_Analysis/ICMPHeader_example.PNG">
-				</section>
-				<section>
-				    <h4>Review Address Auto Configuration</h4>
-					<h3>SLAAC</h3>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%"><br><br>
+				    <h3>Zero Configuration</h3><br>
 					<ul>
-						<li>APIPA</li>
-						<li>Review SLAAC (ICMPv6 messages)</li>
-						<li>RFC 4862</li><br><br><br><br><br><br><br>
+						<li><strong>IPv4 Auto Configuration</strong></li>
+						<ul>
+							<li>APIPA</li>
+							<li>RFC 3927</li>
+						</ul><br>
+						<li><strong>IPv6 auto configuration</strong></li>
+						<ul>
+							<li>SLAAC(<strong>S</strong>tate<strong>L</strong>ess <strong>A</strong>ddress <strong>A</strong>uto<strong>C</strong>onfiguration)</li>
+							<li>RFC 4862</li><br><br><br><br><br><br><br>
 					</ul>
 				</section>
 
-<!-- ICMPv6 Activity -->
-				<section>
-				</H5>Outcome: You will become knowledgable on how the ipv6 and icmp headers are built, and how tools such as scapy can interact with them.</H5>
-				<br /><br /><br /><br />
-				<div><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-ICMPv6_RA_with_Scapy/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:3em"><small><strong>ICMPv6 Activity</strong></small></a></div>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				  <p><small>Vendors have chosen different values for TTL which can provide insight to which OS family a generated packet is from.</small></p>
+					<img style="height: 371px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Default_TTL.PNG">
 				</section>
 
-<!-- Layer 4 -->
-				<section>
-				    <h1>Transport Layer</h1>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<img style="height: 500px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0); padding: 0px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/ICMPHeader.png">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				  <h1>Transport Layer</h1>
 					<h4>OSI Layer 4</h4>
-					<p><small>CCNE002.001 Identify the various packet headers</small></p>
 				</section>
 
-				<section>
-				    <h3>UDP Headers</h3>
-					<p style="font-size:0.5em; margin-bottom: 0.1em;"><strong>UDP Header</strong></p>
-				    <img style="height: 90px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/UDPHeader.png">
-					<p style="font-size:0.5em; margin-bottom: 0.1em;"><strong>Example UDP Datagram</strong></p>
-					<img style="height: 242px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/UDPHeader_example.PNG">
-				</section>
-				<section>
-				    <h3>TCP Headers</h3>
-					<p style="font-size:0.5em; margin-bottom: 0.1em;"><strong>TCP Header</strong></p>
-
-
-				    <img style="height: 180px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/TCPHeader.png">
-					<p style="font-size:0.5em; margin-bottom: 0.1em;"><strong>Example TCP Segment</strong></p>
-					<img style="height: 242px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="images/Network_Analysis/TCPHeaderPacket_example.PNG">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				  <h3>TCP Headers</h3>
+				 	<img style="height: 500px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/TCPHeader.png">
 				</section>
 
-				<section>
-				    <h3>TCP Flags</h3>
-				    <img style="height: 400px;" src="images/Network_Analysis/TCP_Flags.png">
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+			    <h3>TCP Flags</h3>
+			    <img style="height: 400px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/TCPFlagsBPF.PNG">
 					<p style="font-size:0.5em; margin-top: 0.1em;"><strong>TCP Flag Breakout (Binary and Hex)</strong></p>
+					<p style="font-size:0.75em; margin-top: 0.1em;"><strong><u>U</u></strong>nskilled <strong><u>A</u></strong>ttackers <strong><u>P</u></strong>ester <strong><u>R</u></strong>eal <strong><u>S</u></strong>ecurity <strong><u>F</u></strong>olks.</p>
 				</section>
-<!-- OS Interaction -->
-				<section>
-				    <h1>Operating System Considerations</h1>
-					<p><strong>CCNE001.002 Understanding User space vs Kernel Space for network functions</strong></p>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+				  <h3>UDP Headers</h3>
+					<img style="height: 500px; border: none; box-shadow: 0 0 0px rgba(0, 0, 0, 0);" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/UDPHeader.png">
 				</section>
-				<section>
-				    <h3>Discuss basics behind User/Kernel Space</h3>
-				    <ul>
-						<li>System Memory: Kernel space vs. User space</li><br>
-						<li>Sockets: Families/Types</li><br>
-						<li>Tools/interaction with sockets</li><br><br><br><br><br>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Layer 2 Switching Technologies</h3>
+					<h4>(SKILL CCNE003)</h4>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Switches operation</h3>
+						<div class="row">
+  						<div class="column" style="background-color:#aaa;">
+								<h5>CAM TABLE</h5>
+								<img style="height: 300px; width= 500px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/MACTable.png">
+	  					</div>
+  					<div class="column" style="background-color:#bbb;">
+    					<h5>Switch Learning</h5>
+							<video loop autoplay="true" loop-"true" height="325" width="600" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/General_Switch.mp4">
+							</video loop>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<section>
+						<h4>VLANs, 802.1q</h4>
+						<img style="height: 350px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/802.1QFrame.png">
+					</section>
+					<section>
+						<h4> VLANs, 802.1ad, Q&Q </h4>
+						<img style="height: 300px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/802.1adFrame.jpg">
+						 <p style="font-size:0.75em; margin-top: 0.1em;"> Ethertype 0x88a8 non-standard 0x9100</p>
+					</section>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h2>Spanning Tree Protocol (STP)</h2>
+					<div class="row">
+						<div class="column">
+							<img style="height: 600px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Spanning-Tree-Protocol-Overview.png">
+						</div>
+						<div>
+							<div class="column">
+								<h3>Root deciscion process</h3>
+								<p align="left" style="font-size:.70em; margin-top: 0.1em;">1. Elect root Bridge<br>2. Identify the Root ports on non-root bridge<br>3. Identify the Designated port for each segment<br>4. Set alternate ports to blocking state.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4 align="left"> Cisco Discovery Protocol (CDP)</h4><br><br>
+					<h4 align="left">Link Layer Discovery Protocol(LLDP)</h4>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<p align="left" style="font-size:.75em; margin-top: 0.1em;">DTP (Dynamic Trunking Protocol)</p>
+					<img style="height: 200px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/DTP_Chart.png">
+					<p align="left" style="font-size:.75em; margin-top: 0.1em;">VTP (Virtual Trunking Protocol)</p>
+					<img style="height: 200px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/VTP.png">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Port Security</h4>
+					<ul>
+						<li>MODES</li>
+						<ul>
+							<li>shutdown</li>
+							<li>restrict</li>
+							<li>protect</li>
+						</ul>
 					</ul>
 				</section>
-				<section>
-				    <h3>Discuss Network Namespaces</h3>
-				    <p align="left">A network namespace is logically another copy of the network stack, with its own routes, firewall rules, and network devices. By default a process inherits its network namespace from its parent. Initially all the processes share the same default network namespace from the init process.</p>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Layer 3 Routing Technologies</h3>
+					<h4>(CCNE004)</h4>
 				</section>
 
-<!-- Raw Sockets Activity -->
-				<section>
-				</H5>Outcome: You will become more confident of python skills by researching and creating raw sockets to send and encode data in a packet.</H5>
-				<br /><br /><br /><br />
-				<div><a href="https://git.cybbh.space/CCTC/public/builds/artifacts/master/raw/networking/Activity-Raw_Socket_Programming/prompt.pdf?job=genpdf" style="color:#0000fe; font-size:2em"><small><strong>Raw Sockets Activity</strong></small></a></div>
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h3>Routing Tables</h3>
+					<h4>(CCNE004.001)</h4>
+					<img style="height: 500px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Routing_table.png">
 				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Routing Decisions</h4>
+					<img style="height: 500px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Bit_Match.jpg">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>First Hop Redundancy Protocols</h4>
+					<p align="center" style="font-size:1em; margin-top: 0.1em;">(CCNE004.003)</p>
+					<img style="height: 500px; width: 1000px; " src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/FHRP.jpg">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%"><br>
+					<h4>Software Defined Networking</h4>
+					<section>
+						<img style="height: 400px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/SDN.png">
+					</section>
+					<section>
+						<img style="height: 400px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/SDN2.png">
+					</section>
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<section>
+						<h4>Static Vs. Dynamic Routing</h4>
+					</section>
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+						<h4>Administrative Distance</h4>
+							<img style="height: 250px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/AD.png">
+							<img style="height: 250px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Table_Entry.jpg">
+					</section>
+					<section>
+						<h4>Static Advantages and Disadvantages</h4>
+							<div class="row">
+  							<div class="column" style="background-color:#aaa; height: 500px">
+									<h5>Advantages</h5>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Static routes do not advertise over the network, resulting in better security.</p>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Static routes do not use bandwidth like dynamic routing protocols to send updates and no CPU cycles are used to calculate and communicate routes.</p>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* The path a static route uses to send data is pre-determined.</p>
+	  						</div>
+  							<div class="column" style="background-color:#bbb; height: 500px">
+    							<h5>Disadvantages</h5>
+										<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Initial configuration and maintenance is time-consuming.</p>
+										<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Configuration is prone to error, especially on large networks.</p>
+										<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Administrator must intervene to update routing information or to bypass network faults.</p>
+										<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Does not scale well with growing networks; maintenance becomes cumbersome.</p>
+										<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Requires complete knowledge of the whole network for proper implementation.</p>
+  							</div>
+							</div>
+					</section>
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+						<h4>Dynamic Routing</h4>
+						<img style="height: 550px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/Dynamic_Routing.jpg">
+					</section>
+					<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+						<h3>Dynamic Advantages and Disadvantages</h3>
+							<div class="row">
+								<div class="column" style="background-color:#aaa; height: 500px">
+									<h5>Advantages</h5>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Easier to configure and maintain.</p><br>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Administrator does not need to intervene to update tables during network outages.</p><br>
+									<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Scales very well on growing networks.</p>
+								</div>
+							<div class="column" style="background-color:#bbb; height: 500px">
+								<h5>Disadvantages</h5>
+								<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Routing protocols flood the network updates which consumes bandwidth and can be intercepted.</p><br>
+								<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Uses extensive CPU and RAM to run its algorithms and build its databases.</p><br>
+								<p align="left" style="font-size:0.5em; margin-top: 0.1em;">* Path data can travel is not deterministic and can change fluidly.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h4> IGP and EGP </h4>
+							<img style="height: 550px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/IGP_EGP.jpg">
+					</section>
+					<section>
+						<h4> Conrolling Entities</h4>
+							<img style="height: 550px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/iana.png">
+					</section>
+				</section>
+
+
+
+
+
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Distance Vector</h4>
+					<img style="height: 550px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/DV.png">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<h4>Link State</h4>
+					<img style="height: 550px; width 1000px;" src="https://git.cybbh.space/CCTC/public/raw/electric-boogaloo/networking/slides/images/Fundamentals/LS.jpg">
+				</section>
+
+				<section data-background="https://git.cybbh.space/CCTC/public/raw/master/networking/slides/images/cybbh-skule_header.png" data-background-repeat="none" data-background-position="left top" data-background-size="100%">
+					<div><a href="https://git.cybbh.space/CCTC/public/raw/master/networking/Activity-Follow_a_packet_through_a_network/prompt.adoc" style="color:#0000fe; font-size:2em"><small><strong>Packet Tracer Activity</strong></small></a></div>
+				</section>
+
+
 <!-- End of slides -->
 			</div>
 		</div>
