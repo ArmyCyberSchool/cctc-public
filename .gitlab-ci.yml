@@ -11,8 +11,8 @@ docker:
       - gem install rouge
       - gem install concurrent-ruby
       - gem install asciidoctor-pdf --pre
-      - wget -nc -q https://git.cybbh.space/global-objects/resources/raw/master/css/cted0001.css -O ./cctc.css
-      - find . -name '*.adoc' -not -path "*./heat*" | while read adoc;do asciidoctor-pdf --trace -a allow-uri-read $adoc;done
+      - wget -nc -q https://raw.githubusercontent.com/asciidoctor/asciidoctor-pdf/master/data/themes/default-theme.yml -O /default-theme.yml
+      - find . -name '*.adoc' -not -path "*./heat*" | while read adoc;do asciidoctor-pdf --trace -a allow-uri-read -a pdf-style=/default-theme.yml $adoc;done
   artifacts:
     untracked: true
 
