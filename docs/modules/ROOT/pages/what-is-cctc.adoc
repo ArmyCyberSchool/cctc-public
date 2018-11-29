@@ -1,0 +1,11 @@
+= What is CCTC?
+
+CCTC is the course that ensures that all 17-series Soldiers,
+regardless of rank or position,
+have the minimum acceptable amount of technical knowledge required to be successful in this space.
+It is designed to focus on computer science,
+electrical engineering,
+mathematics,
+and the other related fields necessary for Cyberspace Operations to be successful.
+
+It is *not* designed to teach tools or techniques - those items are left to OJT since they are highly unit and situation specific.
