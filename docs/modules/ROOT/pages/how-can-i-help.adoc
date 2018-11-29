@@ -1,0 +1,5 @@
+= How Can I Help?
+
+CCTC is always open to outside contributions - its a big part of the reason why we chose to make the course completely public and stored in version control.
+
+The fastest way to get started is to check out the current open https://git.cybbh.space/cctc/public/issues[issues] and start working!
