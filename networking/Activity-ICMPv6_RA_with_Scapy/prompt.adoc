@@ -35,7 +35,7 @@
 *** Set your Prefix info. Remember you want your Linux machine to be able to speak to the Windows machine.
 **** e = ICMPv6NDOptPrefixInfo()
 **** e.prefixlen= 64
-**** e.prefix= "prefix::" (specify a prefix you would like in hex)
+**** e.prefix= "xxxx::" (where x is hex characters used to make a prefix - Do not use ff80 or normal prefixes or it will not show)
 
 * Go to your Windows 10 client and run ipconfig before you send the packet. You should just see a link local ipv6 address.
 
