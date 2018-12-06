@@ -42,7 +42,7 @@
 . Tcpdump  src port 80 || src port 443 
 . Tcpdump ether dst host aa:bb:cc:dd:ee:ff
 . Tcpdump udp port 53 or tcp port 53
-. Tcpdump not port range 1025-65535
+. Tcpdump not portrange 1025-65535
 . Tcpdump net 192.168.0.0 /24
 . Tcpdump not net 192.168.0.0 /24 
 
