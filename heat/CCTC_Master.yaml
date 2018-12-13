@@ -134,7 +134,7 @@ resources:
     properties:
       diskConfig: AUTO
       flavor: cy.medium
-      image: CCTC-pfSense
+      image: CCTC-pfsense2
       name: net-Firewall
       networks:
       - port: {get_resource: firewall1_subnet_0_port}
